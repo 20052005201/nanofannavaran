@@ -205,3 +205,111 @@ transition:.4s;
 transform:translateY(-10px);
 
 }
+/*=========================
+        HERO SLIDER
+=========================*/
+
+.hero-slider{
+position:relative;
+width:100%;
+height:100vh;
+overflow:hidden;
+margin-top:85px;
+}
+
+.slide{
+position:absolute;
+width:100%;
+height:100%;
+opacity:0;
+transition:opacity 1s ease-in-out;
+}
+
+.slide.active{
+opacity:1;
+z-index:2;
+}
+
+.slide img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.slide::before{
+content:"";
+position:absolute;
+top:0;
+right:0;
+width:100%;
+height:100%;
+background:rgba(0,40,80,.45);
+}
+
+.slide-content{
+position:absolute;
+top:50%;
+right:8%;
+transform:translateY(-50%);
+max-width:650px;
+color:#fff;
+z-index:5;
+}
+
+.slide-content h1{
+font-size:52px;
+color:#fff;
+margin-bottom:20px;
+line-height:1.5;
+}
+
+.slide-content p{
+font-size:22px;
+margin-bottom:35px;
+line-height:2;
+}
+
+.hero-button{
+display:inline-block;
+padding:16px 40px;
+background:#0B6EF3;
+color:#fff;
+border-radius:50px;
+font-size:18px;
+font-weight:bold;
+transition:.3s;
+}
+
+.hero-button:hover{
+background:#16A34A;
+transform:translateY(-5px);
+}
+
+/*========== موبایل ==========*/
+
+@media(max-width:768px){
+
+.hero-slider{
+height:75vh;
+}
+
+.slide-content{
+right:5%;
+left:5%;
+text-align:center;
+}
+
+.slide-content h1{
+font-size:32px;
+}
+
+.slide-content p{
+font-size:17px;
+}
+
+.hero-button{
+padding:14px 28px;
+font-size:16px;
+}
+
+}
