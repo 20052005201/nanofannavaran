@@ -1,232 +1,207 @@
-/* =========================
-   Nanofannavaran Style
-========================= */
+/* ===========================
+   شرکت سمپاشی نانوفناوران
+   رنگ بندی اصلی
+=========================== */
+
+:root{
+
+--blue:#0B6EF3;
+--green:#16A34A;
+--white:#FFFFFF;
+--light:#F5F9FC;
+--dark:#16324F;
+--text:#333333;
+
+}
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+
 }
 
 html{
-    scroll-behavior:smooth;
+
+scroll-behavior:smooth;
+
 }
 
 body{
-    font-family:Tahoma,sans-serif;
-    direction:rtl;
-    background:#f5f7fa;
-    color:#333;
-    line-height:1.8;
-}
 
-/* لینک ها */
+font-family:'Vazirmatn',sans-serif;
 
-a{
-    text-decoration:none;
-    color:inherit;
-}
+background:#ffffff;
 
-/* تصاویر */
+color:var(--text);
 
-img{
-    max-width:100%;
-    display:block;
+line-height:2;
+
+overflow-x:hidden;
+
 }
 
 /* کانتینر */
 
 .container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
+
+width:90%;
+
+max-width:1350px;
+
+margin:auto;
+
 }
 
-/* هدر */
+/* لینک ها */
 
-header{
-    background:#005bbb;
-    color:#fff;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    box-shadow:0 2px 8px rgba(0,0,0,.2);
+a{
+
+text-decoration:none;
+
+transition:.3s;
+
 }
 
-header .container{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 0;
+/* تصاویر */
+
+img{
+
+max-width:100%;
+
+display:block;
+
 }
 
-.logo{
-    font-size:28px;
-    font-weight:bold;
-    color:#fff;
+/* تیترها */
+
+h1,h2,h3,h4{
+
+color:var(--dark);
+
+font-weight:700;
+
 }
 
-nav ul{
-    display:flex;
-    list-style:none;
-    gap:20px;
+/* فاصله سکشن ها */
+
+section{
+
+padding:90px 0;
+
 }
 
-nav a{
-    color:#fff;
-    transition:.3s;
+/* عنوان هر بخش */
+
+.section-title{
+
+text-align:center;
+
+margin-bottom:60px;
+
 }
 
-nav a:hover{
-    color:#7CFC00;
+.section-title h2{
+
+font-size:40px;
+
+color:var(--blue);
+
+margin-bottom:15px;
+
 }
 
-/* بنر */
+.section-title p{
 
-.hero{
-    background:linear-gradient(rgba(0,91,187,.75),rgba(0,91,187,.75));
-    color:#fff;
-    text-align:center;
-    padding:90px 20px;
+font-size:18px;
+
+color:#666;
+
+max-width:800px;
+
+margin:auto;
+
 }
 
-.hero h1{
-    font-size:40px;
-    margin-bottom:20px;
+/* دکمه ها */
+
+.hero-button,
+.call-btn,
+.service-btn{
+
+display:inline-block;
+
+padding:14px 34px;
+
+border-radius:40px;
+
+font-size:17px;
+
+font-weight:bold;
+
+transition:.4s;
+
 }
 
-.hero p{
-    font-size:20px;
+.hero-button{
+
+background:var(--blue);
+
+color:white;
+
 }
 
-.btn{
-    display:inline-block;
-    background:#00b050;
-    color:#fff;
-    padding:14px 30px;
-    margin-top:25px;
-    border-radius:8px;
-    transition:.3s;
+.hero-button:hover{
+
+background:var(--green);
+
+transform:translateY(-4px);
+
 }
-
-.btn:hover{
-    background:#00863d;
-}
-
-/* خدمات */
-
-.services{
-    padding:70px 0;
-}
-
-.services h2{
-    text-align:center;
-    color:#005bbb;
-    margin-bottom:35px;
-}
-
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
-
-.card{
-    background:#fff;
-    border-radius:12px;
-    padding:25px;
-    text-align:center;
-    box-shadow:0 2px 10px rgba(0,0,0,.1);
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-8px);
-}
-
-.card h3{
-    color:#005bbb;
-    margin-bottom:15px;
-}
-
-/* تماس */
-
-.contact{
-    background:#005bbb;
-    color:#fff;
-    text-align:center;
-    padding:60px 20px;
-}
-
-.contact h2{
-    margin-bottom:20px;
-}
-
-/* فوتر */
-
-footer{
-    background:#222;
-    color:#fff;
-    text-align:center;
-    padding:20px;
-}
-
-/* دکمه تماس */
 
 .call-btn{
-    position:fixed;
-    left:20px;
-    bottom:20px;
-    width:60px;
-    height:60px;
-    background:#28a745;
-    color:#fff;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:28px;
-    box-shadow:0 3px 10px rgba(0,0,0,.3);
+
+background:var(--green);
+
+color:white;
+
 }
 
-/* دکمه واتساپ */
+.service-btn{
 
-.whatsapp-btn{
-    position:fixed;
-    right:20px;
-    bottom:20px;
-    width:60px;
-    height:60px;
-    background:#25D366;
-    color:#fff;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:28px;
-    box-shadow:0 3px 10px rgba(0,0,0,.3);
+background:var(--blue);
+
+color:white;
+
+margin-right:10px;
+
 }
 
-/* موبایل */
+/* سایه کارت ها */
 
-@media(max-width:768px){
+.service-card,
+.feature-box,
+.process-card,
+.portfolio-item,
+.testimonial-card,
+.contact-card{
 
-header .container{
-    flex-direction:column;
+background:white;
+
+border-radius:20px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+transition:.4s;
+
 }
 
-nav ul{
-    flex-direction:column;
-    text-align:center;
-    margin-top:15px;
-}
+.service-card:hover,
+.feature-box:hover,
+.process-card:hover,
+.portfolio-item:hover{
 
-.hero h1{
-    font-size:28px;
-}
-
-.hero p{
-    font-size:18px;
-}
+transform:translateY(-10px);
 
 }
