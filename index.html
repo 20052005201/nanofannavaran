@@ -58,10 +58,38 @@ transition:.3s;
 transform:scale(1.05);
 }
 .hero{
-    background:linear-gradient(135deg,#0b8f45,#14b85c);
-    color:#fff;
-    text-align:center;
-    padding:50px 20px;
+background:url("banner.jpg") center center/cover no-repeat;
+min-height:650px;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.overlay{
+width:100%;
+min-height:650px;
+background:rgba(0,0,0,.35);
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:#fff;
+}
+
+.logo{
+width:170px;
+height:170px;
+margin:auto auto 25px;
+border-radius:50%;
+overflow:hidden;
+background:#fff;
+box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+.logo img{
+width:100%;
+height:100%;
+object-fit:cover;
 }
 
 .logo{
@@ -129,7 +157,37 @@ transform:scale(1.05);
 
 </header>
 
-<section class="hero">
+<header class="hero">
+
+<div class="overlay">
+
+<div class="container">
+
+<div class="logo">
+<img src="logo.png" alt="لوگوی نانوفناوران">
+</div>
+
+<h1>شرکت سمپاشی نانوفناوران</h1>
+
+<p>
+سمپاشی تخصصی منازل، شرکت‌ها، رستوران‌ها، بیمارستان‌ها و کارخانه‌ها
+</p>
+
+<div class="buttons">
+
+<a class="btn call" href="tel:02122048278">📞 تماس با ما</a>
+
+<a class="btn whatsapp" href="https://wa.me/989120705746">💬 واتساپ</a>
+
+<a class="btn eitaa" href="https://eitaa.com/am8ini90">✉️ ایتا</a>
+
+</div>
+
+</div>
+
+</div>
+
+</header>
     <img src="<img src="logo.png" alt="لوگوی شرکت سمپاشی نانوفناوران"> class="logo">
 
     <h1>شرکت سمپاشی نانوفناوران</h1>
