@@ -80,3 +80,38 @@ currentSlide=0;
 showSlide(currentSlide);
 
 });
+/*=========================
+      Slider Dots
+=========================*/
+
+const dots=document.querySelectorAll(".dot");
+
+function updateDots(){
+
+dots.forEach(dot=>dot.classList.remove("active"));
+
+dots[currentSlide].classList.add("active");
+
+}
+
+function showSlide(index){
+
+slides.forEach(slide=>slide.classList.remove("active"));
+
+slides[index].classList.add("active");
+
+updateDots();
+
+}
+
+dots.forEach((dot,index)=>{
+
+dot.addEventListener("click",()=>{
+
+currentSlide=index;
+
+showSlide(currentSlide);
+
+});
+
+});
