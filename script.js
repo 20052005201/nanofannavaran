@@ -45,3 +45,38 @@ const navbar = document.querySelector(".navbar");
 menuButton.addEventListener("click", () => {
     navbar.classList.toggle("show");
 });
+/*=========================
+     Previous & Next
+=========================*/
+
+const prevBtn = document.getElementById("prev-slide");
+
+const nextBtn = document.getElementById("next-slide");
+
+prevBtn.addEventListener("click",()=>{
+
+currentSlide--;
+
+if(currentSlide<0){
+
+currentSlide=slides.length-1;
+
+}
+
+showSlide(currentSlide);
+
+});
+
+nextBtn.addEventListener("click",()=>{
+
+currentSlide++;
+
+if(currentSlide>=slides.length){
+
+currentSlide=0;
+
+}
+
+showSlide(currentSlide);
+
+});
