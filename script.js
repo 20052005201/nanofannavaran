@@ -35,3 +35,13 @@ showSlide(currentSlide);
 setInterval(nextSlide,5000);
 
 showSlide(currentSlide);
+/*=========================
+   Mobile Menu
+=========================*/
+
+const menuButton = document.querySelector(".mobile-menu");
+const navbar = document.querySelector(".navbar");
+
+menuButton.addEventListener("click", () => {
+    navbar.classList.toggle("show");
+});
