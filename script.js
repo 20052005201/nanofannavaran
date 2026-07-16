@@ -193,3 +193,77 @@ behavior:"smooth"
 });
 
 });
+/*=========================
+      Header on Scroll
+=========================*/
+
+const header = document.querySelector("header");
+
+window.addEventListener("scroll",()=>{
+
+if(window.scrollY>80){
+
+header.classList.add("header-scroll");
+
+}else{
+
+header.classList.remove("header-scroll");
+
+}
+
+});
+
+/*=========================
+      Service Card Hover
+=========================*/
+
+const cards=document.querySelectorAll(".service-card");
+
+cards.forEach(card=>{
+
+card.addEventListener("mouseenter",()=>{
+
+card.style.transform="translateY(-12px)";
+
+});
+
+card.addEventListener("mouseleave",()=>{
+
+card.style.transform="translateY(0)";
+
+});
+
+});
+
+/*=========================
+      Fade In Page
+=========================*/
+
+window.addEventListener("load",()=>{
+
+document.body.classList.add("loaded");
+
+});
+
+/*=========================
+      Current Year
+=========================*/
+
+const yearElement=document.getElementById("current-year");
+
+if(yearElement){
+
+yearElement.textContent=new Date().getFullYear();
+
+}
+
+/*=========================
+      Console Message
+=========================*/
+
+console.log("شرکت سمپاشی نانوفناوران بهداشت تهران");
+console.log("https://nanofannavaran.ir");
+
+/*=========================
+      End Script
+=========================*/
