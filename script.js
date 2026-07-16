@@ -1,20 +1,31 @@
-/*=================================
-  اسلایدر شرکت نانوفناوران
-=================================*/
+/*=========================================
+      شرکت سمپاشی نانوفناوران بهداشت تهران
+      nanofannavaran.ir
+=========================================*/
+
+/*=========================
+      Hero Slider
+=========================*/
 
 const slides = document.querySelectorAll(".slide");
+const dots = document.querySelectorAll(".dot");
+const nextBtn = document.getElementById("next-slide");
+const prevBtn = document.getElementById("prev-slide");
 
 let currentSlide = 0;
 
 function showSlide(index){
 
-slides.forEach((slide)=>{
-
+slides.forEach(slide=>{
 slide.classList.remove("active");
+});
 
+dots.forEach(dot=>{
+dot.classList.remove("active");
 });
 
 slides[index].classList.add("active");
+dots[index].classList.add("active");
 
 }
 
@@ -32,75 +43,29 @@ showSlide(currentSlide);
 
 }
 
-setInterval(nextSlide,5000);
-
-showSlide(currentSlide);
-/*=========================
-   Mobile Menu
-=========================*/
-
-const menuButton = document.querySelector(".mobile-menu");
-const navbar = document.querySelector(".navbar");
-
-menuButton.addEventListener("click", () => {
-    navbar.classList.toggle("show");
-});
-/*=========================
-     Previous & Next
-=========================*/
-
-const prevBtn = document.getElementById("prev-slide");
-
-const nextBtn = document.getElementById("next-slide");
-
-prevBtn.addEventListener("click",()=>{
+function prevSlide(){
 
 currentSlide--;
 
-if(currentSlide<0){
+if(currentSlide < 0){
 
-currentSlide=slides.length-1;
-
-}
-
-showSlide(currentSlide);
-
-});
-
-nextBtn.addEventListener("click",()=>{
-
-currentSlide++;
-
-if(currentSlide>=slides.length){
-
-currentSlide=0;
+currentSlide = slides.length - 1;
 
 }
 
 showSlide(currentSlide);
 
-});
-/*=========================
-      Slider Dots
-=========================*/
+}
 
-const dots=document.querySelectorAll(".dot");
+if(nextBtn){
 
-function updateDots(){
-
-dots.forEach(dot=>dot.classList.remove("active"));
-
-dots[currentSlide].classList.add("active");
+nextBtn.addEventListener("click",nextSlide);
 
 }
 
-function showSlide(index){
+if(prevBtn){
 
-slides.forEach(slide=>slide.classList.remove("active"));
-
-slides[index].classList.add("active");
-
-updateDots();
+prevBtn.addEventListener("click",prevSlide);
 
 }
 
@@ -115,30 +80,23 @@ showSlide(currentSlide);
 });
 
 });
+
+setInterval(nextSlide,5000);
+
 /*=========================
-     Scroll Animation
+      Mobile Menu
 =========================*/
 
-const animatedItems=document.querySelectorAll(".animate");
+const mobileMenu=document.querySelector(".mobile-menu");
 
-function reveal(){
+const navbar=document.querySelector(".navbar");
 
-animatedItems.forEach(item=>{
+if(mobileMenu){
 
-const top=item.getBoundingClientRect().top;
+mobileMenu.addEventListener("click",()=>{
 
-const windowHeight=window.innerHeight;
-
-if(top<windowHeight-100){
-
-item.classList.add("show");
-
-}
+navbar.classList.toggle("active");
 
 });
 
 }
-
-window.addEventListener("scroll",reveal);
-
-reveal();
