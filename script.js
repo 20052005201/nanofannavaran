@@ -100,3 +100,96 @@ navbar.classList.toggle("active");
 });
 
 }
+/*=========================
+     Scroll Animation
+=========================*/
+
+const animatedItems = document.querySelectorAll(
+".about-company,.services,.why-us,.work-process,.coverage,.portfolio,.testimonials,.blog,.contact"
+);
+
+function revealOnScroll(){
+
+animatedItems.forEach(item=>{
+
+const itemTop=item.getBoundingClientRect().top;
+
+const windowHeight=window.innerHeight;
+
+if(itemTop < windowHeight-120){
+
+item.classList.add("show");
+
+}
+
+});
+
+}
+
+window.addEventListener("scroll",revealOnScroll);
+
+revealOnScroll();
+
+/*=========================
+      Visitor Counter
+=========================*/
+
+const visitor=document.getElementById("visitor-count");
+
+if(visitor){
+
+let count=localStorage.getItem("nanofannavaranVisitor");
+
+if(!count){
+
+count=1;
+
+}else{
+
+count=parseInt(count)+1;
+
+}
+
+localStorage.setItem("nanofannavaranVisitor",count);
+
+visitor.innerText=count.toLocaleString("fa-IR");
+
+}
+
+/*=========================
+     Back To Top Button
+=========================*/
+
+const topButton=document.createElement("button");
+
+topButton.innerHTML="⬆";
+
+topButton.className="top-button";
+
+document.body.appendChild(topButton);
+
+window.addEventListener("scroll",()=>{
+
+if(window.scrollY>400){
+
+topButton.classList.add("show");
+
+}else{
+
+topButton.classList.remove("show");
+
+}
+
+});
+
+topButton.addEventListener("click",()=>{
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+});
