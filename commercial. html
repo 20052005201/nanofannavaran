@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>کنترل آفات تجاری | شرکت سمپاشی نانوفناوران بهداشت تهران</title>
+
+<meta name="description" content="خدمات تخصصی کنترل آفات مراکز تجاری، اداری، رستوران‌ها، کارخانه‌ها، انبارها، فروشگاه‌ها و هتل‌ها در سراسر تهران">
+
+<meta name="keywords" content="سمپاشی رستوران، سمپاشی کارخانه، کنترل آفات تجاری، سمپاشی انبار، سمپاشی شرکت">
+
+<link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="container">
+
+<a href="../index.html" class="logo">
+
+<img src="../images/logo.png" alt="شرکت سمپاشی نانوفناوران">
+
+</a>
+
+<nav class="navbar">
+
+<ul>
+
+<li><a href="../index.html">خانه</a></li>
+
+<li><a href="about.html">درباره ما</a></li>
+
+<li><a href="residential.html">خدمات مسکونی</a></li>
+
+<li><a href="commercial.html">خدمات تجاری</a></li>
+
+<li><a href="contact.html">تماس با ما</a></li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</header>
+
+<section class="page-header">
+
+<div class="container">
+
+<h1>کنترل آفات تجاری</h1>
+
+<p>
+
+راهکارهای تخصصی کنترل آفات برای مراکز تجاری، صنعتی و اداری
+
+</p>
+
+</div>
+
+</section>
+
+<section class="services">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>خدمات کنترل آفات مراکز تجاری</h2>
+
+<p>
+
+شرکت سمپاشی نانوفناوران بهداشت تهران خدمات کنترل آفات را برای انواع مراکز تجاری، صنعتی و خدماتی با رعایت کامل استانداردهای بهداشتی ارائه می‌دهد.
+
+</p>
+
+</div>
+
+<div class="services-grid">
+
+<div class="service-card">
+
+<div class="service-icon">🍽️</div>
+
+<h3>رستوران‌ها و کافی‌شاپ‌ها</h3>
+
+<p>
+
+کنترل کامل سوسک، موش، مگس و سایر آفات با رعایت ضوابط بهداشتی.
+
+</p>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">🏨</div>
+
+<h3>هتل‌ها و مراکز اقامتی</h3>
+
+<p>
+
+کنترل ساس، سوسک، مورچه و سایر آفات با حفظ آرامش و امنیت مهمانان.
+
+</p>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">🏭</div>
+
+<h3>کارخانه‌ها</h3>
+
+<p>
+
+اجرای برنامه‌های تخصصی کنترل آفات در محیط‌های صنعتی و تولیدی.
+
+</p>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">📦</div>
+
+<h3>انبارها</h3>
+
+<p>
+
+کنترل آفات انبارهای مواد غذایی، کالا و محصولات صنعتی با روش‌های استاندارد.
+
+</p>
+
+</div>
