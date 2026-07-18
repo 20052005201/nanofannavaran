@@ -800,3 +800,254 @@ body{
 }
 
 }
+/*====================================================
+        About Company + Services
+=====================================================*/
+
+/* ===== درباره شرکت ===== */
+
+.about-company{
+
+    background:#ffffff;
+
+}
+
+.about-company .container{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:60px;
+
+    align-items:center;
+
+}
+
+.about-image img{
+
+    width:100%;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.about-content h2{
+
+    font-size:38px;
+
+    color:var(--dark);
+
+    margin-bottom:20px;
+
+}
+
+.about-content p{
+
+    color:#555;
+
+    font-size:17px;
+
+    line-height:2;
+
+    margin-bottom:18px;
+
+}
+
+.about-features{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:15px;
+
+    margin:35px 0;
+
+}
+
+.feature-item{
+
+    background:#f8fbfd;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    font-weight:700;
+
+    color:var(--dark);
+
+    transition:.3s;
+
+}
+
+.feature-item:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+.about-buttons{
+
+    display:flex;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
+/* ===== خدمات ===== */
+
+.residential-services,
+
+.commercial-services{
+
+    background:#f8fbfd;
+
+}
+
+.services-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+}
+
+.service-card{
+
+    padding:35px 25px;
+
+    text-align:center;
+
+}
+
+.service-icon{
+
+    width:85px;
+
+    height:85px;
+
+    margin:0 auto 20px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:42px;
+
+    background:rgba(11,111,184,.08);
+
+    color:var(--primary);
+
+}
+
+.service-card h3{
+
+    font-size:23px;
+
+    color:var(--dark);
+
+    margin-bottom:15px;
+
+}
+
+.service-card p{
+
+    color:#666;
+
+    line-height:1.9;
+
+    font-size:16px;
+
+}
+
+.section-button{
+
+    text-align:center;
+
+    margin-top:50px;
+
+}
+
+/*====================================================
+             Responsive
+=====================================================*/
+
+@media(max-width:992px){
+
+.about-company .container{
+
+    grid-template-columns:1fr;
+
+}
+
+.about-image{
+
+    order:1;
+
+}
+
+.about-content{
+
+    order:2;
+
+}
+
+.about-content h2{
+
+    font-size:30px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.about-features{
+
+    grid-template-columns:1fr;
+
+}
+
+.about-buttons{
+
+    flex-direction:column;
+
+}
+
+.service-card{
+
+    padding:28px 20px;
+
+}
+
+.service-icon{
+
+    width:70px;
+
+    height:70px;
+
+    font-size:34px;
+
+}
+
+.about-content h2{
+
+    font-size:26px;
+
+}
+
+}
