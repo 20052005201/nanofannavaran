@@ -1051,3 +1051,225 @@ body{
 }
 
 }
+/*====================================================
+     Why Us + Work Process + Coverage + Portfolio
+=====================================================*/
+
+/* ===== چرا نانوفناوران ===== */
+
+.why-us{
+    background:#ffffff;
+}
+
+.features-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.feature-card{
+    text-align:center;
+    padding:35px 25px;
+}
+
+.feature-icon{
+    width:80px;
+    height:80px;
+    margin:0 auto 20px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(17,166,74,.12);
+    color:var(--secondary);
+    font-size:36px;
+}
+
+.feature-card h3{
+    margin-bottom:15px;
+    color:var(--dark);
+    font-size:22px;
+}
+
+.feature-card p{
+    color:#666;
+    line-height:1.9;
+}
+
+/* ===== مراحل انجام خدمات ===== */
+
+.work-process{
+    background:#f8fbfd;
+}
+
+.process-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.process-card{
+    background:#fff;
+    padding:35px 25px;
+    border-radius:var(--radius);
+    text-align:center;
+    box-shadow:var(--shadow);
+    transition:.35s;
+}
+
+.process-card:hover{
+    transform:translateY(-8px);
+}
+
+.process-number{
+    width:60px;
+    height:60px;
+    margin:0 auto 20px;
+    border-radius:50%;
+    background:var(--primary);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:24px;
+    font-weight:700;
+}
+
+.process-card h3{
+    margin-bottom:15px;
+    color:var(--dark);
+}
+
+.process-card p{
+    color:#666;
+    line-height:1.9;
+}
+
+/* ===== مناطق تحت پوشش ===== */
+
+.coverage-area{
+    background:#ffffff;
+}
+
+.coverage-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.coverage-card{
+    padding:30px;
+}
+
+.coverage-card h3{
+    color:var(--primary);
+    margin-bottom:15px;
+}
+
+.coverage-card p{
+    color:#666;
+    line-height:2;
+}
+
+.coverage-note{
+    margin-top:50px;
+    text-align:center;
+    background:var(--primary);
+    color:#fff;
+    padding:45px 30px;
+    border-radius:var(--radius);
+}
+
+.coverage-note h3{
+    margin-bottom:15px;
+    font-size:28px;
+}
+
+.coverage-note p{
+    margin-bottom:25px;
+    line-height:2;
+}
+
+.coverage-note .btn{
+    background:#fff;
+    color:var(--primary);
+}
+
+.coverage-note .btn:hover{
+    background:var(--secondary);
+    color:#fff;
+}
+
+/* ===== نمونه پروژه‌ها ===== */
+
+.portfolio{
+    background:#f8fbfd;
+}
+
+.portfolio-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+.portfolio-card{
+    overflow:hidden;
+}
+
+.portfolio-card img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+}
+
+.portfolio-content{
+    padding:25px;
+}
+
+.portfolio-content h3{
+    margin-bottom:15px;
+    color:var(--dark);
+}
+
+.portfolio-content p{
+    color:#666;
+    line-height:1.9;
+}
+
+.portfolio-footer{
+    text-align:center;
+    margin-top:50px;
+}
+
+.portfolio-footer p{
+    margin-bottom:25px;
+    color:#555;
+    line-height:2;
+}
+
+/* ===== Responsive ===== */
+
+@media(max-width:768px){
+
+.features-grid,
+.process-grid,
+.coverage-grid,
+.portfolio-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.coverage-note{
+
+    padding:35px 20px;
+
+}
+
+.coverage-note h3{
+
+    font-size:24px;
+
+}
+
+}
