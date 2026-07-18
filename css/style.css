@@ -1,123 +1,284 @@
-/* ===========================================
-   script.js
-   شرکت سمپاشی نانوفناوران بهداشت تهران
-=========================================== */
+/*====================================================
+  style.css
+  شرکت سمپاشی نانوفناوران بهداشت تهران
+=====================================================*/
 
-document.addEventListener("DOMContentLoaded", function () {
+/*=============== Reset ===============*/
 
-    /* ==========================
-       اسلایدر صفحه اصلی
-    ========================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-    const slides = document.querySelectorAll(".slide");
-    const dots = document.querySelectorAll(".dot");
+html{
+    scroll-behavior:smooth;
+}
 
-    let currentSlide = 0;
+body{
 
-    function showSlide(index){
+    font-family:'Vazirmatn',sans-serif;
 
-        slides.forEach((slide)=>{
-            slide.classList.remove("active");
-        });
+    direction:rtl;
 
-        dots.forEach((dot)=>{
-            dot.classList.remove("active");
-        });
+    background:#f8fbfd;
 
-        slides[index].classList.add("active");
-        dots[index].classList.add("active");
-    }
+    color:#222;
 
-    function nextSlide(){
+    line-height:1.9;
 
-        currentSlide++;
+    overflow-x:hidden;
 
-        if(currentSlide >= slides.length){
+}
 
-            currentSlide = 0;
+/*=============== Colors ===============*/
 
-        }
+:root{
 
-        showSlide(currentSlide);
+    --primary:#0B6FB8;
 
-    }
+    --secondary:#11A64A;
 
-    function previousSlide(){
+    --dark:#1F2937;
 
-        currentSlide--;
+    --light:#ffffff;
 
-        if(currentSlide < 0){
+    --gray:#f3f4f6;
 
-            currentSlide = slides.length-1;
+    --text:#333333;
 
-        }
+    --shadow:0 8px 25px rgba(0,0,0,.08);
 
-        showSlide(currentSlide);
+    --radius:16px;
 
-    }
+    --transition:.35s;
 
-    const nextBtn=document.getElementById("next-slide");
+}
 
-    const prevBtn=document.getElementById("prev-slide");
+/*=============== Links ===============*/
 
-    if(nextBtn){
+a{
 
-        nextBtn.addEventListener("click",nextSlide);
+    text-decoration:none;
 
-    }
+    transition:var(--transition);
 
-    if(prevBtn){
+    color:inherit;
 
-        prevBtn.addEventListener("click",previousSlide);
+}
 
-    }
+ul{
 
-    dots.forEach((dot,index)=>{
+    list-style:none;
 
-        dot.addEventListener("click",function(){
+}
 
-            currentSlide=index;
+img{
 
-            showSlide(currentSlide);
+    max-width:100%;
 
-        });
+    display:block;
 
-    });
+}
 
-    setInterval(nextSlide,5000);
+/*=============== Container ===============*/
 
-    /* ==========================
-       منوی موبایل
-    ========================== */
+.container{
 
-    const mobileMenu=document.querySelector(".mobile-menu");
+    width:92%;
 
-    const navbar=document.querySelector(".navbar");
+    max-width:1280px;
 
-    if(mobileMenu){
+    margin:auto;
 
-        mobileMenu.addEventListener("click",function(){
+}
 
-            navbar.classList.toggle("show");
+/*=============== Section ===============*/
 
-        });
+section{
 
-    }
+    padding:90px 0;
 
-    /* ==========================
-       FAQ
-    ========================== */
+}
 
-    const faqItems=document.querySelectorAll(".faq-item");
+/*=============== Titles ===============*/
 
-    faqItems.forEach((item)=>{
+.section-title{
 
-        item.addEventListener("click",function(){
+    text-align:center;
 
-            this.classList.toggle("open");
+    margin-bottom:60px;
 
-        });
+}
 
-    });
+.section-subtitle{
 
-});
+    display:inline-block;
+
+    color:var(--secondary);
+
+    font-weight:700;
+
+    margin-bottom:12px;
+
+    font-size:15px;
+
+}
+
+.section-title h2{
+
+    font-size:38px;
+
+    color:var(--dark);
+
+    margin-bottom:18px;
+
+}
+
+.section-title p{
+
+    max-width:850px;
+
+    margin:auto;
+
+    color:#666;
+
+    font-size:17px;
+
+}
+
+/*=============== Buttons ===============*/
+
+.btn{
+
+    display:inline-block;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    padding:14px 34px;
+
+    border-radius:50px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+    box-shadow:var(--shadow);
+
+}
+
+.btn:hover{
+
+    background:var(--secondary);
+
+    transform:translateY(-3px);
+
+}
+
+.btn-outline{
+
+    display:inline-block;
+
+    padding:14px 34px;
+
+    border:2px solid var(--primary);
+
+    border-radius:50px;
+
+    color:var(--primary);
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+.btn-outline:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+/*=============== Cards ===============*/
+
+.service-card,
+.feature-card,
+.portfolio-card,
+.testimonial-card,
+.coverage-card,
+.contact-card,
+.blog-card,
+.faq-item{
+
+    background:#fff;
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.service-card:hover,
+.feature-card:hover,
+.portfolio-card:hover,
+.testimonial-card:hover,
+.coverage-card:hover,
+.contact-card:hover,
+.blog-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+/*=============== Responsive ===============*/
+
+@media(max-width:992px){
+
+.section-title h2{
+
+font-size:30px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+section{
+
+padding:70px 0;
+
+}
+
+.section-title h2{
+
+font-size:26px;
+
+}
+
+.section-title p{
+
+font-size:15px;
+
+}
+
+.btn,
+.btn-outline{
+
+display:block;
+
+width:100%;
+
+text-align:center;
+
+margin:10px 0;
+
+}
+
+}
