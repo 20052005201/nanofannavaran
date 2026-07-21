@@ -154,3 +154,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+/* Animation */
+
+.why-card{
+    opacity:0;
+    transform:translateY(40px);
+}
+
+.show-card{
+    opacity:1;
+    transform:translateY(0);
+    transition:all .7s ease;
+}
