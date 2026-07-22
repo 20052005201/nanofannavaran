@@ -1862,3 +1862,17 @@ height:220px;
 }
 
 }
+/* ===========================
+   PROJECT ANIMATION
+=========================== */
+
+.project-card{
+    opacity:0;
+    transform:translateY(40px);
+}
+
+.project-card.show-project{
+    opacity:1;
+    transform:translateY(0);
+    transition:all .8s ease;
+}
