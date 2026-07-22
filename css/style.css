@@ -1876,3 +1876,76 @@ height:220px;
     transform:translateY(0);
     transition:all .8s ease;
 }
+/* ===========================
+   COMPANY STATS
+=========================== */
+
+.stats{
+    padding:80px 20px;
+    background:linear-gradient(135deg,#0b5ed7,#16a34a);
+    color:#fff;
+}
+
+.stats .container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.stats h2{
+    text-align:center;
+    font-size:36px;
+    margin-bottom:50px;
+    color:#fff;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+}
+
+.stat-card{
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(8px);
+    border-radius:20px;
+    padding:35px 20px;
+    text-align:center;
+    transition:.4s;
+}
+
+.stat-card:hover{
+    transform:translateY(-10px);
+    background:rgba(255,255,255,.20);
+}
+
+.stat-number{
+    font-size:48px;
+    font-weight:bold;
+    margin-bottom:15px;
+    color:#ffffff;
+}
+
+.stat-card h3{
+    font-size:22px;
+    color:#ffffff;
+}
+
+@media(max-width:768px){
+
+.stats{
+    padding:60px 15px;
+}
+
+.stats h2{
+    font-size:28px;
+}
+
+.stat-number{
+    font-size:38px;
+}
+
+.stat-card h3{
+    font-size:20px;
+}
+
+}
