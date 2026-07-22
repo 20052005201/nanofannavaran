@@ -294,3 +294,39 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(section);
 
 });
+/* ===========================
+   TESTIMONIAL SLIDER
+=========================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const slider = document.querySelector(".testimonial-slider");
+
+    if (!slider) return;
+
+    let scrollAmount = 0;
+
+    function autoSlide() {
+
+        const card = slider.querySelector(".testimonial-card");
+
+        if (!card) return;
+
+        const cardWidth = card.offsetWidth + 30;
+
+        scrollAmount += cardWidth;
+
+        if (scrollAmount >= slider.scrollWidth - slider.clientWidth) {
+            scrollAmount = 0;
+        }
+
+        slider.scrollTo({
+            left: scrollAmount,
+            behavior: "smooth"
+        });
+
+    }
+
+    setInterval(autoSlide, 4000);
+
+});
