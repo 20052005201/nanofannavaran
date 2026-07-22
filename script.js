@@ -224,3 +224,73 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+/* ===========================
+   STATS COUNTER
+=========================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const counters = document.querySelectorAll(".stat-number");
+
+    let started = false;
+
+    function startCounter() {
+
+        if (started) return;
+        started = true;
+
+        counters.forEach(counter => {
+
+            const text = counter.innerText;
+            const target = parseInt(text.replace(/\D/g, ""));
+
+            let count = 0;
+
+            const speed = Math.max(20, target / 100);
+
+            const update = () => {
+
+                count += speed;
+
+                if (count < target) {
+
+                    counter.innerText = Math.floor(count);
+
+                    if (text.includes("+")) counter.innerText += "+";
+                    if (text.includes("%")) counter.innerText += "%";
+
+                    requestAnimationFrame(update);
+
+                } else {
+
+                    counter.innerText = text;
+
+                }
+
+            };
+
+            update();
+
+        });
+
+    }
+
+    const section = document.querySelector("#stats");
+
+    const observer = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                startCounter();
+
+            }
+
+        });
+
+    }, { threshold: 0.3 });
+
+    observer.observe(section);
+
+});
