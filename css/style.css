@@ -2014,3 +2014,93 @@ height:220px;
 }
 
 }
+/* ===========================
+   CONTACT SECTION
+=========================== */
+
+.contact{
+    padding:80px 20px;
+    background:#ffffff;
+}
+
+.contact .container{
+    max-width:900px;
+    margin:auto;
+}
+
+.contact h2{
+    text-align:center;
+    color:#0b5ed7;
+    font-size:36px;
+    margin-bottom:15px;
+}
+
+.contact-form{
+    margin-top:40px;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea{
+
+    width:100%;
+    padding:16px;
+    border:1px solid #ddd;
+    border-radius:12px;
+    font-size:16px;
+    font-family:inherit;
+    transition:.3s;
+    box-sizing:border-box;
+
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus{
+
+    border-color:#0b5ed7;
+    outline:none;
+    box-shadow:0 0 10px rgba(11,94,215,.15);
+
+}
+
+.contact-form textarea{
+
+    resize:vertical;
+    min-height:150px;
+
+}
+
+.contact-form button{
+
+    background:#16a34a;
+    color:#fff;
+    border:none;
+    padding:16px;
+    border-radius:12px;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+.contact-form button:hover{
+
+    background:#12803b;
+
+}
+
+@media(max-width:768px){
+
+.contact{
+    padding:60px 15px;
+}
+
+.contact h2{
+    font-size:28px;
+}
+
+}
