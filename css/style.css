@@ -1771,3 +1771,17 @@ height:220px;
 }
 
 }
+/* ===========================
+   SERVICE ANIMATION
+=========================== */
+
+.service-card{
+    opacity:0;
+    transform:translateY(40px);
+}
+
+.service-card.show-service{
+    opacity:1;
+    transform:translateY(0);
+    transition:all .8s ease;
+}
