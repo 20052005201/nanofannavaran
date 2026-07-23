@@ -2405,3 +2405,31 @@ height:50px;
 }
 
 }
+/* ===========================
+   SERVICE STEPS
+=========================== */
+
+.steps{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    margin:40px 0;
+}
+
+.step{
+    background:#ffffff;
+    border-radius:15px;
+    padding:25px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    border-top:5px solid #16a34a;
+}
+
+.step h3{
+    color:#0b5ed7;
+    margin-bottom:15px;
+}
+
+.step p{
+    line-height:1.9;
+    color:#555;
+}
