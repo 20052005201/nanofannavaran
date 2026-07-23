@@ -2376,3 +2376,32 @@ height:50px;
 }
 
 }
+/* ===========================
+   SERVICE BANNER
+=========================== */
+
+.service-banner{
+    max-width:1200px;
+    margin:40px auto;
+    padding:0 20px;
+}
+
+.service-banner img{
+    width:100%;
+    height:420px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+@media(max-width:768px){
+
+.service-banner{
+    padding:0 15px;
+}
+
+.service-banner img{
+    height:220px;
+}
+
+}
