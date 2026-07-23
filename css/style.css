@@ -2433,3 +2433,28 @@ height:50px;
     line-height:1.9;
     color:#555;
 }
+/* ===========================
+   FAQ
+=========================== */
+
+.faq{
+    margin:60px 0;
+}
+
+.faq-item{
+    background:#f8fbff;
+    padding:20px;
+    border-radius:15px;
+    margin-bottom:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.faq-item h3{
+    color:#0b5ed7;
+    margin-bottom:10px;
+}
+
+.faq-item p{
+    color:#555;
+    line-height:2;
+}
