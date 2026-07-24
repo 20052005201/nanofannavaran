@@ -404,7 +404,57 @@
 
 </div>
 
-</section></section><section class="contact">
+</section></section><section class="projects">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>نمونه پروژه‌های انجام شده</h2>
+
+<p>
+بخشی از پروژه‌های موفق شرکت سمپاشی نانوفناوران در مراکز تجاری، درمانی و اداری
+</p>
+
+</div>
+
+<div class="projects-grid">
+
+<div class="project-card">
+
+<img src="images/projects/hospital.jpg" alt="سمپاشی بیمارستان">
+
+<h3>سمپاشی بیمارستان</h3>
+
+<p>اجرای عملیات کنترل آفات با رعایت کامل استانداردهای بهداشتی.</p>
+
+</div>
+
+<div class="project-card">
+
+<img src="images/projects/bank.jpg" alt="تمام شعبات بانک کارآفرین">
+
+<h3>تمام شعبات بانک کارآفرین</h3>
+
+<p>اجرای برنامه‌های دوره‌ای کنترل آفات در تمامی شعب.</p>
+
+</div>
+
+<div class="project-card">
+
+<img src="images/projects/restaurant.jpg" alt="سمپاشی رستوران">
+
+<h3>سمپاشی رستوران</h3>
+
+<p>کنترل سوسک، مگس و سایر آفات با رعایت ضوابط بهداشت.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section><section class="contact">
 
 <div class="container">
 
