@@ -203,7 +203,47 @@
 </div>
 
 </section>
+<section class="advantages">
 
+<div class="container">
+
+<div class="section-title">
+
+<h2>چرا نانوفناوران؟</h2>
+
+<p>
+دلایلی که مشتریان، شرکت سمپاشی نانوفناوران را انتخاب می‌کنند.
+</p>
+
+</div>
+
+<div class="services-grid">
+
+<div class="service-card">
+<h3>✅ کارشناسان مجرب</h3>
+<p>اجرای عملیات توسط نیروهای آموزش‌دیده و باتجربه.</p>
+</div>
+
+<div class="service-card">
+<h3>✅ سموم دارای مجوز</h3>
+<p>استفاده از سموم استاندارد و مورد تأیید مراجع ذی‌صلاح.</p>
+</div>
+
+<div class="service-card">
+<h3>✅ اعزام سریع</h3>
+<p>اعزام کارشناسان در کوتاه‌ترین زمان در سراسر تهران.</p>
+</div>
+
+<div class="service-card">
+<h3>✅ پشتیبانی خدمات</h3>
+<p>پیگیری وضعیت و ارائه راهنمایی پس از انجام سمپاشی.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
 <section class="contact">
 
 <div class="container">
