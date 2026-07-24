@@ -2503,3 +2503,17 @@ height:50px;
     line-height:1.9;
     color:#555;
 }
+/* ===========================
+   PROJECT ANIMATION
+=========================== */
+
+.project-card{
+    opacity:0;
+    transform:translateY(40px);
+    transition:all .7s ease;
+}
+
+.project-card.show{
+    opacity:1;
+    transform:translateY(0);
+}
