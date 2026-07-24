@@ -487,8 +487,8 @@
 <!-- ========================= دکمه کشویی مشاوره رایگان (سمت چپ پایین - بازشونده به راست) ========================== -->
 <div class="floating-container">
     <button class="floating-main-btn" id="floatingToggle">
-        <span class="btn-text">📞 مشاوره رایگان</span>
         <span class="btn-arrow">◀</span>
+        <span class="btn-text">📞 مشاوره رایگان</span>
     </button>
     <div class="floating-menu" id="floatingMenu">
         <a href="tel:09120705746" class="floating-item call-item">
@@ -536,7 +536,7 @@
         transition: all 0.3s ease;
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 8px;
         white-space: nowrap;
         animation: main-pulse 2.5s infinite;
         position: relative;
@@ -544,7 +544,7 @@
         justify-content: center;
         border-radius: 50px 0 0 50px;
         padding: 14px 20px 14px 24px;
-        direction: rtl;
+        direction: ltr;
     }
 
     .floating-main-btn:hover {
@@ -556,6 +556,14 @@
         font-size: 14px;
         transition: transform 0.4s ease;
         display: inline-block;
+        order: 0;
+    }
+
+    .floating-main-btn .btn-text {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        order: 1;
     }
 
     .floating-main-btn.active .btn-arrow {
