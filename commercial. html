@@ -13,7 +13,8 @@
 
 <meta name="keywords" content="سمپاشی رستوران، سمپاشی کارخانه، کنترل آفات تجاری، سمپاشی انبار، سمپاشی شرکت">
 
-<link rel="stylesheet" href="../style.css">
+<!-- لینک CSS اصلاح شده: مسیر style.css در همان سطح فایل فعلی -->
+<link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -23,9 +24,10 @@
 
 <div class="container">
 
-<a href="../index.html" class="logo">
+<a href="index.html" class="logo">
 
-<img src="../images/logo.png" alt="شرکت سمپاشی نانوفناوران">
+<!-- مسیر لوگو اصلاح شده به images/logo/logo.png -->
+<img src="images/logo/logo.png" alt="شرکت سمپاشی نانوفناوران">
 
 </a>
 
@@ -33,7 +35,7 @@
 
 <ul>
 
-<li><a href="../index.html">خانه</a></li>
+<li><a href="index.html">خانه</a></li>
 
 <li><a href="about.html">درباره ما</a></li>
 
@@ -264,7 +266,7 @@
 
 <p>
 
-<a href="../index.html">
+<a href="index.html">
 
 بازگشت به صفحه اصلی
 
@@ -276,7 +278,8 @@
 
 </footer>
 
-<script src="../script.js"></script>
+<!-- اسکریپت اصلاح شده: مسیر script.js در همان سطح فایل فعلی -->
+<script src="script.js"></script>
 
 </body>
 
