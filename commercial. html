@@ -360,7 +360,51 @@
 </div>
 
 </section>
-</section><section class="contact">
+<section class="benefits">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>مزایای انتخاب نانوفناوران</h2>
+
+<p>
+ارائه خدمات حرفه‌ای کنترل آفات با کیفیت بالا و رعایت کامل اصول بهداشتی
+</p>
+
+</div>
+
+<div class="services-grid">
+
+<div class="service-card">
+<div class="service-icon">⚡</div>
+<h3>اعزام سریع</h3>
+<p>اعزام کارشناسان در کوتاه‌ترین زمان ممکن در سراسر تهران.</p>
+</div>
+
+<div class="service-card">
+<div class="service-icon">🛡️</div>
+<h3>ضمانت خدمات</h3>
+<p>ارائه خدمات همراه با پشتیبانی و ضمانت مطابق شرایط شرکت.</p>
+</div>
+
+<div class="service-card">
+<div class="service-icon">🧪</div>
+<h3>سموم استاندارد</h3>
+<p>استفاده از سموم دارای مجوز و تجهیزات حرفه‌ای.</p>
+</div>
+
+<div class="service-card">
+<div class="service-icon">📋</div>
+<h3>بازدید و مشاوره</h3>
+<p>بررسی محل و ارائه بهترین راهکار قبل از اجرای عملیات.</p>
+</div>
+
+</div>
+
+</div>
+
+</section></section><section class="contact">
 
 <div class="container">
 
