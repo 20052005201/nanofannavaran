@@ -2458,3 +2458,7 @@ height:50px;
     color:#555;
     line-height:2;
 }
+.whatsapp-float {
+    left: auto; /* غیرفعال کردن left */
+    right: 20px; /* تنظیم right */
+}
