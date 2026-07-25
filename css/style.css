@@ -2545,3 +2545,39 @@ height:50px;
     line-height:1.9;
     color:#555;
 }
+/* ===========================================
+   اضافه شده از فایل اسکریپت (انیمیشن کارت‌ها)
+=========================================== */
+
+.why-card{
+    opacity:0;
+    transform:translateY(40px);
+}
+
+.show-card{
+    opacity:1;
+    transform:translateY(0);
+    transition:all .7s ease;
+}
+
+.service-card{
+    opacity:0;
+    transform:translateY(40px);
+}
+
+.show-service{
+    opacity:1;
+    transform:translateY(0);
+    transition:all .8s ease;
+}
+
+.project-card{
+    opacity:0;
+    transform:translateY(40px);
+    transition:all .7s ease;
+}
+
+.show-project{
+    opacity:1;
+    transform:translateY(0);
+}
