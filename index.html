@@ -751,35 +751,92 @@
     }
 </style>
 
-<script>
-    // ===== اسکریپت باز و بسته شدن منوی کشویی =====
-    document.addEventListener('DOMContentLoaded', function() {
-        const toggleBtn = document.getElementById('floatingToggle');
-        const menu = document.getElementById('floatingMenu');
+<script><script>
+document.addEventListener("DOMContentLoaded", function () {
 
-        toggleBtn.addEventListener('click', function(e) {
+    /* ==========================
+       اسلایدر صفحه اصلی
+    ========================== */
+    const slides = document.querySelectorAll(".slide");
+    const dots = document.querySelectorAll(".dot");
+    let currentSlide = 0;
+
+    function showSlide(index){
+        if(!slides.length) return;
+
+        slides.forEach(slide => slide.classList.remove("active"));
+        dots.forEach(dot => dot.classList.remove("active"));
+
+        slides[index].classList.add("active");
+        if(dots[index]) dots[index].classList.add("active");
+    }
+
+    function nextSlide(){
+        if(!slides.length) return;
+        currentSlide++;
+        if(currentSlide >= slides.length) currentSlide = 0;
+        showSlide(currentSlide);
+    }
+
+    function previousSlide(){
+        if(!slides.length) return;
+        currentSlide--;
+        if(currentSlide < 0) currentSlide = slides.length - 1;
+        showSlide(currentSlide);
+    }
+
+    const nextBtn = document.getElementById("next-slide");
+    const prevBtn = document.getElementById("prev-slide");
+
+    if(nextBtn) nextBtn.addEventListener("click", nextSlide);
+    if(prevBtn) prevBtn.addEventListener("click", previousSlide);
+
+    dots.forEach((dot,index)=>{
+        dot.addEventListener("click",function(){
+            currentSlide=index;
+            showSlide(currentSlide);
+        });
+    });
+
+    if(slides.length){
+        showSlide(currentSlide);
+        setInterval(nextSlide,5000);
+    }
+
+    /* ==========================
+       منوی شناور تماس و ایتا
+    ========================== */
+
+    const toggleBtn = document.getElementById("floatingToggle");
+    const menu = document.getElementById("floatingMenu");
+
+    if(toggleBtn && menu){
+
+        toggleBtn.addEventListener("click", function(e){
             e.stopPropagation();
-            this.classList.toggle('active');
-            menu.classList.toggle('open');
+            this.classList.toggle("active");
+            menu.classList.toggle("open");
         });
 
-        // بستن منو با کلیک روی هر آیتم
-        document.querySelectorAll('.floating-item').forEach(item => {
-            item.addEventListener('click', function() {
-                toggleBtn.classList.remove('active');
-                menu.classList.remove('open');
+        document.querySelectorAll(".floating-item").forEach(item=>{
+            item.addEventListener("click",function(){
+                toggleBtn.classList.remove("active");
+                menu.classList.remove("open");
             });
         });
 
-        // بستن منو با کلیک بیرون
-        document.addEventListener('click', function(e) {
-            const container = document.querySelector('.floating-container');
-            if (!container.contains(e.target)) {
-                toggleBtn.classList.remove('active');
-                menu.classList.remove('open');
+        document.addEventListener("click",function(e){
+            const container=document.querySelector(".floating-container");
+            if(container && !container.contains(e.target)){
+                toggleBtn.classList.remove("active");
+                menu.classList.remove("open");
             }
         });
-    });
+
+    }
+
+});
+</script>
 </script>
 
 </body>
