@@ -1,164 +1,124 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    /* ==========================
-       اسلایدر صفحه اصلی
-    ========================== */
+    // ======== 1. اسلایدر خودکار ========
     const slides = document.querySelectorAll(".slide");
     const dots = document.querySelectorAll(".dot");
     let currentSlide = 0;
+    let slideInterval;
 
-    function showSlide(index){
-        slides.forEach((slide)=>{ slide.classList.remove("active"); });
-        dots.forEach((dot)=>{ dot.classList.remove("active"); });
+    function showSlide(index) {
+        if (!slides.length) return;
+        slides.forEach(s => s.classList.remove("active"));
+        dots.forEach(d => d.classList.remove("active"));
         slides[index].classList.add("active");
-        dots[index].classList.add("active");
+        if (dots[index]) dots[index].classList.add("active");
     }
 
-    function nextSlide(){
-        currentSlide++;
-        if(currentSlide >= slides.length){ currentSlide = 0; }
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
         showSlide(currentSlide);
     }
 
-    function previousSlide(){
-        currentSlide--;
-        if(currentSlide < 0){ currentSlide = slides.length-1; }
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
         showSlide(currentSlide);
     }
 
-    const nextBtn=document.getElementById("next-slide");
-    const prevBtn=document.getElementById("prev-slide");
+    // دکمه‌های قبلی/بعدی
+    document.getElementById("nextSlide")?.addEventListener("click", function () {
+        clearInterval(slideInterval);
+        nextSlide();
+        slideInterval = setInterval(nextSlide, 5000);
+    });
+    document.getElementById("prevSlide")?.addEventListener("click", function () {
+        clearInterval(slideInterval);
+        prevSlide();
+        slideInterval = setInterval(nextSlide, 5000);
+    });
 
-    if(nextBtn){ nextBtn.addEventListener("click",nextSlide); }
-    if(prevBtn){ prevBtn.addEventListener("click",previousSlide); }
-
-    dots.forEach((dot,index)=>{
-        dot.addEventListener("click",function(){
-            currentSlide=index;
+    // نقاط راهنما
+    dots.forEach((dot, index) => {
+        dot.addEventListener("click", function () {
+            clearInterval(slideInterval);
+            currentSlide = index;
             showSlide(currentSlide);
+            slideInterval = setInterval(nextSlide, 5000);
         });
     });
 
-    setInterval(nextSlide,5000);
+    // شروع اسلایدر
+    if (slides.length) {
+        showSlide(0);
+        slideInterval = setInterval(nextSlide, 5000);
+    }
 
-    /* ==========================
-       منوی موبایل
-    ========================== */
-    const mobileMenu=document.querySelector(".mobile-menu");
-    const navbar=document.querySelector(".navbar");
-    if(mobileMenu){
-        mobileMenu.addEventListener("click",function(){
+    // ======== 2. منوی کشویی (همبرگری) ========
+    const mobileMenu = document.querySelector(".mobile-menu");
+    const navbar = document.querySelector(".navbar");
+    if (mobileMenu && navbar) {
+        mobileMenu.addEventListener("click", function () {
             navbar.classList.toggle("show");
         });
-    }
-
-    /* ==========================
-       FAQ
-    ========================== */
-    const faqItems=document.querySelectorAll(".faq-item");
-    faqItems.forEach((item)=>{
-        item.addEventListener("click",function(){
-            this.classList.toggle("open");
-        });
-    });
-
-    /* ==========================
-       WHY US, SERVICES, PROJECTS ANIMATION
-    ========================== */
-    const observerCallback = (entries, className, delay = 0) => {
-        entries.forEach((entry, index) => {
-            if (entry.isIntersecting) {
-                setTimeout(() => {
-                    entry.target.classList.add(className);
-                }, index * (delay || 150));
-            }
-        });
-    };
-
-    const whyCards = document.querySelectorAll(".why-card");
-    const whyObserver = new IntersectionObserver((entries) => observerCallback(entries, "show-card"), { threshold: 0.20 });
-    whyCards.forEach(card => whyObserver.observe(card));
-
-    const serviceCards = document.querySelectorAll(".service-card");
-    const serviceObserver = new IntersectionObserver((entries) => observerCallback(entries, "show-service", 0), { threshold: 0.2 });
-    serviceCards.forEach(card => serviceObserver.observe(card));
-
-    const projectCards = document.querySelectorAll(".project-card");
-    const projectObserver = new IntersectionObserver((entries) => observerCallback(entries, "show-project", 0), { threshold: 0.2 });
-    projectCards.forEach(card => projectObserver.observe(card));
-
-    /* ==========================
-       STATS COUNTER
-    ========================== */
-    const counters = document.querySelectorAll(".stat-number");
-    let started = false;
-
-    function startCounter() {
-        if (started) return;
-        started = true;
-        counters.forEach(counter => {
-            const text = counter.innerText;
-            const target = parseInt(text.replace(/\D/g, ""));
-            let count = 0;
-            const speed = Math.max(20, target / 100);
-            const update = () => {
-                count += speed;
-                if (count < target) {
-                    counter.innerText = Math.floor(count);
-                    if (text.includes("+")) counter.innerText += "+";
-                    if (text.includes("%")) counter.innerText += "%";
-                    requestAnimationFrame(update);
-                } else {
-                    counter.innerText = text;
-                }
-            };
-            update();
+        // بستن منو با کلیک روی هر لینک
+        document.querySelectorAll(".navbar ul li a").forEach(link => {
+            link.addEventListener("click", () => navbar.classList.remove("show"));
         });
     }
 
-    const statsSection = document.querySelector("#stats");
-    if(statsSection) {
-        const statsObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) { startCounter(); }
+    // ======== 3. دکمه کشویی سبز (مشاوره رایگان) ========
+    const toggleBtn = document.getElementById("floatingToggle");
+    const floatingMenu = document.getElementById("floatingMenu");
+
+    if (toggleBtn && floatingMenu) {
+        toggleBtn.addEventListener("click", function (e) {
+            e.stopPropagation();
+            this.classList.toggle("active");
+            floatingMenu.classList.toggle("open");
+        });
+
+        document.querySelectorAll(".floating-item").forEach(item => {
+            item.addEventListener("click", function () {
+                toggleBtn.classList.remove("active");
+                floatingMenu.classList.remove("open");
             });
-        }, { threshold: 0.3 });
-        statsObserver.observe(statsSection);
-    }
+        });
 
-    /* ==========================
-       TESTIMONIAL SLIDER
-    ========================== */
-    const testimonialSlider = document.querySelector(".testimonial-slider");
-    if (testimonialSlider) {
-        let scrollAmount = 0;
-        function autoSlide() {
-            const card = testimonialSlider.querySelector(".testimonial-card");
-            if (!card) return;
-            const cardWidth = card.offsetWidth + 30;
-            scrollAmount += cardWidth;
-            if (scrollAmount >= testimonialSlider.scrollWidth - testimonialSlider.clientWidth) {
-                scrollAmount = 0;
-            }
-            testimonialSlider.scrollTo({ left: scrollAmount, behavior: "smooth" });
-        }
-        setInterval(autoSlide, 4000);
-    }
-
-    /* ==========================
-       BACK TO TOP BUTTON
-    ========================== */
-    const backToTop = document.getElementById("backToTop");
-    if(backToTop) {
-        window.addEventListener("scroll", function () {
-            if (window.scrollY > 300) {
-                backToTop.style.display = "flex";
-            } else {
-                backToTop.style.display = "none";
+        document.addEventListener("click", function (e) {
+            const container = document.querySelector(".floating-container");
+            if (container && !container.contains(e.target)) {
+                toggleBtn.classList.remove("active");
+                floatingMenu.classList.remove("open");
             }
         });
+    }
+
+    // ======== 4. دکمه اسکرول به بالا ========
+    const backToTop = document.getElementById("backToTop");
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 300) {
+            backToTop.style.display = "block";
+        } else {
+            backToTop.style.display = "none";
+        }
+    });
+    if (backToTop) {
         backToTop.addEventListener("click", function () {
             window.scrollTo({ top: 0, behavior: "smooth" });
         });
     }
+
+    // ======== 5. جستجو ========
+    window.searchSite = function () {
+        const query = document.getElementById("searchInput").value.trim();
+        if (query) {
+            // هدایت به جستجوی گوگل با دامنه سایت
+            window.open(`https://www.google.com/search?q=site:nanofannavaran.ir ${encodeURIComponent(query)}`, "_blank");
+        }
+    };
+    // جستجو با کلید Enter
+    document.getElementById("searchInput")?.addEventListener("keypress", function (e) {
+        if (e.key === "Enter") {
+            window.searchSite();
+        }
+    });
 });
