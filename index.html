@@ -18,11 +18,11 @@
         <nav class="navbar">
             <ul>
                 <li><a href="index.html" class="active">صفحه اصلی</a></li>
-                <li><a href="pages/about.html">درباره ما</a></li>
-                <li><a href="pages/residential.html">مسکونی</a></li>
-                <li><a href="pages/commercial.html">تجاری</a></li>
+                <li><a href="about.html">درباره ما</a></li>
+                <li><a href="residential.html">مسکونی</a></li>
+                <li><a href="commercial.html">تجاری</a></li>
                 <li><a href="blog.html">وبلاگ</a></li>
-                <li><a href="pages/contact.html">تماس</a></li>
+                <li><a href="contact.html">تماس</a></li>
             </ul>
         </nav>
         <div class="header-buttons">
@@ -37,66 +37,146 @@
     </div>
 </header>
 
-<!-- ======== HERO SLIDER ======== -->
+<!-- ======== HERO SLIDER (بدون توضیحات) ======== -->
 <section class="hero-slider">
     <div class="slider-container">
         <div class="slide active">
-            <img src="images/slider/slide1.png" alt="سمپاشی منازل">
-            <div class="slide-content">
-                <h1>شرکت سمپاشی نانوفناوران</h1>
-                <p>خدمات تخصصی کنترل آفات در منازل، مراکز تجاری و درمانی</p>
-                <a href="pages/residential.html" class="service-btn">مشاهده خدمات</a>
-                <a href="tel:09120705746" class="service-btn">تماس فوری</a>
-            </div>
+            <img src="images/slider/slide1.png" alt="اسلاید ۱">
         </div>
         <div class="slide">
-            <img src="images/slider/slide2.png" alt="سمپاشی بیمارستان">
-            <div class="slide-content">
-                <h2>سمپاشی بیمارستان‌ها</h2>
-                <p>با رعایت کامل استانداردهای بهداشتی</p>
-            </div>
+            <img src="images/slider/slide2.png" alt="اسلاید ۲">
         </div>
         <div class="slide">
-            <img src="images/slider/slide3.png" alt="بانک کارآفرین">
-            <div class="slide-content">
-                <h2>تمامی شعبات بانک کارآفرین</h2>
-                <p>نمونه‌ای از پروژه‌های موفق</p>
-            </div>
+            <img src="images/slider/slide3.png" alt="اسلاید ۳">
         </div>
-        <!-- دکمه‌های قبلی/بعدی -->
+        <div class="slide">
+            <img src="images/slider/slide4.png" alt="اسلاید ۴">
+        </div>
+        <div class="slide">
+            <img src="images/slider/slide5.png" alt="اسلاید ۵">
+        </div>
         <button class="slider-btn prev" id="prevSlide">❮</button>
         <button class="slider-btn next" id="nextSlide">❯</button>
     </div>
-    <!-- نقاط راهنما -->
     <div class="slider-dots">
         <span class="dot active" data-index="0"></span>
         <span class="dot" data-index="1"></span>
         <span class="dot" data-index="2"></span>
+        <span class="dot" data-index="3"></span>
+        <span class="dot" data-index="4"></span>
     </div>
 </section>
 
-<!-- ======== سایر بخش‌های سایت (بدون تغییر) ======== -->
-<!-- ... (بقیه محتوای index.html مثل about, services, ... را همان‌طور که بود قرار دهید) ... -->
+<!-- ======== درباره شرکت ======== -->
+<section class="about-company">
+    <div class="container">
+        <div class="about-image"><img src="images/about.jpg" alt="درباره ما"></div>
+        <div class="about-content">
+            <span class="section-subtitle">درباره نانوفناوران</span>
+            <h2>شرکت سمپاشی نانوفناوران بهداشت تهران</h2>
+            <p>با بیش از دو دهه تجربه، یکی از مجموعه‌های تخصصی و خوش‌نام در زمینه کنترل آفات شهری، خانگی و صنعتی است.</p>
+            <div class="about-features">
+                <div class="feature-item">✔ بیش از ۲۰ سال تجربه</div>
+                <div class="feature-item">✔ سموم استاندارد</div>
+                <div class="feature-item">✔ کارشناسان مجرب</div>
+                <div class="feature-item">✔ ضمانت خدمات</div>
+            </div>
+            <a href="about.html" class="btn">بیشتر بدانید</a>
+        </div>
+    </div>
+</section>
+
+<!-- ======== خدمات ======== -->
+<section class="services">
+    <div class="container">
+        <h2>خدمات تخصصی شرکت</h2>
+        <p class="section-description">ارائه خدمات کنترل آفات برای منازل، مراکز تجاری و درمانی</p>
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="images/services/home-pest-control.jpg" alt="منازل">
+                <h3>سمپاشی منازل</h3>
+                <p>کنترل سوسک، ساس، مورچه و سایر آفات خانگی</p>
+                <a href="residential.html" class="service-btn">مشاهده جزئیات</a>
+            </div>
+            <div class="service-card">
+                <img src="images/services/commercial-pest-control.jpg" alt="تجاری">
+                <h3>سمپاشی مراکز تجاری</h3>
+                <p>کنترل آفات در بانک‌ها، ادارات و مجتمع‌های تجاری</p>
+                <a href="commercial.html" class="service-btn">مشاهده جزئیات</a>
+            </div>
+            <div class="service-card">
+                <img src="images/services/hospital-pest-control.jpg" alt="بیمارستان">
+                <h3>سمپاشی بیمارستان‌ها</h3>
+                <p>با رعایت کامل استانداردهای بهداشتی</p>
+                <a href="hospital.html" class="service-btn">مشاهده جزئیات</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ======== پروژه‌ها ======== -->
+<section class="projects">
+    <div class="container">
+        <h2>پروژه‌های انجام‌شده</h2>
+        <div class="projects-grid">
+            <div class="project-card"><img src="images/projects/IMG_20260722_044205_307.jpg" alt="پروژه"><h3>سمپاشی بیمارستان</h3></div>
+            <div class="project-card"><img src="images/projects/project2.jpg" alt="پروژه"><h3>سمپاشی مراکز تجاری</h3></div>
+            <div class="project-card"><img src="images/projects/project3.jpg" alt="پروژه"><h3>سمپاشی مدارس</h3></div>
+        </div>
+    </div>
+</section>
+
+<!-- ======== آمار ======== -->
+<section class="stats">
+    <div class="container">
+        <h2>افتخارات ما</h2>
+        <div class="stats-grid">
+            <div class="stat-card"><div class="stat-number">15+</div><h3>سال تجربه</h3></div>
+            <div class="stat-card"><div class="stat-number">5000+</div><h3>پروژه موفق</h3></div>
+            <div class="stat-card"><div class="stat-number">100%</div><h3>رضایت مشتریان</h3></div>
+            <div class="stat-card"><div class="stat-number">22</div><h3>منطقه تحت پوشش</h3></div>
+        </div>
+    </div>
+</section>
+
+<!-- ======== نظرات مشتریان ======== -->
+<section class="testimonials">
+    <div class="container">
+        <h2>نظر مشتریان</h2>
+        <div class="testimonial-slider">
+            <div class="testimonial-card"><p>"کیفیت خدمات عالی بود، مشکل سوسک به طور کامل برطرف شد."</p><h4>- مشتری تهران</h4></div>
+            <div class="testimonial-card"><p>"سمپاشی مرکز تجاری بدون ایجاد مزاحمت انجام شد."</p><h4>- مدیر مجتمع تجاری</h4></div>
+            <div class="testimonial-card"><p>"بسیار حرفه‌ای و دقیق، استانداردهای بهداشتی رعایت شد."</p><h4>- مدیر مرکز درمانی</h4></div>
+        </div>
+    </div>
+</section>
+
+<!-- ======== تماس ======== -->
+<section class="contact">
+    <div class="container">
+        <h2>ثبت درخواست سمپاشی</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="نام و نام خانوادگی" required>
+            <input type="tel" placeholder="شماره تماس" required>
+            <select required><option value="">نوع خدمات</option><option>سمپاشی منازل</option><option>سمپاشی تجاری</option></select>
+            <textarea rows="4" placeholder="توضیحات"></textarea>
+            <button type="submit">ثبت درخواست</button>
+        </form>
+    </div>
+</section>
 
 <!-- ======== فوتر ======== -->
 <footer class="site-footer">
     <div class="container">
         <div class="footer-grid">
             <div class="footer-box"><h3>نانوفناوران</h3><p>ارائه‌دهنده خدمات تخصصی کنترل آفات در تهران</p></div>
-            <div class="footer-box">
-                <h3>اطلاعات تماس</h3>
-                <p>📱 09120705746</p>
-                <p>☎️ 22048278</p>
-                <p>💬 <a href="https://wa.me/989120705746" target="_blank">واتساپ</a></p>
-                <p>✈️ <a href="https://eitaa.com/nanofannavaran_ir" target="_blank">ایتا</a></p>
-            </div>
+            <div class="footer-box"><h3>اطلاعات تماس</h3><p>📱 09120705746</p><p>☎️ 22048278</p><p>💬 <a href="https://wa.me/989120705746" target="_blank">واتساپ</a></p></div>
         </div>
-        <hr>
-        <p class="copyright">© تمامی حقوق محفوظ است</p>
+        <hr><p class="copyright">© تمامی حقوق محفوظ است</p>
     </div>
 </footer>
 
-<!-- ======== دکمه کشویی سبز (مشاوره رایگان) ======== -->
+<!-- ======== دکمه کشویی جذاب ======== -->
 <div class="floating-container">
     <button class="floating-main-btn" id="floatingToggle">
         <span class="btn-arrow">▶</span>
@@ -105,7 +185,7 @@
     <div class="floating-menu" id="floatingMenu">
         <a href="tel:09120705746" class="floating-item call-item">
             <span class="item-icon">📞</span>
-            <span class="item-text">تماس</span>
+            <span class="item-text">تماس سریع</span>
         </a>
         <a href="https://wa.me/989120705746?text=%D8%A8%D9%87%20%D8%B3%D8%A7%DB%8C%D8%AA%20%D8%B4%D8%B1%DA%A9%D8%AA%20%D8%B3%D9%85%D9%BE%D8%A7%D8%B4%DB%8C%20%D9%86%D8%A7%D9%86%D9%88%D9%81%D9%86%D8%A7%D9%88%D8%B1%D8%A7%D9%86%20%D8%AE%D9%88%D8%B4%20%D8%A2%D9%85%D8%AF%DB%8C%D8%AF.%20%DA%86%DA%AF%D9%88%D9%86%D9%87%20%D9%85%DB%8C%E2%80%8C%D8%AA%D9%88%D8%A7%D9%86%D9%85%20%DA%A9%D9%85%DA%A9%20%D8%AA%D8%A7%D9%86%20%DA%A9%D9%86%D9%85%D8%9F" target="_blank" class="floating-item whatsapp-item">
             <span class="item-icon">💬</span>
@@ -121,7 +201,6 @@
 <!-- ======== دکمه اسکرول به بالا ======== -->
 <button id="backToTop" title="برو به بالا">↑</button>
 
-<!-- ======== اسکریپت‌ها ======== -->
 <script src="script.js"></script>
 </body>
 </html>
