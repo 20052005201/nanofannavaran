@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    // ======== اسلایدر خودکار ========
+    // ======== اسلایدر خودکار (۵ اسلاید) ========
     const slides = document.querySelectorAll(".slide");
     const dots = document.querySelectorAll(".dot");
     let currentSlide = 0;
