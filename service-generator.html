@@ -67,6 +67,14 @@
             font-size: 14px;
             color: #333;
         }
+        .error-msg {
+            display: none;
+            color: #dc3545;
+            margin-top: 20px;
+            padding: 15px;
+            background: #f8d7da;
+            border-radius: 12px;
+        }
     </style>
 </head>
 <body>
@@ -80,6 +88,7 @@
 
     <div class="loading" id="loadingText">در حال تولید صفحات... لطفاً صبر کنید ⏳</div>
     <div class="done" id="doneText">✅ همه صفحات با موفقیت تولید شدند! دانلود شروع می‌شود.</div>
+    <div class="error-msg" id="errorMsg">❌ خطا در تولید فایل‌ها. لطفاً اتصال اینترنت خود را بررسی کنید.</div>
 
     <div class="note">
         <strong>📌 نکته:</strong> فایل‌های تولید شده شامل:
@@ -92,12 +101,12 @@
     </div>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
 <script>
 document.getElementById('generateBtn').addEventListener('click', function() {
     document.getElementById('loadingText').style.display = 'block';
     document.getElementById('doneText').style.display = 'none';
+    document.getElementById('errorMsg').style.display = 'none';
 
     // لیست کامل خدمات (نام فارسی، نام فایل، توضیحات کوتاه)
     const services = [
@@ -133,8 +142,6 @@ document.getElementById('generateBtn').addEventListener('click', function() {
         { title: 'ضدعفونی محیط', file: 'disinfection', desc: 'ضدعفونی سطوح و محیط‌های مختلف با استفاده از مواد استاندارد.' },
         { title: 'گندزدایی محیط', file: 'sanitization', desc: 'گندزدایی عمیق محیط‌های مسکونی، تجاری و درمانی با روش‌های نوین.' }
     ];
-
-    const zip = new JSZip();
 
     // قالب اصلی صفحه (برای هر خدمت)
     function createServicePage(service) {
@@ -273,23 +280,48 @@ document.getElementById('generateBtn').addEventListener('click', function() {
 </html>`;
     }
 
-    // اضافه کردن همه فایل‌ها به ZIP
-    services.forEach(s => {
-        const content = createServicePage(s);
-        zip.file(`service/${s.file}.html`, content);
-    });
+    // بررسی وجود کتابخانه JSZip
+    if (typeof JSZip === 'undefined') {
+        document.getElementById('loadingText').style.display = 'none';
+        document.getElementById('errorMsg').style.display = 'block';
+        document.getElementById('errorMsg').innerHTML = '❌ کتابخانه مورد نیاز بارگذاری نشد. لطفاً اتصال اینترنت خود را بررسی کنید و دوباره تلاش کنید.';
+        return;
+    }
 
-    // تولید ZIP و دانلود
-    zip.generateAsync({ type: 'blob' })
-        .then(function(blob) {
-            document.getElementById('loadingText').style.display = 'none';
-            document.getElementById('doneText').style.display = 'block';
-            saveAs(blob, 'all-services-pages.zip');
-        })
-        .catch(function(err) {
-            alert('خطا در تولید فایل‌ها: ' + err);
-            document.getElementById('loadingText').style.display = 'none';
+    try {
+        const zip = new JSZip();
+
+        // اضافه کردن همه فایل‌ها به ZIP
+        services.forEach(s => {
+            const content = createServicePage(s);
+            zip.file(`service/${s.file}.html`, content);
         });
+
+        // تولید ZIP و دانلود با روش native (بدون نیاز به FileSaver)
+        zip.generateAsync({ type: 'blob' })
+            .then(function(blob) {
+                document.getElementById('loadingText').style.display = 'none';
+                document.getElementById('doneText').style.display = 'block';
+                
+                // ایجاد لینک دانلود
+                const link = document.createElement('a');
+                link.href = URL.createObjectURL(blob);
+                link.download = 'services-pages.zip';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                URL.revokeObjectURL(link.href);
+            })
+            .catch(function(err) {
+                document.getElementById('loadingText').style.display = 'none';
+                document.getElementById('errorMsg').style.display = 'block';
+                document.getElementById('errorMsg').innerHTML = '❌ خطا در تولید فایل‌ها: ' + err.message;
+            });
+    } catch (err) {
+        document.getElementById('loadingText').style.display = 'none';
+        document.getElementById('errorMsg').style.display = 'block';
+        document.getElementById('errorMsg').innerHTML = '❌ خطای غیرمنتظره: ' + err.message;
+    }
 });
 </script>
 
