@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تولید خودکار صفحات خدمات</title>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background: #f8fbfd;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background: #fff;
+            padding: 40px 30px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,.10);
+        }
+        h1 {
+            color: #0B6FB8;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        p {
+            color: #555;
+            line-height: 2;
+            font-size: 16px;
+        }
+        .btn {
+            display: inline-block;
+            background: #11A64A;
+            color: #fff;
+            padding: 16px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: .3s;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background: #0B6FB8;
+            transform: scale(1.05);
+        }
+        .loading {
+            display: none;
+            margin-top: 30px;
+            color: #0B6FB8;
+            font-weight: 700;
+        }
+        .done {
+            display: none;
+            margin-top: 30px;
+            color: #11A64A;
+            font-weight: 700;
+        }
+        .note {
+            background: #f1f5f9;
+            padding: 20px;
+            border-radius: 16px;
+            margin: 30px 0;
+            text-align: right;
+            font-size: 14px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>⚙️ تولید کننده خودکار صفحات خدمات</h1>
+    <p>با کلیک روی دکمه زیر، تمام ۳۳ صفحه اختصاصی خدمات به‌صورت یکجا تولید و دانلود می‌شوند.</p>
+    <p style="font-size:14px; color:#888;">پس از دانلود، فایل‌ها را در پوشه <code>service/</code> پروژه خود قرار دهید.</p>
+
+    <button class="btn" id="generateBtn">📥 تولید و دانلود همه صفحات</button>
+
+    <div class="loading" id="loadingText">در حال تولید صفحات... لطفاً صبر کنید ⏳</div>
+    <div class="done" id="doneText">✅ همه صفحات با موفقیت تولید شدند! دانلود شروع می‌شود.</div>
+
+    <div class="note">
+        <strong>📌 نکته:</strong> فایل‌های تولید شده شامل:
+        <ul style="text-align:right; padding-right:20px;">
+            <li>۳۳ صفحه HTML کامل برای هر خدمت</li>
+            <li>هر صفحه دارای تصویر متحرک (GIF) در سمت راست</li>
+            <li>لینک‌های بازگشت به لیست خدمات و تماس فوری</li>
+        </ul>
+        <p style="font-size:13px; color:#777; margin-top:10px;">برای تغییر محتوای هر صفحه، فایل مربوطه را در پوشه <code>service/</code> ویرایش کنید.</p>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+<script>
+document.getElementById('generateBtn').addEventListener('click', function() {
+    document.getElementById('loadingText').style.display = 'block';
+    document.getElementById('doneText').style.display = 'none';
+
+    // لیست کامل خدمات (نام فارسی، نام فایل، توضیحات کوتاه)
+    const services = [
+        { title: 'سمپاشی سوسک کابینتی', file: 'cockroach-kitchen', desc: 'کنترل تخصصی سوسک‌های آشپزخانه و کابینت‌ها با استفاده از سموم استاندارد و کم‌خطر.' },
+        { title: 'سمپاشی ساس', file: 'bedbug', desc: 'حذف کامل ساس تختخوابی با روش‌های حرارتی و شیمیایی پیشرفته.' },
+        { title: 'سمپاشی مورچه', file: 'ant', desc: 'کنترل و حذف انواع مورچه‌های خانگی و باغی با طعمه‌گذاری هوشمند.' },
+        { title: 'طعمه‌گذاری و کنترل موش', file: 'rat-control', desc: 'کنترل حرفه‌ای جوندگان موذی با استفاده از طعمه‌های استاندارد و ایمن.' },
+        { title: 'سمپاشی سوسک فاضلابی', file: 'cockroach-sewer', desc: 'کنترل سوسک‌های فاضلاب و محیط‌های مرطوب با سموم تخصصی.' },
+        { title: 'سمپاشی مار', file: 'snake', desc: 'جمع‌آوری و کنترل ایمن مارها در محیط‌های مسکونی و تجاری.' },
+        { title: 'سمپاشی عقرب', file: 'scorpion', desc: 'کنترل و حذف عقرب‌ها با روش‌های تخصصی و ایمن.' },
+        { title: 'سمپاشی کک', file: 'flea', desc: 'کنترل کک‌های خانگی و حیوانات با سموم مؤثر و ماندگار.' },
+        { title: 'سمپاشی کنه', file: 'tick', desc: 'حذف کنه‌های محیط‌های مرطوب و باغی با استفاده از سموم تخصصی.' },
+        { title: 'سمپاشی شپش', file: 'louse', desc: 'کنترل شپش‌های محیط‌های مسکونی و آموزشی با روش‌های ایمن.' },
+        { title: 'سمپاشی مگس', file: 'fly', desc: 'کنترل جمعیت مگس‌ها در محیط‌های مسکونی، تجاری و صنعتی.' },
+        { title: 'سمپاشی پشه', file: 'mosquito', desc: 'کنترل پشه‌ها و جلوگیری از انتقال بیماری‌های ناشی از آن.' },
+        { title: 'دور کردن کبوتر', file: 'pigeon-repellent', desc: 'جلوگیری از تجمع و لانه‌سازی کبوترها در ساختمان‌ها و محیط‌های شهری.' },
+        { title: 'سمپاشی هزارپا', file: 'millipede', desc: 'کنترل هزارپاها در محیط‌های مرطوب و باغی با روش‌های تخصصی.' },
+        { title: 'سمپاشی مایت', file: 'mite', desc: 'حذف مایت‌های گرد و غبار و کنترل آلرژی‌های ناشی از آن.' },
+        { title: 'سمپاشی عنکبوت', file: 'spider', desc: 'کنترل عنکبوت‌های سمی و غیرسمی در محیط‌های مسکونی و انباری.' },
+        { title: 'سمپاشی بید فرش', file: 'carpet-moth', desc: 'کنترل بید فرش و جلوگیری از تخریب الیاف و منسوجات.' },
+        { title: 'سمپاشی سوسک چوب‌خوار', file: 'wood-borer', desc: 'کنترل سوسک‌های چوب‌خوار و جلوگیری از تخریب سازه‌های چوبی.' },
+        { title: 'سمپاشی انبارها', file: 'warehouse', desc: 'کنترل آفات انباری با استفاده از روش‌های تخصصی و استاندارد.' },
+        { title: 'سمپاشی منازل', file: 'residential', desc: 'کنترل کامل آفات در منازل مسکونی با روش‌های ایمن و ماندگار.' },
+        { title: 'سمپاشی آپارتمان‌ها', file: 'apartment', desc: 'کنترل آفات در آپارتمان‌ها با رعایت کامل اصول ایمنی و بهداشتی.' },
+        { title: 'سمپاشی ویلا', file: 'villa', desc: 'کنترل آفات در ویلاها و محیط‌های تفریحی با روش‌های تخصصی.' },
+        { title: 'سمپاشی رستوران‌ها', file: 'restaurant', desc: 'کنترل آفات در رستوران‌ها با رعایت استانداردهای بهداشتی وزارت بهداشت.' },
+        { title: 'سمپاشی هتل‌ها', file: 'hotel', desc: 'کنترل آفات در هتل‌ها و مراکز اقامتی با حفظ آرامش مهمانان.' },
+        { title: 'سمپاشی بیمارستان‌ها', file: 'hospital', desc: 'کنترل آفات در بیمارستان‌ها با رعایت کامل دستورالعمل‌های بهداشتی.' },
+        { title: 'سمپاشی مدارس', file: 'school', desc: 'کنترل آفات در مدارس و مراکز آموزشی با رعایت ایمنی دانش‌آموزان.' },
+        { title: 'سمپاشی ادارات', file: 'office', desc: 'کنترل آفات در محیط‌های اداری با کمترین اختلال در روند کاری.' },
+        { title: 'سمپاشی کارخانجات', file: 'factory', desc: 'کنترل آفات در کارخانجات و مراکز صنعتی با روش‌های تخصصی.' },
+        { title: 'سمپاشی باغ و فضای سبز', file: 'garden', desc: 'کنترل آفات در باغ‌ها و فضای سبز شهری با سموم مجاز و ایمن.' },
+        { title: 'ضدعفونی محیط', file: 'disinfection', desc: 'ضدعفونی سطوح و محیط‌های مختلف با استفاده از مواد استاندارد.' },
+        { title: 'گندزدایی محیط', file: 'sanitization', desc: 'گندزدایی عمیق محیط‌های مسکونی، تجاری و درمانی با روش‌های نوین.' }
+    ];
+
+    const zip = new JSZip();
+
+    // قالب اصلی صفحه (برای هر خدمت)
+    function createServicePage(service) {
+        return `<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${service.title} | نانوفناوران</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        .service-detail {
+            max-width: 1100px;
+            margin: 100px auto 50px;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        .service-detail .text h1 {
+            font-size: 32px;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        .service-detail .text p {
+            line-height: 2.2;
+            color: #555;
+            font-size: 16px;
+        }
+        .service-detail .gif img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: contain;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,.15);
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            background: var(--secondary);
+            color: #fff;
+            padding: 12px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: .3s;
+        }
+        .back-link:hover {
+            background: var(--primary);
+        }
+        .contact-float {
+            margin-top: 20px;
+        }
+        .contact-float a {
+            display: inline-block;
+            background: var(--primary);
+            color: #fff;
+            padding: 12px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            margin-left: 10px;
+            transition: .3s;
+        }
+        .contact-float a:hover {
+            background: var(--secondary);
+        }
+        @media (max-width: 768px) {
+            .service-detail {
+                grid-template-columns: 1fr;
+                text-align: center;
+                margin-top: 80px;
+            }
+            .service-detail .text h1 {
+                font-size: 26px;
+            }
+            .service-detail .gif img {
+                max-height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <a href="../index.html" class="logo"><img src="../images/logo.png" alt="لوگو"></a>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">صفحه اصلی</a></li>
+                <li><a href="../services.html" class="active">خدمات</a></li>
+                <li><a href="../about.html">درباره ما</a></li>
+                <li><a href="../contact.html">تماس</a></li>
+            </ul>
+        </nav>
+        <div class="header-buttons">
+            <a href="tel:09120705746" class="call-btn">📞 09120705746</a>
+            <div class="mobile-menu">☰</div>
+        </div>
+    </div>
+</header>
+
+<div class="service-detail">
+    <div class="text">
+        <h1>🐜 ${service.title}</h1>
+        <p>${service.desc}</p>
+        <p><strong>روش کنترل:</strong> استفاده از سموم استاندارد و روش‌های نوین با تضمین کیفیت و ماندگاری بالا.</p>
+        <p><strong>مدت زمان اثرگذاری:</strong> نتایج سریع و ماندگار تا ۶ ماه.</p>
+        <a href="../services.html" class="back-link">🔙 بازگشت به لیست خدمات</a>
+        <div class="contact-float">
+            <a href="tel:09120705746">📞 تماس فوری</a>
+            <a href="https://wa.me/989120705746" target="_blank">💬 واتساپ</a>
+        </div>
+    </div>
+    <div class="gif">
+        <img src="../images/gifs/${service.file}.gif" alt="${service.title}">
+    </div>
+</div>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-box"><h3>نانوفناوران</h3><p>ارائه‌دهنده خدمات تخصصی کنترل آفات در تهران</p></div>
+            <div class="footer-box"><h3>اطلاعات تماس</h3><p>📱 09120705746</p><p>☎️ 22048278</p></div>
+        </div>
+        <hr><p class="copyright">© تمامی حقوق محفوظ است</p>
+    </div>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>`;
+    }
+
+    // اضافه کردن همه فایل‌ها به ZIP
+    services.forEach(s => {
+        const content = createServicePage(s);
+        zip.file(`service/${s.file}.html`, content);
+    });
+
+    // تولید ZIP و دانلود
+    zip.generateAsync({ type: 'blob' })
+        .then(function(blob) {
+            document.getElementById('loadingText').style.display = 'none';
+            document.getElementById('doneText').style.display = 'block';
+            saveAs(blob, 'all-services-pages.zip');
+        })
+        .catch(function(err) {
+            alert('خطا در تولید فایل‌ها: ' + err);
+            document.getElementById('loadingText').style.display = 'none';
+        });
+});
+</script>
+
+</body>
+</html>
