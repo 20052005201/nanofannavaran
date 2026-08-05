@@ -3,107 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>همه خدمات | سمپاشی نانوفناوران</title>
+    <title>همه خدمات سمپاشی و کنترل آفات | نانوفناوران</title>
+    <meta name="description" content="لیست کامل خدمات سمپاشی و کنترل آفات در تهران شامل خدمات مسکونی، تجاری و صنعتی">
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet">
-    <style>
-        .services-hero {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: #fff;
-            text-align: center;
-            padding: 60px 20px 40px;
-            border-radius: 0 0 40px 40px;
-        }
-        .services-hero h1 {
-            font-size: 36px;
-            margin-bottom: 15px;
-        }
-        .services-hero p {
-            max-width: 700px;
-            margin: 0 auto;
-            line-height: 2;
-            font-size: 17px;
-        }
-        .services-grid-all {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-            gap: 20px;
-            padding: 50px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .service-item {
-            background: #fff;
-            border-radius: 20px;
-            padding: 20px 15px;
-            text-align: center;
-            box-shadow: 0 8px 20px rgba(0,0,0,.08);
-            transition: all 0.4s ease;
-            border: 2px solid transparent;
-            cursor: pointer;
-            text-decoration: none;
-            color: inherit;
-            display: block;
-        }
-        .service-item:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 16px 40px rgba(0,0,0,.15);
-            border-color: var(--secondary);
-        }
-        .service-item img {
-            width: 70px;
-            height: 70px;
-            object-fit: contain;
-            margin: 0 auto 12px;
-            display: block;
-        }
-        .service-item span {
-            font-size: 14px;
-            font-weight: 700;
-            color: var(--dark);
-            display: block;
-        }
-        .back-home-btn {
-            display: inline-block;
-            background: var(--primary);
-            color: #fff;
-            padding: 14px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            margin: 20px auto 0;
-            transition: .3s;
-        }
-        .back-home-btn:hover {
-            background: var(--secondary);
-        }
-        @media (max-width: 600px) {
-            .services-grid-all {
-                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-                gap: 12px;
-                padding: 30px 12px;
-            }
-            .service-item img {
-                width: 50px;
-                height: 50px;
-            }
-            .service-item span {
-                font-size: 12px;
-            }
-            .services-hero h1 {
-                font-size: 26px;
-            }
-        }
-    </style>
 </head>
 <body>
 
 <!-- ======== HEADER ======== -->
 <header>
     <div class="container">
-        <a href="index.html" class="logo"><img src="images/logo.png" alt="لوگو"></a>
+        <a href="index.html" class="logo"><img src="images/logo.png" alt="لوگو شرکت سمپاشی نانوفناوران"></a>
         <nav class="navbar">
             <ul>
                 <li><a href="index.html">صفحه اصلی</a></li>
@@ -119,7 +28,7 @@
     </div>
 </header>
 
-<!-- ======== صفحه خدمات ======== -->
+<!-- ======== HERO ======== -->
 <section class="services-hero">
     <div class="container">
         <h1>🔹 همه خدمات سمپاشی و کنترل آفات</h1>
@@ -128,8 +37,9 @@
     </div>
 </section>
 
+<!-- ======== GRID ======== -->
 <div class="services-grid-all">
-    <!-- تولید خودکار برای تمام آیتم‌ها -->
+    <!-- ===== مسکونی ===== -->
     <a href="service/cockroach-kitchen.html" class="service-item">
         <img src="images/services/cockroach.jpg" alt="سوسک کابینتی">
         <span>سمپاشی سوسک کابینتی</span>
@@ -166,10 +76,97 @@
         <img src="images/services/tick.jpg" alt="کنه">
         <span>سمپاشی کنه</span>
     </a>
-    <!-- ادامه بقیه آیتم‌ها... -->
+    <a href="service/louse.html" class="service-item">
+        <img src="images/services/louse.jpg" alt="شپش">
+        <span>سمپاشی شپش</span>
+    </a>
+    <a href="service/fly.html" class="service-item">
+        <img src="images/services/fly.jpg" alt="مگس">
+        <span>سمپاشی مگس</span>
+    </a>
+    <a href="service/mosquito.html" class="service-item">
+        <img src="images/services/mosquito.jpg" alt="پشه">
+        <span>سمپاشی پشه</span>
+    </a>
+    <a href="service/pigeon-repellent.html" class="service-item">
+        <img src="images/services/pigeon.jpg" alt="کبوتر">
+        <span>دور کردن کبوتر</span>
+    </a>
+    <a href="service/millipede.html" class="service-item">
+        <img src="images/services/millipede.jpg" alt="هزارپا">
+        <span>سمپاشی هزارپا</span>
+    </a>
+    <a href="service/mite.html" class="service-item">
+        <img src="images/services/mite.jpg" alt="مایت">
+        <span>سمپاشی مایت</span>
+    </a>
+    <a href="service/spider.html" class="service-item">
+        <img src="images/services/spider.jpg" alt="عنکبوت">
+        <span>سمپاشی عنکبوت</span>
+    </a>
+    <a href="service/carpet-moth.html" class="service-item">
+        <img src="images/services/carpet-moth.jpg" alt="بید فرش">
+        <span>سمپاشی بید فرش</span>
+    </a>
+    <a href="service/wood-borer.html" class="service-item">
+        <img src="images/services/wood-borer.jpg" alt="سوسک چوب‌خوار">
+        <span>سمپاشی سوسک چوب‌خوار</span>
+    </a>
+    <a href="service/warehouse.html" class="service-item">
+        <img src="images/services/warehouse.jpg" alt="انبار">
+        <span>سمپاشی انبارها</span>
+    </a>
+    <a href="service/residential.html" class="service-item">
+        <img src="images/services/residential.jpg" alt="منازل">
+        <span>سمپاشی منازل</span>
+    </a>
+    <a href="service/apartment.html" class="service-item">
+        <img src="images/services/apartment.jpg" alt="آپارتمان">
+        <span>سمپاشی آپارتمان‌ها</span>
+    </a>
+    <a href="service/villa.html" class="service-item">
+        <img src="images/services/villa.jpg" alt="ویلا">
+        <span>سمپاشی ویلا</span>
+    </a>
+
+    <!-- ===== تجاری ===== -->
+    <a href="service/office.html" class="service-item">
+        <img src="images/services/office.jpg" alt="ادارات">
+        <span>سمپاشی ادارات</span>
+    </a>
+    <a href="service/factory.html" class="service-item">
+        <img src="images/services/factory.jpg" alt="کارخانجات">
+        <span>سمپاشی کارخانجات</span>
+    </a>
+    <a href="service/hospital.html" class="service-item">
+        <img src="images/services/hospital.jpg" alt="بیمارستان">
+        <span>سمپاشی بیمارستان‌ها</span>
+    </a>
+    <a href="service/school.html" class="service-item">
+        <img src="images/services/school.jpg" alt="مدارس">
+        <span>سمپاشی مدارس</span>
+    </a>
+    <a href="service/restaurant.html" class="service-item">
+        <img src="images/services/restaurant.jpg" alt="رستوران">
+        <span>سمپاشی رستوران‌ها</span>
+    </a>
+    <a href="service/hotel.html" class="service-item">
+        <img src="images/services/hotel.jpg" alt="هتل">
+        <span>سمپاشی هتل‌ها</span>
+    </a>
+
+    <!-- ===== عمومی ===== -->
+    <a href="service/disinfection.html" class="service-item">
+        <img src="images/services/disinfection.jpg" alt="ضدعفونی">
+        <span>ضدعفونی محیط</span>
+    </a>
+    <a href="service/sanitization.html" class="service-item">
+        <img src="images/services/sanitization.jpg" alt="گندزدایی">
+        <span>گندزدایی محیط</span>
+    </a>
 </div>
 
-<!-- ======== فوتر ======== -->
+<!-- ======== FOOTER ======== -->
 <footer class="site-footer">
     <div class="container">
         <div class="footer-grid">
