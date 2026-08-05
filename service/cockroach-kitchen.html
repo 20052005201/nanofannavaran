@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>سمپاشی سوسک کابینتی | نانوفناوران</title>
+    <meta name="description" content="کنترل تخصصی سوسک‌های آشپزخانه و کابینت‌ها با استفاده از سموم استاندارد و کم‌خطر در تهران">
     <link rel="stylesheet" href="../style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
         .service-detail {
             max-width: 1100px;
@@ -28,10 +26,9 @@
             color: #555;
             font-size: 16px;
         }
-        .service-detail .gif img {
+        .service-detail .gif svg {
             width: 100%;
             max-height: 400px;
-            object-fit: contain;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,.15);
         }
@@ -75,9 +72,6 @@
             .service-detail .text h1 {
                 font-size: 26px;
             }
-            .service-detail .gif img {
-                max-height: 250px;
-            }
         }
     </style>
 </head>
@@ -85,7 +79,7 @@
 
 <header>
     <div class="container">
-        <a href="../index.html" class="logo"><img src="../images/logo.png" alt="لوگو"></a>
+        <a href="../index.html" class="logo"><img src="../images/logo.png" alt="لوگو شرکت سمپاشی نانوفناوران"></a>
         <nav class="navbar">
             <ul>
                 <li><a href="../index.html">صفحه اصلی</a></li>
@@ -114,28 +108,62 @@
         </div>
     </div>
     <div class="gif">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="auto" style="max-width: 400px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,.15);">
-    <!-- محتوای SVG سوسک کابینتی -->
-    <ellipse cx="100" cy="110" rx="50" ry="30" fill="#5D4037" stroke="#3E2723" stroke-width="2"/>
-    <ellipse cx="100" cy="75" rx="20" ry="18" fill="#4E342E" stroke="#3E2723" stroke-width="2"/>
-    <circle cx="92" cy="70" r="3" fill="#FFFFFF"/>
-    <circle cx="108" cy="70" r="3" fill="#FFFFFF"/>
-    <circle cx="92" cy="70" r="1.5" fill="#000000"/>
-    <circle cx="108" cy="70" r="1.5" fill="#000000"/>
-    <path d="M88 62 Q75 40 68 30" stroke="#4E342E" stroke-width="2" fill="none"/>
-    <path d="M112 62 Q125 40 132 30" stroke="#4E342E" stroke-width="2" fill="none"/>
-    <path d="M60 100 L35 85" stroke="#4E342E" stroke-width="2.5" fill="none"/>
-    <path d="M55 110 L30 110" stroke="#4E342E" stroke-width="2.5" fill="none"/>
-    <path d="M60 120 L35 135" stroke="#4E342E" stroke-width="2.5" fill="none"/>
-    <path d="M140 100 L165 85" stroke="#4E342E" stroke-width="2.5" fill="none"/>
-    <path d="M145 110 L170 110" stroke="#4E342E" stroke-width="2.5" fill="none"/>
-    <path d="M140 120 L165 135" stroke="#4E342E" stroke-width="2.5" fill="none"/>
-    <line x1="80" y1="100" x2="80" y2="120" stroke="#3E2723" stroke-width="1.5" opacity="0.5"/>
-    <line x1="100" y1="95" x2="100" y2="125" stroke="#3E2723" stroke-width="1.5" opacity="0.5"/>
-    <line x1="120" y1="100" x2="120" y2="120" stroke="#3E2723" stroke-width="1.5" opacity="0.5"/>
-    <path d="M75 95 Q55 80 60 110" stroke="#6D4C41" stroke-width="1.5" fill="rgba(109,76,65,0.3)"/>
-    <path d="M125 95 Q145 80 140 110" stroke="#6D4C41" stroke-width="1.5" fill="rgba(109,76,65,0.3)"/>
-</svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="auto" style="max-width: 400px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,.15);">
+            <defs>
+                <radialGradient id="bodyGrad" cx="50%" cy="40%" r="50%">
+                    <stop offset="0%" stop-color="#6D4C41"/>
+                    <stop offset="60%" stop-color="#4E342E"/>
+                    <stop offset="100%" stop-color="#3E2723"/>
+                </radialGradient>
+                <radialGradient id="headGrad" cx="50%" cy="40%" r="50%">
+                    <stop offset="0%" stop-color="#5D4037"/>
+                    <stop offset="100%" stop-color="#3E2723"/>
+                </radialGradient>
+                <radialGradient id="eyeGrad" cx="40%" cy="40%" r="50%">
+                    <stop offset="0%" stop-color="#FFFFFF"/>
+                    <stop offset="70%" stop-color="#E0E0E0"/>
+                    <stop offset="100%" stop-color="#BDBDBD"/>
+                </radialGradient>
+                <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+                    <feDropShadow dx="3" dy="5" stdDeviation="4" flood-opacity="0.3"/>
+                </filter>
+            </defs>
+
+            <ellipse cx="200" cy="220" rx="90" ry="55" fill="url(#bodyGrad)" stroke="#2C1A0E" stroke-width="2" filter="url(#shadow)"/>
+            <line x1="160" y1="195" x2="160" y2="245" stroke="#2C1A0E" stroke-width="1.5" opacity="0.4"/>
+            <line x1="185" y1="188" x2="185" y2="252" stroke="#2C1A0E" stroke-width="1.5" opacity="0.4"/>
+            <line x1="215" y1="188" x2="215" y2="252" stroke="#2C1A0E" stroke-width="1.5" opacity="0.4"/>
+            <line x1="240" y1="195" x2="240" y2="245" stroke="#2C1A0E" stroke-width="1.5" opacity="0.4"/>
+
+            <ellipse cx="200" cy="140" rx="40" ry="32" fill="url(#headGrad)" stroke="#2C1A0E" stroke-width="2" filter="url(#shadow)"/>
+            
+            <ellipse cx="182" cy="132" rx="10" ry="8" fill="url(#eyeGrad)" stroke="#2C1A0E" stroke-width="1.5"/>
+            <ellipse cx="218" cy="132" rx="10" ry="8" fill="url(#eyeGrad)" stroke="#2C1A0E" stroke-width="1.5"/>
+            <ellipse cx="182" cy="132" rx="4" ry="5" fill="#1A1A1A"/>
+            <ellipse cx="218" cy="132" rx="4" ry="5" fill="#1A1A1A"/>
+            <ellipse cx="180" cy="130" rx="2" ry="2" fill="white" opacity="0.6"/>
+            <ellipse cx="216" cy="130" rx="2" ry="2" fill="white" opacity="0.6"/>
+
+            <path d="M175 120 Q150 80 130 50" stroke="#4E342E" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+            <path d="M130 50 L125 40 M130 50 L135 40" stroke="#4E342E" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <path d="M225 120 Q250 80 270 50" stroke="#4E342E" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+            <path d="M270 50 L265 40 M270 50 L275 40" stroke="#4E342E" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+            <path d="M130 190 L80 160 L60 145" stroke="#3E2723" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M270 190 L320 160 L340 145" stroke="#3E2723" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            
+            <path d="M125 215 L70 210 L45 215" stroke="#3E2723" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M275 215 L330 210 L355 215" stroke="#3E2723" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+            <path d="M135 245 L85 260 L65 275" stroke="#3E2723" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M265 245 L315 260 L335 275" stroke="#3E2723" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+            <path d="M150 195 Q110 170 100 200 Q105 220 150 210" fill="rgba(109,76,65,0.25)" stroke="#5D4037" stroke-width="1.5"/>
+            <path d="M250 195 Q290 170 300 200 Q295 220 250 210" fill="rgba(109,76,65,0.25)" stroke="#5D4037" stroke-width="1.5"/>
+
+            <ellipse cx="185" cy="210" rx="25" ry="12" fill="white" opacity="0.05"/>
+            <ellipse cx="215" cy="210" rx="25" ry="12" fill="white" opacity="0.05"/>
+        </svg>
     </div>
 </div>
 
