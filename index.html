@@ -18,10 +18,8 @@
         <nav class="navbar">
             <ul>
                 <li><a href="index.html" class="active">صفحه اصلی</a></li>
+                <li><a href="services.html">خدمات</a></li>
                 <li><a href="about.html">درباره ما</a></li>
-                <li><a href="residential.html">مسکونی</a></li>
-                <li><a href="commercial.html">تجاری</a></li>
-                <li><a href="blog.html">وبلاگ</a></li>
                 <li><a href="contact.html">تماس</a></li>
             </ul>
         </nav>
@@ -36,24 +34,14 @@
     </div>
 </header>
 
-<!-- ======== HERO SLIDER (۵ اسلاید) ======== -->
+<!-- ======== HERO SLIDER ======== -->
 <section class="hero-slider">
     <div class="slider-container">
-        <div class="slide active">
-            <img src="images/slider/slide1.jpg" alt="اسلاید ۱">
-        </div>
-        <div class="slide">
-            <img src="images/slider/slide2.jpg" alt="اسلاید ۲">
-        </div>
-        <div class="slide">
-            <img src="images/slider/slide3.jpg" alt="اسلاید ۳">
-        </div>
-        <div class="slide">
-            <img src="images/slider/slide4.jpg" alt="اسلاید ۴">
-        </div>
-        <div class="slide">
-            <img src="images/slider/slide5.jpg" alt="اسلاید ۵">
-        </div>
+        <div class="slide active"><img src="images/slider/slide1.png" alt="اسلاید ۱"></div>
+        <div class="slide"><img src="images/slider/slide2.png" alt="اسلاید ۲"></div>
+        <div class="slide"><img src="images/slider/slide3.png" alt="اسلاید ۳"></div>
+        <div class="slide"><img src="images/slider/slide4.png" alt="اسلاید ۴"></div>
+        <div class="slide"><img src="images/slider/slide5.png" alt="اسلاید ۵"></div>
         <button class="slider-btn prev" id="prevSlide">❮</button>
         <button class="slider-btn next" id="nextSlide">❯</button>
     </div>
@@ -66,7 +54,19 @@
     </div>
 </section>
 
-<!-- ======== درباره شرکت ======== -->
+<!-- ======== SERVICES ======== -->
+<section id="services" class="services">
+    <div class="container">
+        <h2>خدمات تخصصی شرکت سمپاشی نانوفناوران</h2>
+        <p class="section-description" style="font-size: 1.3rem;">
+            <a href="services.html" style="color: var(--secondary); font-weight: 900; text-decoration: none; transition: 0.3s; display: inline-block; padding: 10px 20px; border-radius: 12px; background: rgba(17, 166, 74, 0.08);">
+                کنترل آفات مسکونی (سوسک، ساس، پشه،...)
+            </a>
+        </p>
+    </div>
+</section>
+
+<!-- ======== ABOUT / WHY US ======== -->
 <section class="about-company">
     <div class="container">
         <div class="about-image"><img src="images/about.jpg" alt="درباره ما"></div>
@@ -85,282 +85,7 @@
     </div>
 </section>
 
-<!-- ======== خدمات ======== -->
-<!-- ========================= SERVICES ========================== -->
-<!DOC<!DOCTYPE html>
-<html lang="fa" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>کنترل آفات مسکونی | نانوفناوران</title>
-    <meta name="description" content="لیست کامل خدمات کنترل آفات مسکونی شامل سوسک، ساس، مورچه، موش و ...">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        /* ===== استایل جدید برای صفحه خدمات ===== */
-        .services-hero {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: #fff;
-            text-align: center;
-            padding: 60px 20px 40px;
-            border-radius: 0 0 40px 40px;
-        }
-        .services-hero h1 {
-            font-size: 36px;
-            margin-bottom: 15px;
-        }
-        .services-hero p {
-            max-width: 700px;
-            margin: 0 auto;
-            line-height: 2;
-            font-size: 17px;
-        }
-        .services-hero p a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: 700;
-            border-bottom: 2px solid rgba(255,255,255,0.3);
-        }
-        .services-hero p a:hover {
-            border-bottom-color: #fff;
-        }
-
-        .services-grid-all {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-            gap: 20px;
-            padding: 50px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .service-item {
-            background: #fff;
-            border-radius: 20px;
-            padding: 20px 15px;
-            text-align: center;
-            box-shadow: 0 8px 20px rgba(0,0,0,.08);
-            transition: all 0.4s ease;
-            border: 2px solid transparent;
-            cursor: pointer;
-            text-decoration: none;
-            color: inherit;
-            display: block;
-        }
-        .service-item:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 16px 40px rgba(0,0,0,.15);
-            border-color: var(--secondary);
-        }
-        .service-item img {
-            width: 70px;
-            height: 70px;
-            object-fit: contain;
-            margin: 0 auto 12px;
-            display: block;
-        }
-        .service-item span {
-            font-size: 1.1rem;
-            line-height: 2.2;
-            color: #0B6FB8;
-            font-weight: 700;
-            display: block;
-        }
-
-        .back-home-btn {
-            display: inline-block;
-            background: var(--primary);
-            color: #fff;
-            padding: 14px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            margin: 20px auto 0;
-            transition: .3s;
-        }
-        .back-home-btn:hover {
-            background: var(--secondary);
-        }
-
-        @media (max-width: 600px) {
-            .services-grid-all {
-                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-                gap: 12px;
-                padding: 30px 12px;
-            }
-            .service-item img {
-                width: 50px;
-                height: 50px;
-            }
-            .service-item span {
-                font-size: 0.95rem;
-                line-height: 1.8;
-            }
-            .services-hero h1 {
-                font-size: 26px;
-            }
-        }
-    </style>
-</head>
-<body>
-
-<!-- ======== HEADER ======== -->
-<header>
-    <div class="container">
-        <a href="index.html" class="logo"><img src="images/logo.png" alt="لوگو شرکت سمپاشی نانوفناوران"></a>
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html">صفحه اصلی</a></li>
-                <li><a href="services.html" class="active">خدمات</a></li>
-                <li><a href="about.html">درباره ما</a></li>
-                <li><a href="contact.html">تماس</a></li>
-            </ul>
-        </nav>
-        <div class="header-buttons">
-            <a href="tel:09120705746" class="call-btn">📞 09120705746</a>
-            <div class="mobile-menu">☰</div>
-        </div>
-    </div>
-</header>
-
-<!-- ======== HERO ======== -->
-<section class="services-hero">
-    <div class="container">
-        <h1>🔹 خدمات کنترل آفات مسکونی</h1>
-        <p>
-            <a href="index.html">🏠 بازگشت به صفحه اصلی</a>
-        </p>
-    </div>
-</section>
-
-<!-- ======== GRID ======== -->
-<div class="services-grid-all">
-    <!-- ===== لیست کامل خدمات مسکونی (بدون تجاری) ===== -->
-    <a href="service/cockroach-kitchen.html" class="service-item">
-        <img src="images/services/cockroach.jpg" alt="سوسک کابینتی">
-        <span>سمپاشی سوسک کابینتی</span>
-    </a>
-    <a href="service/bedbug.html" class="service-item">
-        <img src="images/services/bedbug.jpg" alt="ساس">
-        <span>سمپاشی ساس</span>
-    </a>
-    <a href="service/ant.html" class="service-item">
-        <img src="images/services/ant.jpg" alt="مورچه">
-        <span>سمپاشی مورچه</span>
-    </a>
-    <a href="service/rat-control.html" class="service-item">
-        <img src="images/services/rat.jpg" alt="موش">
-        <span>طعمه‌گذاری و کنترل موش</span>
-    </a>
-    <a href="service/cockroach-sewer.html" class="service-item">
-        <img src="images/services/cockroach-sewer.jpg" alt="سوسک فاضلابی">
-        <span>سمپاشی سوسک فاضلابی</span>
-    </a>
-    <a href="service/snake.html" class="service-item">
-        <img src="images/services/snake.jpg" alt="مار">
-        <span>سمپاشی مار</span>
-    </a>
-    <a href="service/scorpion.html" class="service-item">
-        <img src="images/services/scorpion.jpg" alt="عقرب">
-        <span>سمپاشی عقرب</span>
-    </a>
-    <a href="service/flea.html" class="service-item">
-        <img src="images/services/flea.jpg" alt="کک">
-        <span>سمپاشی کک</span>
-    </a>
-    <a href="service/tick.html" class="service-item">
-        <img src="images/services/tick.jpg" alt="کنه">
-        <span>سمپاشی کنه</span>
-    </a>
-    <a href="service/louse.html" class="service-item">
-        <img src="images/services/louse.jpg" alt="شپش">
-        <span>سمپاشی شپش</span>
-    </a>
-    <a href="service/fly.html" class="service-item">
-        <img src="images/services/fly.jpg" alt="مگس">
-        <span>سمپاشی مگس</span>
-    </a>
-    <a href="service/mosquito.html" class="service-item">
-        <img src="images/services/mosquito.jpg" alt="پشه">
-        <span>سمپاشی پشه</span>
-    </a>
-    <a href="service/pigeon-repellent.html" class="service-item">
-        <img src="images/services/pigeon.jpg" alt="کبوتر">
-        <span>دور کردن کبوتر</span>
-    </a>
-    <a href="service/millipede.html" class="service-item">
-        <img src="images/services/millipede.jpg" alt="هزارپا">
-        <span>سمپاشی هزارپا</span>
-    </a>
-    <a href="service/mite.html" class="service-item">
-        <img src="images/services/mite.jpg" alt="مایت">
-        <span>سمپاشی مایت</span>
-    </a>
-    <a href="service/spider.html" class="service-item">
-        <img src="images/services/spider.jpg" alt="عنکبوت">
-        <span>سمپاشی عنکبوت</span>
-    </a>
-    <a href="service/carpet-moth.html" class="service-item">
-        <img src="images/services/carpet-moth.jpg" alt="بید فرش">
-        <span>سمپاشی بید فرش</span>
-    </a>
-    <a href="service/wood-borer.html" class="service-item">
-        <img src="images/services/wood-borer.jpg" alt="سوسک چوب‌خوار">
-        <span>سمپاشی سوسک چوب‌خوار</span>
-    </a>
-    <a href="service/warehouse.html" class="service-item">
-        <img src="images/services/warehouse.jpg" alt="انبار">
-        <span>سمپاشی انبارها</span>
-    </a>
-    <a href="service/residential.html" class="service-item">
-        <img src="images/services/residential.jpg" alt="منازل">
-        <span>سمپاشی منازل</span>
-    </a>
-    <a href="service/apartment.html" class="service-item">
-        <img src="images/services/apartment.jpg" alt="آپارتمان">
-        <span>سمپاشی آپارتمان‌ها</span>
-    </a>
-    <a href="service/villa.html" class="service-item">
-        <img src="images/services/villa.jpg" alt="ویلا">
-        <span>سمپاشی ویلا</span>
-    </a>
-    <a href="service/disinfection.html" class="service-item">
-        <img src="images/services/disinfection.jpg" alt="ضدعفونی">
-        <span>ضدعفونی محیط</span>
-    </a>
-    <a href="service/sanitization.html" class="service-item">
-        <img src="images/services/sanitization.jpg" alt="گندزدایی">
-        <span>گندزدایی محیط</span>
-    </a>
-</div>
-
-<!-- ======== FOOTER ======== -->
-<footer class="site-footer">
-    <div class="container">
-        <div class="footer-grid">
-            <div class="footer-box"><h3>نانوفناوران</h3><p>ارائه‌دهنده خدمات تخصصی کنترل آفات در تهران</p></div>
-            <div class="footer-box"><h3>اطلاعات تماس</h3><p>📱 09120705746</p><p>☎️ 22048278</p></div>
-        </div>
-        <hr><p class="copyright">© تمامی حقوق محفوظ است</p>
-    </div>
-</footer>
-
-<script src="script.js"></script>
-</body>
-</html>
-
-
-<!-- ======== پروژه‌ها ======== -->
-<section class="projects">
-    <div class="container">
-        <h2>پروژه‌های انجام‌شده</h2>
-        <div class="projects-grid">
-            <div class="project-card"><img src="images/projects/IMG_20260722_044205_307.jpg" alt="پروژه"><h3>سمپاشی بیمارستان</h3></div>
-            <div class="project-card"><img src="images/projects/project2.jpg" alt="پروژه"><h3>سمپاشی مراکز تجاری</h3></div>
-            <div class="project-card"><img src="images/projects/project3.jpg" alt="پروژه"><h3>سمپاشی مدارس</h3></div>
-        </div>
-    </div>
-</section>
-
-<!-- ======== آمار ======== -->
+<!-- ======== STATS ======== -->
 <section class="stats">
     <div class="container">
         <h2>افتخارات ما</h2>
@@ -373,7 +98,7 @@
     </div>
 </section>
 
-<!-- ======== نظرات مشتریان ======== -->
+<!-- ======== TESTIMONIALS ======== -->
 <section class="testimonials">
     <div class="container">
         <h2>نظر مشتریان</h2>
@@ -385,7 +110,7 @@
     </div>
 </section>
 
-<!-- ======== تماس ======== -->
+<!-- ======== CONTACT ======== -->
 <section class="contact">
     <div class="container">
         <h2>ثبت درخواست سمپاشی</h2>
@@ -399,18 +124,18 @@
     </div>
 </section>
 
-<!-- ======== فوتر ======== -->
+<!-- ======== FOOTER ======== -->
 <footer class="site-footer">
     <div class="container">
         <div class="footer-grid">
             <div class="footer-box"><h3>نانوفناوران</h3><p>ارائه‌دهنده خدمات تخصصی کنترل آفات در تهران</p></div>
-            <div class="footer-box"><h3>اطلاعات تماس</h3><p>📱 09120705746</p><p>☎️ 22048278</p><p>💬 <a href="https://wa.me/989120705746" target="_blank">واتساپ</a></p></div>
+            <div class="footer-box"><h3>اطلاعات تماس</h3><p>📱 09120705746</p><p>☎️ 22048278</p></div>
         </div>
         <hr><p class="copyright">© تمامی حقوق محفوظ است</p>
     </div>
 </footer>
 
-<!-- ======== دکمه کشویی ======== -->
+<!-- ======== FLOATING BUTTON ======== -->
 <div class="floating-container">
     <button class="floating-main-btn" id="floatingToggle">
         <span class="btn-arrow">▶</span>
@@ -432,7 +157,7 @@
     </div>
 </div>
 
-<!-- ======== دکمه اسکرول به بالا ======== -->
+<!-- ======== BACK TO TOP ======== -->
 <button id="backToTop" title="برو به بالا">↑</button>
 
 <script src="script.js"></script>
