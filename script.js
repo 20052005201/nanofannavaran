@@ -61,27 +61,21 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // ======== دکمه کشویی (مشاوره رایگان) - نسخه کاملاً مستقل ========
+    // ======== دکمه کشویی ========
     const toggleBtn = document.getElementById("floatingToggle");
     const floatingMenu = document.getElementById("floatingMenu");
-
     if (toggleBtn && floatingMenu) {
-        // باز و بسته کردن منو
         toggleBtn.addEventListener("click", function (e) {
             e.stopPropagation();
             this.classList.toggle("active");
             floatingMenu.classList.toggle("open");
         });
-
-        // بستن منو با کلیک روی هر آیتم
         document.querySelectorAll(".floating-item").forEach(item => {
             item.addEventListener("click", function () {
                 toggleBtn.classList.remove("active");
                 floatingMenu.classList.remove("open");
             });
         });
-
-        // بستن منو با کلیک بیرون از آن
         document.addEventListener("click", function (e) {
             const container = document.querySelector(".floating-container");
             if (container && !container.contains(e.target)) {
