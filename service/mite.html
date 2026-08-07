@@ -5,6 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>سمپاشی مایت | نانوفناوران</title>
     <link rel="stylesheet" href="../style.css">
+    <style>
+        .service-detail {
+            max-width: 1100px;
+            margin: 100px auto 50px;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        .service-detail .text h1 {
+            font-size: 32px;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        .service-detail .text p {
+            line-height: 2.2;
+            color: #555;
+            font-size: 16px;
+        }
+        .service-detail .gif img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: contain;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,.15);
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            background: var(--secondary);
+            color: #fff;
+            padding: 12px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: .3s;
+        }
+        .back-link:hover {
+            background: var(--primary);
+        }
+        .contact-float {
+            margin-top: 20px;
+        }
+        .contact-float a {
+            display: inline-block;
+            background: var(--primary);
+            color: #fff;
+            padding: 12px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            margin-left: 10px;
+            transition: .3s;
+        }
+        .contact-float a:hover {
+            background: var(--secondary);
+        }
+        @media (max-width: 768px) {
+            .service-detail {
+                grid-template-columns: 1fr;
+                text-align: center;
+                margin-top: 80px;
+            }
+            .service-detail .text h1 {
+                font-size: 26px;
+            }
+            .service-detail .gif img {
+                max-height: 250px;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -39,7 +111,7 @@
         </div>
     </div>
     <div class="gif">
-        <img src="../images/gifs/mite.gif" alt="سمپاشی مایت">
+        <img src="../images/services/mite.jpg" alt="سمپاشی مایت">
     </div>
 </div>
 
