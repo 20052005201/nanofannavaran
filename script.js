@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // ======== زیرمنوی تماس (دو شماره) ========
+    // ======== زیرمنوی تماس (دو شماره به سمت بالا) ========
     const callToggle = document.getElementById("callToggle");
     const callSubmenu = document.getElementById("callSubmenu");
     if (callToggle && callSubmenu) {
