@@ -75,7 +75,6 @@ document.addEventListener("DOMContentLoaded", function () {
             if (container && !container.contains(e.target)) {
                 toggleBtn.classList.remove("active");
                 floatingMenu.classList.remove("open");
-                // بستن زیرمنوی تماس
                 const callToggle = document.getElementById("callToggle");
                 const callSubmenu = document.getElementById("callSubmenu");
                 if (callToggle && callSubmenu) {
@@ -95,7 +94,6 @@ document.addEventListener("DOMContentLoaded", function () {
             this.classList.toggle("open");
             callSubmenu.classList.toggle("open");
         });
-        // بستن زیرمنو با کلیک روی هر شماره
         document.querySelectorAll(".call-sub-item").forEach(item => {
             item.addEventListener("click", function () {
                 callToggle.classList.remove("open");
