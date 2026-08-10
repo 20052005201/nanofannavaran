@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // ======== دکمه کشویی ========
+    // ======== دکمه اصلی کشویی ========
     const toggleBtn = document.getElementById("floatingToggle");
     const floatingMenu = document.getElementById("floatingMenu");
     if (toggleBtn && floatingMenu) {
@@ -70,18 +70,37 @@ document.addEventListener("DOMContentLoaded", function () {
             this.classList.toggle("active");
             floatingMenu.classList.toggle("open");
         });
-        document.querySelectorAll(".floating-item").forEach(item => {
-            item.addEventListener("click", function () {
-                toggleBtn.classList.remove("active");
-                floatingMenu.classList.remove("open");
-            });
-        });
         document.addEventListener("click", function (e) {
             const container = document.querySelector(".floating-container");
             if (container && !container.contains(e.target)) {
                 toggleBtn.classList.remove("active");
                 floatingMenu.classList.remove("open");
+                // بستن زیرمنوی تماس
+                const callToggle = document.getElementById("callToggle");
+                const callSubmenu = document.getElementById("callSubmenu");
+                if (callToggle && callSubmenu) {
+                    callToggle.classList.remove("open");
+                    callSubmenu.classList.remove("open");
+                }
             }
+        });
+    }
+
+    // ======== زیرمنوی تماس (دو شماره) ========
+    const callToggle = document.getElementById("callToggle");
+    const callSubmenu = document.getElementById("callSubmenu");
+    if (callToggle && callSubmenu) {
+        callToggle.addEventListener("click", function (e) {
+            e.stopPropagation();
+            this.classList.toggle("open");
+            callSubmenu.classList.toggle("open");
+        });
+        // بستن زیرمنو با کلیک روی هر شماره
+        document.querySelectorAll(".call-sub-item").forEach(item => {
+            item.addEventListener("click", function () {
+                callToggle.classList.remove("open");
+                callSubmenu.classList.remove("open");
+            });
         });
     }
 
