@@ -257,6 +257,11 @@ header .container {
     background: linear-gradient(135deg, #25D366, #1da851);
     border-radius: 50px 0 0 50px;
 }
+/* ===== کلاس جدید برای شماره دوم ===== */
+.call-item-2 {
+    background: linear-gradient(135deg, #25D366, #1da851);
+    border-radius: 50px;
+}
 .whatsapp-item {
     background: linear-gradient(135deg, #25D366, #1da851);
     border-radius: 50px;
@@ -302,6 +307,9 @@ header .container {
     .call-item {
         border-radius: 30px 0 0 30px;
     }
+    .call-item-2 {
+        border-radius: 30px;
+    }
     .eitaa-item {
         border-radius: 0 30px 30px 0;
     }
@@ -334,6 +342,9 @@ header .container {
     }
     .call-item {
         border-radius: 25px 0 0 25px;
+    }
+    .call-item-2 {
+        border-radius: 25px;
     }
     .eitaa-item {
         border-radius: 0 25px 25px 0;
