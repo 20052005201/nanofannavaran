@@ -32,19 +32,33 @@
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,.15);
         }
-        .back-link {
-            display: inline-block;
+        .back-links {
             margin-top: 30px;
-            background: var(--secondary);
-            color: #fff;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .back-links a {
+            display: inline-block;
             padding: 12px 28px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
             transition: .3s;
         }
-        .back-link:hover {
+        .back-to-list {
+            background: var(--secondary);
+            color: #fff;
+        }
+        .back-to-list:hover {
             background: var(--primary);
+        }
+        .back-to-home {
+            background: var(--primary);
+            color: #fff;
+        }
+        .back-to-home:hover {
+            background: var(--secondary);
         }
         .contact-float {
             margin-top: 20px;
@@ -74,6 +88,13 @@
             }
             .service-detail .gif img {
                 max-height: 250px;
+            }
+            .back-links {
+                justify-content: center;
+            }
+            .back-links a {
+                padding: 10px 20px;
+                font-size: 14px;
             }
         }
     </style>
@@ -105,7 +126,10 @@
         <p>کنترل تخصصی آفات در کارخانجات و مراکز صنعتی با روش‌های تخصصی و استاندارد.</p>
         <p><strong>روش کنترل:</strong> استفاده از سموم استاندارد و روش‌های نوین با تضمین کیفیت و ماندگاری بالا.</p>
         <p><strong>مدت زمان اثرگذاری:</strong> نتایج سریع و ماندگار تا ۶ ماه.</p>
-        <a href="../commercial-services.html" class="back-link">🔙 بازگشت به لیست خدمات تجاری</a>
+        <div class="back-links">
+            <a href="../commercial-services.html" class="back-to-list">🔙 بازگشت به لیست تجاری</a>
+            <a href="../index.html" class="back-to-home">🏠 بازگشت به صفحه اصلی</a>
+        </div>
         <div class="contact-float">
             <a href="tel:09120705746">📞 تماس فوری</a>
             <a href="https://wa.me/989120705746" target="_blank">💬 واتساپ</a>
