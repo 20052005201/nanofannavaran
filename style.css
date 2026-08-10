@@ -173,7 +173,7 @@ header .container {
 .footer-box a { color:#4ade80; }
 .copyright { text-align:center; margin-top:30px; padding-top:20px; border-top:1px solid rgba(255,255,255,.1); }
 
-/* ===== FLOATING BUTTON ===== */
+/* ===== FLOATING BUTTON (کشویی به راست و زیرمنو به بالا) ===== */
 .floating-container {
     position: fixed;
     bottom: 30px;
@@ -185,12 +185,13 @@ header .container {
     font-family: 'Vazirmatn', sans-serif;
     direction: ltr;
 }
+
 .floating-main-btn {
     background: linear-gradient(135deg, #25D366 0%, #1da851 100%);
     color: #fff;
     border: none;
-    border-radius: 50px 0 0 50px;
-    padding: 16px 24px 16px 28px;
+    border-radius: 50px;
+    padding: 16px 24px;
     font-size: 16px;
     font-weight: 800;
     cursor: pointer;
@@ -201,6 +202,8 @@ header .container {
     white-space: nowrap;
     animation: pulse 2.5s infinite;
     transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
 }
 .floating-main-btn:hover {
     transform: scale(1.05);
@@ -213,6 +216,7 @@ header .container {
 .floating-main-btn.active .btn-arrow {
     transform: rotate(90deg);
 }
+
 .floating-menu {
     display: flex;
     flex-direction: row;
@@ -222,12 +226,14 @@ header .container {
     visibility: hidden;
     transform: translateX(-20px) scale(0.95);
     transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    margin-left: 5px;
 }
 .floating-menu.open {
     opacity: 1;
     visibility: visible;
     transform: translateX(0) scale(1);
 }
+
 .floating-item {
     display: flex;
     align-items: center;
@@ -250,9 +256,16 @@ header .container {
 .floating-item .item-icon { font-size: 18px; }
 .floating-item .item-text { font-size: 14px; }
 
+/* ===== تماس سریع با زیرمنوی بالا ===== */
+.call-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .call-item {
     background: linear-gradient(135deg, #25D366, #1da851);
-    border-radius: 50px 0 0 50px;
+    border-radius: 50px;
     cursor: pointer;
     position: relative;
 }
@@ -264,6 +277,7 @@ header .container {
 .call-item.open .arrow {
     transform: rotate(180deg);
 }
+
 .call-submenu {
     display: flex;
     flex-direction: column;
@@ -273,7 +287,10 @@ header .container {
     max-height: 0;
     overflow: hidden;
     transition: all 0.3s ease;
-    margin-right: 5px;
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 0;
+    width: 100%;
 }
 .call-submenu.open {
     opacity: 1;
@@ -286,17 +303,19 @@ header .container {
     padding: 8px 16px;
     font-size: 13px;
     gap: 6px;
+    justify-content: center;
 }
 .call-sub-item:hover {
     transform: scale(1.05);
 }
+
 .whatsapp-item {
     background: linear-gradient(135deg, #25D366, #1da851);
     border-radius: 50px;
 }
 .eitaa-item {
     background: linear-gradient(135deg, #f97316, #ea580c);
-    border-radius: 0 50px 50px 0;
+    border-radius: 50px;
 }
 
 @keyframes pulse {
@@ -304,16 +323,17 @@ header .container {
     50% { box-shadow: 0 8px 50px rgba(37, 211, 102, 0.9), 0 0 80px rgba(37, 211, 102, 0.2); }
     100% { box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6); }
 }
+
+/* ===== ریسپانسیو موبایل ===== */
 @media (max-width: 768px) {
     .floating-container {
         bottom: 15px;
         left: 10px;
-        gap: 5px;
     }
     .floating-main-btn {
-        padding: 10px 16px 10px 20px;
+        padding: 10px 16px;
         font-size: 13px;
-        border-radius: 30px 0 0 30px;
+        border-radius: 40px;
     }
     .floating-main-btn .btn-arrow { font-size: 11px; }
     .floating-menu { gap: 5px; }
@@ -325,24 +345,20 @@ header .container {
     }
     .floating-item .item-icon { font-size: 15px; }
     .floating-item .item-text { font-size: 12px; }
-    .call-item { border-radius: 30px 0 0 30px; }
-    .call-submenu { margin-right: 3px; }
     .call-sub-item {
         padding: 6px 12px;
         font-size: 11px;
     }
-    .eitaa-item { border-radius: 0 30px 30px 0; }
 }
 @media (max-width: 480px) {
     .floating-container {
         bottom: 10px;
         left: 6px;
-        gap: 4px;
     }
     .floating-main-btn {
-        padding: 8px 12px 8px 16px;
+        padding: 8px 14px;
         font-size: 11px;
-        border-radius: 25px 0 0 25px;
+        border-radius: 30px;
     }
     .floating-main-btn .btn-arrow { font-size: 9px; }
     .floating-item {
@@ -353,12 +369,10 @@ header .container {
     }
     .floating-item .item-icon { font-size: 13px; }
     .floating-item .item-text { font-size: 10px; }
-    .call-item { border-radius: 25px 0 0 25px; }
     .call-sub-item {
         padding: 4px 10px;
         font-size: 10px;
     }
-    .eitaa-item { border-radius: 0 25px 25px 0; }
 }
 
 /* ===== BACK TO TOP ===== */
