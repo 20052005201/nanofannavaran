@@ -3,90 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سمپاشی ساس | نانوفناوران</title>
+    <title>سمپاشی ساس تختخوابی | راهنمای جامع و تخصصی | نانوفناوران</title>
+    <meta name="description" content="مقاله جامع سمپاشی ساس تختخوابی: معرفی، علائم، روش‌های کنترل، هزینه و نکات پیشگیری. راهنمای کامل برای ریشه‌کنی ساس در منزل.">
+    <meta name="keywords" content="سمپاشی ساس تختخوابی, کنترل ساس, سمپاشی ساس, علائم ساس, پیشگیری ساس, هزینه سمپاشی ساس">
+    <link rel="canonical" href="https://nanofannavaran.ir/service/bedbug.html">
     <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
-        .service-detail {
+        .blog-container {
             max-width: 1100px;
-            margin: 100px auto 50px;
+            margin: 120px auto 60px;
             padding: 0 20px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
+            background: #fff;
+            border-radius: 24px;
+            box-shadow: 0 10px 40px rgba(0,0,0,.08);
+            padding: 40px 40px 60px;
         }
-        .service-detail .text h1 {
-            font-size: 32px;
+        .blog-container h1 {
+            font-size: 36px;
             color: var(--primary);
             margin-bottom: 20px;
+            line-height: 1.5;
         }
-        .service-detail .text p {
+        .blog-container .meta {
+            color: #888;
+            font-size: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .blog-container h2 {
+            font-size: 28px;
+            color: var(--dark);
+            margin: 40px 0 15px;
+            border-right: 5px solid var(--secondary);
+            padding-right: 15px;
+        }
+        .blog-container h3 {
+            font-size: 22px;
+            color: var(--primary);
+            margin: 30px 0 12px;
+        }
+        .blog-container p {
             line-height: 2.2;
-            color: #555;
+            color: #444;
+            font-size: 17px;
+            margin-bottom: 18px;
+        }
+        .blog-container ul, .blog-container ol {
+            line-height: 2.2;
+            color: #444;
+            font-size: 17px;
+            padding-right: 25px;
+            margin-bottom: 20px;
+        }
+        .blog-container ul li, .blog-container ol li {
+            margin-bottom: 8px;
+        }
+        .blog-container table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0 30px;
             font-size: 16px;
         }
-        .service-detail .gif img {
+        .blog-container table th {
+            background: var(--primary);
+            color: #fff;
+            padding: 12px 15px;
+            text-align: right;
+        }
+        .blog-container table td {
+            border: 1px solid #ddd;
+            padding: 10px 15px;
+            background: #fafafa;
+        }
+        .blog-container table tr:nth-child(even) td {
+            background: #f5f5f5;
+        }
+        .blog-image {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .blog-image img {
             width: 100%;
-            max-height: 400px;
-            object-fit: contain;
+            max-width: 700px;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,.15);
         }
-        .back-link {
+        .blog-image .caption {
+            font-size: 14px;
+            color: #888;
+            margin-top: 10px;
+        }
+        .blog-container .back-links {
+            margin: 40px 0 20px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .blog-container .back-links a {
             display: inline-block;
-            margin-top: 30px;
-            background: var(--secondary);
-            color: #fff;
             padding: 12px 28px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
             transition: .3s;
         }
-        .back-link:hover {
-            background: var(--primary);
-        }
-        .contact-float {
-            margin-top: 20px;
-        }
-        .contact-float a {
-            display: inline-block;
+        .blog-container .back-links .btn-blog-home {
             background: var(--primary);
             color: #fff;
-            padding: 12px 28px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            margin-left: 10px;
-            transition: .3s;
         }
-        .contact-float a:hover {
+        .blog-container .back-links .btn-blog-home:hover {
             background: var(--secondary);
         }
+        .blog-container .back-links .btn-blog-services {
+            background: var(--secondary);
+            color: #fff;
+        }
+        .blog-container .back-links .btn-blog-services:hover {
+            background: var(--primary);
+        }
+        .blog-container .back-links .btn-blog-contact {
+            background: var(--dark);
+            color: #fff;
+        }
+        .blog-container .back-links .btn-blog-contact:hover {
+            background: var(--primary);
+        }
+
+        details {
+            background: #f8fbfd;
+            padding: 15px 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #e9ecef;
+        }
+        details summary {
+            font-weight: 700;
+            color: var(--primary);
+            cursor: pointer;
+            font-size: 17px;
+        }
+        details p {
+            margin-top: 12px;
+            padding-right: 10px;
+        }
+
         @media (max-width: 768px) {
-            .service-detail {
-                grid-template-columns: 1fr;
-                text-align: center;
-                margin-top: 80px;
+            .blog-container {
+                padding: 20px 15px;
+                margin: 100px auto 40px;
             }
-            .service-detail .text h1 {
+            .blog-container h1 {
                 font-size: 26px;
             }
-            .service-detail .gif img {
-                max-height: 250px;
+            .blog-container h2 {
+                font-size: 22px;
+            }
+            .blog-container h3 {
+                font-size: 19px;
+            }
+            .blog-container p,
+            .blog-container ul,
+            .blog-container ol {
+                font-size: 15px;
+            }
+            .blog-container table {
+                font-size: 14px;
+            }
+            .blog-container .back-links a {
+                padding: 10px 20px;
+                font-size: 14px;
             }
         }
     </style>
 </head>
 <body>
 
+<!-- ===== HEADER ===== -->
 <header>
     <div class="container">
-        <a href="../index.html" class="logo"><img src="../images/logo.png" alt="لوگو"></a>
+        <a href="../index.html" class="logo"><img src="../images/logo.png" alt="لوگو شرکت سمپاشی نانوفناوران"></a>
         <nav class="navbar">
             <ul>
                 <li><a href="../index.html">صفحه اصلی</a></li>
-                <li><a href="../services.html" class="active">خدمات</a></li>
+                <li><a href="../services.html">خدمات مسکونی</a></li>
+                <li><a href="../commercial-services.html">خدمات تجاری</a></li>
                 <li><a href="../about.html">درباره ما</a></li>
                 <li><a href="../contact.html">تماس</a></li>
             </ul>
@@ -95,26 +199,285 @@
             <a href="tel:09120705746" class="call-btn">📞 09120705746</a>
             <div class="mobile-menu">☰</div>
         </div>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="جستجو...">
+            <button onclick="searchSite()">🔍</button>
+        </div>
     </div>
 </header>
 
-<div class="service-detail">
-    <div class="text">
-        <h1>🐜 سمپاشی ساس</h1>
-        <p>حذف کامل ساس تختخوابی با روش‌های حرارتی و شیمیایی پیشرفته.</p>
-        <p><strong>روش کنترل:</strong> استفاده از سموم استاندارد و روش‌های نوین با تضمین کیفیت و ماندگاری بالا.</p>
-        <p><strong>مدت زمان اثرگذاری:</strong> نتایج سریع و ماندگار تا ۶ ماه.</p>
-        <a href="../services.html" class="back-link">🔙 بازگشت به لیست خدمات</a>
-        <div class="contact-float">
-            <a href="tel:09120705746">📞 تماس فوری</a>
-            <a href="https://wa.me/989120705746" target="_blank">💬 واتساپ</a>
-        </div>
+<!-- ===== مقاله ===== -->
+<div class="blog-container">
+
+    <!-- ===== تصویر قبل از مقدمه (bedbug.jpg) ===== -->
+    <div class="blog-image">
+        <img src="../images/services/bedbug.jpg" alt="ساس تختخوابی">
+        <div class="caption">تصویر: ساس تختخوابی، یکی از مقاوم‌ترین آفات خانگی</div>
     </div>
-    <div class="gif">
-        <img src="../images/services/bedbug.jpg" alt="سمپاشی ساس">
+
+    <!-- عنوان مقاله -->
+    <h1>سمپاشی ساس تختخوابی: راهنمای جامع تشخیص، پیشگیری و ریشه‌کنی (نسخه کامل و تخصصی)</h1>
+    <div class="meta">
+        <span>📅 آخرین به‌روزرسانی: ۱۲ مرداد ۱۴۰۴</span> &nbsp;|&nbsp; <span>⏱ زمان مطالعه: ۱۰ دقیقه</span>
     </div>
+
+    <!-- مقدمه -->
+    <p>شاید برای شما هم پیش آمده باشد که صبح با چند نقطه قرمز و خارش‌دار روی پوست از خواب بیدار شده‌اید. یا مهم‌تر اینکه شب‌ها وقتی چراغ را خاموش می‌کنید، احساس می‌کنید چیزی روی پوست شما حرکت می‌کند. اینها نشانه‌های کلاسیک حضور ساس تختخوابی در منزل شماست.</p>
+
+    <p>ساس تختخوابی (Cimex lectularius) یکی از قدیمی‌ترین و آزاردهنده‌ترین آفات خانگی است که در سال‌های اخیر به‌طور چشمگیری در سراسر جهان، از جمله ایران، رو به افزایش است. برخلاف تصور بسیاری از مردم، ساس‌ها فقط در تخت‌های کثیف یا هتل‌های نامرتب زندگی نمی‌کنند؛ بلکه این حشرات کوچک و مقاوم می‌توانند در تمیزترین خانه‌ها، هتل‌های لوکس و حتی بیمارستان‌ها هم پیدا شوند.</p>
+
+    <p>در این مقاله جامع، شما را با تمام ابعاد وجودی ساس تختخوابی، روش‌های تشخیص، راه‌های پیشگیری و مهم‌تر از همه، روش‌های اصولی و تخصصی برای ریشه‌کنی قطعی آن آشنا می‌کنیم. اگر در تهران یا سایر شهرهای ایران زندگی می‌کنید و با این مشکل مواجه شده‌اید، این مقاله راهنمای کامل شما خواهد بود.</p>
+
+    <!-- بخش ۱ -->
+    <h2>📌 ساس تختخوابی چیست؟ (معرفی کامل آفت)</h2>
+    <p>ساس تختخوابی یک حشرهٔ کوچک، بی‌بال و تخم‌مرغی‌شکل است که رنگ آن معمولاً قهوه‌ای مایل به قرمز است و پس از تغذیه از خون، تیره‌تر و کشیده‌تر می‌شود. اندازهٔ یک ساس بالغ حدود ۴ تا ۷ میلی‌متر است که تقریباً به اندازهٔ یک دانه سیب‌زمینی کوچک یا هستهٔ سیب می‌باشد.</p>
+
+    <!-- ===== تصویر bedbug4 (بعد از علائم اولیه) ===== -->
+    <div class="blog-image">
+        <img src="../images/services/bedbug4.jpg" alt="علائم و نشانه‌های ساس تختخوابی">
+        <div class="caption">تصویر: علائم و نشانه‌های ساس تختخوابی</div>
+    </div>
+
+    <h3>ویژگی‌های بیولوژیکی ساس تختخوابی:</h3>
+    <ul>
+        <li><strong>طول عمر:</strong> یک ساس بالغ می‌تواند تا ۱۲ تا ۱۸ ماه بدون تغذیه زنده بماند.</li>
+        <li><strong>تولید مثل:</strong> هر ماده ساس در طول عمر خود می‌تواند تا ۵۰۰ تخم بگذارد که هر تخم در عرض ۶ تا ۱۰ روز تبدیل به یک ساس کامل می‌شود.</li>
+        <li><strong>تغذیه:</strong> ساس‌ها منحصراً از خون انسان و حیوانات خونگرم تغذیه می‌کنند. آن‌ها معمولاً شب‌ها و هنگام خواب طعمه خود را گاز می‌گیرند.</li>
+        <li><strong>مکان زندگی:</strong> ساس‌ها در شکاف‌ها، درزهای تشک، کف‌پوش‌ها، قاب تخت، پشت کاغذ دیواری و حتی پریزهای برق پنهان می‌شوند.</li>
+    </ul>
+
+    <h3>باورهای غلط رایج درباره ساس:</h3>
+    <ul>
+        <li><strong>ساس فقط در مکان‌های کثیف زندگی می‌کند:</strong> اشتباه! ساس‌ها به تمیزی یا کثیفی محیط کاری ندارند؛ آن‌ها فقط به خون دسترسی نیاز دارند.</li>
+        <li><strong>ساس بیماری خطرناک منتقل می‌کند:</strong> اگرچه گزش ساس باعث خارش و آلرژی می‌شود، اما خوشبختانه ثابت نشده که ناقل بیماری‌های جدی مانند هپاتیت یا ایدز باشد.</li>
+        <li><strong>با یک بار سمپاشی، ساس برای همیشه از بین می‌رود:</strong> متأسفانه خیر! ساس‌ها مقاومت بالایی دارند و ریشه‌کنی آن‌ها نیازمند روش‌های تخصصی و چند مرحله‌ای است.</li>
+    </ul>
+
+    <!-- بخش ۲ -->
+    <h2>🔴 علائم و نشانه‌های وجود ساس تختخوابی</h2>
+    <p>تشخیص به‌موقع ساس‌ها می‌تواند از یک بحران بزرگ جلوگیری کند. اگر هر یک از این علائم را مشاهده کردید، باید سریعاً اقدام کنید:</p>
+
+    <!-- ===== تصویر bedbug1 (بعد از سیب) ===== -->
+    <div class="blog-image">
+        <img src="../images/services/bedbug1.jpg" alt="گزش ساس روی پوست">
+        <div class="caption">تصویر: گزش ساس تختخوابی روی پوست</div>
+    </div>
+
+    <h3>علائم اولیه:</h3>
+    <ol>
+        <li><strong>گزش‌های خارش‌دار:</strong> گزش ساس معمولاً به‌صورت لکه‌های قرمز و خارش‌دار ظاهر می‌شود که اغلب به‌صورت خطی یا خوشه‌ای روی پوست قرار می‌گیرند.</li>
+        <li><strong>لکه‌های خون روی ملحفه:</strong> پس از گزش، ممکن است لکه‌های کوچک خونی روی ملحفه یا روبالشی مشاهده کنید.</li>
+        <li><strong>فضولات ساس:</strong> لکه‌های سیاه و کوچک (شبیه جوهر یا مداد) که روی تشک، ملحفه یا دیوارها دیده می‌شود.</li>
+        <li><strong>پوست‌اندازی:</strong> پوسته‌های سفید یا شفافی که ساس‌ها هنگام رشد از خود به جا می‌گذارند.</li>
+        <li><strong>بوی نامطبوع:</strong> در آلودگی شدید، بوی شیرین و کهنه‌ای شبیه بوی بادام یا گشنیز در اتاق پخش می‌شود.</li>
+        <li><strong>مشاهده خود حشره:</strong> ساس‌های بالغ را معمولاً می‌توانید در درزهای تشک، پشت قاب تخت، یا در شکاف‌های دیوار مشاهده کنید.</li>
+    </ol>
+
+    <h3>تفاوت گزش ساس با پشه یا کک:</h3>
+    <ul>
+        <li>گزش ساس معمولاً به‌صورت <strong>خطی یا خوشه‌ای</strong> است، در حالی که گزش پشه‌ها پراکنده است.</li>
+        <li>خارش ناشی از گزش ساس معمولاً <strong>شدیدتر و ماندگارتر</strong> از پشه است.</li>
+        <li>گزش ساس اغلب روی <strong>نواحی باز بدن</strong> (دست‌ها، گردن، صورت، پاها) ظاهر می‌شود.</li>
+    </ul>
+
+    <!-- بخش ۳ -->
+    <h2>🚨 عواقب و خطرات حضور ساس تختخوابی</h2>
+    <p>اگر ساس‌ها را جدی نگیرید، ممکن است با عواقب زیر مواجه شوید:</p>
+
+    <!-- ===== تصویر bedbug5 (بعد از پرزهای برق و کلیدها) ===== -->
+    <div class="blog-image">
+        <img src="../images/services/bedbug5.jpg" alt="نقاط پنهان شدن ساس">
+        <div class="caption">تصویر: نقاط پنهان شدن ساس تختخوابی در منزل</div>
+    </div>
+
+    <table>
+        <thead>
+            <tr><th>نوع عارضه</th><th>توضیح</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>آلرژی شدید</strong></td><td>برخی افراد به گزش ساس واکنش آلرژیک شدید نشان می‌دهند که ممکن است نیاز به درمان پزشکی داشته باشد.</td></tr>
+            <tr><td><strong>اختلال خواب</strong></td><td>خارش و نگرانی ناشی از وجود ساس باعث بی‌خوابی و کاهش کیفیت زندگی می‌شود.</td></tr>
+            <tr><td><strong>عفونت ثانویه</strong></td><td>خاراندن محل گزش باعث ایجاد زخم و عفونت‌های باکتریایی می‌شود.</td></tr>
+            <tr><td><strong>استرس و اضطراب</strong></td><td>آگاهی از حضور ساس در خانه می‌تواند باعث استرس روانی شدید شود.</td></tr>
+            <tr><td><strong>هزینه‌های بالا</strong></td><td>اگر به‌موقع اقدام نکنید، هزینه‌های سمپاشی و تعویض وسایل چندین برابر می‌شود.</td></tr>
+            <tr><td><strong>انتشار به سایر واحدها</strong></td><td>در آپارتمان‌ها، ساس‌ها به‌راحتی از طریق منافذ و کانال‌ها به واحدهای همسایه منتقل می‌شوند.</td></tr>
+        </tbody>
+    </table>
+
+    <!-- بخش ۴ -->
+    <h2>🧐 چگونه ساس تختخوابی وارد خانه می‌شود؟</h2>
+    <p>شناخت راه‌های ورود ساس به خانه، اولین گام پیشگیری است. ساس‌ها معمولاً از این طریق وارد خانه می‌شوند:</p>
+
+    <!-- ===== تصویر bedbug2 (بعد از حتی پرزهای برق پنهان می‌شوند) ===== -->
+    <div class="blog-image">
+        <img src="../images/services/bedbug2.jpg" alt="راه‌های ورود ساس به خانه">
+        <div class="caption">تصویر: راه‌های ورود ساس تختخوابی به منزل</div>
+    </div>
+
+    <table>
+        <thead>
+            <tr><th>منبع ورود</th><th>توضیح</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>چمدان و وسایل مسافرتی</strong></td><td>اقامت در هتل‌های آلوده و انتقال ساس با چمدان به خانه</td></tr>
+            <tr><td><strong>مبلمان و وسایل دست دوم</strong></td><td>خرید تشک، مبل یا وسایل چوبی دست دوم آلوده</td></tr>
+            <tr><td><strong>همسایگان</strong></td><td>در آپارتمان‌ها، ساس‌ها از طریق کانال‌های برق و لوله‌ها منتقل می‌شوند.</td></tr>
+            <tr><td><strong>مهمانان</strong></td><td>افرادی که منزلشان آلوده است، ممکن است ساس را با خود بیاورند.</td></tr>
+            <tr><td><strong>خشکشویی‌ها</strong></td><td>برخی خشکشویی‌ها ممکن است منبع آلودگی باشند.</td></tr>
+        </tbody>
+    </table>
+
+    <!-- بخش ۵ -->
+    <h2>🛠️ روش‌های اصولی سمپاشی ساس تختخوابی</h2>
+    <p>کنترل ساس تختخوابی یکی از چالش‌برانگیزترین عملیات‌ها در حوزه کنترل آفات است. این حشره مقاوم، به‌سرعت در برابر سموم مقاومت پیدا می‌کند و به همین دلیل، <strong>روش‌های خانگی و سمپاشی‌های غیرحرفه‌ای معمولاً شکست می‌خورند.</strong></p>
+
+    <p>در شرکت سمپاشی نانوفناوران، برای ریشه‌کنی قطعی ساس تختخوابی، از <strong>روش ترکیبی (Integrated Pest Management)</strong> استفاده می‌کنیم که شامل مراحل زیر است:</p>
+
+    <h3>مرحله ۱: بازرسی کامل و تشخیص</h3>
+    <p>اولین و مهم‌ترین گام، شناسایی دقیق کانون‌های آلودگی است. کارشناسان ما با تجهیزات تخصصی، تمام نقاط منزل را بررسی می‌کنند و موارد زیر را شناسایی می‌نمایند:</p>
+    <ul>
+        <li>تشک‌ها، کف‌پوش‌ها و قاب تخت</li>
+        <li>شکاف‌های دیوار، قرنیزها و کف‌پوش‌ها</li>
+        <li>پریزهای برق و کلیدها</li>
+        <li>مبلمان و پرده‌ها</li>
+        <li>چمدان‌ها و وسایل شخصی</li>
+    </ul>
+
+    <h3>مرحله ۲: آماده‌سازی محیط قبل از سمپاشی</h3>
+    <p>یکی از رازهای موفقیت در سمپاشی ساس، <strong>آماده‌سازی اصولی محیط</strong> است. کارشناسان ما قبل از انجام عملیات، نکات زیر را به شما آموزش می‌دهند:</p>
+    <ul>
+        <li>خالی کردن کمدها و کشوها</li>
+        <li>جمع‌آوری و شستشوی ملحفه‌ها، لباس‌ها و پرده‌ها با آب داغ (بالای ۶۰ درجه)</li>
+        <li>جابه‌جایی مبلمان از دیوارها</li>
+        <li>بستن منافذ و شکاف‌ها</li>
+        <li>بیرون بردن وسایل غیرضروری از اتاق</li>
+    </ul>
+
+    <h3>مرحله ۳: روش‌های تخصصی سمپاشی</h3>
+    <p>در این مرحله، کارشناسان ما از ترکیبی از روش‌های زیر استفاده می‌کنند:</p>
+
+    <h4>الف) سمپاشی با تجهیزات حرفه‌ای</h4>
+    <ul>
+        <li>استفاده از <strong>سموم میکروکپسول</strong> با ماندگاری بالا که اثری طولانی‌مدت دارند.</li>
+        <li>پاشش دقیق سم در تمام شکاف‌ها، درزها، پشت قاب تخت، پریزهای برق و نقاط کور.</li>
+        <li>استفاده از <strong>روش ULV (مه‌پاشی سرد)</strong> برای نفوذ به عمق شکاف‌ها.</li>
+    </ul>
+
+    <h4>ب) طعمه‌گذاری هوشمند (مخصوص ساس)</h4>
+    <p>اگرچه ساس‌ها از طعمه‌های غذایی جذب نمی‌شوند، اما کارشناسان ما از <strong>ژل‌های جذب‌کننده مخصوص ساس</strong> استفاده می‌کنند که با جذب فرمون‌ها، ساس‌ها را به سمت سم هدایت می‌کند.</p>
+
+    <h4>ج) استفاده از روش حرارتی (اختیاری)</h4>
+    <p>در موارد آلودگی شدید، از <strong>روش حرارتی</strong> استفاده می‌شود که شامل افزایش دمای محیط تا ۵۰ درجه سانتی‌گراد برای چند ساعت است. این روش کاملاً ایمن و بدون سم بوده و تمام مراحل رشد ساس را از بین می‌برد.</p>
+
+    <h3>مرحله ۴: سمپاشی مجدد (در صورت نیاز)</h3>
+    <p>به دلیل مقاومت بالای تخم ساس‌ها، معمولاً <strong>یک جلسه سمپاشی کافی نیست</strong> و نیاز به <strong>۲ تا ۳ جلسه با فاصله ۱۰ تا ۱۴ روز</strong> وجود دارد. جلسات دوم و سوم، ساس‌های تازه‌تولیدشده را هدف قرار می‌دهند.</p>
+
+    <h3>مرحله ۵: ارائه توصیه‌های پس از سمپاشی</h3>
+    <p>پس از پایان کار، کارشناسان ما توصیه‌های زیر را ارائه می‌دهند:</p>
+    <ul>
+        <li>مدت زمان لازم برای خروج از محیط</li>
+        <li>نحوه تهویه و نظافت پس از سمپاشی</li>
+        <li>نکات پیشگیری از بازگشت مجدد</li>
+        <li>زمان تماس مجدد برای بررسی و سمپاشی تکمیلی</li>
+    </ul>
+
+    <!-- بخش ۶ -->
+    <h2>🛡️ راه‌های پیشگیری از بازگشت ساس تختخوابی</h2>
+    <p>پس از سمپاشی تخصصی، با رعایت این نکات می‌توانید از بازگشت مجدد ساس جلوگیری کنید:</p>
+    <ul>
+        <li><strong>استفاده از کاور مخصوص تشک و بالش:</strong> استفاده از کاورهای ضد ساس (که زیپ‌دار هستند) می‌تواند از نفوذ ساس به داخل تشک جلوگیری کند.</li>
+        <li><strong>بررسی دوره‌ای نقاط حساس:</strong> هر ماه یکبار تشک، کف‌پوش‌ها و پشت قاب تخت را بررسی کنید.</li>
+        <li><strong>بستن منافذ و شکاف‌ها:</strong> با استفاده از بتونه یا سیلر، تمام ترک‌ها و شکاف‌های دیوار، کف و سقف را ببندید.</li>
+        <li><strong>جلوگیری از ورود با چمدان:</strong> پس از سفر، قبل از ورود به خانه، چمدان را در فضای باز بررسی و در صورت لزوم سمپاشی کنید.</li>
+        <li><strong>شستشوی ملحفه با آب داغ:</strong> ملحفه‌ها و لباس‌ها را مرتباً با آب بالای ۶۰ درجه بشویید.</li>
+        <li><strong>کاهش درهم‌ریختگی:</strong> کمتر بودن وسایل اضافی، نقاط کمتری برای پنهان شدن ساس ایجاد می‌کند.</li>
+    </ul>
+
+    <!-- بخش ۷ -->
+    <h2>💰 هزینه سمپاشی ساس تختخوابی چقدر است؟</h2>
+    <p>هزینه سمپاشی ساس تختخوابی به عوامل زیر بستگی دارد:</p>
+    <table>
+        <thead>
+            <tr><th>عامل</th><th>تأثیر بر هزینه</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>مساحت منزل</strong></td><td>هرچه متراژ بیشتر باشد، هزینه بیشتر است (معمولاً بر اساس متر مربع محاسبه می‌شود).</td></tr>
+            <tr><td><strong>شدت آلودگی</strong></td><td>آلودگی شدید نیاز به عملیات بیشتری دارد.</td></tr>
+            <tr><td><strong>تعداد جلسات سمپاشی</strong></td><td>معمولاً ۲ تا ۳ جلسه نیاز است.</td></tr>
+            <tr><td><strong>نوع روش</strong></td><td>سمپاشی شیمیایی ارزان‌تر از روش حرارتی است.</td></tr>
+            <tr><td><strong>موقعیت جغرافیایی</strong></td><td>هزینه حمل و نقل و زمان کارشناسان تأثیر دارد.</td></tr>
+        </tbody>
+    </table>
+    <p>💡 <strong>توصیه:</strong> برای دریافت <strong>مشاوره رایگان</strong> و <strong>استعلام دقیق هزینه</strong> با کارشناسان ما تماس بگیرید. با توجه به نوع آلودگی، بهترین روش و هزینه را به شما پیشنهاد می‌دهیم.</p>
+
+    <!-- بخش ۸ -->
+    <h2>❓ سوالات متداول درباره سمپاشی ساس تختخوابی</h2>
+
+    <details>
+        <summary><strong>آیا سمپاشی ساس برای کودکان و حیوانات خانگی خطرناک است؟</strong></summary>
+        <p>خیر، سموم مورد استفاده توسط شرکت نانوفناوران با رعایت کامل استانداردهای بهداشتی انتخاب می‌شوند. پس از سمپاشی، با تهویه مناسب، محیط کاملاً ایمن می‌شود.</p>
+    </details>
+
+    <details>
+        <summary><strong>چند روز بعد از سمپاشی ساس‌ها از بین می‌روند؟</strong></summary>
+        <p>معمولاً تا ۲ هفته پس از آخرین جلسه سمپاشی، ساس‌ها به‌طور کامل ریشه‌کن می‌شوند. در این مدت ممکن است تعدادی ساس زنده مشاهده کنید که طبیعی است.</p>
+    </details>
+
+    <details>
+        <summary><strong>آیا خودمان هم می‌توانیم ساس را سمپاشی کنیم؟</strong></summary>
+        <p>توصیه نمی‌شود. ساس‌ها مقاومت بالایی دارند و سموم خانگی معمولاً مؤثر نیستند. همچنین استفاده نادرست از سموم می‌تواند برای سلامتی خطرناک باشد.</p>
+    </details>
+
+    <details>
+        <summary><strong>آیا بعد از سمپاشی باید منزل را ترک کنیم؟</strong></summary>
+        <p>بله، معمولاً ۴ تا ۶ ساعت باید محیط را ترک کنید و پس از بازگشت، منزل را تهویه کنید. کارشناسان زمان دقیق را به شما اعلام می‌کنند.</p>
+    </details>
+
+    <details>
+        <summary><strong>آیا ساس فقط در تختخواب زندگی می‌کند؟</strong></summary>
+        <p>خیر، ساس‌ها در شکاف دیوارها، کف‌پوش‌ها، پریزهای برق، مبلمان، پرده‌ها و حتی داخل کتاب‌ها نیز پنهان می‌شوند.</p>
+    </details>
+
+    <details>
+        <summary><strong>با یک جلسه سمپاشی ساس از بین می‌رود؟</strong></summary>
+        <p>معمولاً خیر، به دلیل مقاومت تخم ساس‌ها، حداقل ۲ جلسه سمپاشی با فاصله ۱۰ تا ۱۴ روز نیاز است.</p>
+    </details>
+
+    <!-- بخش ۹ -->
+    <h2>🏠 نکات طلایی برای جلوگیری از ورود ساس به خانه</h2>
+    <ol>
+        <li><strong>قبل از خرید تشک یا مبل دست دوم، آن را به‌دقت بررسی کنید.</strong></li>
+        <li><strong>پس از مسافرت، چمدان را در فضای باز خالی کنید و لباس‌ها را با آب داغ بشویید.</strong></li>
+        <li><strong>از کاورهای ضد ساس برای تشک و بالش استفاده کنید.</strong></li>
+        <li><strong>مرتباً منزل را جاروبرقی بکشید و کیسه جاروبرقی را بلافاصله بیرون بیندازید.</strong></li>
+        <li><strong>پریزهای برق را با درپوش بپوشانید.</strong></li>
+        <li><strong>شکاف‌های دیوار و کف را با بتونه ببندید.</strong></li>
+        <li><strong>از ورود وسایل دست دوم بدون بازرسی دقیق خودداری کنید.</strong></li>
+    </ol>
+
+    <!-- بخش ۱۰ -->
+    <h2>📌 نتیجه‌گیری</h2>
+    <p>ساس تختخوابی یکی از مقاوم‌ترین و آزاردهنده‌ترین آفات خانگی است که بدون کمک متخصصان، به‌سختی از بین می‌رود. تشخیص زودهنگام، استفاده از روش‌های تخصصی و ترکیبی و رعایت نکات پیشگیری، کلید موفقیت در ریشه‌کنی این آفت است.</p>
+
+    <p>شرکت سمپاشی نانوفناوران با بیش از <strong>۲۰ سال تجربه</strong> و استفاده از <strong>پیشرفته‌ترین روش‌های کنترل آفات</strong>، آماده ارائه خدمات تخصصی و تضمینی به شماست. تیم کارشناسان ما با استفاده از سموم استاندارد و تجهیزات مدرن، ساس تختخوابی را به‌طور کامل و قطعی از منزل شما حذف می‌کنند.</p>
+
+    <p style="font-size:20px; font-weight:700; text-align:center; color:var(--primary);">🚀 همین حالا اقدام کنید:</p>
+    <div style="text-align:center; margin:20px 0;">
+        <p>📞 <strong>تماس فوری:</strong> <a href="tel:09120705746" style="font-size:20px; color:var(--secondary);">۰۹۱۲۰۷۰۵۷۴۶</a></p>
+        <p>💬 <strong>درخواست مشاوره رایگان:</strong> از طریق <a href="https://wa.me/989120705746" target="_blank">واتساپ</a> یا <a href="https://eitaa.com/nanofannavaran_ir" target="_blank">ایتا</a></p>
+        <p>🔗 <strong>مشاهده سایر خدمات:</strong> <a href="../services.html">کنترل آفات مسکونی</a></p>
+    </div>
+
+    <!-- لینک‌های داخلی -->
+    <div class="back-links">
+        <a href="../index.html" class="btn-blog-home">🏠 بازگشت به صفحه اصلی</a>
+        <a href="../services.html" class="btn-blog-services">🔙 بازگشت به لیست خدمات مسکونی</a>
+        <a href="../contact.html" class="btn-blog-contact">📞 تماس با ما</a>
+    </div>
+
 </div>
 
+<!-- ===== فوتر ===== -->
 <footer class="site-footer">
     <div class="container">
         <div class="footer-grid">
@@ -124,6 +487,31 @@
         <hr><p class="copyright">© تمامی حقوق محفوظ است</p>
     </div>
 </footer>
+
+<!-- ===== دکمه شناور ===== -->
+<div class="floating-container">
+    <button class="floating-main-btn" id="floatingToggle">
+        <span class="btn-arrow">▶</span>
+        <span class="btn-text">📞 مشاوره رایگان</span>
+    </button>
+    <div class="floating-menu" id="floatingMenu">
+        <div class="call-wrapper">
+            <div class="floating-item call-item" id="callToggle">
+                <span class="item-icon">📞</span>
+                <span class="item-text">تماس سریع</span>
+                <span class="arrow">▲</span>
+            </div>
+            <div class="call-submenu" id="callSubmenu">
+                <a href="tel:09120705746" class="floating-item call-sub-item"><span class="item-icon">📞</span><span class="item-text">شماره ۱</span></a>
+                <a href="tel:09197173454" class="floating-item call-sub-item"><span class="item-icon">📞</span><span class="item-text">شماره ۲</span></a>
+            </div>
+        </div>
+        <a href="https://wa.me/989120705746?text=%D8%A8%D9%87%20%D8%B3%D8%A7%DB%8C%D8%AA%20%D8%B4%D8%B1%DA%A9%D8%AA%20%D8%B3%D9%85%D9%BE%D8%A7%D8%B4%DB%8C%20%D9%86%D8%A7%D9%86%D9%88%D9%81%D9%86%D8%A7%D9%88%D8%B1%D8%A7%D9%86%20%D8%AE%D9%88%D8%B4%20%D8%A2%D9%85%D8%AF%DB%8C%D8%AF.%20%DA%86%DA%AF%D9%88%D9%86%D9%87%20%D9%85%DB%8C%E2%80%8C%D8%AA%D9%88%D8%A7%D9%86%D9%85%20%DA%A9%D9%85%DA%A9%20%D8%AA%D8%A7%D9%86%20%DA%A9%D9%86%D9%85%D8%9F" target="_blank" class="floating-item whatsapp-item"><span class="item-icon">💬</span><span class="item-text">واتساپ</span></a>
+        <a href="https://eitaa.com/nanofannavaran_ir" target="_blank" class="floating-item eitaa-item"><span class="item-icon">✈️</span><span class="item-text">ایتا</span></a>
+    </div>
+</div>
+
+<button id="backToTop" title="برو به بالا">↑</button>
 
 <script src="../script.js"></script>
 </body>
