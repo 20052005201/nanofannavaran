@@ -3,77 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سمپاشی مورچه | نانوفناوران</title>
+    <title>سمپاشی مورچه | راهنمای جامع و تخصصی | نانوفناوران</title>
+    <meta name="description" content="مقاله جامع سمپاشی مورچه: معرفی گونه‌ها، علائم، روش‌های کنترل، هزینه و نکات پیشگیری. راهنمای کامل برای ریشه‌کنی مورچه در منزل.">
+    <meta name="keywords" content="سمپاشی مورچه, کنترل مورچه, سمپاشی مورچه سیاه, سمپاشی مورچه فیزیک, پیشگیری مورچه, هزینه سمپاشی مورچه">
+    <link rel="canonical" href="https://nanofannavaran.ir/service/ant.html">
     <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
-        .service-detail {
+        .blog-container {
             max-width: 1100px;
-            margin: 100px auto 50px;
+            margin: 120px auto 60px;
             padding: 0 20px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
+            background: #fff;
+            border-radius: 24px;
+            box-shadow: 0 10px 40px rgba(0,0,0,.08);
+            padding: 40px 40px 60px;
         }
-        .service-detail .text h1 {
-            font-size: 32px;
+        .blog-container h1 {
+            font-size: 36px;
             color: var(--primary);
             margin-bottom: 20px;
+            line-height: 1.5;
         }
-        .service-detail .text p {
+        .blog-container .meta {
+            color: #888;
+            font-size: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .blog-container h2 {
+            font-size: 28px;
+            color: var(--dark);
+            margin: 40px 0 15px;
+            border-right: 5px solid var(--secondary);
+            padding-right: 15px;
+        }
+        .blog-container h3 {
+            font-size: 22px;
+            color: var(--primary);
+            margin: 30px 0 12px;
+        }
+        .blog-container h4 {
+            font-size: 19px;
+            color: var(--dark);
+            margin: 25px 0 10px;
+        }
+        .blog-container p {
             line-height: 2.2;
-            color: #555;
+            color: #444;
+            font-size: 17px;
+            margin-bottom: 18px;
+        }
+        .blog-container ul, .blog-container ol {
+            line-height: 2.2;
+            color: #444;
+            font-size: 17px;
+            padding-right: 25px;
+            margin-bottom: 20px;
+        }
+        .blog-container ul li, .blog-container ol li {
+            margin-bottom: 8px;
+        }
+        .blog-container table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0 30px;
             font-size: 16px;
         }
-        .service-detail .gif img {
+        .blog-container table th {
+            background: var(--primary);
+            color: #fff;
+            padding: 12px 15px;
+            text-align: right;
+        }
+        .blog-container table td {
+            border: 1px solid #ddd;
+            padding: 10px 15px;
+            background: #fafafa;
+        }
+        .blog-container table tr:nth-child(even) td {
+            background: #f5f5f5;
+        }
+        .blog-image {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .blog-image img {
             width: 100%;
-            max-height: 400px;
-            object-fit: contain;
+            max-width: 700px;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,.15);
         }
-        .back-link {
+        .blog-image .caption {
+            font-size: 14px;
+            color: #888;
+            margin-top: 10px;
+        }
+        .blog-container .back-links {
+            margin: 40px 0 20px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .blog-container .back-links a {
             display: inline-block;
-            margin-top: 30px;
-            background: var(--secondary);
-            color: #fff;
             padding: 12px 28px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
             transition: .3s;
         }
-        .back-link:hover {
-            background: var(--primary);
-        }
-        .contact-float {
-            margin-top: 20px;
-        }
-        .contact-float a {
-            display: inline-block;
+        .blog-container .back-links .btn-blog-home {
             background: var(--primary);
             color: #fff;
-            padding: 12px 28px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            margin-left: 10px;
-            transition: .3s;
         }
-        .contact-float a:hover {
+        .blog-container .back-links .btn-blog-home:hover {
             background: var(--secondary);
         }
+        .blog-container .back-links .btn-blog-services {
+            background: var(--secondary);
+            color: #fff;
+        }
+        .blog-container .back-links .btn-blog-services:hover {
+            background: var(--primary);
+        }
+        .blog-container .back-links .btn-blog-contact {
+            background: var(--dark);
+            color: #fff;
+        }
+        .blog-container .back-links .btn-blog-contact:hover {
+            background: var(--primary);
+        }
+
+        details {
+            background: #f8fbfd;
+            padding: 15px 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #e9ecef;
+        }
+        details summary {
+            font-weight: 700;
+            color: var(--primary);
+            cursor: pointer;
+            font-size: 17px;
+        }
+        details p {
+            margin-top: 12px;
+            padding-right: 10px;
+        }
+
         @media (max-width: 768px) {
-            .service-detail {
-                grid-template-columns: 1fr;
-                text-align: center;
-                margin-top: 80px;
+            .blog-container {
+                padding: 20px 15px;
+                margin: 100px auto 40px;
             }
-            .service-detail .text h1 {
+            .blog-container h1 {
                 font-size: 26px;
             }
-            .service-detail .gif img {
-                max-height: 250px;
+            .blog-container h2 {
+                font-size: 22px;
+            }
+            .blog-container h3 {
+                font-size: 19px;
+            }
+            .blog-container h4 {
+                font-size: 17px;
+            }
+            .blog-container p,
+            .blog-container ul,
+            .blog-container ol {
+                font-size: 15px;
+            }
+            .blog-container table {
+                font-size: 14px;
+            }
+            .blog-container .back-links a {
+                padding: 10px 20px;
+                font-size: 14px;
             }
         }
     </style>
@@ -82,11 +192,12 @@
 
 <header>
     <div class="container">
-        <a href="../index.html" class="logo"><img src="../images/logo.png" alt="لوگو"></a>
+        <a href="../index.html" class="logo"><img src="../images/logo.png" alt="لوگو شرکت سمپاشی نانوفناوران"></a>
         <nav class="navbar">
             <ul>
                 <li><a href="../index.html">صفحه اصلی</a></li>
-                <li><a href="../services.html" class="active">خدمات</a></li>
+                <li><a href="../services.html">خدمات مسکونی</a></li>
+                <li><a href="../commercial-services.html">خدمات تجاری</a></li>
                 <li><a href="../about.html">درباره ما</a></li>
                 <li><a href="../contact.html">تماس</a></li>
             </ul>
@@ -95,24 +206,284 @@
             <a href="tel:09120705746" class="call-btn">📞 09120705746</a>
             <div class="mobile-menu">☰</div>
         </div>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="جستجو...">
+            <button onclick="searchSite()">🔍</button>
+        </div>
     </div>
 </header>
 
-<div class="service-detail">
-    <div class="text">
-        <h1>🐜 سمپاشی مورچه</h1>
-        <p>کنترل و حذف انواع مورچه‌های خانگی و باغی با طعمه‌گذاری هوشمند.</p>
-        <p><strong>روش کنترل:</strong> استفاده از سموم استاندارد و روش‌های نوین با تضمین کیفیت و ماندگاری بالا.</p>
-        <p><strong>مدت زمان اثرگذاری:</strong> نتایج سریع و ماندگار تا ۶ ماه.</p>
-        <a href="../services.html" class="back-link">🔙 بازگشت به لیست خدمات</a>
-        <div class="contact-float">
-            <a href="tel:09120705746">📞 تماس فوری</a>
-            <a href="https://wa.me/989120705746" target="_blank">💬 واتساپ</a>
-        </div>
+<div class="blog-container">
+
+    <!-- ===== تصویر ant5 (بعد از پاراگراف اول - جابه‌جا شده) ===== -->
+    <div class="blog-image">
+        <img src="../images/services/ant-5.jpg" alt="نکات طلایی پیشگیری از مورچه">
+        <div class="caption">تصویر: نکات طلایی برای پیشگیری از ورود مورچه به منزل</div>
     </div>
-    <div class="gif">
-        <img src="../images/services/ant.jpg" alt="سمپاشی مورچه">
+
+    <h1>سمپاشی مورچه: راهنمای جامع شناسایی، پیشگیری و ریشه‌کنی (نسخه کامل و تخصصی)</h1>
+    <div class="meta">
+        <span>📅 آخرین به‌روزرسانی: ۱۳ مرداد ۱۴۰۴</span> &nbsp;|&nbsp; <span>⏱ زمان مطالعه: ۱۲ دقیقه</span>
     </div>
+
+    <p>تصور کنید صبح از خواب بیدار می‌شوید، به آشپزخانه می‌روید تا یک لیوان آب بردارید و ناگهان مسیری از مورچه‌های کوچک و بزرگ را روی کابینت یا اطراف سطل زباله می‌بینید. شاید برای شما هم این صحنه آشنا باشد. مورچه‌ها از جمله رایج‌ترین و آزاردهنده‌ترین آفات خانگی در ایران هستند که می‌توانند در هر فصل و هر نوع آب و هوایی، از خانه‌های ویلایی گرفته تا آپارتمان‌های مدرن، پیدا شوند.</p>
+
+    <p>این حشرات کوچک با وجود اندازه‌ی کوچکشان، می‌توانند مشکلات بزرگی برای سلامت و آرامش شما ایجاد کنند. از آلوده کردن مواد غذایی گرفته تا ایجاد آلرژی و گزش‌های دردناک در برخی گونه‌ها. اما نکته‌ی جالب اینجاست که مورچه‌ها نه‌تنها در خانه‌های کثیف، بلکه در تمیزترین محیط‌ها نیز ظاهر می‌شوند. چرا؟ چون آنها همیشه به دنبال آب، غذا و پناهگاه هستند و با قابلیت تولید مثل بالا، به سرعت جمعیتشان افزایش می‌یابد.</p>
+
+    <p>در این مقاله جامع و تخصصی، شما را با انواع مورچه‌های رایج در ایران، روش‌های تشخیص، خطرات و عواقب حضور آنها، و مهم‌تر از همه، <strong>روش‌های اصولی و تخصصی سمپاشی مورچه</strong> آشنا می‌کنیم. اگر شما هم در تهران یا سایر شهرهای ایران از دست مورچه‌ها کلافه شده‌اید، این مقاله راهنمای کامل شما خواهد بود.</p>
+
+    <!-- بخش ۱ -->
+    <h2>📌 آشنایی کامل با مورچه‌ها (بیولوژی و رفتارشناسی)</h2>
+    <p>مورچه‌ها از خانواده‌ی Formicidae و راسته‌ی Hymenoptera هستند و بیش از ۱۲,۰۰۰ گونه در سراسر جهان شناسایی شده‌اند. در ایران نیز گونه‌های مختلفی از مورچه‌ها زندگی می‌کنند که هر کدام ویژگی‌های خاص خود را دارند.</p>
+
+    <h3>ویژگی‌های عمومی مورچه‌ها:</h3>
+    <table>
+        <thead>
+            <tr><th>ویژگی</th><th>توضیح</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>اندازه</strong></td><td>معمولاً بین ۱ تا ۲۰ میلی‌متر، بسته به گونه</td></tr>
+            <tr><td><strong>رنگ</strong></td><td>قهوه‌ای، سیاه، قرمز، زرد و حتی سبز در برخی گونه‌ها</td></tr>
+            <tr><td><strong>طول عمر</strong></td><td>ملکه‌ها تا ۱۵ سال و کارگرها معمولاً چند ماه</td></tr>
+            <tr><td><strong>تولید مثل</strong></td><td>ملکه‌ها روزانه تا هزار تخم می‌گذارند</td></tr>
+            <tr><td><strong>تغذیه</strong></td><td>همه‌چیزخوار (شکر، چربی، پروتئین، حشرات مرده، مواد شیرین و... )</td></tr>
+            <tr><td><strong>ساختار اجتماعی</strong></td><td>کلنی‌ها شامل ملکه، کارگرها و سربازها هستند</td></tr>
+        </tbody>
+    </table>
+
+    <h3>چرخه‌ی زندگی مورچه‌ها:</h3>
+    <p>چرخه‌ی زندگی مورچه شامل چهار مرحله است:</p>
+    <ol>
+        <li><strong>تخم:</strong> ملکه تخم‌ها را می‌گذارد.</li>
+        <li><strong>لارو:</strong> پس از چند روز، تخم‌ها به لارو تبدیل می‌شوند و توسط کارگرها تغذیه می‌شوند.</li>
+        <li><strong>شفیره:</strong> لاروها پس از رشد، به شفیره تبدیل می‌شوند.</li>
+        <li><strong>مورچه بالغ:</strong> شفیره‌ها پس از مدتی به مورچه‌های کامل تبدیل می‌شوند.</li>
+    </ol>
+    <p>این چرخه در شرایط مساعد می‌تواند خیلی سریع طی شود و جمعیت کلنی را به سرعت افزایش دهد. به همین دلیل، ریشه‌کنی مورچه‌ها با روش‌های خانگی معمولاً شکست می‌خورد، زیرا لانه‌ی اصلی و ملکه از بین نمی‌رود.</p>
+
+    <!-- ===== تصویر ant4 (بعد از عبارت «ملکه از بین نمی‌رود») ===== -->
+    <div class="blog-image">
+        <img src="../images/services/ant-4.jpg" alt="کارشناس در حال طعمه‌گذاری مورچه">
+        <div class="caption">تصویر: کارشناس در حال طعمه‌گذاری هوشمند برای ریشه‌کنی مورچه</div>
+    </div>
+
+    <!-- بخش ۲ -->
+    <h2>🟠 انواع مورچه‌های رایج در ایران (شناسایی گونه‌ها)</h2>
+
+    <!-- ===== تصویر ant2 (بدون تغییر) ===== -->
+    <div class="blog-image">
+        <img src="../images/services/ant-2.jpg" alt="انواع مورچه در ایران">
+        <div class="caption">تصویر: مقایسه انواع مورچه‌های رایج در ایران</div>
+    </div>
+
+    <h3>۱. مورچه‌ی سیاه معمولی (Black Garden Ant)</h3>
+    <p>رایج‌ترین نوع مورچه در محیط‌های شهری ایران. رنگ سیاه یا قهوه‌ای تیره دارد و معمولاً در باغچه‌ها، زیر سنگ‌ها و پیاده‌روها لانه‌سازی می‌کند. این مورچه‌ها به مواد شیرین و باقیمانده‌های غذایی علاقه زیادی دارند و معمولاً در مسیرهای طولانی به دنبال غذا حرکت می‌کنند.</p>
+    <p><strong>نکته:</strong> این نوع مورچه نیش‌دار است و در صورت احساس خطر، گزشی دردناک دارد.</p>
+
+    <h3>۲. مورچه‌ی فیزیک (Pharaoh Ant)</h3>
+    <p>یکی از خطرناک‌ترین گونه‌های مورچه برای محیط‌های مسکونی، بیمارستان‌ها و مراکز غذایی است. رنگ آن زرد یا قهوه‌ای روشن و اندازه‌ی آن بسیار کوچک است (حدود ۲ میلی‌متر). این مورچه به دلیل مقاومت بالا به سموم و توانایی تولید مثل سریع، بسیار خطرناک است.</p>
+    <p><strong>نکته:</strong> مورچه‌ی فیزیک ناقل باکتری‌های بیماری‌زا مانند سالمونلا و استافیلوکوک است و می‌تواند در بیمارستان‌ها خطرات جدی ایجاد کند.</p>
+
+    <h3>۳. مورچه‌ی نجار (Carpenter Ant)</h3>
+    <p>این مورچه‌ها در چوب‌های مرطوب و پوسیده لانه‌سازی می‌کنند و می‌توانند به ساختمان‌ها و سازه‌های چوبی آسیب جدی وارد کنند. رنگ آنها معمولاً سیاه یا قرمز و اندازه‌شان نسبتاً بزرگ (تا ۱۵ میلی‌متر) است.</p>
+    <p><strong>نکته:</strong> برخلاف تصور، مورچه‌های نجار از چوب تغذیه نمی‌کنند، بلکه آن را برای ساخت لانه حفر می‌کنند و تخریب آن‌ها می‌تواند ساختار ساختمان را تضعیف کند.</p>
+
+    <h3>۴. مورچه‌ی آتش (Fire Ant)</h3>
+    <p>گونه‌ای سمی که با گزش خود باعث ایجاد تاول‌های سوزاننده و دردناک می‌شود. در برخی مناطق ایران (به‌ویژه جنوب) یافت می‌شود و برای افراد حساس می‌تواند خطرناک باشد.</p>
+    <p><strong>نکته:</strong> گزش مورچه‌ی آتش می‌تواند باعث واکنش‌های آلرژیک شدید، از جمله آنافیلاکسی شود که نیاز به درمان فوری پزشکی دارد.</p>
+
+    <!-- بخش ۳ -->
+    <h2>🔴 نشانه‌های وجود مورچه در منزل</h2>
+    <p>تشخیص زودهنگام وجود مورچه‌ها می‌تواند از تبدیل شدن یک آلودگی ساده به بحران جلوگیری کند:</p>
+    <ul>
+        <li><strong>مشاهده مورچه‌ها در مسیرهای مشخص:</strong> مورچه‌ها از مسیرهای بویایی مشخصی پیروی می‌کنند و معمولاً در خطوط مستقیم حرکت می‌کنند.</li>
+        <li><strong>جمع شدن مورچه‌ها اطراف شیرینی‌جات و مواد غذایی:</strong> این نشانه‌ی واضحی از وجود لانه نزدیک است.</li>
+        <li><strong>وجود توده‌های خاک کوچک روی زمین یا کنار دیوار:</strong> این توده‌ها می‌توانند نشانه‌ی ورودی لانه باشند.</li>
+        <li><strong>مشاهده بال‌های ریخته‌شده مورچه:</strong> در فصل جفت‌گیری، مورچه‌های بالدار از لانه خارج می‌شوند و بال‌های خود را در نزدیکی لانه رها می‌کنند.</li>
+        <li><strong>شنیدن صدای تق‌تق در چوب:</strong> در آلودگی به مورچه‌ی نجار، ممکن است صدای تق‌تق ضعیفی از داخل دیوارها بشنوید.</li>
+    </ul>
+
+    <!-- ===== تصویر ant3 (بعد از نشانه‌های وجود مورچه در منزل - جابه‌جا شده) ===== -->
+    <div class="blog-image">
+        <img src="../images/services/ant-3.jpg" alt="گزش مورچه روی پوست">
+        <div class="caption">تصویر: آثار گزش مورچه روی پوست انسان</div>
+    </div>
+
+    <!-- بخش ۴ -->
+    <h2>🚨 خطرات و عواقب حضور مورچه‌ها در منزل</h2>
+
+    <table>
+        <thead>
+            <tr><th>نوع خطر</th><th>توضیح</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>آلودگی مواد غذایی</strong></td><td>مورچه‌ها با عبور از روی مواد غذایی، آنها را آلوده می‌کنند و می‌توانند بیماری‌زا باشند.</td></tr>
+            <tr><td><strong>انتقال بیماری</strong></td><td>برخی گونه‌ها مانند مورچه‌ی فیزیک، ناقل باکتری‌های سالمونلا، استافیلوکوک و حتی هپاتیت هستند.</td></tr>
+            <tr><td><strong>گزش و نیش</strong></td><td>گزش برخی گونه‌ها (مانند مورچه‌ی آتش) بسیار دردناک و سمی است و ممکن است باعث واکنش‌های آلرژیک شدید شود.</td></tr>
+            <tr><td><strong>آسیب به سازه</strong></td><td>مورچه‌ی نجار با حفر چوب، باعث تخریب سازه‌های ساختمانی و مبلمان چوبی می‌شود.</td></tr>
+            <tr><td><strong>آسیب به وسایل برقی</strong></td><td>مورچه‌ها به پریزها و کلیدهای برق نفوذ می‌کنند و می‌توانند باعث اتصالی و آتش‌سوزی شوند.</td></tr>
+            <tr><td><strong>تهدید برای حیوانات خانگی</strong></td><td>گزش مورچه‌های آتش یا گونه‌های سمی برای سگ‌ها و گربه‌ها خطرناک است.</td></tr>
+        </tbody>
+    </table>
+
+    <!-- بخش ۵ -->
+    <h2>🧐 چگونه مورچه‌ها وارد خانه می‌شوند؟</h2>
+    <ul>
+        <li>از طریق شکاف‌های دیوار، درز کابینت‌ها و دور لوله‌ها</li>
+        <li>از طریق درختان و شاخه‌هایی که به دیوار خانه تماس دارند</li>
+        <li>از طریق گیاهان آپارتمانی و گلدان‌های آلوده</li>
+        <li>از طریق وسایل و جعبه‌های خریداری‌شده از فروشگاه‌ها</li>
+        <li>از طریق حیوانات خانگی</li>
+        <li>از طریق شیرآلات و لوله‌کشی‌ها (برخی گونه‌ها از طریق لوله‌ها وارد می‌شوند)</li>
+    </ul>
+
+    <!-- بخش ۶ -->
+    <h2>🛠️ روش‌های اصولی سمپاشی مورچه</h2>
+    <p>کنترل مورچه‌ها یکی از پیچیده‌ترین عملیات‌ها در حوزه‌ی کنترل آفات است، زیرا این حشرات به‌سرعت از سموم فرار می‌کنند و ممکن است کلنی خود را جابجا کنند. به همین دلیل <strong>روش‌های خانگی</strong> مانند استفاده از اسپری‌های معمولی، پودرهای ضد مورچه یا جوش شیرین، معمولاً شکست می‌خورند.</p>
+
+    <p>در شرکت سمپاشی نانوفناوران، برای ریشه‌کنی قطعی مورچه‌ها، از <strong>روش اصولی و مرحله‌ای</strong> استفاده می‌کنیم:</p>
+
+    <h3>مرحله ۱: بازرسی و شناسایی گونه</h3>
+    <p>اولین گام، شناسایی دقیق گونه‌ی مورچه و محل لانه‌ی اصلی است. کارشناسان ما با دقت بالا تمام نقاط منزل شما را بررسی می‌کنند و اطلاعات زیر را به دست می‌آورند:</p>
+    <ul>
+        <li>نوع مورچه (از نظر رفتار، تغذیه و زیستگاه)</li>
+        <li>مسیرهای تردد مورچه‌ها</li>
+        <li>ورودی‌های احتمالی به ساختمان</li>
+        <li>نقاطی که ممکن است لانه‌ی اصلی در آنجا باشد (زمین، دیوار، چوب، گلدان و...)</li>
+    </ul>
+
+    <h3>مرحله ۲: طعمه‌گذاری هوشمند (مؤثرترین روش)</h3>
+    <p>طعمه‌گذاری مؤثرترین روش برای ریشه‌کنی مورچه‌هاست زیرا:</p>
+    <ul>
+        <li>طعمه‌ها از ماده‌ای تشکیل شده‌اند که مورچه‌ها را جذب می‌کند و حاوی سم مختص مورچه است.</li>
+        <li>مورچه‌ها طعمه را به لانه می‌برند و به سایر اعضای کلنی از جمله ملکه می‌خورانند.</li>
+        <li>به این ترتیب، کل کلنی، از جمله ملکه، از بین می‌رود.</li>
+    </ul>
+    <p><strong>انواع طعمه برای مورچه:</strong></p>
+    <ul>
+        <li>طعمه‌های ژلی (برای مورچه‌های شیرینی‌دوست)</li>
+        <li>طعمه‌های پروتئینی (برای مورچه‌های گوشت‌خوار)</li>
+        <li>طعمه‌های مایع و پودری</li>
+    </ul>
+    <p>نکته‌ی کلیدی این است که طعمه‌ها باید در نقاطی قرار داده شوند که مورچه‌ها به‌طور فعال در تردد هستند.</p>
+
+    <h3>مرحله ۳: سمپاشی موضعی</h3>
+    <p>در صورت نیاز و با توجه به نوع مورچه و شدت آلودگی، کارشناسان ما از سموم میکروکپسول برای پاشش موضعی در نقاط خاص استفاده می‌کنند:</p>
+    <ul>
+        <li>شکاف‌های دیوار و کف</li>
+        <li>ورودی‌های لوله‌کشی</li>
+        <li>پشت کابینت‌ها و اطراف سینک‌ها</li>
+        <li>مسیرهای تردد مورچه‌ها</li>
+    </ul>
+
+    <h3>مرحله ۴: بستن منافذ ورودی</h3>
+    <p>پس از از بین بردن کلنی، کارشناسان ما تمام نقاط ورودی مورچه‌ها را با استفاده از بتونه، سیلر یا مواد مخصوص مسدود می‌کنند تا از ورود مجدد آنها جلوگیری شود.</p>
+
+    <h3>مرحله ۵: ارائه توصیه‌های پس از سمپاشی</h3>
+    <ul>
+        <li>مدت زمان لازم برای خروج از محیط</li>
+        <li>نکات مربوط به نظافت و جابجایی وسایل</li>
+        <li>نحوه‌ی دفع ضایعات غذایی و نگهداری مواد غذایی در ظروف دربسته</li>
+        <li>زمان تماس مجدد برای بررسی و سمپاشی تکمیلی</li>
+    </ul>
+
+    <!-- بخش ۷ -->
+    <h2>🛡️ راه‌های پیشگیری از بازگشت مورچه‌ها</h2>
+    <p>با رعایت این نکات ساده، می‌توانید از بازگشت مجدد مورچه‌ها جلوگیری کنید:</p>
+
+    <!-- ===== تصویر ant1 (جای ant5 قبلی - به بخش پیشگیری منتقل شده) ===== -->
+    <div class="blog-image">
+        <img src="../images/services/ant-1.jpg" alt="مورچه سیاه روی کابینت">
+        <div class="caption">تصویر: مورچه سیاه در حال حرکت روی کابینت آشپزخانه</div>
+    </div>
+
+    <ol>
+        <li><strong>تمیز نگه‌داشتن آشپزخانه و محیط‌های غذایی:</strong> جمع‌آوری سریع زباله‌ها، تمیز کردن لکه‌های مواد غذایی و جلوگیری از ریختن شیرینی‌جات.</li>
+        <li><strong>نگهداری مواد غذایی در ظروف دربسته:</strong> به‌ویژه مواد شیرین، عسل، شکر و خرما.</li>
+        <li><strong>بستن منافذ و شکاف‌ها:</strong> با بتونه یا سیلر، تمام شکاف‌های دیوار و کف را ببندید.</li>
+        <li><strong>جلوگیری از نفوذ از طریق لوله‌ها:</strong> با استفاده از توری‌های ریز و پلمپ کردن ورودی لوله‌ها.</li>
+        <li><strong>بررسی دورهای نقاط حساس:</strong> هر ماه یکبار اطراف سینک، کابینت‌ها و انباری را بررسی کنید.</li>
+        <li><strong>نگهداری مواد غذایی در یخچال:</strong> مواد غذایی که به‌سرعت فاسد می‌شوند یا شیرین هستند، بهتر است در یخچال نگهداری شوند.</li>
+    </ol>
+
+    <!-- بخش ۸ -->
+    <h2>💰 هزینه سمپاشی مورچه چقدر است؟</h2>
+    <table>
+        <thead>
+            <tr><th>عامل</th><th>تأثیر بر هزینه</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>مساحت منزل</strong></td><td>هرچه متراژ بیشتر باشد، هزینه بیشتر است.</td></tr>
+            <tr><td><strong>نوع مورچه</strong></td><td>گونه‌های مقاوم‌تر مانند مورچه‌ی فیزیک نیاز به عملیات بیشتری دارند.</td></tr>
+            <tr><td><strong>شدت آلودگی</strong></td><td>کلنی‌های بزرگ و متعدد نیاز به زمان و عملیات بیشتری دارند.</td></tr>
+            <tr><td><strong>تعداد جلسات سمپاشی</strong></td><td>معمولاً یک جلسه کافی است، اما در موارد شدید، ۲ جلسه با فاصله ۲ هفته نیاز است.</td></tr>
+            <tr><td><strong>نوع روش</strong></td><td>طعمه‌گذاری، سمپاشی موضعی یا هر دو</td></tr>
+        </tbody>
+    </table>
+    <p>💡 <strong>توصیه:</strong> برای دریافت <strong>مشاوره رایگان</strong> و <strong>استعلام دقیق هزینه</strong> با کارشناسان ما تماس بگیرید.</p>
+
+    <!-- بخش ۹ -->
+    <h2>❓ سوالات متداول درباره سمپاشی مورچه</h2>
+
+    <details>
+        <summary><strong>آیا سمپاشی مورچه برای کودکان و حیوانات خانگی خطرناک است؟</strong></summary>
+        <p>خیر، سموم و طعمه‌های استفاده‌شده توسط شرکت نانوفناوران با رعایت استانداردهای بهداشتی انتخاب می‌شوند و برای کودکان و حیوانات بی‌خطر هستند.</p>
+    </details>
+
+    <details>
+        <summary><strong>چند روز بعد از سمپاشی مورچه‌ها از بین می‌روند؟</strong></summary>
+        <p>در روش طعمه‌گذاری، معمولاً بین ۳ تا ۷ روز زمان می‌برد تا کل کلنی از بین برود. در روش سمپاشی موضعی، اثر آنی است اما برای ریشه‌کنی کامل، طعمه‌گذاری توصیه می‌شود.</p>
+    </details>
+
+    <details>
+        <summary><strong>آیا خودمان هم می‌توانیم مورچه را سمپاشی کنیم؟</strong></summary>
+        <p>استفاده از اسپری‌های خانگی فقط مورچه‌های سطحی را از بین می‌برد و لانه و ملکه باقی می‌مانند، بنابراین مشکل به‌زودی بازمی‌گردد. روش‌های تخصصی مانند طعمه‌گذاری نیاز به دانش و تجربه دارد.</p>
+    </details>
+
+    <details>
+        <summary><strong>بعد از سمپاشی باید منزل را ترک کنیم؟</strong></summary>
+        <p>در روش طعمه‌گذاری، نیازی به ترک منزل نیست، اما در روش سمپاشی موضعی، معمولاً ۲ تا ۳ ساعت زمان نیاز است تا محیط تهویه شود.</p>
+    </details>
+
+    <details>
+        <summary><strong>آیا مورچه‌ها دوباره برمی‌گردند؟</strong></summary>
+        <p>اگر منافذ ورودی بسته شوند و نکات بهداشتی رعایت شود، احتمال بازگشت بسیار کم است. شرکت نانوفناوران خدمات خود را با ضمانت ارائه می‌دهد.</p>
+    </details>
+
+    <details>
+        <summary><strong>آیا مورچه‌ها فقط به مواد شیرین علاقه دارند؟</strong></summary>
+        <p>خیر، برخی گونه‌ها (مانند مورچه‌ی نجار) به چوب‌های مرطوب و برخی دیگر به پروتئین‌ها و چربی‌ها علاقه دارند. شناخت دقیق گونه اهمیت زیادی دارد.</p>
+    </details>
+
+    <!-- بخش ۱۰ -->
+    <h2>🏠 نکات طلایی برای جلوگیری از ورود مورچه به خانه</h2>
+    <ol>
+        <li><strong>قبل از خرید گیاهان آپارتمانی، گلدان‌ها را بررسی کنید.</strong></li>
+        <li><strong>پس از ورود به خانه، کفش‌ها و وسایل را در قسمت ورودی تمیز کنید.</strong></li>
+        <li><strong>از نگهداری مواد غذایی در محیط باز خودداری کنید.</strong></li>
+        <li><strong>زباله‌ها را روزانه جمع‌آوری و در سطل‌های دربسته بریزید.</strong></li>
+        <li><strong>از توری‌های ریز برای پنجره‌ها و دریچه‌های کولر استفاده کنید.</strong></li>
+        <li><strong>دور لوله‌ها و شیرآلات را با سیلر ببندید.</strong></li>
+        <li><strong>گلدان‌ها را روی زیرگلدانی‌هایی که آب در آنها جمع نمی‌شود قرار دهید.</strong></li>
+    </ol>
+
+    <!-- بخش ۱۱ -->
+    <h2>📌 نتیجه‌گیری</h2>
+    <p>مورچه‌ها با وجود کوچکی، می‌توانند مشکلات بزرگی برای سلامت و آرامش شما ایجاد کنند و بدون کمک متخصصان، ریشه‌کنی کامل آنها تقریباً غیرممکن است. شرکت سمپاشی نانوفناوران با بیش از <strong>۲۰ سال تجربه</strong> و استفاده از <strong>پیشرفته‌ترین روش‌های طعمه‌گذاری و سمپاشی</strong>، آماده ارائه خدمات تخصصی و تضمینی به شماست.</p>
+
+    <p style="font-size:20px; font-weight:700; text-align:center; color:var(--primary);">🚀 همین حالا اقدام کنید:</p>
+    <div style="text-align:center; margin:20px 0;">
+        <p>📞 <strong>تماس فوری:</strong> <a href="tel:09120705746" style="font-size:20px; color:var(--secondary);">۰۹۱۲۰۷۰۵۷۴۶</a></p>
+        <p>💬 <strong>درخواست مشاوره رایگان:</strong> از طریق <a href="https://wa.me/989120705746" target="_blank">واتساپ</a> یا <a href="https://eitaa.com/nanofannavaran_ir" target="_blank">ایتا</a></p>
+        <p>🔗 <strong>مشاهده سایر خدمات:</strong> <a href="../services.html">کنترل آفات مسکونی</a></p>
+    </div>
+
+    <div class="back-links">
+        <a href="../index.html" class="btn-blog-home">🏠 بازگشت به صفحه اصلی</a>
+        <a href="../services.html" class="btn-blog-services">🔙 بازگشت به لیست خدمات مسکونی</a>
+        <a href="../contact.html" class="btn-blog-contact">📞 تماس با ما</a>
+    </div>
+
 </div>
 
 <footer class="site-footer">
@@ -124,6 +495,30 @@
         <hr><p class="copyright">© تمامی حقوق محفوظ است</p>
     </div>
 </footer>
+
+<div class="floating-container">
+    <button class="floating-main-btn" id="floatingToggle">
+        <span class="btn-arrow">▶</span>
+        <span class="btn-text">📞 مشاوره رایگان</span>
+    </button>
+    <div class="floating-menu" id="floatingMenu">
+        <div class="call-wrapper">
+            <div class="floating-item call-item" id="callToggle">
+                <span class="item-icon">📞</span>
+                <span class="item-text">تماس سریع</span>
+                <span class="arrow">▲</span>
+            </div>
+            <div class="call-submenu" id="callSubmenu">
+                <a href="tel:09120705746" class="floating-item call-sub-item"><span class="item-icon">📞</span><span class="item-text">شماره ۱</span></a>
+                <a href="tel:09197173454" class="floating-item call-sub-item"><span class="item-icon">📞</span><span class="item-text">شماره ۲</span></a>
+            </div>
+        </div>
+        <a href="https://wa.me/989120705746?text=%D8%A8%D9%87%20%D8%B3%D8%A7%DB%8C%D8%AA%20%D8%B4%D8%B1%DA%A9%D8%AA%20%D8%B3%D9%85%D9%BE%D8%A7%D8%B4%DB%8C%20%D9%86%D8%A7%D9%86%D9%88%D9%81%D9%86%D8%A7%D9%88%D8%B1%D8%A7%D9%86%20%D8%AE%D9%88%D8%B4%20%D8%A2%D9%85%D8%AF%DB%8C%D8%AF.%20%DA%86%DA%AF%D9%88%D9%86%D9%87%20%D9%85%DB%8C%E2%80%8C%D8%AA%D9%88%D8%A7%D9%86%D9%85%20%DA%A9%D9%85%DA%A9%20%D8%AA%D8%A7%D9%86%20%DA%A9%D9%86%D9%85%D8%9F" target="_blank" class="floating-item whatsapp-item"><span class="item-icon">💬</span><span class="item-text">واتساپ</span></a>
+        <a href="https://eitaa.com/nanofannavaran_ir" target="_blank" class="floating-item eitaa-item"><span class="item-icon">✈️</span><span class="item-text">ایتا</span></a>
+    </div>
+</div>
+
+<button id="backToTop" title="برو به بالا">↑</button>
 
 <script src="../script.js"></script>
 </body>
