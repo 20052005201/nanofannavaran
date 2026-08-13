@@ -3,77 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سمپاشی مگس | نانوفناوران</title>
+    <title>سمپاشی مگس | راهنمای جامع کنترل، پیشگیری و ریشه‌کنی | نانوفناوران</title>
+    <meta name="description" content="مقاله جامع سمپاشی مگس: معرفی گونه‌ها، بیماری‌ها، روش‌های کنترل، پیشگیری و ریشه‌کنی مگس در منزل و محیط کار.">
+    <meta name="keywords" content="سمپاشی مگس, کنترل مگس, مگس خانگی, مگس لاشه‌خوار, مگس میوه, مگس اسبی, پیشگیری مگس, مه‌پاشی">
+    <link rel="canonical" href="https://nanofannavaran.ir/service/fly.html">
     <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
-        .service-detail {
+        .blog-container {
             max-width: 1100px;
-            margin: 100px auto 50px;
+            margin: 120px auto 60px;
             padding: 0 20px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
+            background: #fff;
+            border-radius: 24px;
+            box-shadow: 0 10px 40px rgba(0,0,0,.08);
+            padding: 40px 40px 60px;
         }
-        .service-detail .text h1 {
-            font-size: 32px;
+        .blog-container h1 {
+            font-size: 36px;
             color: var(--primary);
             margin-bottom: 20px;
+            line-height: 1.5;
         }
-        .service-detail .text p {
+        .blog-container .meta {
+            color: #888;
+            font-size: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .blog-container h2 {
+            font-size: 28px;
+            color: var(--dark);
+            margin: 40px 0 15px;
+            border-right: 5px solid var(--secondary);
+            padding-right: 15px;
+        }
+        .blog-container h3 {
+            font-size: 22px;
+            color: var(--primary);
+            margin: 30px 0 12px;
+        }
+        .blog-container h4 {
+            font-size: 19px;
+            color: var(--dark);
+            margin: 25px 0 10px;
+        }
+        .blog-container p {
             line-height: 2.2;
-            color: #555;
+            color: #444;
+            font-size: 17px;
+            margin-bottom: 18px;
+        }
+        .blog-container ul, .blog-container ol {
+            line-height: 2.2;
+            color: #444;
+            font-size: 17px;
+            padding-right: 25px;
+            margin-bottom: 20px;
+        }
+        .blog-container ul li, .blog-container ol li {
+            margin-bottom: 8px;
+        }
+        .blog-container table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0 30px;
             font-size: 16px;
         }
-        .service-detail .gif img {
+        .blog-container table th {
+            background: var(--primary);
+            color: #fff;
+            padding: 12px 15px;
+            text-align: right;
+        }
+        .blog-container table td {
+            border: 1px solid #ddd;
+            padding: 10px 15px;
+            background: #fafafa;
+        }
+        .blog-container table tr:nth-child(even) td {
+            background: #f5f5f5;
+        }
+        .blog-image {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .blog-image img {
             width: 100%;
-            max-height: 400px;
-            object-fit: contain;
+            max-width: 700px;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,.15);
         }
-        .back-link {
+        .blog-image .caption {
+            font-size: 14px;
+            color: #888;
+            margin-top: 10px;
+        }
+        .blog-container .back-links {
+            margin: 40px 0 20px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .blog-container .back-links a {
             display: inline-block;
-            margin-top: 30px;
-            background: var(--secondary);
-            color: #fff;
             padding: 12px 28px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
             transition: .3s;
         }
-        .back-link:hover {
-            background: var(--primary);
-        }
-        .contact-float {
-            margin-top: 20px;
-        }
-        .contact-float a {
-            display: inline-block;
+        .blog-container .back-links .btn-blog-home {
             background: var(--primary);
             color: #fff;
-            padding: 12px 28px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            margin-left: 10px;
-            transition: .3s;
         }
-        .contact-float a:hover {
+        .blog-container .back-links .btn-blog-home:hover {
             background: var(--secondary);
         }
+        .blog-container .back-links .btn-blog-services {
+            background: var(--secondary);
+            color: #fff;
+        }
+        .blog-container .back-links .btn-blog-services:hover {
+            background: var(--primary);
+        }
+        .blog-container .back-links .btn-blog-contact {
+            background: var(--dark);
+            color: #fff;
+        }
+        .blog-container .back-links .btn-blog-contact:hover {
+            background: var(--primary);
+        }
+
+        details {
+            background: #f8fbfd;
+            padding: 15px 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #e9ecef;
+        }
+        details summary {
+            font-weight: 700;
+            color: var(--primary);
+            cursor: pointer;
+            font-size: 17px;
+        }
+        details p {
+            margin-top: 12px;
+            padding-right: 10px;
+        }
+
         @media (max-width: 768px) {
-            .service-detail {
-                grid-template-columns: 1fr;
-                text-align: center;
-                margin-top: 80px;
+            .blog-container {
+                padding: 20px 15px;
+                margin: 100px auto 40px;
             }
-            .service-detail .text h1 {
+            .blog-container h1 {
                 font-size: 26px;
             }
-            .service-detail .gif img {
-                max-height: 250px;
+            .blog-container h2 {
+                font-size: 22px;
+            }
+            .blog-container h3 {
+                font-size: 19px;
+            }
+            .blog-container h4 {
+                font-size: 17px;
+            }
+            .blog-container p,
+            .blog-container ul,
+            .blog-container ol {
+                font-size: 15px;
+            }
+            .blog-container table {
+                font-size: 14px;
+            }
+            .blog-container .back-links a {
+                padding: 10px 20px;
+                font-size: 14px;
             }
         }
     </style>
@@ -82,11 +192,12 @@
 
 <header>
     <div class="container">
-        <a href="../index.html" class="logo"><img src="../images/logo.png" alt="لوگو"></a>
+        <a href="../index.html" class="logo"><img src="../images/logo.png" alt="لوگو شرکت سمپاشی نانوفناوران"></a>
         <nav class="navbar">
             <ul>
                 <li><a href="../index.html">صفحه اصلی</a></li>
-                <li><a href="../services.html" class="active">خدمات</a></li>
+                <li><a href="../services.html">خدمات مسکونی</a></li>
+                <li><a href="../commercial-services.html">خدمات تجاری</a></li>
                 <li><a href="../about.html">درباره ما</a></li>
                 <li><a href="../contact.html">تماس</a></li>
             </ul>
@@ -95,24 +206,298 @@
             <a href="tel:09120705746" class="call-btn">📞 09120705746</a>
             <div class="mobile-menu">☰</div>
         </div>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="جستجو...">
+            <button onclick="searchSite()">🔍</button>
+        </div>
     </div>
 </header>
 
-<div class="service-detail">
-    <div class="text">
-        <h1>🪰 سمپاشی مگس</h1>
-        <p>کنترل جمعیت مگس‌ها در محیط‌های مسکونی، تجاری و صنعتی.</p>
-        <p><strong>روش کنترل:</strong> استفاده از سموم استاندارد و روش‌های نوین با تضمین کیفیت و ماندگاری بالا.</p>
-        <p><strong>مدت زمان اثرگذاری:</strong> نتایج سریع و ماندگار تا ۶ ماه.</p>
-        <a href="../services.html" class="back-link">🔙 بازگشت به لیست خدمات</a>
-        <div class="contact-float">
-            <a href="tel:09120705746">📞 تماس فوری</a>
-            <a href="https://wa.me/989120705746" target="_blank">💬 واتساپ</a>
-        </div>
+<div class="blog-container">
+
+    <h1>🪰 سمپاشی مگس: راهنمای جامع کنترل، پیشگیری و ریشه‌کنی (نسخه کامل و تخصصی)</h1>
+    <div class="meta">
+        <span>📅 آخرین به‌روزرسانی: ۱۵ مرداد ۱۴۰۴</span> &nbsp;|&nbsp; <span>⏱ زمان مطالعه: ۱۳ دقیقه</span>
     </div>
-    <div class="gif">
-        <img src="../images/services/fly.jpg" alt="سمپاشی مگس">
+
+    <h2>مقدمه: مزاحمتی کوچک با عواقب بزرگ</h2>
+    <p>صدای وزوز آزاردهنده، نشستن روی مواد غذایی، انتقال باکتری‌ها و بیماری‌ها... مگس‌ها بدون‌شک یکی از آزاردهنده‌ترین و در عین حال خطرناک‌ترین آفات محیط‌های زندگی انسان هستند. شاید بسیاری از مردم مگس را فقط یک حشرهٔ مزاحم بدانند، اما واقعیت این است که این حشرهٔ کوچک می‌تواند ناقل ده‌ها بیماری خطرناک باشد و سلامت شما و خانواده‌تان را به‌طور جدی تهدید کند.</p>
+
+    <p>مگس‌ها از قدیمی‌ترین هم‌زیست‌های انسان هستند و در هر نقطه از کره زمین که انسان زندگی می‌کند، مگس نیز حضور دارد. این حشرات با تولید مثل فوق‌العاده سریع، می‌توانند در کمترین زمان ممکن به یک معضل بزرگ تبدیل شوند. یک جفت مگس در شرایط مناسب، طی چند ماه می‌تواند میلیون‌ها فرزند تولید کند! این یعنی اگر به موقع اقدام نکنید، خانه یا محل کار شما به‌سرعت به یک مرکز پرورش مگس تبدیل می‌شود.</p>
+
+    <p>اما مشکل فقط به آزار و اذیت ختم نمی‌شود. مگس‌ها ناقل بیماری‌های جدی مانند <strong>وبا، اسهال خونی، حصبه، سالمونلا، تب حصبه، عفونت‌های چشمی و حتی هپاتیت</strong> هستند. آن‌ها با نشستن روی مواد غذایی، سطوح آشپزخانه و حتی وسایل شخصی، بیماری‌ها را به‌راحتی منتقل می‌کنند.</p>
+
+    <p>در این مقاله جامع و تخصصی، شما را با انواع مگس‌های رایج در ایران، بیماری‌های ناشی از آن‌ها، روش‌های تشخیص و پیشگیری، و مهم‌تر از همه، <strong>روش‌های اصولی و تخصصی سمپاشی مگس</strong> آشنا می‌کنیم. اگر شما هم در تهران یا سایر شهرهای ایران از دست مگس‌ها کلافه شده‌اید و نگران سلامت خانواده‌تان هستید، این مقاله راهنمای کامل شما برای نجات خانه و محل کارتان خواهد بود.</p>
+
+    <!-- بخش ۱ -->
+    <h2>📌 آشنایی با مگس‌ها (بیولوژی و رفتارشناسی)</h2>
+    <p>مگس‌ها حشراتی از راسته دوبالان (Diptera) و خانواده Muscidae هستند که بیش از ۱۲۰,۰۰۰ گونه در سراسر جهان شناسایی شده‌اند. در ایران نیز ده‌ها گونه مختلف مگس زندگی می‌کنند که هر کدام ویژگی‌های خاص خود را دارند.</p>
+
+    <h3>ویژگی‌های عمومی مگس‌ها:</h3>
+    <table>
+        <thead>
+            <tr><th>ویژگی</th><th>توضیح</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>اندازه</strong></td><td>معمولاً بین ۵ تا ۱۰ میلی‌متر</td></tr>
+            <tr><td><strong>رنگ</strong></td><td>خاکستری، سیاه، آبی، سبز و یا ترکیبی از این رنگ‌ها</td></tr>
+            <tr><td><strong>طول عمر</strong></td><td>بین ۱۵ تا ۳۰ روز (بسته به گونه و شرایط محیطی)</td></tr>
+            <tr><td><strong>تغذیه</strong></td><td>مگس‌ها از مواد آلی در حال پوسیدگی، شیره گیاهان، میوه‌ها، زباله‌ها و مواد غذایی تغذیه می‌کنند.</td></tr>
+            <tr><td><strong>تولید مثل</strong></td><td>هر مگس ماده تا ۹۰۰ تخم در طول عمر خود می‌گذارد.</td></tr>
+            <tr><td><strong>دوره رشد</strong></td><td>از تخم تا مگس بالغ حدود ۷ تا ۱۰ روز طول می‌کشد.</td></tr>
+        </tbody>
+    </table>
+
+    <!-- ===== تصویر mg1 (بعد از چرخه زندگی مگس) ===== -->
+    <div class="blog-image">
+        <img src="../images/services/mg1.jpg" alt="چرخه زندگی مگس">
+        <div class="caption">تصویر: چرخه زندگی مگس، از تخم تا مگس بالغ</div>
     </div>
+
+    <h3>چرخه زندگی مگس:</h3>
+    <p>چرخه زندگی مگس شامل چهار مرحله است:</p>
+    <ol>
+        <li><strong>تخم</strong>: مگس ماده تخم‌های خود را روی مواد آلی در حال پوسیدگی، زباله‌ها، کود حیوانی یا فضولات قرار می‌دهد.</li>
+        <li><strong>لارو (کرم مگس)</strong>: لاروها از مواد آلی تغذیه می‌کنند و به‌سرعت رشد می‌کنند.</li>
+        <li><strong>شفیره</strong>: لاروها پس از رشد، به شفیره تبدیل می‌شوند و در این مرحله دگردیسی انجام می‌شود.</li>
+        <li><strong>مگس بالغ</strong>: مگس بالغ از شفیره خارج می‌شود و پس از چند روز آماده جفت‌گیری و تخم‌گذاری می‌شود.</li>
+    </ol>
+
+    <h3>انواع مگس‌های رایج در ایران:</h3>
+
+    <!-- ===== تصویر mg (بعد از مگس خانگی) ===== -->
+    <h4>۱. مگس خانگی (Musca domestica)</h4>
+    <div class="blog-image">
+        <img src="../images/services/mg.jpg" alt="مگس خانگی">
+        <div class="caption">تصویر: مگس خانگی، رایج‌ترین و مهم‌ترین گونه مگس در محیط‌های شهری</div>
+    </div>
+    <ul>
+        <li><strong>رایج‌ترین و مهم‌ترین گونه</strong> در محیط‌های شهری.</li>
+        <li>رنگ خاکستری با چهار نوار تیره طولی روی سینه.</li>
+        <li>ناقل بیماری‌های <strong>وبا، اسهال خونی، سالمونلا و حصبه</strong>.</li>
+        <li>در تمام فصول سال فعال است، اما در تابستان بیشتر دیده می‌شود.</li>
+    </ul>
+
+    <!-- ===== تصویر lsh (بعد از مگس‌های لاشه‌خوار) ===== -->
+    <h4>۲. مگس‌های لاشه‌خوار (Sarcophaga و Calliphora)</h4>
+    <div class="blog-image">
+        <img src="../images/services/lsh.jpg" alt="مگس لاشه‌خوار">
+        <div class="caption">تصویر: مگس لاشه‌خوار با رنگ آبی و سبز براق</div>
+    </div>
+    <ul>
+        <li>رنگ آبی، سبز یا سیاه براق دارند.</li>
+        <li>معمولاً روی گوشت، ماهی و مواد پروتئینی در حال فساد تخم‌گذاری می‌کنند.</li>
+        <li>ناقل بیماری‌های <strong>گوارشی و عفونت‌های زخم</strong>.</li>
+    </ul>
+
+    <!-- ===== تصویر mv (بعد از مگس میوه) ===== -->
+    <h4>۳. مگس میوه (Drosophila melanogaster)</h4>
+    <div class="blog-image">
+        <img src="../images/services/mv.jpg" alt="مگس میوه">
+        <div class="caption">تصویر: مگس میوه با چشم‌های قرمز، جذب میوه‌های رسیده</div>
+    </div>
+    <ul>
+        <li>بسیار کوچک (حدود ۳ میلی‌متر) با چشم‌های قرمز.</li>
+        <li>جذب میوه‌های رسیده، آب میوه و مواد تخمیرشده می‌شود.</li>
+        <li>در آشپزخانه‌ها و میوه‌فروشی‌ها شایع است.</li>
+    </ul>
+
+    <!-- ===== تصویر asb (بعد از مگس اسبی) ===== -->
+    <h4>۴. مگس اسبی (Tabanidae)</h4>
+    <div class="blog-image">
+        <img src="../images/services/asb.jpg" alt="مگس اسبی">
+        <div class="caption">تصویر: مگس اسبی با جثه بزرگ و نیشی دردناک</div>
+    </div>
+    <ul>
+        <li>جثه بزرگ‌تر و با نیشی دردناک.</li>
+        <li>ماده‌ها از خون حیوانات و انسان تغذیه می‌کنند.</li>
+        <li>ناقل برخی بیماری‌های ویروسی و باکتریایی.</li>
+    </ul>
+
+    <!-- بخش ۲ -->
+    <h2>🔍 نشانه‌های حضور مگس در منزل</h2>
+    <p>تشخیص زودهنگام وجود مگس‌ها می‌تواند از تبدیل شدن یک آلودگی کوچک به یک بحران جلوگیری کند. این نشانه‌ها را جدی بگیرید:</p>
+    <ul>
+        <li><strong>مشاهده مگس‌های بالغ</strong>: دیدن مگس در اطراف آشپزخانه، سطل زباله، میوه‌ها، مواد غذایی یا پنجره‌ها.</li>
+        <li><strong>لارو (کرم مگس)</strong>: مشاهده کرم‌های کوچک سفید در زباله، مواد غذایی فاسد، زیر فرش یا گوشه‌های مرطوب.</li>
+        <li><strong>تخم مگس</strong>: توده‌های کوچک سفید یا زرد روی مواد آلی.</li>
+        <li><strong>مدفوع مگس</strong>: نقاط کوچک و تیره (شبیه دانه فلفل) روی سطوح، پنجره‌ها و دیوارها.</li>
+        <li><strong>صدای وزوز</strong>: صدای مشخص و آزاردهنده وزوز مگس‌ها در محیط.</li>
+        <li><strong>بوی نامطبوع</strong>: وجود مگس‌های لاشه‌خوار معمولاً با بوی فساد همراه است.</li>
+    </ul>
+
+    <!-- بخش ۳ -->
+    <h2>🚨 خطرات و بیماری‌های ناشی از مگس‌ها</h2>
+    <p>مگس‌ها به‌عنوان یکی از مهم‌ترین ناقلین مکانیکی بیماری‌ها، سالانه باعث ابتلای میلیون‌ها نفر به بیماری‌های مختلف می‌شوند. آن‌ها با نشستن روی مواد آلوده (زباله، مدفوع، لاشه) و سپس روی مواد غذایی و سطوح، عوامل بیماری‌زا را منتقل می‌کنند.</p>
+
+    <table>
+        <thead>
+            <tr><th>بیماری</th><th>عامل بیماری‌زا</th><th>راه انتقال</th><th>علائم اصلی</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>وبا</strong></td><td>باکتری Vibrio cholerae</td><td>انتقال مکانیکی توسط مگس</td><td>اسهال شدید، استفراغ، کم‌آبی بدن</td></tr>
+            <tr><td><strong>اسهال خونی</strong></td><td>باکتری Shigella</td><td>انتقال توسط مگس</td><td>اسهال خونی، تب، درد شکم</td></tr>
+            <tr><td><strong>سالمونلا</strong></td><td>باکتری Salmonella</td><td>انتقال توسط مگس</td><td>مسمومیت غذایی، تب، استفراغ</td></tr>
+            <tr><td><strong>حصبه (تب تیفوئید)</strong></td><td>باکتری Salmonella typhi</td><td>انتقال توسط مگس</td><td>تب طولانی، ضعف، سردرد، لکه‌های پوستی</td></tr>
+            <tr><td><strong>عفونت‌های چشمی</strong></td><td>باکتری‌های مختلف</td><td>انتقال با نشستن مگس روی چشم</td><td>قرمزی، خارش، ترشح، التهاب</td></tr>
+            <tr><td><strong>هپاتیت</strong></td><td>ویروس هپاتیت A و E</td><td>انتقال مکانیکی</td><td>تب، ضعف، زردی پوست و چشم</td></tr>
+            <tr><td><strong>آلرژی و آسم</strong></td><td>مواد آلرژن موجود در بدن مگس</td><td>استنشاق ذرات</td><td>عطسه، سرفه، تنگی نفس</td></tr>
+            <tr><td><strong>مسمومیت غذایی</strong></td><td>باکتری‌های مختلف</td><td>آلوده‌سازی مواد غذایی</td><td>تهوع، استفراغ، اسهال، درد شکم</td></tr>
+        </tbody>
+    </table>
+
+    <!-- بخش ۴ -->
+    <h2>🛠️ روش‌های اصولی سمپاشی و کنترل مگس</h2>
+    <p>کنترل مگس‌ها نیازمند یک رویکرد جامع و چندمرحله‌ای است. برای ریشه‌کنی قطعی، باید از ترکیبی از روش‌ها استفاده کرد. در شرکت سمپاشی نانوفناوران، از <strong>روش مدیریت تلفیقی آفات (IPM)</strong> برای کنترل مگس استفاده می‌کنیم که شامل مراحل زیر است:</p>
+
+    <h3>مرحله ۱: بازرسی و شناسایی</h3>
+    <p>اولین و مهم‌ترین گام، شناسایی گونه مگس و منابع تولید مثل آن‌ها است. کارشناسان ما با بررسی دقیق محیط، موارد زیر را مشخص می‌کنند:</p>
+    <ul>
+        <li><strong>نوع مگس</strong> (خانگی، لاشه‌خوار، میوه و...)</li>
+        <li><strong>منابع تولید مثل</strong> (زباله‌ها، کودها، مواد غذایی فاسد، لاشه حیوانات و...)</li>
+        <li><strong>نقاط ورودی</strong> (شکاف‌های درب و پنجره، دریچه‌های تهویه، لوله‌های فاضلاب)</li>
+        <li><strong>محل‌های استراحت مگس‌ها</strong> (دیوارها، سقف‌ها، پرده‌ها و...)</li>
+    </ul>
+
+    <h3>مرحله ۲: حذف منابع تولید مثل (مؤثرترین راه)</h3>
+    <p>بهترین و مؤثرترین راه کنترل مگس، حذف مکان‌های تخم‌گذاری و پرورش آن‌هاست. اقدامات زیر را جدی بگیرید:</p>
+    <ul>
+        <li><strong>مدیریت صحیح زباله</strong>: زباله‌های تر و مواد غذایی فاسد را روزانه در سطل‌های دربسته و با کیسه‌های محکم جمع‌آوری کنید.</li>
+        <li><strong>دفع اصولی کود و فضولات</strong>: در صورت وجود حیوانات، کود و فضولات را روزانه جمع‌آوری و دفن کنید.</li>
+        <li><strong>نگهداری مواد غذایی در ظروف دربسته</strong>: مواد غذایی، میوه‌ها و سبزیجات را در یخچال یا ظروف محکم نگهداری کنید.</li>
+        <li><strong>جلوگیری از نشت آب و رطوبت</strong>: شیرآلات چکه‌کن را تعمیر کنید و از جمع شدن آب در زیرگلدانی‌ها جلوگیری کنید.</li>
+        <li><strong>تمیز نگه‌داشتن محیط</strong>: آشپزخانه، انبار، حیاط و محیط‌های بیرونی را مرتباً تمیز کنید.</li>
+    </ul>
+
+    <h3>مرحله ۳: سمپاشی شیمیایی (مؤثر و فوری)</h3>
+    <p>در صورت مشاهده مگس یا آلودگی گسترده، سمپاشی تخصصی توسط کارشناسان انجام می‌شود:</p>
+
+    <h4>الف) سمپاشی با تجهیزات ULV (مه‌پاشی سرد)</h4>
+    <ul>
+        <li>این روش با تولید ذرات بسیار ریز سم (قطرات ۵ تا ۲۰ میکرون) که به‌صورت مه در فضا پخش می‌شوند، مگس‌های بالغ را به‌سرعت از بین می‌برد.</li>
+        <li>مزایا: سرعت عمل بالا، نفوذ به نقاط دشوار، تأثیر فوری.</li>
+        <li>مناسب برای فضاهای بزرگ و محیط‌های باز.</li>
+    </ul>
+
+    <h4>ب) سمپاشی تماسی و باقی‌مانده</h4>
+    <ul>
+        <li>استفاده از سموم مایع یا پودری که روی دیوارها، سقف‌ها و سطوح استراحت مگس‌ها پاشش می‌شود.</li>
+        <li>این سموم با تماس مستقیم با بدن مگس باعث مرگ فوری می‌شوند و اثر باقی‌مانده دارند.</li>
+    </ul>
+
+    <h4>ج) طعمه‌گذاری هوشمند</h4>
+    <ul>
+        <li>استفاده از طعمه‌های مایع یا گرانول که حاوی سموم جذاب و مؤثر هستند و در نقاط استراتژیک قرار داده می‌شوند.</li>
+        <li>مگس‌ها با خوردن طعمه از بین می‌روند.</li>
+    </ul>
+
+    <h4>د) استفاده از حشره‌کش‌های بیولوژیک</h4>
+    <ul>
+        <li>در برخی موارد، از باکتری‌ها یا قارچ‌های بیماری‌زا برای از بین بردن لاروها در منابع تولید مثل استفاده می‌شود.</li>
+    </ul>
+
+    <h3>مرحله ۴: استفاده از تله‌های نوری و مکنده</h3>
+    <ul>
+        <li>تله‌های نوری (UV) با جذب مگس‌ها به سمت نور و برق‌گرفتن آن‌ها، روشی کم‌خطر و مؤثر در محیط‌های بسته مانند آشپزخانه‌های صنعتی و رستوران‌ها است.</li>
+        <li>تله‌های چسبی و مکنده نیز برای محیط‌های کوچک مناسب هستند.</li>
+    </ul>
+
+    <h3>مرحله ۵: مقاوم‌سازی محیط</h3>
+    <p>پس از کاهش جمعیت مگس‌ها، باید با نصب توری‌های ریز روی پنجره‌ها و دریچه‌ها، بستن شکاف‌ها و درزها و استفاده از درب‌های خودبسته‌شونده، از ورود مجدد مگس‌ها جلوگیری کرد.</p>
+
+    <!-- بخش ۵ -->
+    <h2>🛡️ راه‌های پیشگیری از بازگشت مگس‌ها</h2>
+    <p>با رعایت این نکات ساده، می‌توانید از بازگشت مجدد مگس‌ها جلوگیری کنید:</p>
+    <ol>
+        <li><strong>مدیریت زباله</strong>: زباله‌های تر را روزانه جمع‌آوری و در سطل‌های دربسته قرار دهید.</li>
+        <li><strong>تمیز نگه‌داشتن آشپزخانه</strong>: پس از هر بار پخت و پز، سطوح را تمیز کنید و خرده‌های غذا را جمع‌آوری کنید.</li>
+        <li><strong>نصب توری روی پنجره‌ها</strong>: با توری‌های ریز (مش ۱ میلی‌متر) از ورود مگس جلوگیری کنید.</li>
+        <li><strong>استفاده از پشه‌بند</strong>: برای درب‌های ورودی و بالکن‌ها.</li>
+        <li><strong>جلوگیری از نشت آب</strong>: رطوبت و آب راکد را از بین ببرید.</li>
+        <li><strong>نگهداری میوه‌ها در یخچال</strong>: میوه‌های رسیده را در یخچال نگهداری کنید.</li>
+        <li><strong>استفاده از دورکننده‌های طبیعی</strong>: مانند اسانس نعناع، میخک یا ریحان.</li>
+        <li><strong>بررسی دوره‌ای نقاط حساس</strong>: مانند زیر سینک، کابینت‌ها و انبار.</li>
+    </ol>
+
+    <!-- بخش ۶ -->
+    <h2>💰 هزینه سمپاشی مگس چقدر است؟</h2>
+    <p>هزینه سمپاشی مگس به عوامل مختلفی بستگی دارد:</p>
+    <table>
+        <thead>
+            <tr><th>عامل</th><th>تأثیر بر هزینه</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>مساحت و نوع مکان</strong></td><td>منازل مسکونی، ویلاها، باغ‌ها، رستوران‌ها، هتل‌ها و مراکز صنعتی هزینه‌های متفاوتی دارند.</td></tr>
+            <tr><td><strong>شدت آلودگی</strong></td><td>آلودگی شدید نیاز به عملیات بیشتر و زمان‌برتری دارد.</td></tr>
+            <tr><td><strong>نوع روش</strong></td><td>مه‌پاشی، سمپاشی تماسی، طعمه‌گذاری یا ترکیبی از روش‌ها.</td></tr>
+            <tr><td><strong>دسترسی به نقاط آلوده</strong></td><td>در صورت نیاز به سمپاشی سقف‌های بلند یا محیط‌های بزرگ، هزینه افزایش می‌یابد.</td></tr>
+            <tr><td><strong>تعداد جلسات</strong></td><td>معمولاً یک جلسه کافی است، اما در موارد شدید ممکن است نیاز به بازدید مجدد باشد.</td></tr>
+        </tbody>
+    </table>
+    <p>💡 <strong>توصیه:</strong> برای دریافت <strong>مشاوره رایگان</strong> و <strong>استعلام دقیق هزینه</strong>، با کارشناسان ما تماس بگیرید.</p>
+
+    <!-- بخش ۷ -->
+    <h2>❓ سوالات متداول درباره سمپاشی مگس</h2>
+
+    <details>
+        <summary><strong>آیا سمپاشی مگس برای کودکان و حیوانات خانگی خطرناک است؟</strong></summary>
+        <p>خیر، سموم استفاده‌شده توسط شرکت نانوفناوران با رعایت کامل استانداردهای بهداشتی انتخاب می‌شوند. همچنین در هنگام سمپاشی، افراد و حیوانات از محیط خارج می‌شوند و پس از تهویه کامل، محیط کاملاً ایمن است.</p>
+    </details>
+
+    <details>
+        <summary><strong>چه مدت بعد از سمپاشی مگس‌ها از بین می‌روند؟</strong></summary>
+        <p>اثر سمپاشی مه‌پاشی فوری است و مگس‌های بالغ بلافاصله از بین می‌روند. اما برای جلوگیری از تکثیر مجدد، حذف منابع تولید مثل ضروری است.</p>
+    </details>
+
+    <details>
+        <summary><strong>آیا خودمان هم می‌توانیم مگس را سمپاشی کنیم؟</strong></summary>
+        <p>استفاده از اسپری‌های خانگی معمولاً مؤثر نیست و فقط مگس‌های سطحی را از بین می‌برد. همچنین استفاده نادرست از سموم می‌تواند برای سلامتی خطرناک باشد. روش‌های تخصصی مانند مه‌پاشی نیاز به تجهیزات و دانش دارد.</p>
+    </details>
+
+    <details>
+        <summary><strong>بعد از سمپاشی باید منزل را ترک کنیم؟</strong></summary>
+        <p>بله، معمولاً ۲ تا ۴ ساعت باید محیط را ترک کنید تا سموم تهویه شوند. کارشناسان زمان دقیق را به شما اعلام می‌کنند.</p>
+    </details>
+
+    <details>
+        <summary><strong>آیا مگس‌ها دوباره برمی‌گردند؟</strong></summary>
+        <p>اگر منابع تولید مثل حذف شوند و نکات پیشگیری رعایت شود، احتمال بازگشت بسیار کم است. شرکت نانوفناوران خدمات خود را با ضمانت ارائه می‌دهد.</p>
+    </details>
+
+    <!-- بخش ۸ -->
+    <h2>🏠 نکات طلایی برای جلوگیری از ورود مگس به خانه</h2>
+    <ol>
+        <li><strong>همه پنجره‌ها را با توری ریز بپوشانید.</strong></li>
+        <li><strong>درب‌ها را تا حد امکان بسته نگه دارید.</strong></li>
+        <li><strong>زباله‌ها را روزانه جمع‌آوری کنید.</strong></li>
+        <li><strong>مواد غذایی را در ظروف دربسته نگهداری کنید.</strong></li>
+        <li><strong>میوه‌ها را در یخچال بگذارید.</strong></li>
+        <li><strong>سطل زباله را مرتب بشویید و ضدعفونی کنید.</strong></li>
+        <li><strong>از تله‌های نوری در محیط‌های بسته استفاده کنید.</strong></li>
+        <li><strong>در زمان پخت و پز، درب پنجره‌ها را ببندید.</strong></li>
+        <li><strong>حیاط و فضای سبز را مرتباً تمیز کنید.</strong></li>
+        <li><strong>از اسپری‌های دورکننده طبیعی (نعناع، میخک) استفاده کنید.</strong></li>
+    </ol>
+
+    <!-- بخش ۹ -->
+    <h2>📌 نتیجه‌گیری</h2>
+    <p>مگس‌ها با وجود کوچکی، یکی از خطرناک‌ترین ناقلین بیماری‌ها در محیط‌های زندگی انسان هستند. آن‌ها نه‌تنها آزاردهنده‌اند، بلکه می‌توانند سلامت شما و خانواده‌تان را به‌طور جدی تهدید کنند. کنترل و ریشه‌کنی مگس‌ها نیازمند دانش، تجربه و استفاده از روش‌های تخصصی است.</p>
+
+    <p>شرکت سمپاشی نانوفناوران با بیش از <strong>۲۰ سال تجربه</strong> و استفاده از <strong>پیشرفته‌ترین تجهیزات مه‌پاشی و سمپاشی</strong>، آماده ارائه خدمات تخصصی و تضمینی به شماست. تیم کارشناسان ما با استفاده از سموم استاندارد و روش‌های نوین، مگس‌ها را به‌طور کامل و قطعی از منزل یا محل کار شما حذف می‌کنند و محیطی امن، بهداشتی و آرام را برای شما به ارمغان می‌آورند.</p>
+
+    <p style="font-size:20px; font-weight:700; text-align:center; color:var(--primary);">🚀 همین حالا اقدام کنید:</p>
+    <div style="text-align:center; margin:20px 0;">
+        <p>📞 <strong>تماس فوری:</strong> <a href="tel:09120705746" style="font-size:20px; color:var(--secondary);">۰۹۱۲۰۷۰۵۷۴۶</a></p>
+        <p>💬 <strong>درخواست مشاوره رایگان:</strong> از طریق <a href="https://wa.me/989120705746" target="_blank">واتساپ</a> یا <a href="https://eitaa.com/nanofannavaran_ir" target="_blank">ایتا</a></p>
+        <p>🔗 <strong>مشاهده سایر خدمات:</strong> <a href="../services.html">کنترل آفات مسکونی</a></p>
+    </div>
+
+    <div class="back-links">
+        <a href="../index.html" class="btn-blog-home">🏠 بازگشت به صفحه اصلی</a>
+        <a href="../services.html" class="btn-blog-services">🔙 بازگشت به لیست خدمات مسکونی</a>
+        <a href="../contact.html" class="btn-blog-contact">📞 تماس با ما</a>
+    </div>
+
 </div>
 
 <footer class="site-footer">
@@ -124,6 +509,30 @@
         <hr><p class="copyright">© تمامی حقوق محفوظ است</p>
     </div>
 </footer>
+
+<div class="floating-container">
+    <button class="floating-main-btn" id="floatingToggle">
+        <span class="btn-arrow">▶</span>
+        <span class="btn-text">📞 مشاوره رایگان</span>
+    </button>
+    <div class="floating-menu" id="floatingMenu">
+        <div class="call-wrapper">
+            <div class="floating-item call-item" id="callToggle">
+                <span class="item-icon">📞</span>
+                <span class="item-text">تماس سریع</span>
+                <span class="arrow">▲</span>
+            </div>
+            <div class="call-submenu" id="callSubmenu">
+                <a href="tel:09120705746" class="floating-item call-sub-item"><span class="item-icon">📞</span><span class="item-text">شماره ۱</span></a>
+                <a href="tel:09197173454" class="floating-item call-sub-item"><span class="item-icon">📞</span><span class="item-text">شماره ۲</span></a>
+            </div>
+        </div>
+        <a href="https://wa.me/989120705746?text=%D8%A8%D9%87%20%D8%B3%D8%A7%DB%8C%D8%AA%20%D8%B4%D8%B1%DA%A9%D8%AA%20%D8%B3%D9%85%D9%BE%D8%A7%D8%B4%DB%8C%20%D9%86%D8%A7%D9%86%D9%88%D9%81%D9%86%D8%A7%D9%88%D8%B1%D8%A7%D9%86%20%D8%AE%D9%88%D8%B4%20%D8%A2%D9%85%D8%AF%DB%8C%D8%AF.%20%DA%86%DA%AF%D9%88%D9%86%D9%87%20%D9%85%DB%8C%E2%80%8C%D8%AA%D9%88%D8%A7%D9%86%D9%85%20%DA%A9%D9%85%DA%A9%20%D8%AA%D8%A7%D9%86%20%DA%A9%D9%86%D9%85%D8%9F" target="_blank" class="floating-item whatsapp-item"><span class="item-icon">💬</span><span class="item-text">واتساپ</span></a>
+        <a href="https://eitaa.com/nanofannavaran_ir" target="_blank" class="floating-item eitaa-item"><span class="item-icon">✈️</span><span class="item-text">ایتا</span></a>
+    </div>
+</div>
+
+<button id="backToTop" title="برو به بالا">↑</button>
 
 <script src="../script.js"></script>
 </body>
