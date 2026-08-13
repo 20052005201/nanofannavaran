@@ -3,77 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سمپاشی پشه | نانوفناوران</title>
+    <title>سمپاشی پشه | راهنمای جامع کنترل، پیشگیری و ریشه‌کنی | نانوفناوران</title>
+    <meta name="description" content="مقاله جامع سمپاشی پشه: معرفی گونه‌ها، بیماری‌ها، روش‌های کنترل، پیشگیری و ریشه‌کنی پشه در منزل و محیط کار.">
+    <meta name="keywords" content="سمپاشی پشه, کنترل پشه, پشه آنوفل, پشه آئدس, تب دنگی, مالاریا, لاروکشی, مه‌پاشی">
+    <link rel="canonical" href="https://nanofannavaran.ir/service/mosquito.html">
     <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
-        .service-detail {
+        .blog-container {
             max-width: 1100px;
-            margin: 100px auto 50px;
+            margin: 120px auto 60px;
             padding: 0 20px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
+            background: #fff;
+            border-radius: 24px;
+            box-shadow: 0 10px 40px rgba(0,0,0,.08);
+            padding: 40px 40px 60px;
         }
-        .service-detail .text h1 {
-            font-size: 32px;
+        .blog-container h1 {
+            font-size: 36px;
             color: var(--primary);
             margin-bottom: 20px;
+            line-height: 1.5;
         }
-        .service-detail .text p {
+        .blog-container .meta {
+            color: #888;
+            font-size: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .blog-container h2 {
+            font-size: 28px;
+            color: var(--dark);
+            margin: 40px 0 15px;
+            border-right: 5px solid var(--secondary);
+            padding-right: 15px;
+        }
+        .blog-container h3 {
+            font-size: 22px;
+            color: var(--primary);
+            margin: 30px 0 12px;
+        }
+        .blog-container h4 {
+            font-size: 19px;
+            color: var(--dark);
+            margin: 25px 0 10px;
+        }
+        .blog-container p {
             line-height: 2.2;
-            color: #555;
+            color: #444;
+            font-size: 17px;
+            margin-bottom: 18px;
+        }
+        .blog-container ul, .blog-container ol {
+            line-height: 2.2;
+            color: #444;
+            font-size: 17px;
+            padding-right: 25px;
+            margin-bottom: 20px;
+        }
+        .blog-container ul li, .blog-container ol li {
+            margin-bottom: 8px;
+        }
+        .blog-container table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0 30px;
             font-size: 16px;
         }
-        .service-detail .gif img {
+        .blog-container table th {
+            background: var(--primary);
+            color: #fff;
+            padding: 12px 15px;
+            text-align: right;
+        }
+        .blog-container table td {
+            border: 1px solid #ddd;
+            padding: 10px 15px;
+            background: #fafafa;
+        }
+        .blog-container table tr:nth-child(even) td {
+            background: #f5f5f5;
+        }
+        .blog-image {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .blog-image img {
             width: 100%;
-            max-height: 400px;
-            object-fit: contain;
+            max-width: 700px;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,.15);
         }
-        .back-link {
+        .blog-image .caption {
+            font-size: 14px;
+            color: #888;
+            margin-top: 10px;
+        }
+        .blog-container .back-links {
+            margin: 40px 0 20px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .blog-container .back-links a {
             display: inline-block;
-            margin-top: 30px;
-            background: var(--secondary);
-            color: #fff;
             padding: 12px 28px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
             transition: .3s;
         }
-        .back-link:hover {
-            background: var(--primary);
-        }
-        .contact-float {
-            margin-top: 20px;
-        }
-        .contact-float a {
-            display: inline-block;
+        .blog-container .back-links .btn-blog-home {
             background: var(--primary);
             color: #fff;
-            padding: 12px 28px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            margin-left: 10px;
-            transition: .3s;
         }
-        .contact-float a:hover {
+        .blog-container .back-links .btn-blog-home:hover {
             background: var(--secondary);
         }
+        .blog-container .back-links .btn-blog-services {
+            background: var(--secondary);
+            color: #fff;
+        }
+        .blog-container .back-links .btn-blog-services:hover {
+            background: var(--primary);
+        }
+        .blog-container .back-links .btn-blog-contact {
+            background: var(--dark);
+            color: #fff;
+        }
+        .blog-container .back-links .btn-blog-contact:hover {
+            background: var(--primary);
+        }
+
+        details {
+            background: #f8fbfd;
+            padding: 15px 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #e9ecef;
+        }
+        details summary {
+            font-weight: 700;
+            color: var(--primary);
+            cursor: pointer;
+            font-size: 17px;
+        }
+        details p {
+            margin-top: 12px;
+            padding-right: 10px;
+        }
+
         @media (max-width: 768px) {
-            .service-detail {
-                grid-template-columns: 1fr;
-                text-align: center;
-                margin-top: 80px;
+            .blog-container {
+                padding: 20px 15px;
+                margin: 100px auto 40px;
             }
-            .service-detail .text h1 {
+            .blog-container h1 {
                 font-size: 26px;
             }
-            .service-detail .gif img {
-                max-height: 250px;
+            .blog-container h2 {
+                font-size: 22px;
+            }
+            .blog-container h3 {
+                font-size: 19px;
+            }
+            .blog-container h4 {
+                font-size: 17px;
+            }
+            .blog-container p,
+            .blog-container ul,
+            .blog-container ol {
+                font-size: 15px;
+            }
+            .blog-container table {
+                font-size: 14px;
+            }
+            .blog-container .back-links a {
+                padding: 10px 20px;
+                font-size: 14px;
             }
         }
     </style>
@@ -82,11 +192,12 @@
 
 <header>
     <div class="container">
-        <a href="../index.html" class="logo"><img src="../images/logo.png" alt="لوگو"></a>
+        <a href="../index.html" class="logo"><img src="../images/logo.png" alt="لوگو شرکت سمپاشی نانوفناوران"></a>
         <nav class="navbar">
             <ul>
                 <li><a href="../index.html">صفحه اصلی</a></li>
-                <li><a href="../services.html" class="active">خدمات</a></li>
+                <li><a href="../services.html">خدمات مسکونی</a></li>
+                <li><a href="../commercial-services.html">خدمات تجاری</a></li>
                 <li><a href="../about.html">درباره ما</a></li>
                 <li><a href="../contact.html">تماس</a></li>
             </ul>
@@ -95,24 +206,266 @@
             <a href="tel:09120705746" class="call-btn">📞 09120705746</a>
             <div class="mobile-menu">☰</div>
         </div>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="جستجو...">
+            <button onclick="searchSite()">🔍</button>
+        </div>
     </div>
 </header>
 
-<div class="service-detail">
-    <div class="text">
-        <h1>🦟 سمپاشی پشه</h1>
-        <p>کنترل پشه‌ها و جلوگیری از انتقال بیماری‌های ناشی از آن.</p>
-        <p><strong>روش کنترل:</strong> استفاده از سموم استاندارد و روش‌های نوین با تضمین کیفیت و ماندگاری بالا.</p>
-        <p><strong>مدت زمان اثرگذاری:</strong> نتایج سریع و ماندگار تا ۶ ماه.</p>
-        <a href="../services.html" class="back-link">🔙 بازگشت به لیست خدمات</a>
-        <div class="contact-float">
-            <a href="tel:09120705746">📞 تماس فوری</a>
-            <a href="https://wa.me/989120705746" target="_blank">💬 واتساپ</a>
-        </div>
+<div class="blog-container">
+
+    <h1>سمپاشی پشه: راهنمای جامع کنترل، پیشگیری و ریشه‌کنی (نسخه کامل و تخصصی)</h1>
+    <div class="meta">
+        <span>📅 آخرین به‌روزرسانی: ۱۴ مرداد ۱۴۰۴</span> &nbsp;|&nbsp; <span>⏱ زمان مطالعه: ۱۲ دقیقه</span>
     </div>
-    <div class="gif">
-        <img src="../images/services/mosquito.jpg" alt="سمپاشی پشه">
+
+    <!-- ===== تصویر mosquito.jpg (بعد از تهدید کوچک با عواقب بزرگ) ===== -->
+    <div class="blog-image">
+        <img src="../images/services/mosquito.jpg" alt="پشه">
+        <div class="caption">تصویر: پشه، یکی از مرگ‌بارترین موجودات روی زمین</div>
     </div>
+
+    <h2>مقدمه: تهدید کوچک با عواقب بزرگ</h2>
+    <p>تابستان که از راه می‌رسد، مهمانان ناخوانده‌ای هم به خانه‌های ما سر می‌زنند که گاهی لذت شب‌های گرم را به کابوس تبدیل می‌کنند. پشه‌ها با وزوز آزاردهنده و نیش‌های خارش‌دار خود، نه‌تنها آرامش را از شما می‌گیرند، بلکه می‌توانند ناقل بیماری‌های خطرناکی باشند که سالانه جان هزاران نفر را در سراسر جهان می‌گیرند.</p>
+
+    <p>پشه‌ها از قدیمی‌ترین و مقاوم‌ترین حشرات روی زمین هستند که در هر نقطه از کره زمین، به جز قطب‌ها، زندگی می‌کنند. ایران نیز به دلیل تنوع آب و هوایی و وجود مناطق مرطوب و گرم، یکی از زیستگاه‌های اصلی این حشرات مزاحم است. از استان‌های شمالی و جنوبی گرفته تا حتی مناطق کویری، پشه‌ها در هر جایی که آب راکد و دمای مناسب وجود داشته باشد، تکثیر می‌شوند.</p>
+
+    <p>اما چرا باید پشه‌ها را جدی بگیریم؟ آیا فقط نیش‌های خارش‌دار و صدای آزاردهنده آن‌ها مشکل است؟ خیر! پشه‌ها ناقل بیماری‌هایی مانند <strong>مالاریا، تب دنگی، زیکا، تب زرد و آنسفالیت</strong> هستند که برخی از آن‌ها می‌توانند کشنده باشند. در سال‌های اخیر، شیوع تب دنگی در برخی مناطق ایران زنگ خطری جدی برای سلامت عمومی به صدا درآورده است.</p>
+
+    <p>در این مقاله جامع و تخصصی، شما را با انواع پشه‌های رایج در ایران، بیماری‌های ناشی از آن‌ها، روش‌های تشخیص و پیشگیری، و مهم‌تر از همه، <strong>روش‌های اصولی و تخصصی سمپاشی پشه</strong> آشنا می‌کنیم. اگر شما هم در تهران یا سایر شهرهای ایران از دست پشه‌ها کلافه شده‌اید و نگران سلامت خانواده‌تان هستید، این مقاله راهنمای کامل شما خواهد بود.</p>
+
+    <!-- بخش ۱ -->
+    <h2>📌 آشنایی با پشه‌ها (بیولوژی و چرخه زندگی)</h2>
+    <p>پشه‌ها حشرات کوچکی از راسته دوبالان (Diptera) و خانواده Culicidae هستند که بیش از ۳۵۰۰ گونه در سراسر جهان شناسایی شده‌اند. در ایران نیز بیش از ۶۰ گونه مختلف پشه زندگی می‌کنند که هر کدام ویژگی‌های خاص خود را دارند.</p>
+
+    <h3>ویژگی‌های عمومی پشه‌ها:</h3>
+    <table>
+        <thead>
+            <tr><th>ویژگی</th><th>توضیح</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>اندازه</strong></td><td>معمولاً بین ۳ تا ۹ میلی‌متر</td></tr>
+            <tr><td><strong>رنگ</strong></td><td>قهوه‌ای، خاکستری یا سیاه با نوارهای سفید روی پاها و بدن</td></tr>
+            <tr><td><strong>طول عمر</strong></td><td>ماده‌ها تا ۳ هفته و نرها تا ۱ هفته</td></tr>
+            <tr><td><strong>تغذیه</strong></td><td>ماده‌ها از خون برای تولید تخم و نرها از شهد گل‌ها و شیره گیاهان تغذیه می‌کنند.</td></tr>
+            <tr><td><strong>تخم‌گذاری</strong></td><td>هر ماده تا ۳۰۰ تخم در هر نوبت روی آب راکد می‌گذارد.</td></tr>
+            <tr><td><strong>دوره رشد</strong></td><td>از تخم تا پشه بالغ حدود ۷ تا ۱۴ روز طول می‌کشد.</td></tr>
+        </tbody>
+    </table>
+
+    <!-- ===== تصویر mosquito1.jpg (قبل از چرخه زندگی پشه) ===== -->
+    <div class="blog-image">
+        <img src="../images/services/mosquito1.jpg" alt="چرخه زندگی پشه">
+        <div class="caption">تصویر: چرخه زندگی پشه، از تخم تا پشه بالغ</div>
+    </div>
+
+    <h3>چرخه زندگی پشه:</h3>
+    <p>چرخه زندگی پشه شامل چهار مرحله است که سه مرحله اول (تخم، لارو و شفیره) در آب سپری می‌شود:</p>
+    <ol>
+        <li><strong>تخم</strong>: پشه ماده تخم‌های خود را به صورت تکی یا گروهی روی سطح آب راکد یا در مجاورت رطوبت قرار می‌دهد.</li>
+        <li><strong>لارو</strong>: لاروها شناگران ماهری هستند و از میکروارگانیسم‌ها و مواد آلی موجود در آب تغذیه می‌کنند.</li>
+        <li><strong>شفیره</strong>: مرحله استراحت و دگردیسی که در آن لارو به پشه بالغ تبدیل می‌شود.</li>
+        <li><strong>پشه بالغ</strong>: پس از خروج از شفیره، پشه‌ها به‌سرعت به دنبال جفت و تغذیه می‌روند.</li>
+    </ol>
+
+    <h3>انواع پشه‌های رایج در ایران:</h3>
+
+    <h4>۱. پشه آنوفل (Anopheles)</h4>
+    <ul>
+        <li>ناقل بیماری <strong>مالاریا</strong>.</li>
+        <li>در مناطق گرمسیر و نیمه‌گرمسیر ایران (جنوب، سیستان و بلوچستان، هرمزگان و خوزستان) یافت می‌شود.</li>
+        <li>رنگ بدن آن معمولاً قهوه‌ای تیره و دارای لکه‌های روشن روی بال‌هاست.</li>
+    </ul>
+
+    <h4>۲. پشه آئدس (Aedes)</h4>
+    <ul>
+        <li>ناقل بیماری‌های <strong>تب دنگی، زیکا، تب زرد و چیکونگونیا</strong>.</li>
+        <li>در سال‌های اخیر شیوع تب دنگی در برخی مناطق ایران (به‌ویژه شمال و جنوب) گزارش شده است.</li>
+        <li>پشه آئدس دارای نوارهای سفید و سیاه روی پاها و بدن است و در طول روز فعالیت می‌کند.</li>
+    </ul>
+
+    <h4>۳. پشه کولکس (Culex)</h4>
+    <ul>
+        <li>ناقل بیماری‌های <strong>آنسفالیت ژاپنی و فیلاریاز</strong>.</li>
+        <li>رایج‌ترین نوع پشه در محیط‌های شهری ایران.</li>
+        <li>معمولاً شب‌ها فعالیت می‌کند و در فاضلاب‌ها، آب‌های راکد و استخرهای پرورش ماهی تخم‌گذاری می‌کند.</li>
+    </ul>
+
+    <!-- بخش ۲ -->
+    <h2>🔍 نشانه‌های حضور پشه در منزل</h2>
+    <p>تشخیص زودهنگام وجود پشه‌ها می‌تواند از تبدیل شدن یک آلودگی کوچک به یک بحران بزرگ جلوگیری کند. این نشانه‌ها را جدی بگیرید:</p>
+    <ul>
+        <li><strong>مشاهده خود پشه</strong>: دیدن پشه‌های بالغ در اطراف پنجره‌ها، درب‌ها یا نقاط مرطوب خانه.</li>
+        <li><strong>صدای وزوز</strong>: صدای مشخص و آزاردهنده وزوز پشه‌ها در شب‌ها.</li>
+        <li><strong>گزش و خارش</strong>: برجستگی‌های قرمز و خارش‌دار روی پوست که معمولاً صبح‌ها ظاهر می‌شوند.</li>
+    </ul>
+
+    <!-- ===== تصویر mosquito2.jpg (بعد از گزش و خارش) ===== -->
+    <div class="blog-image">
+        <img src="../images/services/mosquito2.jpg" alt="گزش پشه روی پوست">
+        <div class="caption">تصویر: آثار گزش پشه روی پوست انسان</div>
+    </div>
+
+    <ul>
+        <li><strong>لارو و شفیره</strong>: مشاهده لاروهای کوچک متحرک یا شفیره‌های قهوه‌ای شکل در آب‌های راکد، زیرگلدانی‌ها یا حوضچه‌های کوچک.</li>
+        <li><strong>تخم‌ها</strong>: تخم‌های پشه به صورت توده‌های قهوه‌ای یا سیاه روی سطح آب یا دیواره ظروف آب دیده می‌شوند.</li>
+    </ul>
+
+    <!-- بخش ۳ -->
+    <h2>🚨 خطرات و بیماری‌های ناشی از پشه‌ها</h2>
+    <p>پشه‌ها به‌عنوان یکی از مرگ‌بارترین موجودات روی زمین، سالانه بیش از ۷۰۰ هزار نفر را در سراسر جهان به کام مرگ می‌فرستند. این آمار توسط سازمان جهانی بهداشت (WHO) تأیید شده است.</p>
+
+    <table>
+        <thead>
+            <tr><th>بیماری</th><th>ناقل (پشه)</th><th>علائم اصلی</th><th>مناطق درگیر در ایران</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>مالاریا</strong></td><td>آنوفل</td><td>تب، لرز، تعریق، سردرد و خستگی شدید. در موارد شدید می‌تواند کشنده باشد.</td><td>جنوب، سیستان و بلوچستان، هرمزگان، خوزستان</td></tr>
+            <tr><td><strong>تب دنگی</strong></td><td>آئدس</td><td>تب شدید، سردرد شدید، درد عضلات و مفاصل، بثورات پوستی. در موارد شدید به تب خونریزی‌دهنده دنگی تبدیل می‌شود.</td><td>شمال و جنوب ایران (گزارش‌های اخیر)</td></tr>
+            <tr><td><strong>تب زرد</strong></td><td>آئدس</td><td>تب، سردرد، درد عضلانی، حالت تهوع، زردی پوست و چشم‌ها. در موارد شدید می‌تواند کشنده باشد.</td><td>مناطق گرمسیری (نادر در ایران)</td></tr>
+            <tr><td><strong>آنسفالیت ژاپنی</strong></td><td>کولکس</td><td>تب، سردرد، گیجی، تشنج و کما. می‌تواند باعث آسیب دائمی مغز شود.</td><td>مناطق شمالی و غربی ایران</td></tr>
+            <tr><td><strong>زیکا</strong></td><td>آئدس</td><td>تب خفیف، بثورات پوستی، درد مفاصل. در زنان باردار می‌تواند باعث میکروسفالی جنین شود.</td><td>موارد گزارش‌شده در ایران</td></tr>
+            <tr><td><strong>فیلاریاز (فیل پا)</strong></td><td>کولکس و آنوفل</td><td>تورم شدید اندام‌ها، آسیب به سیستم لنفاوی، ناتوانی طولانی‌مدت.</td><td>مناطق گرمسیری و جنوب ایران</td></tr>
+        </tbody>
+    </table>
+
+    <!-- بخش ۴ -->
+    <h2>🛠️ روش‌های اصولی سمپاشی پشه</h2>
+    <p>کنترل پشه‌ها نیازمند یک رویکرد جامع و چندمرحله‌ای است. برای ریشه‌کنی قطعی، باید از ترکیبی از روش‌ها استفاده کرد. در شرکت سمپاشی نانوفناوران، از <strong>روش مدیریت تلفیقی آفات (IPM)</strong> برای کنترل پشه استفاده می‌کنیم که شامل مراحل زیر است:</p>
+
+    <h3>مرحله ۱: بازرسی و شناسایی</h3>
+    <p>اولین و مهم‌ترین گام، شناسایی گونه پشه و مکان‌های تخم‌گذاری و پرورش آن‌ها است. کارشناسان ما با بررسی دقیق محیط، موارد زیر را مشخص می‌کنند:</p>
+    <ul>
+        <li><strong>نوع پشه</strong> (آنوفل، آئدس یا کولکس)</li>
+        <li><strong>منابع آب راکد</strong> (زیرگلدانی‌ها، حوضچه‌ها، استخرهای پرورش ماهی، فاضلاب‌ها، لاستیک‌های فرسوده و ...)</li>
+        <li><strong>نقاط ورودی</strong> (شکاف‌های درب و پنجره، دریچه‌های تهویه، لوله‌های فاضلاب)</li>
+        <li><strong>فصل فعالیت پشه</strong> (بر اساس گونه و شرایط آب و هوایی)</li>
+    </ul>
+
+    <h3>مرحله ۲: حذف منابع تکثیر (مؤثرترین راه)</h3>
+    <p>بهترین و مؤثرترین راه کنترل پشه، حذف مکان‌های تخم‌گذاری و پرورش آن‌هاست. اقدامات زیر را جدی بگیرید:</p>
+    <ul>
+        <li><strong>خشک کردن منابع آب راکد</strong>: تخلیه زیرگلدانی‌ها، حوضچه‌های کوچک، جمع شدن آب در پشت بام یا حیاط.</li>
+        <li><strong>تغییر آب مخازن به‌طور منظم</strong>: مخازن آب، آب‌انبارها و استخرهای ذخیره آب باید حداقل هفته‌ای یکبار تخلیه و تمیز شوند.</li>
+        <li><strong>پوشاندن مخازن آب</strong>: با درب محکم و بدون نفوذ.</li>
+        <li><strong>مدیریت پسماند</strong>: جمع‌آوری و دفن صحیح لاستیک‌های فرسوده، ظروف یکبار مصرف و هر شیء که ممکن است آب در آن جمع شود.</li>
+    </ul>
+
+    <h3>مرحله ۳: سمپاشی با تجهیزات حرفه‌ای</h3>
+    <p>در صورت نیاز و با توجه به شدت آلودگی، کارشناسان ما از روش‌های زیر استفاده می‌کنند:</p>
+
+    <h4>الف) سمپاشی با تجهیزات ULV (مه‌پاشی سرد)</h4>
+    <p>این روش با تولید ذرات بسیار ریز سم (قطرات ۵ تا ۲۰ میکرون) که به‌صورت مه در فضا پخش می‌شوند، پشه‌های بالغ را به‌سرعت از بین می‌برد. مزایای این روش عبارتند از:</p>
+    <ul>
+        <li>سرعت عمل بالا</li>
+        <li>نفوذ به نقاط دشوار</li>
+        <li>مؤثر برای پشه‌های پرنده</li>
+    </ul>
+
+    <h4>ب) سمپاشی با تجهیزات گرمایی (Fogging)</h4>
+    <p>در این روش، سم به‌کمک حرارت به بخار تبدیل شده و در فضا پخش می‌شود. این روش برای محیط‌های بزرگ مانند پارک‌ها، باغ‌ها و مکان‌های باز بسیار مؤثر است.</p>
+
+    <h4>ج) سمپاشی لاروکش (Larviciding)</h4>
+    <p>هدف این روش، از بین بردن لاروهای پشه در منابع آب است. با استفاده از سموم لاروکش مخصوص، رشد و تکامل پشه‌ها در همان مراحل اولیه متوقف می‌شود. این روش کاملاً ایمن و برای محیط زیست کم‌خطر است.</p>
+
+    <h4>د) استفاده از حشره‌کش‌های تماسی و باقی‌مانده</h4>
+    <p>این سموم روی دیوارها، سطوح و نقاط استراحت پشه‌ها پاشش می‌شوند و اثر باقی‌مانده دارند.</p>
+
+    <h3>مرحله ۴: استفاده از تله‌های نوری و مکنده</h3>
+    <p>تله‌های نوری (الکتریکی و UV) با جذب پشه‌ها به سمت نور و برق‌گرفتن آن‌ها، روشی کم‌خطر و مؤثر در محیط‌های کوچک هستند.</p>
+
+    <h3>مرحله ۵: مقاوم‌سازی محیط</h3>
+    <p>پس از کاهش جمعیت پشه‌ها، باید با نصب توری‌های ریز روی پنجره‌ها و دریچه‌ها، بستن شکاف‌ها و درزها و استفاده از درب‌های خودبسته‌شونده، از ورود مجدد پشه‌ها جلوگیری کرد.</p>
+
+    <!-- بخش ۵ -->
+    <h2>🛡️ راه‌های پیشگیری از بازگشت پشه‌ها</h2>
+    <p>با رعایت این نکات ساده، می‌توانید از بازگشت مجدد پشه‌ها جلوگیری کنید:</p>
+    <ol>
+        <li><strong>تخلیه منظم زیرگلدانی‌ها</strong>: حداقل هفته‌ای یکبار.</li>
+        <li><strong>پوشاندن مخازن آب</strong>: با درب محکم.</li>
+        <li><strong>نصب توری‌های ریز</strong>: روی پنجره‌ها و دریچه‌های تهویه.</li>
+        <li><strong>جلوگیری از جمع شدن آب</strong>: در پشت بام، حیاط، لاستیک‌های فرسوده و هر شیء توخالی.</li>
+        <li><strong>استفاده از لاروکش‌های بیولوژیک</strong>: مانند باکتری Bti (مخصوص پشه) که برای محیط زیست بی‌خطر است.</li>
+        <li><strong>استفاده از اسپری‌های دورکننده پشه</strong>: برای مسافرت به مناطق آلوده.</li>
+    </ol>
+
+    <!-- بخش ۶ -->
+    <h2>💰 هزینه سمپاشی پشه چقدر است؟</h2>
+    <table>
+        <thead>
+            <tr><th>عامل</th><th>تأثیر بر هزینه</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>مساحت و نوع مکان</strong></td><td>منازل مسکونی، ویلاها، باغ‌ها، هتل‌ها، بیمارستان‌ها و مراکز صنعتی هزینه‌های متفاوتی دارند.</td></tr>
+            <tr><td><strong>شدت آلودگی</strong></td><td>آلودگی شدید نیاز به عملیات بیشتر و زمان‌برتری دارد.</td></tr>
+            <tr><td><strong>نوع روش</strong></td><td>مه‌پاشی، لاروکشی یا ترکیبی از روش‌ها.</td></tr>
+            <tr><td><strong>دسترسی به نقاط آلوده</strong></td><td>در صورت نیاز به سمپاشی سقف‌های بلند یا محیط‌های بزرگ، هزینه افزایش می‌یابد.</td></tr>
+            <tr><td><strong>تعداد جلسات</strong></td><td>معمولاً یک جلسه کافی است، اما در موارد شدید ممکن است نیاز به بازدید مجدد باشد.</td></tr>
+        </tbody>
+    </table>
+    <p>💡 <strong>توصیه:</strong> برای دریافت <strong>مشاوره رایگان</strong> و <strong>استعلام دقیق هزینه</strong>، با کارشناسان ما تماس بگیرید.</p>
+
+    <!-- بخش ۷ -->
+    <h2>❓ سوالات متداول درباره سمپاشی پشه</h2>
+
+    <details>
+        <summary><strong>آیا سمپاشی پشه برای کودکان و حیوانات خانگی خطرناک است؟</strong></summary>
+        <p>خیر، سموم استفاده‌شده توسط شرکت نانوفناوران با رعایت کامل استانداردهای بهداشتی انتخاب می‌شوند. همچنین در هنگام سمپاشی، افراد و حیوانات از محیط خارج می‌شوند و پس از تهویه کامل، محیط کاملاً ایمن است.</p>
+    </details>
+
+    <details>
+        <summary><strong>چه مدت بعد از سمپاشی پشه‌ها از بین می‌روند؟</strong></summary>
+        <p>اثر سمپاشی فوری است و پشه‌های بالغ بلافاصله از بین می‌روند. اما برای جلوگیری از تکثیر مجدد، لاروکشی و حذف منابع آب راکد نیز انجام می‌شود.</p>
+    </details>
+
+    <details>
+        <summary><strong>آیا خودمان هم می‌توانیم پشه را سمپاشی کنیم؟</strong></summary>
+        <p>استفاده از اسپری‌های خانگی معمولاً مؤثر نیست و فقط پشه‌های سطحی را از بین می‌برد. همچنین استفاده نادرست از سموم می‌تواند برای سلامتی خطرناک باشد. روش‌های تخصصی مانند مه‌پاشی و لاروکشی نیاز به تجهیزات و دانش دارد.</p>
+    </details>
+
+    <details>
+        <summary><strong>بعد از سمپاشی باید منزل را ترک کنیم؟</strong></summary>
+        <p>بله، معمولاً ۲ تا ۴ ساعت باید محیط را ترک کنید تا سموم تهویه شوند. کارشناسان زمان دقیق را به شما اعلام می‌کنند.</p>
+    </details>
+
+    <details>
+        <summary><strong>آیا پشه‌ها دوباره برمی‌گردند؟</strong></summary>
+        <p>اگر منابع آب راکد حذف شوند و نکات پیشگیری رعایت شود، احتمال بازگشت بسیار کم است. شرکت نانوفناوران خدمات خود را با ضمانت ارائه می‌دهد.</p>
+    </details>
+
+    <!-- بخش ۸ -->
+    <h2>🏠 نکات طلایی برای جلوگیری از ورود پشه به خانه</h2>
+    <ol>
+        <li><strong>همه پنجره‌ها را با توری ریز بپوشانید.</strong></li>
+        <li><strong>درب‌ها را تا حد امکان بسته نگه دارید.</strong></li>
+        <li><strong>از پشه‌بند در اتاق‌های خواب استفاده کنید.</strong></li>
+        <li><strong>زیرگلدانی‌ها را هفته‌ای یکبار تخلیه کنید.</strong></li>
+        <li><strong>هر گونه آب راکد در حیاط، پشت بام یا باغچه را خشک کنید.</strong></li>
+        <li><strong>از اسپری‌های دورکننده پشه در فضای باز استفاده کنید.</strong></li>
+        <li><strong>در زمان اوج فعالیت پشه‌ها (غروب و شب) از حضور طولانی در فضای باز خودداری کنید.</strong></li>
+        <li><strong>لباس‌های روشن و آستین‌بلند در فضای باز بپوشید.</strong></li>
+    </ol>
+
+    <!-- بخش ۹ -->
+    <h2>📌 نتیجه‌گیری</h2>
+    <p>پشه‌ها با وجود کوچکی، یکی از مرگ‌بارترین موجودات روی زمین هستند که سالانه جان هزاران انسان را می‌گیرند و میلیون‌ها نفر را بیمار می‌کنند. از بیماری مالاریا در مناطق جنوبی گرفته تا تب دنگی که در سال‌های اخیر در ایران شیوع پیدا کرده است، همه و همه نشان می‌دهند که کنترل و ریشه‌کنی پشه‌ها یک ضرورت جدی است.</p>
+
+    <p>شرکت سمپاشی نانوفناوران با بیش از <strong>۲۰ سال تجربه</strong> و استفاده از <strong>پیشرفته‌ترین تجهیزات مه‌پاشی و لاروکشی</strong>، آماده ارائه خدمات تخصصی و تضمینی به شماست. تیم کارشناسان ما با استفاده از سموم استاندارد و روش‌های نوین، پشه‌ها را به‌طور کامل و قطعی از منزل یا محل کار شما حذف می‌کنند و محیطی امن و آرام را برای شما به ارمغان می‌آورند.</p>
+
+    <p style="font-size:20px; font-weight:700; text-align:center; color:var(--primary);">🚀 همین حالا اقدام کنید:</p>
+    <div style="text-align:center; margin:20px 0;">
+        <p>📞 <strong>تماس فوری:</strong> <a href="tel:09120705746" style="font-size:20px; color:var(--secondary);">۰۹۱۲۰۷۰۵۷۴۶</a></p>
+        <p>💬 <strong>درخواست مشاوره رایگان:</strong> از طریق <a href="https://wa.me/989120705746" target="_blank">واتساپ</a> یا <a href="https://eitaa.com/nanofannavaran_ir" target="_blank">ایتا</a></p>
+        <p>🔗 <strong>مشاهده سایر خدمات:</strong> <a href="../services.html">کنترل آفات مسکونی</a></p>
+    </div>
+
+    <div class="back-links">
+        <a href="../index.html" class="btn-blog-home">🏠 بازگشت به صفحه اصلی</a>
+        <a href="../services.html" class="btn-blog-services">🔙 بازگشت به لیست خدمات مسکونی</a>
+        <a href="../contact.html" class="btn-blog-contact">📞 تماس با ما</a>
+    </div>
+
 </div>
 
 <footer class="site-footer">
@@ -124,6 +477,30 @@
         <hr><p class="copyright">© تمامی حقوق محفوظ است</p>
     </div>
 </footer>
+
+<div class="floating-container">
+    <button class="floating-main-btn" id="floatingToggle">
+        <span class="btn-arrow">▶</span>
+        <span class="btn-text">📞 مشاوره رایگان</span>
+    </button>
+    <div class="floating-menu" id="floatingMenu">
+        <div class="call-wrapper">
+            <div class="floating-item call-item" id="callToggle">
+                <span class="item-icon">📞</span>
+                <span class="item-text">تماس سریع</span>
+                <span class="arrow">▲</span>
+            </div>
+            <div class="call-submenu" id="callSubmenu">
+                <a href="tel:09120705746" class="floating-item call-sub-item"><span class="item-icon">📞</span><span class="item-text">شماره ۱</span></a>
+                <a href="tel:09197173454" class="floating-item call-sub-item"><span class="item-icon">📞</span><span class="item-text">شماره ۲</span></a>
+            </div>
+        </div>
+        <a href="https://wa.me/989120705746?text=%D8%A8%D9%87%20%D8%B3%D8%A7%DB%8C%D8%AA%20%D8%B4%D8%B1%DA%A9%D8%AA%20%D8%B3%D9%85%D9%BE%D8%A7%D8%B4%DB%8C%20%D9%86%D8%A7%D9%86%D9%88%D9%81%D9%86%D8%A7%D9%88%D8%B1%D8%A7%D9%86%20%D8%AE%D9%88%D8%B4%20%D8%A2%D9%85%D8%AF%DB%8C%D8%AF.%20%DA%86%DA%AF%D9%88%D9%86%D9%87%20%D9%85%DB%8C%E2%80%8C%D8%AA%D9%88%D8%A7%D9%86%D9%85%20%DA%A9%D9%85%DA%A9%20%D8%AA%D8%A7%D9%86%20%DA%A9%D9%86%D9%85%D8%9F" target="_blank" class="floating-item whatsapp-item"><span class="item-icon">💬</span><span class="item-text">واتساپ</span></a>
+        <a href="https://eitaa.com/nanofannavaran_ir" target="_blank" class="floating-item eitaa-item"><span class="item-icon">✈️</span><span class="item-text">ایتا</span></a>
+    </div>
+</div>
+
+<button id="backToTop" title="برو به بالا">↑</button>
 
 <script src="../script.js"></script>
 </body>
