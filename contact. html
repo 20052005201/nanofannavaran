@@ -1,92 +1,57 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تماس با ما | شرکت سمپاشی نانوفناوران بهداشت تهران</title>
-    <meta name="description" content="تماس با شرکت سمپاشی نانوفناوران بهداشت تهران، مشاوره رایگان، ثبت سفارش و اعزام سریع کارشناسان به سراسر تهران.">
-    <meta name="keywords" content="تماس با شرکت سمپاشی، شماره سمپاشی تهران، نانوفناوران">
+    <title>تماس با ما | شرکت سمپاشی نانوفناوران</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
 <header>
     <div class="container">
-        <a href="index.html" class="logo">
-            <img src="images/logo.png" alt="شرکت سمپاشی نانوفناوران">
-        </a>
+        <a href="index.html" class="logo"><img src="images/logo.png" alt="لوگو"></a>
         <nav class="navbar">
             <ul>
-                <li><a href="index.html">خانه</a></li>
-                <li><a href="pages/about.html">درباره ما</a></li>
-                <li><a href="pages/residential.html">خدمات مسکونی</a></li>
-                <li><a href="pages/commercial.html">خدمات تجاری</a></li>
-                <li><a href="pages/contact.html" class="active">تماس با ما</a></li>
+                <li><a href="index.html">صفحه اصلی</a></li>
+                <li><a href="services.html">خدمات مسکونی</a></li>
+                <li><a href="commercial-services.html">خدمات تجاری</a></li>
+                <li><a href="about.html">درباره ما</a></li>
+                <li><a href="contact.html" class="active">تماس</a></li>
             </ul>
         </nav>
         <div class="header-buttons">
             <a href="tel:09120705746" class="call-btn">📞 09120705746</a>
+            <div class="mobile-menu">☰</div>
         </div>
-        <div class="mobile-menu">☰</div>
     </div>
 </header>
 
-<section class="page-header">
-    <div class="container">
-        <h1>تماس با ما</h1>
-        <p>برای دریافت مشاوره رایگان و ثبت سفارش با ما در ارتباط باشید.</p>
-    </div>
-</section>
-
 <section class="contact-section">
     <div class="container">
+        <h1>تماس با ما</h1>
+        <p>برای دریافت مشاوره رایگان و ثبت درخواست، با ما تماس بگیرید.</p>
         <div class="contact-grid">
-            <div class="contact-box">
-                <h2>اطلاعات تماس</h2>
-                <p><strong>همراه:</strong> 09120705746</p>
-                <p><strong>تلفن ثابت:</strong> 22048278</p>
-                <p><strong>تلفن ثابت:</strong> 86013062</p>
-                <p><strong>تلفن ثابت:</strong> 66959729</p>
-                <p><strong>تلفن ثابت:</strong> 66243137</p>
-                <p><strong>ایمیل:</strong><br>
-                    nanofannavaran.ae2005@gmail.com
-                </p>
-                <p><strong>ایتا:</strong><br>
-                    @am8ini90
-                </p>
-                <p>
-                    <a class="btn" href="tel:09120705746">تماس فوری</a>
-                </p>
-                <p>
-                    <a class="btn" href="https://wa.me/989120705746">پیام در واتساپ</a>
-                </p>
-                <p>
-                    <a class="btn" href="https://eitaa.com/am8ini90">پیام در ایتا</a>
-                </p>
+            <div class="contact-card">
+                <div class="contact-icon">📞</div>
+                <h3>تلفن همراه</h3>
+                <p><a href="tel:09120705746">09120705746</a></p>
             </div>
-            <div class="contact-box">
-                <h2>ارسال درخواست</h2>
-                <form class="contact-form">
-                    <input type="text" placeholder="نام و نام خانوادگی">
-                    <input type="tel" placeholder="شماره تماس">
-                    <input type="text" placeholder="منطقه یا آدرس">
-                    <select>
-                        <option>نوع آفت را انتخاب کنید</option>
-                        <option>سوسک</option>
-                        <option>ساس</option>
-                        <option>موش</option>
-                        <option>مورچه</option>
-                        <option>مگس</option>
-                        <option>پشه</option>
-                        <option>کک</option>
-                        <option>کنه</option>
-                        <option>سایر موارد</option>
-                    </select>
-                    <textarea rows="6" placeholder="توضیحات"></textarea>
-                    <button class="btn" type="submit">ارسال درخواست</button>
-                </form>
+            <div class="contact-card">
+                <div class="contact-icon">☎️</div>
+                <h3>تلفن ثابت</h3>
+                <p><a href="tel:22048278">22048278</a></p>
+                <p><a href="tel:86013062">86013062</a></p>
+                <p><a href="tel:66959729">66959729</a></p>
+            </div>
+            <div class="contact-card">
+                <div class="contact-icon">💬</div>
+                <h3>پیام‌رسان‌ها</h3>
+                <p><a href="https://wa.me/989120705746" target="_blank">واتساپ</a></p>
+                <p><a href="https://eitaa.com/nanofannavaran_ir" target="_blank">ایتا</a></p>
             </div>
         </div>
     </div>
@@ -95,32 +60,13 @@
 <footer class="site-footer">
     <div class="container">
         <div class="footer-grid">
-            <div class="footer-box">
-                <h3>شرکت سمپاشی نانوفناوران بهداشت تهران</h3>
-                <p>ارائه‌دهنده خدمات تخصصی کنترل آفات مسکونی، تجاری و صنعتی در سراسر تهران.</p>
-            </div>
-            <div class="footer-box">
-                <h3>لینک‌های سریع</h3>
-                <ul>
-                    <li><a href="index.html">صفحه اصلی</a></li>
-                    <li><a href="pages/about.html">درباره ما</a></li>
-                    <li><a href="pages/contact.html">تماس با ما</a></li>
-                </ul>
-            </div>
-            <div class="footer-box">
-                <h3>اطلاعات تماس</h3>
-                <p>📱 09120705746</p>
-                <p>💬 <a href="https://wa.me/989120705746" target="_blank">واتساپ</a></p>
-            </div>
+            <div class="footer-box"><h3>نانوفناوران</h3><p>ارائه‌دهنده خدمات تخصصی کنترل آفات در تهران</p></div>
+            <div class="footer-box"><h3>اطلاعات تماس</h3><p>📱 09120705746</p><p>☎️ 22048278</p><p>☎️ 86013062</p><p>☎️ 66959729</p></div>
         </div>
-        <hr>
-        <div class="footer-bottom">
-            <p>© تمامی حقوق این وب‌سایت متعلق به شرکت سمپاشی نانوفناوران بهداشت تهران است.</p>
-        </div>
+        <hr><p class="copyright">© تمامی حقوق محفوظ است</p>
     </div>
 </footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>
