@@ -173,20 +173,11 @@
             font-size: 16px;
             margin-bottom: 20px;
         }
-        .video-box .video-placeholder {
-            background: #1a3d5c;
+        .video-box video {
+            width: 100%;
+            max-width: 700px;
             border-radius: 16px;
-            padding: 60px 20px;
-            border: 2px dashed rgba(255,255,255,0.3);
-        }
-        .video-box .video-placeholder span {
-            font-size: 48px;
-            display: block;
-            margin-bottom: 10px;
-        }
-        .video-box .video-placeholder p {
-            color: #aaa;
-            font-size: 14px;
+            box-shadow: 0 10px 30px rgba(0,0,0,.3);
         }
 
         .rappel-box {
@@ -231,12 +222,6 @@
             }
             .video-box {
                 padding: 20px 15px;
-            }
-            .video-box .video-placeholder {
-                padding: 40px 15px;
-            }
-            .video-box .video-placeholder span {
-                font-size: 36px;
             }
         }
     </style>
@@ -466,20 +451,15 @@
         <p style="margin-top:10px; color:var(--primary); font-weight:700;">✅ پرسنل مجهز و مجرب ما با استفاده از تجهیزات ایمنی کامل، این عملیات را در بالاترین ارتفاع با خیال راحت انجام می‌دهند.</p>
     </div>
 
-    <!-- ===== بخش فیلم واقعی ===== -->
+    <!-- ===== بخش فیلم واقعی با فیلم rapell.mp4 ===== -->
     <div class="video-box">
         <h3>🎥 فیلم واقعی از عملیات سمپاشی کنه کبوتر</h3>
         <p>در این فیلم، عملیات تخصصی سمپاشی و پاک‌سازی لانه‌های کبوتر در درز انقطاع ساختمان توسط تیم مجرب نانوفناوران را مشاهده می‌کنید.</p>
-        <div class="video-placeholder">
-            <span>🎬</span>
-            <p style="color:rgba(255,255,255,0.7); font-size:16px;">
-                <strong>لطفاً فیلم واقعی عملیات را اینجا قرار دهید</strong><br>
-                (می‌توانید از آپارات، یوتیوب یا ویدیوهای داخلی خود استفاده کنید)
-            </p>
-            <p style="color:rgba(255,255,255,0.4); font-size:13px; margin-top:5px;">
-                برای جایگزینی، کد iframe یا لینک ویدئو را در این بخش قرار دهید
-            </p>
-        </div>
+        <video controls preload="metadata" poster="../images/services/tick1.jpg">
+            <source src="../videos/rapell.mp4" type="video/mp4">
+            مرورگر شما از نمایش ویدئو پشتیبانی نمی‌کند.
+        </video>
+        <p style="font-size:14px; color:#aaa; margin-top:15px;">🎬 فیلم واقعی از عملیات سمپاشی کنه کبوتر در درز انقطاع</p>
     </div>
 
     <h3>۲. پاک‌سازی منظم محیط</h3>
