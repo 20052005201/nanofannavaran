@@ -3,77 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>طعمه‌گذاری و کنترل موش | نانوفناوران</title>
+    <title>طعمه‌گذاری و کنترل موش | راهنمای جامع و تخصصی | نانوفناوران</title>
+    <meta name="description" content="مقاله جامع طعمه‌گذاری و کنترل موش: معرفی گونه‌ها، نشانه‌های آلودگی، روش‌های پیشگیری، طعمه‌گذاری و ریشه‌کنی حرفه‌ای موش در منزل و محل کار.">
+    <meta name="keywords" content="طعمه‌گذاری موش, کنترل موش, سمپاشی موش, موش خانگی, موش صحرایی, جوندگان, پیشگیری موش">
+    <link rel="canonical" href="https://nanofannavaran.ir/service/rat-control.html">
     <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
-        .service-detail {
+        .blog-container {
             max-width: 1100px;
-            margin: 100px auto 50px;
+            margin: 120px auto 60px;
             padding: 0 20px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
+            background: #fff;
+            border-radius: 24px;
+            box-shadow: 0 10px 40px rgba(0,0,0,.08);
+            padding: 40px 40px 60px;
         }
-        .service-detail .text h1 {
-            font-size: 32px;
+        .blog-container h1 {
+            font-size: 36px;
             color: var(--primary);
             margin-bottom: 20px;
+            line-height: 1.5;
         }
-        .service-detail .text p {
+        .blog-container .meta {
+            color: #888;
+            font-size: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .blog-container h2 {
+            font-size: 28px;
+            color: var(--dark);
+            margin: 40px 0 15px;
+            border-right: 5px solid var(--secondary);
+            padding-right: 15px;
+        }
+        .blog-container h3 {
+            font-size: 22px;
+            color: var(--primary);
+            margin: 30px 0 12px;
+        }
+        .blog-container h4 {
+            font-size: 19px;
+            color: var(--dark);
+            margin: 25px 0 10px;
+        }
+        .blog-container p {
             line-height: 2.2;
-            color: #555;
+            color: #444;
+            font-size: 17px;
+            margin-bottom: 18px;
+        }
+        .blog-container ul, .blog-container ol {
+            line-height: 2.2;
+            color: #444;
+            font-size: 17px;
+            padding-right: 25px;
+            margin-bottom: 20px;
+        }
+        .blog-container ul li, .blog-container ol li {
+            margin-bottom: 8px;
+        }
+        .blog-container table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0 30px;
             font-size: 16px;
         }
-        .service-detail .gif img {
+        .blog-container table th {
+            background: var(--primary);
+            color: #fff;
+            padding: 12px 15px;
+            text-align: right;
+        }
+        .blog-container table td {
+            border: 1px solid #ddd;
+            padding: 10px 15px;
+            background: #fafafa;
+        }
+        .blog-container table tr:nth-child(even) td {
+            background: #f5f5f5;
+        }
+        .blog-image {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .blog-image img {
             width: 100%;
-            max-height: 400px;
-            object-fit: contain;
+            max-width: 700px;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,.15);
         }
-        .back-link {
+        .blog-image .caption {
+            font-size: 14px;
+            color: #888;
+            margin-top: 10px;
+        }
+        .blog-container .back-links {
+            margin: 40px 0 20px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .blog-container .back-links a {
             display: inline-block;
-            margin-top: 30px;
-            background: var(--secondary);
-            color: #fff;
             padding: 12px 28px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
             transition: .3s;
         }
-        .back-link:hover {
-            background: var(--primary);
-        }
-        .contact-float {
-            margin-top: 20px;
-        }
-        .contact-float a {
-            display: inline-block;
+        .blog-container .back-links .btn-blog-home {
             background: var(--primary);
             color: #fff;
-            padding: 12px 28px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            margin-left: 10px;
-            transition: .3s;
         }
-        .contact-float a:hover {
+        .blog-container .back-links .btn-blog-home:hover {
             background: var(--secondary);
         }
+        .blog-container .back-links .btn-blog-services {
+            background: var(--secondary);
+            color: #fff;
+        }
+        .blog-container .back-links .btn-blog-services:hover {
+            background: var(--primary);
+        }
+        .blog-container .back-links .btn-blog-contact {
+            background: var(--dark);
+            color: #fff;
+        }
+        .blog-container .back-links .btn-blog-contact:hover {
+            background: var(--primary);
+        }
+
+        details {
+            background: #f8fbfd;
+            padding: 15px 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #e9ecef;
+        }
+        details summary {
+            font-weight: 700;
+            color: var(--primary);
+            cursor: pointer;
+            font-size: 17px;
+        }
+        details p {
+            margin-top: 12px;
+            padding-right: 10px;
+        }
+
         @media (max-width: 768px) {
-            .service-detail {
-                grid-template-columns: 1fr;
-                text-align: center;
-                margin-top: 80px;
+            .blog-container {
+                padding: 20px 15px;
+                margin: 100px auto 40px;
             }
-            .service-detail .text h1 {
+            .blog-container h1 {
                 font-size: 26px;
             }
-            .service-detail .gif img {
-                max-height: 250px;
+            .blog-container h2 {
+                font-size: 22px;
+            }
+            .blog-container h3 {
+                font-size: 19px;
+            }
+            .blog-container h4 {
+                font-size: 17px;
+            }
+            .blog-container p,
+            .blog-container ul,
+            .blog-container ol {
+                font-size: 15px;
+            }
+            .blog-container table {
+                font-size: 14px;
+            }
+            .blog-container .back-links a {
+                padding: 10px 20px;
+                font-size: 14px;
             }
         }
     </style>
@@ -82,11 +192,12 @@
 
 <header>
     <div class="container">
-        <a href="../index.html" class="logo"><img src="../images/logo.png" alt="لوگو"></a>
+        <a href="../index.html" class="logo"><img src="../images/logo.png" alt="لوگو شرکت سمپاشی نانوفناوران"></a>
         <nav class="navbar">
             <ul>
                 <li><a href="../index.html">صفحه اصلی</a></li>
-                <li><a href="../services.html" class="active">خدمات</a></li>
+                <li><a href="../services.html">خدمات مسکونی</a></li>
+                <li><a href="../commercial-services.html">خدمات تجاری</a></li>
                 <li><a href="../about.html">درباره ما</a></li>
                 <li><a href="../contact.html">تماس</a></li>
             </ul>
@@ -95,24 +206,268 @@
             <a href="tel:09120705746" class="call-btn">📞 09120705746</a>
             <div class="mobile-menu">☰</div>
         </div>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="جستجو...">
+            <button onclick="searchSite()">🔍</button>
+        </div>
     </div>
 </header>
 
-<div class="service-detail">
-    <div class="text">
-        <h1>🐭 طعمه‌گذاری و کنترل موش</h1>
-        <p>کنترل حرفه‌ای جوندگان موذی با استفاده از طعمه‌های استاندارد و ایمن.</p>
-        <p><strong>روش کنترل:</strong> استفاده از طعمه‌های هوشمند و سموم استاندارد با تضمین کیفیت و ماندگاری بالا.</p>
-        <p><strong>مدت زمان اثرگذاری:</strong> نتایج سریع و ماندگار تا ۶ ماه.</p>
-        <a href="../services.html" class="back-link">🔙 بازگشت به لیست خدمات</a>
-        <div class="contact-float">
-            <a href="tel:09120705746">📞 تماس فوری</a>
-            <a href="https://wa.me/989120705746" target="_blank">💬 واتساپ</a>
-        </div>
+<div class="blog-container">
+
+    <h1>طعمه‌گذاری و کنترل موش: راهنمای جامع شناسایی، پیشگیری و ریشه‌کنی (نسخه کامل و تخصصی)</h1>
+    <div class="meta">
+        <span>📅 آخرین به‌روزرسانی: ۱۴ مرداد ۱۴۰۴</span> &nbsp;|&nbsp; <span>⏱ زمان مطالعه: ۱۲ دقیقه</span>
     </div>
-    <div class="gif">
-        <img src="../images/services/rat-control.jpg" alt="طعمه‌گذاری و کنترل موش">
+
+    <p>آیا تا به حال صدای خراشیدن در دیوارهای خانه را در نیمه‌های شب شنیده‌اید؟ یا آثار جویده شده روی بسته‌های مواد غذایی یا کابل‌های برق را مشاهده کرده‌اید؟ این‌ها می‌توانند نشانه‌های حضور یک مهمان ناخوانده و خطرناک در خانه شما باشند: <strong>موش</strong>.</p>
+
+    <!-- ===== تصویر rat-control (بعد از پاراگراف اول و بعد از کلمه «موش») ===== -->
+    <div class="blog-image">
+        <img src="../images/services/rat-control.jpg" alt="کنترل موش">
+        <div class="caption">تصویر: موش، یکی از مقاوم‌ترین جوندگان همزیست با انسان</div>
     </div>
+
+    <p>موش‌ها از جمله قدیمی‌ترین و مقاوم‌ترین آفات همزیست با انسان هستند که نه‌تنها آرامش را از شما می‌گیرند، بلکه می‌توانند خسارات جبران‌ناپذیری به سلامت، اموال و حتی ساختار ساختمان شما وارد کنند. برخلاف تصور رایج، موش‌ها فقط در محیط‌های کثیف زندگی نمی‌کنند؛ آن‌ها به دنبال سه چیز ساده هستند: <strong>غذا، آب و سرپناه</strong>، و هر خانه‌ای می‌تواند این سه مورد را در اختیارشان بگذارد.</p>
+
+    <p>در این مقاله جامع و تخصصی، شما را با انواع موش‌های رایج در ایران، نشانه‌های آلودگی، خطرات و عوارض حضور آن‌ها، و مهم‌تر از همه، <strong>روش‌های اصولی و تخصصی طعمه‌گذاری و کنترل موش</strong> آشنا می‌کنیم. اگر شما هم در تهران یا سایر شهرهای ایران با این جوندگان موذی دست و پنجه نرم می‌کنید، این مقاله راهنمای کامل شما برای نجات خانه‌تان خواهد بود.</p>
+
+    <!-- بخش ۱ -->
+    <h2>📌 آشنایی با موش‌ها (بیولوژی و رفتارشناسی)</h2>
+    <p>موش‌ها پستاندارانی از راسته جوندگان (Rodentia) هستند که با داشتن یک جفت دندان پیشین در هر فک که رشد دائمی دارند، شناسایی می‌شوند. این رشد دائمی باعث می‌شود آن‌ها همواره در حال جویدن اشیاء سخت برای ساییدن و تیز نگه داشتن دندان‌های خود باشند. به همین دلیل است که به کابل‌های برق، لوله‌ها و حتی سازه‌های ساختمانی آسیب می‌زنند.</p>
+
+    <h3>ویژگی‌های عمومی:</h3>
+    <table>
+        <thead>
+            <tr><th>ویژگی</th><th>توضیح</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>دوره بارداری</strong></td><td>بسیار کوتاه (حدود ۳ هفته)</td></tr>
+            <tr><td><strong>تعداد زاد و ولد در سال</strong></td><td>تا ۱۰ بار</td></tr>
+            <tr><td><strong>تعداد نوزاد در هر زایمان</strong></td><td>۴ تا ۱۲ عدد</td></tr>
+            <tr><td><strong>طول عمر</strong></td><td>معمولاً کمتر از یک سال در طبیعت</td></tr>
+            <tr><td><strong>فعالیت</strong></td><td>غالباً شب‌زی</td></tr>
+            <tr><td><strong>رژیم غذایی</strong></td><td>همه‌چیزخوار، با تمایل به دانه‌ها، میوه‌ها، حشرات و مواد غذایی انسان</td></tr>
+        </tbody>
+    </table>
+
+    <h3>انواع رایج موش در ایران:</h3>
+    <ul>
+        <li><strong>موش خانگی (Mus musculus)</strong>: کوچک‌ترین نوع، با رنگ قهوه‌ای روشن تا خاکستری. مدفوع آن به اندازه یک دانه برنج است.</li>
+        <li><strong>موش صحرایی یا فاضلابی (Rattus norvegicus)</strong>: جثه بزرگ‌تر، با مدفوع سیاه و درشت به اندازه یک لوبیا.</li>
+        <li><strong>موش سقفی یا سیاه (Rattus rattus)</strong>: اندازه متوسط، با مدفوع کشیده‌تر، معمولاً در طبقات بالای ساختمان‌ها زندگی می‌کند.</li>
+    </ul>
+
+    <!-- بخش ۲ -->
+    <h2>🔍 نشانه‌های وجود موش در منزل</h2>
+
+    <!-- ===== تصویر rat2 (بعد از نشانه‌های وجود موش در منزل) ===== -->
+    <div class="blog-image">
+        <img src="../images/services/rat2.jpg" alt="نشانه‌های وجود موش">
+        <div class="caption">تصویر: آثار مدفوع، رد پا و آثار جویدن، نشانه‌های واضح حضور موش</div>
+    </div>
+
+    <p>تشخیص زودهنگام وجود موش‌ها می‌تواند از یک آلودگی کوچک به یک بحران بزرگ جلوگیری کند. این نشانه‌ها را جدی بگیرید:</p>
+    <ul>
+        <li><strong>مدفوع</strong>: کوچک، به شکل بیضی و تیره، در مسیرهای تردد موش، نزدیک منابع غذایی یا اطراف لانه.</li>
+        <li><strong>آثار جویدن</strong>: روی بسته‌های مواد غذایی، کابل‌های برق، مبلمان چوبی، درب کابینت و حتی لوله‌های پلاستیکی.</li>
+        <li><strong>صدای خراش و جویدن</strong>: به‌ویژه شب‌ها از داخل دیوارها، سقف‌ها یا کف‌پوش‌ها.</li>
+        <li><strong>لکه‌های چربی و رد پا</strong>: روی دیوارها، قرنیزها و مسیرهای تردد.</li>
+        <li><strong>بوی نامطبوع</strong>: بوی تند و کهنه‌ای شبیه بوی آمونیاک که از ادرار موش ناشی می‌شود.</li>
+        <li><strong>دیدن خود موش</strong>: به‌ویژه در شب، در آشپزخانه، انبار یا محیط‌های خلوت.</li>
+        <li><strong>لانه</strong>: معمولاً از پارچه، کاغذ، پشم شیشه، الیاف و مواد نرم ساخته شده و در مکان‌های مخفی قرار دارد.</li>
+    </ul>
+
+    <!-- بخش ۳ -->
+    <h2>🚨 خطرات و عواقب حضور موش‌ها در منزل</h2>
+
+    <!-- ===== تصویر rat1 (بعد از «سازه‌های ساختمانی آسیب می‌زنند») ===== -->
+    <div class="blog-image">
+        <img src="../images/services/rat1.jpg" alt="خسارت موش به سازه">
+        <div class="caption">تصویر: خسارت‌های ناشی از جویدن موش به سیم‌ها و سازه‌های ساختمانی</div>
+    </div>
+
+    <table>
+        <thead>
+            <tr><th>نوع خطر</th><th>توضیح</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>انتقال بیماری</strong></td><td>ناقل بیماری‌های خطرناکی مانند <strong>سالمونلا</strong> (مسمومیت غذایی)، <strong>طاعون</strong>، <strong>هانتاویروس</strong>، <strong>لپتوسپیروز</strong> و <strong>تب گزش</strong>.</td></tr>
+            <tr><td><strong>آلوده‌سازی مواد غذایی</strong></td><td>با عبور از روی مواد غذایی، آن‌ها را با ادرار، مدفوع و باکتری‌های خود آلوده می‌کنند.</td></tr>
+            <tr><td><strong>آسیب به سیم‌کشی و تأسیسات</strong></td><td>جویدن کابل‌های برق می‌تواند باعث <strong>اتصالی، آتش‌سوزی و خرابی لوازم برقی</strong> شود.</td></tr>
+            <tr><td><strong>آسیب به سازه ساختمان</strong></td><td>با حفر تونل در دیوارها، کف‌ها و فونداسیون، به ساختار ساختمان آسیب می‌رسانند.</td></tr>
+            <tr><td><strong>خسارت به وسایل و اثاثیه</strong></td><td>جویدن مبلمان، فرش، لباس، کتاب و سایر وسایل.</td></tr>
+            <tr><td><strong>ایجاد آلرژی و آسم</strong></td><td>گرد و غبار حاصل از مدفوع و ادرار موش می‌تواند باعث تشدید آلرژی و آسم شود.</td></tr>
+            <tr><td><strong>آسیب‌های روحی و روانی</strong></td><td>حضور موش در خانه می‌تواند باعث استرس، اضطراب و بی‌خوابی شود.</td></tr>
+            <tr><td><strong>خسارت به خودرو</strong></td><td>موش‌ها با نفوذ به خودروها، به سیم‌کشی و عایق‌ها آسیب می‌رسانند.</td></tr>
+        </tbody>
+    </table>
+
+    <!-- بخش ۴ -->
+    <h2>🛠️ روش‌های اصولی کنترل و ریشه‌کنی موش</h2>
+    <p>کنترل موش‌ها نیازمند یک رویکرد جامع و چندمرحله‌ای است. برای ریشه‌کنی قطعی، باید از ترکیبی از روش‌ها استفاده کرد. در شرکت سمپاشی نانوفناوران، از <strong>روش مدیریت تلفیقی آفات (IPM)</strong> برای کنترل موش استفاده می‌کنیم که شامل مراحل زیر است:</p>
+
+    <h3>مرحله ۱: بازرسی و شناسایی</h3>
+    <p>اولین و مهم‌ترین گام، شناسایی نوع موش، وسعت آلودگی و نقاط ورودی و لانه‌های آن‌ها است. کارشناسان ما با بررسی دقیق محیط، موارد زیر را مشخص می‌کنند:</p>
+    <ul>
+        <li><strong>نوع موش</strong> (خانگی، صحرایی یا سقفی)</li>
+        <li><strong>نقاط ورودی</strong> (شکاف‌ها، درزها، اطراف لوله‌ها، دریچه‌های کولر و ...)</li>
+        <li><strong>مسیرهای تردد</strong> (رد پای موش، آثار چربی، مدفوع)</li>
+        <li><strong>منابع غذایی و آب</strong> (مواد غذایی، سطل‌های زباله، نشتی لوله‌ها)</li>
+        <li><strong>محل لانه</strong> (زیر کابینت‌ها، داخل دیوارها، پشت وسایل، سقف کاذب)</li>
+    </ul>
+
+    <h3>مرحله ۲: بهداشت محیط (حذف منابع غذایی و سرپناه)</h3>
+    <p>موش‌ها به خانه شما جذب می‌شوند، زیرا غذا، آب و سرپناه در آن پیدا می‌کنند. با رعایت نکات بهداشتی، محیط را برای آنها غیرجذاب کنید:</p>
+    <ul>
+        <li><strong>جمع‌آوری و دفع اصولی زباله‌ها</strong>: زباله‌ها را روزانه در سطل‌های دربسته جمع‌آوری کنید.</li>
+        <li><strong>نگهداری مواد غذایی در ظروف دربسته</strong>: مواد غذایی، به‌ویژه غلات، آرد و مواد شیرین را در ظروف پلاستیکی یا فلزی محکم نگهداری کنید.</li>
+        <li><strong>جلوگیری از نشت آب</strong>: شیرآلات و لوله‌های چکه‌کن را تعمیر کنید.</li>
+        <li><strong>حذف مکان‌های اختفا</strong>: از تلنبار کردن وسایل و جعبه‌های غیرضروری خودداری کنید.</li>
+    </ul>
+
+    <h3>مرحله ۳: طعمه‌گذاری هوشمند (مؤثرترین روش)</h3>
+
+    <!-- ===== تصویر rat4 (بعد از مرحله ۳) ===== -->
+    <div class="blog-image">
+        <img src="../images/services/rat4.jpg" alt="طعمه‌گذاری هوشمند">
+        <div class="caption">تصویر: طعمه‌گذاری هوشمند، مؤثرترین روش برای ریشه‌کنی موش</div>
+    </div>
+
+    <p>طعمه‌گذاری یکی از مؤثرترین روش‌ها برای کنترل جمعیت موش‌ها است. در این روش از سموم ضد انعقادی (آنتی‌کواگولانت) استفاده می‌شود که با ایجاد اختلال در انعقاد خون، باعث مرگ تدریجی موش می‌شوند.</p>
+
+    <h4>انواع طعمه‌های مسموم:</h4>
+    <table>
+        <thead>
+            <tr><th>نوع سم</th><th>مثال</th><th>توضیح</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>سموم حاد</strong></td><td>فسفر دوزنگ (زینک فسفاید)</td><td>یک‌بار مصرف و بسیار سریع‌الاثر، اما خطرناک‌تر</td></tr>
+            <tr><td><strong>سموم مزمن (آنتی‌کواگولانت)</strong></td><td>برودیفاکوم، وارفارین، راکومین</td><td>نیاز به مصرف چند روزه دارد و بسیار مؤثرتر و ایمن‌تر است</td></tr>
+        </tbody>
+    </table>
+
+    <h4>اصول طعمه‌گذاری حرفه‌ای:</h4>
+    <ul>
+        <li><strong>شناخت ترجیح غذایی موش</strong>: طعمه باید از غذاهای مورد علاقه موش تهیه شود تا آن را بپذیرد.</li>
+        <li><strong>قرار دادن طعمه در مسیرهای تردد و لانه‌های فعال</strong>.</li>
+        <li><strong>استفاده از طعمه‌های با کیفیت و استاندارد</strong>.</li>
+        <li><strong>دور از دسترس کودکان و حیوانات خانگی</strong>.</li>
+        <li><strong>چرخش مواد مؤثر طعمه‌ها</strong>: برای جلوگیری از ایجاد مقاومت و عادت موش‌ها به یک نوع طعمه، باید از طعمه‌های مختلف در دوره‌های زمانی متفاوت استفاده کرد.</li>
+    </ul>
+
+    <h3>مرحله ۴: تله‌گذاری (روش فیزیکی)</h3>
+    <p>تله‌گذاری یک روش مکمل و مؤثر است. انواع تله‌ها عبارتند از:</p>
+    <ul>
+        <li><strong>تله‌های کشنده (چوبی، فلزی، زنده‌گیر)</strong>: برای کاهش سریع جمعیت مؤثر هستند. تله‌های زنده‌گیر امکان رهاسازی موش را در طبیعت فراهم می‌کنند.</li>
+        <li><strong>تله‌های چسبی</strong>: برای فضاهای کوچک و موش‌های خانگی مناسب هستند.</li>
+    </ul>
+
+    <!-- ===== تصویر rat3 (در انتهای قسمت تله‌های چسبی) ===== -->
+    <div class="blog-image">
+        <img src="../images/services/rat3.jpg" alt="تله‌های چسبی">
+        <div class="caption">تصویر: تله‌های چسبی، یکی از روش‌های فیزیکی کنترل موش</div>
+    </div>
+
+    <p>برای افزایش اثربخشی تله‌ها، باید آن‌ها را در مسیرهای تردد موش قرار داد و از طعمه‌های جذاب مانند کره بادام‌زمینی یا پنیر استفاده کرد.</p>
+
+    <h3>مرحله ۵: بستن منافذ ورودی (مقاوم‌سازی)</h3>
+    <p>پس از کاهش جمعیت موش‌ها، باید تمام نقاط ورودی آن‌ها را مسدود کنید:</p>
+    <ul>
+        <li><strong>شکاف‌های دیوار و کف</strong>: با استفاده از بتونه، سیمان یا فوم‌های مخصوص.</li>
+        <li><strong>اطراف لوله‌ها</strong>: با استفاده از ورق‌های فلزی یا توری‌های ریز.</li>
+        <li><strong>دریچه‌های کولر و تهویه</strong>: با نصب توری‌های ضد موش.</li>
+        <li><strong>پنجره‌ها و درب‌ها</strong>: با نصب نوارهای درزگیر.</li>
+    </ul>
+
+    <!-- بخش ۵ -->
+    <h2>🛡️ راه‌های پیشگیری از بازگشت موش‌ها</h2>
+    <p>با رعایت این نکات ساده، می‌توانید از بازگشت مجدد موش‌ها جلوگیری کنید:</p>
+    <ol>
+        <li><strong>تمیز نگه‌داشتن محیط</strong>: آشپزخانه، انبار و سایر نقاط را مرتباً تمیز کنید.</li>
+        <li><strong>مدیریت صحیح پسماند</strong>: زباله‌ها را در سطل‌های دربسته و دور از ساختمان نگهداری کنید.</li>
+        <li><strong>ذخیره‌سازی اصولی مواد غذایی</strong>: مواد غذایی را در ظروف دربسته و محکم نگهداری کنید.</li>
+        <li><strong>حذف منابع آب</strong>: شیرآلات چکه‌کن را تعمیر کنید و از جمع شدن آب در زیرگلدانی‌ها جلوگیری کنید.</li>
+        <li><strong>بررسی دوره‌ای</strong>: به‌طور منظم نقاط حساس را از نظر علائم جدید موش بررسی کنید.</li>
+        <li><strong>محوطه‌سازی</strong>: درختچه‌ها و پوشش گیاهی اطراف ساختمان را کوتاه نگه دارید.</li>
+    </ol>
+
+    <!-- بخش ۶ -->
+    <h2>💰 هزینه طعمه‌گذاری و کنترل موش چقدر است؟</h2>
+    <table>
+        <thead>
+            <tr><th>عامل</th><th>تأثیر بر هزینه</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>مساحت و نوع مکان</strong></td><td>منازل مسکونی، انبارها، رستوران‌ها و مراکز صنعتی هزینه‌های متفاوتی دارند.</td></tr>
+            <tr><td><strong>شدت آلودگی</strong></td><td>آلودگی شدید نیاز به عملیات بیشتر و زمان‌برتری دارد.</td></tr>
+            <tr><td><strong>نوع روش</strong></td><td>طعمه‌گذاری، تله‌گذاری یا ترکیبی از روش‌ها.</td></tr>
+            <tr><td><strong>دسترسی به نقاط آلوده</strong></td><td>در صورت نیاز به عملیات در سقف کاذب یا دیوارها، هزینه افزایش می‌یابد.</td></tr>
+            <tr><td><strong>تعداد جلسات</strong></td><td>معمولاً یک جلسه کافی است، اما در موارد شدید ممکن است نیاز به بازدید مجدد باشد.</td></tr>
+        </tbody>
+    </table>
+    <p>💡 <strong>توصیه:</strong> برای دریافت <strong>مشاوره رایگان</strong> و <strong>استعلام دقیق هزینه</strong>، با کارشناسان ما تماس بگیرید.</p>
+
+    <!-- بخش ۷ -->
+    <h2>❓ سوالات متداول درباره کنترل موش</h2>
+
+    <details>
+        <summary><strong>آیا طعمه‌گذاری موش برای کودکان و حیوانات خانگی خطرناک است؟</strong></summary>
+        <p>سموم و طعمه‌های استفاده‌شده توسط شرکت نانوفناوران با رعایت کامل استانداردهای بهداشتی در نقاط غیرقابل دسترس قرار داده می‌شوند. با این حال، همیشه باید احتیاط کرد و از تماس کودکان و حیوانات با طعمه‌ها جلوگیری کرد.</p>
+    </details>
+
+    <details>
+        <summary><strong>چه مدت طول می‌کشد تا موش‌ها از بین بروند؟</strong></summary>
+        <p>بسته به نوع سم، بین ۳ تا ۱۰ روز طول می‌کشد تا آثار طعمه‌گذاری نمایان شود. سموم ضد انعقادی به‌تدریج عمل می‌کنند و معمولاً بعد از ۵ تا ۷ روز موش‌ها از بین می‌روند.</p>
+    </details>
+
+    <details>
+        <summary><strong>آیا موش‌ها به سموم مقاوم می‌شوند؟</strong></summary>
+        <p>بله، در صورت استفاده مکرر از یک نوع سم، ممکن است موش‌ها نسبت به آن مقاوم شوند. به همین دلیل، کارشناسان ما از ترکیب و چرخش سموم مختلف استفاده می‌کنند.</p>
+    </details>
+
+    <details>
+        <summary><strong>آیا خودمان هم می‌توانیم موش را طعمه‌گذاری کنیم؟</strong></summary>
+        <p>استفاده از سموم و طعمه‌های خانگی معمولاً مؤثر نیست و ممکن است خطرناک باشد. تشخیص نوع موش، شناسایی لانه و انتخاب سم مناسب نیاز به تخصص دارد. همچنین استفاده نادرست از سموم می‌تواند برای سلامتی خطرناک باشد.</p>
+    </details>
+
+    <details>
+        <summary><strong>آیا موش‌ها فقط در فصول سرد وارد خانه می‌شوند؟</strong></summary>
+        <p>خیر، موش‌ها در تمام فصول سال به دنبال غذا و سرپناه هستند، اما در فصول سرد به دلیل کاهش منابع غذایی در طبیعت، بیشتر به سمت ساختمان‌ها می‌آیند.</p>
+    </details>
+
+    <!-- بخش ۸ -->
+    <h2>🏠 نکات طلایی برای جلوگیری از ورود موش به خانه</h2>
+    <ol>
+        <li><strong>تمام شکاف‌ها و درزهای بزرگ‌تر از ۶ میلی‌متر را ببندید.</strong></li>
+        <li><strong>دور لوله‌ها، دریچه‌های تهویه و کولر را با توری‌های فلزی بپوشانید.</strong></li>
+        <li><strong>مواد غذایی را در ظروف پلاستیکی یا فلزی محکم و دربسته نگهداری کنید.</strong></li>
+        <li><strong>زباله‌ها را در سطل‌های دربسته و دور از ساختمان قرار دهید.</strong></li>
+        <li><strong>از انباشتن هیزم، آجر و وسایل اضافی در اطراف ساختمان خودداری کنید.</strong></li>
+        <li><strong>شیرآلات و لوله‌های چکه‌کن را تعمیر کنید.</strong></li>
+        <li><strong>به‌طور دوره‌ای انبار، زیرزمین، پشت بام و سقف کاذب را بررسی کنید.</strong></li>
+        <li><strong>در صورت مشاهده هرگونه نشانه، سریعاً با کارشناسان تماس بگیرید.</strong></li>
+    </ol>
+
+    <!-- بخش ۹ -->
+    <h2>📌 نتیجه‌گیری</h2>
+    <p>موش‌ها یکی از مقاوم‌ترین و خطرناک‌ترین آفات خانگی هستند که بدون کمک متخصصان، ریشه‌کنی کامل آن‌ها تقریباً غیرممکن است. این جوندگان موذی نه‌تنها به سلامت شما آسیب می‌رسانند، بلکه خسارات مالی سنگینی نیز به بار می‌آورند.</p>
+
+    <p>شرکت سمپاشی نانوفناوران با بیش از <strong>۲۰ سال تجربه</strong> و استفاده از <strong>پیشرفته‌ترین روش‌های طعمه‌گذاری و کنترل جوندگان</strong>، آماده ارائه خدمات تخصصی و تضمینی به شماست. تیم کارشناسان ما با استفاده از سموم استاندارد و تجهیزات مدرن، موش‌ها را به‌طور کامل و قطعی از منزل یا محل کار شما حذف می‌کنند.</p>
+
+    <p style="font-size:20px; font-weight:700; text-align:center; color:var(--primary);">🚀 همین حالا اقدام کنید:</p>
+    <div style="text-align:center; margin:20px 0;">
+        <p>📞 <strong>تماس فوری:</strong> <a href="tel:09120705746" style="font-size:20px; color:var(--secondary);">۰۹۱۲۰۷۰۵۷۴۶</a></p>
+        <p>💬 <strong>درخواست مشاوره رایگان:</strong> از طریق <a href="https://wa.me/989120705746" target="_blank">واتساپ</a> یا <a href="https://eitaa.com/nanofannavaran_ir" target="_blank">ایتا</a></p>
+        <p>🔗 <strong>مشاهده سایر خدمات:</strong> <a href="../services.html">کنترل آفات مسکونی</a></p>
+    </div>
+
+    <div class="back-links">
+        <a href="../index.html" class="btn-blog-home">🏠 بازگشت به صفحه اصلی</a>
+        <a href="../services.html" class="btn-blog-services">🔙 بازگشت به لیست خدمات مسکونی</a>
+        <a href="../contact.html" class="btn-blog-contact">📞 تماس با ما</a>
+    </div>
+
 </div>
 
 <footer class="site-footer">
@@ -124,6 +479,30 @@
         <hr><p class="copyright">© تمامی حقوق محفوظ است</p>
     </div>
 </footer>
+
+<div class="floating-container">
+    <button class="floating-main-btn" id="floatingToggle">
+        <span class="btn-arrow">▶</span>
+        <span class="btn-text">📞 مشاوره رایگان</span>
+    </button>
+    <div class="floating-menu" id="floatingMenu">
+        <div class="call-wrapper">
+            <div class="floating-item call-item" id="callToggle">
+                <span class="item-icon">📞</span>
+                <span class="item-text">تماس سریع</span>
+                <span class="arrow">▲</span>
+            </div>
+            <div class="call-submenu" id="callSubmenu">
+                <a href="tel:09120705746" class="floating-item call-sub-item"><span class="item-icon">📞</span><span class="item-text">شماره ۱</span></a>
+                <a href="tel:09197173454" class="floating-item call-sub-item"><span class="item-icon">📞</span><span class="item-text">شماره ۲</span></a>
+            </div>
+        </div>
+        <a href="https://wa.me/989120705746?text=%D8%A8%D9%87%20%D8%B3%D8%A7%DB%8C%D8%AA%20%D8%B4%D8%B1%DA%A9%D8%AA%20%D8%B3%D9%85%D9%BE%D8%A7%D8%B4%DB%8C%20%D9%86%D8%A7%D9%86%D9%88%D9%81%D9%86%D8%A7%D9%88%D8%B1%D8%A7%D9%86%20%D8%AE%D9%88%D8%B4%20%D8%A2%D9%85%D8%AF%DB%8C%D8%AF.%20%DA%86%DA%AF%D9%88%D9%86%D9%87%20%D9%85%DB%8C%E2%80%8C%D8%AA%D9%88%D8%A7%D9%86%D9%85%20%DA%A9%D9%85%DA%A9%20%D8%AA%D8%A7%D9%86%20%DA%A9%D9%86%D9%85%D8%9F" target="_blank" class="floating-item whatsapp-item"><span class="item-icon">💬</span><span class="item-text">واتساپ</span></a>
+        <a href="https://eitaa.com/nanofannavaran_ir" target="_blank" class="floating-item eitaa-item"><span class="item-icon">✈️</span><span class="item-text">ایتا</span></a>
+    </div>
+</div>
+
+<button id="backToTop" title="برو به بالا">↑</button>
 
 <script src="../script.js"></script>
 </body>
