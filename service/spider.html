@@ -7,11 +7,114 @@
     <meta name="description" content="راهنمای جامع تشخیص، پیشگیری و کنترل اصولی عنکبوت‌ها در منزل و محل کار. با رویکرد تخصصی شرکت سمپاشی نانوفناوران بهداشت تهران آشنا شوید.">
     <meta name="keywords" content="سمپاشی عنکبوت, دفع عنکبوت, کنترل آفات, عنکبوت هراسی, عنکبوت سمی, نانوفناوران بهداشت تهران, سمپاشی تهران, عنکبوت بیوه سیاه">
     <link rel="canonical" href="https://nanofannavaran.ir/service/spider.html">
-    <link rel="stylesheet" href="../style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
+        /* =============== تنظیمات پایه و متغیرها =============== */
+        :root {
+            --primary: #1a7a3a;
+            --secondary: #27ae60;
+            --dark: #1a2a3a;
+            --light: #f8f9fa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Vazirmatn', 'IRANSans', 'Tahoma', sans-serif;
+            background: #f5f7fa;
+            color: #2c3e50;
+            line-height: 1.8;
+        }
+
+        /* =============== هدر =============== */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 15px rgba(0,0,0,.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 10px 20px;
+        }
+        header .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .logo img {
+            height: 50px;
+        }
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 15px;
+            transition: .3s;
+        }
+        .navbar ul li a:hover {
+            color: var(--primary);
+        }
+        .header-buttons {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .call-btn {
+            background: var(--primary);
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            transition: .3s;
+        }
+        .call-btn:hover {
+            background: var(--secondary);
+        }
+        .mobile-menu {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+        .search-box {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .search-box input {
+            padding: 6px 14px;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            font-size: 14px;
+            font-family: inherit;
+        }
+        .search-box button {
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        /* =============== محتوای مقاله =============== */
         .blog-container {
             max-width: 1100px;
             margin: 120px auto 60px;
@@ -157,6 +260,167 @@
             padding-right: 10px;
         }
 
+        /* =============== فوتر =============== */
+        .site-footer {
+            background: var(--dark);
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .site-footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer-grid {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .footer-box h3 {
+            color: var(--secondary);
+            margin-bottom: 10px;
+        }
+        .footer-box p {
+            color: #ccc;
+            font-size: 15px;
+        }
+        .site-footer hr {
+            border: none;
+            border-top: 1px solid #444;
+            margin: 20px 0;
+        }
+        .site-footer .copyright {
+            color: #888;
+            font-size: 14px;
+        }
+
+        /* =============== منوی شناور =============== */
+        .floating-container {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .floating-main-btn {
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            padding: 14px 24px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 700;
+            font-family: inherit;
+            cursor: pointer;
+            box-shadow: 0 6px 25px rgba(26, 122, 58, 0.4);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: .3s;
+        }
+        .floating-main-btn:hover {
+            background: var(--secondary);
+            transform: scale(1.03);
+        }
+        .floating-menu {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,.15);
+            padding: 12px;
+            margin-bottom: 12px;
+            display: none;
+            flex-direction: column;
+            min-width: 200px;
+        }
+        .floating-menu.active {
+            display: flex;
+        }
+        .floating-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 18px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 15px;
+            transition: .3s;
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-family: inherit;
+            width: 100%;
+            text-align: right;
+        }
+        .floating-item:hover {
+            background: #f0f7f0;
+        }
+        .floating-item .item-icon {
+            font-size: 20px;
+        }
+        .call-wrapper {
+            position: relative;
+        }
+        .call-submenu {
+            display: none;
+            padding-right: 20px;
+            margin-top: 5px;
+        }
+        .call-submenu.active {
+            display: block;
+        }
+        .call-sub-item {
+            padding: 10px 18px;
+            font-size: 14px;
+        }
+        .whatsapp-item {
+            color: #25D366;
+        }
+        .eitaa-item {
+            color: #1a7a3a;
+        }
+        .btn-arrow {
+            transition: .3s;
+        }
+        .btn-arrow.open {
+            transform: rotate(90deg);
+        }
+
+        /* =============== دکمه اسکرول به بالا =============== */
+        #backToTop {
+            position: fixed;
+            bottom: 110px;
+            right: 30px;
+            z-index: 998;
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            font-size: 28px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 6px 25px rgba(0,0,0,.2);
+            transition: .3s;
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        #backToTop:hover {
+            background: var(--secondary);
+            transform: translateY(-4px);
+        }
+        #backToTop.show {
+            display: flex;
+        }
+
+        /* =============== ریسپانسیو =============== */
         @media (max-width: 768px) {
             .blog-container {
                 padding: 20px 15px;
@@ -186,11 +450,33 @@
                 padding: 10px 20px;
                 font-size: 14px;
             }
+            .navbar ul {
+                display: none;
+            }
+            .mobile-menu {
+                display: block;
+            }
+            .floating-container {
+                left: 15px;
+                bottom: 20px;
+            }
+            .floating-main-btn {
+                padding: 12px 18px;
+                font-size: 14px;
+            }
+            #backToTop {
+                width: 48px;
+                height: 48px;
+                font-size: 24px;
+                bottom: 100px;
+                right: 15px;
+            }
         }
     </style>
 </head>
 <body>
 
+<!-- =============== هدر =============== -->
 <header>
     <div class="container">
         <a href="../index.html" class="logo"><img src="../images/logo.png" alt="لوگو شرکت سمپاشی نانوفناوران"></a>
@@ -209,16 +495,15 @@
         </div>
         <div class="search-box">
             <input type="text" id="searchInput" placeholder="جستجو...">
-            <button onclick="searchSite()">🔍</button>
+            <button onclick="alert('قابلیت جستجو در حال توسعه است')">🔍</button>
         </div>
     </div>
 </header>
 
+<!-- =============== مقاله =============== -->
 <div class="blog-container">
 
-    <!-- ========================================================= -->
-    <!-- =============== تصویر اصلی (spider) =============== -->
-    <!-- ========================================================= -->
+    <!-- ===== تصویر اصلی (spider) ===== -->
     <div class="blog-image">
         <img src="../images/services/spider.jpg" alt="عنکبوت و تار عنکبوت - سمپاشی نانوفناوران بهداشت تهران">
         <div class="caption">تصویر: عنکبوت و تار عنکبوت، یکی از آفات رایج در محیط‌های داخلی</div>
@@ -232,18 +517,13 @@
     <h2>مقدمه: موجودات هشت‌پا در خانه شما</h2>
     <p>اگر در گوشه و کنار خانه یا محل کار خود با تارهای عنکبوت رو به رو شده‌اید، احتمالاً این سؤال برایتان پیش آمده که عنکبوت‌ها جزو آفات محسوب می‌شوند یا نه. پاسخ کمی پیچیده‌تر از یک «بله» یا «خیر» ساده است. در این مقاله جامع، به بررسی کامل این موجودات هشت‌پا از منظر علمی و بهداشتی می‌پردازیم و به شما خواهیم گفت که <strong>شرکت سمپاشی نانوفناوران بهداشت تهران</strong>، به عنوان یک مرجع تخصصی در کنترل آفات، چه رویکردی برای مدیریت حضور آن‌ها در محیط‌های انسانی دارد.</p>
 
-    <p>عنکبوت‌ها از قدیمی‌ترین ساکنان کره زمین هستند و بیش از ۴۰۰ میلیون سال است که در اکوسیستم‌های مختلف زندگی می‌کنند. این موجودات با وجود ظاهر ترسناک‌شان، نقش بسیار مهمی در کنترل جمعیت حشرات دارند. اما وقتی وارد خانه‌های ما می‌شوند، موضوع کاملاً متفاوت است و نیاز به مدیریت اصولی پیدا می‌کنند.</p>
-
-    <!-- بخش ۱ -->
     <h2>📌 عنکبوت چیست و چه نقشی در طبیعت دارد؟</h2>
     <p>عنکبوت‌ها (عنکبوتیان) گروه بزرگی از بندپایان هستند که در اکثر نقاط کره زمین یافت می‌شوند. برخلاف تصور عمومی، عنکبوت‌ها حشره محسوب نمی‌شوند؛ آن‌ها از رده <strong>عنکبوتیان</strong> هستند و با حشرات تفاوت‌های اساسی دارند، از جمله داشتن هشت پا (در مقابل شش پای حشرات) و دو بخش اصلی بدن (سرسینه‌ای و شکم).</p>
 
     <h3>نقش کلیدی در اکوسیستم:</h3>
     <p>عنکبوت‌ها شکارچیان ماهری هستند و عمدتاً از حشرات موذی مانند پشه، مگس، سوسک و سایر بندپایان کوچک تغذیه می‌کنند. به همین دلیل، در طبیعت به عنوان یک کنترل‌کننده طبیعی جمعیت آفات شناخته می‌شوند و حضور آن‌ها در باغ‌ها و مزارع می‌تواند مفید باشد.</p>
 
-    <!-- ========================================================= -->
-    <!-- =============== تصویر دوم (spider2) =============== -->
-    <!-- ========================================================= -->
+    <!-- ===== تصویر دوم (spider2) ===== -->
     <div class="blog-image">
         <img src="../images/services/spider2.jpg" alt="نقش عنکبوت در اکوسیستم - نانوفناوران">
         <div class="caption">تصویر: عنکبوت در حال شکار حشره، نقش کلیدی در کنترل طبیعی آفات</div>
@@ -251,150 +531,88 @@
 
     <p>اما وقتی عنکبوت‌ها وارد <strong>منازل، ادارات، انبارها و مراکز صنعتی</strong> می‌شوند، موضوع کاملاً متفاوت است. وجود تارهای عنکبوت در محیط‌های داخلی نه تنها ظاهر ناخوشایندی ایجاد می‌کند، بلکه می‌تواند نشانه‌ای از وجود سایر حشرات در محیط باشد؛ چرا که عنکبوت‌ها به دنبال منابع غذایی (حشرات) به آن‌جا جذب شده‌اند.</p>
 
-    <!-- بخش ۲ -->
     <h2>🔍 آیا عنکبوت‌ها برای انسان خطرناک هستند؟</h2>
     <p>این سؤال یکی از مهم‌ترین دغدغه‌های مراجعین به <strong>شرکت سمپاشی نانوفناوران بهداشت تهران</strong> است. به طور کلی، اکثر قریب به اتفاق عنکبوت‌هایی که در ایران یافت می‌شوند، برای انسان <strong>بی‌خطر</strong> بوده یا خطر بسیار ناچیزی دارند. با این حال، چند نکته مهم وجود دارد:</p>
 
     <ol>
-        <li>
-            <strong>گزش عنکبوت:</strong> همه عنکبوت‌ها دارای غدد سمی هستند، اما زهر بیشتر آن‌ها برای انسان به اندازه نیش پشه یا زنبور عسل هم خطرناک نیست. با این حال، برخی افراد ممکن است به زهر عنکبوت واکنش آلرژیک نشان دهند که در موارد نادر می‌تواند جدی باشد.
-        </li>
-        <li>
-            <strong>عنکبوت‌های سمی ایران:</strong> گونه‌های خطرناک مانند «<strong>عنکبوت بیوه سیاه</strong>» (Latrodectus) یا «<strong>عنکبوت گوشه‌گیر قهوه‌ای</strong>» (Loxosceles) در برخی مناطق ایران یافت می‌شوند. گزش این عنکبوت‌ها می‌تواند علائمی مانند درد شدید، گرفتگی عضلانی، تهوع و در موارد بسیار نادر نکروز بافتی ایجاد کند و نیاز به مراجعه فوری به پزشک دارد.
-        </li>
+        <li><strong>گزش عنکبوت:</strong> همه عنکبوت‌ها دارای غدد سمی هستند، اما زهر بیشتر آن‌ها برای انسان به اندازه نیش پشه یا زنبور عسل هم خطرناک نیست. با این حال، برخی افراد ممکن است به زهر عنکبوت واکنش آلرژیک نشان دهند که در موارد نادر می‌تواند جدی باشد.</li>
+        <li><strong>عنکبوت‌های سمی ایران:</strong> گونه‌های خطرناک مانند «<strong>عنکبوت بیوه سیاه</strong>» (Latrodectus) یا «<strong>عنکبوت گوشه‌گیر قهوه‌ای</strong>» (Loxosceles) در برخی مناطق ایران یافت می‌شوند. گزش این عنکبوت‌ها می‌تواند علائمی مانند درد شدید، گرفتگی عضلانی، تهوع و در موارد بسیار نادر نکروز بافتی ایجاد کند و نیاز به مراجعه فوری به پزشک دارد.</li>
     </ol>
 
-    <!-- ========================================================= -->
-    <!-- =============== تصویر سوم (spider1) =============== -->
-    <!-- ========================================================= -->
+    <!-- ===== تصویر سوم (spider1) ===== -->
     <div class="blog-image">
         <img src="../images/services/spider1.jpg" alt="عنکبوت بیوه سیاه و عنکبوت گوشه‌گیر - نانوفناوران">
         <div class="caption">تصویر: عنکبوت بیوه سیاه و عنکبوت گوشه‌گیر قهوه‌ای، گونه‌های سمی خطرناک در ایران</div>
     </div>
 
     <ol start="3">
-        <li>
-            <strong>ترس و اضطراب:</strong> برای بسیاری از افراد، صرفاً دیدن عنکبوت یا تار آن (عنکبوت‌هراسی) باعث ایجاد استرس و اضطراب شدید می‌شود که خود یک مشکل بهداشت روانی است.
-        </li>
+        <li><strong>ترس و اضطراب:</strong> برای بسیاری از افراد، صرفاً دیدن عنکبوت یا تار آن (عنکبوت‌هراسی) باعث ایجاد استرس و اضطراب شدید می‌شود که خود یک مشکل بهداشت روانی است.</li>
     </ol>
 
-    <p>بنابراین، حتی اگر عنکبوت مستقیماً تهدیدکننده جان نباشد، حضور کنترل‌نشده آن در محیط‌های داخلی، به ویژه در اطراف کودکان و افراد حساس، قابل قبول نیست.</p>
-
-    <!-- بخش ۳ -->
     <h2>🛠️ دلایل حضور عنکبوت‌ها در منزل و محل کار</h2>
-    <p>از منظر یک <strong>شرکت سمپاشی حرفه‌ای</strong> مانند نانوفناوران، حضور عنکبوت‌ها یک <strong>نشانه</strong> است، نه مشکل اصلی. دلیل اصلی حضور آن‌ها در محیط شما یکی از موارد زیر است:</p>
-
     <ul>
-        <li>
-            <strong>وجود منبع غذایی (حشرات):</strong> عنکبوت‌ها به جایی می‌روند که غذا باشد. اگر در خانه یا محل کارتان پشه، مگس، سوسک یا سایر حشرات وجود داشته باشد، عنکبوت‌ها به دنبال آن‌ها می‌آیند. بنابراین، دیدن عنکبوت زیاد ممکن است نشان‌دهنده یک <strong>آلودگی پنهان حشرات</strong> در محیط باشد.
-        </li>
-        <li>
-            <strong>نقاط ورود:</strong> شکاف‌های دیوارها، درزهای پنجره‌ها، لوله‌های تأسیسات و دریچه‌های کولر، راه‌های نفوذ عنکبوت‌ها از محیط بیرون به داخل ساختمان هستند.
-        </li>
-        <li>
-            <strong>رطوبت و گرما:</strong> بسیاری از عنکبوت‌ها محیط‌های مرطوب و گرم را ترجیح می‌دهند. زیرزمین‌ها، انبارها و حمام‌ها مکان‌های ایده‌آلی برای زندگی آن‌هاست.
-        </li>
+        <li><strong>وجود منبع غذایی (حشرات):</strong> عنکبوت‌ها به جایی می‌روند که غذا باشد. اگر در خانه یا محل کارتان پشه، مگس، سوسک یا سایر حشرات وجود داشته باشد، عنکبوت‌ها به دنبال آن‌ها می‌آیند.</li>
+        <li><strong>نقاط ورود:</strong> شکاف‌های دیوارها، درزهای پنجره‌ها، لوله‌های تأسیسات و دریچه‌های کولر.</li>
+        <li><strong>رطوبت و گرما:</strong> زیرزمین‌ها، انبارها و حمام‌ها مکان‌های ایده‌آلی برای زندگی آن‌هاست.</li>
     </ul>
 
-    <!-- بخش ۴ -->
     <h2>🛡️ روش‌های صحیح و اصولی کنترل و دفع عنکبوت</h2>
-    <p>در اینجا باید یک تمایز قائل شوید: <strong>آیا می‌توانید عنکبوت‌ها را در خانه‌تان مدیریت کنید یا نیاز به سمپاشی تخصصی دارید؟</strong></p>
-
     <h3>راهکارهای پیشگیرانه خانگی</h3>
-    <p>برای کاهش جمعیت عنکبوت‌ها و جلوگیری از ورود آن‌ها، می‌توانید اقدامات زیر را انجام دهید:</p>
     <ul>
         <li><strong>مسدود کردن نقاط ورود:</strong> درزهای اطراف در و پنجره را با درزگیر بپوشانید.</li>
-        <li><strong>کاهش رطوبت:</strong> از تهویه مناسب در محیط‌های مرطوب مانند زیرزمین و حمام اطمینان حاصل کنید.</li>
-        <li><strong>نظافت مستمر:</strong> جاروکشی منظم از گوشه‌ها، پشت مبل‌ها و کمدها و جمع‌آوری تارهای عنکبوت.</li>
-        <li><strong>کنترل سایر حشرات:</strong> مهم‌ترین گام! اگر منبع غذایی (حشرات دیگر) را کنترل کنید، عنکبوت‌ها به طور طبیعی محل را ترک می‌کنند. اینجاست که نقش یک <strong>سمپاشی اصولی و ریشه‌کنی آفات</strong> مشخص می‌شود.</li>
+        <li><strong>کاهش رطوبت:</strong> از تهویه مناسب در محیط‌های مرطوب استفاده کنید.</li>
+        <li><strong>نظافت مستمر:</strong> جاروکشی منظم از گوشه‌ها و جمع‌آوری تارهای عنکبوت.</li>
+        <li><strong>کنترل سایر حشرات:</strong> مهم‌ترین گام! اگر منبع غذایی را کنترل کنید، عنکبوت‌ها به طور طبیعی محل را ترک می‌کنند.</li>
     </ul>
 
     <h3>سمپاشی تخصصی و ریشه‌کنی اصولی</h3>
-    <p>اگر با وجود رعایت نکات پیشگیرانه، همچنان با مشکل عنکبوت و به ویژه تارهای فراوان در محیط خود مواجه هستید، به نظر می‌رسد که جمعیت حشرات در محیط شما زیاد است. در این شرایط، <strong>سمپاشی‌های صرفاً سطحی</strong> کارساز نخواهند بود.</p>
-
-    <p><strong>شرکت سمپاشی نانوفناوران بهداشت تهران</strong> با بهره‌گیری از دانش فنی و تجهیزات مدرن، با نگاه سیستمی به کنترل آفات می‌پردازد. رویکرد حرفه‌ای ما شامل موارد زیر است:</p>
-
+    <p><strong>شرکت سمپاشی نانوفناوران بهداشت تهران</strong> با بهره‌گیری از دانش فنی و تجهیزات مدرن، با نگاه سیستمی به کنترل آفات می‌پردازد.</p>
     <ol>
-        <li>
-            <strong>بازرسی دقیق و شناسایی:</strong> کارشناسان ما ابتدا محیط را به طور کامل بررسی می‌کنند تا نوع گونه عنکبوت، نقاط ورود و مهم‌تر از همه، منبع اصلی غذایی (آفات دیگر) را شناسایی کنند.
-        </li>
-        <li>
-            <strong>روش‌های نوین و ایمن:</strong> ما از روش‌های پیشرفته سمپاشی و طعمه‌گذاری با استفاده از سموم استاندارد و کم‌خطر برای انسان و حیوانات خانگی استفاده می‌کنیم. رویکرد ما مبارزه تلفیقی (IPM) است که در آن استفاده از مواد شیمیایی به حداقل ممکن کاهش می‌یابد و اولویت با روش‌های فیزیکی و پیشگیرانه است.
-        </li>
-        <li>
-            <strong>ریشه‌کنی تضمینی:</strong> هدف ما صرفاً دفع موقت نیست، بلکه حذف منبع جذب عنکبوت‌ها و ایجاد یک محیط پایدار و عاری از آفات است.
-        </li>
+        <li><strong>بازرسی دقیق و شناسایی:</strong> شناسایی گونه عنکبوت، نقاط ورود و منبع اصلی غذایی.</li>
+        <li><strong>روش‌های نوین و ایمن:</strong> استفاده از سموم استاندارد و کم‌خطر با رویکرد مبارزه تلفیقی (IPM).</li>
+        <li><strong>ریشه‌کنی تضمینی:</strong> حذف منبع جذب عنکبوت‌ها و ایجاد محیط پایدار.</li>
     </ol>
 
-    <!-- بخش ۵ -->
     <h2>💰 هزینه سمپاشی عنکبوت چقدر است؟</h2>
-    <p>هزینه سمپاشی عنکبوت به عوامل مختلفی بستگی دارد:</p>
     <table>
-        <thead>
-            <tr><th>عامل</th><th>تأثیر بر هزینه</th></tr>
-        </thead>
+        <thead><tr><th>عامل</th><th>تأثیر بر هزینه</th></tr></thead>
         <tbody>
-            <tr><td><strong>مساحت و نوع مکان</strong></td><td>منازل مسکونی، ویلاها، انبارها، ادارات و مراکز صنعتی هزینه‌های متفاوتی دارند.</td></tr>
-            <tr><td><strong>شدت آلودگی</strong></td><td>آلودگی شدید نیاز به عملیات بیشتر و زمان‌برتری دارد.</td></tr>
-            <tr><td><strong>نوع روش</strong></td><td>سمپاشی تماسی، طعمه‌گذاری یا ترکیبی از روش‌ها.</td></tr>
-            <tr><td><strong>دسترسی به نقاط آلوده</strong></td><td>در صورت نیاز به سمپاشی سقف‌های بلند یا محیط‌های بزرگ، هزینه افزایش می‌یابد.</td></tr>
-            <tr><td><strong>تعداد جلسات</strong></td><td>معمولاً یک جلسه کافی است، اما در موارد شدید ممکن است نیاز به بازدید مجدد باشد.</td></tr>
+            <tr><td><strong>مساحت و نوع مکان</strong></td><td>منازل، ویلاها، ادارات و مراکز صنعتی هزینه‌های متفاوتی دارند.</td></tr>
+            <tr><td><strong>شدت آلودگی</strong></td><td>آلودگی شدید نیاز به عملیات بیشتر دارد.</td></tr>
+            <tr><td><strong>نوع روش</strong></td><td>سمپاشی تماسی، طعمه‌گذاری یا ترکیبی.</td></tr>
         </tbody>
     </table>
-    <p>💡 <strong>توصیه:</strong> برای دریافت <strong>مشاوره رایگان</strong> و <strong>استعلام دقیق هزینه</strong>، با کارشناسان ما تماس بگیرید.</p>
 
-    <!-- بخش ۶ -->
-    <h2>❓ سوالات متداول درباره سمپاشی عنکبوت</h2>
-
+    <h2>❓ سوالات متداول</h2>
     <details>
-        <summary><strong>آیا سمپاشی عنکبوت برای کودکان و حیوانات خانگی خطرناک است؟</strong></summary>
-        <p>خیر، سموم استفاده‌شده توسط شرکت نانوفناوران با رعایت کامل استانداردهای بهداشتی انتخاب می‌شوند. همچنین در هنگام سمپاشی، افراد و حیوانات از محیط خارج می‌شوند و پس از تهویه کامل، محیط کاملاً ایمن است.</p>
+        <summary><strong>آیا سمپاشی عنکبوت برای کودکان خطرناک است؟</strong></summary>
+        <p>خیر، سموم استفاده‌شده توسط شرکت نانوفناوران با رعایت کامل استانداردهای بهداشتی انتخاب می‌شوند.</p>
     </details>
-
     <details>
         <summary><strong>چه مدت بعد از سمپاشی عنکبوت‌ها از بین می‌روند؟</strong></summary>
-        <p>اثر سمپاشی تماسی فوری است و عنکبوت‌های موجود بلافاصله از بین می‌روند. اما برای جلوگیری از بازگشت مجدد، حذف منابع غذایی (حشرات دیگر) ضروری است.</p>
+        <p>اثر سمپاشی تماسی فوری است و عنکبوت‌های موجود بلافاصله از بین می‌روند.</p>
     </details>
-
-    <details>
-        <summary><strong>آیا خودمان هم می‌توانیم عنکبوت را سمپاشی کنیم؟</strong></summary>
-        <p>استفاده از اسپری‌های خانگی معمولاً مؤثر نیست و فقط عنکبوت‌های سطحی را از بین می‌برد. همچنین استفاده نادرست از سموم می‌تواند برای سلامتی خطرناک باشد. روش‌های تخصصی نیاز به تجهیزات و دانش دارد.</p>
-    </details>
-
-    <details>
-        <summary><strong>بعد از سمپاشی باید منزل را ترک کنیم؟</strong></summary>
-        <p>بله، معمولاً ۲ تا ۴ ساعت باید محیط را ترک کنید تا سموم تهویه شوند. کارشناسان زمان دقیق را به شما اعلام می‌کنند.</p>
-    </details>
-
     <details>
         <summary><strong>آیا عنکبوت‌ها دوباره برمی‌گردند؟</strong></summary>
-        <p>اگر منابع تولید مثل (حشرات) حذف شوند و نکات پیشگیری رعایت شود، احتمال بازگشت بسیار کم است. شرکت نانوفناوران خدمات خود را با ضمانت ارائه می‌دهد.</p>
+        <p>اگر منابع غذایی حذف شوند و نکات پیشگیری رعایت شود، احتمال بازگشت بسیار کم است.</p>
     </details>
 
-    <!-- بخش ۷ -->
-    <h2>🏠 نکات طلایی برای جلوگیری از ورود عنکبوت به خانه</h2>
+    <h2>🏠 نکات طلایی برای جلوگیری از ورود عنکبوت</h2>
     <ol>
-        <li><strong>همه پنجره‌ها را با توری ریز بپوشانید.</strong></li>
-        <li><strong>شکاف‌های دیوار و درزهای درب را ببندید.</strong></li>
-        <li><strong>رطوبت محیط را کاهش دهید (استفاده از تهویه).</strong></li>
-        <li><strong>خانه را مرتباً جاروکشی و گردگیری کنید.</strong></li>
-        <li><strong>تارهای عنکبوت را به محض دیدن جمع‌آوری کنید.</strong></li>
-        <li><strong>از ورود سایر حشرات به خانه جلوگیری کنید.</strong></li>
-        <li><strong>جعبه‌ها و کارتن‌های اضافی را جمع‌آوری کنید.</strong></li>
-        <li><strong>نورهای اضافی در فضای بیرونی را کاهش دهید.</strong></li>
+        <li>همه پنجره‌ها را با توری ریز بپوشانید.</li>
+        <li>شکاف‌های دیوار و درزهای درب را ببندید.</li>
+        <li>رطوبت محیط را کاهش دهید.</li>
+        <li>خانه را مرتباً جاروکشی و گردگیری کنید.</li>
+        <li>تارهای عنکبوت را به محض دیدن جمع‌آوری کنید.</li>
     </ol>
 
-    <!-- بخش ۸ -->
     <h2>📌 نتیجه‌گیری</h2>
-    <p>عنکبوت‌ها به خودی خود آفات خطرناکی نیستند، اما حضور آن‌ها در محیط‌های داخلی یک <strong>زنگ خطر</strong> برای وجود آفات دیگر و عدم تعادل بهداشتی در محیط است. به جای مقابله سطحی، با یک رویکرد اصولی و با کمک کارشناسان مجرب، ریشه مشکل را بیابید. <strong>سمپاشی اصولی، پیشگیری هوشمندانه و دانش تخصصی</strong> سه کلید اصلی برای داشتن یک محیط زندگی و کاری عاری از عنکبوت و سایر حشرات موذی است.</p>
-
-    <p>شرکت سمپاشی نانوفناوران با بیش از <strong>۲۰ سال تجربه</strong> و استفاده از <strong>پیشرفته‌ترین تجهیزات سمپاشی</strong>، آماده ارائه خدمات تخصصی و تضمینی به شماست. تیم کارشناسان ما با استفاده از سموم استاندارد و روش‌های نوین، عنکبوت‌ها را به‌طور کامل و قطعی از منزل یا محل کار شما حذف می‌کنند و محیطی امن، بهداشتی و آرام را برای شما به ارمغان می‌آورند.</p>
+    <p>عنکبوت‌ها به خودی خود آفات خطرناکی نیستند، اما حضور آن‌ها در محیط‌های داخلی یک <strong>زنگ خطر</strong> برای وجود آفات دیگر است. <strong>سمپاشی اصولی، پیشگیری هوشمندانه و دانش تخصصی</strong> سه کلید اصلی برای داشتن یک محیط زندگی و کاری عاری از عنکبوت است.</p>
 
     <p style="font-size:20px; font-weight:700; text-align:center; color:var(--primary);">🚀 همین حالا اقدام کنید:</p>
     <div style="text-align:center; margin:20px 0;">
         <p>📞 <strong>تماس فوری:</strong> <a href="tel:09120705746" style="font-size:20px; color:var(--secondary);">۰۹۱۲۰۷۰۵۷۴۶</a></p>
         <p>💬 <strong>درخواست مشاوره رایگان:</strong> از طریق <a href="https://wa.me/989120705746" target="_blank">واتساپ</a> یا <a href="https://eitaa.com/nanofannavaran_ir" target="_blank">ایتا</a></p>
-        <p>🔗 <strong>مشاهده سایر خدمات:</strong> <a href="../services.html">کنترل آفات مسکونی</a></p>
     </div>
 
     <div class="back-links">
@@ -405,6 +623,7 @@
 
 </div>
 
+<!-- =============== فوتر =============== -->
 <footer class="site-footer">
     <div class="container">
         <div class="footer-grid">
@@ -415,11 +634,8 @@
     </div>
 </footer>
 
+<!-- =============== منوی شناور =============== -->
 <div class="floating-container">
-    <button class="floating-main-btn" id="floatingToggle">
-        <span class="btn-arrow">▶</span>
-        <span class="btn-text">📞 مشاوره رایگان</span>
-    </button>
     <div class="floating-menu" id="floatingMenu">
         <div class="call-wrapper">
             <div class="floating-item call-item" id="callToggle">
@@ -432,13 +648,98 @@
                 <a href="tel:09197173454" class="floating-item call-sub-item"><span class="item-icon">📞</span><span class="item-text">شماره ۲</span></a>
             </div>
         </div>
-        <a href="https://wa.me/989120705746?text=%D8%A8%D9%87%20%D8%B3%D8%A7%DB%8C%D8%AA%20%D8%B4%D8%B1%DA%A9%D8%AA%20%D8%B3%D9%85%D9%BE%D8%A7%D8%B4%DB%8C%20%D9%86%D8%A7%D9%86%D9%88%D9%81%D9%86%D8%A7%D9%88%D8%B1%D8%A7%D9%86%20%D8%AE%D9%88%D8%B4%20%D8%A2%D9%85%D8%AF%DB%8C%D8%AF.%20%DA%86%DA%AF%D9%88%D9%86%D9%87%20%D9%85%DB%8C%E2%80%8C%D8%AA%D9%88%D8%A7%D9%86%D9%85%20%DA%A9%D9%85%DA%A9%20%D8%AA%D8%A7%D9%86%20%DA%A9%D9%86%D9%85%D8%9F" target="_blank" class="floating-item whatsapp-item"><span class="item-icon">💬</span><span class="item-text">واتساپ</span></a>
+        <a href="https://wa.me/989120705746" target="_blank" class="floating-item whatsapp-item"><span class="item-icon">💬</span><span class="item-text">واتساپ</span></a>
         <a href="https://eitaa.com/nanofannavaran_ir" target="_blank" class="floating-item eitaa-item"><span class="item-icon">✈️</span><span class="item-text">ایتا</span></a>
     </div>
+    <button class="floating-main-btn" id="floatingToggle">
+        <span class="btn-arrow">▶</span>
+        <span class="btn-text">📞 مشاوره رایگان</span>
+    </button>
 </div>
 
+<!-- =============== دکمه اسکرول به بالا =============== -->
 <button id="backToTop" title="برو به بالا">↑</button>
 
-<script src="../script.js"></script>
+<!-- =============== جاوااسکریپت کامل =============== -->
+<script>
+    // ===== دکمه اسکرول به بالا =====
+    var backToTopBtn = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
+    });
+
+    backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // ===== منوی شناور =====
+    var toggleBtn = document.getElementById('floatingToggle');
+    var menu = document.getElementById('floatingMenu');
+    var arrow = toggleBtn.querySelector('.btn-arrow');
+
+    toggleBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        menu.classList.toggle('active');
+        arrow.classList.toggle('open');
+    });
+
+    // ===== زیرمنوی تماس =====
+    var callToggle = document.getElementById('callToggle');
+    var callSubmenu = document.getElementById('callSubmenu');
+
+    callToggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        callSubmenu.classList.toggle('active');
+        var arrowIcon = this.querySelector('.arrow');
+        if (arrowIcon) {
+            arrowIcon.textContent = callSubmenu.classList.contains('active') ? '▼' : '▲';
+        }
+    });
+
+    // ===== بستن منو با کلیک بیرون =====
+    document.addEventListener('click', function() {
+        menu.classList.remove('active');
+        arrow.classList.remove('open');
+        callSubmenu.classList.remove('active');
+        var arrowIcon = callToggle.querySelector('.arrow');
+        if (arrowIcon) {
+            arrowIcon.textContent = '▲';
+        }
+    });
+
+    menu.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+
+    // ===== منوی موبایل =====
+    var mobileMenuBtn = document.querySelector('.mobile-menu');
+    var navbar = document.querySelector('.navbar ul');
+
+    mobileMenuBtn.addEventListener('click', function() {
+        if (navbar.style.display === 'flex') {
+            navbar.style.display = 'none';
+        } else {
+            navbar.style.display = 'flex';
+            navbar.style.flexDirection = 'column';
+            navbar.style.position = 'absolute';
+            navbar.style.top = '70px';
+            navbar.style.right = '20px';
+            navbar.style.background = '#fff';
+            navbar.style.padding = '20px';
+            navbar.style.borderRadius = '12px';
+            navbar.style.boxShadow = '0 10px 30px rgba(0,0,0,.15)';
+            navbar.style.gap = '10px';
+        }
+    });
+</script>
+
 </body>
 </html>
