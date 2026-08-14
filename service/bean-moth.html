@@ -3,118 +3,736 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سمپاشی بید حبوبات | نانوفناوران</title>
-    <link rel="stylesheet" href="../style.css">
+    <title>سمپاشی بید حبوبات (شب پره هندی) | راهنمای جامع کنترل و ریشه‌کنی | نانوفناوران</title>
+    <meta name="description" content="مقاله جامع سمپاشی بید حبوبات (شب پره هندی): معرفی، علائم، روش‌های پیشگیری و کنترل تخصصی آفت مواد غذایی در منزل و انبار.">
+    <meta name="keywords" content="سمپاشی بید حبوبات, شب پره هندی, بید مواد غذایی, پروانه برنج, کنترل بید حبوبات, دفع بید, نانوفناوران">
+    <link rel="canonical" href="https://nanofannavaran.ir/service/bean-moth.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
-        .service-detail {
-            max-width: 1100px;
-            margin: 100px auto 50px;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
+        :root {
+            --primary: #0B6FB8;
+            --secondary: #1a8bc0;
+            --dark: #1a2a3a;
+            --light: #f0f7ff;
+            --white: #ffffff;
+            --green: #25a344;
+            --orange: #e67e22;
         }
-        .service-detail .text h1 {
-            font-size: 32px;
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Vazirmatn', 'IRANSans', 'Tahoma', sans-serif;
+            background: #f5f8fc;
+            color: #2c3e50;
+            line-height: 1.8;
+        }
+
+        /* =============== هدر =============== */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 15px rgba(0,0,0,.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 10px 20px;
+        }
+        header .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .logo img {
+            height: 50px;
+        }
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 15px;
+            transition: .3s;
+        }
+        .navbar ul li a:hover,
+        .navbar ul li a.active {
+            color: var(--primary);
+        }
+        .header-buttons {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .mobile-menu {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+        .search-box {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .search-box input {
+            padding: 6px 14px;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            font-size: 14px;
+            font-family: inherit;
+        }
+        .search-box button {
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        /* =============== محتوای مقاله =============== */
+        .blog-container {
+            max-width: 1100px;
+            margin: 120px auto 60px;
+            padding: 0 20px;
+            background: #fff;
+            border-radius: 24px;
+            box-shadow: 0 10px 40px rgba(0,0,0,.08);
+            padding: 40px 40px 60px;
+        }
+        .blog-container h1 {
+            font-size: 36px;
             color: var(--primary);
             margin-bottom: 20px;
+            line-height: 1.5;
         }
-        .service-detail .text p {
+        .blog-container .meta {
+            color: #888;
+            font-size: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .blog-container h2 {
+            font-size: 28px;
+            color: var(--dark);
+            margin: 40px 0 15px;
+            border-right: 5px solid var(--primary);
+            padding-right: 15px;
+        }
+        .blog-container h3 {
+            font-size: 22px;
+            color: var(--primary);
+            margin: 30px 0 12px;
+        }
+        .blog-container h4 {
+            font-size: 19px;
+            color: var(--dark);
+            margin: 25px 0 10px;
+        }
+        .blog-container p {
             line-height: 2.2;
-            color: #555;
+            color: #444;
+            font-size: 17px;
+            margin-bottom: 18px;
+            text-align: justify;
+        }
+        .blog-container ul,
+        .blog-container ol {
+            line-height: 2.2;
+            color: #444;
+            font-size: 17px;
+            padding-right: 25px;
+            margin-bottom: 20px;
+        }
+        .blog-container ul li,
+        .blog-container ol li {
+            margin-bottom: 8px;
+        }
+        .blog-container table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0 30px;
             font-size: 16px;
         }
-        .service-detail .gif img {
+        .blog-container table th {
+            background: var(--primary);
+            color: #fff;
+            padding: 12px 15px;
+            text-align: right;
+        }
+        .blog-container table td {
+            border: 1px solid #ddd;
+            padding: 10px 15px;
+            background: #fafafa;
+        }
+        .blog-container table tr:nth-child(even) td {
+            background: #f5f8fc;
+        }
+        .blog-image {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .blog-image img {
             width: 100%;
-            max-height: 400px;
-            object-fit: contain;
+            max-width: 700px;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,.15);
         }
-        .back-link {
+        .blog-image .caption {
+            font-size: 14px;
+            color: #888;
+            margin-top: 10px;
+        }
+        .blog-image .caption strong {
+            color: var(--primary);
+        }
+
+        .blog-container .back-links {
+            margin: 40px 0 20px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .blog-container .back-links a {
             display: inline-block;
-            margin-top: 30px;
-            background: var(--secondary);
-            color: #fff;
             padding: 12px 28px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
             transition: .3s;
         }
-        .back-link:hover {
-            background: var(--primary);
-        }
-        .contact-float {
-            margin-top: 20px;
-        }
-        .contact-float a {
-            display: inline-block;
+        .blog-container .back-links .btn-blog-home {
             background: var(--primary);
             color: #fff;
-            padding: 12px 28px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            margin-left: 10px;
-            transition: .3s;
         }
-        .contact-float a:hover {
+        .blog-container .back-links .btn-blog-home:hover {
             background: var(--secondary);
         }
+        .blog-container .back-links .btn-blog-services {
+            background: var(--secondary);
+            color: #fff;
+        }
+        .blog-container .back-links .btn-blog-services:hover {
+            background: var(--primary);
+        }
+        .blog-container .back-links .btn-blog-contact {
+            background: var(--dark);
+            color: #fff;
+        }
+        .blog-container .back-links .btn-blog-contact:hover {
+            background: var(--primary);
+        }
+
+        .callout-box {
+            background: var(--light);
+            border-right: 5px solid var(--primary);
+            padding: 20px 25px;
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+        .callout-box strong {
+            color: var(--primary);
+        }
+
+        .danger-box {
+            background: #fff3cd;
+            border-right: 5px solid #ffc107;
+            padding: 20px 25px;
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+        .danger-box strong {
+            color: #d63031;
+        }
+
+        details {
+            background: #f8fbfd;
+            padding: 15px 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #e9ecef;
+        }
+        details summary {
+            font-weight: 700;
+            color: var(--primary);
+            cursor: pointer;
+            font-size: 17px;
+        }
+        details p {
+            margin-top: 12px;
+            padding-right: 10px;
+        }
+
+        /* =============== فوتر =============== */
+        .site-footer {
+            background: var(--dark);
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .site-footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer-grid {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .footer-box h3 {
+            color: var(--secondary);
+            margin-bottom: 10px;
+        }
+        .footer-box p {
+            color: #ccc;
+            font-size: 15px;
+        }
+        .site-footer hr {
+            border: none;
+            border-top: 1px solid #444;
+            margin: 20px 0;
+        }
+        .site-footer .copyright {
+            color: #888;
+            font-size: 14px;
+        }
+
+        /* =============== منوی شناور =============== */
+        .floating-container {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .floating-main-btn {
+            background: var(--green);
+            color: #fff;
+            border: none;
+            padding: 14px 24px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 700;
+            font-family: inherit;
+            cursor: pointer;
+            box-shadow: 0 6px 25px rgba(37, 163, 68, 0.4);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: .3s;
+        }
+        .floating-main-btn:hover {
+            background: #1e8c3a;
+            transform: scale(1.03);
+        }
+        .floating-menu {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,.15);
+            padding: 12px;
+            margin-bottom: 12px;
+            display: none;
+            flex-direction: column;
+            min-width: 200px;
+        }
+        .floating-menu.active {
+            display: flex;
+        }
+        .floating-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 18px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 15px;
+            transition: .3s;
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-family: inherit;
+            width: 100%;
+            text-align: right;
+        }
+        .floating-item:hover {
+            background: var(--light);
+        }
+        .floating-item .item-icon {
+            font-size: 20px;
+        }
+        .call-wrapper {
+            position: relative;
+        }
+        .call-submenu {
+            display: none;
+            padding-right: 20px;
+            margin-top: 5px;
+        }
+        .call-submenu.active {
+            display: block;
+        }
+        .call-sub-item {
+            padding: 10px 18px;
+            font-size: 14px;
+        }
+        .whatsapp-item {
+            color: #25D366;
+        }
+        .eitaa-item {
+            color: var(--orange);
+        }
+        .btn-arrow {
+            transition: .3s;
+        }
+        .btn-arrow.open {
+            transform: rotate(90deg);
+        }
+
+        /* =============== دکمه اسکرول به بالا =============== */
+        #backToTop {
+            position: fixed;
+            bottom: 110px;
+            right: 30px;
+            z-index: 998;
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            font-size: 28px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 6px 25px rgba(0,0,0,.2);
+            transition: .3s;
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        #backToTop:hover {
+            background: var(--secondary);
+            transform: translateY(-4px);
+        }
+        #backToTop.show {
+            display: flex;
+        }
+
+        /* =============== ریسپانسیو =============== */
         @media (max-width: 768px) {
-            .service-detail {
-                grid-template-columns: 1fr;
-                text-align: center;
-                margin-top: 80px;
+            .blog-container {
+                padding: 20px 15px;
+                margin: 100px auto 40px;
             }
-            .service-detail .text h1 {
+            .blog-container h1 {
                 font-size: 26px;
             }
-            .service-detail .gif img {
-                max-height: 250px;
+            .blog-container h2 {
+                font-size: 22px;
+            }
+            .blog-container h3 {
+                font-size: 19px;
+            }
+            .blog-container h4 {
+                font-size: 17px;
+            }
+            .blog-container p,
+            .blog-container ul,
+            .blog-container ol {
+                font-size: 15px;
+            }
+            .blog-container table {
+                font-size: 14px;
+            }
+            .blog-container .back-links a {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+            .navbar ul {
+                display: none;
+            }
+            .mobile-menu {
+                display: block;
+            }
+            .floating-container {
+                left: 15px;
+                bottom: 20px;
+            }
+            .floating-main-btn {
+                padding: 12px 18px;
+                font-size: 14px;
+            }
+            #backToTop {
+                width: 48px;
+                height: 48px;
+                font-size: 24px;
+                bottom: 100px;
+                right: 15px;
             }
         }
     </style>
 </head>
 <body>
 
+<!-- =============== هدر =============== -->
 <header>
     <div class="container">
-        <a href="../index.html" class="logo"><img src="../images/logo.png" alt="لوگو"></a>
+        <a href="../index.html" class="logo"><img src="../images/logo.png" alt="لوگو شرکت سمپاشی نانوفناوران"></a>
         <nav class="navbar">
             <ul>
                 <li><a href="../index.html">صفحه اصلی</a></li>
-                <li><a href="../services.html" class="active">خدمات</a></li>
+                <li><a href="../services.html">خدمات مسکونی</a></li>
+                <li><a href="../commercial-services.html">خدمات تجاری</a></li>
                 <li><a href="../about.html">درباره ما</a></li>
                 <li><a href="../contact.html">تماس</a></li>
             </ul>
         </nav>
         <div class="header-buttons">
-            <a href="tel:09120705746" class="call-btn">📞 09120705746</a>
             <div class="mobile-menu">☰</div>
+        </div>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="جستجو...">
+            <button onclick="alert('قابلیت جستجو در حال توسعه است')">🔍</button>
         </div>
     </div>
 </header>
 
-<div class="service-detail">
-    <div class="text">
-        <h1>🧶 سمپاشی بید حبوبات</h1>
-        <p>کنترل تخصصی بید حبوبات (Plodia interpunctella) در انبارها، فروشگاه‌ها و مواد غذایی خشک.</p>
-        <p><strong>روش کنترل:</strong> استفاده از سموم استاندارد و روش‌های نوین با تضمین کیفیت و ماندگاری بالا.</p>
-        <p><strong>مدت زمان اثرگذاری:</strong> نتایج سریع و ماندگار تا ۶ ماه.</p>
-        <a href="../services.html" class="back-link">🔙 بازگشت به لیست خدمات</a>
-        <div class="contact-float">
-            <a href="tel:09120705746">📞 تماس فوری</a>
-            <a href="https://wa.me/989120705746" target="_blank">💬 واتساپ</a>
-        </div>
+<!-- =============== مقاله =============== -->
+<div class="blog-container">
+
+    <h1>راهنمای جامع و تخصصی سمپاشی بید حبوبات (شب پره هندی) | از تشخیص تا ریشه‌کنی اصولی</h1>
+    <div class="meta">
+        <span>📅 آخرین به‌روزرسانی: ۲ شهریور ۱۴۰۴</span> &nbsp;|&nbsp; <span>⏱ زمان مطالعه: ۱۲ دقیقه</span>
     </div>
-    <div class="gif">
-        <img src="../images/services/bean-moth.jpg" alt="سمپاشی بید حبوبات">
+
+    <!-- ===== تصویر اصلی (bean-moth.jpg) ===== -->
+    <div class="blog-image">
+        <img src="../images/services/bean-moth.jpg" alt="سمپاشی بید حبوبات - شب پره هندی - کنترل تخصصی نانوفناوران">
+        <div class="caption"><strong>تصویر شب پره هندی (بید حبوبات)</strong> - یکی از مخرب‌ترین آفات مواد غذایی در آشپزخانه و انبارها</div>
     </div>
+
+    <h2>مقدمه: مهمان ناخوانده‌ای که سفره شما را هدف می‌گیرد</h2>
+    <p>آیا تا به حال در میان برنج، آرد، حبوبات یا آجیل خود، حشرات ریز یا تارهای ابریشمی سفیدرنگی مشاهده کرده‌اید که نشان از حضور یک آفت خطرناک دارد؟ آیا با باز کردن درب کابینت آشپزخانه، پروانه‌های کوچکی را دیده‌اید که از میان مواد غذایی بیرون می‌پرند؟ به احتمال قریب به یقین، شما با <strong>بید حبوبات</strong> یا همان <strong>شب پره هندی</strong> آشنا شده‌اید؛ آفتی کوچک اما فوق‌العاده مخرب که می‌تواند در سکوت کامل، انبار مواد غذایی شما را به توده‌ای غیرقابل مصرف تبدیل کند [citation:1][citation:2].</p>
+
+    <p><strong>شب پره هندی</strong> که در زبان علمی با نام <em>Plodia interpunctella</em> شناخته می‌شود، یکی از جدی‌ترین تهدیدات برای مواد غذایی انبار شده در منازل، فروشگاه‌ها و انبارها محسوب می‌شود [citation:2][citation:6]. این حشره کوچک با تخم‌گذاری در میان غلات، حبوبات، آجیل و خشکبار، به تدریج و بدون آنکه متوجه شوید، مواد غذایی شما را آلوده و غیرقابل مصرف می‌کند. آنچه این آفت را به ویژه خطرناک می‌سازد، سرعت تکثیر بالا و توانایی آن در نفوذ به بسته‌بندی‌های مواد غذایی است [citation:2].</p>
+
+    <p>در این مقاله جامع از <strong>شرکت سمپاشی نانوفناوران بهداشت تهران</strong>، شما را با تمام جنبه‌های مربوط به بید حبوبات آشنا خواهیم کرد؛ از شناسایی دقیق این آفت و تشخیص علائم آلودگی گرفته تا روش‌های پیشگیری و مهم‌تر از همه، <strong>سمپاشی تخصصی و ریشه‌کنی اصولی</strong> این آفت با استفاده از پیشرفته‌ترین روش‌های روز دنیا.</p>
+
+    <h2>بید حبوبات (شب پره هندی) چیست و چرا وارد آشپزخانه می‌شود؟</h2>
+
+    <h3>معرفی حشره شب پره هندی</h3>
+    <p>بید حبوبات یا شب پره هندی حشره‌ای کوچک از راسته پروانه‌سانان است که در مرحله لاروی، از مواد غذایی خشک مانند غلات، حبوبات، آجیل، خشکبار، آرد و حتی بیسکویت و ماکارونی تغذیه می‌کند [citation:2][citation:6]. برخلاف تصور عموم، این حشرات بالغ نیستند که به مواد غذایی آسیب می‌زنند؛ بلکه <strong>لاروهای بید</strong> عامل اصلی آلودگی و تخریب مواد غذایی هستند. حشرات بالغ تنها نقش تخم‌گذاری در میان مواد غذایی را بر عهده دارند و پس از آن، لاروهای خارج شده از تخم‌ها هستند که با تغذیه از مواد غذایی، آنها را آلوده و غیرقابل مصرف می‌کنند [citation:1][citation:2].</p>
+
+    <p>این آفت که اولین بار در آمریکا توسط حشره‌شناسی به نام آسا فیتچ شناسایی شد، اکنون در سراسر جهان و از جمله ایران پراکنده است [citation:2].</p>
+
+    <div class="callout-box">
+        <p><strong>ویژگی‌های ظاهری شب پره هندی [citation:2][citation:6]:</strong></p>
+        <ul>
+            <li><strong>حشره بالغ:</strong> طول حدود ۸ میلی‌متر و عرض بال‌های باز ۱۶ تا ۲۰ میلی‌متر. یک سوم بال‌های جلویی از سمت قاعده به رنگ خاکستری روشن و دو سوم بقیه به رنگ قهوه‌ای متمایل به قرمز است.</li>
+            <li><strong>لارو:</strong> به طول ۱۲ تا ۱۸ میلی‌متر، سفید متمایل به زرد با سایه صورتی یا سبز، دارای سر تیره و موهای پراکنده.</li>
+        </ul>
+    </div>
+
+    <h3>چرخه زندگی شب پره هندی</h3>
+    <p>درک چرخه زندگی بید حبوبات برای مبارزه مؤثر با این آفت ضروری است [citation:6]:</p>
+    <ol>
+        <li><strong>تخم:</strong> شب پره ماده به طور متوسط ۱۵۰ تا ۳۵۰ تخم به صورت دسته‌های ۱۲ تا ۳۰ عددی روی مواد خوراکی می‌گذارد [citation:2][citation:6]. در شرایط مساعد، تخم‌ها پس از ۳ روز تفریخ می‌شوند.</li>
+        <li><strong>لارو:</strong> این مرحله مخرب‌ترین مرحله چرخه زندگی است. لاروها با تنیدن تارهای ابریشمی در اطراف و سطح مواد غذایی، از آن تغذیه کرده و حرکت می‌کنند. این تارها همراه با فضولات لاروی و پوست‌های ریخته شده، لایه‌ای ضخیم و قهوه‌ای رنگ روی مواد غذایی ایجاد می‌کنند و باعث آلودگی شدید می‌شوند [citation:2][citation:6].</li>
+        <li><strong>شفیره:</strong> لارو پس از تغذیه کافی، در یک پیله ابریشمی به شفیره تبدیل می‌شود [citation:2].</li>
+        <li><strong>حشره بالغ:</strong> شب پره بالغ از شفیره خارج می‌شود و با بال‌های کوچک خود به جستجوی محیط برای تخم‌گذاری می‌پردازد.</li>
+    </ol>
+
+    <h2>علائم تشخیص آلودگی به بید حبوبات</h2>
+    <p>تشخیص زودهنگام آلودگی می‌تواند از گسترش آن به سایر مواد غذایی جلوگیری کند. مهم‌ترین علائم حضور بید حبوبات عبارتند از [citation:2][citation:6]:</p>
+
+    <ul>
+        <li><strong>مشاهده تارهای ابریشمی:</strong> وجود تارهای سفید یا خاکستری در میان برنج، آرد، حبوبات یا آجیل، نشانه بارز فعالیت لاروهای بید است [citation:2][citation:6].</li>
+        <li><strong>مشاهده لارو (کرم سفید):</strong> دیدن کرم‌های کوچک سفید یا صورتی رنگ در میان مواد غذایی که به آرامی حرکت می‌کنند [citation:2].</li>
+        <li><strong>مشاهده حشرات بالغ:</strong> دیدن پروانه‌های کوچک قهوه‌ای و خاکستری که از میان مواد غذایی یا کابینت‌ها خارج می‌شوند [citation:1].</li>
+        <li><strong>بوی نامطبوع:</strong> مواد غذایی آلوده به بید بوی نامطبوع و کهنگی می‌دهند که ناشی از فضولات لاروهاست [citation:2][citation:6].</li>
+        <li><strong>سوراخ‌های ریز در بسته‌بندی:</strong> لاروهای بید می‌توانند از سوراخ‌های بسیار ریز (۰٫۳۹ تا ۰٫۴۵ میلی‌متر) وارد بسته‌بندی‌های مواد غذایی شوند [citation:2].</li>
+    </ul>
+
+    <h2>خطرات و خسارت‌های ناشی از بید حبوبات</h2>
+    <p>بید حبوبات یکی از مخرب‌ترین آفات مواد غذایی است که می‌تواند خسارت‌های جدی به همراه داشته باشد [citation:1][citation:6]:</p>
+
+    <table>
+        <thead>
+            <tr><th>نوع خسارت</th><th>توضیح</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>آلودگی مواد غذایی</strong></td><td>لاروها با تغذیه از مواد غذایی و ایجاد تار و فضولات، آنها را غیرقابل مصرف می‌کنند [citation:1][citation:6].</td></tr>
+            <tr><td><strong>کاهش ارزش غذایی</strong></td><td>مواد غذایی آلوده به بید ارزش غذایی خود را از دست می‌دهند.</td></tr>
+            <tr><td><strong>انتشار آلودگی</strong></td><td>این آفت به سرعت از یک ماده غذایی به سایر مواد غذایی در کابینت منتقل می‌شود [citation:6].</td></tr>
+            <tr><td><strong>خطرات بهداشتی</strong></td><td>مصرف مواد غذایی آلوده به بید می‌تواند باعث مسمومیت و مشکلات گوارشی شود.</td></tr>
+        </tbody>
+    </table>
+
+    <h2>روش‌های پیشگیری از آلودگی به بید حبوبات</h2>
+    <p>پیشگیری همواره بهترین راهکار در مقابله با بید حبوبات است. با رعایت این نکات، می‌توانید از ورود این آفت به آشپزخانه خود جلوگیری کنید [citation:2][citation:6]:</p>
+
+    <h3>۱. کنترل محیط و نگهداری مواد غذایی</h3>
+    <ul>
+        <li><strong>نگهداری در ظروف درب‌دار:</strong> مواد غذایی مانند برنج، آرد، حبوبات، آجیل و خشکبار را در <strong>ظروف پلاستیکی یا شیشه‌ای درب‌دار</strong> نگهداری کنید تا از نفوذ بید جلوگیری شود [citation:1][citation:2].</li>
+        <li><strong>بررسی دوره‌ای مواد غذایی:</strong> به طور منظم (هر ۲ تا ۳ ماه) مواد غذایی موجود در کابینت را بررسی کنید و در صورت مشاهده علائم آلودگی، آنها را دور بیندازید [citation:2].</li>
+        <li><strong>پرهیز از خرید عمده:</strong> از خرید حجم زیاد مواد غذایی که ممکن است مدت طولانی در انبار بمانند، خودداری کنید.</li>
+        <li><strong>کنترل دما و رطوبت:</strong> شب پره هندی در دمای ۲۵ تا ۳۰ درجه و رطوبت بالا به سرعت تکثیر می‌شود. در صورت امکان، مواد غذایی را در جای خنک و خشک نگهداری کنید [citation:2][citation:6].</li>
+    </ul>
+
+    <h3>۲. روش‌های طبیعی برای پیشگیری</h3>
+    <ul>
+        <li><strong>استفاده از برگ بو و میخک:</strong> قرار دادن برگ‌های بو خشک شده یا میخک در کابینت آشپزخانه، به دلیل بوی تند، بیدها را دور می‌کند [citation:1].</li>
+        <li><strong>استفاده از چوب سدر یا دارچین:</strong> این مواد نیز به عنوان دافع طبیعی بید شناخته می‌شوند [citation:1].</li>
+        <li><strong>نگهداری آجیل در فریزر:</strong> برای جلوگیری از آلودگی آجیل، آن را در فریزر نگهداری کنید یا قبل از مصرف، ۵ دقیقه در دمای ۱۶۰ تا ۱۸۰ درجه حرارت دهید [citation:2].</li>
+    </ul>
+
+    <h2>روش‌های خانگی از بین بردن بید حبوبات</h2>
+    <p>پس از شناسایی آلودگی، می‌توانید از روش‌های زیر برای کنترل آن استفاده کنید. توجه داشته باشید که این روش‌ها معمولاً برای آلودگی‌های محدود مؤثر هستند و در صورت گسترش آلودگی، نیاز به سمپاشی تخصصی خواهید داشت [citation:2][citation:6].</p>
+
+    <h3>۱. حذف مواد غذایی آلوده</h3>
+    <p>بهترین و سریع‌ترین روش، <strong>دور انداختن تمام مواد غذایی آلوده</strong> است. اگر یک ماده غذایی به بید آلوده شده است، احتمالاً سایر مواد غذایی مجاور نیز دچار آلودگی شده‌اند، حتی اگر علائم ظاهری نداشته باشند [citation:2][citation:6].</p>
+
+    <h3>۲. تمیز کردن کامل کابینت‌ها</h3>
+    <p>پس از دور انداختن مواد غذایی آلوده، تمام قفسه‌ها و کابینت‌ها را با <strong>سرکه سفید</strong> یا محلول آب و صابون به طور کامل تمیز کنید تا تخم‌ها و لاروهای احتمالی از بین بروند [citation:1][citation:7].</p>
+
+    <h3>۳. استفاده از سرما یا گرما</h3>
+    <ul>
+        <li><strong>فریز کردن:</strong> قرار دادن مواد غذایی آلوده در فریزر به مدت ۴۸ ساعت، لاروها و تخم‌های بید را از بین می‌برد [citation:6].</li>
+        <li><strong>حرارت دادن در فر:</strong> حرارت دادن مواد غذایی در فر با دمای ۶۰ درجه به مدت ۳۰ دقیقه نیز می‌تواند موثر باشد [citation:2].</li>
+    </ul>
+
+    <h3>۴. استفاده از تله‌های چسبی با فرمون</h3>
+    <p>تله‌های چسبی حاوی فرمون جنسی بید، می‌توانند به جذب حشرات بالغ نر کمک کنند و از تخم‌گذاری جلوگیری نمایند [citation:1][citation:7].</p>
+
+    <h2>سمپاشی تخصصی و ریشه‌کنی بید حبوبات با نانوفناوران</h2>
+    <p>اگر با وجود رعایت نکات پیشگیرانه و استفاده از روش‌های خانگی، همچنان با مشکل بید حبوبات دست و پنجه نرم می‌کنید یا آلودگی به انبار و سایر قسمت‌های منزل سرایت کرده است، زمان آن رسیده که از یک <strong>خدمات سمپاشی تخصصی</strong> بهره ببرید [citation:1].</p>
+
+    <div class="callout-box">
+        <p><strong>چرا روش‌های خانگی به تنهایی کافی نیستند؟</strong></p>
+        <ul>
+            <li><strong>نفوذ به بسته‌بندی‌ها:</strong> لاروهای بید حبوبات می‌توانند از سوراخ‌های بسیار کوچک عبور کرده و به مواد غذایی دسترسی پیدا کنند [citation:2].</li>
+            <li><strong>مخفی شدن در شکاف‌ها:</strong> لاروها و شفیره‌های بید در شکاف‌های کابینت و قفسه‌ها پنهان می‌شوند و با روش‌های معمولی از بین نمی‌روند.</li>
+            <li><strong>چرخه زندگی سریع:</strong> شب پره هندی در شرایط مساعد، هر ۴۰ روز یک نسل تولید می‌کند و به سرعت جمعیت خود را افزایش می‌دهد [citation:6].</li>
+        </ul>
+    </div>
+
+    <h3>راهکار تخصصی شرکت نانوفناوران</h3>
+    <p>شرکت سمپاشی نانوفناوران بهداشت تهران با بیش از یک دهه تجربه و <strong>مجوز رسمی از وزارت بهداشت</strong>، خدمات تخصصی سمپاشی بید حبوبات را به صورت تضمینی ارائه می‌دهد:</p>
+
+    <ol>
+        <li>
+            <strong>بازرسی دقیق و شناسایی</strong>
+            <p>کارشناسان ما با بررسی کامل محیط، نقاط ورود، منابع آلودگی و میزان گسترش آن را شناسایی می‌کنند [citation:1].</p>
+        </li>
+        <li>
+            <strong>استفاده از سموم تخصصی (پیرتروئید)</strong>
+            <p>بهترین سم برای از بین بردن بیدها، <strong>پیرتروئید</strong> است. این سم از گیاهان خاصی به دست می‌آید و به عنوان بهترین سم حشره‌کش شناخته می‌شود. ویژگی مهم این سم، تاثیر آن روی حشرات است؛ زیرا این نوع سم برای انسان و حیوانات خانگی ضرر ندارد و فقط به حشرات آسیب می‌زند [citation:1][citation:7].</p>
+        </li>
+        <li>
+            <strong>سمپاشی محیط و نقاط کلیدی</strong>
+            <p>پس از شناسایی نقاط آلوده، محیط و کابینت‌ها با سموم باقی‌مانده پوشانده می‌شوند تا از ورود مجدد بیدها جلوگیری شود.</p>
+        </li>
+        <li>
+            <strong>مشاوره و پیشگیری</strong>
+            <p>پس از اتمام عملیات، کارشناسان ما نکات لازم برای جلوگیری از بازگشت مجدد این آفت را به شما آموزش می‌دهند [citation:1].</p>
+        </li>
+    </ol>
+
+    <h2>بهترین سم برای بید حبوبات: پیرتروئید</h2>
+    <p>پیرتروئید یک حشره‌کش گیاهی است که از گیاهان خانواده گل‌داوودی به دست می‌آید و برای انسان و حیوانات خانگی ضرر ندارد و فقط به حشرات آسیب می‌زند [citation:1][citation:7]. مهم‌ترین مزایای پیرتروئید عبارتند از:</p>
+    <ul>
+        <li><strong>ایمنی بالا برای انسان و حیوانات خانگی</strong></li>
+        <li><strong>اثرگذاری سریع</strong></li>
+        <li><strong>اثر باقی‌مانده</strong></li>
+    </ul>
+
+    <h2>هزینه سمپاشی بید حبوبات چقدر است؟</h2>
+    <p>هزینه سمپاشی بید حبوبات به عوامل زیر بستگی دارد. برای دریافت <strong>مشاوره رایگان</strong> و <strong>استعلام دقیق هزینه</strong>، با کارشناسان ما تماس بگیرید:</p>
+
+    <table>
+        <thead>
+            <tr><th>عامل</th><th>تأثیر بر هزینه</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>مساحت و تعداد کابینت‌ها</strong></td><td>هرچه آشپزخانه بزرگ‌تر باشد، هزینه بیشتر است</td></tr>
+            <tr><td><strong>شدت آلودگی</strong></td><td>آلودگی شدید نیاز به عملیات گسترده‌تری دارد</td></tr>
+            <tr><td><strong>دسترسی به نقاط آلوده</strong></td><td>سمپاشی فضاهای صعب‌الوصول هزینه را افزایش می‌دهد</td></tr>
+        </tbody>
+    </table>
+
+    <h2>سوالات متداول درباره سمپاشی بید حبوبات</h2>
+
+    <details>
+        <summary><strong>آیا سمپاشی بید حبوبات برای کودکان و حیوانات خانگی خطرناک است؟</strong></summary>
+        <p>خیر، سموم استفاده‌شده توسط شرکت نانوفناوران (پیرتروئید) با رعایت کامل استانداردهای بهداشتی انتخاب می‌شوند. در هنگام سمپاشی، افراد و حیوانات از محیط خارج می‌شوند و پس از تهویه کامل، محیط کاملاً ایمن است [citation:1][citation:7].</p>
+    </details>
+
+    <details>
+        <summary><strong>چه مدت بعد از سمپاشی بیدها از بین می‌روند؟</strong></summary>
+        <p>اثر سمپاشی در بیدهای بالغ فوری است و آنها به سرعت از بین می‌روند. لاروها طی ۱ تا ۲ هفته پس از تماس با سم از بین می‌روند.</p>
+    </details>
+
+    <details>
+        <summary><strong>آیا خودمان هم می‌توانیم بید حبوبات را سمپاشی کنیم؟</strong></summary>
+        <p>استفاده از اسپری‌های خانگی معمولاً مؤثر نیست و فقط بیدهای سطحی را از بین می‌برد. روش‌های تخصصی نیاز به تجهیزات و دانش دارد. همچنین استفاده نادرست از سموم می‌تواند برای سلامتی خطرناک باشد.</p>
+    </details>
+
+    <details>
+        <summary><strong>بعد از سمپاشی آیا بیدها دوباره برمی‌گردند؟</strong></summary>
+        <p>اگر مواد غذایی در ظروف درب‌دار نگهداری شوند و نکات پیشگیری رعایت شود، احتمال بازگشت بسیار کم است. شرکت نانوفناوران خدمات خود را با ضمانت ارائه می‌دهد.</p>
+    </details>
+
+    <details>
+        <summary><strong>آیا خوردن مواد غذایی آلوده به بید خطرناک است؟</strong></summary>
+        <p>بله، مواد غذایی آلوده به بید حاوی فضولات لاروی و تارهای ابریشمی هستند که می‌توانند باعث مسمومیت و مشکلات گوارشی شوند. در صورت مشاهده آلودگی، مواد غذایی را دور بیندازید [citation:2][citation:6].</p>
+    </details>
+
+    <details>
+        <summary><strong>چگونه بید حبوبات وارد خانه می‌شود؟</strong></summary>
+        <p>بید حبوبات معمولاً از طریق مواد غذایی خریداری شده (برنج، آرد، حبوبات، آجیل) وارد منزل می‌شود. تخم و لارو موجود در این مواد، پس از مدتی تبدیل به پروانه و بید بالغ می‌شوند [citation:1].</p>
+    </details>
+
+    <h2>نتیجه‌گیری</h2>
+    <p>بید حبوبات (شب پره هندی) یکی از خطرناک‌ترین آفات مواد غذایی است که می‌تواند خسارت‌های جبران‌ناپذیری به مواد غذایی شما وارد کند. تشخیص زودهنگام و اقدام سریع، کلید جلوگیری از گسترش آلودگی است. در حالی که روش‌های خانگی می‌توانند برای آلودگی‌های محدود مفید باشند، برای ریشه‌کنی قطعی و تضمینی، استفاده از خدمات تخصصی ضروری است.</p>
+
+    <p><strong>شرکت سمپاشی نانوفناوران بهداشت تهران</strong> با بهره‌گیری از دانش فنی روز، تجهیزات پیشرفته و سموم استاندارد (پیرتروئید)، آماده ارائه خدمات تخصصی و تضمینی در زمینه <strong>سمپاشی بید حبوبات</strong> به شماست. تیم کارشناسان ما با شناسایی دقیق منبع آلودگی و استفاده از روش‌های ایمن، محیطی امن و آرام را به شما باز می‌گردانند.</p>
+
+    <p style="font-size:20px; font-weight:700; text-align:center; color:var(--primary);">🚀 همین حالا اقدام کنید:</p>
+    <div style="text-align:center; margin:20px 0;">
+        <p>📞 <strong>تماس فوری:</strong> <a href="tel:09120705746" style="font-size:20px; color:var(--secondary);">۰۹۱۲۰۷۰۵۷۴۶</a></p>
+        <p>💬 <strong>درخواست مشاوره رایگان:</strong> از طریق <a href="https://wa.me/989120705746" target="_blank">واتساپ</a> یا <a href="https://eitaa.com/nanofannavaran_ir" target="_blank">ایتا</a></p>
+        <p>🔗 <strong>مشاهده سایر خدمات:</strong> <a href="../services.html">کنترل آفات مسکونی</a></p>
+    </div>
+
+    <div class="back-links">
+        <a href="../index.html" class="btn-blog-home">🏠 بازگشت به صفحه اصلی</a>
+        <a href="../services.html" class="btn-blog-services">🔙 بازگشت به لیست خدمات مسکونی</a>
+        <a href="../contact.html" class="btn-blog-contact">📞 تماس با ما</a>
+    </div>
+
 </div>
 
+<!-- =============== فوتر =============== -->
 <footer class="site-footer">
     <div class="container">
         <div class="footer-grid">
@@ -125,6 +743,116 @@
     </div>
 </footer>
 
-<script src="../script.js"></script>
+<!-- =============== منوی شناور =============== -->
+<div class="floating-container">
+    <button class="floating-main-btn" id="floatingToggle">
+        <span class="btn-arrow">▶</span>
+        <span class="btn-text">📞 مشاوره رایگان</span>
+    </button>
+    <div class="floating-menu" id="floatingMenu">
+        <div class="call-wrapper">
+            <div class="floating-item call-item" id="callToggle">
+                <span class="item-icon">📞</span>
+                <span class="item-text">تماس سریع</span>
+                <span class="arrow">▲</span>
+            </div>
+            <div class="call-submenu" id="callSubmenu">
+                <a href="tel:09120705746" class="floating-item call-sub-item"><span class="item-icon">📞</span><span class="item-text">شماره ۱</span></a>
+                <a href="tel:09197173454" class="floating-item call-sub-item"><span class="item-icon">📞</span><span class="item-text">شماره ۲</span></a>
+            </div>
+        </div>
+        <a href="https://wa.me/989120705746?text=%D8%A8%D9%87%20%D8%B3%D8%A7%DB%8C%D8%AA%20%D8%B4%D8%B1%DA%A9%D8%AA%20%D8%B3%D9%85%D9%BE%D8%A7%D8%B4%DB%8C%20%D9%86%D8%A7%D9%86%D9%88%D9%81%D9%86%D8%A7%D9%88%D8%B1%D8%A7%D9%86%20%D8%AE%D9%88%D8%B4%20%D8%A2%D9%85%D8%AF%DB%8C%D8%AF" target="_blank" class="floating-item whatsapp-item"><span class="item-icon">💬</span><span class="item-text">واتساپ</span></a>
+        <a href="https://eitaa.com/nanofannavaran_ir" target="_blank" class="floating-item eitaa-item"><span class="item-icon">✈️</span><span class="item-text">ایتا</span></a>
+    </div>
+</div>
+
+<!-- =============== دکمه اسکرول به بالا =============== -->
+<button id="backToTop" title="برو به بالا">↑</button>
+
+<!-- =============== جاوااسکریپت کامل =============== -->
+<script>
+    // ===== دکمه اسکرول به بالا =====
+    var backToTopBtn = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
+    });
+
+    backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // ===== منوی شناور =====
+    var toggleBtn = document.getElementById('floatingToggle');
+    var menu = document.getElementById('floatingMenu');
+    var arrow = toggleBtn.querySelector('.btn-arrow');
+
+    toggleBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        menu.classList.toggle('active');
+        arrow.classList.toggle('open');
+    });
+
+    // ===== زیرمنوی تماس =====
+    var callToggle = document.getElementById('callToggle');
+    var callSubmenu = document.getElementById('callSubmenu');
+
+    callToggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        callSubmenu.classList.toggle('active');
+        var arrowIcon = this.querySelector('.arrow');
+        if (arrowIcon) {
+            arrowIcon.textContent = callSubmenu.classList.contains('active') ? '▼' : '▲';
+        }
+    });
+
+    // ===== بستن منو با کلیک بیرون =====
+    document.addEventListener('click', function() {
+        menu.classList.remove('active');
+        arrow.classList.remove('open');
+        callSubmenu.classList.remove('active');
+        var arrowIcon = callToggle.querySelector('.arrow');
+        if (arrowIcon) {
+            arrowIcon.textContent = '▲';
+        }
+    });
+
+    menu.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+
+    // ===== منوی موبایل =====
+    var mobileMenuBtn = document.querySelector('.mobile-menu');
+    var navbar = document.querySelector('.navbar ul');
+
+    mobileMenuBtn.addEventListener('click', function() {
+        if (navbar.style.display === 'flex') {
+            navbar.style.display = 'none';
+        } else {
+            navbar.style.display = 'flex';
+            navbar.style.flexDirection = 'column';
+            navbar.style.position = 'absolute';
+            navbar.style.top = '70px';
+            navbar.style.right = '20px';
+            navbar.style.background = '#fff';
+            navbar.style.padding = '20px';
+            navbar.style.borderRadius = '12px';
+            navbar.style.boxShadow = '0 10px 30px rgba(0,0,0,.15)';
+            navbar.style.gap = '10px';
+            navbar.style.width = '200px';
+            navbar.style.zIndex = '999';
+        }
+    });
+
+    console.log('✅ دکمه اسکرول و منوی شناور فعال شدند!');
+</script>
+
 </body>
 </html>
