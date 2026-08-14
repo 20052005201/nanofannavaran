@@ -3,77 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سمپاشی کک | نانوفناوران</title>
+    <title>سمپاشی کک | راهنمای جامع تشخیص، پیشگیری و ریشه‌کنی | نانوفناوران</title>
+    <meta name="description" content="مقاله جامع سمپاشی کک: معرفی، خطرات، علائم گزش، روش‌های تشخیص، پیشگیری و ریشه‌کنی کک در منزل و محیط کار.">
+    <meta name="keywords" content="سمپاشی کک, کنترل کک, کک گربه, کک سگ, گزش کک, طاعون, تیفوس, پیشگیری کک">
+    <link rel="canonical" href="https://nanofannavaran.ir/service/flea.html">
     <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
-        .service-detail {
+        .blog-container {
             max-width: 1100px;
-            margin: 100px auto 50px;
+            margin: 120px auto 60px;
             padding: 0 20px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
+            background: #fff;
+            border-radius: 24px;
+            box-shadow: 0 10px 40px rgba(0,0,0,.08);
+            padding: 40px 40px 60px;
         }
-        .service-detail .text h1 {
-            font-size: 32px;
+        .blog-container h1 {
+            font-size: 36px;
             color: var(--primary);
             margin-bottom: 20px;
+            line-height: 1.5;
         }
-        .service-detail .text p {
+        .blog-container .meta {
+            color: #888;
+            font-size: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .blog-container h2 {
+            font-size: 28px;
+            color: var(--dark);
+            margin: 40px 0 15px;
+            border-right: 5px solid var(--secondary);
+            padding-right: 15px;
+        }
+        .blog-container h3 {
+            font-size: 22px;
+            color: var(--primary);
+            margin: 30px 0 12px;
+        }
+        .blog-container h4 {
+            font-size: 19px;
+            color: var(--dark);
+            margin: 25px 0 10px;
+        }
+        .blog-container p {
             line-height: 2.2;
-            color: #555;
+            color: #444;
+            font-size: 17px;
+            margin-bottom: 18px;
+        }
+        .blog-container ul, .blog-container ol {
+            line-height: 2.2;
+            color: #444;
+            font-size: 17px;
+            padding-right: 25px;
+            margin-bottom: 20px;
+        }
+        .blog-container ul li, .blog-container ol li {
+            margin-bottom: 8px;
+        }
+        .blog-container table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0 30px;
             font-size: 16px;
         }
-        .service-detail .gif img {
+        .blog-container table th {
+            background: var(--primary);
+            color: #fff;
+            padding: 12px 15px;
+            text-align: right;
+        }
+        .blog-container table td {
+            border: 1px solid #ddd;
+            padding: 10px 15px;
+            background: #fafafa;
+        }
+        .blog-container table tr:nth-child(even) td {
+            background: #f5f5f5;
+        }
+        .blog-image {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .blog-image img {
             width: 100%;
-            max-height: 400px;
-            object-fit: contain;
+            max-width: 700px;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,.15);
         }
-        .back-link {
+        .blog-image .caption {
+            font-size: 14px;
+            color: #888;
+            margin-top: 10px;
+        }
+        .blog-container .back-links {
+            margin: 40px 0 20px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .blog-container .back-links a {
             display: inline-block;
-            margin-top: 30px;
-            background: var(--secondary);
-            color: #fff;
             padding: 12px 28px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
             transition: .3s;
         }
-        .back-link:hover {
-            background: var(--primary);
-        }
-        .contact-float {
-            margin-top: 20px;
-        }
-        .contact-float a {
-            display: inline-block;
+        .blog-container .back-links .btn-blog-home {
             background: var(--primary);
             color: #fff;
-            padding: 12px 28px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            margin-left: 10px;
-            transition: .3s;
         }
-        .contact-float a:hover {
+        .blog-container .back-links .btn-blog-home:hover {
             background: var(--secondary);
         }
+        .blog-container .back-links .btn-blog-services {
+            background: var(--secondary);
+            color: #fff;
+        }
+        .blog-container .back-links .btn-blog-services:hover {
+            background: var(--primary);
+        }
+        .blog-container .back-links .btn-blog-contact {
+            background: var(--dark);
+            color: #fff;
+        }
+        .blog-container .back-links .btn-blog-contact:hover {
+            background: var(--primary);
+        }
+
+        details {
+            background: #f8fbfd;
+            padding: 15px 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #e9ecef;
+        }
+        details summary {
+            font-weight: 700;
+            color: var(--primary);
+            cursor: pointer;
+            font-size: 17px;
+        }
+        details p {
+            margin-top: 12px;
+            padding-right: 10px;
+        }
+
+        .tip-box {
+            background: #e8f4f8;
+            border-right: 5px solid var(--secondary);
+            padding: 20px 25px;
+            border-radius: 12px;
+            margin: 25px 0 30px;
+        }
+        .tip-box strong {
+            color: var(--primary);
+        }
+
         @media (max-width: 768px) {
-            .service-detail {
-                grid-template-columns: 1fr;
-                text-align: center;
-                margin-top: 80px;
+            .blog-container {
+                padding: 20px 15px;
+                margin: 100px auto 40px;
             }
-            .service-detail .text h1 {
+            .blog-container h1 {
                 font-size: 26px;
             }
-            .service-detail .gif img {
-                max-height: 250px;
+            .blog-container h2 {
+                font-size: 22px;
+            }
+            .blog-container h3 {
+                font-size: 19px;
+            }
+            .blog-container h4 {
+                font-size: 17px;
+            }
+            .blog-container p,
+            .blog-container ul,
+            .blog-container ol {
+                font-size: 15px;
+            }
+            .blog-container table {
+                font-size: 14px;
+            }
+            .blog-container .back-links a {
+                padding: 10px 20px;
+                font-size: 14px;
             }
         }
     </style>
@@ -82,11 +203,12 @@
 
 <header>
     <div class="container">
-        <a href="../index.html" class="logo"><img src="../images/logo.png" alt="لوگو"></a>
+        <a href="../index.html" class="logo"><img src="../images/logo.png" alt="لوگو شرکت سمپاشی نانوفناوران"></a>
         <nav class="navbar">
             <ul>
                 <li><a href="../index.html">صفحه اصلی</a></li>
-                <li><a href="../services.html" class="active">خدمات</a></li>
+                <li><a href="../services.html">خدمات مسکونی</a></li>
+                <li><a href="../commercial-services.html">خدمات تجاری</a></li>
                 <li><a href="../about.html">درباره ما</a></li>
                 <li><a href="../contact.html">تماس</a></li>
             </ul>
@@ -95,36 +217,251 @@
             <a href="tel:09120705746" class="call-btn">📞 09120705746</a>
             <div class="mobile-menu">☰</div>
         </div>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="جستجو...">
+            <button onclick="searchSite()">🔍</button>
+        </div>
     </div>
 </header>
 
-<div class="service-detail">
-    <div class="text">
-        <h1>🐜 سمپاشی کک</h1>
-        <p>کنترل کک‌های خانگی و حیوانات با سموم مؤثر و ماندگار.</p>
-        <p><strong>روش کنترل:</strong> استفاده از سموم استاندارد و روش‌های نوین با تضمین کیفیت و ماندگاری بالا.</p>
-        <p><strong>مدت زمان اثرگذاری:</strong> نتایج سریع و ماندگار تا ۶ ماه.</p>
-        <a href="../services.html" class="back-link">🔙 بازگشت به لیست خدمات</a>
-        <div class="contact-float">
-            <a href="tel:09120705746">📞 تماس فوری</a>
-            <a href="https://wa.me/989120705746" target="_blank">💬 واتساپ</a>
-        </div>
-    </div>
-    <div class="gif">
-        <img src="../images/services/flea.jpg" alt="سمپاشی کک">
-    </div>
-</div>
+<div class="blog-container">
 
-<footer class="site-footer">
-    <div class="container">
-        <div class="footer-grid">
-            <div class="footer-box"><h3>نانوفناوران</h3><p>ارائه‌دهنده خدمات تخصصی کنترل آفات در تهران</p></div>
-            <div class="footer-box"><h3>اطلاعات تماس</h3><p>📱 09120705746</p><p>☎️ 22048278</p></div>
-        </div>
-        <hr><p class="copyright">© تمامی حقوق محفوظ است</p>
+    <!-- ===== تصویر flea1 (قبل از مقدمه) ===== -->
+    <div class="blog-image">
+        <img src="../images/services/flea1.jpg" alt="کک">
+        <div class="caption">تصویر: کک، یکی از مقاوم‌ترین و خطرناک‌ترین آفات خانگی</div>
     </div>
-</footer>
 
-<script src="../script.js"></script>
-</body>
-</html>
+    <h1>سمپاشی کک: راهنمای جامع شناسایی، پیشگیری و ریشه‌کنی (نسخه فوق‌تخصصی)</h1>
+    <div class="meta">
+        <span>📅 آخرین به‌روزرسانی: ۱۶ مرداد ۱۴۰۴</span> &nbsp;|&nbsp; <span>⏱ زمان مطالعه: ۱۵ دقیقه</span>
+    </div>
+
+    <h2>مقدمه: مزاحمانی کوچک با عواقب بزرگ</h2>
+    <p>شاید برای شما هم پیش آمده باشد که ناگهان متوجه گزش‌های ریز و خارش‌دار روی پاها یا مچ پای خود شده‌اید، بدون اینکه هیچ حشره‌ای را دیده باشید. یا شاید حیوان خانگی‌تان مرتب خود را می‌خاراند و بی‌قرار است. این‌ها می‌توانند نشانه‌های حضور یک آفت کوچک اما بسیار مقاوم و خطرناک در خانه شما باشند: <strong>کک</strong>.</p>
+
+    <p>کک‌ها حشرات کوچک، خون‌خوار و بسیار مقاوم هستند که از دوران باستان تاکنون، همراه با انسان‌ها زندگی کرده‌اند. این حشرات نه‌تنها باعث خارش و ناراحتی می‌شوند، بلکه می‌توانند ناقل بیماری‌های جدی مانند <strong>طاعون، تیفوس و آلودگی‌های انگلی</strong> باشند. با وجود پیشرفت‌های پزشکی، کک‌ها هنوز هم یکی از مهم‌ترین ناقلین بیماری‌ها در جهان محسوب می‌شوند.</p>
+
+    <p>در این مقاله جامع و فوق‌تخصصی، شما را با همه چیز درباره کک، از بیولوژی و رفتارشناسی گرفته تا روش‌های تشخیص، پیشگیری و مهم‌تر از همه، <strong>روش‌های اصولی و تخصصی سمپاشی کک</strong> آشنا می‌کنیم. اگر شما هم در تهران یا سایر شهرهای ایران از دست کک‌ها کلافه شده‌اید و نگران سلامت خانواده و حیوانات خانگی‌تان هستید، این مقاله راهنمای کامل شما برای نجات خانه‌تان خواهد بود.</p>
+
+    <!-- بخش ۱ -->
+    <h2>📌 کک چیست؟ آشنایی کامل با این انگل مقاوم</h2>
+    <p>کک‌ها حشرات کوچکی از راسته سیفون‌آپترا (Siphonaptera) هستند که به‌عنوان انگل‌های خارجی، از خون پستانداران و پرندگان تغذیه می‌کنند. این حشرات بدنی فشرده، پهن و بدون بال دارند و به‌خاطر پاهای عقب بسیار قوی‌شان، توانایی پرش‌های بلند (تا ۲۰۰ برابر طول بدن خود) را دارند.</p>
+
+    <h3>ویژگی‌های ظاهری و بیولوژیکی کک</h3>
+    <table>
+        <thead>
+            <tr><th>ویژگی</th><th>توضیح</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>اندازه</strong></td><td>۱ تا ۴ میلی‌متر (نرها کوچک‌تر از ماده‌ها)</td></tr>
+            <tr><td><strong>رنگ</strong></td><td>قهوه‌ای تیره تا سیاه براق</td></tr>
+            <tr><td><strong>بدن</strong></td><td>فشرده، پهن و بدون بال، پوشیده از موهای ریز</td></tr>
+            <tr><td><strong>پاهای عقب</strong></td><td>بسیار قوی و مناسب برای پرش‌های بلند</td></tr>
+            <tr><td><strong>قطعات دهانی</strong></td><td>مکنده و سوراخ‌کننده (برای تغذیه از خون)</td></tr>
+            <tr><td><strong>طول عمر</strong></td><td>۲ تا ۳ ماه (اما می‌توانند ماه‌ها بدون غذا زنده بمانند)</td></tr>
+            <tr><td><strong>تغذیه</strong></td><td>ماده‌ها و نرها هر دو از خون تغذیه می‌کنند</td></tr>
+            <tr><td><strong>تخم‌گذاری</strong></td><td>هر ماده روزانه ۲۰ تا ۵۰ تخم می‌گذارد</td></tr>
+        </tbody>
+    </table>
+
+    <!-- ===== تصویر flea2 (بعد از چرخه زندگی کک) ===== -->
+    <div class="blog-image">
+        <img src="../images/services/flea2.jpg" alt="چرخه زندگی کک">
+        <div class="caption">تصویر: چرخه زندگی کک، از تخم تا کک بالغ</div>
+    </div>
+
+    <h3>چرخه زندگی کک</h3>
+    <p>چرخه زندگی کک شامل چهار مرحله است که کامل شدن آن می‌تواند از ۲ هفته تا چند ماه طول بکشد، بسته به شرایط محیطی:</p>
+    <ol>
+        <li><strong>تخم</strong>: تخم‌های کک سفید و بیضی‌شکل هستند و معمولاً روی بدن میزبان (حیوان یا انسان) قرار می‌گیرند، اما به‌سرعت در محیط (فرش، موکت، مبلمان و رختخواب) ریخته می‌شوند.</li>
+        <li><strong>لارو</strong>: لاروهای کک کرم‌مانند هستند و از مواد آلی، فضولات کک‌های بالغ و ذرات غذایی تغذیه می‌کنند.</li>
+        <li><strong>شفیره</strong>: لارو پس از رشد، پیله‌ای ابریشمی می‌سازد و در آن به شفیره تبدیل می‌شود. این مرحله مقاوم‌ترین مرحله است و می‌تواند ماه‌ها در شرایط نامساعد زنده بماند.</li>
+        <li><strong>کک بالغ</strong>: کک بالغ از پیله خارج شده و بلافاصله به دنبال میزبان (حیوان یا انسان) برای تغذیه می‌گردد.</li>
+    </ol>
+
+    <h3>انواع کک‌های رایج در ایران</h3>
+    <table>
+        <thead>
+            <tr><th>گونه کک</th><th>میزبان اصلی</th><th>خطر برای انسان</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>کک گربه (Ctenocephalides felis)</strong></td><td>گربه، سگ و حیوانات خانگی</td><td>بالا (ناقل بیماری‌ها)</td></tr>
+            <tr><td><strong>کک سگ (Ctenocephalides canis)</strong></td><td>سگ و سایر سگ‌سانان</td><td>متوسط تا بالا</td></tr>
+            <tr><td><strong>کک انسان (Pulex irritans)</strong></td><td>انسان و خوک</td><td>بسیار بالا (ناقل طاعون)</td></tr>
+            <tr><td><strong>کک موش (Xenopsylla cheopis)</strong></td><td>موش و سایر جوندگان</td><td>بسیار بالا (ناقل طاعون و تیفوس)</td></tr>
+            <tr><td><strong>کک مرغی (Ceratophyllus gallinae)</strong></td><td>پرندگان و طیور</td><td>متوسط (آلرژیک)</td></tr>
+        </tbody>
+    </table>
+
+    <!-- بخش ۲ -->
+    <h2>🔍 نشانه‌های آلودگی به کک در منزل</h2>
+    <p>تشخیص به‌موقع کک‌ها، کلید موفقیت در ریشه‌کنی سریع آن‌هاست. این نشانه‌ها را جدی بگیرید:</p>
+
+    <!-- ===== تصویر flea3 (بعد از علائم در انسان) ===== -->
+    <div class="blog-image">
+        <img src="../images/services/flea3.jpg" alt="گزش کک روی پوست">
+        <div class="caption">تصویر: آثار گزش کک روی پوست انسان</div>
+    </div>
+
+    <h3>علائم در انسان</h3>
+    <ul>
+        <li><strong>گزش‌های خارش‌دار</strong>: معمولاً روی مچ پا، ساق پا، کمر و زیر بغل. گزش کک به‌صورت برجستگی‌های قرمز کوچک با مرکز خون‌مردگی ظاهر می‌شود.</li>
+        <li><strong>خارش شدید و مداوم</strong>: خارش ناشی از گزش کک معمولاً شدیدتر از پشه است.</li>
+        <li><strong>واکنش‌های آلرژیک</strong>: در افراد حساس، گزش کک می‌تواند باعث کهیر، تورم و حتی واکنش‌های شدیدتر شود.</li>
+        <li><strong>عفونت‌های ثانویه</strong>: خاراندن مداوم محل گزش، باعث زخم و عفونت‌های باکتریایی می‌شود.</li>
+    </ul>
+
+    <h3>علائم در حیوانات خانگی</h3>
+    <ul>
+        <li><strong>خارش شدید و بی‌قراری</strong>: حیوان مرتب خود را می‌خاراند یا گاز می‌گیرد.</li>
+        <li><strong>ریزش مو</strong>: در اثر خاراندن مداوم، موهای حیوان در نواحی خاصی می‌ریزد.</li>
+        <li><strong>وجود نقاط سیاه (فضولات کک)</strong>: روی پوست حیوان، به‌ویژه روی گردن، پشت و نزدیکی دم.</li>
+        <li><strong>مشاهده خود کک</strong>: کک‌های بالغ را می‌توانید روی بدن حیوان، به‌ویژه در نواحی کم‌مو مشاهده کنید.</li>
+        <li><strong>التهاب و قرمزی پوست</strong>: به‌دلیل واکنش آلرژیک به بزاق کک.</li>
+    </ul>
+
+    <h3>علائم در محیط</h3>
+    <ul>
+        <li><strong>مشاهده کک‌های بالغ</strong>: روی فرش، مبلمان، رختخواب، یا کفپوش‌ها.</li>
+        <li><strong>نقاط سیاه (فضولات کک)</strong>: روی فرش، موکت، زیر پتو، روی مبلمان و کفپوش‌ها.</li>
+        <li><strong>تخم‌های سفید و بیضی‌شکل</strong>: معمولاً در شکاف‌ها و نقاط تاریک.</li>
+        <li><strong>گزش‌های جدید هر روز صبح</strong>: به‌ویژه پس از خوابیدن روی مبل یا فرش.</li>
+    </ul>
+
+    <!-- بخش ۳ -->
+    <h2>🚨 خطرات و بیماری‌های ناشی از کک</h2>
+    <p>کک‌ها یکی از مهم‌ترین ناقلین بیماری‌ها در تاریخ بشر هستند. این حشرات با تغذیه از خون میزبان‌های مختلف، می‌توانند عوامل بیماری‌زا را از یک میزبان به میزبان دیگر منتقل کنند.</p>
+
+    <h3>بیماری‌های مهم منتقله توسط کک</h3>
+    <table>
+        <thead>
+            <tr><th>بیماری</th><th>عامل بیماری‌زا</th><th>ناقل (گونه کک)</th><th>علائم اصلی</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>طاعون (بوبونیک)</strong></td><td>باکتری Yersinia pestis</td><td>کک موش (Xenopsylla cheopis)</td><td>تب شدید، تورم غدد لنفاوی، لرز، ضعف عمومی</td></tr>
+            <tr><td><strong>تیفوس موشی</strong></td><td>باکتری Rickettsia typhi</td><td>کک موش و کک گربه</td><td>تب، سردرد شدید، بثورات پوستی، درد عضلانی</td></tr>
+            <tr><td><strong>تب ناشی از گزش کک</strong></td><td>باکتری Bartonella henselae</td><td>کک گربه و کک سگ</td><td>تب، تورم غدد لنفاوی، خستگی</td></tr>
+            <tr><td><strong>آلرژی به بزاق کک</strong></td><td>واکنش آلرژیک</td><td>همه گونه‌های کک</td><td>کهیر، خارش شدید، تورم، التهاب</td></tr>
+            <tr><td><strong>کرم نواری (Dipylidium caninum)</strong></td><td>انگل کرم نواری</td><td>کک گربه و کک سگ</td><td>مشکلات گوارشی، کاهش وزن، خارش مقعدی</td></tr>
+        </tbody>
+    </table>
+
+    <!-- بخش ۴ -->
+    <h2>🏠 چگونه کک‌ها وارد خانه می‌شوند؟</h2>
+    <p>کک‌ها به‌طرز شگفت‌آوری می‌توانند به خانه نفوذ کنند. مهم‌ترین راه‌های ورود:</p>
+    <table>
+        <thead>
+            <tr><th>مسیر ورود</th><th>توضیح</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>حیوانات خانگی</strong></td><td>رایج‌ترین راه ورود. کک‌ها از طریق سگ‌ها و گربه‌های آلوده وارد منزل می‌شوند.</td></tr>
+            <tr><td><strong>جوندگان (موش، سنجاب و...)</strong></td><td>موش‌ها ناقل اصلی کک‌های بیماری‌زا هستند و می‌توانند کک را به خانه و محیط اطراف منتقل کنند.</td></tr>
+            <tr><td><strong>پوشاک و وسایل شخصی</strong></td><td>کک‌ها می‌توانند روی لباس‌ها، چمدان‌ها و وسایل مسافرتی وارد خانه شوند.</td></tr>
+            <tr><td><strong>مبلمان و وسایل دست دوم</strong></td><td>خرید مبلمان، فرش یا وسایل دست دوم که قبلاً آلوده بوده‌اند.</td></tr>
+            <tr><td><strong>حیاط و فضای سبز</strong></td><td>ورود کک از طریق حیاط، باغچه و مناطقی که حیوانات ولگرد در آن تردد دارند.</td></tr>
+            <tr><td><strong>کود حیوانی تازه</strong></td><td>کود حیوانی (مانند کود گاوی، اسبی یا مرغی) که به‌عنوان کود تقویتی برای باغچه یا گلدان‌ها استفاده می‌شود، یکی از مهم‌ترین منابع آلودگی به کک است. کک‌ها و تخم‌های آنها به‌شدت در کودهای تازه حیوانی تکثیر می‌شوند و می‌توانند از این طریق وارد محیط زندگی شما شوند. <strong>اگر از کود حیوانی تازه در باغچه یا گلدان‌ها استفاده می‌کنید، حتماً آن را به‌طور کامل پاستوریزه یا ضدعفونی کنید و یا از کودهای صنعتی و فرآوری‌شده استفاده نمایید.</strong></td></tr>
+            <tr><td><strong>حیوانات ولگرد</strong></td><td>سگ‌ها و گربه‌های ولگرد در حیاط و اطراف ساختمان، منبع اصلی کک‌ها هستند.</td></tr>
+        </tbody>
+    </table>
+
+    <!-- بخش ۵ -->
+    <h2>🛠️ روش‌های اصولی سمپاشی و ریشه‌کنی کک</h2>
+    <p>ریشه‌کنی کک یکی از چالش‌برانگیزترین عملیات‌های کنترل آفات است، زیرا چرخه زندگی آن‌ها شامل مراحل مختلفی است که برخی از آن‌ها (شفیره) در برابر سموم بسیار مقاوم هستند. به همین دلیل، <strong>روش‌های خانگی و اسپری‌های معمولی معمولاً کارساز نیستند</strong>.</p>
+
+    <p>در شرکت سمپاشی نانوفناوران، از <strong>روش مدیریت تلفیقی آفات (IPM)</strong> برای ریشه‌کنی قطعی کک استفاده می‌کنیم که شامل مراحل زیر است:</p>
+
+    <h3>مرحله ۱: بازرسی و شناسایی</h3>
+    <p>گام اول و حیاتی، شناسایی دقیق <strong>نوع کک، نقاط تخم‌گذاری و لانه‌های آن‌ها</strong> است. کارشناسان ما با بررسی کامل منزل و محیط اطراف، موارد زیر را مشخص می‌کنند:</p>
+    <ul>
+        <li><strong>مناطق آلوده</strong>: فرش‌ها، موکت‌ها، مبلمان، رختخواب، لانه‌های حیوانات و شکاف‌های کف‌پوش‌ها.</li>
+        <li><strong>حیوانات خانگی</strong>: بررسی کامل حیوانات از نظر کک، تخم و فضولات کک.</li>
+        <li><strong>محیط‌های خارجی</strong>: حیاط، باغچه، لانه‌های موش و محل‌های تجمع حیوانات ولگرد.</li>
+        <li><strong>کود حیوانی</strong>: بررسی و شناسایی منابع کود حیوانی تازه در باغچه یا گلدان‌ها که می‌توانند منبع اصلی آلودگی باشند.</li>
+    </ul>
+
+    <h3>مرحله ۲: شستشو و نظافت اولیه (اقدام ضروری)</h3>
+    <p><strong>قبل از سمپاشی، شستشو و نظافت دقیق محیط ضروری است:</strong></p>
+    <ul>
+        <li><strong>شستشوی ملحفه، روبالشی و پرده‌ها</strong> با آب داغ (بالای ۶۰ درجه).</li>
+        <li><strong>جاروکشی کامل فرش، موکت و مبلمان</strong> (کیسه جاروبرقی باید بلافاصله دور ریخته شود).</li>
+        <li><strong>شستشوی کف‌پوش‌ها</strong> با مواد ضدعفونی‌کننده.</li>
+        <li><strong>شستشوی حیوانات خانگی</strong> با شامپوهای ضد کک مخصوص.</li>
+        <li><strong>جمع‌آوری و معدوم‌سازی اصولی کود حیوانی تازه</strong> و جایگزینی آن با کودهای فرآوری‌شده یا پاستوریزه.</li>
+    </ul>
+
+    <h3>مرحله ۳: سمپاشی تخصصی (مؤثرترین روش)</h3>
+    <p>پس از نظافت، نوبت به سمپاشی تخصصی می‌رسد. این کار باید <strong>توسط کارشناسان مجرب با استفاده از ترکیب مناسب سموم</strong> انجام شود.</p>
+
+    <!-- ===== تصویر flea4 (بعد از اصول سمپاشی حرفه‌ای کک) ===== -->
+    <div class="blog-image">
+        <img src="../images/services/flea4.jpg" alt="کارشناس در حال سمپاشی کک">
+        <div class="caption">تصویر: کارشناس مجرب در حال سمپاشی تخصصی کک</div>
+    </div>
+
+    <h4>اصول سمپاشی حرفه‌ای کک:</h4>
+
+    <!-- ===== بخش الف حذف شد ===== -->
+
+    <h4>ب) سمپاشی تماسی و باقی‌مانده</h4>
+    <ul>
+        <li>استفاده از سموم پودری یا مایع که روی فرش، موکت، مبلمان و شکاف‌ها پاشش می‌شود.</li>
+        <li>این سموم با تماس مستقیم با کک باعث مرگ فوری می‌شوند و اثر باقی‌مانده دارند (تا چند ماه).</li>
+    </ul>
+
+    <h4>ج) طعمه‌گذاری و لاروکشی</h4>
+    <ul>
+        <li>استفاده از سموم اختصاصی برای از بین بردن لاروها در مناطق تخم‌گذاری.</li>
+        <li>استفاده از تنظیم‌کننده‌های رشد حشرات (IGR) برای جلوگیری از تکامل لاروها و تخم‌ها.</li>
+    </ul>
+
+    <h4>د) نقاط هدف سمپاشی</h4>
+    <ul>
+        <li>فرش‌ها، موکت‌ها و کف‌پوش‌ها</li>
+        <li>مبلمان، تشک‌ها و رختخواب</li>
+        <li>شکاف‌های دیوار، قرنیزها و کف‌پوش‌ها</li>
+        <li>فضای زیر مبلمان و وسایل</li>
+        <li>فضای باز و حیاط (به‌ویژه مناطق دارای کود حیوانی)</li>
+    </ul>
+
+    <h4>هـ) احتیاط‌های لازم</h4>
+    <ul>
+        <li>به‌دلیل استفاده از سموم قوی، ساکنان باید <strong>حداقل ۲ تا ۴ ساعت</strong> منزل را ترک کنند.</li>
+        <li>حیوانات خانگی باید از محیط خارج شوند.</li>
+        <li>پس از بازگشت، نسبت به <strong>تهویه کامل و شستشوی لوازم</strong> اقدام کنید.</li>
+    </ul>
+
+    <h3>مرحله ۴: سمپاشی مجدد (تکمیل فرآیند)</h3>
+    <p>به‌دلیل مقاومت بالای تخم‌ها و شفیره‌های کک، معمولاً <strong>یک جلسه سمپاشی کافی نیست</strong> و ممکن است <strong>۲ تا ۳ جلسه با فواصل ۲ تا ۴ هفته</strong> نیاز باشد تا تمام مراحل چرخه زندگی کک از بین برود.</p>
+
+    <h3>مرحله ۵: مقاوم‌سازی و پیشگیری</h3>
+    <p>پس از ریشه‌کنی، کارشناسان ما نکات زیر را برای جلوگیری از بازگشت مجدد ارائه می‌دهند:</p>
+    <ul>
+        <li><strong>نصب توری روی پنجره‌ها و دریچه‌ها</strong> برای جلوگیری از ورود جوندگان و حیوانات ولگرد.</li>
+        <li><strong>مقاوم‌سازی محیط</strong> با بستن شکاف‌ها و منافذ ورودی.</li>
+        <li><strong>استفاده از مواد دورکننده کک</strong> در فضای باز.</li>
+        <li><strong>بررسی دوره‌ای حیوانات خانگی</strong> و محیط زندگی آن‌ها.</li>
+    </ul>
+
+    <!-- بخش ۶ -->
+    <h2>🛡️ راه‌های پیشگیری از بازگشت کک</h2>
+    <p>با رعایت این نکات، می‌توانید از بازگشت مجدد کک‌ها جلوگیری کنید:</p>
+    <ol>
+        <li><strong>شستشوی منظم رختخواب و ملحفه</strong>: با آب داغ (بالای ۶۰ درجه).</li>
+        <li><strong>جاروکشی منظم فرش و موکت</strong>: حداقل هفته‌ای یکبار.</li>
+        <li><strong>شستشوی حیوانات خانگی</strong>: با شامپوهای ضد کک، حداقل ماهی یکبار.</li>
+        <li><strong>استفاده از قلاده‌های ضد کک</strong>: برای سگ‌ها و گربه‌ها.</li>
+        <li><strong>بررسی دوره‌ای محیط</strong>، به‌ویژه در فصول گرم.</li>
+        <li><strong>جلوگیری از نفوذ جوندگان</strong> به ساختمان (بستن منافذ و درزها).</li>
+        <li><strong>سمپاشی دوره‌ای پیشگیرانه</strong> توسط کارشناسان مجرب.</li>
+        <li><strong>خودداری از استفاده از کود حیوانی تازه</strong> در باغچه و گلدان‌ها. در صورت نیاز، از کودهای فرآوری‌شده، پاستوریزه یا صنعتی استفاده کنید.</li>
+        <li><strong>نگهداری صحیح کودها</strong> در ظروف دربسته و دور از دسترس حیوانات.</li>
+        <li><strong>جمع‌آوری سریع فضولات حیوانات</strong> از حیاط و باغچه.</li>
+    </ol>
+
+    <!-- بخش ۷ -->
+    <h2>💰 هزینه سمپاشی کک چقدر است؟</h2>
+    <p>هزینه سمپاشی کک به عوامل مختلفی بستگی دارد:</p>
+    <table>
+        <thead>
+            <tr
