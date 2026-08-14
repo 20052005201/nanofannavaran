@@ -3,118 +3,740 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سمپاشی هزارپا | نانوفناوران</title>
-    <link rel="stylesheet" href="../style.css">
+    <title>سمپاشی هزارپا | راهنمای جامع کنترل، پیشگیری و ریشه‌کنی | نانوفناوران</title>
+    <meta name="description" content="مقاله جامع سمپاشی هزارپا: معرفی، علائم، روش‌های پیشگیری و کنترل تخصصی هزارپا در منزل، باغ و محیط کار.">
+    <meta name="keywords" content="سمپاشی هزارپا, کنترل هزارپا, دفع هزارپا, هزارپا در خانه, از بین بردن هزارپا, سمپاشی باغ, نانوفناوران">
+    <link rel="canonical" href="https://nanofannavaran.ir/service/millipede.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
-        .service-detail {
-            max-width: 1100px;
-            margin: 100px auto 50px;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
+        :root {
+            --primary: #0B6FB8;
+            --secondary: #1a8bc0;
+            --dark: #1a2a3a;
+            --light: #f0f7ff;
+            --white: #ffffff;
+            --green: #25a344;
+            --orange: #e67e22;
         }
-        .service-detail .text h1 {
-            font-size: 32px;
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Vazirmatn', 'IRANSans', 'Tahoma', sans-serif;
+            background: #f5f8fc;
+            color: #2c3e50;
+            line-height: 1.8;
+        }
+
+        /* =============== هدر =============== */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 15px rgba(0,0,0,.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 10px 20px;
+        }
+        header .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .logo img {
+            height: 50px;
+        }
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 15px;
+            transition: .3s;
+        }
+        .navbar ul li a:hover,
+        .navbar ul li a.active {
+            color: var(--primary);
+        }
+        .header-buttons {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .mobile-menu {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+        .search-box {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .search-box input {
+            padding: 6px 14px;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            font-size: 14px;
+            font-family: inherit;
+        }
+        .search-box button {
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        /* =============== محتوای مقاله =============== */
+        .blog-container {
+            max-width: 1100px;
+            margin: 120px auto 60px;
+            padding: 0 20px;
+            background: #fff;
+            border-radius: 24px;
+            box-shadow: 0 10px 40px rgba(0,0,0,.08);
+            padding: 40px 40px 60px;
+        }
+        .blog-container h1 {
+            font-size: 36px;
             color: var(--primary);
             margin-bottom: 20px;
+            line-height: 1.5;
         }
-        .service-detail .text p {
+        .blog-container .meta {
+            color: #888;
+            font-size: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .blog-container h2 {
+            font-size: 28px;
+            color: var(--dark);
+            margin: 40px 0 15px;
+            border-right: 5px solid var(--primary);
+            padding-right: 15px;
+        }
+        .blog-container h3 {
+            font-size: 22px;
+            color: var(--primary);
+            margin: 30px 0 12px;
+        }
+        .blog-container h4 {
+            font-size: 19px;
+            color: var(--dark);
+            margin: 25px 0 10px;
+        }
+        .blog-container p {
             line-height: 2.2;
-            color: #555;
+            color: #444;
+            font-size: 17px;
+            margin-bottom: 18px;
+            text-align: justify;
+        }
+        .blog-container ul,
+        .blog-container ol {
+            line-height: 2.2;
+            color: #444;
+            font-size: 17px;
+            padding-right: 25px;
+            margin-bottom: 20px;
+        }
+        .blog-container ul li,
+        .blog-container ol li {
+            margin-bottom: 8px;
+        }
+        .blog-container table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0 30px;
             font-size: 16px;
         }
-        .service-detail .gif img {
+        .blog-container table th {
+            background: var(--primary);
+            color: #fff;
+            padding: 12px 15px;
+            text-align: right;
+        }
+        .blog-container table td {
+            border: 1px solid #ddd;
+            padding: 10px 15px;
+            background: #fafafa;
+        }
+        .blog-container table tr:nth-child(even) td {
+            background: #f5f8fc;
+        }
+        .blog-image {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .blog-image img {
             width: 100%;
-            max-height: 400px;
-            object-fit: contain;
+            max-width: 700px;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,.15);
         }
-        .back-link {
+        .blog-image .caption {
+            font-size: 14px;
+            color: #888;
+            margin-top: 10px;
+        }
+        .blog-image .caption strong {
+            color: var(--primary);
+        }
+
+        .video-box {
+            background: #f0f7ff;
+            border-right: 5px solid var(--primary);
+            padding: 15px 20px;
+            border-radius: 12px;
+            margin: 25px 0 30px;
+            text-align: center;
+        }
+        .video-box a {
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 17px;
+            text-decoration: none;
+            transition: .3s;
+        }
+        .video-box a:hover {
+            color: var(--secondary);
+            text-decoration: underline;
+        }
+
+        .blog-container .back-links {
+            margin: 40px 0 20px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .blog-container .back-links a {
             display: inline-block;
-            margin-top: 30px;
-            background: var(--secondary);
-            color: #fff;
             padding: 12px 28px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
             transition: .3s;
         }
-        .back-link:hover {
-            background: var(--primary);
-        }
-        .contact-float {
-            margin-top: 20px;
-        }
-        .contact-float a {
-            display: inline-block;
+        .blog-container .back-links .btn-blog-home {
             background: var(--primary);
             color: #fff;
-            padding: 12px 28px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            margin-left: 10px;
-            transition: .3s;
         }
-        .contact-float a:hover {
+        .blog-container .back-links .btn-blog-home:hover {
             background: var(--secondary);
         }
+        .blog-container .back-links .btn-blog-services {
+            background: var(--secondary);
+            color: #fff;
+        }
+        .blog-container .back-links .btn-blog-services:hover {
+            background: var(--primary);
+        }
+        .blog-container .back-links .btn-blog-contact {
+            background: var(--dark);
+            color: #fff;
+        }
+        .blog-container .back-links .btn-blog-contact:hover {
+            background: var(--primary);
+        }
+
+        .callout-box {
+            background: var(--light);
+            border-right: 5px solid var(--primary);
+            padding: 20px 25px;
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+        .callout-box strong {
+            color: var(--primary);
+        }
+
+        .danger-box {
+            background: #fff3cd;
+            border-right: 5px solid #ffc107;
+            padding: 20px 25px;
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+        .danger-box strong {
+            color: #d63031;
+        }
+
+        details {
+            background: #f8fbfd;
+            padding: 15px 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #e9ecef;
+        }
+        details summary {
+            font-weight: 700;
+            color: var(--primary);
+            cursor: pointer;
+            font-size: 17px;
+        }
+        details p {
+            margin-top: 12px;
+            padding-right: 10px;
+        }
+
+        /* =============== فوتر =============== */
+        .site-footer {
+            background: var(--dark);
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .site-footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer-grid {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .footer-box h3 {
+            color: var(--secondary);
+            margin-bottom: 10px;
+        }
+        .footer-box p {
+            color: #ccc;
+            font-size: 15px;
+        }
+        .site-footer hr {
+            border: none;
+            border-top: 1px solid #444;
+            margin: 20px 0;
+        }
+        .site-footer .copyright {
+            color: #888;
+            font-size: 14px;
+        }
+
+        /* =============== منوی شناور =============== */
+        .floating-container {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .floating-main-btn {
+            background: var(--green);
+            color: #fff;
+            border: none;
+            padding: 14px 24px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 700;
+            font-family: inherit;
+            cursor: pointer;
+            box-shadow: 0 6px 25px rgba(37, 163, 68, 0.4);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: .3s;
+        }
+        .floating-main-btn:hover {
+            background: #1e8c3a;
+            transform: scale(1.03);
+        }
+        .floating-menu {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,.15);
+            padding: 12px;
+            margin-bottom: 12px;
+            display: none;
+            flex-direction: column;
+            min-width: 200px;
+        }
+        .floating-menu.active {
+            display: flex;
+        }
+        .floating-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 18px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 15px;
+            transition: .3s;
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-family: inherit;
+            width: 100%;
+            text-align: right;
+        }
+        .floating-item:hover {
+            background: var(--light);
+        }
+        .floating-item .item-icon {
+            font-size: 20px;
+        }
+        .call-wrapper {
+            position: relative;
+        }
+        .call-submenu {
+            display: none;
+            padding-right: 20px;
+            margin-top: 5px;
+        }
+        .call-submenu.active {
+            display: block;
+        }
+        .call-sub-item {
+            padding: 10px 18px;
+            font-size: 14px;
+        }
+        .whatsapp-item {
+            color: #25D366;
+        }
+        .eitaa-item {
+            color: var(--orange);
+        }
+        .btn-arrow {
+            transition: .3s;
+        }
+        .btn-arrow.open {
+            transform: rotate(90deg);
+        }
+
+        /* =============== دکمه اسکرول به بالا =============== */
+        #backToTop {
+            position: fixed;
+            bottom: 110px;
+            right: 30px;
+            z-index: 998;
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            font-size: 28px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 6px 25px rgba(0,0,0,.2);
+            transition: .3s;
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        #backToTop:hover {
+            background: var(--secondary);
+            transform: translateY(-4px);
+        }
+        #backToTop.show {
+            display: flex;
+        }
+
+        /* =============== ریسپانسیو =============== */
         @media (max-width: 768px) {
-            .service-detail {
-                grid-template-columns: 1fr;
-                text-align: center;
-                margin-top: 80px;
+            .blog-container {
+                padding: 20px 15px;
+                margin: 100px auto 40px;
             }
-            .service-detail .text h1 {
+            .blog-container h1 {
                 font-size: 26px;
             }
-            .service-detail .gif img {
-                max-height: 250px;
+            .blog-container h2 {
+                font-size: 22px;
+            }
+            .blog-container h3 {
+                font-size: 19px;
+            }
+            .blog-container h4 {
+                font-size: 17px;
+            }
+            .blog-container p,
+            .blog-container ul,
+            .blog-container ol {
+                font-size: 15px;
+            }
+            .blog-container table {
+                font-size: 14px;
+            }
+            .blog-container .back-links a {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+            .navbar ul {
+                display: none;
+            }
+            .mobile-menu {
+                display: block;
+            }
+            .floating-container {
+                left: 15px;
+                bottom: 20px;
+            }
+            .floating-main-btn {
+                padding: 12px 18px;
+                font-size: 14px;
+            }
+            #backToTop {
+                width: 48px;
+                height: 48px;
+                font-size: 24px;
+                bottom: 100px;
+                right: 15px;
             }
         }
     </style>
 </head>
 <body>
 
+<!-- =============== هدر =============== -->
 <header>
     <div class="container">
-        <a href="../index.html" class="logo"><img src="../images/logo.png" alt="لوگو"></a>
+        <a href="../index.html" class="logo"><img src="../images/logo.png" alt="لوگو شرکت سمپاشی نانوفناوران"></a>
         <nav class="navbar">
             <ul>
                 <li><a href="../index.html">صفحه اصلی</a></li>
-                <li><a href="../services.html" class="active">خدمات</a></li>
+                <li><a href="../services.html">خدمات مسکونی</a></li>
+                <li><a href="../commercial-services.html">خدمات تجاری</a></li>
                 <li><a href="../about.html">درباره ما</a></li>
                 <li><a href="../contact.html">تماس</a></li>
             </ul>
         </nav>
         <div class="header-buttons">
-            <a href="tel:09120705746" class="call-btn">📞 09120705746</a>
             <div class="mobile-menu">☰</div>
+        </div>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="جستجو...">
+            <button onclick="alert('قابلیت جستجو در حال توسعه است')">🔍</button>
         </div>
     </div>
 </header>
 
-<div class="service-detail">
-    <div class="text">
-        <h1>🐛 سمپاشی هزارپا</h1>
-        <p>کنترل هزارپاها در محیط‌های مرطوب و باغی با روش‌های تخصصی.</p>
-        <p><strong>روش کنترل:</strong> استفاده از سموم استاندارد و روش‌های نوین با تضمین کیفیت و ماندگاری بالا.</p>
-        <p><strong>مدت زمان اثرگذاری:</strong> نتایج سریع و ماندگار تا ۶ ماه.</p>
-        <a href="../services.html" class="back-link">🔙 بازگشت به لیست خدمات</a>
-        <div class="contact-float">
-            <a href="tel:09120705746">📞 تماس فوری</a>
-            <a href="https://wa.me/989120705746" target="_blank">💬 واتساپ</a>
-        </div>
+<!-- =============== مقاله =============== -->
+<div class="blog-container">
+
+    <h1>راهنمای جامع و تخصصی سمپاشی هزارپا | از تشخیص تا ریشه‌کنی اصولی</h1>
+    <div class="meta">
+        <span>📅 آخرین به‌روزرسانی: ۳۰ مرداد ۱۴۰۴</span> &nbsp;|&nbsp; <span>⏱ زمان مطالعه: ۱۲ دقیقه</span>
     </div>
-    <div class="gif">
-        <img src="../images/services/millipede.jpg" alt="سمپاشی هزارپا">
+
+    <!-- ===== تصویر اصلی (millipede.jpg) ===== -->
+    <div class="blog-image">
+        <img src="../images/services/millipede.jpg" alt="سمپاشی هزارپا - کنترل تخصصی نانوفناوران">
+        <div class="caption"><strong>تصویر هزارپا</strong> - یکی از رایج‌ترین مهمانان ناخوانده در منازل و باغ‌ها</div>
     </div>
+
+    <h2>مقدمه: هزارپاها؛ مهمانان ناخوانده‌ای که نباید نادیده بگیرید</h2>
+    <p>آیا تا به حال در زیرزمین خانه، پشت گلدان‌ها یا حتی درون حمام، موجودی با ده‌ها پای ریز و بدنی بندبند را دیده‌اید که با سرعت نسبتاً خوبی در حال حرکت است و پس از مزاحمت، خود را به شکل یک دایره درمی‌آورد؟ به احتمال قریب به یقین، شما با <strong>هزارپا</strong> آشنا شده‌اید. این بندپایان با وجود ظاهر ترسناکشان، برای انسان خطر مستقیمی ندارند، اما حضور بی‌رویه آنها در محیط زندگی می‌تواند بسیار آزاردهنده باشد و برای بسیاری از افراد، به‌ویژه کودکان، ایجاد ترس و استرس کند.</p>
+
+    <p>هزارپاها از رده Diplopoda هستند و برخلاف نامشان، هزار پا ندارند؛ اما بیش از ۱۰۰ جفت پا در برخی گونه‌ها دیده شده است [citation:1]. این موجودات نقش مهمی در طبیعت به عنوان <strong>تجزیه‌کننده مواد آلی</strong> ایفا می‌کنند [citation:6]، اما زمانی که به دلیل بارندگی‌های شدید، تغییرات آب و هوایی یا کمبود رطوبت به سمت خانه‌های ما هجوم می‌آورند، به یک معضل جدی تبدیل می‌شوند [citation:1][citation:4].</p>
+
+    <p>در این مقاله جامع از <strong>شرکت سمپاشی نانوفناوران بهداشت تهران</strong>، شما را با هزارپاها، دلایل حضور آنها در منزل، روش‌های پیشگیری و مهم‌تر از همه، <strong>سمپاشی تخصصی و ریشه‌کنی اصولی</strong> این موجودات آشنا خواهیم کرد.</p>
+
+    <h2>هزارپا چیست و چرا وارد خانه می‌شود؟</h2>
+
+    <h3>معرفی حشره هزارپا</h3>
+    <p>هزارپاها بندپایانی با بدنی استوانه‌ای و بخش‌بندی‌شده هستند که در هر بخش، دو جفت پای کوچک دارند [citation:1][citation:5]. برخلاف حشرات که تنها ۶ پا دارند، هزارپاها در تمام طول عمر خود پاهای متعددی دارند و با هر بار پوست‌اندازی، تعداد پاهایشان افزایش می‌یابد [citation:1]. این موجودات معمولاً در محیط‌های مرطوب و تاریک، زیر سنگ‌ها، کنده‌های درختان، مالچ‌ها و برگ‌های ریخته شده زندگی می‌کنند [citation:1][citation:4].</p>
+
+    <p>هزارپاها برخلاف برخی از بندپایان دیگر، <strong>نه نیش می‌زنند و نه انسان را گاز می‌گیرند</strong> [citation:2][citation:5]. با این حال، برخی گونه‌ها در هنگام دفاع، مایعی بدبو و گاهی تحریک‌کننده از خود ترشح می‌کنند که می‌تواند برای چشم یا پوست حساس ایجاد سوزش کند [citation:1][citation:2].</p>
+
+    <h3>دلایل اصلی ورود هزارپا به منزل</h3>
+    <p>هزارپاها معمولاً برای سه دلیل اصلی وارد منازل می‌شوند:</p>
+    <ul>
+        <li><strong>بارندگی شدید و غرقابی شدن خاک:</strong> زمانی که باران زیاد می‌بارد، خاک اطراف خانه اشباع شده و هزارپاها برای فرار از غرقاب شدن، به داخل ساختمان‌ها پناه می‌برند [citation:1][citation:4].</li>
+        <li><strong>گرما و خشکی شدید:</strong> در هوای بسیار گرم و خشک، هزارپاها به دنبال محیط‌های مرطوب‌تر مانند زیرزمین‌ها، حمام‌ها و آشپزخانه‌ها می‌گردند [citation:5].</li>
+        <li><strong>ازدحام جمعیت:</strong> گاهی جمعیت هزارپاها در محیط بیرون آنقدر زیاد می‌شود که برای یافتن غذا و فضا، به صورت دسته‌جمعی به سمت ساختمان‌ها مهاجرت می‌کنند [citation:4].</li>
+    </ul>
+
+    <h2>تشخیص حضور هزارپا: علائم و نشانه‌ها</h2>
+    <p>تشخیص حضور هزارپا معمولاً با مشاهده مستقیم آنها انجام می‌شود. اما برخی نشانه‌ها می‌توانند به شما هشدار دهند:</p>
+    <table>
+        <thead>
+            <tr><th>نشانه</th><th>توضیح</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>مشاهده خود حشره</strong></td><td>دیدن هزارپاهای خاکستری، قهوه‌ای یا سیاه در حمام، زیرزمین، انبار یا اطراف گلدان‌ها</td></tr>
+            <tr><td><strong>حرکت دسته‌جمعی</strong></td><td>مشاهده چندین هزارپا به طور همزمان در یک نقطه (معمولاً پس از بارندگی)</td></tr>
+            <tr><td><strong>بوی نامطبوع</strong></td><td>برخی گونه‌های هزارپا در صورت تهدید، بوی تندی متصاعد می‌کنند [citation:1]</td></tr>
+            <tr><td><strong>وجود محیط‌های مرطوب</strong></td><td>وجود رطوبت بالا، نشتی آب یا مالچ مرطوب در نزدیکی خانه</td></tr>
+        </tbody>
+    </table>
+
+    <h2>هزارپاها چه خطری دارند؟</h2>
+    <p>بر اساس اطلاعات معتبر از مراکز کنترل آفات و سازمان‌های بهداشتی، هزارپاها برای انسان‌ها و حیوانات خانگی <strong>خطر مستقیمی ندارند</strong> [citation:1][citation:2][citation:5]. اما مشکلاتی که ایجاد می‌کنند عبارتند از:</p>
+
+    <ul>
+        <li><strong>آزاردهندگی و ایجاد ترس:</strong> وجود هزارپا در محیط زندگی، به‌ویژه برای کودکان، می‌تواند بسیار ناخوشایند باشد [citation:4].</li>
+        <li><strong>ترشحات تحریک‌کننده:</strong> برخی گونه‌ها در صورت تهدید، مایعی ترشح می‌کنند که ممکن است باعث سوزش پوست یا چشم شود [citation:1][citation:2].</li>
+        <li><strong>عدم آسیب به ساختمان و مبلمان:</strong> هزارپاها از مواد آلی در حال پوسیدگی تغذیه می‌کنند و به چوب ساختمان، مبلمان یا مواد غذایی آسیبی نمی‌رسانند [citation:2][citation:6].</li>
+    </ul>
+
+    <div class="callout-box">
+        <p><strong>توجه:</strong> بر اساس تحقیقات دانشگاه IPB اندونزی، استفاده از حشره‌کش‌های شیمیایی قوی برای کنترل هزارپا نه تنها ضروری نیست، بلکه می‌تواند به محیط زیست و میکروارگانیسم‌های مفید خاک آسیب برساند [citation:6].</p>
+    </div>
+
+    <h2>روش‌های پیشگیری از ورود هزارپا به منزل</h2>
+    <p>پیشگیری همواره بهترین راهکار در مقابله با هزارپاهاست. با رعایت این نکات، می‌توانید از ورود آنها به منزل خود جلوگیری کنید:</p>
+
+    <h3>۱. کنترل رطوبت و اصلاح محیط بیرون</h3>
+    <ul>
+        <li><strong>حذف مالچ و بقایای گیاهی:</strong> هرگز مالچ چوبی را مستقیماً در مجاورت پی ساختمان قرار ندهید؛ این کار هزارپاها را به خانه نزدیک می‌کند [citation:1]. مالچ را حداقل ۳۰ تا ۶۰ سانتی‌متر از دیوار فاصله دهید.</li>
+        <li><strong>جمع‌آوری برگ‌ها و علف‌های هرز:</strong> برگ‌های ریخته شده و علف‌های هرز را از اطراف خانه جمع‌آوری کنید تا پناهگاه هزارپاها از بین برود [citation:4].</li>
+        <li><strong>مدیریت آب‌های سطحی:</strong> از جمع شدن آب در اطراف فونداسیون جلوگیری کنید و سیستم زهکشی را بهبود بخشید [citation:7].</li>
+        <li><strong>استفاده از شن یا سنگ به جای مالچ:</strong> در صورت تمایل به پوشش زمین، از سنگ‌ریزه یا شن به جای مالچ چوبی استفاده کنید [citation:1].</li>
+    </ul>
+
+    <h3>۲. مسدود کردن نقاط ورود</h3>
+    <ul>
+        <li><strong>بستن شکاف‌ها و درزها:</strong> تمام شکاف‌های دیوار، اطراف درب‌ها و پنجره‌ها را با درزگیر یا سیمان ببندید [citation:2][citation:4].</li>
+        <li><strong>نصب درپوش زیر درب:</strong> از درپوش‌های زیر درب برای جلوگیری از ورود هزارپاها از زیر در استفاده کنید [citation:7].</li>
+        <li><strong>تعمیر توری‌های پنجره:</strong> از سالم بودن توری‌های پنجره‌ها، به‌ویژه پنجره‌های زیرزمین، اطمینان حاصل کنید [citation:4][citation:5].</li>
+    </ul>
+
+    <h3>۳. کنترل محیط داخلی</h3>
+    <ul>
+        <li><strong>استفاده از رطوبت‌گیر:</strong> در زیرزمین‌ها و مکان‌های مرطوب، از دستگاه رطوبت‌گیر برای کاهش رطوبت استفاده کنید [citation:4][citation:7].</li>
+        <li><strong>تهویه مناسب:</strong> اطمینان حاصل کنید که فضاهای بسته به خوبی تهویه می‌شوند.</li>
+        <li><strong>رفع نشتی‌ها:</strong> هرگونه نشتی آب در لوله‌ها و شیرآلات را به سرعت تعمیر کنید [citation:7].</li>
+    </ul>
+
+    <h2>روش‌های طبیعی و غیرشیمیایی کنترل هزارپا</h2>
+    <p>پس از ورود هزارپاها به منزل، روش‌های طبیعی و غیرشیمیایی اولین گزینه‌های مؤثر هستند:</p>
+
+    <h3>۱. جاروکشی و جمع‌آوری دستی</h3>
+    <p>هزارپاهای داخل خانه معمولاً به دلیل کمبود رطوبت به سرعت خشک می‌شوند و می‌میرند [citation:5]. می‌توانید آنها را به سادگی جارو کنید یا با دستکش جمع‌آوری کرده و به بیرون از خانه منتقل کنید [citation:6][citation:9].</p>
+
+    <h3>۲. خاک دیاتومه</h3>
+    <p>خاک دیاتومه (DE) یک پودر طبیعی از جلبک‌های فسیلی است که با ایجاد بریدگی در پوشش هزارپاها، آنها را کم‌آب کرده و از بین می‌برد [citation:7]. این ماده غیرسمی بوده و برای انسان و حیوانات خانگی بی‌خطر است. آن را در اطراف نقاط ورودی، زیر درب‌ها و کنار دیوارها بپاشید [citation:7].</p>
+
+    <h3>۳. روغن‌های اسانسی</h3>
+    <p>روغن‌های اسانسی مانند نعناع، چای درخت، سدر، دارچین و اکالیپتوس خاصیت دفع کنندگی هزارپا دارند [citation:7]. برای استفاده، ۱۰ تا ۱۵ قطره از روغن را در یک لیتر آب ریخته و در نقاط ورودی اسپری کنید [citation:7].</p>
+
+    <h3>۴. تله‌های چسبنده</h3>
+    <p>قرار دادن تله‌های چسبنده در مسیرهای تردد هزارپاها می‌تواند به کاهش جمعیت آنها کمک کند [citation:4][citation:7].</p>
+
+    <h2>سمپاشی تخصصی و کنترل هزارپا با نانوفناوران</h2>
+    <p>اگر با وجود رعایت نکات پیشگیرانه و استفاده از روش‌های طبیعی، همچنان با مشکل هجوم هزارپا مواجه هستید، زمان آن رسیده که از یک <strong>خدمات تخصصی</strong> بهره ببرید.</p>
+
+    <div class="callout-box">
+        <p><strong>چرا روش‌های خانگی به تنهایی کافی نیستند؟</strong></p>
+        <ul>
+            <li><strong>مهاجرت دسته‌جمعی:</strong> در زمان‌های اوج جمعیت، هزارپاها به صورت گروهی و گسترده مهاجرت می‌کنند که کنترل آنها با روش‌های خانگی دشوار است [citation:4].</li>
+            <li><strong>مخفی شدن در نقاط صعب‌الوصول:</strong> هزارپاها در شکاف‌ها، زیر کفپوش‌ها و درون دیوارها پنهان می‌شوند که دسترسی به آنها با روش‌های معمولی ممکن نیست.</li>
+            <li><strong>نیاز به رویکرد سیستمی:</strong> برای ریشه‌کنی اصولی، باید هم محیط بیرون و هم نقاط ورودی به‌طور همزمان مدیریت شوند.</li>
+        </ul>
+    </div>
+
+    <h3>راهکار تخصصی شرکت نانوفناوران</h3>
+    <p>شرکت سمپاشی نانوفناوران بهداشت تهران با بیش از یک دهه تجربه و <strong>مجوز رسمی از وزارت بهداشت</strong>، خدمات تخصصی کنترل و دفع هزارپا را به صورت تضمینی ارائه می‌دهد:</p>
+
+    <ol>
+        <li>
+            <strong>بازرسی دقیق و شناسایی</strong>
+            <p>کارشناسان ما با بررسی کامل محیط، نقاط ورود، منابع رطوبت و پناهگاه‌های هزارپاها را شناسایی می‌کنند.</p>
+        </li>
+        <li>
+            <strong>سمپاشی محیطی با پیرتروئیدها</strong>
+            <p>مؤثرترین روش برای کنترل هزارپاها، <strong>سمپاشی محیطی با پیرتروئیدها</strong> (مانند پرمترین، بیفنترین، سایفلوترین) است [citation:7][citation:9]. این سموم با اثر تماسی، هزارپاها را از بین می‌برند و به‌عنوان یک سد شیمیایی در اطراف ساختمان عمل می‌کنند [citation:9].</p>
+        </li>
+        <li>
+            <strong>سمپاشی نقاط کلیدی و شکاف‌ها</strong>
+            <p>پس از شناسایی نقاط ورود، این مناطق به‌طور هدفمند سمپاشی می‌شوند تا از ورود مجدد هزارپاها جلوگیری شود.</p>
+        </li>
+        <li>
+            <strong>مشاوره و پیشگیری</strong>
+            <p>پس از اتمام عملیات، کارشناسان ما نکات لازم برای جلوگیری از بازگشت مجدد این موجودات را به شما آموزش می‌دهند.</p>
+        </li>
+    </ol>
+
+    <h2>هزینه سمپاشی هزارپا چقدر است؟</h2>
+    <p>هزینه سمپاشی هزارپا به عوامل زیر بستگی دارد. برای دریافت <strong>مشاوره رایگان</strong> و <strong>استعلام دقیق هزینه</strong>، با کارشناسان ما تماس بگیرید:</p>
+
+    <table>
+        <thead>
+            <tr><th>عامل</th><th>تأثیر بر هزینه</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>مساحت محیط</strong></td><td>هرچه محیط بزرگ‌تر باشد، هزینه بیشتر است</td></tr>
+            <tr><td><strong>شدت آلودگی</strong></td><td>آلودگی شدید نیاز به عملیات گسترده‌تری دارد</td></tr>
+            <tr><td><strong>دسترسی به نقاط آلوده</strong></td><td>سمپاشی فضاهای صعب‌الوصول هزینه را افزایش می‌دهد</td></tr>
+            <tr><td><strong>نوع روش کنترل</strong></td><td>سمپاشی محیطی، تزریق به شکاف‌ها یا ترکیبی</td></tr>
+        </tbody>
+    </table>
+
+    <h2>سوالات متداول درباره سمپاشی هزارپا</h2>
+
+    <details>
+        <summary><strong>آیا سمپاشی هزارپا برای کودکان و حیوانات خانگی خطرناک است؟</strong></summary>
+        <p>خیر، سموم استفاده‌شده توسط شرکت نانوفناوران (پیرتروئیدها) با رعایت کامل استانداردهای بهداشتی انتخاب می‌شوند. در هنگام سمپاشی، افراد و حیوانات از محیط خارج می‌شوند و پس از تهویه کامل، محیط کاملاً ایمن است.</p>
+    </details>
+
+    <details>
+        <summary><strong>چه مدت بعد از سمپاشی هزارپاها از بین می‌روند؟</strong></summary>
+        <p>اثر سمپاشی فوری است و هزارپاها به سرعت از بین می‌روند. در موارد مهاجرت دسته‌جمعی، ممکن است طی چند روز همچنان هزارپاهای جدید وارد شوند که با تداوم سمپاشی، کنترل می‌شوند [citation:9].</p>
+    </details>
+
+    <details>
+        <summary><strong>آیا خودمان هم می‌توانیم هزارپا را سمپاشی کنیم؟</strong></summary>
+        <p>استفاده از اسپری‌های خانگی معمولاً تأثیر موقت دارد و فقط هزارپاهای سطحی را از بین می‌برد. سمپاشی اصولی نیاز به شناسایی نقاط ورود و استفاده از سموم مناسب با رعایت نکات ایمنی دارد.</p>
+    </details>
+
+    <details>
+        <summary><strong>بعد از سمپاشی آیا هزارپاها دوباره برمی‌گردند؟</strong></summary>
+        <p>اگر محیط اصلاح شود، رطوبت کنترل گردد و نکات پیشگیری رعایت شود، احتمال بازگشت بسیار کم است. شرکت نانوفناوران خدمات خود را با ضمانت ارائه می‌دهد.</p>
+    </details>
+
+    <details>
+        <summary><strong>آیا هزارپاها به خانه آسیب می‌زنند؟</strong></summary>
+        <p>خیر، هزارپاها از مواد آلی پوسیده تغذیه می‌کنند و به ساختمان، مبلمان یا مواد غذایی آسیبی نمی‌رسانند [citation:2][citation:6].</p>
+    </details>
+
+    <h2>نتیجه‌گیری</h2>
+    <p>هزارپاها موجوداتی بی‌آزار هستند که به دلیل جستجوی رطوبت و پناهگاه، گاهی به محیط زندگی ما وارد می‌شوند. روش‌های پیشگیرانه مانند کاهش رطوبت، حذف پناهگاه‌ها و مسدود کردن نقاط ورود، مؤثرترین راه برای جلوگیری از هجوم آنهاست. در صورت نیاز به کنترل تخصصی، استفاده از خدمات حرفه‌ای با سموم استاندارد و ایمن توصیه می‌شود.</p>
+
+    <p><strong>شرکت سمپاشی نانوفناوران بهداشت تهران</strong> با بهره‌گیری از دانش فنی روز، تجهیزات پیشرفته و سموم استاندارد، آماده ارائه خدمات تخصصی و تضمینی در زمینه <strong>سمپاشی هزارپا</strong> به شماست. تیم کارشناسان ما با شناسایی دقیق منبع آلودگی و استفاده از روش‌های ایمن، محیطی امن و آرام را به شما باز می‌گردانند.</p>
+
+    <p style="font-size:20px; font-weight:700; text-align:center; color:var(--primary);">🚀 همین حالا اقدام کنید:</p>
+    <div style="text-align:center; margin:20px 0;">
+        <p>📞 <strong>تماس فوری:</strong> <a href="tel:09120705746" style="font-size:20px; color:var(--secondary);">۰۹۱۲۰۷۰۵۷۴۶</a></p>
+        <p>💬 <strong>درخواست مشاوره رایگان:</strong> از طریق <a href="https://wa.me/989120705746" target="_blank">واتساپ</a> یا <a href="https://eitaa.com/nanofannavaran_ir" target="_blank">ایتا</a></p>
+        <p>🔗 <strong>مشاهده سایر خدمات:</strong> <a href="../services.html">کنترل آفات مسکونی</a></p>
+    </div>
+
+    <div class="back-links">
+        <a href="../index.html" class="btn-blog-home">🏠 بازگشت به صفحه اصلی</a>
+        <a href="../services.html" class="btn-blog-services">🔙 بازگشت به لیست خدمات مسکونی</a>
+        <a href="../contact.html" class="btn-blog-contact">📞 تماس با ما</a>
+    </div>
+
 </div>
 
+<!-- =============== فوتر =============== -->
 <footer class="site-footer">
     <div class="container">
         <div class="footer-grid">
@@ -125,6 +747,116 @@
     </div>
 </footer>
 
-<script src="../script.js"></script>
+<!-- =============== منوی شناور =============== -->
+<div class="floating-container">
+    <button class="floating-main-btn" id="floatingToggle">
+        <span class="btn-arrow">▶</span>
+        <span class="btn-text">📞 مشاوره رایگان</span>
+    </button>
+    <div class="floating-menu" id="floatingMenu">
+        <div class="call-wrapper">
+            <div class="floating-item call-item" id="callToggle">
+                <span class="item-icon">📞</span>
+                <span class="item-text">تماس سریع</span>
+                <span class="arrow">▲</span>
+            </div>
+            <div class="call-submenu" id="callSubmenu">
+                <a href="tel:09120705746" class="floating-item call-sub-item"><span class="item-icon">📞</span><span class="item-text">شماره ۱</span></a>
+                <a href="tel:09197173454" class="floating-item call-sub-item"><span class="item-icon">📞</span><span class="item-text">شماره ۲</span></a>
+            </div>
+        </div>
+        <a href="https://wa.me/989120705746?text=%D8%A8%D9%87%20%D8%B3%D8%A7%DB%8C%D8%AA%20%D8%B4%D8%B1%DA%A9%D8%AA%20%D8%B3%D9%85%D9%BE%D8%A7%D8%B4%DB%8C%20%D9%86%D8%A7%D9%86%D9%88%D9%81%D9%86%D8%A7%D9%88%D8%B1%D8%A7%D9%86%20%D8%AE%D9%88%D8%B4%20%D8%A2%D9%85%D8%AF%DB%8C%D8%AF" target="_blank" class="floating-item whatsapp-item"><span class="item-icon">💬</span><span class="item-text">واتساپ</span></a>
+        <a href="https://eitaa.com/nanofannavaran_ir" target="_blank" class="floating-item eitaa-item"><span class="item-icon">✈️</span><span class="item-text">ایتا</span></a>
+    </div>
+</div>
+
+<!-- =============== دکمه اسکرول به بالا =============== -->
+<button id="backToTop" title="برو به بالا">↑</button>
+
+<!-- =============== جاوااسکریپت کامل =============== -->
+<script>
+    // ===== دکمه اسکرول به بالا =====
+    var backToTopBtn = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
+    });
+
+    backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // ===== منوی شناور =====
+    var toggleBtn = document.getElementById('floatingToggle');
+    var menu = document.getElementById('floatingMenu');
+    var arrow = toggleBtn.querySelector('.btn-arrow');
+
+    toggleBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        menu.classList.toggle('active');
+        arrow.classList.toggle('open');
+    });
+
+    // ===== زیرمنوی تماس =====
+    var callToggle = document.getElementById('callToggle');
+    var callSubmenu = document.getElementById('callSubmenu');
+
+    callToggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        callSubmenu.classList.toggle('active');
+        var arrowIcon = this.querySelector('.arrow');
+        if (arrowIcon) {
+            arrowIcon.textContent = callSubmenu.classList.contains('active') ? '▼' : '▲';
+        }
+    });
+
+    // ===== بستن منو با کلیک بیرون =====
+    document.addEventListener('click', function() {
+        menu.classList.remove('active');
+        arrow.classList.remove('open');
+        callSubmenu.classList.remove('active');
+        var arrowIcon = callToggle.querySelector('.arrow');
+        if (arrowIcon) {
+            arrowIcon.textContent = '▲';
+        }
+    });
+
+    menu.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+
+    // ===== منوی موبایل =====
+    var mobileMenuBtn = document.querySelector('.mobile-menu');
+    var navbar = document.querySelector('.navbar ul');
+
+    mobileMenuBtn.addEventListener('click', function() {
+        if (navbar.style.display === 'flex') {
+            navbar.style.display = 'none';
+        } else {
+            navbar.style.display = 'flex';
+            navbar.style.flexDirection = 'column';
+            navbar.style.position = 'absolute';
+            navbar.style.top = '70px';
+            navbar.style.right = '20px';
+            navbar.style.background = '#fff';
+            navbar.style.padding = '20px';
+            navbar.style.borderRadius = '12px';
+            navbar.style.boxShadow = '0 10px 30px rgba(0,0,0,.15)';
+            navbar.style.gap = '10px';
+            navbar.style.width = '200px';
+            navbar.style.zIndex = '999';
+        }
+    });
+
+    console.log('✅ دکمه اسکرول و منوی شناور فعال شدند!');
+</script>
+
 </body>
 </html>
