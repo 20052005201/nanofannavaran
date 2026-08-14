@@ -1,93 +1,541 @@
-
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سمپاشی بید فرش | نانوفناوران</title>
-    <link rel="stylesheet" href="../style.css">
+    <title>سمپاشی بید فرش | راهنمای جامع کنترل و ریشه‌کنی | نانوفناوران</title>
+    <meta name="description" content="مقاله جامع سمپاشی بید فرش: معرفی، علائم، روش‌های پیشگیری و کنترل تخصصی بید فرش در منزل و فرش‌های دستباف.">
+    <meta name="keywords" content="سمپاشی بید فرش, بید فرش, کنترل بید فرش, دفع بید فرش, بیدزدگی فرش, سمپاشی فرش, نانوفناوران">
+    <link rel="canonical" href="https://nanofannavaran.ir/service/carpet-moth.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
-        .service-detail {
-            max-width: 1100px;
-            margin: 100px auto 50px;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
+        :root {
+            --primary: #0B6FB8;
+            --secondary: #1a8bc0;
+            --dark: #1a2a3a;
+            --light: #f0f7ff;
+            --white: #ffffff;
+            --green: #25a344;
+            --orange: #e67e22;
         }
-        .service-detail .text h1 {
-            font-size: 32px;
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Vazirmatn', 'IRANSans', 'Tahoma', sans-serif;
+            background: #f5f8fc;
+            color: #2c3e50;
+            line-height: 1.8;
+        }
+
+        /* =============== هدر =============== */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 15px rgba(0,0,0,.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 10px 20px;
+        }
+        header .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .logo img {
+            height: 50px;
+        }
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 15px;
+            transition: .3s;
+        }
+        .navbar ul li a:hover,
+        .navbar ul li a.active {
+            color: var(--primary);
+        }
+        .header-buttons {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .call-btn {
+            background: var(--primary);
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            transition: .3s;
+        }
+        .call-btn:hover {
+            background: var(--secondary);
+        }
+        .mobile-menu {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+        .search-box {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .search-box input {
+            padding: 6px 14px;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            font-size: 14px;
+            font-family: inherit;
+        }
+        .search-box button {
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        /* =============== محتوای مقاله =============== */
+        .blog-container {
+            max-width: 1100px;
+            margin: 120px auto 60px;
+            padding: 0 20px;
+            background: #fff;
+            border-radius: 24px;
+            box-shadow: 0 10px 40px rgba(0,0,0,.08);
+            padding: 40px 40px 60px;
+        }
+        .blog-container h1 {
+            font-size: 36px;
             color: var(--primary);
             margin-bottom: 20px;
+            line-height: 1.5;
         }
-        .service-detail .text p {
+        .blog-container .meta {
+            color: #888;
+            font-size: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .blog-container h2 {
+            font-size: 28px;
+            color: var(--dark);
+            margin: 40px 0 15px;
+            border-right: 5px solid var(--primary);
+            padding-right: 15px;
+        }
+        .blog-container h3 {
+            font-size: 22px;
+            color: var(--primary);
+            margin: 30px 0 12px;
+        }
+        .blog-container h4 {
+            font-size: 19px;
+            color: var(--dark);
+            margin: 25px 0 10px;
+        }
+        .blog-container p {
             line-height: 2.2;
-            color: #555;
+            color: #444;
+            font-size: 17px;
+            margin-bottom: 18px;
+            text-align: justify;
+        }
+        .blog-container ul,
+        .blog-container ol {
+            line-height: 2.2;
+            color: #444;
+            font-size: 17px;
+            padding-right: 25px;
+            margin-bottom: 20px;
+        }
+        .blog-container ul li,
+        .blog-container ol li {
+            margin-bottom: 8px;
+        }
+        .blog-container table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0 30px;
             font-size: 16px;
         }
-        .service-detail .gif img {
+        .blog-container table th {
+            background: var(--primary);
+            color: #fff;
+            padding: 12px 15px;
+            text-align: right;
+        }
+        .blog-container table td {
+            border: 1px solid #ddd;
+            padding: 10px 15px;
+            background: #fafafa;
+        }
+        .blog-container table tr:nth-child(even) td {
+            background: #f5f8fc;
+        }
+        .blog-image {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .blog-image img {
             width: 100%;
-            max-height: 400px;
-            object-fit: contain;
+            max-width: 700px;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,.15);
         }
-        .back-link {
+        .blog-image .caption {
+            font-size: 14px;
+            color: #888;
+            margin-top: 10px;
+        }
+        .blog-image .caption strong {
+            color: var(--primary);
+        }
+
+        .video-box {
+            background: #f0f7ff;
+            border-right: 5px solid var(--primary);
+            padding: 15px 20px;
+            border-radius: 12px;
+            margin: 25px 0 30px;
+            text-align: center;
+        }
+        .video-box a {
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 17px;
+            text-decoration: none;
+            transition: .3s;
+        }
+        .video-box a:hover {
+            color: var(--secondary);
+            text-decoration: underline;
+        }
+
+        .blog-container .back-links {
+            margin: 40px 0 20px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .blog-container .back-links a {
             display: inline-block;
-            margin-top: 30px;
-            background: var(--secondary);
-            color: #fff;
             padding: 12px 28px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
             transition: .3s;
         }
-        .back-link:hover {
-            background: var(--primary);
-        }
-        .contact-float {
-            margin-top: 20px;
-        }
-        .contact-float a {
-            display: inline-block;
+        .blog-container .back-links .btn-blog-home {
             background: var(--primary);
             color: #fff;
-            padding: 12px 28px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            margin-left: 10px;
-            transition: .3s;
         }
-        .contact-float a:hover {
+        .blog-container .back-links .btn-blog-home:hover {
             background: var(--secondary);
         }
+        .blog-container .back-links .btn-blog-services {
+            background: var(--secondary);
+            color: #fff;
+        }
+        .blog-container .back-links .btn-blog-services:hover {
+            background: var(--primary);
+        }
+        .blog-container .back-links .btn-blog-contact {
+            background: var(--dark);
+            color: #fff;
+        }
+        .blog-container .back-links .btn-blog-contact:hover {
+            background: var(--primary);
+        }
+
+        .callout-box {
+            background: var(--light);
+            border-right: 5px solid var(--primary);
+            padding: 20px 25px;
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+        .callout-box strong {
+            color: var(--primary);
+        }
+
+        .danger-box {
+            background: #fff3cd;
+            border-right: 5px solid #ffc107;
+            padding: 20px 25px;
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+        .danger-box strong {
+            color: #d63031;
+        }
+
+        details {
+            background: #f8fbfd;
+            padding: 15px 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #e9ecef;
+        }
+        details summary {
+            font-weight: 700;
+            color: var(--primary);
+            cursor: pointer;
+            font-size: 17px;
+        }
+        details p {
+            margin-top: 12px;
+            padding-right: 10px;
+        }
+
+        /* =============== فوتر =============== */
+        .site-footer {
+            background: var(--dark);
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .site-footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer-grid {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .footer-box h3 {
+            color: var(--secondary);
+            margin-bottom: 10px;
+        }
+        .footer-box p {
+            color: #ccc;
+            font-size: 15px;
+        }
+        .site-footer hr {
+            border: none;
+            border-top: 1px solid #444;
+            margin: 20px 0;
+        }
+        .site-footer .copyright {
+            color: #888;
+            font-size: 14px;
+        }
+
+        /* =============== منوی شناور =============== */
+        .floating-container {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .floating-main-btn {
+            background: var(--green);
+            color: #fff;
+            border: none;
+            padding: 14px 24px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 700;
+            font-family: inherit;
+            cursor: pointer;
+            box-shadow: 0 6px 25px rgba(37, 163, 68, 0.4);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: .3s;
+        }
+        .floating-main-btn:hover {
+            background: #1e8c3a;
+            transform: scale(1.03);
+        }
+        .floating-menu {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,.15);
+            padding: 12px;
+            margin-bottom: 12px;
+            display: none;
+            flex-direction: column;
+            min-width: 200px;
+        }
+        .floating-menu.active {
+            display: flex;
+        }
+        .floating-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 18px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 15px;
+            transition: .3s;
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-family: inherit;
+            width: 100%;
+            text-align: right;
+        }
+        .floating-item:hover {
+            background: var(--light);
+        }
+        .floating-item .item-icon {
+            font-size: 20px;
+        }
+        .call-wrapper {
+            position: relative;
+        }
+        .call-submenu {
+            display: none;
+            padding-right: 20px;
+            margin-top: 5px;
+        }
+        .call-submenu.active {
+            display: block;
+        }
+        .call-sub-item {
+            padding: 10px 18px;
+            font-size: 14px;
+        }
+        .whatsapp-item {
+            color: #25D366;
+        }
+        .eitaa-item {
+            color: var(--orange);
+        }
+        .btn-arrow {
+            transition: .3s;
+        }
+        .btn-arrow.open {
+            transform: rotate(90deg);
+        }
+
+        /* =============== دکمه اسکرول به بالا =============== */
+        #backToTop {
+            position: fixed;
+            bottom: 110px;
+            right: 30px;
+            z-index: 998;
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            font-size: 28px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 6px 25px rgba(0,0,0,.2);
+            transition: .3s;
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        #backToTop:hover {
+            background: var(--secondary);
+            transform: translateY(-4px);
+        }
+        #backToTop.show {
+            display: flex;
+        }
+
+        /* =============== ریسپانسیو =============== */
         @media (max-width: 768px) {
-            .service-detail {
-                grid-template-columns: 1fr;
-                text-align: center;
-                margin-top: 80px;
+            .blog-container {
+                padding: 20px 15px;
+                margin: 100px auto 40px;
             }
-            .service-detail .text h1 {
+            .blog-container h1 {
                 font-size: 26px;
             }
-            .service-detail .gif img {
-                max-height: 250px;
+            .blog-container h2 {
+                font-size: 22px;
+            }
+            .blog-container h3 {
+                font-size: 19px;
+            }
+            .blog-container h4 {
+                font-size: 17px;
+            }
+            .blog-container p,
+            .blog-container ul,
+            .blog-container ol {
+                font-size: 15px;
+            }
+            .blog-container table {
+                font-size: 14px;
+            }
+            .blog-container .back-links a {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+            .navbar ul {
+                display: none;
+            }
+            .mobile-menu {
+                display: block;
+            }
+            .floating-container {
+                left: 15px;
+                bottom: 20px;
+            }
+            .floating-main-btn {
+                padding: 12px 18px;
+                font-size: 14px;
+            }
+            #backToTop {
+                width: 48px;
+                height: 48px;
+                font-size: 24px;
+                bottom: 100px;
+                right: 15px;
             }
         }
     </style>
 </head>
 <body>
 
+<!-- =============== هدر =============== -->
 <header>
     <div class="container">
-        <a href="../index.html" class="logo"><img src="../images/logo.png" alt="لوگو"></a>
+        <a href="../index.html" class="logo"><img src="../images/logo.png" alt="لوگو شرکت سمپاشی نانوفناوران"></a>
         <nav class="navbar">
             <ul>
                 <li><a href="../index.html">صفحه اصلی</a></li>
-                <li><a href="../services.html" class="active">خدمات</a></li>
+                <li><a href="../services.html">خدمات مسکونی</a></li>
+                <li><a href="../commercial-services.html">خدمات تجاری</a></li>
                 <li><a href="../about.html">درباره ما</a></li>
                 <li><a href="../contact.html">تماس</a></li>
             </ul>
@@ -96,26 +544,265 @@
             <a href="tel:09120705746" class="call-btn">📞 09120705746</a>
             <div class="mobile-menu">☰</div>
         </div>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="جستجو...">
+            <button onclick="alert('قابلیت جستجو در حال توسعه است')">🔍</button>
+        </div>
     </div>
 </header>
 
-<div class="service-detail">
-    <div class="text">
-        <h1>🧶 سمپاشی بید فرش</h1>
-        <p>کنترل بید فرش و جلوگیری از تخریب الیاف و منسوجات.</p>
-        <p><strong>روش کنترل:</strong> استفاده از سموم استاندارد و روش‌های نوین با تضمین کیفیت و ماندگاری بالا.</p>
-        <p><strong>مدت زمان اثرگذاری:</strong> نتایج سریع و ماندگار تا ۶ ماه.</p>
-        <a href="../services.html" class="back-link">🔙 بازگشت به لیست خدمات</a>
-        <div class="contact-float">
-            <a href="tel:09120705746">📞 تماس فوری</a>
-            <a href="https://wa.me/989120705746" target="_blank">💬 واتساپ</a>
-        </div>
+<!-- =============== مقاله =============== -->
+<div class="blog-container">
+
+    <h1>راهنمای جامع و تخصصی سمپاشی بید فرش | از تشخیص تا ریشه‌کنی قطعی</h1>
+    <div class="meta">
+        <span>📅 آخرین به‌روزرسانی: ۲۸ مرداد ۱۴۰۴</span> &nbsp;|&nbsp; <span>⏱ زمان مطالعه: ۱۵ دقیقه</span>
     </div>
-    <div class="gif">
-        <img src="../images/services/carpet-moth.jpg" alt="سمپاشی بید فرش">
+
+    <!-- ===== تصویر اصلی (carpet-moth.jpg) ===== -->
+    <div class="blog-image">
+        <img src="../images/services/carpet-moth.jpg" alt="سمپاشی بید فرش - کنترل تخصصی نانوفناوران">
+        <div class="caption"><strong>تصویر بید فرش</strong> - یکی از مخرب‌ترین آفات منسوجات طبیعی در منازل و موزه‌ها</div>
     </div>
+
+    <h2>مقدمه: تهدید خاموش برای ارزشمندترین دارایی‌های شما</h2>
+    <p>آیا تا به حال سوراخ‌های ریز و نامنظمی را روی فرش دستبافت یا مبلمان گران‌قیمت خود مشاهده کرده‌اید که بدون هیچ دلیل مشخصی ظاهر شده‌اند؟ آیا هنگام جارو کشیدن، تکه‌های ریزی از الیاف فرش روی زمین ریخته‌اید و از خود پرسیده‌اید که این آسیب‌ها از کجا آمده‌اند؟ اگر پاسخ شما مثبت است، احتمالاً خانه شما میزبان ناخوانده‌ای به نام <strong>بید فرش</strong> شده است؛ آفتی کوچک اما فوق‌العاده مخرب که می‌تواند در سکوت کامل، ارزش‌مندترین فرش‌ها و منسوجات شما را به توده‌ای بی‌استفاده از الیاف خرد شده تبدیل کند.</p>
+
+    <p><strong>بید فرش</strong> که در زبان علمی با نام <em>Tineola bisselliella</em> شناخته می‌شود، یکی از جدی‌ترین تهدیدات برای فرش‌های پشمی، ابریشمی و سایر منسوجات طبیعی محسوب می‌شود. این حشره کوچک با تغذیه از کراتین موجود در الیاف طبیعی، به تدریج و بدون آنکه متوجه شوید، بافت فرش را از درون تخریب می‌کند. آنچه این آفت را به ویژه خطرناک می‌سازد، سرعت تکثیر بالا و توانایی آن در پنهان شدن در عمیق‌ترین لایه‌های بافت فرش است.</p>
+
+    <p>در این مقاله جامع از <strong>شرکت سمپاشی نانوفناوران بهداشت تهران</strong>، شما را با تمام جنبه‌های مربوط به بید فرش آشنا خواهیم کرد؛ از شناسایی دقیق این آفت و تشخیص علائم آلودگی گرفته تا روش‌های پیشگیری و مهم‌تر از همه، <strong>سمپاشی تخصصی و ریشه‌کنی اصولی</strong> این آفت با استفاده از پیشرفته‌ترین روش‌های روز دنیا.</p>
+
+    <h2>بید فرش چیست و چرا فرش‌های ما را هدف قرار می‌دهد؟</h2>
+
+    <h3>معرفی حشره بید فرش</h3>
+    <p>بید فرش حشره‌ای کوچک از راسته پروانه‌سانان است که در مرحله لاروی، از الیاف طبیعی حاوی پروتئین کراتین تغذیه می‌کند. برخلاف تصور عموم، این حشرات بالغ نیستند که به فرش آسیب می‌زنند؛ بلکه <strong>لاروهای بید</strong> عامل اصلی تخریب فرش هستند. بیدهای بالغ تنها نقش تخم‌گذاری در لابه‌لای پرزهای فرش را بر عهده دارند و پس از آن، لاروهای خارج شده از تخم‌ها هستند که با تغذیه از الیاف، فرش را از درون تخریب می‌کنند.</p>
+
+    <!-- ===== ویدیو آپارات ===== -->
+    <div class="video-box">
+        <p>🎥 <strong>خسارت‌های ناشی از آلودگی بید فرش:</strong> <a href="https://aparat.com/v/xtp68cm" target="_blank">مشاهده در آپارات</a></p>
+    </div>
+
+    <h3>چرخه زندگی بید فرش</h3>
+    <p>درک چرخه زندگی بید فرش برای مبارزه مؤثر با این آفت ضروری است:</p>
+    <ol>
+        <li><strong>تخم:</strong> بید ماده تخم‌های بسیار ریز (حدود ۰٫۵ میلی‌متر)، سفید یا کرم رنگ خود را در مکان‌های تاریک، دور از رفت‌وآمد و نزدیک به منبع غذایی (فرش، لباس‌های پشمی) می‌گذارد. هر پروانه ماده بید می‌تواند در مدت کوتاهی تعداد زیادی تخم بگذارد که در شرایط مساعد، هر یک از این تخم‌ها در مدت کوتاهی به لارو تبدیل می‌شوند.</li>
+        <li><strong>لارو (کرم بید):</strong> این مرحله مخرب‌ترین مرحله چرخه زندگی بید است. لاروها به شکل کرم‌های سفید یا کرم رنگ با سری قهوه‌ای ظاهر می‌شوند و با ترشح آنزیم‌های گوارشی خاص، قادرند کراتین موجود در پشم و الیاف طبیعی را هضم کرده و به عنوان منبع تغذیه استفاده کنند. این فرآیند به مرور زمان باعث خوردگی، نازک شدن و در نهایت پوسیدگی نواحی مختلف فرش می‌شود. بدتر از آن، این لاروها در مراحل اولیه بسیار کوچک و نامرئی هستند و تا زمانی که آسیب جدی وارد نکنند، به سختی دیده می‌شوند.</li>
+        <li><strong>شفیره:</strong> لارو پس از تغذیه کافی، به شفیره تبدیل می‌شود.</li>
+        <li><strong>حشره بالغ:</strong> بید بالغ از شفیره خارج می‌شود و با بال‌های کوچک خود به مناطق تاریک و خلوت مانند زیر مبل، زیر فرش‌های سنگین یا انبارها می‌رود و در آنجا صدها تخم می‌گذارد. چرخه زندگی بید معمولاً بین ۲ تا ۶ ماه است و بیشترین آسیب را در مرحله لاروی به فرش وارد می‌کند.</li>
+    </ol>
+
+    <h3>تفاوت بید فرش با سایر حشرات</h3>
+    <p>بسیاری از افراد در تشخیص حشرات فرش خوار دچار اشتباه می‌شوند. در حالی که بید فرش معمولاً کوچک، خزدار و بی‌پرواز است، پروانه فرش شباهت بیشتری به پروانه‌های خانگی دارد اما با بال‌های کدر و الگوی پرواز کند. همچنین سوسک‌های فرش (Carpet Beetles) اندازه‌ای بزرگ‌تر، بدن گرد و رنگ‌های قهوه‌ای یا مشکی دارند. سوسک فرش بیشتر از مو، پر، پوست مرده، بقایای حشرات و مواد آلی تغذیه می‌کند و ظاهر آن نیز با بید فرق دارد. تشخیص صحیح نوع آفت برای انتخاب روش مناسب کنترل بسیار حیاتی است.</p>
+
+    <h2>چرا فرش‌ها محل مناسبی برای رشد بید هستند؟</h2>
+    <p>فرش‌ها به دلایل متعددی یکی از بهترین مکان‌ها برای رشد و تکثیر بید محسوب می‌شوند:</p>
+
+    <h3>نقش تاریکی و رطوبت در جذب بید فرش</h3>
+    <p>بیدها عاشق فضاهای تاریک و مرطوب هستند. هرجا که نور مستقیم خورشید نباشد و تهویه به خوبی انجام نشود، شرایط ایده‌آلی برای تخم‌گذاری بیدها فراهم می‌شود. به همین دلیل، فرش‌هایی که در انبار نگهداری می‌شوند یا به ندرت تکان داده می‌شوند، در اولویت هجوم این حشرات قرار دارند. همچنین، تولید مثل بید در گرما و رطوبت بیشتر افزایش می‌یابد؛ به دلیل وجود رطوبت بالا در شهرهای بندری (جنوب و شمال کشور) میزان بید فرش بیشتر است.</p>
+
+    <h3>فرش دستباف در معرض خطر بیشتر است یا فرش ماشینی؟</h3>
+    <p>فرش‌های دستباف پشمی، قربانیان اصلی بید هستند. الیاف طبیعی مانند پشم و ابریشم منبع تغذیه ایده‌آلی برای لاروهای بید محسوب می‌شوند. در مقابل، فرش‌های ماشینی که از الیاف مصنوعی مانند پلی استر یا اکریلیک تولید می‌شوند، معمولاً طعمه بید قرار نمی‌گیرند، زیرا الیاف مصنوعی منبع غذایی بید نیستند. با این حال، اگر ترکیبی از الیاف طبیعی در بافت فرش ماشینی استفاده شده باشد، همچنان امکان آسیب وجود دارد. فرش‌های ماشینی با الیاف آکریلیک هیتست، پلی‌استر و پلی‌پروپیلن در برابر بیدزدگی مقاومت بالایی دارند.</p>
+
+    <h3>علت بید زدن فرش</h3>
+    <p>بید برای رشد به سه عامل نیاز دارد: الیاف طبیعی، محیط تاریک و زمان. به همین دلیل، فرش‌هایی که مدت زیادی بدون استفاده یا جابه‌جایی باقی می‌مانند، بیشتر در معرض بیدزدگی قرار می‌گیرند. مهم‌ترین عوامل بید زدن فرش عبارت‌اند از:</p>
+    <ul>
+        <li>استفاده از فرش‌های پشمی و دستباف</li>
+        <li>نگهداری فرش در انباری یا محیط‌های تاریک</li>
+        <li>رطوبت و تهویه نامناسب</li>
+        <li>جمع شدن گردوغبار و پرز</li>
+        <li>لوله کردن فرش برای مدت طولانی</li>
+    </ul>
+
+    <h2>تشخیص بیدزدگی فرش: نشانه‌هایی که نباید نادیده بگیرید</h2>
+    <p>تشخیص زودهنگام بیدزدگی می‌تواند از تخریب گسترده فرش جلوگیری کند. مهم‌ترین علائم حضور بید فرش عبارتند از:</p>
+
+    <h3>علائم ظاهری فرش‌های بیدزده</h3>
+    <ol>
+        <li><strong>ایجاد نقاط سکه‌ای و سوراخ‌های ریز:</strong> یکی از واضح‌ترین نشانه‌های بیدزدگی، ایجاد سوراخ‌ها و لکه‌های سکه‌ای شکل در فرش است. این نواحی به دلیل تغذیه لارو بید از الیاف پشمی، بافت منسجم خود را از دست داده‌اند و معمولاً رنگ پریدگی یا خالی شدگی در آن مشاهده می‌شود.</li>
+        <li><strong>خرد شدن الیاف و ریزش پشم:</strong> در بسیاری از موارد، ریزش پشم در این نواحی به حدی است که حتی با جارو کشیدن یا لمس ساده، تکه‌های خرد شده پشم در دست باقی می‌ماند. این خردشدگی نشاندهنده تجزیه ساختار پروتئینی پشم توسط آنزیم‌های لارو بید است و زنگ خطری برای اقدام فوری محسوب می‌شود. اگر بر روی مناطق بید زده دست بکشید خرده ریزه‌های فرش در دستان شما باقی خواهند ماند.</li>
+        <li><strong>تغییر ظاهر سطح فرش هنگام دست کشیدن:</strong> فرش‌های بیدزده هنگام دست کشیدن روی سطحشان حالت ناهموار، زبر و در برخی نواحی خالی شده دارند. اگر فرش به‌طور کلی سالم به نظر می‌رسد اما در برخی نقاط حس نرمی، انسجام یا ضخامت طبیعی ندارد، این مورد می‌تواند یکی از نشانه‌های فعالیت بید در بافت زیرین باشد.</li>
+    </ol>
+
+    <!-- ===== تصویر دوم (carpet1.jpg) ===== -->
+    <div class="blog-image">
+        <img src="../images/services/carpet1.jpg" alt="علائم بیدزدگی فرش - خسارت‌های ناشی از بید فرش">
+        <div class="caption"><strong>علائم بیدزدگی فرش</strong> - سوراخ‌های ریز و خردشدگی الیاف از نشانه‌های هجوم بید فرش است</div>
+    </div>
+
+    <h3>مشاهده خود حشره و آثار آن</h3>
+    <ol start="4">
+        <li><strong>مشاهده لارو بید:</strong> لاروهای بید، کرمی شکل و به رنگ کرم یا زرد کم‌رنگ هستند. آنها به آرامی در بافت فرش حرکت می‌کنند و با دقت در لایه‌های زیرین قابل مشاهده‌اند.</li>
+        <li><strong>پوسته‌های لارو و فضولات:</strong> وجود پوسته‌های ریخته شده از لاروها و فضولات ریز در اطراف سوراخ‌ها، نشانه‌های دیگری از فعالیت بید هستند.</li>
+        <li><strong>تغییر رنگ نقاط آسیب‌دیده:</strong> مشاهده لکه‌های سفید و زرد رنگ روی فرش، به ویژه در قسمت‌هایی که از نور دور هستند، می‌تواند نشان‌دهنده بیدزدگی باشد.</li>
+        <li><strong>مشاهده حشرات بالغ:</strong> بیدهای بالغ حشرات کوچکی به رنگ کرم، طلایی یا قهوه‌ای روشن هستند و طولی حدود ۵ تا ۸ میلی‌متر دارند. مشاهده آنها در اطراف فرش، کمدها یا محیط‌های تاریک، نشانه فعالیت آنهاست.</li>
+    </ol>
+
+    <h2>روش‌های پیشگیری از بیدزدگی فرش: گام اول در حفاظت</h2>
+    <p>پیشگیری همواره بهترین راهکار در مقابله با بید فرش است. با رعایت این نکات، می‌توانید از ورود این آفت به منزل خود جلوگیری کنید:</p>
+
+    <h3>۱. کنترل محیط</h3>
+    <ul>
+        <li><strong>کاهش رطوبت:</strong> رطوبت بالا شرایط مناسبی برای رشد بید فرش فراهم می‌آورد. استفاده از دستگاه‌های رطوبت‌گیر برای کنترل و کاهش رطوبت محیط می‌تواند بسیار موثر باشد. نگهداشتن سطح رطوبت زیر ۵۰٪ می‌تواند به طور مؤثری از بروز مشکلات ناشی از بید فرش جلوگیری کند.</li>
+        <li><strong>تنظیم دما:</strong> دماهای بالای ۳۰ درجه سانتی‌گراد یا پایین‌تر از ۰ درجه سانتی‌گراد می‌تواند به کشتن بیدها و لاروهای آنها کمک کند.</li>
+        <li><strong>تهویه منظم:</strong> تهویه هوای منزل به صورت منظم، یکی از بهترین روش‌ها برای جلوگیری از تکثیر بید فرش در منزل است.</li>
+    </ul>
+
+    <h3>۲. نگهداری منظم فرش‌ها</h3>
+    <ul>
+        <li><strong>جاروکشی منظم:</strong> جاروکشی منظم با استفاده از جاروبرقی با فیلتر HEPA می‌تواند به کاهش تعداد بیدها و تخم‌های آنها کمک کند. جاروکشی گوشه‌های فرش، لبه پنجره، زیر مبلمان و هر جایی که در دسترس همیشگی برای جاروکشی نمی‌باشد به صورت هفتگی انجام شود. پس از جارو کردن مکان‌های آلوده، پاکت جاروبرقی را بیرون از منزل در یک پلاستیک خالی نمایید و دور بیندازید تا از تکثیر بیشتر لاروها جلوگیری شود.</li>
+        <li><strong>غبارگیری و شستشوی دوره‌ای:</strong> فرش‌ها را به طور منظم غبارگیری کنید و هر چند وقت یکبار آنها را به قالیشویی ببرید تا شستشوی عمیق با آب داغ و مواد ضد بید انجام شود.</li>
+    </ul>
+
+    <h3>۳. استفاده از روش‌های طبیعی برای پیشگیری</h3>
+    <ul>
+        <li><strong>مواد طبیعی دافع بید:</strong> استفاده از برگ‌های بو، چوب دارچین و ادویه‌هایی مانند میخک به عنوان روش‌های طبیعی برای پیشگیری از بید فرش موثر است. این مواد به دلیل خواص ضدعفونی‌کننده و دورکننده حشرات، می‌توانند به جلوگیری از بید فرش کمک کنند. میخک دارای ماده‌ای به نام «اوژنول» است که یک حشره‌کش طبیعی محسوب می‌شود.</li>
+        <li><strong>روغن‌های اسانسی:</strong> روغن‌های اسانسی مانند اسطوخودوس، آویشن، چریش و اکالیپتوس خاصیت ضد بید دارند. با مخلوط کردن چند قطره از این روغن‌ها با آب و اسپری کردن روی فرش، می‌توانید بیدها را دور کنید.</li>
+    </ul>
+
+    <h3>۴. نکات ویژه برای نگهداری بلندمدت</h3>
+    <ul>
+        <li><strong>قرار دادن فرش در معرض نور خورشید:</strong> نور مستقیم خورشید یا هوای سرد می‌تواند شرایط نامناسبی را برای بید و لاروهای آن ایجاد کرده و باعث از بین رفتن آنها شود. با این حال، برای فرش‌های ابریشمی یا بسیار ظریف، بهتر است از روش‌های ملایم‌تری مانند استفاده از بخارشوی استفاده شود.</li>
+        <li><strong>چرخش دوره‌ای فرش:</strong> اگر فرش را برای مدتی جمع کرده‌اید، هر چند وقت یکبار آن را باز کنید تا هوا بخورد و چند ساعتی پهن بماند. همچنین می‌توانید برای از بین بردن بیدها از خدمات سمپاشی بید نیز بهره بگیرید.</li>
+    </ul>
+
+    <h2>روش‌های خانگی از بین بردن بید فرش: راهکارهای موقت</h2>
+    <p>پس از شناسایی آلودگی، می‌توانید از روش‌های زیر برای کاهش جمعیت بید استفاده کنید. توجه داشته باشید که این روش‌ها معمولاً برای آلودگی‌های سطحی و اولیه مؤثر هستند و در صورت گسترش آلودگی، نیاز به سمپاشی تخصصی خواهید داشت.</p>
+
+    <h3>روش‌های طبیعی و گیاهی</h3>
+    <ol>
+        <li><strong>استفاده از میخک و روغن میخک:</strong> میخک به دلیل داشتن ماده اوژنول، یک حشره‌کش طبیعی برای بید محسوب می‌شود. برای استفاده، مقداری میخک را در یک دستمال یا پارچه بپیچید و در کمد لباس یا فضاهای آلوده به بید قرار دهید. همچنین می‌توانید ۱۰ قطره روغن میخک را در یک شیشه اسپری حاوی ۲۰۰ تا ۳۰۰ میلی‌لیتر آب بریزید و این مخلوط را روی فرش و سایر وسایل خارج از کمد اسپری کنید.</li>
+        <li><strong>برگ بو و دارچین:</strong> برگ بو دارای رایحه تند و قوی است که به راحتی بیدها را نابود می‌کند. برگ‌های بو را خشک کنید و در قسمت‌های مختلف کمد لباس، کابینت و سایر فضاهای آلوده به بید بریزید. همچنین می‌توانید چوب دارچین را در کیسه‌های پارچه‌ای کوچک قرار دهید و این کیسه‌ها را در مکان‌های مختلف زیر فرش و درزهای اتاق قرار دهید.</li>
+        <li><strong>استفاده از سرکه سفید:</strong> ترکیب سرکه سفید با آب و استفاده از آن به صورت اسپری روی فرش، بزرگترین دشمن بید و سایر حشرات موذی است. ۱۰۰ میلی‌لیتر سرکه را در ۲۰۰ میلی‌لیتر آب حل کرده و روی نقاط مشکوک به بیدزدگی اسپری کنید.</li>
+        <li><strong>روغن‌های اسانسی:</strong> برای تهیه اسپری از روغن‌های معطر، کافی است ۱۵ قطره روغن را در یک شیشه اسپری حاوی ۳۰۰ میلی‌لیتر آب بریزید و روی محل مورد نظر اسپری کنید. مراقب باشید که روغن موجود در آب، بیش از حد لازم نباشد؛ چون امکان ایجاد لکه روی فرش وجود دارد.</li>
+    </ol>
+
+    <h3>روش‌های فیزیکی</h3>
+    <ol start="5">
+        <li><strong>جاروکشی قدرتمند:</strong> استفاده از جاروبرقی قدرتمند و شستشو با آب داغ می‌تواند به کاهش تعداد بیدها کمک کند. اطمینان حاصل کنید که پاکت جاروبرقی را بلافاصله بیرون از منزل خالی کنید.</li>
+        <li><strong>استفاده از سشوار با دمای بالا:</strong> لارو بید در دمای بالای ۵۰ درجه نابود می‌شود. استفاده موضعی از سشوار باد گرم بسیار مؤثر است. سشوار باید دمای ۵۰ درجه داشته باشد و سرعت آن روی حالت ملایم باشد و سپس سشوار را مستقیماً روی بیدها بگیرید.</li>
+        <li><strong>قرار دادن فرش در فریزر:</strong> فرش‌های آلوده را در فریزر قرار دهید و به مدت ۴۸ ساعت نگهدارید تا بیدها و لاروهای آنها کشته شوند. دماهای پایین باعث مرگ بیدها و لاروهای آنها می‌شود.</li>
+        <li><strong>استفاده از بخار:</strong> بخارزدایی با دمای بالای ۶۰ درجه سانتی‌گراد می‌تواند به حذف آلودگی‌ها و لاروها از عمق الیاف فرش کمک کند.</li>
+    </ol>
+
+    <h3>روش‌های شیمیایی خانگی</h3>
+    <ol start="9">
+        <li><strong>نفتالین:</strong> نفتالین یکی از قدیمی‌ترین روش‌ها برای دفع حشرات است و می‌تواند به دور نگهداشتن بیدها از فرش‌ها کمک کند. دو گلوله نفتالین را در یک کیسه پارچه‌ای بگذارید و آن را در گوشه‌ای از کمد قرار دهید. توجه داشته باشید که لباس‌ها یا پارچه‌هایی که در معرض گلوله نفتالین قرار می‌گیرند، قبل از استفاده در معرض هوای آزاد بگذارید. با این حال، به دلیل خطرات احتمالی نفتالین برای سلامتی، استفاده از آن به عنوان یک روش اصلی توصیه نمی‌شود.</li>
+        <li><strong>تله‌های چسبی با جذب فرومونی:</strong> این تله‌ها حاوی ماده‌ای به نام فرومون هستند که بوی آن جذابیت خاصی برای بیدها دارد و آنها را مجذوب خود می‌کند. زمانی که این تله‌ها را در کمد لباس، کابینت و سایر محل‌های تکثیر بید قرار دهید، بیدها به سمت آن کشیده شده و به این تله می‌چسبند.</li>
+    </ol>
+
+    <h2>سمپاشی تخصصی و ریشه‌کنی قطعی بید فرش با نانوفناوران</h2>
+    <p>اگر با وجود رعایت نکات پیشگیرانه و استفاده از روش‌های خانگی، همچنان با مشکل بید فرش دست و پنجه نرم می‌کنید، زمان آن رسیده که از یک <strong>خدمات سمپاشی تخصصی</strong> بهره ببرید.</p>
+
+    <div class="callout-box">
+        <p><strong>چرا روش‌های خانگی به تنهایی کافی نیستند؟</strong></p>
+        <ul>
+            <li><strong>عدم نفوذ به عمق بافت:</strong> اسپری‌های سطحی و روش‌های طبیعی به عمق فرش نفوذ نمی‌کنند و لاروهایی که در لایه‌های زیرین بافت فرش پنهان شده‌اند، از بین نمی‌روند.</li>
+            <li><strong>عدم تأثیر بر تخم‌ها:</strong> بسیاری از روش‌های خانگی تخم‌های بید را از بین نمی‌برند و پس از مدتی چرخه زندگی دوباره آغاز می‌شود.</li>
+            <li><strong>مقاومت بالای بید:</strong> لاروهای بید به سموم معمولی مقاوم هستند و برای از بین بردن آنها نیاز به سموم تخصصی و روش‌های پیشرفته داریم.</li>
+            <li><strong>خطرات سلامتی:</strong> استفاده نادرست از سموم شیمیایی می‌تواند برای سلامتی خطرناک باشد.</li>
+        </ul>
+    </div>
+
+    <h3>راهکار تخصصی شرکت نانوفناوران</h3>
+    <p>شرکت سمپاشی نانوفناوران بهداشت تهران با بیش از یک دهه تجربه و <strong>مجوز رسمی از وزارت بهداشت</strong>، خدمات تخصصی سمپاشی بید فرش را به صورت تضمینی ارائه می‌دهد:</p>
+
+    <ol>
+        <li>
+            <strong>بازرسی دقیق و شناسایی</strong>
+            <p>کارشناسان ما با بررسی کامل فرش‌ها، مبلمان، کمدها و سایر نقاط مستعد، نوع آفت، میزان آلودگی و نقاط درگیری را شناسایی می‌کنند.</p>
+        </li>
+        <li>
+            <strong>استفاده از سموم تخصصی (پیرتروئید)</strong>
+            <p>بهترین سم برای از بین بردن بید فرش، <strong>پیرتروئید</strong> است. این سم از گیاهان خاصی به دست می‌آید و به عنوان بهترین سم حشره‌کش شناخته می‌شود. ویژگی مهم این سم، تاثیر آن روی حشرات است؛ زیرا این نوع سم برای انسان و حیوانات خانگی ضرر ندارد و فقط به حشرات آسیب می‌زند. پیرتروئید با تأثیر بر سیستم عصبی حشرات، به سرعت و به طور کامل بیدها را از بین می‌برد.</p>
+        </li>
+        <li>
+            <strong>مشاوره و پیشگیری</strong>
+            <p>پس از اتمام عملیات، کارشناسان ما نکات لازم برای جلوگیری از بازگشت مجدد این آفت را به شما آموزش می‌دهند.</p>
+        </li>
+    </ol>
+
+    <h2>بهترین سم برای بید فرش: پیرتروئید</h2>
+    <p>پیرتروئید یک حشره‌کش گیاهی است که از گیاهان خانواده گل‌داوودی به دست می‌آید. این سم با تأثیرگذاری بر سیستم عصبی حشرات، به سرعت و به طور کامل بیدها را از بین می‌برد. مهم‌ترین مزایای پیرتروئید عبارتند از:</p>
+    <ul>
+        <li><strong>ایمنی بالا برای انسان و حیوانات خانگی:</strong> این سم برای انسان و حیوانات خانگی ضرر ندارد و فقط به حشرات آسیب می‌زند.</li>
+        <li><strong>اثرگذاری سریع:</strong> پس از استفاده، بیدها به سرعت از بین می‌روند.</li>
+        <li><strong>طیف گسترده:</strong> علاوه بر بید، سایر آفات را نیز کنترل می‌کند.</li>
+    </ul>
+    <p>در کنار پیرتروئید، <strong>نفتالین</strong> نیز به عنوان یک دافع حشرات سنتی می‌تواند در پیشگیری از آلودگی فرش به بید مؤثر باشد. اما به دلیل خطرات احتمالی نفتالین برای سلامتی، استفاده از آن به عنوان یک سم اصلی توصیه نمی‌شود.</p>
+
+    <h2>هزینه سمپاشی بید فرش چقدر است؟</h2>
+    <p>هزینه سمپاشی بید فرش به عوامل زیر بستگی دارد. برای دریافت <strong>مشاوره رایگان</strong> و <strong>استعلام دقیق هزینه</strong>، با کارشناسان ما تماس بگیرید:</p>
+
+    <table>
+        <thead>
+            <tr><th>عامل</th><th>تأثیر بر هزینه</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>مساحت و تعداد فرش‌ها</strong></td><td>هرچه تعداد و مساحت فرش‌ها بیشتر باشد، هزینه بیشتر است</td></tr>
+            <tr><td><strong>شدت آلودگی</strong></td><td>آلودگی شدید نیاز به عملیات بیشتر و زمان‌برتری دارد</td></tr>
+            <tr><td><strong>نوع الیاف</strong></td><td>فرش‌های پشمی و ابریشمی نیاز به مراقبت ویژه دارند</td></tr>
+            <tr><td><strong>دسترسی به نقاط آلوده</strong></td><td>سمپاشی فضاهای صعب‌الوصول هزینه را افزایش می‌دهد</td></tr>
+        </tbody>
+    </table>
+
+    <h2>سوالات متداول درباره سمپاشی بید فرش</h2>
+
+    <details>
+        <summary><strong>آیا سمپاشی بید فرش برای کودکان و حیوانات خانگی خطرناک است؟</strong></summary>
+        <p>خیر، سموم استفاده‌شده توسط شرکت نانوفناوران (پیرتروئید) با رعایت کامل استانداردهای بهداشتی انتخاب می‌شوند. در هنگام سمپاشی، افراد و حیوانات از محیط خارج می‌شوند و پس از تهویه کامل، محیط کاملاً ایمن است. پیرتروئید برای انسان و حیوانات خانگی ضرر ندارد و فقط به حشرات آسیب می‌زند.</p>
+    </details>
+
+    <details>
+        <summary><strong>چه مدت بعد از سمپاشی بیدها از بین می‌روند؟</strong></summary>
+        <p>اثر سمپاشی در بیدهای بالغ فوری است و آنها به سرعت از بین می‌روند. لاروها طی ۱ تا ۲ هفته پس از تماس با سم از بین می‌روند.</p>
+    </details>
+
+    <details>
+        <summary><strong>آیا خودمان هم می‌توانیم بید فرش را سمپاشی کنیم؟</strong></summary>
+        <p>استفاده از اسپری‌های خانگی معمولاً مؤثر نیست و فقط بیدهای سطحی را از بین می‌برد. همچنین استفاده نادرست از سموم می‌تواند برای سلامتی خطرناک باشد. روش‌های تخصصی نیاز به تجهیزات و دانش دارد.</p>
+    </details>
+
+    <details>
+        <summary><strong>بعد از سمپاشی آیا بیدها دوباره برمی‌گردند؟</strong></summary>
+        <p>اگر محیط اصلاح شود، رطوبت کنترل گردد و نکات پیشگیری رعایت شود، احتمال بازگشت بسیار کم است. شرکت نانوفناوران خدمات خود را با ضمانت ارائه می‌دهد.</p>
+    </details>
+
+    <details>
+        <summary><strong>آیا فرش ماشینی هم بید می‌زند؟</strong></summary>
+        <p>خیر، الیاف مصنوعی مانند آکریلیک، پلی‌استر و پلی‌پروپیلن منبع غذایی بید نیستند. به همین دلیل، فرش‌های ماشینی در برابر بیدزدگی مقاومت بالایی دارند.</p>
+    </details>
+
+    <details>
+        <summary><strong>آیا بید فرش برای انسان خطر دارد؟</strong></summary>
+        <p>خیر، بید فرش نه نیش می‌زند و نه انسان را گاز می‌گیرد و برای انسان خطر مستقیمی ندارد. با این حال، پوسته لارو و فضولات آن ممکن است در افراد حساس باعث عطسه، سرفه یا خارش شود.</p>
+    </details>
+
+    <details>
+        <summary><strong>فرش بیدزده قابل ترمیم است؟</strong></summary>
+        <p>بله، با وجود آسیب‌های جدی که بید به فرش وارد می‌کند، امکان ترمیم آن وجود دارد. ترمیم فرش‌های آسیبدیده از بید به طور معمول با خارج کردن خامه‌های آسیبدیده از پشت فرش آغاز می‌شود. پس از تمیز کردن کامل محل بیدخورده، فرآیند مرمت با تکنیک‌های مختلفی از جمله قلاب پشت و قلاب رو انجام می‌گیرد.</p>
+    </details>
+
+    <h2>نتیجه‌گیری</h2>
+    <p>بید فرش یکی از خطرناک‌ترین آفات منسوجات طبیعی است که می‌تواند خسارت‌های جبران‌ناپذیری به فرش‌های دستباف، مبلمان و لباس‌های ارزشمند شما وارد کند. تشخیص زودهنگام و اقدام سریع، کلید جلوگیری از تخریب گسترده است. در حالی که روش‌های خانگی می‌توانند برای آلودگی‌های سطحی مفید باشند، برای ریشه‌کنی قطعی و تضمینی، استفاده از خدمات تخصصی ضروری است.</p>
+
+    <p><strong>شرکت سمپاشی نانوفناوران بهداشت تهران</strong> با بهره‌گیری از دانش فنی روز، تجهیزات پیشرفته و سموم استاندارد (پیرتروئید)، آماده ارائه خدمات تخصصی و تضمینی در زمینه <strong>سمپاشی بید فرش</strong> به شماست. تیم کارشناسان ما با استفاده از روش‌های تخصصی، این آفت را به‌طور کامل ریشه‌کنی می‌کنند و محیطی امن و آرام را به شما باز می‌گردانند.</p>
+
+    <p style="font-size:20px; font-weight:700; text-align:center; color:var(--primary);">🚀 همین حالا اقدام کنید:</p>
+    <div style="text-align:center; margin:20px 0;">
+        <p>📞 <strong>تماس فوری:</strong> <a href="tel:09120705746" style="font-size:20px; color:var(--secondary);">۰۹۱۲۰۷۰۵۷۴۶</a></p>
+        <p>💬 <strong>درخواست مشاوره رایگان:</strong> از طریق <a href="https://wa.me/989120705746" target="_blank">واتساپ</a> یا <a href="https://eitaa.com/nanofannavaran_ir" target="_blank">ایتا</a></p>
+        <p>🔗 <strong>مشاهده سایر خدمات:</strong> <a href="../services.html">کنترل آفات مسکونی</a></p>
+    </div>
+
+    <div class="back-links">
+        <a href="../index.html" class="btn-blog-home">🏠 بازگشت به صفحه اصلی</a>
+        <a href="../services.html" class="btn-blog-services">🔙 بازگشت به لیست خدمات مسکونی</a>
+        <a href="../contact.html" class="btn-blog-contact">📞 تماس با ما</a>
+    </div>
+
 </div>
 
+<!-- =============== فوتر =============== -->
 <footer class="site-footer">
     <div class="container">
         <div class="footer-grid">
@@ -126,6 +813,116 @@
     </div>
 </footer>
 
-<script src="../script.js"></script>
+<!-- =============== منوی شناور =============== -->
+<div class="floating-container">
+    <button class="floating-main-btn" id="floatingToggle">
+        <span class="btn-arrow">▶</span>
+        <span class="btn-text">📞 مشاوره رایگان</span>
+    </button>
+    <div class="floating-menu" id="floatingMenu">
+        <div class="call-wrapper">
+            <div class="floating-item call-item" id="callToggle">
+                <span class="item-icon">📞</span>
+                <span class="item-text">تماس سریع</span>
+                <span class="arrow">▲</span>
+            </div>
+            <div class="call-submenu" id="callSubmenu">
+                <a href="tel:09120705746" class="floating-item call-sub-item"><span class="item-icon">📞</span><span class="item-text">شماره ۱</span></a>
+                <a href="tel:09197173454" class="floating-item call-sub-item"><span class="item-icon">📞</span><span class="item-text">شماره ۲</span></a>
+            </div>
+        </div>
+        <a href="https://wa.me/989120705746?text=%D8%A8%D9%87%20%D8%B3%D8%A7%DB%8C%D8%AA%20%D8%B4%D8%B1%DA%A9%D8%AA%20%D8%B3%D9%85%D9%BE%D8%A7%D8%B4%DB%8C%20%D9%86%D8%A7%D9%86%D9%88%D9%81%D9%86%D8%A7%D9%88%D8%B1%D8%A7%D9%86%20%D8%AE%D9%88%D8%B4%20%D8%A2%D9%85%D8%AF%DB%8C%D8%AF" target="_blank" class="floating-item whatsapp-item"><span class="item-icon">💬</span><span class="item-text">واتساپ</span></a>
+        <a href="https://eitaa.com/nanofannavaran_ir" target="_blank" class="floating-item eitaa-item"><span class="item-icon">✈️</span><span class="item-text">ایتا</span></a>
+    </div>
+</div>
+
+<!-- =============== دکمه اسکرول به بالا =============== -->
+<button id="backToTop" title="برو به بالا">↑</button>
+
+<!-- =============== جاوااسکریپت کامل =============== -->
+<script>
+    // ===== دکمه اسکرول به بالا =====
+    var backToTopBtn = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
+    });
+
+    backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // ===== منوی شناور =====
+    var toggleBtn = document.getElementById('floatingToggle');
+    var menu = document.getElementById('floatingMenu');
+    var arrow = toggleBtn.querySelector('.btn-arrow');
+
+    toggleBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        menu.classList.toggle('active');
+        arrow.classList.toggle('open');
+    });
+
+    // ===== زیرمنوی تماس =====
+    var callToggle = document.getElementById('callToggle');
+    var callSubmenu = document.getElementById('callSubmenu');
+
+    callToggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        callSubmenu.classList.toggle('active');
+        var arrowIcon = this.querySelector('.arrow');
+        if (arrowIcon) {
+            arrowIcon.textContent = callSubmenu.classList.contains('active') ? '▼' : '▲';
+        }
+    });
+
+    // ===== بستن منو با کلیک بیرون =====
+    document.addEventListener('click', function() {
+        menu.classList.remove('active');
+        arrow.classList.remove('open');
+        callSubmenu.classList.remove('active');
+        var arrowIcon = callToggle.querySelector('.arrow');
+        if (arrowIcon) {
+            arrowIcon.textContent = '▲';
+        }
+    });
+
+    menu.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+
+    // ===== منوی موبایل =====
+    var mobileMenuBtn = document.querySelector('.mobile-menu');
+    var navbar = document.querySelector('.navbar ul');
+
+    mobileMenuBtn.addEventListener('click', function() {
+        if (navbar.style.display === 'flex') {
+            navbar.style.display = 'none';
+        } else {
+            navbar.style.display = 'flex';
+            navbar.style.flexDirection = 'column';
+            navbar.style.position = 'absolute';
+            navbar.style.top = '70px';
+            navbar.style.right = '20px';
+            navbar.style.background = '#fff';
+            navbar.style.padding = '20px';
+            navbar.style.borderRadius = '12px';
+            navbar.style.boxShadow = '0 10px 30px rgba(0,0,0,.15)';
+            navbar.style.gap = '10px';
+            navbar.style.width = '200px';
+            navbar.style.zIndex = '999';
+        }
+    });
+
+    console.log('✅ دکمه اسکرول و منوی شناور فعال شدند!');
+</script>
+
 </body>
 </html>
