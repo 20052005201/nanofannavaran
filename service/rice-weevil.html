@@ -3,118 +3,816 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سمپاشی شپشک برنج | نانوفناوران</title>
-    <link rel="stylesheet" href="../style.css">
+    <title>سمپاشی شپشک برنج (سرخرطومی) | راهنمای جامع کنترل آفات انباری | نانوفناوران</title>
+    <meta name="description" content="مقاله جامع سمپاشی شپشک برنج و آفات انباری: معرفی، علائم، روش‌های پیشگیری و کنترل تخصصی آفات مواد غذایی در منزل و انبار.">
+    <meta name="keywords" content="سمپاشی شپشک برنج, سرخرطومی برنج, آفات انباری, کنترل آفات مواد غذایی, شپشک برنج, دفع شپشک, سمپاشی انبار, نانوفناوران">
+    <link rel="canonical" href="https://nanofannavaran.ir/service/rice-weevil.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
-        .service-detail {
-            max-width: 1100px;
-            margin: 100px auto 50px;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
+        :root {
+            --primary: #0B6FB8;
+            --secondary: #1a8bc0;
+            --dark: #1a2a3a;
+            --light: #f0f7ff;
+            --white: #ffffff;
+            --green: #25a344;
+            --orange: #e67e22;
         }
-        .service-detail .text h1 {
-            font-size: 32px;
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Vazirmatn', 'IRANSans', 'Tahoma', sans-serif;
+            background: #f5f8fc;
+            color: #2c3e50;
+            line-height: 1.8;
+        }
+
+        /* =============== هدر =============== */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 15px rgba(0,0,0,.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 10px 20px;
+        }
+        header .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .logo img {
+            height: 50px;
+        }
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 15px;
+            transition: .3s;
+        }
+        .navbar ul li a:hover,
+        .navbar ul li a.active {
+            color: var(--primary);
+        }
+        .header-buttons {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .mobile-menu {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+        .search-box {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .search-box input {
+            padding: 6px 14px;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            font-size: 14px;
+            font-family: inherit;
+        }
+        .search-box button {
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        /* =============== محتوای مقاله =============== */
+        .blog-container {
+            max-width: 1100px;
+            margin: 120px auto 60px;
+            padding: 0 20px;
+            background: #fff;
+            border-radius: 24px;
+            box-shadow: 0 10px 40px rgba(0,0,0,.08);
+            padding: 40px 40px 60px;
+        }
+        .blog-container h1 {
+            font-size: 36px;
             color: var(--primary);
             margin-bottom: 20px;
+            line-height: 1.5;
         }
-        .service-detail .text p {
+        .blog-container .meta {
+            color: #888;
+            font-size: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .blog-container h2 {
+            font-size: 28px;
+            color: var(--dark);
+            margin: 40px 0 15px;
+            border-right: 5px solid var(--primary);
+            padding-right: 15px;
+        }
+        .blog-container h3 {
+            font-size: 22px;
+            color: var(--primary);
+            margin: 30px 0 12px;
+        }
+        .blog-container h4 {
+            font-size: 19px;
+            color: var(--dark);
+            margin: 25px 0 10px;
+        }
+        .blog-container p {
             line-height: 2.2;
-            color: #555;
+            color: #444;
+            font-size: 17px;
+            margin-bottom: 18px;
+            text-align: justify;
+        }
+        .blog-container ul,
+        .blog-container ol {
+            line-height: 2.2;
+            color: #444;
+            font-size: 17px;
+            padding-right: 25px;
+            margin-bottom: 20px;
+        }
+        .blog-container ul li,
+        .blog-container ol li {
+            margin-bottom: 8px;
+        }
+        .blog-container table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0 30px;
             font-size: 16px;
         }
-        .service-detail .gif img {
+        .blog-container table th {
+            background: var(--primary);
+            color: #fff;
+            padding: 12px 15px;
+            text-align: right;
+        }
+        .blog-container table td {
+            border: 1px solid #ddd;
+            padding: 10px 15px;
+            background: #fafafa;
+        }
+        .blog-container table tr:nth-child(even) td {
+            background: #f5f8fc;
+        }
+        .blog-image {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .blog-image img {
             width: 100%;
-            max-height: 400px;
-            object-fit: contain;
+            max-width: 700px;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,.15);
         }
-        .back-link {
+        .blog-image .caption {
+            font-size: 14px;
+            color: #888;
+            margin-top: 10px;
+        }
+        .blog-image .caption strong {
+            color: var(--primary);
+        }
+
+        .blog-container .back-links {
+            margin: 40px 0 20px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .blog-container .back-links a {
             display: inline-block;
-            margin-top: 30px;
-            background: var(--secondary);
-            color: #fff;
             padding: 12px 28px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
             transition: .3s;
         }
-        .back-link:hover {
-            background: var(--primary);
-        }
-        .contact-float {
-            margin-top: 20px;
-        }
-        .contact-float a {
-            display: inline-block;
+        .blog-container .back-links .btn-blog-home {
             background: var(--primary);
             color: #fff;
-            padding: 12px 28px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            margin-left: 10px;
-            transition: .3s;
         }
-        .contact-float a:hover {
+        .blog-container .back-links .btn-blog-home:hover {
             background: var(--secondary);
         }
+        .blog-container .back-links .btn-blog-services {
+            background: var(--secondary);
+            color: #fff;
+        }
+        .blog-container .back-links .btn-blog-services:hover {
+            background: var(--primary);
+        }
+        .blog-container .back-links .btn-blog-contact {
+            background: var(--dark);
+            color: #fff;
+        }
+        .blog-container .back-links .btn-blog-contact:hover {
+            background: var(--primary);
+        }
+
+        .callout-box {
+            background: var(--light);
+            border-right: 5px solid var(--primary);
+            padding: 20px 25px;
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+        .callout-box strong {
+            color: var(--primary);
+        }
+
+        .danger-box {
+            background: #fff3cd;
+            border-right: 5px solid #ffc107;
+            padding: 20px 25px;
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+        .danger-box strong {
+            color: #d63031;
+        }
+
+        details {
+            background: #f8fbfd;
+            padding: 15px 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #e9ecef;
+        }
+        details summary {
+            font-weight: 700;
+            color: var(--primary);
+            cursor: pointer;
+            font-size: 17px;
+        }
+        details p {
+            margin-top: 12px;
+            padding-right: 10px;
+        }
+
+        /* =============== فوتر =============== */
+        .site-footer {
+            background: var(--dark);
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .site-footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer-grid {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .footer-box h3 {
+            color: var(--secondary);
+            margin-bottom: 10px;
+        }
+        .footer-box p {
+            color: #ccc;
+            font-size: 15px;
+        }
+        .site-footer hr {
+            border: none;
+            border-top: 1px solid #444;
+            margin: 20px 0;
+        }
+        .site-footer .copyright {
+            color: #888;
+            font-size: 14px;
+        }
+
+        /* =============== منوی شناور =============== */
+        .floating-container {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .floating-main-btn {
+            background: var(--green);
+            color: #fff;
+            border: none;
+            padding: 14px 24px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 700;
+            font-family: inherit;
+            cursor: pointer;
+            box-shadow: 0 6px 25px rgba(37, 163, 68, 0.4);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: .3s;
+        }
+        .floating-main-btn:hover {
+            background: #1e8c3a;
+            transform: scale(1.03);
+        }
+        .floating-menu {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,.15);
+            padding: 12px;
+            margin-bottom: 12px;
+            display: none;
+            flex-direction: column;
+            min-width: 200px;
+        }
+        .floating-menu.active {
+            display: flex;
+        }
+        .floating-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 18px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 15px;
+            transition: .3s;
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-family: inherit;
+            width: 100%;
+            text-align: right;
+        }
+        .floating-item:hover {
+            background: var(--light);
+        }
+        .floating-item .item-icon {
+            font-size: 20px;
+        }
+        .call-wrapper {
+            position: relative;
+        }
+        .call-submenu {
+            display: none;
+            padding-right: 20px;
+            margin-top: 5px;
+        }
+        .call-submenu.active {
+            display: block;
+        }
+        .call-sub-item {
+            padding: 10px 18px;
+            font-size: 14px;
+        }
+        .whatsapp-item {
+            color: #25D366;
+        }
+        .eitaa-item {
+            color: var(--orange);
+        }
+        .btn-arrow {
+            transition: .3s;
+        }
+        .btn-arrow.open {
+            transform: rotate(90deg);
+        }
+
+        /* =============== دکمه اسکرول به بالا =============== */
+        #backToTop {
+            position: fixed;
+            bottom: 110px;
+            right: 30px;
+            z-index: 998;
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            font-size: 28px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 6px 25px rgba(0,0,0,.2);
+            transition: .3s;
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        #backToTop:hover {
+            background: var(--secondary);
+            transform: translateY(-4px);
+        }
+        #backToTop.show {
+            display: flex;
+        }
+
+        /* =============== ریسپانسیو =============== */
         @media (max-width: 768px) {
-            .service-detail {
-                grid-template-columns: 1fr;
-                text-align: center;
-                margin-top: 80px;
+            .blog-container {
+                padding: 20px 15px;
+                margin: 100px auto 40px;
             }
-            .service-detail .text h1 {
+            .blog-container h1 {
                 font-size: 26px;
             }
-            .service-detail .gif img {
-                max-height: 250px;
+            .blog-container h2 {
+                font-size: 22px;
+            }
+            .blog-container h3 {
+                font-size: 19px;
+            }
+            .blog-container h4 {
+                font-size: 17px;
+            }
+            .blog-container p,
+            .blog-container ul,
+            .blog-container ol {
+                font-size: 15px;
+            }
+            .blog-container table {
+                font-size: 14px;
+            }
+            .blog-container .back-links a {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+            .navbar ul {
+                display: none;
+            }
+            .mobile-menu {
+                display: block;
+            }
+            .floating-container {
+                left: 15px;
+                bottom: 20px;
+            }
+            .floating-main-btn {
+                padding: 12px 18px;
+                font-size: 14px;
+            }
+            #backToTop {
+                width: 48px;
+                height: 48px;
+                font-size: 24px;
+                bottom: 100px;
+                right: 15px;
             }
         }
     </style>
 </head>
 <body>
 
+<!-- =============== هدر =============== -->
 <header>
     <div class="container">
-        <a href="../index.html" class="logo"><img src="../images/logo.png" alt="لوگو"></a>
+        <a href="../index.html" class="logo"><img src="../images/logo.png" alt="لوگو شرکت سمپاشی نانوفناوران"></a>
         <nav class="navbar">
             <ul>
                 <li><a href="../index.html">صفحه اصلی</a></li>
-                <li><a href="../services.html" class="active">خدمات</a></li>
+                <li><a href="../services.html">خدمات مسکونی</a></li>
+                <li><a href="../commercial-services.html">خدمات تجاری</a></li>
                 <li><a href="../about.html">درباره ما</a></li>
                 <li><a href="../contact.html">تماس</a></li>
             </ul>
         </nav>
         <div class="header-buttons">
-            <a href="tel:09120705746" class="call-btn">📞 09120705746</a>
             <div class="mobile-menu">☰</div>
+        </div>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="جستجو...">
+            <button onclick="alert('قابلیت جستجو در حال توسعه است')">🔍</button>
         </div>
     </div>
 </header>
 
-<div class="service-detail">
-    <div class="text">
-        <h1>🐜 سمپاشی شپشک برنج</h1>
-        <p>کنترل تخصصی شپشک برنج (Sitophilus oryzae) در انبارها، سیلوها و مواد غذایی خشک.</p>
-        <p><strong>روش کنترل:</strong> استفاده از سموم استاندارد و روش‌های نوین با تضمین کیفیت و ماندگاری بالا.</p>
-        <p><strong>مدت زمان اثرگذاری:</strong> نتایج سریع و ماندگار تا ۶ ماه.</p>
-        <a href="../services.html" class="back-link">🔙 بازگشت به لیست خدمات</a>
-        <div class="contact-float">
-            <a href="tel:09120705746">📞 تماس فوری</a>
-            <a href="https://wa.me/989120705746" target="_blank">💬 واتساپ</a>
-        </div>
+<!-- =============== مقاله =============== -->
+<div class="blog-container">
+
+    <h1>راهنمای جامع و تخصصی سمپاشی شپشک برنج (سرخرطومی) | از تشخیص تا ریشه‌کنی اصولی</h1>
+    <div class="meta">
+        <span>📅 آخرین به‌روزرسانی: ۳ شهریور ۱۴۰۴</span> &nbsp;|&nbsp; <span>⏱ زمان مطالعه: ۱۴ دقیقه</span>
     </div>
-    <div class="gif">
-        <img src="../images/services/rice-weevil.jpg" alt="سمپاشی شپشک برنج">
+
+    <!-- ===== تصویر اصلی (rice-weevil.jpg) ===== -->
+    <div class="blog-image">
+        <img src="../images/services/rice-weevil.jpg" alt="سمپاشی شپشک برنج - سرخرطومی - کنترل تخصصی نانوفناوران">
+        <div class="caption"><strong>تصویر شپشک برنج (سرخرطومی)</strong> - یکی از مخرب‌ترین آفات انباری در ایران</div>
     </div>
+
+    <h2>مقدمه: تهدید پنهان در انبار مواد غذایی شما</h2>
+    <p>آیا تا به حال با باز کردن کیسه برنج یا حبوبات، با حشرات ریز و سیاه‌رنگی مواجه شده‌اید که در میان دانه‌ها حرکت می‌کنند؟ آیا متوجه شده‌اید که آرد یا ادویه‌های شما به مرور زمان بوی نامطبوعی گرفته و ظاهر آنها تغییر کرده است؟ اگر پاسخ شما مثبت است، احتمالاً انبار مواد غذایی شما به <strong>آفات انباری</strong> آلوده شده است؛ موجودات ریزی که می‌توانند در سکوت کامل، سرمایه و سلامت شما را به خطر بیندازند.</p>
+
+    <!-- ===== تصویر دوم (rice1.jpg) ===== -->
+    <div class="blog-image">
+        <img src="../images/services/rice1.jpg" alt="آلودگی برنج به شپشک - خسارت آفات انباری">
+        <div class="caption"><strong>آلودگی برنج به شپشک</strong> - خسارت‌های ناشی از آفات انباری در مواد غذایی</div>
+    </div>
+
+    <p><strong>آفات انباری</strong> گروهی از حشرات و جوندگان هستند که به محصولات کشاورزی ذخیره‌شده در منازل، انبارها، سیلوها و حتی کشتی‌های حمل‌ونقل حمله می‌کنند و با تغذیه از آنها، خسارت‌های جبران‌ناپذیری را چه از نظر کمی و چه از نظر کیفی به مواد غذایی وارد می‌آورند . این آفات در هر جایی که مواد غذایی خشک مانند غلات، حبوبات، آجیل، خشکبار و حتی ادویه‌جات نگهداری شوند، می‌توانند یافت شوند و در صورت عدم کنترل به موقع، کل انبار شما را آلوده کنند.</p>
+
+    <p>در این مقاله جامع از <strong>شرکت سمپاشی نانوفناوران بهداشت تهران</strong>، شما را با مهم‌ترین آفات انباری، نشانه‌های تشخیص، روش‌های پیشگیری و مهم‌تر از همه، <strong>سمپاشی تخصصی و ریشه‌کنی اصولی</strong> این آفات آشنا خواهیم کرد.</p>
+
+    <h2>آفات انباری چیست و چرا خطرناک هستند؟</h2>
+
+    <h3>تعریف آفات انباری</h3>
+    <p>آفات انباری به گروهی از حشرات، کنه‌ها و جوندگان اطلاق می‌شود که در مراحل مختلف زندگی خود (لاروی و بالغ) به محصولات کشاورزی ذخیره‌شده حمله می‌کنند و از آنها تغذیه می‌نمایند . این آفات در محیط‌های مختلفی از جمله منازل، انبارهای بزرگ، سیلوهای غلات، کشتی‌های حمل‌ونقل و هواپیماها یافت می‌شوند .</p>
+
+    <h3>چرا آفات انباری خطرناک هستند؟</h3>
+    <p>آفات انباری نه‌تنها از نظر اقتصادی خسارت‌های سنگینی به بار می‌آورند، بلکه تهدیدی جدی برای سلامت انسان محسوب می‌شوند:</p>
+
+    <table>
+        <thead>
+            <tr><th>نوع خسارت</th><th>توضیح</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>خسارت کمی</strong></td><td>آفات با تغذیه از مواد غذایی، وزن و حجم آنها را کاهش می‌دهند و باعث فساد فیزیکی محصول می‌شوند</td></tr>
+            <tr><td><strong>خسارت کیفی</strong></td><td>بسیاری از آفات با ترشح آنزیم‌ها و فضولات خود، باعث تغییر طعم، بو و رنگ مواد غذایی می‌شوند و آنها را غیرقابل مصرف می‌کنند</td></tr>
+            <tr><td><strong>خطرات بهداشتی</strong></td><td>فضولات، پوست‌اندازی و اجساد آفات در مواد غذایی می‌تواند باعث ایجاد انواع حساسیت‌ها، مسمومیت‌ها و بیماری‌های گوارشی شود</td></tr>
+            <tr><td><strong>آسیب به بسته‌بندی</strong></td><td>جوندگان با جویدن بسته‌بندی‌ها، باعث نفوذ حشرات و آلودگی بیشتر می‌شوند</td></tr>
+            <tr><td><strong>خطر آتش‌سوزی</strong></td><td>جوندگان با جویدن سیم‌های برق در انبارها و کارخانجات، خطر آتش‌سوزی را افزایش می‌دهند</td></tr>
+        </tbody>
+    </table>
+
+    <h2>مهم‌ترین آفات انباری در ایران</h2>
+    <p>در این بخش به معرفی مهم‌ترین آفات انباری که در منازل و انبارهای ایران یافت می‌شوند می‌پردازیم:</p>
+
+    <h3>۱. شپشک برنج (سرخرطومی برنج)</h3>
+    <p><strong>نام علمی:</strong> <em>Sitophilus oryzae</em></p>
+    <p>این آفت یکی از مهم‌ترین آفات برنج است که در صورت عدم رعایت نکات انبارداری، می‌تواند خسارت کامل به برنج وارد کند . شپشک برنج در مراحل لاروی و بلوغ برای برنج خسارت‌زا بوده و به گندم، جو و ذرت نیز حمله می‌کند . این حشره دارای سری خرطومی شکل، به رنگ قهوه‌ای تیره و به طول ۳ تا ۵ میلی‌متر است و می‌تواند پرواز کند .</p>
+
+    <!-- ===== تصویر سوم (rice2.jpg) ===== -->
+    <div class="blog-image">
+        <img src="../images/services/rice2.jpg" alt="شپشک برنج - سرخرطومی - نمای نزدیک">
+        <div class="caption"><strong>شپشک برنج (سرخرطومی)</strong> - نمای نزدیک از این آفت مخرب انباری</div>
+    </div>
+
+    <p><strong>چرخه زندگی:</strong> شپشک ماده روزانه ۴ تخم در مغز دانه‌های غلات می‌گذارد و در طول عمر خود (حدود ۳۰ روز) می‌تواند ۳۰۰ تا ۴۰۰ تخم تولید کند . مراحل رشد تا قبل از تبدیل شدن به حشره بالغ، داخل دانه برنج صورت می‌گیرد؛ به همین دلیل معمولاً تا قبل از ایجاد شپشک بالغ، متوجه وجود این آفت در برنج نمی‌شوید .</p>
+
+    <div class="callout-box">
+        <p><strong>نکته مهم:</strong> شپشک برنج یکی از مقاوم‌ترین آفات انباری است و می‌تواند تا ۳۰ روز بدون غذا زنده بماند . به همین دلیل، کنترل آن نیاز به روش‌های تخصصی دارد.</p>
+    </div>
+
+    <h3>۲. شپشه دندانه‌دار (جوجه)</h3>
+    <p>این آفت در بین حبوبات و برنج یافت می‌شود و در مراحل لاروی و کمی در مراحل بلوغ به محصولات انباری خسارت وارد می‌کند . این حشره در بین مردم به <strong>جوجه</strong> معروف است و ترجیح غذایی آن حبوبات، برنج، عدس و گندم است. در صورت عدم وجود این محصولات، به غلات دیگر مثل ماکارونی و خشکبار حمله می‌کند . فضولات این حشره در محصولات انباری می‌توانند سبب ایجاد انواع حساسیت‌ها شوند .</p>
+
+    <h3>۳. شب‌پره هندی (بید حبوبات)</h3>
+    <p><strong>نام علمی:</strong> <em>Plodia interpunctella</em></p>
+    <p>این آفت در منازل و انبارها دیده می‌شود و مراحل لاروی آن به همه نوع مواد غذایی خشک و نیمه‌خشک حمله می‌کند . اگر به این موارد دسترسی نداشته باشد، می‌تواند از الیاف مختلف از قبیل کاغذ و پارچه تغذیه کند . این حشره پس از بلوغ به شب‌پره تبدیل می‌شود و جذب نور شده و در شب آشکار می‌گردد .</p>
+
+    <h3>۴. سوسک کشیش</h3>
+    <p>این حشره از دانه‌های غلات تغذیه می‌کند و دامنه میزبانی بالایی دارد. مرحله لاروی و بلوغ این آفت به دانه‌های غلات با نشاسته بالا مثل گندم، ذرت و برنج حمله می‌کنند . از علائم خسارت این حشره بر روی غلات، سوراخ‌های متعددی است که در اثر تغذیه آفت به وجود آمده است .</p>
+
+    <h3>۵. سوسک چرم و فرش</h3>
+    <p>ترجیح غذایی این حشره به پوست خام که دارای پروتئین باشد، لاشه حیوانات، استخوان، دانه‌های غلات، شفیره کرم ابریشم و موارد مشابه است . این حشره در سال یک نسل و در صورت مناسب بودن شرایط دمایی و محیطی تا دو نسل تولید می‌کند .</p>
+
+    <h3>۶. سوسک سیاه قالی</h3>
+    <p>حالت لاروی این حشره می‌تواند خسارت هنگفتی به فرآورده‌های خشک از قبیل خز، منسوجات پشمی، ماهی خشک، پر، پوست، مو و فرش وارد کند . منسوجاتی که به مدت طولانی در کمدها یا انبارها نگهداری شوند و مراقبتی از آنها به عمل نیاید، مورد حمله این آفت قرار می‌گیرند .</p>
+
+    <h3>۷. موش‌ها</h3>
+    <p>موش‌ها به سبب داشتن دندان‌هایی که همواره در حال رشد هستند، مجبور به جویدن اجسام مختلف از قبیل محصولات انباری هستند و به این طریق سبب ایجاد خسارت می‌شوند . فضولات و موی این جانوران سبب کاهش کیفیت محصولات و ایجاد مشکلاتی از قبیل حساسیت‌ها یا بیماری‌های متعدد می‌شود .</p>
+
+    <h2>علائم تشخیص آلودگی به آفات انباری</h2>
+    <p>تشخیص زودهنگام آلودگی می‌تواند از گسترش آن به سایر مواد غذایی جلوگیری کند. مهم‌ترین علائم حضور آفات انباری عبارتند از:</p>
+
+    <h3>علائم ظاهری</h3>
+    <ul>
+        <li><strong>مشاهده خود حشرات:</strong> دیدن حشرات ریز در میان برنج، حبوبات، آرد، آجیل یا خشکبار</li>
+        <li><strong>سوراخ‌های ریز در دانه‌ها:</strong> سوراخ‌های متعدد روی دانه‌های غلات که در اثر تغذیه آفت ایجاد شده است</li>
+        <li><strong>پودر شدن مواد غذایی:</strong> مشاهده پودر و خرده‌ریزه در کف ظروف مواد غذایی که نشانه تخریب دانه‌هاست</li>
+        <li><strong>وجود تارهای ابریشمی:</strong> تارهای سفید یا خاکستری در میان مواد غذایی که نشانه فعالیت شب‌پره هندی است</li>
+        <li><strong>فضولات حشرات:</strong> نقاط ریز سیاه‌رنگ در میان مواد غذایی (مشابه دانه‌های فلفل)</li>
+        <li><strong>وجود لارو (کرم):</strong> دیدن کرم‌های کوچک سفید یا صورتی در میان مواد غذایی</li>
+    </ul>
+
+    <!-- ===== تصویر چهارم (rice3.jpg) ===== -->
+    <div class="blog-image">
+        <img src="../images/services/rice3.jpg" alt="لارو و فضولات آفات انباری - تشخیص آلودگی">
+        <div class="caption"><strong>لارو و فضولات آفات انباری</strong> - یکی از مهم‌ترین نشانه‌های آلودگی مواد غذایی</div>
+    </div>
+
+    <h3>علائم حسی</h3>
+    <ul>
+        <li><strong>بوی نامطبوع:</strong> مواد غذایی آلوده به آفات بوی کهنگی و نامطبوع می‌دهند</li>
+        <li><strong>تغییر رنگ:</strong> تغییر رنگ مواد غذایی به قهوه‌ای یا تیره‌شدگی</li>
+    </ul>
+
+    <h3>علائم محیطی</h3>
+    <ul>
+        <li><strong>مشاهده حشرات بالغ در اطراف:</strong> دیدن پروانه‌ها یا سوسک‌های کوچک در آشپزخانه یا انبار</li>
+        <li><strong>وجود لانه یا مدفوع جوندگان:</strong> مشاهده فضولات موش در اطراف انبار مواد غذایی</li>
+    </ul>
+
+    <h2>روش‌های پیشگیری از آلودگی به آفات انباری</h2>
+    <p>پیشگیری همواره بهترین راهکار در مقابله با آفات انباری است. با رعایت این نکات، می‌توانید از ورود این آفات به منزل یا انبار خود جلوگیری کنید:</p>
+
+    <h3>۱. نگهداری اصولی مواد غذایی</h3>
+    <ul>
+        <li><strong>استفاده از ظروف درب‌دار:</strong> مواد غذایی مانند برنج، آرد، حبوبات، آجیل و خشکبار را در <strong>ظروف پلاستیکی یا شیشه‌ای درب‌دار</strong> نگهداری کنید تا از نفوذ آفات جلوگیری شود</li>
+        <li><strong>انتخاب محل مناسب:</strong> مواد غذایی را در محل خشک و خنک نگهداری کنید. رطوبت و گرما دو عامل اساسی برای رشد و تکثیر آفات انباری هستند</li>
+        <li><strong>ایجاد فاصله از زمین و دیوار:</strong> بین کیسه‌ها و ظروف با زمین و دیوار فاصله ایجاد کنید تا رطوبت و آفات به آنها نفوذ نکنند</li>
+        <li><strong>بررسی دوره‌ای:</strong> به طور منظم (هر ۲ تا ۳ ماه) مواد غذایی موجود در انبار را بررسی کنید و در صورت مشاهده علائم آلودگی، آنها را دور بیندازید</li>
+    </ul>
+
+    <h3>۲. استفاده از روش‌های طبیعی پیشگیری</h3>
+    <ul>
+        <li><strong>برگ بو و میخک:</strong> قرار دادن برگ‌های بو خشک شده یا میخک در میان مواد غذایی و کابینت‌ها، به دلیل بوی تند، آفات را دور می‌کند</li>
+        <li><strong>سیر و فلفل تند:</strong> قرار دادن چند حبه سیر یا فلفل تند خشک در میان برنج و حبوبات، از رشد شپشک جلوگیری می‌کند</li>
+        <li><strong>نمک و آرد:</strong> ترکیب نمک و آرد به نسبت ۲ به ۱ و قرار دادن در کیسه مواد غذایی، از رشد حشرات جلوگیری می‌کند</li>
+        <li><strong>چوب سدر یا دارچین:</strong> این مواد نیز به عنوان دافع طبیعی آفات شناخته می‌شوند</li>
+    </ul>
+
+    <h3>۳. مدیریت خرید و انبارداری</h3>
+    <ul>
+        <li><strong>پرهیز از خرید عمده:</strong> از خرید حجم زیاد مواد غذایی که ممکن است مدت طولانی در انبار بمانند، خودداری کنید</li>
+        <li><strong>بررسی قبل از خرید:</strong> در هنگام خرید برنج، حبوبات و آجیل دقت کنید که فاقد حشرات باشند</li>
+        <li><strong>چرخش محصولات:</strong> محصولات جدید را همیشه پشت محصولات قدیمی قرار دهید تا ابتدا از قدیمی‌ها استفاده شود</li>
+    </ul>
+
+    <h3>۴. کنترل محیط انبار</h3>
+    <ul>
+        <li><strong>تهویه مناسب:</strong> اطمینان حاصل کنید که انبار دارای تهویه مناسب است تا رطوبت کاهش یابد</li>
+        <li><strong>بستن منافذ و درزها:</strong> تمام شکاف‌های دیوار، اطراف درب‌ها و پنجره‌ها را با درزگیر ببندید تا از ورود آفات جلوگیری شود</li>
+        <li><strong>ضدعفونی دوره‌ای:</strong> پس از خروج محصولات قدیمی از انبار، قبل از ورود محصولات جدید، انبار را ضدعفونی کنید</li>
+        <li><strong>نصب توری روی دریچه‌ها:</strong> روی دریچه‌ها و پنجره‌های انبار توری ریز نصب کنید تا از ورود حشرات جلوگیری شود</li>
+    </ul>
+
+    <h2>روش‌های خانگی از بین بردن آفات انباری</h2>
+    <p>پس از شناسایی آلودگی، می‌توانید از روش‌های زیر برای کنترل آن استفاده کنید. توجه داشته باشید که این روش‌ها معمولاً برای آلودگی‌های محدود مؤثر هستند و در صورت گسترش آلودگی، نیاز به سمپاشی تخصصی خواهید داشت.</p>
+
+    <h3>۱. حذف مواد غذایی آلوده</h3>
+    <p>بهترین و سریع‌ترین روش، <strong>دور انداختن تمام مواد غذایی آلوده</strong> است. اگر یک ماده غذایی به آفت آلوده شده است، احتمالاً سایر مواد غذایی مجاور نیز دچار آلودگی شده‌اند، حتی اگر علائم ظاهری نداشته باشند.</p>
+
+    <h3>۲. تمیز کردن کامل محیط</h3>
+    <p>پس از دور انداختن مواد غذایی آلوده، تمام قفسه‌ها، کابینت‌ها و انبار را با <strong>سرکه سفید</strong> یا محلول آب و صابون به طور کامل تمیز کنید تا تخم‌ها و لاروهای احتمالی از بین بروند.</p>
+
+    <h3>۳. استفاده از سرما یا گرما</h3>
+    <ul>
+        <li><strong>فریز کردن:</strong> قرار دادن مواد غذایی آلوده در فریزر به مدت ۴۸ تا ۹۶ ساعت، لاروها و تخم‌های آفات را از بین می‌برد</li>
+        <li><strong>حرارت دادن در فر:</strong> حرارت دادن مواد غذایی در فر با دمای ۶۰ درجه به مدت ۳۰ دقیقه نیز می‌تواند مؤثر باشد</li>
+    </ul>
+
+    <h3>۴. استفاده از تله‌های چسبی با فرمون</h3>
+    <p>تله‌های چسبی حاوی فرمون جنسی آفات، می‌توانند به جذب حشرات بالغ نر کمک کنند و از تخم‌گذاری جلوگیری نمایند.</p>
+
+    <h3>۵. استفاده از آب جوش</h3>
+    <p>در صورتی که حجم مواد غذایی آلوده کم است، می‌توانید برای از بین بردن آفات، از آب جوش استفاده کنید؛ زیرا ریختن آب جوش روی مواد غذایی، سبب کشته شدن حشرات و تخم آنها می‌شود.</p>
+
+    <h3>۶. روش الک کردن با پنکه</h3>
+    <p>برای برنج و حبوبات، می‌توانید از روش الک کردن با پنکه استفاده کنید. در این روش، برنج را از ارتفاع کم در مقابل باد پنکه می‌ریزید تا حشرات سبک‌وزن جدا شوند و برنج سنگین‌تر در ظرف باقی بماند.</p>
+
+    <h2>سمپاشی تخصصی و ریشه‌کنی آفات انباری با نانوفناوران</h2>
+    <p>اگر با وجود رعایت نکات پیشگیرانه و استفاده از روش‌های خانگی، همچنان با مشکل آفات انباری دست و پنجه نرم می‌کنید یا آلودگی به کل انبار سرایت کرده است، زمان آن رسیده که از یک <strong>خدمات سمپاشی تخصصی</strong> بهره ببرید.</p>
+
+    <div class="callout-box">
+        <p><strong>چرا روش‌های خانگی به تنهایی کافی نیستند؟</strong></p>
+        <ul>
+            <li><strong>مخفی شدن در شکاف‌ها:</strong> لاروها و شفیره‌های آفات در شکاف‌های کابینت، دیوار و قفسه‌ها پنهان می‌شوند و با روش‌های معمولی از بین نمی‌روند</li>
+            <li><strong>چرخه زندگی سریع:</strong> بسیاری از آفات انباری در شرایط مساعد، هر ۳۰ تا ۴۰ روز یک نسل تولید می‌کنند و به سرعت جمعیت خود را افزایش می‌دهند</li>
+            <li><strong>نفوذ به بسته‌بندی‌ها:</strong> لاروهای آفات می‌توانند از سوراخ‌های بسیار کوچک عبور کرده و به مواد غذایی دسترسی پیدا کنند</li>
+            <li><strong>خطرات سلامتی:</strong> استفاده نادرست از سموم شیمیایی در منزل می‌تواند برای سلامتی خطرناک باشد</li>
+        </ul>
+    </div>
+
+    <h3>راهکار تخصصی شرکت نانوفناوران</h3>
+    <p>شرکت سمپاشی نانوفناوران بهداشت تهران با بیش از یک دهه تجربه و <strong>مجوز رسمی از وزارت بهداشت</strong>، خدمات تخصصی سمپاشی آفات انباری را به صورت تضمینی ارائه می‌دهد:</p>
+
+    <ol>
+        <li>
+            <strong>بازرسی دقیق و شناسایی</strong>
+            <p>کارشناسان ما با بررسی کامل محیط، نوع آفت، نقاط ورود، منابع آلودگی و میزان گسترش آن را شناسایی می‌کنند.</p>
+        </li>
+        <li>
+            <strong>انتخاب سموم تخصصی و مجاز</strong>
+            <p>استفاده از سموم تأییدشده و مجاز برای محیط‌های نگهداری مواد غذایی مانند <strong>پیرتروئیدها</strong> (پرمترین، بیفنترین، سایفلوترین) که برای انسان و حیوانات خانگی کم‌خطر هستند و فقط به حشرات آسیب می‌زنند.</p>
+        </li>
+        <li>
+            <strong>روش‌های سمپاشی متناسب با محیط</strong>
+            <ul>
+                <li><strong>سمپاشی ابقایی:</strong> پوشش دیوارها، شکاف‌ها و درزها با سموم بلندمدت برای جلوگیری از نفوذ و تکثیر آفات</li>
+                <li><strong>مه‌پاشی با تجهیزات ULV:</strong> برای فضاهای بزرگ و انبارهای وسیع، با تولید ذرات بسیار ریز سم در فضا</li>
+                <li><strong>طعمه‌گذاری هوشمند:</strong> استفاده از طعمه‌های مسموم در ایستگاه‌های قفل‌دار برای کنترل جوندگان و حشرات</li>
+            </ul>
+        </li>
+        <li>
+            <strong>پوشش کامل مواد غذایی</strong>
+            <p>قبل از سمپاشی، تمام مواد غذایی موجود در محیط به‌صورت کامل و بهداشتی پوشانده می‌شوند یا از محیط خارج می‌گردند تا هیچگونه تماسی با سموم نداشته باشند.</p>
+        </li>
+        <li>
+            <strong>تهویه و ایمن‌سازی</strong>
+            <p>پس از سمپاشی، محیط به مدت مناسب تهویه می‌شود و کارشناسان زمان بازگشت ایمن را به شما اعلام می‌کنند.</p>
+        </li>
+        <li>
+            <strong>مشاوره و پیشگیری</strong>
+            <p>پس از اتمام عملیات، کارشناسان ما نکات لازم برای جلوگیری از بازگشت مجدد آفات را به شما آموزش می‌دهند.</p>
+        </li>
+    </ol>
+
+    <h2>هزینه سمپاشی آفات انباری چقدر است؟</h2>
+    <p>هزینه سمپاشی آفات انباری به عوامل زیر بستگی دارد. برای دریافت <strong>مشاوره رایگان</strong> و <strong>استعلام دقیق هزینه</strong>، با کارشناسان ما تماس بگیرید:</p>
+
+    <table>
+        <thead>
+            <tr><th>عامل</th><th>تأثیر بر هزینه</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>مساحت محیط</strong></td><td>هرچه محیط بزرگ‌تر باشد، هزینه بیشتر است</td></tr>
+            <tr><td><strong>شدت آلودگی</strong></td><td>آلودگی شدید نیاز به عملیات گسترده‌تری دارد</td></tr>
+            <tr><td><strong>نوع آفت</strong></td><td>برخی آفات مانند جوندگان نیاز به روش‌های خاصی دارند</td></tr>
+            <tr><td><strong>دسترسی به نقاط آلوده</strong></td><td>سمپاشی فضاهای صعب‌الوصول هزینه را افزایش می‌دهد</td></tr>
+            <tr><td><strong>نوع روش کنترل</strong></td><td>سمپاشی ابقایی، مه‌پاشی، طعمه‌گذاری یا ترکیبی</td></tr>
+        </tbody>
+    </table>
+
+    <h2>سوالات متداول درباره سمپاشی آفات انباری</h2>
+
+    <details>
+        <summary><strong>آیا سمپاشی آفات انباری برای کودکان و حیوانات خانگی خطرناک است؟</strong></summary>
+        <p>خیر، سموم استفاده‌شده توسط شرکت نانوفناوران (پیرتروئیدها) با رعایت کامل استانداردهای بهداشتی انتخاب می‌شوند. در هنگام سمپاشی، افراد و حیوانات از محیط خارج می‌شوند و پس از تهویه کامل، محیط کاملاً ایمن است.</p>
+    </details>
+
+    <details>
+        <summary><strong>چه مدت بعد از سمپاشی آفات از بین می‌روند؟</strong></summary>
+        <p>اثر سمپاشی در حشرات بالغ فوری است و آنها به سرعت از بین می‌روند. لاروها طی ۱ تا ۲ هفته پس از تماس با سم از بین می‌روند. در مورد جوندگان، طعمه‌گذاری معمولاً ۳ تا ۷ روز زمان می‌برد.</p>
+    </details>
+
+    <details>
+        <summary><strong>آیا خودمان هم می‌توانیم آفات انباری را سمپاشی کنیم؟</strong></summary>
+        <p>استفاده از اسپری‌های خانگی معمولاً مؤثر نیست و فقط آفات سطحی را از بین می‌برد. همچنین استفاده نادرست از سموم می‌تواند برای سلامتی خطرناک باشد. روش‌های تخصصی نیاز به تجهیزات و دانش دارد.</p>
+    </details>
+
+    <details>
+        <summary><strong>بعد از سمپاشی آیا آفات دوباره برمی‌گردند؟</strong></summary>
+        <p>اگر محیط اصلاح شود، مواد غذایی در ظروف درب‌دار نگهداری شوند و نکات پیشگیری رعایت شود، احتمال بازگشت بسیار کم است. شرکت نانوفناوران خدمات خود را با ضمانت ارائه می‌دهد.</p>
+    </details>
+
+    <details>
+        <summary><strong>آیا خوردن مواد غذایی آلوده به آفات خطرناک است؟</strong></summary>
+        <p>بله، مواد غذایی آلوده به آفات حاوی فضولات لاروی، پوست‌اندازی و اجساد حشرات هستند که می‌توانند باعث مسمومیت، حساسیت و مشکلات گوارشی شوند. در صورت مشاهده آلودگی، مواد غذایی را دور بیندازید.</p>
+    </details>
+
+    <details>
+        <summary><strong>آفات انباری چگونه وارد خانه می‌شوند؟</strong></summary>
+        <p>آفات انباری معمولاً از طریق مواد غذایی خریداری شده (برنج، آرد، حبوبات، آجیل) وارد منزل می‌شوند. تخم و لارو موجود در این مواد، پس از مدتی تبدیل به حشره بالغ می‌شوند. همچنین از طریق شکاف‌های دیوار و پنجره‌ها نیز می‌توانند وارد شوند.</p>
+    </details>
+
+    <details>
+        <summary><strong>بهترین روش جلوگیری از آفات انباری چیست؟</strong></summary>
+        <p>بهترین روش، ترکیبی از پیشگیری (نگهداری در ظروف درب‌دار، کنترل رطوبت، استفاده از مواد دافع طبیعی) و بازرسی دوره‌ای منظم است. در صورت مشاهده آلودگی، استفاده از خدمات تخصصی توصیه می‌شود.</p>
+    </details>
+
+    <h2>نتیجه‌گیری</h2>
+    <p>آفات انباری یکی از جدی‌ترین تهدیدات برای مواد غذایی در منازل، انبارها و کارخانجات هستند که می‌توانند خسارت‌های جبران‌ناپذیری به سرمایه و سلامت شما وارد کنند. تشخیص زودهنگام و اقدام سریع، کلید جلوگیری از گسترش آلودگی است. در حالی که روش‌های خانگی می‌توانند برای آلودگی‌های محدود مفید باشند، برای ریشه‌کنی قطعی و تضمینی، استفاده از خدمات تخصصی ضروری است.</p>
+
+    <p><strong>شرکت سمپاشی نانوفناوران بهداشت تهران</strong> با بهره‌گیری از دانش فنی روز، تجهیزات پیشرفته و سموم استاندارد، آماده ارائه خدمات تخصصی و تضمینی در زمینه <strong>سمپاشی آفات انباری</strong> به شماست. تیم کارشناسان ما با شناسایی دقیق منبع آلودگی و استفاده از روش‌های ایمن، محیطی امن و آرام را به شما باز می‌گردانند.</p>
+
+    <p style="font-size:20px; font-weight:700; text-align:center; color:var(--primary);">🚀 همین حالا اقدام کنید:</p>
+    <div style="text-align:center; margin:20px 0;">
+        <p>📞 <strong>تماس فوری:</strong> <a href="tel:09120705746" style="font-size:20px; color:var(--secondary);">۰۹۱۲۰۷۰۵۷۴۶</a></p>
+        <p>💬 <strong>درخواست مشاوره رایگان:</strong> از طریق <a href="https://wa.me/989120705746" target="_blank">واتساپ</a> یا <a href="https://eitaa.com/nanofannavaran_ir" target="_blank">ایتا</a></p>
+        <p>🔗 <strong>مشاهده سایر خدمات:</strong> <a href="../services.html">کنترل آفات مسکونی</a></p>
+    </div>
+
+    <div class="back-links">
+        <a href="../index.html" class="btn-blog-home">🏠 بازگشت به صفحه اصلی</a>
+        <a href="../services.html" class="btn-blog-services">🔙 بازگشت به لیست خدمات مسکونی</a>
+        <a href="../contact.html" class="btn-blog-contact">📞 تماس با ما</a>
+    </div>
+
 </div>
 
+<!-- =============== فوتر =============== -->
 <footer class="site-footer">
     <div class="container">
         <div class="footer-grid">
@@ -125,6 +823,116 @@
     </div>
 </footer>
 
-<script src="../script.js"></script>
+<!-- =============== منوی شناور =============== -->
+<div class="floating-container">
+    <button class="floating-main-btn" id="floatingToggle">
+        <span class="btn-arrow">▶</span>
+        <span class="btn-text">📞 مشاوره رایگان</span>
+    </button>
+    <div class="floating-menu" id="floatingMenu">
+        <div class="call-wrapper">
+            <div class="floating-item call-item" id="callToggle">
+                <span class="item-icon">📞</span>
+                <span class="item-text">تماس سریع</span>
+                <span class="arrow">▲</span>
+            </div>
+            <div class="call-submenu" id="callSubmenu">
+                <a href="tel:09120705746" class="floating-item call-sub-item"><span class="item-icon">📞</span><span class="item-text">شماره ۱</span></a>
+                <a href="tel:09197173454" class="floating-item call-sub-item"><span class="item-icon">📞</span><span class="item-text">شماره ۲</span></a>
+            </div>
+        </div>
+        <a href="https://wa.me/989120705746?text=%D8%A8%D9%87%20%D8%B3%D8%A7%DB%8C%D8%AA%20%D8%B4%D8%B1%DA%A9%D8%AA%20%D8%B3%D9%85%D9%BE%D8%A7%D8%B4%DB%8C%20%D9%86%D8%A7%D9%86%D9%88%D9%81%D9%86%D8%A7%D9%88%D8%B1%D8%A7%D9%86%20%D8%AE%D9%88%D8%B4%20%D8%A2%D9%85%D8%AF%DB%8C%D8%AF" target="_blank" class="floating-item whatsapp-item"><span class="item-icon">💬</span><span class="item-text">واتساپ</span></a>
+        <a href="https://eitaa.com/nanofannavaran_ir" target="_blank" class="floating-item eitaa-item"><span class="item-icon">✈️</span><span class="item-text">ایتا</span></a>
+    </div>
+</div>
+
+<!-- =============== دکمه اسکرول به بالا =============== -->
+<button id="backToTop" title="برو به بالا">↑</button>
+
+<!-- =============== جاوااسکریپت کامل =============== -->
+<script>
+    // ===== دکمه اسکرول به بالا =====
+    var backToTopBtn = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
+    });
+
+    backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // ===== منوی شناور =====
+    var toggleBtn = document.getElementById('floatingToggle');
+    var menu = document.getElementById('floatingMenu');
+    var arrow = toggleBtn.querySelector('.btn-arrow');
+
+    toggleBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        menu.classList.toggle('active');
+        arrow.classList.toggle('open');
+    });
+
+    // ===== زیرمنوی تماس =====
+    var callToggle = document.getElementById('callToggle');
+    var callSubmenu = document.getElementById('callSubmenu');
+
+    callToggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        callSubmenu.classList.toggle('active');
+        var arrowIcon = this.querySelector('.arrow');
+        if (arrowIcon) {
+            arrowIcon.textContent = callSubmenu.classList.contains('active') ? '▼' : '▲';
+        }
+    });
+
+    // ===== بستن منو با کلیک بیرون =====
+    document.addEventListener('click', function() {
+        menu.classList.remove('active');
+        arrow.classList.remove('open');
+        callSubmenu.classList.remove('active');
+        var arrowIcon = callToggle.querySelector('.arrow');
+        if (arrowIcon) {
+            arrowIcon.textContent = '▲';
+        }
+    });
+
+    menu.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+
+    // ===== منوی موبایل =====
+    var mobileMenuBtn = document.querySelector('.mobile-menu');
+    var navbar = document.querySelector('.navbar ul');
+
+    mobileMenuBtn.addEventListener('click', function() {
+        if (navbar.style.display === 'flex') {
+            navbar.style.display = 'none';
+        } else {
+            navbar.style.display = 'flex';
+            navbar.style.flexDirection = 'column';
+            navbar.style.position = 'absolute';
+            navbar.style.top = '70px';
+            navbar.style.right = '20px';
+            navbar.style.background = '#fff';
+            navbar.style.padding = '20px';
+            navbar.style.borderRadius = '12px';
+            navbar.style.boxShadow = '0 10px 30px rgba(0,0,0,.15)';
+            navbar.style.gap = '10px';
+            navbar.style.width = '200px';
+            navbar.style.zIndex = '999';
+        }
+    });
+
+    console.log('✅ دکمه اسکرول و منوی شناور فعال شدند!');
+</script>
+
 </body>
 </html>
