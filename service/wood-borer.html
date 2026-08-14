@@ -3,90 +3,519 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سمپاشی سوسک چوب‌خوار | نانوفناوران</title>
-    <link rel="stylesheet" href="../style.css">
+    <title>سمپاشی سوسک چوب‌خوار | راهنمای جامع کنترل و ریشه‌کنی | نانوفناوران</title>
+    <meta name="description" content="مقاله جامع سمپاشی سوسک چوب‌خوار: معرفی، علائم، روش‌های پیشگیری و کنترل تخصصی سوسک چوب‌خوار در منزل، ویلا و اثاثیه چوبی.">
+    <meta name="keywords" content="سمپاشی سوسک چوب‌خوار, سوسک چوبخوار, سمپاشی چوب, دفع سوسک چوب‌خوار, کنترل آفات چوب, نانوفناوران">
+    <link rel="canonical" href="https://nanofannavaran.ir/service/wood-borer.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
-        .service-detail {
-            max-width: 1100px;
-            margin: 100px auto 50px;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
+        :root {
+            --primary: #0B6FB8;
+            --secondary: #1a8bc0;
+            --dark: #1a2a3a;
+            --light: #f0f7ff;
+            --white: #ffffff;
+            --green: #25a344;
+            --orange: #e67e22;
         }
-        .service-detail .text h1 {
-            font-size: 32px;
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Vazirmatn', 'IRANSans', 'Tahoma', sans-serif;
+            background: #f5f8fc;
+            color: #2c3e50;
+            line-height: 1.8;
+        }
+
+        /* =============== هدر =============== */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 15px rgba(0,0,0,.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 10px 20px;
+        }
+        header .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .logo img {
+            height: 50px;
+        }
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 15px;
+            transition: .3s;
+        }
+        .navbar ul li a:hover,
+        .navbar ul li a.active {
+            color: var(--primary);
+        }
+        .header-buttons {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .call-btn {
+            background: var(--primary);
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            transition: .3s;
+        }
+        .call-btn:hover {
+            background: var(--secondary);
+        }
+        .mobile-menu {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+        .search-box {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .search-box input {
+            padding: 6px 14px;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            font-size: 14px;
+            font-family: inherit;
+        }
+        .search-box button {
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        /* =============== محتوای مقاله =============== */
+        .blog-container {
+            max-width: 1100px;
+            margin: 120px auto 60px;
+            padding: 0 20px;
+            background: #fff;
+            border-radius: 24px;
+            box-shadow: 0 10px 40px rgba(0,0,0,.08);
+            padding: 40px 40px 60px;
+        }
+        .blog-container h1 {
+            font-size: 36px;
             color: var(--primary);
             margin-bottom: 20px;
+            line-height: 1.5;
         }
-        .service-detail .text p {
+        .blog-container .meta {
+            color: #888;
+            font-size: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .blog-container h2 {
+            font-size: 28px;
+            color: var(--dark);
+            margin: 40px 0 15px;
+            border-right: 5px solid var(--primary);
+            padding-right: 15px;
+        }
+        .blog-container h3 {
+            font-size: 22px;
+            color: var(--primary);
+            margin: 30px 0 12px;
+        }
+        .blog-container h4 {
+            font-size: 19px;
+            color: var(--dark);
+            margin: 25px 0 10px;
+        }
+        .blog-container p {
             line-height: 2.2;
-            color: #555;
+            color: #444;
+            font-size: 17px;
+            margin-bottom: 18px;
+            text-align: justify;
+        }
+        .blog-container ul,
+        .blog-container ol {
+            line-height: 2.2;
+            color: #444;
+            font-size: 17px;
+            padding-right: 25px;
+            margin-bottom: 20px;
+        }
+        .blog-container ul li,
+        .blog-container ol li {
+            margin-bottom: 8px;
+        }
+        .blog-container table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0 30px;
             font-size: 16px;
         }
-        .service-detail .gif img {
+        .blog-container table th {
+            background: var(--primary);
+            color: #fff;
+            padding: 12px 15px;
+            text-align: right;
+        }
+        .blog-container table td {
+            border: 1px solid #ddd;
+            padding: 10px 15px;
+            background: #fafafa;
+        }
+        .blog-container table tr:nth-child(even) td {
+            background: #f5f8fc;
+        }
+        .blog-image {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .blog-image img {
             width: 100%;
-            max-height: 400px;
-            object-fit: contain;
+            max-width: 700px;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,.15);
         }
-        .back-link {
+        .blog-image .caption {
+            font-size: 14px;
+            color: #888;
+            margin-top: 10px;
+        }
+        .blog-image .caption strong {
+            color: var(--primary);
+        }
+
+        .blog-container .back-links {
+            margin: 40px 0 20px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .blog-container .back-links a {
             display: inline-block;
-            margin-top: 30px;
-            background: var(--secondary);
-            color: #fff;
             padding: 12px 28px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
             transition: .3s;
         }
-        .back-link:hover {
-            background: var(--primary);
-        }
-        .contact-float {
-            margin-top: 20px;
-        }
-        .contact-float a {
-            display: inline-block;
+        .blog-container .back-links .btn-blog-home {
             background: var(--primary);
             color: #fff;
-            padding: 12px 28px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            margin-left: 10px;
-            transition: .3s;
         }
-        .contact-float a:hover {
+        .blog-container .back-links .btn-blog-home:hover {
             background: var(--secondary);
         }
+        .blog-container .back-links .btn-blog-services {
+            background: var(--secondary);
+            color: #fff;
+        }
+        .blog-container .back-links .btn-blog-services:hover {
+            background: var(--primary);
+        }
+        .blog-container .back-links .btn-blog-contact {
+            background: var(--dark);
+            color: #fff;
+        }
+        .blog-container .back-links .btn-blog-contact:hover {
+            background: var(--primary);
+        }
+
+        .callout-box {
+            background: var(--light);
+            border-right: 5px solid var(--primary);
+            padding: 20px 25px;
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+        .callout-box strong {
+            color: var(--primary);
+        }
+
+        .danger-box {
+            background: #fff3cd;
+            border-right: 5px solid #ffc107;
+            padding: 20px 25px;
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+        .danger-box strong {
+            color: #d63031;
+        }
+
+        details {
+            background: #f8fbfd;
+            padding: 15px 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #e9ecef;
+        }
+        details summary {
+            font-weight: 700;
+            color: var(--primary);
+            cursor: pointer;
+            font-size: 17px;
+        }
+        details p {
+            margin-top: 12px;
+            padding-right: 10px;
+        }
+
+        /* =============== فوتر =============== */
+        .site-footer {
+            background: var(--dark);
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .site-footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer-grid {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .footer-box h3 {
+            color: var(--secondary);
+            margin-bottom: 10px;
+        }
+        .footer-box p {
+            color: #ccc;
+            font-size: 15px;
+        }
+        .site-footer hr {
+            border: none;
+            border-top: 1px solid #444;
+            margin: 20px 0;
+        }
+        .site-footer .copyright {
+            color: #888;
+            font-size: 14px;
+        }
+
+        /* =============== منوی شناور =============== */
+        .floating-container {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .floating-main-btn {
+            background: var(--green);
+            color: #fff;
+            border: none;
+            padding: 14px 24px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 700;
+            font-family: inherit;
+            cursor: pointer;
+            box-shadow: 0 6px 25px rgba(37, 163, 68, 0.4);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: .3s;
+        }
+        .floating-main-btn:hover {
+            background: #1e8c3a;
+            transform: scale(1.03);
+        }
+        .floating-menu {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,.15);
+            padding: 12px;
+            margin-bottom: 12px;
+            display: none;
+            flex-direction: column;
+            min-width: 200px;
+        }
+        .floating-menu.active {
+            display: flex;
+        }
+        .floating-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 18px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 15px;
+            transition: .3s;
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-family: inherit;
+            width: 100%;
+            text-align: right;
+        }
+        .floating-item:hover {
+            background: var(--light);
+        }
+        .floating-item .item-icon {
+            font-size: 20px;
+        }
+        .call-wrapper {
+            position: relative;
+        }
+        .call-submenu {
+            display: none;
+            padding-right: 20px;
+            margin-top: 5px;
+        }
+        .call-submenu.active {
+            display: block;
+        }
+        .call-sub-item {
+            padding: 10px 18px;
+            font-size: 14px;
+        }
+        .whatsapp-item {
+            color: #25D366;
+        }
+        .eitaa-item {
+            color: var(--orange);
+        }
+        .btn-arrow {
+            transition: .3s;
+        }
+        .btn-arrow.open {
+            transform: rotate(90deg);
+        }
+
+        /* =============== دکمه اسکرول به بالا =============== */
+        #backToTop {
+            position: fixed;
+            bottom: 110px;
+            right: 30px;
+            z-index: 998;
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            font-size: 28px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 6px 25px rgba(0,0,0,.2);
+            transition: .3s;
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        #backToTop:hover {
+            background: var(--secondary);
+            transform: translateY(-4px);
+        }
+        #backToTop.show {
+            display: flex;
+        }
+
+        /* =============== ریسپانسیو =============== */
         @media (max-width: 768px) {
-            .service-detail {
-                grid-template-columns: 1fr;
-                text-align: center;
-                margin-top: 80px;
+            .blog-container {
+                padding: 20px 15px;
+                margin: 100px auto 40px;
             }
-            .service-detail .text h1 {
+            .blog-container h1 {
                 font-size: 26px;
             }
-            .service-detail .gif img {
-                max-height: 250px;
+            .blog-container h2 {
+                font-size: 22px;
+            }
+            .blog-container h3 {
+                font-size: 19px;
+            }
+            .blog-container h4 {
+                font-size: 17px;
+            }
+            .blog-container p,
+            .blog-container ul,
+            .blog-container ol {
+                font-size: 15px;
+            }
+            .blog-container table {
+                font-size: 14px;
+            }
+            .blog-container .back-links a {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+            .navbar ul {
+                display: none;
+            }
+            .mobile-menu {
+                display: block;
+            }
+            .floating-container {
+                left: 15px;
+                bottom: 20px;
+            }
+            .floating-main-btn {
+                padding: 12px 18px;
+                font-size: 14px;
+            }
+            #backToTop {
+                width: 48px;
+                height: 48px;
+                font-size: 24px;
+                bottom: 100px;
+                right: 15px;
             }
         }
     </style>
 </head>
 <body>
 
+<!-- =============== هدر =============== -->
 <header>
     <div class="container">
-        <a href="../index.html" class="logo"><img src="../images/logo.png" alt="لوگو"></a>
+        <a href="../index.html" class="logo"><img src="../images/logo.png" alt="لوگو شرکت سمپاشی نانوفناوران"></a>
         <nav class="navbar">
             <ul>
                 <li><a href="../index.html">صفحه اصلی</a></li>
-                <li><a href="../services.html" class="active">خدمات</a></li>
+                <li><a href="../services.html">خدمات مسکونی</a></li>
+                <li><a href="../commercial-services.html">خدمات تجاری</a></li>
                 <li><a href="../about.html">درباره ما</a></li>
                 <li><a href="../contact.html">تماس</a></li>
             </ul>
@@ -95,26 +524,204 @@
             <a href="tel:09120705746" class="call-btn">📞 09120705746</a>
             <div class="mobile-menu">☰</div>
         </div>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="جستجو...">
+            <button onclick="alert('قابلیت جستجو در حال توسعه است')">🔍</button>
+        </div>
     </div>
 </header>
 
-<div class="service-detail">
-    <div class="text">
-        <h1>🪵 سمپاشی سوسک چوب‌خوار</h1>
-        <p>کنترل سوسک‌های چوب‌خوار و جلوگیری از تخریب سازه‌های چوبی.</p>
-        <p><strong>روش کنترل:</strong> استفاده از سموم استاندارد و روش‌های نوین با تضمین کیفیت و ماندگاری بالا.</p>
-        <p><strong>مدت زمان اثرگذاری:</strong> نتایج سریع و ماندگار تا ۶ ماه.</p>
-        <a href="../services.html" class="back-link">🔙 بازگشت به لیست خدمات</a>
-        <div class="contact-float">
-            <a href="tel:09120705746">📞 تماس فوری</a>
-            <a href="https://wa.me/989120705746" target="_blank">💬 واتساپ</a>
-        </div>
+<!-- =============== مقاله =============== -->
+<div class="blog-container">
+
+    <h1>سمپاشی سوسک چوب‌خوار | راهنمای جامع کنترل، پیشگیری و ریشه‌کنی</h1>
+    <div class="meta">
+        <span>📅 آخرین به‌روزرسانی: ۲۵ مرداد ۱۴۰۴</span> &nbsp;|&nbsp; <span>⏱ زمان مطالعه: ۱۲ دقیقه</span>
     </div>
-    <div class="gif">
-        <img src="../images/services/wood-borer.jpg" alt="سمپاشی سوسک چوب‌خوار">
+
+    <!-- ===== تصویر اصلی (wood-borer.jpg) ===== -->
+    <div class="blog-image">
+        <img src="../images/services/wood-borer.jpg" alt="سمپاشی سوسک چوب‌خوار - کنترل تخصصی نانوفناوران">
+        <div class="caption"><strong>تصویر سوسک چوب‌خوار</strong> - یکی از مخرب‌ترین آفات چوب در منازل و ویلاها</div>
     </div>
+
+    <h2>مقدمه: تهدید خاموش برای چوب‌های منزل شما</h2>
+    <p>آیا تا به حال سوراخ‌های ریز و گردی را روی مبلمان چوبی، کابینت‌های آشپزخانه، درهای چوبی یا حتی سقف چوبی خانه خود مشاهده کرده‌اید؟ آیا در اطراف این سوراخ‌ها پودرهای ریزی شبیه به خاک اره دیده‌اید؟ اگر پاسخ شما مثبت است، احتمالاً خانه شما مورد حمله <strong>سوسک چوب‌خوار</strong> قرار گرفته است. این آفت کوچک اما مخرب، سالانه خسارت‌های جبران‌ناپذیری به اثاثیه چوبی، سازه‌های ساختمانی و اشیاء عتیقه وارد می‌کند.</p>
+
+    <p>سوسک چوب‌خوار (Wood-boring beetle) یکی از جدی‌ترین تهدیدات برای چوب‌های موجود در منازل، ویلاها، انبارها و موزه‌ها محسوب می‌شود. لاروهای این حشره با ایجاد تونل‌های زیرین در چوب، آن را از درون توخالی می‌کنند و در نهایت، استحکام سازه‌های چوبی را از بین می‌برند. بسیاری از افراد تا زمانی که خسارت‌های گسترده‌ای به وجود نیامده، از وجود این آفت مطلع نمی‌شوند.</p>
+
+    <p>در این مقاله جامع از <strong>شرکت سمپاشی نانوفناوران بهداشت تهران</strong>، شما را با انواع سوسک‌های چوب‌خوار، علائم آلودگی، روش‌های پیشگیری و مهم‌تر از همه، <strong>سمپاشی تخصصی و ریشه‌کنی اصولی</strong> این آفت آشنا خواهیم کرد. اگر نگران آسیب‌های ناشی از این آفت به خانه یا وسایل چوبی خود هستید، این مقاله راهنمای کامل شما خواهد بود.</p>
+
+    <h2>سوسک چوب‌خوار چیست و چرا خطرناک است؟</h2>
+    <p>سوسک چوب‌خوار به گروهی از حشرات اطلاق می‌شود که در مرحله لاروی، از چوب تغذیه می‌کنند و با ایجاد دالان‌های زیرین، ساختار چوب را تخریب می‌نمایند. مهم‌ترین گونه‌های سوسک چوب‌خوار در ایران عبارتند از:</p>
+
+    <table>
+        <thead>
+            <tr><th>نام فارسی</th><th>نام علمی</th><th>چوب‌های هدف</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>سوسک چوب‌خوار معمولی</strong></td><td><em>Anobium punctatum</em></td><td>چوب‌های نرم و کهنه</td></tr>
+            <tr><td><strong>سوسک چوب‌خوار بزرگ (بزک‌چوب)</strong></td><td><em>Hylotrupes bajulus</em></td><td>چوب‌های مخروطیان (کاج، سرو)</td></tr>
+            <tr><td><strong>سوسک چوب‌خوار مبلمان</strong></td><td><em>Lyctus brunneus</em></td><td>چوب‌های پهن‌برگ (بلوط، گردو، راش)</td></tr>
+            <tr><td><strong>سوسک چوب‌خوار سقفی</strong></td><td><em>Xestobium rufovillosum</em></td><td>چوب‌های قطور و سازه‌ای</td></tr>
+        </tbody>
+    </table>
+
+    <div class="callout-box">
+        <p><strong>چرخه زندگی سوسک چوب‌خوار:</strong> این حشره دارای چرخه زندگی ۱ تا ۱۰ ساله است. حشره بالغ تخم‌های خود را در شکاف‌های چوب می‌گذارد. لاروها پس از خروج از تخم، با ایجاد تونل در چوب، تغذیه خود را آغاز می‌کنند. لاروها می‌توانند تا ۱۰ سال درون چوب زندگی کنند و در این مدت، خسارت‌های زیادی وارد نمایند. در نهایت لارو تبدیل به شفیره و سپس به حشره بالغ تبدیل می‌شود و با ایجاد سوراخ‌های خروجی، چوب را ترک می‌کند.</p>
+    </div>
+
+    <h2>علائم تشخیص آلودگی به سوسک چوب‌خوار</h2>
+    <p>تشخیص زودهنگام آلودگی می‌تواند از تخریب گسترده چوب‌ها جلوگیری کند. مهم‌ترین علائم حضور سوسک چوب‌خوار عبارتند از:</p>
+
+    <ul>
+        <li><strong>سوراخ‌های خروجی ریز و گرد:</strong> این سوراخ‌ها (قطر ۱ تا ۳ میلی‌متر) محل خروج حشرات بالغ از چوب هستند.</li>
+        <li><strong>پودر چوب (گرد و خاک اره):</strong> پودرهای ریزی که از سوراخ‌ها خارج می‌شوند و در زیر یا اطراف چوب ریخته می‌شوند.</li>
+        <li><strong>صدای جویدن در شب:</strong> لاروهای سوسک چوب‌خوار معمولاً در شب فعال‌تر هستند و صدای جویدن آنها در محیط‌های ساکت قابل شنیدن است.</li>
+        <li><strong>تضعیف چوب:</strong> چوب آلوده به راحتی خرد می‌شود و مقاومت خود را از دست می‌دهد.</li>
+        <li><strong>مشاهده حشرات بالغ:</strong> دیدن سوسک‌های کوچک قهوه‌ای یا سیاه در اطراف چوب‌ها، به‌ویژه در فصل بهار و تابستان.</li>
+    </ul>
+
+    <h2>خسارت‌های ناشی از سوسک چوب‌خوار</h2>
+    <p>سوسک چوب‌خوار یکی از مخرب‌ترین آفات چوب است که می‌تواند خسارت‌های جدی به همراه داشته باشد:</p>
+
+    <table>
+        <thead>
+            <tr><th>نوع خسارت</th><th>توضیح</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>تخریب سازه‌های چوبی</strong></td><td>تیرها، ستون‌ها و سقف‌های چوبی را از درون توخالی کرده و باعث ریزش یا فروپاشی می‌شود.</td></tr>
+            <tr><td><strong>آسیب به مبلمان و اشیاء عتیقه</strong></td><td>مبلمان چوبی، کابینت‌ها و اشیاء ارزشمند چوبی را تخریب می‌کند و ارزش آنها را کاهش می‌دهد.</td></tr>
+            <tr><td><strong>خطر آتش‌سوزی</strong></td><td>چوب‌های توخالی شده در اثر حمله سوسک، سریع‌تر آتش می‌گیرند و در صورت آتش‌سوزی، سریع‌تر فرو می‌ریزند.</td></tr>
+            <tr><td><strong>افت قیمت ملک</strong></td><td>وجود سوسک چوب‌خوار در ساختمان، ارزش ملک را به شدت کاهش می‌دهد.</td></tr>
+        </tbody>
+    </table>
+
+    <h2>روش‌های پیشگیری از سوسک چوب‌خوار</h2>
+    <p>پیشگیری همواره بهترین راهکار در مقابله با سوسک چوب‌خوار است. با رعایت این نکات، می‌توانید از ورود این آفت به منزل خود جلوگیری کنید:</p>
+
+    <h3>۱. کنترل رطوبت چوب</h3>
+    <p>سوسک‌های چوب‌خوار به چوب‌های مرطوب جذب می‌شوند. رطوبت چوب را زیر ۱۲٪ نگه دارید و از نشتی آب در نزدیکی چوب‌ها جلوگیری کنید.</p>
+
+    <h3>۲. استفاده از چوب‌های تیمار شده</h3>
+    <p>برای ساخت و ساز و خرید مبلمان، از چوب‌هایی استفاده کنید که با مواد ضد سوسک چوب‌خوار تیمار شده‌اند.</p>
+
+    <h3>۳. رنگ آمیزی و روغن‌کاری چوب</h3>
+    <p>رنگ و روغن‌کاری چوب، سطح آن را غیرقابل نفوذ برای سوسک‌ها می‌کند و از تخم‌گذاری آنها جلوگیری می‌کند.</p>
+
+    <h3>۴. بازرسی دوره‌ای</h3>
+    <p>به طور مرتب چوب‌های منزل را از نظر علائم آلودگی بررسی کنید.</p>
+
+    <h2>سمپاشی تخصصی و ریشه‌کنی سوسک چوب‌خوار با نانوفناوران</h2>
+    <p>اگر با وجود رعایت نکات پیشگیرانه، متوجه علائم آلودگی در چوب‌های منزل خود شده‌اید، زمان آن رسیده که از یک <strong>خدمات سمپاشی تخصصی</strong> بهره ببرید.</p>
+
+    <div class="callout-box">
+        <p><strong>چرا روش‌های خانگی برای کنترل سوسک چوب‌خوار مؤثر نیستند؟</strong></p>
+        <ul>
+            <li>لاروهای سوسک چوب‌خوار در عمق چوب زندگی می‌کنند و اسپری‌های سطحی به آنها نمی‌رسند.</li>
+            <li>چرخه زندگی طولانی این حشره (تا ۱۰ سال) باعث می‌شود که حذف کامل آن به روش‌های غیرتخصصی تقریباً غیرممکن باشد.</li>
+            <li>استفاده از سموم غیراستاندارد می‌تواند برای سلامتی خطرناک باشد.</li>
+        </ul>
+    </div>
+
+    <h3>راهکار تخصصی شرکت نانوفناوران:</h3>
+    <p>شرکت سمپاشی نانوفناوران بهداشت تهران با بیش از یک دهه تجربه و <strong>مجوز رسمی از وزارت بهداشت</strong>، خدمات تخصصی سمپاشی سوسک چوب‌خوار را به صورت تضمینی ارائه می‌دهد:</p>
+
+    <ol>
+        <li>
+            <strong>بازرسی دقیق و تشخیص</strong>
+            <p>کارشناسان ما با بررسی کامل چوب‌ها، نوع سوسک، میزان آلودگی و نقاط درگیری را شناسایی می‌کنند.</p>
+        </li>
+        <li>
+            <strong>تزریق سم به عمق چوب</strong>
+            <p>مؤثرترین روش کنترل سوسک چوب‌خوار، <strong>تزریق سم به داخل دالان‌های چوب</strong> است. این روش باعث می‌شود سم به لاروها در عمق چوب برسد و آنها را از بین ببرد.</p>
+        </li>
+        <li>
+            <strong>سمپاشی سطحی با سموم تخصصی</strong>
+            <p>پس از تزریق، سطح چوب با سموم باقی‌مانده پوشانده می‌شود تا از ورود مجدد سوسک‌ها جلوگیری شود.</p>
+        </li>
+        <li>
+            <strong>تعمیر و ترمیم چوب</strong>
+            <p>در صورت نیاز، چوب‌های آسیب‌دیده ترمیم یا تعویض می‌شوند.</p>
+        </li>
+        <li>
+            <strong>مشاوره و پیشگیری</strong>
+            <p>پس از اتمام عملیات، کارشناسان ما نکات لازم برای جلوگیری از بازگشت مجدد این آفت را به شما آموزش می‌دهند.</p>
+        </li>
+    </ol>
+
+    <h2>روش‌های تزریق سم به چوب</h2>
+    <p>تزریق سم به عمق چوب، مؤثرترین روش برای از بین بردن لاروهای سوسک چوب‌خوار است. این روش به صورت زیر انجام می‌شود:</p>
+
+    <ul>
+        <li><strong>تزریق با سرنگ مخصوص:</strong> سم به طور مستقیم به داخل سوراخ‌های خروجی تزریق می‌شود و از طریق دالان‌ها به تمام نقاط چوب نفوذ می‌کند.</li>
+        <li><strong>تزریق با فشار هوا:</strong> در این روش، سم با استفاده از فشار هوا به عمق چوب تزریق می‌شود و به تمام تونل‌ها می‌رسد.</li>
+        <li><strong>استفاده از سموم سیستمیک:</strong> این سموم توسط چوب جذب می‌شوند و لاروها با تغذیه از چوب، سم را جذب کرده و از بین می‌روند.</li>
+    </ul>
+
+    <h2>هزینه سمپاشی سوسک چوب‌خوار چقدر است؟</h2>
+    <p>هزینه سمپاشی سوسک چوب‌خوار به عوامل زیر بستگی دارد. برای دریافت <strong>مشاوره رایگان</strong> و <strong>استعلام دقیق هزینه</strong>، با کارشناسان ما تماس بگیرید:</p>
+
+    <table>
+        <thead>
+            <tr><th>عامل</th><th>تأثیر بر هزینه</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>مساحت و حجم چوب</strong></td><td>هرچه میزان چوب بیشتر باشد، هزینه بیشتر است</td></tr>
+            <tr><td><strong>شدت آلودگی</strong></td><td>آلودگی شدید نیاز به تزریق در نقاط بیشتر دارد</td></tr>
+            <tr><td><strong>نوع چوب</strong></td><td>چوب‌های سخت نیاز به روش‌های خاصی دارند</td></tr>
+            <tr><td><strong>دسترسی به نقاط آلوده</strong></td><td>چوب‌های موجود در سقف یا دیوار، هزینه را افزایش می‌دهد</td></tr>
+        </tbody>
+    </table>
+
+    <h2>سوالات متداول درباره سمپاشی سوسک چوب‌خوار</h2>
+
+    <details>
+        <summary><strong>آیا سمپاشی سوسک چوب‌خوار برای کودکان و حیوانات خانگی خطرناک است؟</strong></summary>
+        <p>خیر، سموم استفاده‌شده توسط شرکت نانوفناوران با رعایت کامل استانداردهای بهداشتی انتخاب می‌شوند. در هنگام سمپاشی، افراد و حیوانات از محیط خارج می‌شوند و پس از تهویه کامل، محیط کاملاً ایمن است.</p>
+    </details>
+
+    <details>
+        <summary><strong>چه مدت بعد از سمپاشی سوسک‌های چوب‌خوار از بین می‌روند؟</strong></summary>
+        <p>در روش تزریق سم، لاروها طی ۱ تا ۲ هفته از بین می‌روند. حشرات بالغ نیز به سرعت پس از تماس با سم از بین می‌روند.</p>
+    </details>
+
+    <details>
+        <summary><strong>آیا خودمان هم می‌توانیم سوسک چوب‌خوار را سمپاشی کنیم؟</strong></summary>
+        <p>استفاده از اسپری‌های خانگی معمولاً مؤثر نیست و فقط سوسک‌های سطحی را از بین می‌برد. تزریق سم به عمق چوب نیاز به تجهیزات و دانش تخصصی دارد.</p>
+    </details>
+
+    <details>
+        <summary><strong>بعد از سمپاشی آیا سوسک‌ها دوباره برمی‌گردند؟</strong></summary>
+        <p>اگر چوب‌ها با سموم باقی‌مانده پوشانده شوند و نکات پیشگیری رعایت شود، احتمال بازگشت بسیار کم است. شرکت نانوفناوران خدمات خود را با ضمانت ارائه می‌دهد.</p>
+    </details>
+
+    <details>
+        <summary><strong>آیا سمپاشی چوب را خراب می‌کند؟</strong></summary>
+        <p>خیر، سموم استفاده‌شده توسط نانوفناوران به چوب آسیب نمی‌رسانند و فقط آفات را از بین می‌برند.</p>
+    </details>
+
+    <h2>نتیجه‌گیری</h2>
+    <p>سوسک چوب‌خوار یکی از خطرناک‌ترین آفات چوب است که می‌تواند خسارت‌های جبران‌ناپذیری به منزل، ویلا و اثاثیه شما وارد کند. تشخیص زودهنگام و اقدام سریع، کلید جلوگیری از تخریب گسترده چوب‌هاست.</p>
+
+    <p><strong>شرکت سمپاشی نانوفناوران بهداشت تهران</strong> با بهره‌گیری از دانش فنی روز، تجهیزات پیشرفته و سموم استاندارد، آماده ارائه خدمات تخصصی و تضمینی در زمینه <strong>سمپاشی سوسک چوب‌خوار</strong> به شماست. تیم کارشناسان ما با استفاده از روش تزریق سم به عمق چوب، این آفت را به‌طور کامل ریشه‌کنی می‌کنند.</p>
+
+    <p style="font-size:20px; font-weight:700; text-align:center; color:var(--primary);">🚀 همین حالا اقدام کنید:</p>
+    <div style="text-align:center; margin:20px 0;">
+        <p>📞 <strong>تماس فوری:</strong> <a href="tel:09120705746" style="font-size:20px; color:var(--secondary);">۰۹۱۲۰۷۰۵۷۴۶</a></p>
+        <p>💬 <strong>درخواست مشاوره رایگان:</strong> از طریق <a href="https://wa.me/989120705746" target="_blank">واتساپ</a> یا <a href="https://eitaa.com/nanofannavaran_ir" target="_blank">ایتا</a></p>
+        <p>🔗 <strong>مشاهده سایر خدمات:</strong> <a href="../services.html">کنترل آفات مسکونی</a></p>
+    </div>
+
+    <div class="back-links">
+        <a href="../index.html" class="btn-blog-home">🏠 بازگشت به صفحه اصلی</a>
+        <a href="../services.html" class="btn-blog-services">🔙 بازگشت به لیست خدمات مسکونی</a>
+        <a href="../contact.html" class="btn-blog-contact">📞 تماس با ما</a>
+    </div>
+
 </div>
 
+<!-- =============== فوتر =============== -->
 <footer class="site-footer">
     <div class="container">
         <div class="footer-grid">
@@ -125,6 +732,116 @@
     </div>
 </footer>
 
-<script src="../script.js"></script>
+<!-- =============== منوی شناور =============== -->
+<div class="floating-container">
+    <button class="floating-main-btn" id="floatingToggle">
+        <span class="btn-arrow">▶</span>
+        <span class="btn-text">📞 مشاوره رایگان</span>
+    </button>
+    <div class="floating-menu" id="floatingMenu">
+        <div class="call-wrapper">
+            <div class="floating-item call-item" id="callToggle">
+                <span class="item-icon">📞</span>
+                <span class="item-text">تماس سریع</span>
+                <span class="arrow">▲</span>
+            </div>
+            <div class="call-submenu" id="callSubmenu">
+                <a href="tel:09120705746" class="floating-item call-sub-item"><span class="item-icon">📞</span><span class="item-text">شماره ۱</span></a>
+                <a href="tel:09197173454" class="floating-item call-sub-item"><span class="item-icon">📞</span><span class="item-text">شماره ۲</span></a>
+            </div>
+        </div>
+        <a href="https://wa.me/989120705746?text=%D8%A8%D9%87%20%D8%B3%D8%A7%DB%8C%D8%AA%20%D8%B4%D8%B1%DA%A9%D8%AA%20%D8%B3%D9%85%D9%BE%D8%A7%D8%B4%DB%8C%20%D9%86%D8%A7%D9%86%D9%88%D9%81%D9%86%D8%A7%D9%88%D8%B1%D8%A7%D9%86%20%D8%AE%D9%88%D8%B4%20%D8%A2%D9%85%D8%AF%DB%8C%D8%AF" target="_blank" class="floating-item whatsapp-item"><span class="item-icon">💬</span><span class="item-text">واتساپ</span></a>
+        <a href="https://eitaa.com/nanofannavaran_ir" target="_blank" class="floating-item eitaa-item"><span class="item-icon">✈️</span><span class="item-text">ایتا</span></a>
+    </div>
+</div>
+
+<!-- =============== دکمه اسکرول به بالا =============== -->
+<button id="backToTop" title="برو به بالا">↑</button>
+
+<!-- =============== جاوااسکریپت کامل =============== -->
+<script>
+    // ===== دکمه اسکرول به بالا =====
+    var backToTopBtn = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
+    });
+
+    backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // ===== منوی شناور =====
+    var toggleBtn = document.getElementById('floatingToggle');
+    var menu = document.getElementById('floatingMenu');
+    var arrow = toggleBtn.querySelector('.btn-arrow');
+
+    toggleBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        menu.classList.toggle('active');
+        arrow.classList.toggle('open');
+    });
+
+    // ===== زیرمنوی تماس =====
+    var callToggle = document.getElementById('callToggle');
+    var callSubmenu = document.getElementById('callSubmenu');
+
+    callToggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        callSubmenu.classList.toggle('active');
+        var arrowIcon = this.querySelector('.arrow');
+        if (arrowIcon) {
+            arrowIcon.textContent = callSubmenu.classList.contains('active') ? '▼' : '▲';
+        }
+    });
+
+    // ===== بستن منو با کلیک بیرون =====
+    document.addEventListener('click', function() {
+        menu.classList.remove('active');
+        arrow.classList.remove('open');
+        callSubmenu.classList.remove('active');
+        var arrowIcon = callToggle.querySelector('.arrow');
+        if (arrowIcon) {
+            arrowIcon.textContent = '▲';
+        }
+    });
+
+    menu.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+
+    // ===== منوی موبایل =====
+    var mobileMenuBtn = document.querySelector('.mobile-menu');
+    var navbar = document.querySelector('.navbar ul');
+
+    mobileMenuBtn.addEventListener('click', function() {
+        if (navbar.style.display === 'flex') {
+            navbar.style.display = 'none';
+        } else {
+            navbar.style.display = 'flex';
+            navbar.style.flexDirection = 'column';
+            navbar.style.position = 'absolute';
+            navbar.style.top = '70px';
+            navbar.style.right = '20px';
+            navbar.style.background = '#fff';
+            navbar.style.padding = '20px';
+            navbar.style.borderRadius = '12px';
+            navbar.style.boxShadow = '0 10px 30px rgba(0,0,0,.15)';
+            navbar.style.gap = '10px';
+            navbar.style.width = '200px';
+            navbar.style.zIndex = '999';
+        }
+    });
+
+    console.log('✅ دکمه اسکرول و منوی شناور فعال شدند!');
+</script>
+
 </body>
 </html>
