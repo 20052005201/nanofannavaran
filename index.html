@@ -9,6 +9,206 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
+        /* =============== تنظیمات پایه =============== */
+        :root {
+            --primary: #1a7a3a;
+            --secondary: #27ae60;
+            --dark: #1a2a3a;
+            --light: #f8f9fa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Vazirmatn', 'IRANSans', 'Tahoma', sans-serif;
+            background: #f5f7fa;
+            color: #2c3e50;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* =============== هدر =============== */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 15px rgba(0,0,0,.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 10px 20px;
+        }
+        header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .logo img {
+            height: 50px;
+        }
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 15px;
+            transition: .3s;
+        }
+        .navbar ul li a:hover,
+        .navbar ul li a.active {
+            color: var(--primary);
+        }
+        .header-buttons {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .call-btn {
+            background: var(--primary);
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            transition: .3s;
+        }
+        .call-btn:hover {
+            background: var(--secondary);
+        }
+        .mobile-menu {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+        .search-box {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .search-box input {
+            padding: 6px 14px;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            font-size: 14px;
+            font-family: inherit;
+        }
+        .search-box button {
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        /* =============== اسلایدر =============== */
+        .hero-slider {
+            margin-top: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        .slider-container {
+            position: relative;
+            width: 100%;
+            height: 500px;
+        }
+        .slider-container .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.8s ease;
+        }
+        .slider-container .slide.active {
+            opacity: 1;
+        }
+        .slider-container .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.5);
+            color: #fff;
+            border: none;
+            padding: 15px 20px;
+            cursor: pointer;
+            font-size: 24px;
+            border-radius: 50%;
+            transition: .3s;
+            z-index: 10;
+        }
+        .slider-btn:hover {
+            background: rgba(0,0,0,0.8);
+        }
+        .slider-btn.prev {
+            left: 20px;
+        }
+        .slider-btn.next {
+            right: 20px;
+        }
+        .slider-dots {
+            text-align: center;
+            padding: 15px 0;
+            position: relative;
+            z-index: 10;
+            background: #fff;
+        }
+        .slider-dots .dot {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ccc;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: .3s;
+        }
+        .slider-dots .dot.active {
+            background: var(--primary);
+            width: 30px;
+            border-radius: 10px;
+        }
+
+        /* =============== خدمات =============== */
+        .services {
+            padding: 60px 0;
+            text-align: center;
+        }
+        .services h2 {
+            color: var(--primary);
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+        .section-description {
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
         .services-list {
             padding: 60px 0;
             background: #ffffff;
@@ -66,7 +266,362 @@
             font-weight: 700;
             display: block;
         }
-        @media (max-width: 600px) {
+
+        /* =============== درباره شرکت =============== */
+        .about-company {
+            padding: 80px 0;
+            background: #fff;
+        }
+        .about-company .container {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .about-image {
+            flex: 1;
+            min-width: 280px;
+        }
+        .about-image svg {
+            width: 100%;
+            height: auto;
+        }
+        .about-content {
+            flex: 1;
+            min-width: 280px;
+        }
+        .about-content .section-subtitle {
+            color: var(--secondary);
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .about-content h2 {
+            font-size: 32px;
+            color: var(--dark);
+            margin: 10px 0 20px;
+        }
+        .about-content p {
+            color: #666;
+            font-size: 17px;
+            margin-bottom: 20px;
+        }
+        .about-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+        .about-features .feature-item {
+            color: #444;
+            font-size: 15px;
+        }
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: #fff;
+            padding: 12px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: .3s;
+        }
+        .btn:hover {
+            background: var(--secondary);
+            transform: scale(1.03);
+        }
+
+        /* =============== آمار =============== */
+        .stats {
+            padding: 60px 0;
+            background: var(--primary);
+            color: #fff;
+            text-align: center;
+        }
+        .stats h2 {
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+        .stat-card .stat-number {
+            font-size: 42px;
+            font-weight: 900;
+        }
+        .stat-card h3 {
+            font-size: 18px;
+            font-weight: 400;
+            opacity: 0.9;
+        }
+
+        /* =============== نظرات =============== */
+        .testimonials {
+            padding: 60px 0;
+            background: #fff;
+            text-align: center;
+        }
+        .testimonials h2 {
+            font-size: 32px;
+            color: var(--dark);
+            margin-bottom: 40px;
+        }
+        .testimonial-slider {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .testimonial-card {
+            background: #f8fbfd;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,.05);
+        }
+        .testimonial-card p {
+            font-size: 17px;
+            color: #555;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+        .testimonial-card h4 {
+            color: var(--primary);
+            font-size: 16px;
+        }
+
+        /* =============== فرم تماس =============== */
+        .contact {
+            padding: 60px 0;
+            background: #f8fbfd;
+            text-align: center;
+        }
+        .contact h2 {
+            font-size: 32px;
+            color: var(--dark);
+            margin-bottom: 30px;
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .contact-form input,
+        .contact-form select,
+        .contact-form textarea {
+            padding: 14px 20px;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            font-size: 16px;
+            font-family: inherit;
+            background: #fff;
+            transition: .3s;
+        }
+        .contact-form input:focus,
+        .contact-form select:focus,
+        .contact-form textarea:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(26, 122, 58, 0.1);
+        }
+        .contact-form button {
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            padding: 16px;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: .3s;
+            font-family: inherit;
+        }
+        .contact-form button:hover {
+            background: var(--secondary);
+        }
+
+        /* =============== فوتر =============== */
+        .site-footer {
+            background: var(--dark);
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .site-footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer-grid {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .footer-box h3 {
+            color: var(--secondary);
+            margin-bottom: 10px;
+        }
+        .footer-box p {
+            color: #ccc;
+            font-size: 15px;
+        }
+        .site-footer hr {
+            border: none;
+            border-top: 1px solid #444;
+            margin: 20px 0;
+        }
+        .site-footer .copyright {
+            color: #888;
+            font-size: 14px;
+        }
+
+        /* =============== منوی شناور =============== */
+        .floating-container {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .floating-main-btn {
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            padding: 14px 24px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 700;
+            font-family: inherit;
+            cursor: pointer;
+            box-shadow: 0 6px 25px rgba(26, 122, 58, 0.4);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: .3s;
+        }
+        .floating-main-btn:hover {
+            background: var(--secondary);
+            transform: scale(1.03);
+        }
+        .floating-menu {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,.15);
+            padding: 12px;
+            margin-bottom: 12px;
+            display: none;
+            flex-direction: column;
+            min-width: 200px;
+        }
+        .floating-menu.active {
+            display: flex;
+        }
+        .floating-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 18px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 15px;
+            transition: .3s;
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-family: inherit;
+            width: 100%;
+            text-align: right;
+        }
+        .floating-item:hover {
+            background: #f0f7f0;
+        }
+        .floating-item .item-icon {
+            font-size: 20px;
+        }
+        .call-wrapper {
+            position: relative;
+        }
+        .call-submenu {
+            display: none;
+            padding-right: 20px;
+            margin-top: 5px;
+        }
+        .call-submenu.active {
+            display: block;
+        }
+        .call-sub-item {
+            padding: 10px 18px;
+            font-size: 14px;
+        }
+        .whatsapp-item {
+            color: #25D366;
+        }
+        .eitaa-item {
+            color: #1a7a3a;
+        }
+        .btn-arrow {
+            transition: .3s;
+        }
+        .btn-arrow.open {
+            transform: rotate(90deg);
+        }
+
+        /* =============== دکمه اسکرول به بالا =============== */
+        #backToTop {
+            position: fixed;
+            bottom: 110px;
+            right: 30px;
+            z-index: 998;
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            font-size: 28px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 6px 25px rgba(0,0,0,.2);
+            transition: .3s;
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        #backToTop:hover {
+            background: var(--secondary);
+            transform: translateY(-4px);
+        }
+        #backToTop.show {
+            display: flex;
+        }
+
+        /* =============== ریسپانسیو =============== */
+        @media (max-width: 768px) {
+            .slider-container {
+                height: 280px;
+            }
+            .navbar ul {
+                display: none;
+            }
+            .mobile-menu {
+                display: block;
+            }
+            .services h2 {
+                font-size: 26px;
+            }
+            .services-list h2 {
+                font-size: 26px;
+            }
             .services-grid-all {
                 grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
                 gap: 12px;
@@ -80,14 +635,33 @@
                 font-size: 0.9rem;
                 line-height: 1.8;
             }
-            .services-list h2 {
-                font-size: 26px;
+            .about-company .container {
+                flex-direction: column;
+            }
+            .about-features {
+                grid-template-columns: 1fr;
+            }
+            .floating-container {
+                left: 15px;
+                bottom: 20px;
+            }
+            .floating-main-btn {
+                padding: 12px 18px;
+                font-size: 14px;
+            }
+            #backToTop {
+                width: 48px;
+                height: 48px;
+                font-size: 24px;
+                bottom: 100px;
+                right: 15px;
             }
         }
     </style>
 </head>
 <body>
 
+<!-- =============== هدر =============== -->
 <header>
     <div class="container">
         <a href="index.html" class="logo"><img src="images/logo.png" alt="لوگو"></a>
@@ -111,7 +685,7 @@
     </div>
 </header>
 
-<!-- ===== اسلایدر ===== -->
+<!-- =============== اسلایدر =============== -->
 <section class="hero-slider">
     <div class="slider-container">
         <div class="slide active"><img src="images/slider/slide1.jpg?v=1" alt="اسلاید ۱"></div>
@@ -131,7 +705,7 @@
     </div>
 </section>
 
-<!-- ===== بخش خدمات مسکونی ===== -->
+<!-- =============== بخش خدمات مسکونی =============== -->
 <section id="services" class="services">
     <div class="container">
         <h2>خدمات تخصصی شرکت سمپاشی نانوفناوران</h2>
@@ -143,7 +717,7 @@
     </div>
 </section>
 
-<!-- ===== لیست کامل خدمات مسکونی (با ترتیب اولویت) ===== -->
+<!-- =============== لیست کامل خدمات مسکونی =============== -->
 <section class="services-list">
     <div class="container">
         <h2>همه خدمات کنترل آفات مسکونی</h2>
@@ -261,7 +835,7 @@
     </div>
 </section>
 
-<!-- ===== بخش کنترل آفات تجاری (لینک) ===== -->
+<!-- =============== بخش کنترل آفات تجاری =============== -->
 <section class="services-list" style="background: #f8fbfd;">
     <div class="container">
         <h2>🏢 کنترل آفات تجاری</h2>
@@ -273,7 +847,7 @@
     </div>
 </section>
 
-<!-- ===== لیست کامل خدمات تجاری ===== -->
+<!-- =============== لیست کامل خدمات تجاری =============== -->
 <section class="services-list">
     <div class="container">
         <h2>همه خدمات کنترل آفات تجاری</h2>
@@ -323,7 +897,7 @@
     </div>
 </section>
 
-<!-- ===== درباره شرکت ===== -->
+<!-- =============== درباره شرکت =============== -->
 <section class="about-company">
     <div class="container">
         <div class="about-image">
@@ -351,94 +925,4 @@
     </div>
 </section>
 
-<!-- ===== آمار ===== -->
-<section class="stats">
-    <div class="container">
-        <h2>افتخارات ما</h2>
-        <div class="stats-grid">
-            <div class="stat-card"><div class="stat-number">15+</div><h3>سال تجربه</h3></div>
-            <div class="stat-card"><div class="stat-number">5000+</div><h3>پروژه موفق</h3></div>
-            <div class="stat-card"><div class="stat-number">100%</div><h3>رضایت مشتریان</h3></div>
-            <div class="stat-card"><div class="stat-number">22</div><h3>منطقه تحت پوشش</h3></div>
-        </div>
-    </div>
-</section>
-
-<!-- ===== نظرات مشتریان ===== -->
-<section class="testimonials">
-    <div class="container">
-        <h2>نظر مشتریان</h2>
-        <div class="testimonial-slider">
-            <div class="testimonial-card"><p>"کیفیت خدمات عالی بود، مشکل سوسک به طور کامل برطرف شد."</p><h4>- مشتری تهران</h4></div>
-            <div class="testimonial-card"><p>"سمپاشی مرکز تجاری بدون ایجاد مزاحمت انجام شد."</p><h4>- مدیر مجتمع تجاری</h4></div>
-            <div class="testimonial-card"><p>"بسیار حرفه‌ای و دقیق، استانداردهای بهداشتی رعایت شد."</p><h4>- مدیر مرکز درمانی</h4></div>
-        </div>
-    </div>
-</section>
-
-<!-- ===== فرم تماس ===== -->
-<section class="contact">
-    <div class="container">
-        <h2>ثبت درخواست سمپاشی</h2>
-        <form class="contact-form">
-            <input type="text" placeholder="نام و نام خانوادگی" required>
-            <input type="tel" placeholder="شماره تماس" required>
-            <select required><option value="">نوع خدمات</option><option>سمپاشی منازل</option><option>سمپاشی تجاری</option></select>
-            <textarea rows="4" placeholder="توضیحات"></textarea>
-            <button type="submit">ثبت درخواست</button>
-        </form>
-    </div>
-</section>
-
-<!-- ===== فوتر ===== -->
-<footer class="site-footer">
-    <div class="container">
-        <div class="footer-grid">
-            <div class="footer-box"><h3>نانوفناوران</h3><p>ارائه‌دهنده خدمات تخصصی کنترل آفات در تهران</p></div>
-            <div class="footer-box"><h3>اطلاعات تماس</h3><p>📱 09120705746</p><p>☎️ 22048278</p></div>
-        </div>
-        <hr><p class="copyright">© تمامی حقوق محفوظ است</p>
-    </div>
-</footer>
-
-<!-- ===== دکمه شناور ===== -->
-<div class="floating-container">
-    <button class="floating-main-btn" id="floatingToggle">
-        <span class="btn-arrow">▶</span>
-        <span class="btn-text">📞 مشاوره رایگان</span>
-    </button>
-    <div class="floating-menu" id="floatingMenu">
-        <div class="call-wrapper">
-            <div class="floating-item call-item" id="callToggle">
-                <span class="item-icon">📞</span>
-                <span class="item-text">تماس سریع</span>
-                <span class="arrow">▲</span>
-            </div>
-            <div class="call-submenu" id="callSubmenu">
-                <a href="tel:09120705746" class="floating-item call-sub-item">
-                    <span class="item-icon">📞</span>
-                    <span class="item-text">شماره ۱</span>
-                </a>
-                <a href="tel:09197173454" class="floating-item call-sub-item">
-                    <span class="item-icon">📞</span>
-                    <span class="item-text">شماره ۲</span>
-                </a>
-            </div>
-        </div>
-        <a href="https://wa.me/989120705746?text=%D8%A8%D9%87%20%D8%B3%D8%A7%DB%8C%D8%AA%20%D8%B4%D8%B1%DA%A9%D8%AA%20%D8%B3%D9%85%D9%BE%D8%A7%D8%B4%DB%8C%20%D9%86%D8%A7%D9%86%D9%88%D9%81%D9%86%D8%A7%D9%88%D8%B1%D8%A7%D9%86%20%D8%AE%D9%88%D8%B4%20%D8%A2%D9%85%D8%AF%DB%8C%D8%AF.%20%DA%86%DA%AF%D9%88%D9%86%D9%87%20%D9%85%DB%8C%E2%80%8C%D8%AA%D9%88%D8%A7%D9%86%D9%85%20%DA%A9%D9%85%DA%A9%20%D8%AA%D8%A7%D9%86%20%DA%A9%D9%86%D9%85%D8%9F" target="_blank" class="floating-item whatsapp-item">
-            <span class="item-icon">💬</span>
-            <span class="item-text">واتساپ</span>
-        </a>
-        <a href="https://eitaa.com/nanofannavaran_ir" target="_blank" class="floating-item eitaa-item">
-            <span class="item-icon">✈️</span>
-            <span class="item-text">ایتا</span>
-        </a>
-    </div>
-</div>
-
-<!-- ===== دکمه اسکرول به بالا ===== -->
-<button id="backToTop" title="برو به بالا">↑</button>
-
-<script src="script.js"></script>
-</body>
-</html>
+<!-- =============== آمار =============== -->
