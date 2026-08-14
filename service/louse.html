@@ -3,77 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سمپاشی شپش | نانوفناوران</title>
+    <title>سمپاشی شپش | راهنمای جامع تشخیص، پیشگیری و ریشه‌کنی | نانوفناوران</title>
+    <meta name="description" content="مقاله جامع سمپاشی شپش: معرفی، علائم، روش‌های درمان خانگی، پزشکی و سمپاشی تخصصی محیط. راهنمای کامل برای ریشه‌کنی شپش سر.">
+    <meta name="keywords" content="سمپاشی شپش, درمان شپش, شپش سر, شانه مخصوص شپش, بچه شپش, سمپاشی شپش در تهران">
+    <link rel="canonical" href="https://nanofannavaran.ir/service/louse.html">
     <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
-        .service-detail {
+        .blog-container {
             max-width: 1100px;
-            margin: 100px auto 50px;
+            margin: 120px auto 60px;
             padding: 0 20px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
+            background: #fff;
+            border-radius: 24px;
+            box-shadow: 0 10px 40px rgba(0,0,0,.08);
+            padding: 40px 40px 60px;
         }
-        .service-detail .text h1 {
-            font-size: 32px;
+        .blog-container h1 {
+            font-size: 36px;
             color: var(--primary);
             margin-bottom: 20px;
+            line-height: 1.5;
         }
-        .service-detail .text p {
+        .blog-container .meta {
+            color: #888;
+            font-size: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .blog-container h2 {
+            font-size: 28px;
+            color: var(--dark);
+            margin: 40px 0 15px;
+            border-right: 5px solid var(--secondary);
+            padding-right: 15px;
+        }
+        .blog-container h3 {
+            font-size: 22px;
+            color: var(--primary);
+            margin: 30px 0 12px;
+        }
+        .blog-container h4 {
+            font-size: 19px;
+            color: var(--dark);
+            margin: 25px 0 10px;
+        }
+        .blog-container p {
             line-height: 2.2;
-            color: #555;
+            color: #444;
+            font-size: 17px;
+            margin-bottom: 18px;
+        }
+        .blog-container ul, .blog-container ol {
+            line-height: 2.2;
+            color: #444;
+            font-size: 17px;
+            padding-right: 25px;
+            margin-bottom: 20px;
+        }
+        .blog-container ul li, .blog-container ol li {
+            margin-bottom: 8px;
+        }
+        .blog-container table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0 30px;
             font-size: 16px;
         }
-        .service-detail .gif img {
+        .blog-container table th {
+            background: var(--primary);
+            color: #fff;
+            padding: 12px 15px;
+            text-align: right;
+        }
+        .blog-container table td {
+            border: 1px solid #ddd;
+            padding: 10px 15px;
+            background: #fafafa;
+        }
+        .blog-container table tr:nth-child(even) td {
+            background: #f5f5f5;
+        }
+        .blog-image {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .blog-image img {
             width: 100%;
-            max-height: 400px;
-            object-fit: contain;
+            max-width: 700px;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,.15);
         }
-        .back-link {
+        .blog-image .caption {
+            font-size: 14px;
+            color: #888;
+            margin-top: 10px;
+        }
+        .blog-container .back-links {
+            margin: 40px 0 20px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .blog-container .back-links a {
             display: inline-block;
-            margin-top: 30px;
-            background: var(--secondary);
-            color: #fff;
             padding: 12px 28px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
             transition: .3s;
         }
-        .back-link:hover {
-            background: var(--primary);
-        }
-        .contact-float {
-            margin-top: 20px;
-        }
-        .contact-float a {
-            display: inline-block;
+        .blog-container .back-links .btn-blog-home {
             background: var(--primary);
             color: #fff;
-            padding: 12px 28px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            margin-left: 10px;
-            transition: .3s;
         }
-        .contact-float a:hover {
+        .blog-container .back-links .btn-blog-home:hover {
             background: var(--secondary);
         }
+        .blog-container .back-links .btn-blog-services {
+            background: var(--secondary);
+            color: #fff;
+        }
+        .blog-container .back-links .btn-blog-services:hover {
+            background: var(--primary);
+        }
+        .blog-container .back-links .btn-blog-contact {
+            background: var(--dark);
+            color: #fff;
+        }
+        .blog-container .back-links .btn-blog-contact:hover {
+            background: var(--primary);
+        }
+
+        details {
+            background: #f8fbfd;
+            padding: 15px 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #e9ecef;
+        }
+        details summary {
+            font-weight: 700;
+            color: var(--primary);
+            cursor: pointer;
+            font-size: 17px;
+        }
+        details p {
+            margin-top: 12px;
+            padding-right: 10px;
+        }
+
+        .tip-box {
+            background: #e8f4f8;
+            border-right: 5px solid var(--secondary);
+            padding: 20px 25px;
+            border-radius: 12px;
+            margin: 25px 0 30px;
+        }
+        .tip-box strong {
+            color: var(--primary);
+        }
+
         @media (max-width: 768px) {
-            .service-detail {
-                grid-template-columns: 1fr;
-                text-align: center;
-                margin-top: 80px;
+            .blog-container {
+                padding: 20px 15px;
+                margin: 100px auto 40px;
             }
-            .service-detail .text h1 {
+            .blog-container h1 {
                 font-size: 26px;
             }
-            .service-detail .gif img {
-                max-height: 250px;
+            .blog-container h2 {
+                font-size: 22px;
+            }
+            .blog-container h3 {
+                font-size: 19px;
+            }
+            .blog-container h4 {
+                font-size: 17px;
+            }
+            .blog-container p,
+            .blog-container ul,
+            .blog-container ol {
+                font-size: 15px;
+            }
+            .blog-container table {
+                font-size: 14px;
+            }
+            .blog-container .back-links a {
+                padding: 10px 20px;
+                font-size: 14px;
             }
         }
     </style>
@@ -82,11 +203,12 @@
 
 <header>
     <div class="container">
-        <a href="../index.html" class="logo"><img src="../images/logo.png" alt="لوگو"></a>
+        <a href="../index.html" class="logo"><img src="../images/logo.png" alt="لوگو شرکت سمپاشی نانوفناوران"></a>
         <nav class="navbar">
             <ul>
                 <li><a href="../index.html">صفحه اصلی</a></li>
-                <li><a href="../services.html" class="active">خدمات</a></li>
+                <li><a href="../services.html">خدمات مسکونی</a></li>
+                <li><a href="../commercial-services.html">خدمات تجاری</a></li>
                 <li><a href="../about.html">درباره ما</a></li>
                 <li><a href="../contact.html">تماس</a></li>
             </ul>
@@ -95,36 +217,284 @@
             <a href="tel:09120705746" class="call-btn">📞 09120705746</a>
             <div class="mobile-menu">☰</div>
         </div>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="جستجو...">
+            <button onclick="searchSite()">🔍</button>
+        </div>
     </div>
 </header>
 
-<div class="service-detail">
-    <div class="text">
-        <h1>🐜 سمپاشی شپش</h1>
-        <p>کنترل شپش‌های محیط‌های مسکونی و آموزشی با روش‌های ایمن.</p>
-        <p><strong>روش کنترل:</strong> استفاده از سموم استاندارد و روش‌های نوین با تضمین کیفیت و ماندگاری بالا.</p>
-        <p><strong>مدت زمان اثرگذاری:</strong> نتایج سریع و ماندگار تا ۶ ماه.</p>
-        <a href="../services.html" class="back-link">🔙 بازگشت به لیست خدمات</a>
-        <div class="contact-float">
-            <a href="tel:09120705746">📞 تماس فوری</a>
-            <a href="https://wa.me/989120705746" target="_blank">💬 واتساپ</a>
-        </div>
+<div class="blog-container">
+
+    <!-- ===== تصویر pedi (قبل از مقدمه) ===== -->
+    <div class="blog-image">
+        <img src="../images/services/pedi.jpg" alt="شپش سر">
+        <div class="caption">تصویر: شپش سر، یکی از شایع‌ترین آفات انسانی</div>
     </div>
-    <div class="gif">
-        <img src="../images/services/louse.jpg" alt="سمپاشی شپش">
+
+    <h1>سمپاشی شپش: راهنمای جامع تشخیص، پیشگیری و ریشه‌کنی (نسخه کامل و تخصصی)</h1>
+    <div class="meta">
+        <span>📅 آخرین به‌روزرسانی: ۱۶ مرداد ۱۴۰۴</span> &nbsp;|&nbsp; <span>⏱ زمان مطالعه: ۱۰ دقیقه</span>
     </div>
+
+    <h2>مقدمه: مهمانان ناخوانده‌ای که آرامش را می‌ربایند</h2>
+    <p>تصور کنید کودکتان مرتب سرش را می‌خاراند، شب‌ها بی‌قرار است و شما با بررسی موهایش، موجودات ریزی را می‌بینید که به سرعت در میان تارهای مو حرکت می‌کنند. این صحنهٔ آشنا برای بسیاری از خانواده‌ها، نشانه‌ی حضور <strong>شپش</strong> است.</p>
+
+    <p>شپش سر (Pediculus humanus capitis) یکی از شایع‌ترین آفات انسانی است که به‌ویژه در میان کودکان سنین مدرسه شیوع بالایی دارد. این حشرات کوچک و خون‌خوار، با وجود اندازهٔ بسیار کوچکشان، می‌توانند آرامش را از یک خانواده بگیرند و در صورت عدم درمان به‌موقع، به یک معضل بزرگ تبدیل شوند.</p>
+
+    <p>برخلاف تصور رایج، شپش ارتباطی با بهداشت فردی ندارد و می‌تواند در تمیزترین موها نیز زندگی کند. این حشرات فقط از خون انسان تغذیه می‌کنند و به‌راحتی از طریق تماس مستقیم سر به سر، استفاده از وسایل شخصی مشترک مانند شانه، برس، کلاه و حتی بالش، از فردی به فرد دیگر منتقل می‌شوند.</p>
+
+    <p>در این مقاله جامع، شما را با همه چیز درباره شپش سر، روش‌های تشخیص، درمان‌های خانگی و پزشکی، و مهم‌تر از همه، <strong>روش‌های اصولی و تخصصی سمپاشی شپش</strong> آشنا می‌کنیم.</p>
+
+    <!-- بخش ۱ -->
+    <h2>📌 شپش چیست؟ آشنایی با این انگل مقاوم</h2>
+    <p>شپش سر یک حشرهٔ کوچک، بی‌بال و انگل خارجی است که به‌طور اختصاصی روی پوست سر انسان زندگی می‌کند و از خون او تغذیه می‌کند. این حشرات به رنگ قهوه‌ای مایل به خاکستری هستند و پس از تغذیه از خون، تیره‌تر می‌شوند.</p>
+
+    <h3>ویژگی‌های ظاهری و بیولوژیکی شپش:</h3>
+    <table>
+        <thead>
+            <tr><th>ویژگی</th><th>توضیح</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>اندازه</strong></td><td>۲ تا ۴ میلی‌متر (به اندازه یک دانه کنجد)</td></tr>
+            <tr><td><strong>رنگ</strong></td><td>قهوه‌ای مایل به خاکستری (پس از تغذیه تیره‌تر می‌شود)</td></tr>
+            <tr><td><strong>طول عمر</strong></td><td>حدود ۳۰ روز روی پوست سر</td></tr>
+            <tr><td><strong>تغذیه</strong></td><td>منحصراً از خون انسان (هر ۳ تا ۶ ساعت یکبار)</td></tr>
+            <tr><td><strong>تولید مثل</strong></td><td>هر ماده روزانه ۶ تا ۱۰ تخم می‌گذارد</td></tr>
+            <tr><td><strong>مقاومت</strong></td><td>تخم‌ها (بچه‌شپش‌ها) مقاوم‌ترین مرحله هستند و به‌سختی از بین می‌روند</td></tr>
+        </tbody>
+    </table>
+
+    <!-- ===== تصویر pedi1 (بعد از تخم‌گذاری) ===== -->
+    <div class="blog-image">
+        <img src="../images/services/pedi1.jpg" alt="چرخه زندگی شپش">
+        <div class="caption">تصویر: چرخه زندگی شپش، از تخم تا بالغ</div>
+    </div>
+
+    <h3>چرخه زندگی شپش:</h3>
+    <p>چرخه زندگی شپش شامل سه مرحله است:</p>
+    <ol>
+        <li><strong>تخم (بچه‌شپش)</strong>: تخم‌ها به‌شدت به ساقه مو چسبیده‌اند و معمولاً در فاصله ۱ تا ۲ میلی‌متری از پوست سر قرار دارند. رنگ آن‌ها سفید مایل به زرد است و به‌سختی جدا می‌شوند.</li>
+        <li><strong>پوره (نوزاد)</strong>: پس از ۷ تا ۱۰ روز، تخم باز می‌شود و پوره از آن خارج می‌شود. پوره‌ها از خون تغذیه می‌کنند و پس از ۳ پوست‌اندازی به شپش بالغ تبدیل می‌شوند.</li>
+        <li><strong>شپش بالغ</strong>: پس از ۷ تا ۱۰ روز، پوره به شپش بالغ تبدیل می‌شود و قادر به جفت‌گیری و تخم‌گذاری است.</li>
+    </ol>
+
+    <!-- بخش ۲ -->
+    <h2>🔍 نشانه‌های آلودگی به شپش</h2>
+    <p>تشخیص به‌موقع شپش، کلید موفقیت در ریشه‌کنی آن است. این نشانه‌ها را جدی بگیرید:</p>
+
+    <h3>نشانه‌های اولیه:</h3>
+    <ul>
+        <li><strong>خارش شدید پوست سر</strong>: مهم‌ترین و شایع‌ترین علامت. خارش ناشی از واکنش آلرژیک به بزاق شپش است.</li>
+        <li><strong>احساس حرکت روی سر</strong>: احساس گزگز یا حرکت چیزی روی پوست سر.</li>
+        <li><strong>مشاهده تخم‌ها (بچه‌شپش‌ها)</strong>: تخم‌های سفید مایل به زرد که به ساقه مو چسبیده‌اند و به‌سختی جدا می‌شوند.</li>
+        <li><strong>مشاهده خود شپش</strong>: شپش‌های بالغ را می‌توانید در پشت گوش، پشت گردن و اطراف شقیقه‌ها مشاهده کنید.</li>
+        <li><strong>زخم‌های کوچک روی پوست سر</strong>: ناشی از خاراندن زیاد که ممکن است عفونی شوند.</li>
+        <li><strong>غدد لنفاوی متورم</strong>: در موارد آلودگی شدید، غدد لنفاوی پشت گردن متورم می‌شوند.</li>
+    </ul>
+
+    <h3>تفاوت شپش با شوره سر:</h3>
+    <table>
+        <thead>
+            <tr><th>شپش</th><th>شوره سر</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>به ساقه مو می‌چسبد و به‌سختی جدا می‌شود</td><td>به‌راحتی با تکان دادن مو جدا می‌شود</td></tr>
+            <tr><td>رنگ سفید مایل به زرد</td><td>رنگ سفید یا کرم</td></tr>
+            <tr><td>محل چسبندگی نزدیک به پوست سر</td><td>در تمام طول مو پراکنده است</td></tr>
+            <tr><td>با انگشت فشار دهید، صدای تق می‌دهد</td><td>بدون صدا است</td></tr>
+        </tbody>
+    </table>
+
+    <!-- بخش ۳ -->
+    <h2>🚨 عواقب و خطرات شپش</h2>
+    <p>اگر شپش به‌موقع درمان نشود، ممکن است عواقب زیر را به همراه داشته باشد:</p>
+    <table>
+        <thead>
+            <tr><th>عارضه</th><th>توضیح</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>عفونت ثانویه</strong></td><td>خاراندن شدید باعث ایجاد زخم و عفونت‌های باکتریایی می‌شود.</td></tr>
+            <tr><td><strong>التهاب پوست سر</strong></td><td>واکنش آلرژیک به بزاق شپش باعث قرمزی و التهاب می‌شود.</td></tr>
+            <tr><td><strong>اختلال خواب</strong></td><td>خارش شبانه باعث بی‌خوابی و کاهش کیفیت زندگی می‌شود.</td></tr>
+            <tr><td><strong>آسیب‌های روانی</strong></td><td>شپش می‌تواند باعث استرس، اضطراب و کاهش اعتمادبه‌نفس، به‌ویژه در کودکان شود.</td></tr>
+            <tr><td><strong>انتشار به سایر افراد</strong></td><td>شپش به‌سرعت در خانواده و محیط‌های شلوغ منتقل می‌شود.</td></tr>
+        </tbody>
+    </table>
+
+    <!-- بخش ۴ -->
+    <h2>🏠 چگونه شپش وارد خانه می‌شود؟</h2>
+    <p>شپش‌ها قدرت پرش و پرواز ندارند و فقط از طریق تماس مستقیم یا غیرمستقیم منتقل می‌شوند. راه‌های اصلی انتقال:</p>
+    <table>
+        <thead>
+            <tr><th>مسیر انتقال</th><th>توضیح</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>تماس مستقیم سر به سر</strong></td><td>شایع‌ترین راه انتقال، به‌ویژه در میان کودکان</td></tr>
+            <tr><td><strong>استفاده از وسایل شخصی مشترک</strong></td><td>شانه، برس، کلاه، روسری، بالش، حوله و گیره مو</td></tr>
+            <tr><td><strong>نشستن روی مبلمان مشترک</strong></td><td>در صورت آلودگی شدید، شپش می‌تواند از طریق مبلمان نیز منتقل شود.</td></tr>
+            <tr><td><strong>استفاده از تخت یا رختخواب مشترک</strong></td><td>انتقال از طریق بالش و ملحفه</td></tr>
+            <tr><td><strong>حیوانات خانگی</strong></td><td>شپش انسان از حیوانات تغذیه نمی‌کند، اما ممکن است به‌طور موقت روی آن‌ها باشد.</td></tr>
+        </tbody>
+    </table>
+
+    <!-- بخش ۵ -->
+    <h2>🛠️ روش‌های درمان و ریشه‌کنی شپش</h2>
+    <p>برای درمان شپش، رویکردهای مختلفی وجود دارد که از روش‌های خانگی تا درمان‌های پزشکی و سمپاشی تخصصی را شامل می‌شود.</p>
+
+    <h3>۱. روش‌های مکانیکی و خانگی</h3>
+
+    <h4>الف) شانه دانه‌ریز (شانه مخصوص شپش) – مؤثرترین روش مکانیکی</h4>
+
+    <!-- ===== تصویر pedi2 (بعد از «مؤثرترین روش مکانیکی») ===== -->
+    <div class="blog-image">
+        <img src="../images/services/pedi2.jpg" alt="شانه مخصوص شپش">
+        <div class="caption">تصویر: شانه مخصوص شپش، مؤثرترین روش مکانیکی برای حذف شپش و تخم‌ها</div>
+    </div>
+
+    <p>استفاده از <strong>شانه مخصوص شپش</strong> با دندانه‌های بسیار ریز (با فاصله کمتر از ۰.۳ میلی‌متر) یکی از مؤثرترین روش‌های فیزیکی برای حذف شپش و تخم‌های آن است. این شانه‌ها به‌ویژه برای از بین بردن تخم‌هایی که به ساقه مو چسبیده‌اند، بسیار کارآمد هستند.</p>
+
+    <div class="tip-box">
+        <p><strong>📌 نکته طلایی:</strong> شانه مخصوص شپش را می‌توانید از داروخانه‌ها تهیه کنید. استفاده منظم از این شانه، به‌ویژه پس از شستشوی مو با نرم‌کننده، تأثیر بسیار بالایی در کاهش جمعیت شپش دارد.</p>
+    </div>
+
+    <p><strong>نحوه استفاده از شانه مخصوص شپش:</strong></p>
+    <ul>
+        <li>موها را با نرم‌کننده یا روغن زیتون مرطوب کنید تا تخم‌ها راحت‌تر جدا شوند.</li>
+        <li>موها را به بخش‌های کوچک تقسیم کنید.</li>
+        <li>با شانه مخصوص، از ریشه تا نوک مو را به‌آرامی شانه کنید.</li>
+        <li>پس از هر بار شانه کردن، شانه را در آب گرم و صابون تمیز کنید تا شپش‌ها و تخم‌های جدا شده از بین بروند.</li>
+        <li>این کار را هر روز به مدت ۱۰ تا ۱۴ روز تکرار کنید تا تمام تخم‌های تازه تفریخ‌شده نیز حذف شوند.</li>
+    </ul>
+
+    <h4>ب) شامپوهای ضد شپش</h4>
+    <p>شامپوهای حاوی <strong>پرمترین</strong> یا <strong>پیرترین</strong> از جمله داروهای خط اول درمان شپش هستند. این شامپوها را باید طبق دستورالعمل مصرف کرد و معمولاً یک هفته بعد تکرار می‌شوند.</p>
+    <p><strong>نکته:</strong> این محصولات فقط شپش‌های زنده را از بین می‌برند و روی تخم‌ها تأثیری ندارند، بنابراین تکرار مصرف و استفاده همزمان از شانه مخصوص ضروری است.</p>
+
+    <h3>۲. روش‌های طبیعی</h3>
+
+    <h4>الف) روغن‌های گیاهی</h4>
+    <p>روغن‌هایی مانند روغن درخت چای، روغن نعناع و روغن اسطوخودوس دارای خواص حشره‌کشی هستند و می‌توانند در کاهش جمعیت شپش مؤثر باشند.</p>
+    <p><strong>نحوه استفاده:</strong></p>
+    <ul>
+        <li>چند قطره روغن را با روغن حامل (مانند روغن زیتون یا نارگیل) مخلوط کنید.</li>
+        <li>مخلوط را به پوست سر و مو بمالید.</li>
+        <li>به مدت ۳۰ تا ۶۰ دقیقه بگذارید بماند و سپس با شامپوی معمولی بشویید.</li>
+        <li>این کار را هر ۳ تا ۴ روز تکرار کنید.</li>
+    </ul>
+
+    <h4>ب) سرکه سفید</h4>
+    <p>سرکه به حل شدن چسب تخم‌ها کمک می‌کند و جداسازی آن‌ها را آسان‌تر می‌کند.</p>
+    <p><strong>نحوه استفاده:</strong></p>
+    <ul>
+        <li>سرکه سفید را با آب به نسبت ۱ به ۱ مخلوط کنید.</li>
+        <li>محلول را روی موها اسپری کنید.</li>
+        <li>۳۰ دقیقه صبر کنید و سپس با شانه دانه‌ریز شانه کنید.</li>
+    </ul>
+
+    <h3>۳. سمپاشی تخصصی محیط (مؤثرترین روش)</h3>
+    <p>یکی از مهم‌ترین و اغلب نادیده‌گرفته‌شده‌ترین مراحل، <strong>سمپاشی محیط زندگی</strong> است. شپش‌ها و تخم‌های آنها می‌توانند روی وسایل شخصی، مبلمان، تشک، بالش و فرش باقی بمانند و باعث آلودگی مجدد شوند.</p>
+
+    <p><strong>شرکت سمپاشی نانوفناوران</strong> با استفاده از سموم استاندارد و روش‌های تخصصی، عملیات زیر را انجام می‌دهد:</p>
+    <ul>
+        <li><strong>سمپاشی سطوح و وسایل</strong>: با استفاده از سموم مؤثر و بی‌خطر برای انسان</li>
+        <li><strong>ضدعفونی و گندزدایی</strong>: محیط‌های مستعد آلودگی مانند کلاس‌های درس، خوابگاه‌ها و منازل</li>
+        <li><strong>پاک‌سازی اصولی</strong>: با رعایت کامل اصول بهداشتی</li>
+        <li><strong>مشاوره و آموزش</strong>: ارائه نکات پیشگیری از بازگشت مجدد</li>
+    </ul>
+
+    <!-- بخش ۶ -->
+    <h2>🛡️ راه‌های پیشگیری از بازگشت شپش</h2>
+    <p>پس از درمان، با رعایت این نکات می‌توانید از بازگشت مجدد شپش جلوگیری کنید:</p>
+    <ol>
+        <li><strong>بررسی منظم موها</strong>: به‌ویژه در کودکان سنین مدرسه، هفته‌ای یکبار موها را بررسی کنید.</li>
+        <li><strong>جلوگیری از اشتراک وسایل شخصی</strong>: شانه، برس، کلاه، روسری و گیره مو را شخصی استفاده کنید.</li>
+        <li><strong>شستشوی منظم ملحفه و روبالشی</strong>: با آب گرم (بالای ۵۰ درجه) و مواد شوینده.</li>
+        <li><strong>جمع‌آوری وسایل نرم</strong>: عروسک‌ها، بالش‌ها و پتوها را به‌طور منظم بررسی و تمیز کنید.</li>
+        <li><strong>آموزش به کودکان</strong>: به کودکان آموزش دهید که از تماس سر به سر و اشتراک وسایل شخصی خودداری کنند.</li>
+        <li><strong>استفاده از شانه مخصوص به‌طور دوره‌ای</strong>: حتی در صورت عدم مشاهده شپش، استفاده هفتگی از شانه مخصوص برای پیشگیری توصیه می‌شود.</li>
+    </ol>
+
+    <!-- بخش ۷ -->
+    <h2>❓ سوالات متداول درباره شپش</h2>
+
+    <details>
+        <summary><strong>آیا شپش با بی‌بهداشتی مرتبط است؟</strong></summary>
+        <p>خیر، شپش به هر نوع مویی حمله می‌کند و ارتباطی با سطح بهداشت فرد ندارد. این انگل فقط از خون تغذیه می‌کند.</p>
+    </details>
+
+    <details>
+        <summary><strong>شپش چقدر می‌تواند خارج از سر انسان زنده بماند؟</strong></summary>
+        <p>شپش بالغ بدون تغذیه، حداکثر ۲ تا ۳ روز زنده می‌ماند. اما تخم‌ها (بچه‌شپش) می‌توانند تا ۱۰ روز در محیط باقی بمانند و پس از باز شدن، شروع به تغذیه کنند.</p>
+    </details>
+
+    <details>
+        <summary><strong>آیا شامپوهای ضد شپش برای کودکان بی‌خطر است؟</strong></summary>
+        <p>بله، محصولات استاندارد و مجاز برای کودکان بالای ۲ سال بی‌خطر هستند. اما همیشه باید طبق دستورالعمل مصرف شوند و در صورت حساسیت، مصرف قطع شود.</p>
+    </details>
+
+    <details>
+        <summary><strong>آیا شپش می‌تواند بیماری منتقل کند؟</strong></summary>
+        <p>در مناطق پیشرفته، شپش معمولاً ناقل بیماری نیست. اما در مناطق محروم، شپش می‌تواند ناقل بیماری‌های خطرناکی مانند <strong>تب شپشی (تیفوس)</strong> باشد.</p>
+    </details>
+
+    <details>
+        <summary><strong>چرا شپش پس از درمان بازمی‌گردد؟</strong></summary>
+        <p>شایع‌ترین دلایل:
+            <ul>
+                <li>درمان کامل نکردن دوره (تخم‌ها باقی می‌مانند)</li>
+                <li>عدم سمپاشی محیط (وسایل، مبلمان و رختخواب)</li>
+                <li>تماس مجدد با فرد آلوده</li>
+            </ul>
+        </p>
+    </details>
+
+    <!-- بخش ۸ -->
+    <h2>📌 نتیجه‌گیری</h2>
+    <p>شپش سر یکی از شایع‌ترین آفات انسانی است که می‌تواند به‌سرعت در خانواده‌ها و محیط‌های آموزشی منتشر شود. با تشخیص به‌موقع، استفاده از روش‌های درمانی مؤثر مانند <strong>شانه مخصوص شپش</strong> و مهم‌تر از همه، <strong>سمپاشی تخصصی محیط</strong>، می‌توان به‌طور کامل و قطعی از شر این انگل‌های مزاحم خلاص شد.</p>
+
+    <p>شرکت سمپاشی نانوفناوران با بیش از <strong>۲۰ سال تجربه</strong> و استفاده از <strong>پیشرفته‌ترین روش‌های کنترل آفات</strong>، آماده ارائه خدمات تخصصی و تضمینی به شماست. تیم کارشناسان ما با استفاده از سموم استاندارد و تجهیزات مدرن، شپش را به‌طور کامل از محیط زندگی شما حذف می‌کنند و آرامش را به خانواده شما بازمی‌گردانند.</p>
+
+    <p style="font-size:20px; font-weight:700; text-align:center; color:var(--primary);">🚀 همین حالا اقدام کنید:</p>
+    <div style="text-align:center; margin:20px 0;">
+        <p>📞 <strong>تماس فوری:</strong> <a href="tel:09120705746" style="font-size:20px; color:var(--secondary);">۰۹۱۲۰۷۰۵۷۴۶</a></p>
+        <p>💬 <strong>درخواست مشاوره رایگان:</strong> از طریق <a href="https://wa.me/989120705746" target="_blank">واتساپ</a> یا <a href="https://eitaa.com/nanofannavaran_ir" target="_blank">ایتا</a></p>
+        <p>🔗 <strong>مشاهده سایر خدمات:</strong> <a href="../services.html">کنترل آفات مسکونی</a></p>
+    </div>
+
+    <div class="back-links">
+        <a href="../index.html" class="btn-blog-home">🏠 بازگشت به صفحه اصلی</a>
+        <a href="../services.html" class="btn-blog-services">🔙 بازگشت به لیست خدمات مسکونی</a>
+        <a href="tel:09120705746" class="btn-blog-contact">📞 تماس فوری</a>
+    </div>
+
 </div>
 
 <footer class="site-footer">
     <div class="container">
         <div class="footer-grid">
             <div class="footer-box"><h3>نانوفناوران</h3><p>ارائه‌دهنده خدمات تخصصی کنترل آفات در تهران</p></div>
-            <div class="footer-box"><h3>اطلاعات تماس</h3><p>📱 09120705746</p><p>☎️ 22048278</p></div>
+            <div class="footer-box"><h3>اطلاعات تماس</h3><p>📱 09120705746</p><p>☎️ 22048278</p><p>☎️ 86013062</p><p>☎️ 66959729</p></div>
         </div>
         <hr><p class="copyright">© تمامی حقوق محفوظ است</p>
     </div>
 </footer>
 
-<script src="../script.js"></script>
-</body>
-</html>
+<div class="floating-container">
+    <button class="floating-main-btn" id="floatingToggle">
+        <span class="btn-arrow">▶</span>
+        <span class="btn-text">📞 مشاوره رایگان</span>
+    </button>
+    <div class="floating-menu" id="floatingMenu">
+        <div class="call-wrapper">
+            <div class="floating-item call-item" id="callToggle">
+                <span class="item-icon">📞</span>
+                <span class="item-text">تماس سریع</span>
+                <span class="arrow">▲</span>
+            </div>
+            <div class="call-submenu" id="callSubmenu">
+                <a href="tel:09120705746" class="floating-item call-sub-item"><span class="item-icon">📞</span><span class="item-text">شماره ۱</span></a>
+                <a href="tel:09197173454" class="floating-item call-sub-item"><span class="item-icon">📞</span><span class="item-text">شماره ۲</span></a>
+            </div>
+        </div>
+        <a href="https://wa.me/989120705746?text=%D8%A8%D9%87%20%D8%B3%D8%A7%DB%8C%D8%AA%20%D8%B4
