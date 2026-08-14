@@ -3,118 +3,780 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سمپاشی مایت | نانوفناوران</title>
-    <link rel="stylesheet" href="../style.css">
+    <title>سمپاشی مایت (هیره) | راهنمای جامع کنترل و ریشه‌کنی مایت کبوتر | نانوفناوران</title>
+    <meta name="description" content="مقاله جامع سمپاشی مایت: معرفی انواع مایت، مایت کبوتر، علائم گزش، روش‌های پیشگیری و کنترل تخصصی در منزل و محل کار.">
+    <meta name="keywords" content="سمپاشی مایت, مایت کبوتر, کنه کبوتر, سمپاشی کنه کبوتر, مایت گرد و غبار, مایت گال, کنترل مایت, ریشه‌کنی مایت, نانوفناوران">
+    <link rel="canonical" href="https://nanofannavaran.ir/service/mite.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
-        .service-detail {
-            max-width: 1100px;
-            margin: 100px auto 50px;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
+        :root {
+            --primary: #0B6FB8;
+            --secondary: #1a8bc0;
+            --dark: #1a2a3a;
+            --light: #f0f7ff;
+            --white: #ffffff;
         }
-        .service-detail .text h1 {
-            font-size: 32px;
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Vazirmatn', 'IRANSans', 'Tahoma', sans-serif;
+            background: #f5f8fc;
+            color: #2c3e50;
+            line-height: 1.8;
+        }
+
+        /* =============== هدر =============== */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 15px rgba(0,0,0,.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 10px 20px;
+        }
+        header .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .logo img {
+            height: 50px;
+        }
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 15px;
+            transition: .3s;
+        }
+        .navbar ul li a:hover,
+        .navbar ul li a.active {
+            color: var(--primary);
+        }
+        .header-buttons {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .call-btn {
+            background: var(--primary);
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            transition: .3s;
+        }
+        .call-btn:hover {
+            background: var(--secondary);
+        }
+        .mobile-menu {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+        .search-box {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .search-box input {
+            padding: 6px 14px;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            font-size: 14px;
+            font-family: inherit;
+        }
+        .search-box button {
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        /* =============== محتوای مقاله =============== */
+        .blog-container {
+            max-width: 1100px;
+            margin: 120px auto 60px;
+            padding: 0 20px;
+            background: #fff;
+            border-radius: 24px;
+            box-shadow: 0 10px 40px rgba(0,0,0,.08);
+            padding: 40px 40px 60px;
+        }
+        .blog-container h1 {
+            font-size: 36px;
             color: var(--primary);
             margin-bottom: 20px;
+            line-height: 1.5;
         }
-        .service-detail .text p {
+        .blog-container .meta {
+            color: #888;
+            font-size: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .blog-container h2 {
+            font-size: 28px;
+            color: var(--dark);
+            margin: 40px 0 15px;
+            border-right: 5px solid var(--primary);
+            padding-right: 15px;
+        }
+        .blog-container h3 {
+            font-size: 22px;
+            color: var(--primary);
+            margin: 30px 0 12px;
+        }
+        .blog-container h4 {
+            font-size: 19px;
+            color: var(--dark);
+            margin: 25px 0 10px;
+        }
+        .blog-container p {
             line-height: 2.2;
-            color: #555;
+            color: #444;
+            font-size: 17px;
+            margin-bottom: 18px;
+            text-align: justify;
+        }
+        .blog-container ul,
+        .blog-container ol {
+            line-height: 2.2;
+            color: #444;
+            font-size: 17px;
+            padding-right: 25px;
+            margin-bottom: 20px;
+        }
+        .blog-container ul li,
+        .blog-container ol li {
+            margin-bottom: 8px;
+        }
+        .blog-container table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0 30px;
             font-size: 16px;
         }
-        .service-detail .gif img {
+        .blog-container table th {
+            background: var(--primary);
+            color: #fff;
+            padding: 12px 15px;
+            text-align: right;
+        }
+        .blog-container table td {
+            border: 1px solid #ddd;
+            padding: 10px 15px;
+            background: #fafafa;
+        }
+        .blog-container table tr:nth-child(even) td {
+            background: #f5f8fc;
+        }
+        .blog-image {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .blog-image img {
             width: 100%;
-            max-height: 400px;
-            object-fit: contain;
+            max-width: 700px;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,.15);
         }
-        .back-link {
+        .blog-image .caption {
+            font-size: 14px;
+            color: #888;
+            margin-top: 10px;
+        }
+        .blog-image .caption strong {
+            color: var(--primary);
+        }
+
+        .blog-container .back-links {
+            margin: 40px 0 20px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .blog-container .back-links a {
             display: inline-block;
-            margin-top: 30px;
-            background: var(--secondary);
-            color: #fff;
             padding: 12px 28px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
             transition: .3s;
         }
-        .back-link:hover {
-            background: var(--primary);
-        }
-        .contact-float {
-            margin-top: 20px;
-        }
-        .contact-float a {
-            display: inline-block;
+        .blog-container .back-links .btn-blog-home {
             background: var(--primary);
             color: #fff;
-            padding: 12px 28px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            margin-left: 10px;
-            transition: .3s;
         }
-        .contact-float a:hover {
+        .blog-container .back-links .btn-blog-home:hover {
             background: var(--secondary);
         }
+        .blog-container .back-links .btn-blog-services {
+            background: var(--secondary);
+            color: #fff;
+        }
+        .blog-container .back-links .btn-blog-services:hover {
+            background: var(--primary);
+        }
+        .blog-container .back-links .btn-blog-contact {
+            background: var(--dark);
+            color: #fff;
+        }
+        .blog-container .back-links .btn-blog-contact:hover {
+            background: var(--primary);
+        }
+
+        .callout-box {
+            background: var(--light);
+            border-right: 5px solid var(--primary);
+            padding: 20px 25px;
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+        .callout-box strong {
+            color: var(--primary);
+        }
+
+        details {
+            background: #f8fbfd;
+            padding: 15px 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #e9ecef;
+        }
+        details summary {
+            font-weight: 700;
+            color: var(--primary);
+            cursor: pointer;
+            font-size: 17px;
+        }
+        details p {
+            margin-top: 12px;
+            padding-right: 10px;
+        }
+
+        /* =============== فوتر =============== */
+        .site-footer {
+            background: var(--dark);
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .site-footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer-grid {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .footer-box h3 {
+            color: var(--secondary);
+            margin-bottom: 10px;
+        }
+        .footer-box p {
+            color: #ccc;
+            font-size: 15px;
+        }
+        .site-footer hr {
+            border: none;
+            border-top: 1px solid #444;
+            margin: 20px 0;
+        }
+        .site-footer .copyright {
+            color: #888;
+            font-size: 14px;
+        }
+
+        /* =============== منوی شناور =============== */
+        .floating-container {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .floating-main-btn {
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            padding: 14px 24px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 700;
+            font-family: inherit;
+            cursor: pointer;
+            box-shadow: 0 6px 25px rgba(11, 111, 184, 0.4);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: .3s;
+        }
+        .floating-main-btn:hover {
+            background: var(--secondary);
+            transform: scale(1.03);
+        }
+        .floating-menu {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,.15);
+            padding: 12px;
+            margin-bottom: 12px;
+            display: none;
+            flex-direction: column;
+            min-width: 200px;
+        }
+        .floating-menu.active {
+            display: flex;
+        }
+        .floating-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 18px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 15px;
+            transition: .3s;
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-family: inherit;
+            width: 100%;
+            text-align: right;
+        }
+        .floating-item:hover {
+            background: var(--light);
+        }
+        .floating-item .item-icon {
+            font-size: 20px;
+        }
+        .call-wrapper {
+            position: relative;
+        }
+        .call-submenu {
+            display: none;
+            padding-right: 20px;
+            margin-top: 5px;
+        }
+        .call-submenu.active {
+            display: block;
+        }
+        .call-sub-item {
+            padding: 10px 18px;
+            font-size: 14px;
+        }
+        .whatsapp-item {
+            color: #25D366;
+        }
+        .eitaa-item {
+            color: var(--primary);
+        }
+        .btn-arrow {
+            transition: .3s;
+        }
+        .btn-arrow.open {
+            transform: rotate(90deg);
+        }
+
+        /* =============== دکمه اسکرول به بالا =============== */
+        #backToTop {
+            position: fixed;
+            bottom: 110px;
+            right: 30px;
+            z-index: 998;
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            font-size: 28px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 6px 25px rgba(0,0,0,.2);
+            transition: .3s;
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        #backToTop:hover {
+            background: var(--secondary);
+            transform: translateY(-4px);
+        }
+        #backToTop.show {
+            display: flex;
+        }
+
+        /* =============== ریسپانسیو =============== */
         @media (max-width: 768px) {
-            .service-detail {
-                grid-template-columns: 1fr;
-                text-align: center;
-                margin-top: 80px;
+            .blog-container {
+                padding: 20px 15px;
+                margin: 100px auto 40px;
             }
-            .service-detail .text h1 {
+            .blog-container h1 {
                 font-size: 26px;
             }
-            .service-detail .gif img {
-                max-height: 250px;
+            .blog-container h2 {
+                font-size: 22px;
+            }
+            .blog-container h3 {
+                font-size: 19px;
+            }
+            .blog-container h4 {
+                font-size: 17px;
+            }
+            .blog-container p,
+            .blog-container ul,
+            .blog-container ol {
+                font-size: 15px;
+            }
+            .blog-container table {
+                font-size: 14px;
+            }
+            .blog-container .back-links a {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+            .navbar ul {
+                display: none;
+            }
+            .mobile-menu {
+                display: block;
+            }
+            .floating-container {
+                left: 15px;
+                bottom: 20px;
+            }
+            .floating-main-btn {
+                padding: 12px 18px;
+                font-size: 14px;
+            }
+            #backToTop {
+                width: 48px;
+                height: 48px;
+                font-size: 24px;
+                bottom: 100px;
+                right: 15px;
             }
         }
     </style>
 </head>
 <body>
 
+<!-- =============== هدر =============== -->
 <header>
     <div class="container">
-        <a href="../index.html" class="logo"><img src="../images/logo.png" alt="لوگو"></a>
+        <a href="index.html" class="logo"><img src="images/logo.png" alt="لوگو شرکت سمپاشی نانوفناوران"></a>
         <nav class="navbar">
             <ul>
-                <li><a href="../index.html">صفحه اصلی</a></li>
-                <li><a href="../services.html" class="active">خدمات</a></li>
-                <li><a href="../about.html">درباره ما</a></li>
-                <li><a href="../contact.html">تماس</a></li>
+                <li><a href="index.html">صفحه اصلی</a></li>
+                <li><a href="services.html">خدمات مسکونی</a></li>
+                <li><a href="commercial-services.html">خدمات تجاری</a></li>
+                <li><a href="about.html">درباره ما</a></li>
+                <li><a href="contact.html">تماس</a></li>
             </ul>
         </nav>
         <div class="header-buttons">
             <a href="tel:09120705746" class="call-btn">📞 09120705746</a>
             <div class="mobile-menu">☰</div>
         </div>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="جستجو...">
+            <button onclick="alert('قابلیت جستجو در حال توسعه است')">🔍</button>
+        </div>
     </div>
 </header>
 
-<div class="service-detail">
-    <div class="text">
-        <h1>🐜 سمپاشی مایت</h1>
-        <p>حذف مایت‌های گرد و غبار و کنترل آلرژی‌های ناشی از آن.</p>
-        <p><strong>روش کنترل:</strong> استفاده از سموم استاندارد و روش‌های نوین با تضمین کیفیت و ماندگاری بالا.</p>
-        <p><strong>مدت زمان اثرگذاری:</strong> نتایج سریع و ماندگار تا ۶ ماه.</p>
-        <a href="../services.html" class="back-link">🔙 بازگشت به لیست خدمات</a>
-        <div class="contact-float">
-            <a href="tel:09120705746">📞 تماس فوری</a>
-            <a href="https://wa.me/989120705746" target="_blank">💬 واتساپ</a>
-        </div>
+<!-- =============== مقاله =============== -->
+<div class="blog-container">
+
+    <h1>راهنمای جامع و تخصصی سمپاشی مایت (هیره) | از تشخیص تا ریشه‌کنی قطعی</h1>
+    <div class="meta">
+        <span>📅 آخرین به‌روزرسانی: ۲۰ مرداد ۱۴۰۴</span> &nbsp;|&nbsp; <span>⏱ زمان مطالعه: ۱۵ دقیقه</span>
     </div>
-    <div class="gif">
-        <img src="../images/services/mite.jpg" alt="سمپاشی مایت">
+
+    <!-- ===== مقدمه ===== -->
+    <h2>مقدمه: تهدید پنهان در خانه شما</h2>
+    <p>آیا تا به حال با خارش‌های پوستی بی‌دلیل، جوش‌های ریز و التهابی یا حساسیت‌های تنفسی ناگهانی مواجه شده‌اید که پزشکان نتوانسته‌اند دلیل قطعی برای آن پیدا کنند؟ شاید شما هم قربانی <strong>مایت‌ها (Mites)</strong> شده‌اید؛ موجودات ریز و تقریباً نامرئی که در گرد و غبار خانه، لانه پرندگان، تشک‌ها، فرش‌ها و حتی روی پوست خود شما زندگی می‌کنند.</p>
+
+    <p>مایت‌ها از رده عنکبوتیان (Arachnida) هستند و با کنه‌ها خویشاوندی نزدیک دارند، اما برخلاف کنه‌ها که معمولاً بزرگ‌تر و قابل‌رویت‌تر هستند، بیشتر مایت‌ها میکروسکوپی بوده و با چشم غیرمسلح دیده نمی‌شوند. این موجودات ریز، با وجود اندازه کوچکشان، می‌توانند طیف وسیعی از مشکلات را برای انسان ایجاد کنند؛ از آلرژی‌های تنفسی گرفته تا بیماری‌های پوستی مانند <strong>گال (جرب)</strong> و گزش‌های دردناک.</p>
+
+    <p>در این مقاله جامع از <strong>شرکت سمپاشی نانوفناوران بهداشت تهران</strong>، شما را با انواع مایت‌ها، به‌ویژه <strong>مایت کبوتر</strong> که در سال‌های اخیر به یک معضل جدی در منازل تبدیل شده است، آشنا می‌کنیم. همچنین روش‌های تشخیص، پیشگیری و مهم‌تر از همه، <strong>سمپاشی تخصصی و ریشه‌کنی اصولی</strong> این آفات را به شما آموزش خواهیم داد.</p>
+
+    <!-- ===== تصویر اول (mite1) ===== -->
+    <div class="blog-image">
+        <img src="images/services/mite1.jpg" alt="مایت کبوتر و مایت گرد و غبار - سمپاشی نانوفناوران">
+        <div class="caption"><strong>تصویر مایت‌ها</strong> - انواع مختلف مایت‌ها در محیط‌های زندگی انسان</div>
     </div>
+
+    <!-- ===== مایت چیست ===== -->
+    <h2>مایت چیست و چه تفاوتی با کنه دارد؟</h2>
+    <p>پیش از پرداختن به انواع مایت‌ها، بهتر است یک تمایز اساسی را روشن کنیم. در زبان عامیانه و حتی در برخی شرکت‌های سمپاشی، اصطلاحات «مایت» و «کنه» به جای یکدیگر استفاده می‌شوند، اما از نظر علمی، این دو تفاوت‌های مهمی دارند:</p>
+
+    <table>
+        <thead>
+            <tr><th>ویژگی</th><th><strong>مایت (Mite)</strong></th><th><strong>کنه (Tick)</strong></th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>اندازه</strong></td><td>معمولاً کمتر از ۲ میلی‌متر (اغلب میکروسکوپی)</td><td>معمولاً بزرگ‌تر از ۲ میلی‌متر</td></tr>
+            <tr><td><strong>قطعات دهانی</strong></td><td>هیپوستوم ساده و بدون دندانه</td><td>هیپوستوم دندانه‌دار</td></tr>
+            <tr><td><strong>اندام حسی</strong></td><td>فاقد اندام هالر (Haller) در پای اول</td><td>دارای اندام هالر در پای اول</td></tr>
+            <tr><td><strong>بدن</strong></td><td>غالباً پرمو با موهای بلند و مشخص</td><td>معمولاً کم‌مو با موهای کوتاه</td></tr>
+            <tr><td><strong>رژیم غذایی</strong></td><td>بسیار متنوع (آزاد، انگلی، گیاهخوار، شکارچی)</td><td>تماماً انگلی و خونخوار</td></tr>
+        </tbody>
+    </table>
+
+    <p>مایت‌ها از نظر بیولوژی بسیار متنوع‌تر از کنه‌ها هستند. برخی از آنها زندگی آزاد دارند و از مواد پوسیده یا قارچ‌ها تغذیه می‌کنند، برخی گیاهخوار و آفت کشاورزی هستند و تعدادی نیز خونخوار و انگل انسان، حیوانات اهلی و پرندگان می‌باشند.</p>
+
+    <!-- ===== انواع مایت ===== -->
+    <h2>انواع مایت‌های مهم و تأثیرگذار بر انسان</h2>
+    <p>مایت‌ها به دسته‌های مختلفی تقسیم می‌شوند که هر کدام مشکلات خاصی را برای انسان ایجاد می‌کنند. در اینجا به مهم‌ترین آنها اشاره می‌کنیم:</p>
+
+    <h3>۱. مایت گرد و غبار خانگی (House Dust Mite)</h3>
+    <p><strong>نام علمی:</strong> <em>Dermatophagoides pteronyssinus</em> و <em>D. farinae</em></p>
+    <p>این مایت‌ها در گرد و غبار خانه، به‌ویژه در تشک‌ها، بالش‌ها، پتوها، فرش‌ها و مبلمان زندگی می‌کنند. آنها از سلول‌های مرده پوست انسان و حیوانات خانگی تغذیه می‌کنند و در محیط‌های گرم و مرطوب به سرعت تکثیر می‌شوند.</p>
+
+    <div class="callout-box">
+        <p><strong>مشکلات ایجاد شده:</strong> این مایت‌ها گاز نمی‌گیرند، اما مدفوع و اجساد آنها حاوی پروتئین‌های آلرژن قوی است که می‌تواند باعث آسم، رینیت آلرژیک، تب یونجه و درماتیت آلرژیک شود. اگر صبح‌ها با گرفتگی بینی، عطسه یا خارش چشم از خواب بیدار می‌شوید، احتمالاً با این مایت‌ها سر و کار دارید.</p>
+    </div>
+
+    <!-- ===== تصویر دوم (mite2) ===== -->
+    <div class="blog-image">
+        <img src="images/services/mite2.jpg" alt="مایت گرد و غبار خانگی - تشخیص و کنترل">
+        <div class="caption"><strong>مایت گرد و غبار خانگی</strong> - یکی از شایع‌ترین عوامل آلرژی در منازل</div>
+    </div>
+
+    <h3>۲. مایت گال (Scabies Mite) یا سارکوپتس اسکابئی</h3>
+    <p><strong>نام علمی:</strong> <em>Sarcoptes scabiei</em> var. <em>hominis</em></p>
+    <p>این مایت عامل بیماری <strong>گال (جرب)</strong> در انسان است. ماده بالغ این مایت در زیر لایه شاخی پوست تونل می‌زند و روزانه ۲ تا ۳ میلی‌متر پیش می‌رود و تخم‌گذاری می‌کند.</p>
+    <p><strong>مشکلات ایجاد شده:</strong> خارش شدید و شبانه، به‌ویژه در نواحی چین‌خورده پوست مانند بین انگشتان، مچ دست، آرنج، ناف و اندام تناسلی. در موارد شدید، فرم نروژی یا پوسته‌ای این بیماری می‌تواند هزاران مایت را روی پوست میزبان داشته باشد.</p>
+
+    <h3>۳. مایت مژه و صورت (Demodex Mite)</h3>
+    <p><strong>نام علمی:</strong> <em>Demodex folliculorum</em> و <em>D. brevis</em></p>
+    <p>این مایت‌ها به طور طبیعی در فولیکول‌های مو و غدد چربی پوست انسان زندگی می‌کنند و تقریباً همه افراد به مقدار کم آنها را دارند. آنها شب‌ها فعال‌تر هستند و از چربی‌ها و سلول‌های مرده پوست تغذیه می‌کنند.</p>
+    <p><strong>مشکلات ایجاد شده:</strong> در صورت تکثیر بیش از حد (به دلایل نقص ایمنی یا رعایت نکردن بهداشت)، می‌توانند باعث <strong>دمودیکوزیس</strong>، التهاب پوست صورت، قرمزی، خارش و تشدید بیماری روزاسه (رزاسه) شوند.</p>
+
+    <h3>۴. مایت پرندگان و جوندگان (Bird Mites & Rodent Mites)</h3>
+    <p>این دسته شامل مایت‌هایی است که روی بدن پرندگان (مانند کبوتر، مرغ) و جوندگان (مانند موش) زندگی می‌کنند و از خون آنها تغذیه می‌نمایند.</p>
+    <p><strong>مشکلات ایجاد شده:</strong> وقتی پرنده یا جونده میزبان، لانه را ترک می‌کند یا از بین می‌رود، این مایت‌ها برای یافتن منبع غذایی جدید، به محیط‌های انسانی هجوم می‌آورند و انسان را گاز می‌گیرند.</p>
+
+    <!-- ===== تصویر سوم (mite3) ===== -->
+    <div class="blog-image">
+        <img src="images/services/mite3.jpg" alt="مایت پرندگان و جوندگان - کنترل تخصصی">
+        <div class="caption"><strong>مایت پرندگان و جوندگان</strong> - هجوم به محیط‌های انسانی پس از ترک لانه</div>
+    </div>
+
+    <!-- ===== مایت کبوتر ===== -->
+    <h2>🕊️ مایت کبوتر: تهدید جدی در منازل شهری</h2>
+    <p>در سال‌های اخیر، <strong>مایت کبوتر</strong> (با نام علمی <em>Dermanyssus gallinae</em> یا <em>Ornithonyssus</em> spp.) به یکی از معضلات اصلی در مناطق شهری، به‌ویژه در طبقات بالای ساختمان‌ها و مناطقی که کبوتران وحشی لانه می‌سازند، تبدیل شده است.</p>
+
+    <p>برخی از متخصصان این حشره را با نام <strong>کنه کبوتر</strong> نیز می‌شناسند، اما از نظر علمی، این موجودات در دسته <strong>مایت‌های پرندگان</strong> قرار می‌گیرند.</p>
+
+    <h3>چرا مایت کبوتر خطرناک است؟</h3>
+    <p>مایت کبوتر یک انگل خارجی خون‌خوار است که عمدتاً از خون کبوتران تغذیه می‌کند. مشکل زمانی شروع می‌شود که:</p>
+    <ol>
+        <li>کبوتران در نزدیکی منزل شما، مانند پشت پنجره‌ها، کانال کولر، زیر شیروانی یا بالکن لانه می‌سازند.</li>
+        <li>پس از ترک لانه توسط پرندگان (یا مرگ آنها)، مایت‌ها بدون منبع غذایی، به دنبال میزبان جدید (انسان) به داخل منزل نفوذ می‌کنند.</li>
+        <li>این مایت‌ها می‌توانند مسافت‌های طولانی را برای یافتن خون گرم طی کنند.</li>
+    </ol>
+
+    <div class="callout-box">
+        <p><strong>اندازه مایت کبوتر:</strong> حدود ۱ تا ۳ میلی‌متر است و در ابتدا به رنگ کرمی یا شیری دیده می‌شود، اما پس از تغذیه از خون، به رنگ قرمز در می‌آید.</p>
+    </div>
+
+    <h3>علائم گزش مایت کبوتر در انسان</h3>
+    <p>گزش مایت کبوتر بسیار آزاردهنده است و علائم مشخصی دارد:</p>
+    <ul>
+        <li><strong>خارش شدید، به‌ویژه در شب</strong> (زمانی که مایت‌ها فعال‌تر هستند)</li>
+        <li><strong>جوش‌های ریز قرمز و برآمده</strong> روی پوست (معمولاً به اندازه یک جوش زیرپوستی)</li>
+        <li><strong>التهاب و قرمزی</strong> در محل گزش</li>
+        <li>در افراد حساس، ممکن است واکنش‌های آلرژیک شدیدتر، از جمله تنگی نفس (در مبتلایان به آسم) رخ دهد.</li>
+    </ul>
+
+    <div class="callout-box" style="background: #fff3cd; border-right-color: #ffc107;">
+        <p><strong>⚠️ نکته مهم:</strong> برخلاف تصور عموم، مایت کبوتر به صورت دائمی در بدن انسان زندگی نمی‌کند و پس از تغذیه، پوست را ترک می‌کند. با این حال، گزش‌های مکرر آن می‌تواند آرامش و سلامت شما را به شدت تحت تأثیر قرار دهد.</p>
+    </div>
+
+    <!-- ===== تشخیص آلودگی ===== -->
+    <h2>چگونه بفهمیم خانه‌مان به مایت کبوتر آلوده شده است؟</h2>
+    <p>برای تشخیص آلودگی به مایت کبوتر، به این نشانه‌ها توجه کنید:</p>
+
+    <table>
+        <thead>
+            <tr><th>نشانه</th><th>توضیح</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>مشاهده خود مایت</strong></td><td>نقاط ریز و متحرک (سیاه، قرمز یا قهوه‌ای) روی پوست، لباس یا ملحفه</td></tr>
+            <tr><td><strong>خارش‌های شبانه</strong></td><td>خارش شدید که عمدتاً در شب تشدید می‌شود</td></tr>
+            <tr><td><strong>جوش‌های زیرپوستی</strong></td><td>برجستگی‌های ریز و خارش‌دار روی پوست (اندازه حدود ۱ میلی‌متر)</td></tr>
+            <tr><td><strong>وجود لانه کبوتر</strong></td><td>مشاهده لانه، پر یا فضولات کبوتر در نزدیکی منزل (پشت پنجره، کولر، بالکن)</td></tr>
+            <tr><td><strong>نقاط سیاه روی ملحفه</strong></td><td>مدفوع و فضولات مایت‌ها که شبیه دانه‌های فلفل است</td></tr>
+        </tbody>
+    </table>
+
+    <!-- ===== پیشگیری ===== -->
+    <h2>روش‌های پیشگیری از ورود مایت به منزل</h2>
+    <p>پیشگیری همیشه بهتر از درمان است. با رعایت این نکات، می‌توانید از ورود مایت‌ها به خانه خود جلوگیری کنید:</p>
+
+    <h3>۱. کنترل لانه پرندگان و جوندگان</h3>
+    <ul>
+        <li><strong>لانه‌های کبوتر</strong> را در نزدیکی منزل خود شناسایی و حذف کنید.</li>
+        <li>درزها و شکاف‌های دیوارها، پشت کولر و اطراف پنجره‌ها را با توری ریز یا درزگیر بپوشانید.</li>
+        <li>از ورود جوندگان به ساختمان جلوگیری کنید.</li>
+    </ul>
+
+    <h3>۲. کاهش رطوبت و گرد و غبار</h3>
+    <ul>
+        <li>مایت‌های گرد و غبار در محیط‌های مرطوب رشد می‌کنند. از تهویه مناسب استفاده کنید و رطوبت خانه را زیر ۵۰٪ نگه دارید.</li>
+        <li>ملحفه‌ها، روبالشی و پتوها را به طور منظم با آب داغ (حداقل ۶۰ درجه) بشویید.</li>
+        <li>به طور مرتب جاروکشی و گردگیری کنید.</li>
+    </ul>
+
+    <h3>۳. استفاده از تله‌های چسبنده</h3>
+    <ul>
+        <li>تله‌های چسبنده را در نقاط پرخطر (نزدیک پنجره‌ها، زیر تخت) قرار دهید تا مایت‌ها را شناسایی و به دام بیندازید.</li>
+    </ul>
+
+    <!-- ===== سمپاشی تخصصی ===== -->
+    <h2>سمپاشی تخصصی و ریشه‌کنی مایت‌ها با نانوفناوران</h2>
+    <p>اگر با وجود رعایت نکات پیشگیرانه، همچنان با مشکل مایت‌ها، به‌ویژه <strong>مایت کبوتر</strong>، دست و پنجه نرم می‌کنید، زمان آن رسیده که از یک <strong>خدمات سمپاشی تخصصی</strong> بهره ببرید.</p>
+
+    <div class="callout-box">
+        <p><strong>چرا سمپاشی خانگی معمولاً شکست می‌خورد؟</strong></p>
+        <ul>
+            <li>مایت‌ها در شکاف‌ها و نقاط صعب‌الوصول پنهان می‌شوند.</li>
+            <li>برخی گونه‌ها مانند مایت کبوتر، مقاومت بالایی دارند و به راحتی با اسپری‌های معمولی از بین نمی‌روند.</li>
+            <li>اگر منبع اصلی (لانه پرنده) حذف نشود، آلودگی دوباره برمی‌گردد.</li>
+        </ul>
+    </div>
+
+    <h3>راهکار تخصصی شرکت نانوفناوران:</h3>
+    <ol>
+        <li>
+            <strong>بازرسی دقیق و شناسایی</strong>
+            <p>کارشناسان ما با بررسی کامل محیط، منبع اصلی آلودگی را شناسایی می‌کنند. این شامل لانه‌های کبوتر، نقاط ورود و مناطق استراحت مایت‌ها می‌شود.</p>
+        </li>
+        <li>
+            <strong>حذف منبع اصلی آلودگی</strong>
+            <p>در صورت وجود لانه پرندگان، ابتدا لانه‌ها به‌صورت اصولی حذف و محل ضدعفونی می‌شود.</p>
+        </li>
+        <li>
+            <strong>سمپاشی با ترکیبات تخصصی</strong>
+            <p>برای از بین بردن مایت‌ها از <strong>ترکیب سموم فسفره و پیرتروئیدی</strong> استفاده می‌کنیم که هم اثر تماسی فوری و هم اثر باقی‌مانده دارند.</p>
+        </li>
+        <li>
+            <strong>سمپاشی نقاط کلیدی</strong>
+            <p>محل‌هایی که مایت‌ها در آنها استراحت می‌کنند، مانند مبلمان، تختخواب، تشک، پشت کابینت‌ها و شکاف‌های دیوار، به‌طور کامل سمپاشی می‌شوند.</p>
+        </li>
+        <li>
+            <strong>لاروکشی و طعمه‌گذاری</strong>
+            <p>در صورت نیاز، از طعمه‌های مخصوص و روش‌های لاروکشی برای جلوگیری از بازگشت مجدد استفاده می‌شود.</p>
+        </li>
+        <li>
+            <strong>تهویه و ایمن‌سازی</strong>
+            <p>پس از سمپاشی، محیط به مدت ۲ تا ۴ ساعت بسته می‌شود تا سموم اثر کنند و سپس با تهویه کامل، محیط برای حضور افراد ایمن می‌گردد.</p>
+        </li>
+    </ol>
+
+    <!-- ===== هزینه ===== -->
+    <h2>هزینه سمپاشی مایت چقدر است؟</h2>
+    <p>هزینه سمپاشی مایت به عوامل زیر بستگی دارد:</p>
+
+    <table>
+        <thead>
+            <tr><th>عامل</th><th>تأثیر بر هزینه</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>مساحت محیط</strong></td><td>هرچه محیط بزرگ‌تر باشد، هزینه بیشتر است</td></tr>
+            <tr><td><strong>شدت آلودگی</strong></td><td>آلودگی شدید نیاز به عملیات بیشتر و زمان‌برتری دارد</td></tr>
+            <tr><td><strong>نوع مایت</strong></td><td>مایت کبوتر نیاز به روش‌های خاصی دارد که ممکن است هزینه را افزایش دهد</td></tr>
+            <tr><td><strong>دسترسی به نقاط آلوده</strong></td><td>سمپاشی سقف‌های بلند یا فضاهای صعب‌الوصول هزینه بیشتری دارد</td></tr>
+        </tbody>
+    </table>
+
+    <p>💡 <strong>توصیه:</strong> برای دریافت <strong>مشاوره رایگان</strong> و <strong>استعلام دقیق هزینه</strong>، با کارشناسان ما تماس بگیرید.</p>
+
+    <!-- ===== سوالات متداول ===== -->
+    <h2>سوالات متداول درباره سمپاشی مایت</h2>
+
+    <details>
+        <summary><strong>آیا سمپاشی مایت برای کودکان و حیوانات خانگی خطرناک است؟</strong></summary>
+        <p>خیر، سموم استفاده‌شده توسط شرکت نانوفناوران با رعایت کامل استانداردهای بهداشتی انتخاب می‌شوند. در هنگام سمپاشی، افراد و حیوانات از محیط خارج می‌شوند و پس از تهویه کامل، محیط کاملاً ایمن است.</p>
+    </details>
+
+    <details>
+        <summary><strong>چه مدت بعد از سمپاشی مایت‌ها از بین می‌روند؟</strong></summary>
+        <p>اثر سمپاشی در مایت‌های کبوتر فوری است و مایت‌های بالغ به سرعت از بین می‌روند. در مورد مایت‌های گرد و غبار و گال، ممکن است نیاز به تکرار درمان باشد.</p>
+    </details>
+
+    <details>
+        <summary><strong>آیا خودمان هم می‌توانیم مایت کبوتر را سمپاشی کنیم؟</strong></summary>
+        <p>استفاده از اسپری‌های خانگی معمولاً مؤثر نیست و فقط مایت‌های سطحی را از بین می‌برد. همچنین استفاده نادرست از سموم می‌تواند برای سلامتی خطرناک باشد. روش‌های تخصصی مانند سمپاشی ترکیبی نیاز به تجهیزات و دانش دارد.</p>
+    </details>
+
+    <details>
+        <summary><strong>بعد از سمپاشی باید منزل را ترک کنیم؟</strong></summary>
+        <p>بله، معمولاً ۲ تا ۴ ساعت باید محیط را ترک کنید تا سموم تهویه شوند. کارشناسان زمان دقیق را به شما اعلام می‌کنند.</p>
+    </details>
+
+    <details>
+        <summary><strong>آیا مایت‌ها دوباره برمی‌گردند؟</strong></summary>
+        <p>اگر منبع اصلی (لانه پرنده) حذف شود و نکات پیشگیری رعایت شود، احتمال بازگشت بسیار کم است. شرکت نانوفناوران خدمات خود را با ضمانت ارائه می‌دهد.</p>
+    </details>
+
+    <!-- ===== نتیجه‌گیری ===== -->
+    <h2>نتیجه‌گیری</h2>
+    <p>مایت‌ها، به‌ویژه <strong>مایت کبوتر</strong>، یکی از چالش‌های جدی در محیط‌های شهری هستند که می‌توانند آرامش و سلامت شما را به خطر بیندازند. این موجودات ریز با گزش‌های خود باعث خارش‌های شدید، حساسیت‌های پوستی و حتی مشکلات تنفسی می‌شوند.</p>
+
+    <p><strong>شرکت سمپاشی نانوفناوران بهداشت تهران</strong> با بهره‌گیری از دانش فنی روز، تجهیزات پیشرفته و سموم استاندارد، آماده ارائه خدمات تخصصی و تضمینی در زمینه <strong>سمپاشی مایت</strong> و <strong>ریشه‌کنی کنه کبوتر</strong> به شماست. تیم کارشناسان ما با شناسایی دقیق منبع آلودگی و استفاده از ترکیبات تخصصی، محیطی امن و آرام را به شما باز می‌گردانند.</p>
+
+    <p style="font-size:20px; font-weight:700; text-align:center; color:var(--primary);">🚀 همین حالا اقدام کنید:</p>
+    <div style="text-align:center; margin:20px 0;">
+        <p>📞 <strong>تماس فوری:</strong> <a href="tel:09120705746" style="font-size:20px; color:var(--secondary);">۰۹۱۲۰۷۰۵۷۴۶</a></p>
+        <p>💬 <strong>درخواست مشاوره رایگان:</strong> از طریق <a href="https://wa.me/989120705746" target="_blank">واتساپ</a> یا <a href="https://eitaa.com/nanofannavaran_ir" target="_blank">ایتا</a></p>
+        <p>🔗 <strong>مشاهده سایر خدمات:</strong> <a href="services.html">کنترل آفات مسکونی</a></p>
+    </div>
+
+    <div class="back-links">
+        <a href="index.html" class="btn-blog-home">🏠 بازگشت به صفحه اصلی</a>
+        <a href="services.html" class="btn-blog-services">🔙 بازگشت به لیست خدمات مسکونی</a>
+        <a href="contact.html" class="btn-blog-contact">📞 تماس با ما</a>
+    </div>
+
 </div>
 
+<!-- =============== فوتر =============== -->
 <footer class="site-footer">
     <div class="container">
         <div class="footer-grid">
@@ -125,6 +787,116 @@
     </div>
 </footer>
 
-<script src="../script.js"></script>
+<!-- =============== منوی شناور =============== -->
+<div class="floating-container">
+    <button class="floating-main-btn" id="floatingToggle">
+        <span class="btn-arrow">▶</span>
+        <span class="btn-text">📞 مشاوره رایگان</span>
+    </button>
+    <div class="floating-menu" id="floatingMenu">
+        <div class="call-wrapper">
+            <div class="floating-item call-item" id="callToggle">
+                <span class="item-icon">📞</span>
+                <span class="item-text">تماس سریع</span>
+                <span class="arrow">▲</span>
+            </div>
+            <div class="call-submenu" id="callSubmenu">
+                <a href="tel:09120705746" class="floating-item call-sub-item"><span class="item-icon">📞</span><span class="item-text">شماره ۱</span></a>
+                <a href="tel:09197173454" class="floating-item call-sub-item"><span class="item-icon">📞</span><span class="item-text">شماره ۲</span></a>
+            </div>
+        </div>
+        <a href="https://wa.me/989120705746?text=%D8%A8%D9%87%20%D8%B3%D8%A7%DB%8C%D8%AA%20%D8%B4%D8%B1%DA%A9%D8%AA%20%D8%B3%D9%85%D9%BE%D8%A7%D8%B4%DB%8C%20%D9%86%D8%A7%D9%86%D9%88%D9%81%D9%86%D8%A7%D9%88%D8%B1%D8%A7%D9%86%20%D8%AE%D9%88%D8%B4%20%D8%A2%D9%85%D8%AF%DB%8C%D8%AF" target="_blank" class="floating-item whatsapp-item"><span class="item-icon">💬</span><span class="item-text">واتساپ</span></a>
+        <a href="https://eitaa.com/nanofannavaran_ir" target="_blank" class="floating-item eitaa-item"><span class="item-icon">✈️</span><span class="item-text">ایتا</span></a>
+    </div>
+</div>
+
+<!-- =============== دکمه اسکرول به بالا =============== -->
+<button id="backToTop" title="برو به بالا">↑</button>
+
+<!-- =============== جاوااسکریپت کامل =============== -->
+<script>
+    // ===== دکمه اسکرول به بالا =====
+    var backToTopBtn = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
+    });
+
+    backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // ===== منوی شناور =====
+    var toggleBtn = document.getElementById('floatingToggle');
+    var menu = document.getElementById('floatingMenu');
+    var arrow = toggleBtn.querySelector('.btn-arrow');
+
+    toggleBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        menu.classList.toggle('active');
+        arrow.classList.toggle('open');
+    });
+
+    // ===== زیرمنوی تماس =====
+    var callToggle = document.getElementById('callToggle');
+    var callSubmenu = document.getElementById('callSubmenu');
+
+    callToggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        callSubmenu.classList.toggle('active');
+        var arrowIcon = this.querySelector('.arrow');
+        if (arrowIcon) {
+            arrowIcon.textContent = callSubmenu.classList.contains('active') ? '▼' : '▲';
+        }
+    });
+
+    // ===== بستن منو با کلیک بیرون =====
+    document.addEventListener('click', function() {
+        menu.classList.remove('active');
+        arrow.classList.remove('open');
+        callSubmenu.classList.remove('active');
+        var arrowIcon = callToggle.querySelector('.arrow');
+        if (arrowIcon) {
+            arrowIcon.textContent = '▲';
+        }
+    });
+
+    menu.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+
+    // ===== منوی موبایل =====
+    var mobileMenuBtn = document.querySelector('.mobile-menu');
+    var navbar = document.querySelector('.navbar ul');
+
+    mobileMenuBtn.addEventListener('click', function() {
+        if (navbar.style.display === 'flex') {
+            navbar.style.display = 'none';
+        } else {
+            navbar.style.display = 'flex';
+            navbar.style.flexDirection = 'column';
+            navbar.style.position = 'absolute';
+            navbar.style.top = '70px';
+            navbar.style.right = '20px';
+            navbar.style.background = '#fff';
+            navbar.style.padding = '20px';
+            navbar.style.borderRadius = '12px';
+            navbar.style.boxShadow = '0 10px 30px rgba(0,0,0,.15)';
+            navbar.style.gap = '10px';
+            navbar.style.width = '200px';
+            navbar.style.zIndex = '999';
+        }
+    });
+
+    console.log('✅ دکمه اسکرول و منوی شناور فعال شدند!');
+</script>
+
 </body>
 </html>
