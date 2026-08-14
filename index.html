@@ -926,3 +926,239 @@
 </section>
 
 <!-- =============== آمار =============== -->
+<section class="stats">
+    <div class="container">
+        <h2>افتخارات ما</h2>
+        <div class="stats-grid">
+            <div class="stat-card"><div class="stat-number">15+</div><h3>سال تجربه</h3></div>
+            <div class="stat-card"><div class="stat-number">5000+</div><h3>پروژه موفق</h3></div>
+            <div class="stat-card"><div class="stat-number">100%</div><h3>رضایت مشتریان</h3></div>
+            <div class="stat-card"><div class="stat-number">22</div><h3>منطقه تحت پوشش</h3></div>
+        </div>
+    </div>
+</section>
+
+<!-- =============== نظرات مشتریان =============== -->
+<section class="testimonials">
+    <div class="container">
+        <h2>نظر مشتریان</h2>
+        <div class="testimonial-slider">
+            <div class="testimonial-card"><p>"کیفیت خدمات عالی بود، مشکل سوسک به طور کامل برطرف شد."</p><h4>- مشتری تهران</h4></div>
+            <div class="testimonial-card"><p>"سمپاشی مرکز تجاری بدون ایجاد مزاحمت انجام شد."</p><h4>- مدیر مجتمع تجاری</h4></div>
+            <div class="testimonial-card"><p>"بسیار حرفه‌ای و دقیق، استانداردهای بهداشتی رعایت شد."</p><h4>- مدیر مرکز درمانی</h4></div>
+        </div>
+    </div>
+</section>
+
+<!-- =============== فرم تماس =============== -->
+<section class="contact">
+    <div class="container">
+        <h2>ثبت درخواست سمپاشی</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="نام و نام خانوادگی" required>
+            <input type="tel" placeholder="شماره تماس" required>
+            <select required><option value="">نوع خدمات</option><option>سمپاشی منازل</option><option>سمپاشی تجاری</option></select>
+            <textarea rows="4" placeholder="توضیحات"></textarea>
+            <button type="submit">ثبت درخواست</button>
+        </form>
+    </div>
+</section>
+
+<!-- =============== فوتر =============== -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-box"><h3>نانوفناوران</h3><p>ارائه‌دهنده خدمات تخصصی کنترل آفات در تهران</p></div>
+            <div class="footer-box"><h3>اطلاعات تماس</h3><p>📱 09120705746</p><p>☎️ 22048278</p></div>
+        </div>
+        <hr><p class="copyright">© تمامی حقوق محفوظ است</p>
+    </div>
+</footer>
+
+<!-- =============== منوی شناور =============== -->
+<div class="floating-container">
+    <button class="floating-main-btn" id="floatingToggle">
+        <span class="btn-arrow">▶</span>
+        <span class="btn-text">📞 مشاوره رایگان</span>
+    </button>
+    <div class="floating-menu" id="floatingMenu">
+        <div class="call-wrapper">
+            <div class="floating-item call-item" id="callToggle">
+                <span class="item-icon">📞</span>
+                <span class="item-text">تماس سریع</span>
+                <span class="arrow">▲</span>
+            </div>
+            <div class="call-submenu" id="callSubmenu">
+                <a href="tel:09120705746" class="floating-item call-sub-item">
+                    <span class="item-icon">📞</span>
+                    <span class="item-text">شماره ۱</span>
+                </a>
+                <a href="tel:09197173454" class="floating-item call-sub-item">
+                    <span class="item-icon">📞</span>
+                    <span class="item-text">شماره ۲</span>
+                </a>
+            </div>
+        </div>
+        <a href="https://wa.me/989120705746?text=%D8%A8%D9%87%20%D8%B3%D8%A7%DB%8C%D8%AA%20%D8%B4%D8%B1%DA%A9%D8%AA%20%D8%B3%D9%85%D9%BE%D8%A7%D8%B4%DB%8C%20%D9%86%D8%A7%D9%86%D9%88%D9%81%D9%86%D8%A7%D9%88%D8%B1%D8%A7%D9%86%20%D8%AE%D9%88%D8%B4%20%D8%A2%D9%85%D8%AF%DB%8C%D8%AF.%20%DA%86%DA%AF%D9%88%D9%86%D9%87%20%D9%85%DB%8C%E2%80%8C%D8%AA%D9%88%D8%A7%D9%86%D9%85%20%DA%A9%D9%85%DA%A9%20%D8%AA%D8%A7%D9%86%20%DA%A9%D9%86%D9%85%D8%9F" target="_blank" class="floating-item whatsapp-item">
+            <span class="item-icon">💬</span>
+            <span class="item-text">واتساپ</span>
+        </a>
+        <a href="https://eitaa.com/nanofannavaran_ir" target="_blank" class="floating-item eitaa-item">
+            <span class="item-icon">✈️</span>
+            <span class="item-text">ایتا</span>
+        </a>
+    </div>
+</div>
+
+<!-- =============== دکمه اسکرول به بالا =============== -->
+<button id="backToTop" title="برو به بالا">↑</button>
+
+<!-- =============== جاوااسکریپت کامل =============== -->
+<script>
+    // ===== دکمه اسکرول به بالا =====
+    var backToTopBtn = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
+    });
+
+    backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // ===== اسلایدر =====
+    var slides = document.querySelectorAll('.slide');
+    var dots = document.querySelectorAll('.dot');
+    var currentSlide = 0;
+    var slideInterval;
+
+    function goToSlide(index) {
+        slides.forEach(function(slide) {
+            slide.classList.remove('active');
+        });
+        dots.forEach(function(dot) {
+            dot.classList.remove('active');
+        });
+        slides[index].classList.add('active');
+        dots[index].classList.add('active');
+        currentSlide = index;
+    }
+
+    function nextSlide() {
+        var next = (currentSlide + 1) % slides.length;
+        goToSlide(next);
+    }
+
+    function prevSlide() {
+        var prev = (currentSlide - 1 + slides.length) % slides.length;
+        goToSlide(prev);
+    }
+
+    document.getElementById('nextSlide').addEventListener('click', function() {
+        nextSlide();
+        clearInterval(slideInterval);
+        slideInterval = setInterval(nextSlide, 5000);
+    });
+
+    document.getElementById('prevSlide').addEventListener('click', function() {
+        prevSlide();
+        clearInterval(slideInterval);
+        slideInterval = setInterval(nextSlide, 5000);
+    });
+
+    dots.forEach(function(dot) {
+        dot.addEventListener('click', function() {
+            var index = parseInt(this.getAttribute('data-index'));
+            goToSlide(index);
+            clearInterval(slideInterval);
+            slideInterval = setInterval(nextSlide, 5000);
+        });
+    });
+
+    // شروع اسلایدر خودکار
+    slideInterval = setInterval(nextSlide, 5000);
+
+    // ===== منوی شناور =====
+    var toggleBtn = document.getElementById('floatingToggle');
+    var menu = document.getElementById('floatingMenu');
+    var arrow = toggleBtn.querySelector('.btn-arrow');
+
+    toggleBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        menu.classList.toggle('active');
+        arrow.classList.toggle('open');
+    });
+
+    // ===== زیرمنوی تماس =====
+    var callToggle = document.getElementById('callToggle');
+    var callSubmenu = document.getElementById('callSubmenu');
+
+    callToggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        callSubmenu.classList.toggle('active');
+        var arrowIcon = this.querySelector('.arrow');
+        if (arrowIcon) {
+            arrowIcon.textContent = callSubmenu.classList.contains('active') ? '▼' : '▲';
+        }
+    });
+
+    // ===== بستن منو با کلیک بیرون =====
+    document.addEventListener('click', function() {
+        menu.classList.remove('active');
+        arrow.classList.remove('open');
+        callSubmenu.classList.remove('active');
+        var arrowIcon = callToggle.querySelector('.arrow');
+        if (arrowIcon) {
+            arrowIcon.textContent = '▲';
+        }
+    });
+
+    menu.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+
+    // ===== منوی موبایل =====
+    var mobileMenuBtn = document.querySelector('.mobile-menu');
+    var navbar = document.querySelector('.navbar ul');
+
+    mobileMenuBtn.addEventListener('click', function() {
+        if (navbar.style.display === 'flex') {
+            navbar.style.display = 'none';
+        } else {
+            navbar.style.display = 'flex';
+            navbar.style.flexDirection = 'column';
+            navbar.style.position = 'absolute';
+            navbar.style.top = '70px';
+            navbar.style.right = '20px';
+            navbar.style.background = '#fff';
+            navbar.style.padding = '20px';
+            navbar.style.borderRadius = '12px';
+            navbar.style.boxShadow = '0 10px 30px rgba(0,0,0,.15)';
+            navbar.style.gap = '10px';
+            navbar.style.width = '200px';
+            navbar.style.zIndex = '999';
+        }
+    });
+
+    // ===== دکمه جستجو =====
+    function searchSite() {
+        var query = document.getElementById('searchInput').value;
+        if (query.trim()) {
+            alert('جستجو برای: ' + query + '\n(قابلیت جستجو در حال توسعه است)');
+        } else {
+            alert('لطفاً عبارت مورد نظر را وارد کنید.');
+        }
+    }
+
+    console.log('✅ دکمه اسکرول و منوی شناور فعال شدند!');
+</script>
+
+</body>
+</html>
