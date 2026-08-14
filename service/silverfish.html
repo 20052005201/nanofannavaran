@@ -3,118 +3,663 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سمپاشی سیلور فیش | نانوفناوران</title>
-    <link rel="stylesheet" href="../style.css">
+    <title>سمپاشی سیلور فیش (ماهی نقره‌ای) | راهنمای جامع کنترل و ریشه‌کنی | نانوفناوران</title>
+    <meta name="description" content="مقاله جامع سمپاشی سیلور فیش: معرفی، علائم، روش‌های پیشگیری و کنترل تخصصی ماهی نقره‌ای در منزل و محل کار.">
+    <meta name="keywords" content="سمپاشی سیلور فیش, ماهی نقره‌ای, سمپاشی ماهی نقره‌ای, کنترل سیلور فیش, دفع سیلور فیش, سیلور فیش در حمام, نانوفناوران">
+    <link rel="canonical" href="https://nanofannavaran.ir/service/silverfish.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
-        .service-detail {
-            max-width: 1100px;
-            margin: 100px auto 50px;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
+        :root {
+            --primary: #1a7a3a;
+            --secondary: #27ae60;
+            --dark: #1a2a3a;
+            --light: #f8f9fa;
         }
-        .service-detail .text h1 {
-            font-size: 32px;
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Vazirmatn', 'IRANSans', 'Tahoma', sans-serif;
+            background: #f5f7fa;
+            color: #2c3e50;
+            line-height: 1.8;
+        }
+
+        /* =============== هدر =============== */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 15px rgba(0,0,0,.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 10px 20px;
+        }
+        header .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .logo img {
+            height: 50px;
+        }
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 15px;
+            transition: .3s;
+        }
+        .navbar ul li a:hover,
+        .navbar ul li a.active {
+            color: var(--primary);
+        }
+        .header-buttons {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .call-btn {
+            background: var(--primary);
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            transition: .3s;
+        }
+        .call-btn:hover {
+            background: var(--secondary);
+        }
+        .mobile-menu {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+        .search-box {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .search-box input {
+            padding: 6px 14px;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            font-size: 14px;
+            font-family: inherit;
+        }
+        .search-box button {
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        /* =============== محتوای مقاله =============== */
+        .blog-container {
+            max-width: 1100px;
+            margin: 120px auto 60px;
+            padding: 0 20px;
+            background: #fff;
+            border-radius: 24px;
+            box-shadow: 0 10px 40px rgba(0,0,0,.08);
+            padding: 40px 40px 60px;
+        }
+        .blog-container h1 {
+            font-size: 36px;
             color: var(--primary);
             margin-bottom: 20px;
+            line-height: 1.5;
         }
-        .service-detail .text p {
+        .blog-container .meta {
+            color: #888;
+            font-size: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .blog-container h2 {
+            font-size: 28px;
+            color: var(--dark);
+            margin: 40px 0 15px;
+            border-right: 5px solid var(--secondary);
+            padding-right: 15px;
+        }
+        .blog-container h3 {
+            font-size: 22px;
+            color: var(--primary);
+            margin: 30px 0 12px;
+        }
+        .blog-container h4 {
+            font-size: 19px;
+            color: var(--dark);
+            margin: 25px 0 10px;
+        }
+        .blog-container p {
             line-height: 2.2;
-            color: #555;
+            color: #444;
+            font-size: 17px;
+            margin-bottom: 18px;
+            text-align: justify;
+        }
+        .blog-container ul,
+        .blog-container ol {
+            line-height: 2.2;
+            color: #444;
+            font-size: 17px;
+            padding-right: 25px;
+            margin-bottom: 20px;
+        }
+        .blog-container ul li,
+        .blog-container ol li {
+            margin-bottom: 8px;
+        }
+        .blog-container table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0 30px;
             font-size: 16px;
         }
-        .service-detail .gif img {
+        .blog-container table th {
+            background: var(--primary);
+            color: #fff;
+            padding: 12px 15px;
+            text-align: right;
+        }
+        .blog-container table td {
+            border: 1px solid #ddd;
+            padding: 10px 15px;
+            background: #fafafa;
+        }
+        .blog-container table tr:nth-child(even) td {
+            background: #f5f5f5;
+        }
+        .blog-image {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .blog-image img {
             width: 100%;
-            max-height: 400px;
-            object-fit: contain;
+            max-width: 700px;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,.15);
         }
-        .back-link {
+        .blog-image .caption {
+            font-size: 14px;
+            color: #888;
+            margin-top: 10px;
+        }
+        .blog-image .caption strong {
+            color: var(--primary);
+        }
+
+        .blog-container .back-links {
+            margin: 40px 0 20px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .blog-container .back-links a {
             display: inline-block;
-            margin-top: 30px;
-            background: var(--secondary);
-            color: #fff;
             padding: 12px 28px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
             transition: .3s;
         }
-        .back-link:hover {
-            background: var(--primary);
-        }
-        .contact-float {
-            margin-top: 20px;
-        }
-        .contact-float a {
-            display: inline-block;
+        .blog-container .back-links .btn-blog-home {
             background: var(--primary);
             color: #fff;
-            padding: 12px 28px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            margin-left: 10px;
-            transition: .3s;
         }
-        .contact-float a:hover {
+        .blog-container .back-links .btn-blog-home:hover {
             background: var(--secondary);
         }
+        .blog-container .back-links .btn-blog-services {
+            background: var(--secondary);
+            color: #fff;
+        }
+        .blog-container .back-links .btn-blog-services:hover {
+            background: var(--primary);
+        }
+        .blog-container .back-links .btn-blog-contact {
+            background: var(--dark);
+            color: #fff;
+        }
+        .blog-container .back-links .btn-blog-contact:hover {
+            background: var(--primary);
+        }
+
+        details {
+            background: #f8fbfd;
+            padding: 15px 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #e9ecef;
+        }
+        details summary {
+            font-weight: 700;
+            color: var(--primary);
+            cursor: pointer;
+            font-size: 17px;
+        }
+        details p {
+            margin-top: 12px;
+            padding-right: 10px;
+        }
+
+        .callout-box {
+            background: #f0f7ff;
+            border-right: 5px solid var(--primary);
+            padding: 20px 25px;
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+        .callout-box strong {
+            color: var(--primary);
+        }
+
+        /* =============== فوتر =============== */
+        .site-footer {
+            background: var(--dark);
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .site-footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer-grid {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .footer-box h3 {
+            color: var(--secondary);
+            margin-bottom: 10px;
+        }
+        .footer-box p {
+            color: #ccc;
+            font-size: 15px;
+        }
+        .site-footer hr {
+            border: none;
+            border-top: 1px solid #444;
+            margin: 20px 0;
+        }
+        .site-footer .copyright {
+            color: #888;
+            font-size: 14px;
+        }
+
+        /* =============== منوی شناور =============== */
+        .floating-container {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .floating-main-btn {
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            padding: 14px 24px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 700;
+            font-family: inherit;
+            cursor: pointer;
+            box-shadow: 0 6px 25px rgba(26, 122, 58, 0.4);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: .3s;
+        }
+        .floating-main-btn:hover {
+            background: var(--secondary);
+            transform: scale(1.03);
+        }
+        .floating-menu {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,.15);
+            padding: 12px;
+            margin-bottom: 12px;
+            display: none;
+            flex-direction: column;
+            min-width: 200px;
+        }
+        .floating-menu.active {
+            display: flex;
+        }
+        .floating-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 18px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 15px;
+            transition: .3s;
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-family: inherit;
+            width: 100%;
+            text-align: right;
+        }
+        .floating-item:hover {
+            background: #f0f7f0;
+        }
+        .floating-item .item-icon {
+            font-size: 20px;
+        }
+        .call-wrapper {
+            position: relative;
+        }
+        .call-submenu {
+            display: none;
+            padding-right: 20px;
+            margin-top: 5px;
+        }
+        .call-submenu.active {
+            display: block;
+        }
+        .call-sub-item {
+            padding: 10px 18px;
+            font-size: 14px;
+        }
+        .whatsapp-item {
+            color: #25D366;
+        }
+        .eitaa-item {
+            color: #1a7a3a;
+        }
+        .btn-arrow {
+            transition: .3s;
+        }
+        .btn-arrow.open {
+            transform: rotate(90deg);
+        }
+
+        /* =============== دکمه اسکرول به بالا =============== */
+        #backToTop {
+            position: fixed;
+            bottom: 110px;
+            right: 30px;
+            z-index: 998;
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            font-size: 28px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 6px 25px rgba(0,0,0,.2);
+            transition: .3s;
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        #backToTop:hover {
+            background: var(--secondary);
+            transform: translateY(-4px);
+        }
+        #backToTop.show {
+            display: flex;
+        }
+
+        /* =============== ریسپانسیو =============== */
         @media (max-width: 768px) {
-            .service-detail {
-                grid-template-columns: 1fr;
-                text-align: center;
-                margin-top: 80px;
+            .blog-container {
+                padding: 20px 15px;
+                margin: 100px auto 40px;
             }
-            .service-detail .text h1 {
+            .blog-container h1 {
                 font-size: 26px;
             }
-            .service-detail .gif img {
-                max-height: 250px;
+            .blog-container h2 {
+                font-size: 22px;
+            }
+            .blog-container h3 {
+                font-size: 19px;
+            }
+            .blog-container h4 {
+                font-size: 17px;
+            }
+            .blog-container p,
+            .blog-container ul,
+            .blog-container ol {
+                font-size: 15px;
+            }
+            .blog-container table {
+                font-size: 14px;
+            }
+            .blog-container .back-links a {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+            .navbar ul {
+                display: none;
+            }
+            .mobile-menu {
+                display: block;
+            }
+            .floating-container {
+                left: 15px;
+                bottom: 20px;
+            }
+            .floating-main-btn {
+                padding: 12px 18px;
+                font-size: 14px;
+            }
+            #backToTop {
+                width: 48px;
+                height: 48px;
+                font-size: 24px;
+                bottom: 100px;
+                right: 15px;
             }
         }
     </style>
 </head>
 <body>
 
+<!-- =============== هدر =============== -->
 <header>
     <div class="container">
-        <a href="../index.html" class="logo"><img src="../images/logo.png" alt="لوگو"></a>
+        <a href="index.html" class="logo"><img src="images/logo.png" alt="لوگو شرکت سمپاشی نانوفناوران"></a>
         <nav class="navbar">
             <ul>
-                <li><a href="../index.html">صفحه اصلی</a></li>
-                <li><a href="../services.html" class="active">خدمات</a></li>
-                <li><a href="../about.html">درباره ما</a></li>
-                <li><a href="../contact.html">تماس</a></li>
+                <li><a href="index.html">صفحه اصلی</a></li>
+                <li><a href="services.html">خدمات مسکونی</a></li>
+                <li><a href="commercial-services.html">خدمات تجاری</a></li>
+                <li><a href="about.html">درباره ما</a></li>
+                <li><a href="contact.html">تماس</a></li>
             </ul>
         </nav>
         <div class="header-buttons">
             <a href="tel:09120705746" class="call-btn">📞 09120705746</a>
             <div class="mobile-menu">☰</div>
         </div>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="جستجو...">
+            <button onclick="alert('قابلیت جستجو در حال توسعه است')">🔍</button>
+        </div>
     </div>
 </header>
 
-<div class="service-detail">
-    <div class="text">
-        <h1>🐜 سمپاشی سیلور فیش</h1>
-        <p>کنترل تخصصی سیلور فیش (Lepisma saccharina) در محیط‌های مرطوب، انبارها و کتابخانه‌ها.</p>
-        <p><strong>روش کنترل:</strong> استفاده از سموم استاندارد و روش‌های نوین با تضمین کیفیت و ماندگاری بالا.</p>
-        <p><strong>مدت زمان اثرگذاری:</strong> نتایج سریع و ماندگار تا ۶ ماه.</p>
-        <a href="../services.html" class="back-link">🔙 بازگشت به لیست خدمات</a>
-        <div class="contact-float">
-            <a href="tel:09120705746">📞 تماس فوری</a>
-            <a href="https://wa.me/989120705746" target="_blank">💬 واتساپ</a>
+<!-- =============== مقاله =============== -->
+<div class="blog-container">
+
+    <h1>سمپاشی سیلور فیش (ماهی نقره‌ای) | راهنمای جامع کنترل، پیشگیری و ریشه‌کنی</h1>
+    <div class="meta">
+        <span>📅 آخرین به‌روزرسانی: ۱۸ مرداد ۱۴۰۴</span> &nbsp;|&nbsp; <span>⏱ زمان مطالعه: ۱۰ دقیقه</span>
+    </div>
+
+    <p>آیا تا به حال در گوشه‌های تاریک حمام یا زیر سینک آشپزخانه، حشره‌ای نقره‌فام و سریع را دیده‌اید که با دیدن نور، با سرعتی برق‌آسا فرار می‌کند؟ به احتمال قریب به یقین، شما با <strong>سیلور فیش (Silverfish)</strong> یا همان <strong>ماهی نقره‌ای</strong> آشنا شده‌اید. این حشرات کوچک و قدیمی، اگرچه برای انسان خطری مستقیم ندارند، اما می‌توانند به کتاب‌ها، کاغذدیواری‌ها، لباس‌ها و مواد غذایی شما آسیب جدی وارد کنند.</p>
+
+    <!-- ===== تصاویر سیلور فیش (نمای پشت و نمای رو) ===== -->
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin: 30px 0;">
+        <div class="blog-image" style="flex: 1; min-width: 280px; margin: 0;">
+            <img src="images/services/sil1.jpg" alt="سیلور فیش - نمای پشت" style="max-width: 100%;">
+            <div class="caption"><strong>تصویر سیلور فیش از نمای پشت</strong></div>
+        </div>
+        <div class="blog-image" style="flex: 1; min-width: 280px; margin: 0;">
+            <img src="images/services/sil2.jpg" alt="سیلور فیش - نمای رو" style="max-width: 100%;">
+            <div class="caption"><strong>تصویر سیلور فیش از نمای رو</strong></div>
         </div>
     </div>
-    <div class="gif">
-        <img src="../images/services/silverfish.jpg" alt="سمپاشی سیلور فیش">
+
+    <h2>سیلور فیش (ماهی نقره‌ای) چیست و چرا وارد خانه می‌شود؟</h2>
+    <p>سیلور فیش حشره‌ای شب‌زی، بدون بال و از دسته‌ی <strong>بیدمَکان (Zygentoma)</strong> است که نام علمی آن <em>Lepisma saccharina</em> می‌باشد. ظاهر این حشره کاملاً شبیه به ماهی است؛ بدنی کشیده و نقره‌فام، دو شاخک بلند در جلو و سه زائده‌ی باریک در انتهای دم دارد که هنگام حرکت، حالتی شبیه به شنای ماهی به آن می‌دهد.</p>
+
+    <p>این حشرات می‌توانند تا <strong>۸ سال عمر کنند</strong> و در طول زندگی خود بیش از ۵۰ بار پوست‌اندازی کنند. برخلاف تصور عموم، وجود سیلور فیش نشانه‌ی کثیفی خانه نیست، بلکه هشداری جدی برای <strong>وجود رطوبت بالا</strong> در محیط است.</p>
+
+    <h3>اصلی‌ترین دلایل جذب سیلور فیش به خانه شما:</h3>
+    <ul>
+        <li><strong>رطوبت بالا (مهم‌ترین عامل):</strong> سیلور فیش برای زنده ماندن به رطوبت ۷۵ تا ۹۵ درصدی نیاز دارد. حمام‌ها، آشپزخانه‌ها، زیرزمین‌ها و هر نقطه‌ای که نم و رطوبت وجود دارد، پناهگاه امنی برای این حشرات محسوب می‌شود.</li>
+        <li><strong>منابع غذایی کربوهیدراتی:</strong> آن‌ها از مواد نشاسته‌ای و قندی تغذیه می‌کنند. این شامل چسب کتاب‌ها، کاغذ، مقوا، پارچه‌های نخی و ابریشمی، گرد و غبار و حتی مواد غذایی مانند آرد و غلات می‌شود.</li>
+        <li><strong>نقاط تاریک و پناهگاه‌های امن:</strong> سیلور فیش‌ها به نور حساس هستند و در شکاف‌های دیوارها، پشت کابینت‌ها، زیر شیروانی‌ها و لابه‌لای جعبه‌های کارتنی پنهان می‌شوند.</li>
+    </ul>
+
+    <h2>چگونه بفهمیم خانه‌مان به سیلور فیش آلوده شده است؟</h2>
+    <p>سیلور فیش‌ها به دلیل شب‌زی بودن و سرعت بالایشان، به سختی دیده می‌شوند. با این حال، نشانه‌های واضحی برای تشخیص آلودگی وجود دارد:</p>
+    <ul>
+        <li><strong>مشاهده خود حشره:</strong> دیدن حشره‌ای نقره‌فام و تندرو در شب، به‌ویژه در حمام یا آشپزخانه.</li>
+        <li><strong>آسیب به وسایل:</strong> ایجاد سوراخ‌های نامنظم و لکه‌های زرد رنگ روی کتاب‌ها، کاغذدیواری، لباس‌ها و عکس‌ها.</li>
+        <li><strong>مدفوع و پوست‌اندازی:</strong> وجود مدفوع‌های ریز سیاه‌رنگ (مشابه دانه‌های فلفل) و پوسته‌های ریخته شده از بدن حشره در گوشه‌ها و کمدها.</li>
+        <li><strong>لکه‌های زرد روی پارچه:</strong> این لکه‌ها یکی از نشانه‌های مهم فعالیت سیلور فیش است که ناشی از تغذیه آن‌ها از الیاف مصنوعی است.</li>
+    </ul>
+
+    <h2>روش‌های پیشگیری و مقابله با سیلور فیش</h2>
+    <p>کنترل سیلور فیش نیازمند یک رویکرد <strong>مدیریت تلفیقی آفات (IPM)</strong> است. به عبارت دیگر، ترکیبی از روش‌های پیشگیرانه، طبیعی و در صورت لزوم، شیمیایی، بهترین نتیجه را به همراه خواهد داشت.</p>
+
+    <h3>۱. کنترل رطوبت (کلید اصلی موفقیت)</h3>
+    <p>اولین و مهم‌ترین گام، کاهش رطوبت محیط است. با نصب فن‌های تهویه، استفاده از رطوبت‌گیر و تعمیر فوری لوله‌های نشتی، محیط را برای زندگی سیلور فیش غیرقابل تحمل کنید.</p>
+
+    <h3>۲. حذف منابع غذایی و پناهگاه‌ها</h3>
+    <p>مواد غذایی مانند آرد، غلات و بیسکویت را در <strong>ظروف درب‌دار پلاستیکی</strong> نگهداری کنید. کتاب‌ها و مدارک را در محل‌های خشک و ترجیحاً در جعبه‌های پلاستیکی قرار دهید. همچنین با جاروکشی مرتب پشت وسایل، تخم‌ها و ذرات غذایی را از بین ببرید.</p>
+
+    <h3>۳. استفاده از طعمه و تله‌های چسبنده</h3>
+    <p>تله‌های چسبنده (استیکی) می‌توانند برای شناسایی نقاط آلوده و کاهش جمعیت سیلور فیش مفید باشند. همچنین می‌توانید با قرار دادن یک شیشه با دیواره‌ی صاف و طعمه‌ای مانند آرد در کف آن، یک تله‌ی ساده بسازید.</p>
+
+    <h3>۴. روش‌های طبیعی و گیاهی</h3>
+    <p>استفاده از اسانس‌های طبیعی مانند <strong>نعناع، آویشن یا اسطوخودوس</strong> می‌تواند به دلیل بوی تند، سیلور فیش را دفع کند. کافی است چند قطره از اسانس را در نقاط پرخطر اسپری کنید.</p>
+
+    <h2>سمپاشی تخصصی و حرفه‌ای سیلور فیش با نانوفناوران</h2>
+    <p>اگر با وجود رعایت نکات پیشگیرانه، همچنان با مشکل سیلور فیش دست و پنجه نرم می‌کنید، زمان آن رسیده که از یک <strong>خدمات سمپاشی حرفه‌ای</strong> استفاده کنید.</p>
+
+    <div class="callout-box">
+        <p><strong>چرا سمپاشی خانگی معمولاً شکست می‌خورد؟</strong><br>
+        سیلور فیش‌ها در شکاف‌های بسیار ریز و نقاط صعب‌الوصول پنهان می‌شوند و اسپری‌های معمولی به آن‌جا نفوذ نمی‌کنند. همچنین این حشرات بسیار مقاوم هستند و برای از بین بردن تخم‌هایشان، نیاز به روش‌های تخصصی داریم.</p>
     </div>
+
+    <h3>راهکار تخصصی شرکت نانوفناوران:</h3>
+    <ol>
+        <li>
+            <strong>بازرسی دقیق:</strong> کارشناسان ما با بررسی نقاط مرطوب، کمدها، زیرشیروانی و پشت کابینت‌ها، منبع اصلی آلودگی را شناسایی می‌کنند.
+        </li>
+        <li>
+            <strong>استفاده از طعمه‌های مسموم (شیمیایی):</strong> جدیدترین و مؤثرترین روش کنترل سیلور فیش، استفاده از <strong>طعمه‌های مسموم</strong> است. تحقیقات نشان داده که طعمه‌های حاوی ماده‌ی مؤثر <strong>ایندوکساکارب</strong>، قادرند یک جمعیت کامل سیلور فیش را در مدت کوتاهی از بین ببرند. این روش بسیار مقرون‌به‌صرفه و ایمن‌تر از سمپاشی گسترده است و در چندین مرحله، جمعیت حشره را به سمت فروپاشی سوق می‌دهد.
+        </li>
+        <li>
+            <strong>سمپاشی موضعی (ریزپاشی):</strong> در نقاطی که طعمه‌گذاری امکان‌پذیر نیست، از سموم باقی‌مانده و پودرهای حشره‌کش در شکاف‌ها و خلأهای دیوار استفاده می‌شود تا حشرات هنگام عبور با آن تماس پیدا کرده و از بین بروند.
+        </li>
+        <li>
+            <strong>مشاوره و پیشگیری:</strong> پس از اتمام عملیات، کارشناسان ما نکات لازم برای جلوگیری از بازگشت مجدد این آفت را به شما آموزش می‌دهند.
+        </li>
+    </ol>
+
+    <h2>هزینه سمپاشی سیلور فیش چقدر است؟</h2>
+    <p>هزینه سمپاشی سیلور فیش به عوامل متعددی بستگی دارد. برای دریافت برآورد دقیق و متناسب با شرایط ملک شما، می‌توانید از مشاوره رایگان کارشناسان ما بهره‌مند شوید. به‌طورکلی، عواملی مانند <strong>مساحت محیط، شدت آلودگی و نوع روش کنترل (طعمه‌گذاری یا سمپاشی)</strong> در قیمت‌گذاری نهایی تأثیرگذار هستند.</p>
+
+    <table>
+        <thead>
+            <tr><th>عامل</th><th>تأثیر بر هزینه</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>مساحت و نوع مکان</strong></td><td>منازل، ویلاها، ادارات و مراکز صنعتی هزینه‌های متفاوتی دارند.</td></tr>
+            <tr><td><strong>شدت آلودگی</strong></td><td>آلودگی شدید نیاز به عملیات بیشتر دارد.</td></tr>
+            <tr><td><strong>نوع روش</strong></td><td>طعمه‌گذاری، سمپاشی موضعی یا ترکیبی.</td></tr>
+            <tr><td><strong>تعداد جلسات</strong></td><td>معمولاً یک جلسه کافی است، اما در موارد شدید ممکن است نیاز به بازدید مجدد باشد.</td></tr>
+        </tbody>
+    </table>
+
+    <h2>سوالات متداول درباره سمپاشی سیلور فیش</h2>
+
+    <details>
+        <summary><strong>آیا سمپاشی سیلور فیش برای کودکان و حیوانات خانگی خطرناک است؟</strong></summary>
+        <p>خیر، سموم و طعمه‌های استفاده‌شده توسط شرکت نانوفناوران با رعایت کامل استانداردهای بهداشتی انتخاب می‌شوند. همچنین در هنگام سمپاشی، افراد و حیوانات از محیط خارج می‌شوند و پس از تهویه کامل، محیط کاملاً ایمن است.</p>
+    </details>
+
+    <details>
+        <summary><strong>چه مدت بعد از سمپاشی سیلور فیش‌ها از بین می‌روند؟</strong></summary>
+        <p>در روش طعمه‌گذاری، اثر تدریجی است و جمعیت حشره طی ۱ تا ۲ هفته به طور کامل فروپاشی می‌شود. در روش سمپاشی موضعی، اثر فوری است.</p>
+    </details>
+
+    <details>
+        <summary><strong>آیا خودمان هم می‌توانیم سیلور فیش را سمپاشی کنیم؟</strong></summary>
+        <p>استفاده از اسپری‌های خانگی معمولاً مؤثر نیست و فقط حشرات سطحی را از بین می‌برد. همچنین استفاده نادرست از سموم می‌تواند برای سلامتی خطرناک باشد. روش‌های تخصصی مانند طعمه‌گذاری نیاز به دانش و تجربه دارد.</p>
+    </details>
+
+    <details>
+        <summary><strong>بعد از سمپاشی باید منزل را ترک کنیم؟</strong></summary>
+        <p>در روش طعمه‌گذاری نیازی به ترک منزل نیست. در روش سمپاشی موضعی، معمولاً ۲ تا ۴ ساعت باید محیط را ترک کنید تا سموم تهویه شوند.</p>
+    </details>
+
+    <details>
+        <summary><strong>آیا سیلور فیش‌ها دوباره برمی‌گردند؟</strong></summary>
+        <p>اگر رطوبت محیط کنترل شود و نکات پیشگیری رعایت شود، احتمال بازگشت بسیار کم است. شرکت نانوفناوران خدمات خود را با ضمانت ارائه می‌دهد.</p>
+    </details>
+
+    <h2>نتیجه‌گیری</h2>
+    <p>سیلور فیش یک آفت مزمن و پنهان‌کار است که با روش‌های معمولی به‌سادگی از بین نمی‌رود. <strong>شرکت سمپاشی نانوفناوران بهداشت تهران</strong> با بهره‌گیری از روش‌های علمی روز دنیا مانند طعمه‌گذاری تخصصی با ایندوکساکارب، تجربه‌ی بالا در کنترل رطوبت و آفات و همچنین استفاده از سموم استاندارد و ایمن، بهترین گزینه برای ریشه‌کنی قطعی این حشره است.</p>
+
+    <p style="font-size:20px; font-weight:700; text-align:center; color:var(--primary);">🚀 همین حالا اقدام کنید:</p>
+    <div style="text-align:center; margin:20px 0;">
+        <p>📞 <strong>تماس فوری:</strong> <a href="tel:09120705746" style="font-size:20px; color:var(--secondary);">۰۹۱۲۰۷۰۵۷۴۶</a></p>
+        <p>💬 <strong>درخواست مشاوره رایگان:</strong> از طریق <a href="https://wa.me/989120705746" target="_blank">واتساپ</a> یا <a href="https://eitaa.com/nanofannavaran_ir" target="_blank">ایتا</a></p>
+        <p>🔗 <strong>مشاهده سایر خدمات:</strong> <a href="services.html">کنترل آفات مسکونی</a></p>
+    </div>
+
+    <div class="back-links">
+        <a href="index.html" class="btn-blog-home">🏠 بازگشت به صفحه اصلی</a>
+        <a href="services.html" class="btn-blog-services">🔙 بازگشت به لیست خدمات مسکونی</a>
+        <a href="contact.html" class="btn-blog-contact">📞 تماس با ما</a>
+    </div>
+
 </div>
 
+<!-- =============== فوتر =============== -->
 <footer class="site-footer">
     <div class="container">
         <div class="footer-grid">
@@ -125,6 +670,116 @@
     </div>
 </footer>
 
-<script src="../script.js"></script>
+<!-- =============== منوی شناور =============== -->
+<div class="floating-container">
+    <button class="floating-main-btn" id="floatingToggle">
+        <span class="btn-arrow">▶</span>
+        <span class="btn-text">📞 مشاوره رایگان</span>
+    </button>
+    <div class="floating-menu" id="floatingMenu">
+        <div class="call-wrapper">
+            <div class="floating-item call-item" id="callToggle">
+                <span class="item-icon">📞</span>
+                <span class="item-text">تماس سریع</span>
+                <span class="arrow">▲</span>
+            </div>
+            <div class="call-submenu" id="callSubmenu">
+                <a href="tel:09120705746" class="floating-item call-sub-item"><span class="item-icon">📞</span><span class="item-text">شماره ۱</span></a>
+                <a href="tel:09197173454" class="floating-item call-sub-item"><span class="item-icon">📞</span><span class="item-text">شماره ۲</span></a>
+            </div>
+        </div>
+        <a href="https://wa.me/989120705746?text=%D8%A8%D9%87%20%D8%B3%D8%A7%DB%8C%D8%AA%20%D8%B4%D8%B1%DA%A9%D8%AA%20%D8%B3%D9%85%D9%BE%D8%A7%D8%B4%DB%8C%20%D9%86%D8%A7%D9%86%D9%88%D9%81%D9%86%D8%A7%D9%88%D8%B1%D8%A7%D9%86%20%D8%AE%D9%88%D8%B4%20%D8%A2%D9%85%D8%AF%DB%8C%D8%AF" target="_blank" class="floating-item whatsapp-item"><span class="item-icon">💬</span><span class="item-text">واتساپ</span></a>
+        <a href="https://eitaa.com/nanofannavaran_ir" target="_blank" class="floating-item eitaa-item"><span class="item-icon">✈️</span><span class="item-text">ایتا</span></a>
+    </div>
+</div>
+
+<!-- =============== دکمه اسکرول به بالا =============== -->
+<button id="backToTop" title="برو به بالا">↑</button>
+
+<!-- =============== جاوااسکریپت کامل =============== -->
+<script>
+    // ===== دکمه اسکرول به بالا =====
+    var backToTopBtn = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
+    });
+
+    backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // ===== منوی شناور =====
+    var toggleBtn = document.getElementById('floatingToggle');
+    var menu = document.getElementById('floatingMenu');
+    var arrow = toggleBtn.querySelector('.btn-arrow');
+
+    toggleBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        menu.classList.toggle('active');
+        arrow.classList.toggle('open');
+    });
+
+    // ===== زیرمنوی تماس =====
+    var callToggle = document.getElementById('callToggle');
+    var callSubmenu = document.getElementById('callSubmenu');
+
+    callToggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        callSubmenu.classList.toggle('active');
+        var arrowIcon = this.querySelector('.arrow');
+        if (arrowIcon) {
+            arrowIcon.textContent = callSubmenu.classList.contains('active') ? '▼' : '▲';
+        }
+    });
+
+    // ===== بستن منو با کلیک بیرون =====
+    document.addEventListener('click', function() {
+        menu.classList.remove('active');
+        arrow.classList.remove('open');
+        callSubmenu.classList.remove('active');
+        var arrowIcon = callToggle.querySelector('.arrow');
+        if (arrowIcon) {
+            arrowIcon.textContent = '▲';
+        }
+    });
+
+    menu.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+
+    // ===== منوی موبایل =====
+    var mobileMenuBtn = document.querySelector('.mobile-menu');
+    var navbar = document.querySelector('.navbar ul');
+
+    mobileMenuBtn.addEventListener('click', function() {
+        if (navbar.style.display === 'flex') {
+            navbar.style.display = 'none';
+        } else {
+            navbar.style.display = 'flex';
+            navbar.style.flexDirection = 'column';
+            navbar.style.position = 'absolute';
+            navbar.style.top = '70px';
+            navbar.style.right = '20px';
+            navbar.style.background = '#fff';
+            navbar.style.padding = '20px';
+            navbar.style.borderRadius = '12px';
+            navbar.style.boxShadow = '0 10px 30px rgba(0,0,0,.15)';
+            navbar.style.gap = '10px';
+            navbar.style.width = '200px';
+            navbar.style.zIndex = '999';
+        }
+    });
+
+    console.log('✅ دکمه اسکرول و منوی شناور فعال شدند!');
+</script>
+
 </body>
 </html>
