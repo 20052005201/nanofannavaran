@@ -3,90 +3,687 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ضدعفونی محیط | نانوفناوران</title>
-    <link rel="stylesheet" href="../style.css">
+    <title>ضدعفونی محیط | راهنمای جامع بهداشت و ایمنی فضاها | نانوفناوران</title>
+    <meta name="description" content="مقاله جامع ضدعفونی محیط: روش‌های تخصصی ضدعفونی منازل، ادارات و مراکز درمانی، تفاوت ضدعفونی با گندزدایی و نکات ایمنی.">
+    <meta name="keywords" content="ضدعفونی محیط, ضدعفونی منزل, ضدعفونی ادارات, بهداشت محیط, ایمنی بهداشتی, نانوفناوران, Disinfection">
+    <link rel="canonical" href="https://nanofannavaran.ir/service/disinfection.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
-        .service-detail {
-            max-width: 1100px;
-            margin: 100px auto 50px;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
+        :root {
+            --primary: #0B6FB8;
+            --secondary: #11A64A;
+            --dark: #1F2937;
+            --shadow: 0 8px 25px rgba(0,0,0,.08);
+            --radius: 16px;
         }
-        .service-detail .text h1 {
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Vazirmatn', 'IRANSans', 'Tahoma', sans-serif;
+            background: #f8fbfd;
+            color: #222;
+            line-height: 1.9;
+            direction: rtl;
+            padding-top: 80px;
+        }
+
+        /* =============== هدر =============== */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 15px rgba(0,0,0,.08);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 10px 20px;
+        }
+        header .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            min-height: 80px;
+            gap: 15px;
+        }
+        .logo img {
+            height: 70px;
+            width: auto;
+        }
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            gap: 28px;
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 700;
+            padding: 8px 0;
+            position: relative;
+        }
+        .navbar ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            right: 0;
+            width: 0;
+            height: 3px;
+            background: var(--secondary);
+            transition: .3s;
+        }
+        .navbar ul li a:hover::after,
+        .navbar ul li a.active::after {
+            width: 100%;
+        }
+        .header-buttons {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .call-btn {
+            background: var(--secondary);
+            color: #fff;
+            padding: 12px 22px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: .3s;
+        }
+        .call-btn:hover {
+            background: var(--primary);
+        }
+        .mobile-menu {
+            display: none;
             font-size: 32px;
+            cursor: pointer;
+            color: var(--primary);
+        }
+        .search-box {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            background: #f1f5f9;
+            border-radius: 50px;
+            padding: 5px 10px;
+        }
+        .search-box input {
+            border: none;
+            background: transparent;
+            padding: 8px;
+            font-size: 14px;
+            width: 120px;
+            outline: none;
+            font-family: inherit;
+        }
+        .search-box button {
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: .3s;
+        }
+        .search-box button:hover {
+            background: var(--secondary);
+        }
+
+        /* =============== محتوای مقاله =============== */
+        .blog-container {
+            max-width: 1100px;
+            margin: 120px auto 60px;
+            padding: 0 20px;
+            background: #fff;
+            border-radius: 24px;
+            box-shadow: 0 10px 40px rgba(0,0,0,.08);
+            padding: 40px 40px 60px;
+            font-family: 'Vazirmatn', 'IRANSans', 'Tahoma', sans-serif;
+            line-height: 1.8;
+            color: #2c3e50;
+            direction: rtl;
+        }
+        .blog-container h1 {
+            font-size: 36px;
             color: var(--primary);
             margin-bottom: 20px;
+            line-height: 1.5;
         }
-        .service-detail .text p {
+        .blog-container .blog-meta {
+            color: #888;
+            font-size: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .blog-container h2 {
+            font-size: 28px;
+            color: var(--dark);
+            margin: 40px 0 15px;
+            border-right: 5px solid var(--primary);
+            padding-right: 15px;
+        }
+        .blog-container h3 {
+            font-size: 22px;
+            color: var(--primary);
+            margin: 30px 0 12px;
+        }
+        .blog-container h4 {
+            font-size: 19px;
+            color: var(--dark);
+            margin: 25px 0 10px;
+        }
+        .blog-container p {
             line-height: 2.2;
-            color: #555;
+            color: #444;
+            font-size: 17px;
+            margin-bottom: 18px;
+            text-align: justify;
+        }
+        .blog-container ul,
+        .blog-container ol {
+            line-height: 2.2;
+            color: #444;
+            font-size: 17px;
+            padding-right: 25px;
+            margin-bottom: 20px;
+        }
+        .blog-container ul li,
+        .blog-container ol li {
+            margin-bottom: 8px;
+        }
+        .blog-container table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0 30px;
             font-size: 16px;
         }
-        .service-detail .gif img {
+        .blog-container table th {
+            background: var(--primary);
+            color: #fff;
+            padding: 12px 15px;
+            text-align: right;
+        }
+        .blog-container table td {
+            border: 1px solid #ddd;
+            padding: 10px 15px;
+            background: #fafafa;
+        }
+        .blog-container table tr:nth-child(even) td {
+            background: #f5f8fc;
+        }
+        .blog-image {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .blog-image img {
             width: 100%;
-            max-height: 400px;
-            object-fit: contain;
+            max-width: 700px;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,.15);
         }
-        .back-link {
+        .blog-image .caption {
+            font-size: 14px;
+            color: #888;
+            margin-top: 10px;
+        }
+        .blog-image .caption strong {
+            color: var(--primary);
+        }
+
+        .blog-container .blog-back-links {
+            margin: 40px 0 20px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .blog-container .blog-back-links a {
             display: inline-block;
-            margin-top: 30px;
-            background: var(--secondary);
-            color: #fff;
             padding: 12px 28px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
             transition: .3s;
         }
-        .back-link:hover {
-            background: var(--primary);
-        }
-        .contact-float {
-            margin-top: 20px;
-        }
-        .contact-float a {
-            display: inline-block;
+        .blog-container .blog-back-links .btn-home {
             background: var(--primary);
             color: #fff;
-            padding: 12px 28px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            margin-left: 10px;
-            transition: .3s;
         }
-        .contact-float a:hover {
+        .blog-container .blog-back-links .btn-home:hover {
             background: var(--secondary);
         }
+        .blog-container .blog-back-links .btn-services {
+            background: var(--secondary);
+            color: #fff;
+        }
+        .blog-container .blog-back-links .btn-services:hover {
+            background: var(--primary);
+        }
+        .blog-container .blog-back-links .btn-contact {
+            background: var(--dark);
+            color: #fff;
+        }
+        .blog-container .blog-back-links .btn-contact:hover {
+            background: var(--primary);
+        }
+
+        .blog-callout {
+            background: #f0f7ff;
+            border-right: 5px solid var(--primary);
+            padding: 20px 25px;
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+        .blog-callout strong {
+            color: var(--primary);
+        }
+
+        .blog-callout-yellow {
+            background: #fff8e1;
+            border-right: 5px solid #ffc107;
+            padding: 20px 25px;
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+        .blog-callout-yellow strong {
+            color: #e67e22;
+        }
+
+        .blog-container details {
+            background: #f8fbfd;
+            padding: 15px 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #e9ecef;
+        }
+        .blog-container details summary {
+            font-weight: 700;
+            color: var(--primary);
+            cursor: pointer;
+            font-size: 17px;
+        }
+        .blog-container details p {
+            margin-top: 12px;
+            padding-right: 10px;
+        }
+
+        /* =============== فوتر =============== */
+        .site-footer {
+            background: var(--dark);
+            color: #fff;
+            padding: 60px 20px 20px;
+            text-align: center;
+        }
+        .site-footer .container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+        .footer-box h3 {
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+        .footer-box p {
+            color: #ccc;
+            font-size: 15px;
+        }
+        .footer-box a {
+            color: #4ade80;
+            text-decoration: none;
+        }
+        .site-footer hr {
+            border: none;
+            border-top: 1px solid rgba(255,255,255,.1);
+            margin: 20px 0;
+        }
+        .site-footer .copyright {
+            color: #888;
+            font-size: 14px;
+        }
+
+        /* =============== منوی شناور =============== */
+        .floating-container {
+            position: fixed;
+            bottom: 30px;
+            left: 20px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-family: 'Vazirmatn', sans-serif;
+            direction: ltr;
+        }
+        .floating-main-btn {
+            background: linear-gradient(135deg, #25D366 0%, #1da851 100%);
+            color: #fff;
+            border: none;
+            border-radius: 50px 0 0 50px;
+            padding: 16px 24px 16px 28px;
+            font-size: 16px;
+            font-weight: 800;
+            cursor: pointer;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            white-space: nowrap;
+            animation: pulse 2.5s infinite;
+            transition: all 0.3s ease;
+        }
+        .floating-main-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(37, 211, 102, 0.8);
+        }
+        .floating-main-btn .btn-arrow {
+            font-size: 14px;
+            transition: transform 0.4s ease;
+        }
+        .floating-main-btn.active .btn-arrow {
+            transform: rotate(90deg);
+        }
+        .floating-menu {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(-20px) scale(0.95);
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        .floating-menu.open {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0) scale(1);
+        }
+        .floating-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 18px;
+            border-radius: 50px;
+            color: #fff;
+            font-weight: 700;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+            white-space: nowrap;
+            border: 2px solid rgba(255, 255, 255, 0.15);
+            text-decoration: none;
+        }
+        .floating-item:hover {
+            transform: scale(1.08);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+        }
+        .floating-item .item-icon {
+            font-size: 18px;
+        }
+        .floating-item .item-text {
+            font-size: 14px;
+        }
+        .call-item {
+            background: linear-gradient(135deg, #25D366, #1da851);
+            border-radius: 50px 0 0 50px;
+            cursor: pointer;
+            position: relative;
+        }
+        .call-item .arrow {
+            font-size: 12px;
+            margin-right: 5px;
+            transition: transform 0.3s ease;
+        }
+        .call-item.open .arrow {
+            transform: rotate(180deg);
+        }
+        .call-submenu {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            opacity: 0;
+            visibility: hidden;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            margin-right: 5px;
+        }
+        .call-submenu.open {
+            opacity: 1;
+            visibility: visible;
+            max-height: 200px;
+        }
+        .call-sub-item {
+            background: linear-gradient(135deg, #25D366, #1da851);
+            border-radius: 50px;
+            padding: 8px 16px;
+            font-size: 13px;
+            gap: 6px;
+        }
+        .call-sub-item:hover {
+            transform: scale(1.05);
+        }
+        .whatsapp-item {
+            background: linear-gradient(135deg, #25D366, #1da851);
+            border-radius: 50px;
+        }
+        .eitaa-item {
+            background: linear-gradient(135deg, #f97316, #ea580c);
+            border-radius: 0 50px 50px 0;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6); }
+            50% { box-shadow: 0 8px 50px rgba(37, 211, 102, 0.9), 0 0 80px rgba(37, 211, 102, 0.2); }
+            100% { box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6); }
+        }
+
         @media (max-width: 768px) {
-            .service-detail {
-                grid-template-columns: 1fr;
-                text-align: center;
-                margin-top: 80px;
+            .navbar {
+                position: fixed;
+                top: 80px;
+                right: -100%;
+                width: 280px;
+                height: calc(100vh - 80px);
+                background: #fff;
+                transition: .35s;
+                box-shadow: -5px 0 15px rgba(0,0,0,.08);
+                overflow-y: auto;
             }
-            .service-detail .text h1 {
+            .navbar.show {
+                right: 0;
+            }
+            .navbar ul {
+                flex-direction: column;
+                padding: 25px;
+                gap: 18px;
+            }
+            .navbar ul li {
+                width: 100%;
+            }
+            .mobile-menu {
+                display: block;
+            }
+            .header-buttons .call-btn {
+                display: none;
+            }
+            .search-box input {
+                width: 80px;
+            }
+            .floating-container {
+                bottom: 15px;
+                left: 10px;
+                gap: 5px;
+            }
+            .floating-main-btn {
+                padding: 10px 16px 10px 20px;
+                font-size: 13px;
+                border-radius: 30px 0 0 30px;
+            }
+            .floating-main-btn .btn-arrow {
+                font-size: 11px;
+            }
+            .floating-menu {
+                gap: 5px;
+            }
+            .floating-item {
+                padding: 8px 12px;
+                font-size: 12px;
+                gap: 5px;
+                border-radius: 30px;
+            }
+            .floating-item .item-icon {
+                font-size: 15px;
+            }
+            .floating-item .item-text {
+                font-size: 12px;
+            }
+            .call-item {
+                border-radius: 30px 0 0 30px;
+            }
+            .call-submenu {
+                margin-right: 3px;
+            }
+            .call-sub-item {
+                padding: 6px 12px;
+                font-size: 11px;
+            }
+            .eitaa-item {
+                border-radius: 0 30px 30px 0;
+            }
+            .blog-container {
+                padding: 20px 15px;
+                margin: 100px auto 40px;
+            }
+            .blog-container h1 {
                 font-size: 26px;
             }
-            .service-detail .gif img {
-                max-height: 250px;
+            .blog-container h2 {
+                font-size: 22px;
             }
+            .blog-container h3 {
+                font-size: 19px;
+            }
+            .blog-container h4 {
+                font-size: 17px;
+            }
+            .blog-container p,
+            .blog-container ul,
+            .blog-container ol {
+                font-size: 15px;
+            }
+            .blog-container table {
+                font-size: 14px;
+            }
+            .blog-container .blog-back-links a {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .floating-container {
+                bottom: 10px;
+                left: 6px;
+                gap: 4px;
+            }
+            .floating-main-btn {
+                padding: 8px 12px 8px 16px;
+                font-size: 11px;
+                border-radius: 25px 0 0 25px;
+            }
+            .floating-main-btn .btn-arrow {
+                font-size: 9px;
+            }
+            .floating-item {
+                padding: 6px 10px;
+                font-size: 10px;
+                gap: 4px;
+                border-radius: 25px;
+            }
+            .floating-item .item-icon {
+                font-size: 13px;
+            }
+            .floating-item .item-text {
+                font-size: 10px;
+            }
+            .call-item {
+                border-radius: 25px 0 0 25px;
+            }
+            .call-sub-item {
+                padding: 4px 10px;
+                font-size: 10px;
+            }
+            .eitaa-item {
+                border-radius: 0 25px 25px 0;
+            }
+        }
+
+        /* ===== دکمه اسکرول ===== */
+        #backToTop {
+            position: fixed;
+            right: 20px;
+            bottom: 80px;
+            width: 55px;
+            height: 55px;
+            border: none;
+            border-radius: 50%;
+            background: var(--primary);
+            color: #fff;
+            font-size: 28px;
+            font-weight: 700;
+            cursor: pointer;
+            display: none;
+            z-index: 9998;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            line-height: 1;
+            text-align: center;
+            padding: 0;
+            font-family: 'Vazirmatn', sans-serif;
+        }
+        #backToTop:hover {
+            background: var(--secondary);
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+        }
+        #backToTop::before {
+            content: "↑";
+            display: block;
+            font-size: 30px;
+            font-weight: 900;
+            line-height: 55px;
+        }
+        #backToTop.show {
+            display: block !important;
         }
     </style>
 </head>
 <body>
 
+<!-- =============== هدر =============== -->
 <header>
     <div class="container">
-        <a href="../index.html" class="logo"><img src="../images/logo.png" alt="لوگو"></a>
+        <a href="../index.html" class="logo"><img src="../images/logo.png" alt="لوگو شرکت سمپاشی نانوفناوران"></a>
         <nav class="navbar">
             <ul>
                 <li><a href="../index.html">صفحه اصلی</a></li>
-                <li><a href="../services.html" class="active">خدمات</a></li>
+                <li><a href="../services.html">خدمات مسکونی</a></li>
+                <li><a href="../commercial-services.html">خدمات تجاری</a></li>
                 <li><a href="../about.html">درباره ما</a></li>
                 <li><a href="../contact.html">تماس</a></li>
             </ul>
@@ -95,36 +692,378 @@
             <a href="tel:09120705746" class="call-btn">📞 09120705746</a>
             <div class="mobile-menu">☰</div>
         </div>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="جستجو...">
+            <button onclick="searchSite()">🔍</button>
+        </div>
     </div>
 </header>
 
-<div class="service-detail">
-    <div class="text">
-        <h1>🧪 ضدعفونی محیط</h1>
-        <p>ضدعفونی سطوح و محیط‌های مختلف با استفاده از مواد استاندارد.</p>
-        <p><strong>روش کنترل:</strong> استفاده از مواد ضدعفونی‌کننده استاندارد با تضمین کیفیت و ماندگاری بالا.</p>
-        <p><strong>مدت زمان اثرگذاری:</strong> نتایج سریع و ماندگار تا ۶ ماه.</p>
-        <a href="../services.html" class="back-link">🔙 بازگشت به لیست خدمات</a>
-        <div class="contact-float">
-            <a href="tel:09120705746">📞 تماس فوری</a>
-            <a href="https://wa.me/989120705746" target="_blank">💬 واتساپ</a>
-        </div>
+<!-- =============== مقاله =============== -->
+<div class="blog-container">
+
+    <h1>راهنمای جامع و تخصصی ضدعفونی محیط | بهداشت و ایمنی در فضاهای زندگی و کار</h1>
+    <div class="blog-meta">
+        <span>📅 آخرین به‌روزرسانی: ۸ شهریور ۱۴۰۴</span> &nbsp;|&nbsp; <span>⏱ زمان مطالعه: ۱۲ دقیقه</span>
     </div>
-    <div class="gif">
-        <img src="../images/services/disinfection.jpg" alt="ضدعفونی محیط">
+
+    <!-- ===== تصویر اصلی ===== -->
+    <div class="blog-image">
+        <img src="../images/services/disinfection.jpg" alt="ضدعفونی محیط - ضدعفونی تخصصی نانوفناوران">
+        <div class="caption"><strong>ضدعفونی تخصصی محیط</strong> - تضمین بهداشت و ایمنی فضاهای زندگی و کار</div>
     </div>
+
+    <h2>مقدمه: ضدعفونی؛ سپر دفاعی سلامت در دنیای مدرن</h2>
+    <p>در دنیای امروز که با تهدیدات بیماری‌های واگیردار و عفونی روبرو هستیم، <strong>ضدعفونی محیط</strong> به یکی از اساسی‌ترین نیازهای زندگی روزمره تبدیل شده است. از منازل و محیط‌های کاری گرفته تا بیمارستان‌ها، مدارس و فضاهای عمومی، همه نیازمند سطح بالایی از بهداشت و ایمنی هستند. اما ضدعفونی دقیقاً چیست و چگونه می‌تواند از ما در برابر عوامل بیماری‌زا محافظت کند؟</p>
+
+    <p>ضدعفونی محیط فرآیندی علمی و تخصصی است که با استفاده از مواد ضدعفونی‌کننده استاندارد و روش‌های اصولی، میکروارگانیسم‌های بیماری‌زا مانند باکتری‌ها، ویروس‌ها، قارچ‌ها و سایر عوامل عفونی را در سطوح و فضاهای مختلف از بین می‌برد. این فرآیند، برخلاف نظافت معمولی که صرفاً آلودگی‌های ظاهری را پاک می‌کند، به عمق سطوح نفوذ کرده و عوامل بیماری‌زا را به طور کامل حذف می‌نماید.</p>
+
+    <p>در این مقاله جامع از <strong>شرکت سمپاشی نانوفناوران بهداشت تهران</strong>، شما را با تمام جنبه‌های مربوط به ضدعفونی محیط آشنا خواهیم کرد؛ از تفاوت آن با گندزدایی و سمپاشی گرفته تا بهترین مواد ضدعفونی‌کننده، روش‌های تخصصی و نکات ایمنی مهم.</p>
+
+    <h2>ضدعفونی چیست و چه تفاوتی با گندزدایی و سمپاشی دارد؟</h2>
+
+    <h3>تعریف ضدعفونی (Disinfection)</h3>
+    <p>ضدعفونی فرآیندی است که در آن با استفاده از مواد شیمیایی یا روش‌های فیزیکی، میکروارگانیسم‌های بیماری‌زا روی سطوح و اشیاء به سطحی ایمن کاهش داده می‌شوند. این فرآیند معمولاً ۹۹/۹٪ از باکتری‌ها و ویروس‌های موجود را از بین می‌برد، اما ممکن است همه هاگ‌های میکروبی را حذف نکند.</p>
+
+    <h3>تفاوت ضدعفونی با گندزدایی (Sanitization)</h3>
+    <p>بسیاری از افراد این دو مفهوم را به جای یکدیگر استفاده می‌کنند، اما تفاوت‌های مهمی دارند:</p>
+
+    <table>
+        <thead>
+            <tr><th>ویژگی</th><th>ضدعفونی (Disinfection)</th><th>گندزدایی (Sanitization)</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>هدف</strong></td><td>کاهش چشمگیر میکروارگانیسم‌ها (تا ۹۹/۹٪)</td><td>کاهش میکروارگانیسم‌ها به سطح ایمن برای سلامت عمومی</td></tr>
+            <tr><td><strong>مواد</strong></td><td>مواد قوی‌تر (کلر، پراکسید، الکل قوی)</td><td>مواد ملایم‌تر (آمونیاک‌های چهارتایی)</td></tr>
+            <tr><td><strong>زمان تماس</strong></td><td>معمولاً بیشتر (۵-۱۰ دقیقه)</td><td>کوتاه‌تر (۱-۲ دقیقه)</td></tr>
+            <tr><td><strong>کاربرد</strong></td><td>سطوح پرخطر، بیمارستان‌ها، سطوح در تماس با مواد غذایی</td><td>منازل، مدارس، محیط‌های عمومی</td></tr>
+        </tbody>
+    </table>
+
+    <h3>تفاوت ضدعفونی با سمپاشی</h3>
+    <p>ضدعفونی با هدف از بین بردن میکروارگانیسم‌های بیماری‌زا (ویروس، باکتری، قارچ) انجام می‌شود، در حالی که سمپاشی برای کنترل و ریشه‌کنی آفات (سوسک، موش، پشه، مگس و...) انجام می‌شود. مواد مورد استفاده در این دو فرآیند نیز کاملاً متفاوت است؛ ضدعفونی با مواد شیمیایی ضدعفونی‌کننده و سمپاشی با حشره‌کش‌های تخصصی انجام می‌شود.</p>
+
+    <div class="blog-callout">
+        <p><strong>نکته مهم:</strong> در بسیاری از موارد، <strong>ضدعفونی پس از سمپاشی</strong> انجام می‌شود. به عنوان مثال، پس از سمپاشی منزل برای از بین بردن سوسک‌ها، ضدعفونی سطوح برای حذف باکتری‌های منتقل شده توسط آفات ضروری است.</p>
+    </div>
+
+    <h2>چرا ضدعفونی محیط ضروری است؟</h2>
+    <p>ضدعفونی محیط نه‌تنها برای بیمارستان‌ها و مراکز درمانی، بلکه برای منازل، ادارات، مدارس و تمام فضاهای عمومی ضروری است. دلایل اصلی این ضرورت عبارتند از:</p>
+
+    <h3>۱. پیشگیری از بیماری‌های واگیردار</h3>
+    <p>باکتری‌ها و ویروس‌ها به راحتی از طریق سطوح آلوده (دستگیره‌ها، میزها، شیرآلات، وسایل الکترونیکی، کلیدهای برق) منتقل می‌شوند. ضدعفونی منظم این سطوح، خطر انتقال بیماری‌هایی مانند آنفولانزا، سرماخوردگی، ویروس‌های گوارشی، هپاتیت و حتی بیماری‌های جدی‌تر را به شدت کاهش می‌دهد.</p>
+
+    <h3>۲. محافظت از افراد آسیب‌پذیر</h3>
+    <p>برخی افراد مانند کودکان، سالمندان، زنان باردار و افراد دارای سیستم ایمنی ضعیف، بیشتر در معرض خطر عفونت‌ها قرار دارند. ضدعفونی محیط‌هایی که این افراد در آن تردد دارند، یک اقدام ضروری برای حفظ سلامت آنهاست.</p>
+
+    <h3>۳. آلودگی پس از بیماری</h3>
+    <p>پس از بهبودی افراد مبتلا به بیماری‌های واگیردار، ضدعفونی کامل محیط برای حذف عوامل بیماری‌زای باقی‌مانده ضروری است. بسیاری از ویروس‌ها و باکتری‌ها می‌توانند ساعتها و حتی روزها روی سطوح زنده بمانند.</p>
+
+    <h3>۴. بهداشت مواد غذایی</h3>
+    <p>در آشپزخانه‌های خانگی، رستوران‌ها و کارخانه‌های مواد غذایی، ضدعفونی منظم سطوح، مانع از رشد باکتری‌های خطرناکی مانند سالمونلا، ای‌کولی و لیستریا می‌شود که می‌توانند باعث مسمومیت‌های غذایی شدید شوند.</p>
+
+    <h3>۵. محیط‌های کاری ایمن</h3>
+    <p>ضدعفونی منظم محیط‌های کاری، باعث کاهش غیبت‌های ناشی از بیماری، افزایش بهره‌وری و ایجاد حس امنیت در کارکنان می‌شود.</p>
+
+    <h2>بهترین مواد ضدعفونی‌کننده</h2>
+    <p>انتخاب ماده ضدعفونی‌کننده مناسب، نقشی کلیدی در موفقیت عملیات ضدعفونی دارد. در اینجا به معرفی بهترین مواد ضدعفونی‌کننده بر اساس نوع کاربرد می‌پردازیم:</p>
+
+    <h3>۱. هیپوکلریت سدیم (وایت‌کس)</h3>
+    <ul>
+        <li><strong>کاربرد:</strong> ضدعفونی سطوح سخت، کف، سرویس‌های بهداشتی، بیمارستان‌ها</li>
+        <li><strong>مزایا:</strong> مؤثر بر طیف وسیعی از میکروارگانیسم‌ها، قیمت مناسب، در دسترس</li>
+        <li><strong>معایب:</strong> خورندگی، بوی تند، نیاز به رعایت دقیق نسبت رقیق‌سازی</li>
+        <li><strong>نسبت رقیق‌سازی:</strong> ۱ به ۱۰ برای سطوح آلوده، ۱ به ۱۰۰ برای ضدعفونی عمومی</li>
+    </ul>
+
+    <h3>۲. پراکسید هیدروژن (آب‌اکسیژنه)</h3>
+    <ul>
+        <li><strong>کاربرد:</strong> ضدعفونی سطوح حساس، تجهیزات پزشکی، محیط‌های غذایی</li>
+        <li><strong>مزایا:</strong> غیرسمی، تجزیه به آب و اکسیژن، ضدعفونی‌کننده قوی</li>
+        <li><strong>معایب:</strong> ممکن است به برخی سطوح آسیب برساند، نیاز به زمان تماس مناسب</li>
+    </ul>
+
+    <h3>۳. آمونیاک‌های چهارتایی (QACs)</h3>
+    <ul>
+        <li><strong>کاربرد:</strong> ضدعفونی سطوح در بیمارستان‌ها، مدارس، ادارات</li>
+        <li><strong>مزایا:</strong> مؤثر بر طیف وسیع، باقی‌مانده، بی‌بو</li>
+        <li><strong>معایب:</strong> ممکن است در برابر برخی ویروس‌ها مؤثر نباشد</li>
+    </ul>
+
+    <h3>۴. اتانول و ایزوپروپیل الکل</h3>
+    <ul>
+        <li><strong>کاربرد:</strong> ضدعفونی تجهیزات الکترونیکی، سطوح کوچک، دست‌ها</li>
+        <li><strong>مزایا:</strong> تبخیر سریع، مؤثر بر ویروس‌ها</li>
+        <li><strong>معایب:</strong> قابل اشتعال، ممکن است به برخی سطوح آسیب برساند</li>
+        <li><strong>غلظت مناسب:</strong> ۷۰-۷۵ درصد</li>
+    </ul>
+
+    <h3>۵. اسید پراستیک</h3>
+    <ul>
+        <li><strong>کاربرد:</strong> ضدعفونی تجهیزات پزشکی، محیط‌های غذایی، تصفیه آب</li>
+        <li><strong>مزایا:</strong> بسیار مؤثر، تجزیه به مواد بی‌خطر</li>
+        <li><strong>معایب:</strong> بوی تند، نیاز به رعایت دقیق ایمنی</li>
+    </ul>
+
+    <div class="blog-callout-yellow">
+        <p><strong>⚠️ نکته ایمنی مهم:</strong> هرگز مواد ضدعفونی‌کننده را با یکدیگر مخلوط نکنید. ترکیب وایت‌کس با اسیدها یا آمونیاک می‌تواند گازهای سمی خطرناک تولید کند.</p>
+    </div>
+
+    <h2>مراحل ضدعفونی تخصصی محیط توسط نانوفناوران</h2>
+    <p>شرکت سمپاشی نانوفناوران با بیش از یک دهه تجربه، ضدعفونی محیط را در مراحل زیر انجام می‌دهد:</p>
+
+    <ol>
+        <li>
+            <strong>بازرسی و ارزیابی اولیه</strong>
+            <p>کارشناسان ما با بررسی کامل محیط، نوع آلودگی، میزان گسترش آن و نقاط حساس را شناسایی می‌کنند. این ارزیابی شامل بررسی سطوح، نقاط پرتماس، فضاهای بسته و سیستم‌های تهویه است.</p>
+        </li>
+        <li>
+            <strong>انتخاب ماده ضدعفونی‌کننده مناسب</strong>
+            <p>بر اساس نوع محیط، میزان آلودگی، حساسیت سطوح و نوع میکروارگانیسم‌های هدف، بهترین ماده ضدعفونی‌کننده با غلظت مناسب انتخاب می‌شود.</p>
+        </li>
+        <li>
+            <strong>آماده‌سازی محیط</strong>
+            <p>قبل از شروع ضدعفونی، تمام مواد غذایی، اشیاء حساس و لوازم الکترونیکی پوشانده یا از محیط خارج می‌شوند. افراد و حیوانات خانگی نیز از محیط خارج می‌شوند.</p>
+        </li>
+        <li>
+            <strong>اجرای ضدعفونی</strong>
+            <p>عملیات ضدعفونی با استفاده از تجهیزات پیشرفته و مواد استاندارد انجام می‌شود. بسته به نوع سطح، ماده ضدعفونی‌کننده به صورت اسپری، پاشش یا مالش اعمال می‌شود و زمان تماس مناسب (معمولاً ۵ تا ۱۰ دقیقه) رعایت می‌شود.</p>
+        </li>
+        <li>
+            <strong>بررسی و پایش</strong>
+            <p>پس از اتمام زمان تماس، سطوح با آب تمیز شستشو داده می‌شوند (در صورت نیاز) و محیط بررسی می‌شود تا از موفقیت عملیات اطمینان حاصل شود.</p>
+        </li>
+        <li>
+            <strong>تهویه و ایمن‌سازی</strong>
+            <p>پس از اتمام عملیات، درها و پنجره‌ها باز می‌شوند تا محیط تهویه شود. کارشناسان زمان بازگشت ایمن را به شما اعلام می‌کنند.</p>
+        </li>
+        <li>
+            <strong>گواهی ضدعفونی</strong>
+            <p>پس از اتمام عملیات، گواهی انجام ضدعفونی تخصصی به شما ارائه می‌شود که می‌تواند برای مجوزهای بهداشتی یا مراکز درمانی مورد استفاده قرار گیرد.</p>
+        </li>
+    </ol>
+
+    <h2>تفاوت ضدعفونی با نظافت و پاکیزگی</h2>
+    <p>برای درک بهتر ضدعفونی، بهتر است تفاوت آن با مفاهیم مشابه را بدانیم:</p>
+
+    <table>
+        <thead>
+            <tr><th>مفهوم</th><th>تعریف</th><th>هدف</th><th>نتیجه</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>نظافت (Cleaning)</strong></td><td>حذف آلودگی‌های ظاهری (گرد و غبار، چربی، خاک)</td><td>ظاهر تمیز</td><td>کاهش تعداد میکروب‌ها</td></tr>
+            <tr><td><strong>ضدعفونی (Disinfection)</strong></td><td>کاهش چشمگیر میکروارگانیسم‌ها (تا ۹۹/۹٪)</td><td>حذف عوامل بیماری‌زا</td><td>سطوح ایمن از نظر میکروبی</td></tr>
+            <tr><td><strong>گندزدایی (Sanitization)</strong></td><td>کاهش میکروارگانیسم‌ها به سطح ایمن</td><td>ایمنی بهداشتی عمومی</td><td>کاهش خطر انتقال بیماری</td></tr>
+            <tr><td><strong>استریلیزاسیون (Sterilization)</strong></td><td>حذف کامل تمام میکروارگانیسم‌ها و هاگ‌ها</td><td>محیط کاملاً عاری از میکروب</td><td>بالاترین سطح ایمنی</td></tr>
+        </tbody>
+    </table>
+
+    <h2>هزینه ضدعفونی محیط چقدر است؟</h2>
+    <p>هزینه ضدعفونی محیط به عوامل زیر بستگی دارد. برای دریافت <strong>مشاوره رایگان</strong> و <strong>استعلام دقیق هزینه</strong>، با کارشناسان ما تماس بگیرید:</p>
+
+    <table>
+        <thead>
+            <tr><th>عامل</th><th>تأثیر بر هزینه</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>مساحت محیط</strong></td><td>هرچه متراژ بیشتر باشد، هزینه بیشتر است</td></tr>
+            <tr><td><strong>نوع ماده ضدعفونی‌کننده</strong></td><td>مواد تخصصی و استاندارد هزینه بیشتری دارند</td></tr>
+            <tr><td><strong>شدت آلودگی</strong></td><td>آلودگی شدید نیاز به عملیات گسترده‌تری دارد</td></tr>
+            <tr><td><strong>نوع محیط</strong></td><td>بیمارستان‌ها و مراکز درمانی نیاز به ضدعفونی تخصصی‌تر دارند</td></tr>
+            <tr><td><strong>دسترسی به نقاط</strong></td><td>ضدعفونی نقاط صعب‌الوصول هزینه را افزایش می‌دهد</td></tr>
+        </tbody>
+    </table>
+
+    <h2>سوالات متداول درباره ضدعفونی محیط</h2>
+
+    <details>
+        <summary><strong>تفاوت ضدعفونی با گندزدایی چیست؟</strong></summary>
+        <p>ضدعفونی (Disinfection) فرآیندی قوی‌تر است که تا ۹۹/۹٪ از میکروارگانیسم‌ها را از بین می‌برد، در حالی که گندزدایی (Sanitization) میکروارگانیسم‌ها را به سطحی ایمن برای سلامت عمومی کاهش می‌دهد. ضدعفونی معمولاً در محیط‌های پرخطر مانند بیمارستان‌ها و سطوح در تماس با مواد غذایی استفاده می‌شود.</p>
+    </details>
+
+    <details>
+        <summary><strong>آیا ضدعفونی محیط برای کودکان و حیوانات خانگی خطرناک است؟</strong></summary>
+        <p>خیر، مواد استفاده‌شده توسط شرکت نانوفناوران با رعایت کامل استانداردهای بهداشتی انتخاب می‌شوند. در هنگام ضدعفونی، افراد و حیوانات از محیط خارج می‌شوند و پس از تهویه کامل، محیط کاملاً ایمن است. با این حال، افراد دارای بیماری‌های تنفسی باید در زمان ضدعفونی از محیط دور باشند.</p>
+    </details>
+
+    <details>
+        <summary><strong>چه مدت بعد از ضدعفونی محیط برای حضور افراد ایمن است؟</strong></summary>
+        <p>بسته به نوع ماده استفاده‌شده، معمولاً ۲ تا ۴ ساعت پس از ضدعفونی، محیط برای حضور افراد ایمن است. کارشناسان زمان دقیق را به شما اعلام می‌کنند.</p>
+    </details>
+
+    <details>
+        <summary><strong>آیا خودمان هم می‌توانیم ضدعفونی محیط انجام دهیم؟</strong></summary>
+        <p>ضدعفونی سطحی منزل با مواد موجود در بازار (وایت‌کس، الکل) امکان‌پذیر است، اما ضدعفونی تخصصی فضاهای بزرگ، بیمارستان‌ها و مراکز عمومی نیاز به تجهیزات و دانش تخصصی دارد. همچنین استفاده نادرست از مواد ضدعفونی‌کننده می‌تواند خطرناک باشد.</p>
+    </details>
+
+    <details>
+        <summary><strong>چند بار در سال باید ضدعفونی محیط انجام شود؟</strong></summary>
+        <p>برای منازل، ضدعفونی سالی یک بار (ترجیحاً در فصل بهار) کافی است. اما برای مراکز درمانی، مطب‌ها و رستوران‌ها، ضدعفونی باید به طور منظم (ماهانه یا حتی هفتگی) انجام شود.</p>
+    </details>
+
+    <details>
+        <summary><strong>آیا ضدعفونی محیط برای از بین بردن ویروس کرونا مؤثر است؟</strong></summary>
+        <p>بله، ضدعفونی با مواد استاندارد (کلر، پراکسید هیدروژن، الکل ۷۰٪ و آمونیاک‌های چهارتایی) می‌تواند ویروس کرونا را از بین سطوح حذف کند. ضدعفونی منظم سطوح پرتماس، یکی از مهم‌ترین اقدامات پیشگیرانه در برابر کرونا و سایر ویروس‌هاست.</p>
+    </details>
+
+    <details>
+        <summary><strong>بهترین ماده ضدعفونی‌کننده برای منزل چیست؟</strong></summary>
+        <p>برای منازل، مواد زیر مناسب هستند: وایت‌کس رقیق‌شده (۱ به ۱۰۰) برای سطوح سخت، الکل ۷۰٪ برای وسایل الکترونیکی و آمونیاک‌های چهارتایی برای سطوح حساس. انتخاب ماده مناسب بستگی به نوع سطح و میزان آلودگی دارد.</p>
+    </details>
+
+    <h2>نتیجه‌گیری</h2>
+    <p>ضدعفونی محیط، فرآیندی علمی و تخصصی برای حفظ سلامت و بهداشت در فضاهای مختلف است. این فرآیند با از بین بردن میکروارگانیسم‌های بیماری‌زا، از انتقال بیماری‌ها جلوگیری کرده و محیطی امن برای زندگی و کار فراهم می‌آورد.</p>
+
+    <p><strong>شرکت سمپاشی نانوفناوران بهداشت تهران</strong> با بهره‌گیری از دانش فنی روز، تجهیزات پیشرفته و مواد ضدعفونی‌کننده استاندارد، آماده ارائه خدمات تخصصی ضدعفونی محیط به شماست. تیم کارشناسان ما با شناسایی دقیق نقاط حساس و استفاده از روش‌های مناسب، بهداشت و سلامت محیط شما را تضمین می‌کنند.</p>
+
+    <p style="font-size:20px; font-weight:700; text-align:center; color:var(--primary);">🚀 همین حالا اقدام کنید:</p>
+    <div style="text-align:center; margin:20px 0;">
+        <p>📞 <strong>تماس فوری:</strong> <a href="tel:09120705746" style="font-size:20px; color:var(--secondary); text-decoration:none;">۰۹۱۲۰۷۰۵۷۴۶</a></p>
+        <p>💬 <strong>درخواست مشاوره رایگان:</strong> از طریق <a href="https://wa.me/989120705746" target="_blank" style="color:#25D366; text-decoration:none;">واتساپ</a> یا <a href="https://eitaa.com/nanofannavaran_ir" target="_blank" style="color:#e67e22; text-decoration:none;">ایتا</a></p>
+        <p>🔗 <strong>مشاهده سایر خدمات:</strong> <a href="../services.html" style="color:var(--primary); text-decoration:none;">کنترل آفات مسکونی</a></p>
+    </div>
+
+    <div class="blog-back-links">
+        <a href="../index.html" class="btn-home">🏠 بازگشت به صفحه اصلی</a>
+        <a href="../services.html" class="btn-services">🔙 بازگشت به لیست خدمات مسکونی</a>
+        <a href="../contact.html" class="btn-contact">📞 تماس با ما</a>
+    </div>
+
 </div>
 
+<!-- =============== فوتر =============== -->
 <footer class="site-footer">
     <div class="container">
         <div class="footer-grid">
             <div class="footer-box"><h3>نانوفناوران</h3><p>ارائه‌دهنده خدمات تخصصی کنترل آفات در تهران</p></div>
             <div class="footer-box"><h3>اطلاعات تماس</h3><p>📱 09120705746</p><p>☎️ 22048278</p></div>
         </div>
-        <hr><p class="copyright">© تمامی حقوق محفوظ است</p>
+        <hr>
+        <p class="copyright">© تمامی حقوق محفوظ است</p>
     </div>
 </footer>
 
-<script src="../script.js"></script>
+<!-- =============== منوی شناور =============== -->
+<div class="floating-container">
+    <button class="floating-main-btn" id="floatingToggle">
+        <span class="btn-arrow">▶</span>
+        <span class="btn-text">📞 مشاوره رایگان</span>
+    </button>
+    <div class="floating-menu" id="floatingMenu">
+        <div class="call-wrapper">
+            <div class="floating-item call-item" id="callToggle">
+                <span class="item-icon">📞</span>
+                <span class="item-text">تماس سریع</span>
+                <span class="arrow">▲</span>
+            </div>
+            <div class="call-submenu" id="callSubmenu">
+                <a href="tel:09120705746" class="floating-item call-sub-item"><span class="item-icon">📞</span><span class="item-text">شماره ۱</span></a>
+                <a href="tel:09197173454" class="floating-item call-sub-item"><span class="item-icon">📞</span><span class="item-text">شماره ۲</span></a>
+            </div>
+        </div>
+        <a href="https://wa.me/989120705746?text=%D8%A8%D9%87%20%D8%B3%D8%A7%DB%8C%D8%AA%20%D8%B4%D8%B1%DA%A9%D8%AA%20%D8%B3%D9%85%D9%BE%D8%A7%D8%B4%DB%8C%20%D9%86%D8%A7%D9%86%D9%88%D9%81%D9%86%D8%A7%D9%88%D8%B1%D8%A7%D9%86%20%D8%AE%D9%88%D8%B4%20%D8%A2%D9%85%D8%AF%DB%8C%D8%AF" target="_blank" class="floating-item whatsapp-item"><span class="item-icon">💬</span><span class="item-text">واتساپ</span></a>
+        <a href="https://eitaa.com/nanofannavaran_ir" target="_blank" class="floating-item eitaa-item"><span class="item-icon">✈️</span><span class="item-text">ایتا</span></a>
+    </div>
+</div>
+
+<!-- =============== دکمه اسکرول به بالا =============== -->
+<button id="backToTop" title="برو به بالا">↑</button>
+
+<!-- =============== جاوااسکریپت =============== -->
+<script>
+    // ===== دکمه اسکرول به بالا =====
+    var backToTopBtn = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
+    });
+
+    backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // ===== منوی شناور =====
+    var toggleBtn = document.getElementById('floatingToggle');
+    var menu = document.getElementById('floatingMenu');
+    var arrow = toggleBtn.querySelector('.btn-arrow');
+
+    toggleBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        this.classList.toggle('active');
+        menu.classList.toggle('open');
+        if (arrow) arrow.classList.toggle('open');
+    });
+
+    // ===== زیرمنوی تماس =====
+    var callToggle = document.getElementById('callToggle');
+    var callSubmenu = document.getElementById('callSubmenu');
+
+    callToggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        this.classList.toggle('open');
+        callSubmenu.classList.toggle('open');
+        var arrowIcon = this.querySelector('.arrow');
+        if (arrowIcon) {
+            arrowIcon.textContent = callSubmenu.classList.contains('open') ? '▼' : '▲';
+        }
+    });
+
+    // ===== بستن منو با کلیک بیرون =====
+    document.addEventListener('click', function() {
+        if (toggleBtn) toggleBtn.classList.remove('active');
+        if (menu) menu.classList.remove('open');
+        if (arrow) arrow.classList.remove('open');
+        if (callToggle) callToggle.classList.remove('open');
+        if (callSubmenu) callSubmenu.classList.remove('open');
+        var arrowIcon = callToggle ? callToggle.querySelector('.arrow') : null;
+        if (arrowIcon) arrowIcon.textContent = '▲';
+    });
+
+    if (menu) {
+        menu.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    }
+
+    // ===== منوی موبایل =====
+    var mobileMenuBtn = document.querySelector('.mobile-menu');
+    var navbar = document.querySelector('.navbar');
+
+    if (mobileMenuBtn && navbar) {
+        mobileMenuBtn.addEventListener('click', function() {
+            navbar.classList.toggle('show');
+        });
+        document.querySelectorAll('.navbar ul li a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                navbar.classList.remove('show');
+            });
+        });
+    }
+
+    // ===== جستجو =====
+    window.searchSite = function() {
+        var query = document.getElementById('searchInput').value;
+        if (query.trim()) {
+            window.open('https://www.google.com/search?q=site:nanofannavaran.ir ' + encodeURIComponent(query), '_blank');
+        } else {
+            alert('لطفاً عبارت مورد نظر را وارد کنید.');
+        }
+    };
+    document.getElementById('searchInput')?.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            window.searchSite();
+        }
+    });
+
+    console.log('✅ مقاله ضدعفونی محیط بارگذاری شد!');
+</script>
+
 </body>
 </html>
