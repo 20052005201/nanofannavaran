@@ -3,118 +3,763 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سمپاشی منازل | نانوفناوران</title>
-    <link rel="stylesheet" href="../style.css">
+    <title>سمپاشی منازل | راهنمای جامع قبل از اسباب‌کشی و خانه نوساز | نانوفناوران</title>
+    <meta name="description" content="مقاله جامع سمپاشی منازل: دلایل ضرورت سمپاشی قبل از اسباب‌کشی، آیا خانه نوساز به سمپاشی نیاز دارد؟ روش‌های تخصصی و نکات طلایی.">
+    <meta name="keywords" content="سمپاشی منازل, سمپاشی قبل از اسباب کشی, سمپاشی خانه نوساز, کنترل آفات منزل, سمپاشی ساختمان, نانوفناوران">
+    <link rel="canonical" href="https://nanofannavaran.ir/service/residential.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
-        .service-detail {
-            max-width: 1100px;
-            margin: 100px auto 50px;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
+        :root {
+            --primary: #0B6FB8;
+            --secondary: #1a8bc0;
+            --dark: #1a2a3a;
+            --light: #f0f7ff;
+            --white: #ffffff;
+            --green: #25a344;
+            --orange: #e67e22;
         }
-        .service-detail .text h1 {
-            font-size: 32px;
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Vazirmatn', 'IRANSans', 'Tahoma', sans-serif;
+            background: #f5f8fc;
+            color: #2c3e50;
+            line-height: 1.8;
+        }
+
+        /* =============== هدر =============== */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 15px rgba(0,0,0,.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 10px 20px;
+        }
+        header .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .logo img {
+            height: 50px;
+        }
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 15px;
+            transition: .3s;
+        }
+        .navbar ul li a:hover,
+        .navbar ul li a.active {
+            color: var(--primary);
+        }
+        .header-buttons {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .mobile-menu {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+        .search-box {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .search-box input {
+            padding: 6px 14px;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            font-size: 14px;
+            font-family: inherit;
+        }
+        .search-box button {
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        /* =============== محتوای مقاله =============== */
+        .blog-container {
+            max-width: 1100px;
+            margin: 120px auto 60px;
+            padding: 0 20px;
+            background: #fff;
+            border-radius: 24px;
+            box-shadow: 0 10px 40px rgba(0,0,0,.08);
+            padding: 40px 40px 60px;
+        }
+        .blog-container h1 {
+            font-size: 36px;
             color: var(--primary);
             margin-bottom: 20px;
+            line-height: 1.5;
         }
-        .service-detail .text p {
+        .blog-container .meta {
+            color: #888;
+            font-size: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .blog-container h2 {
+            font-size: 28px;
+            color: var(--dark);
+            margin: 40px 0 15px;
+            border-right: 5px solid var(--primary);
+            padding-right: 15px;
+        }
+        .blog-container h3 {
+            font-size: 22px;
+            color: var(--primary);
+            margin: 30px 0 12px;
+        }
+        .blog-container h4 {
+            font-size: 19px;
+            color: var(--dark);
+            margin: 25px 0 10px;
+        }
+        .blog-container p {
             line-height: 2.2;
-            color: #555;
+            color: #444;
+            font-size: 17px;
+            margin-bottom: 18px;
+            text-align: justify;
+        }
+        .blog-container ul,
+        .blog-container ol {
+            line-height: 2.2;
+            color: #444;
+            font-size: 17px;
+            padding-right: 25px;
+            margin-bottom: 20px;
+        }
+        .blog-container ul li,
+        .blog-container ol li {
+            margin-bottom: 8px;
+        }
+        .blog-container table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0 30px;
             font-size: 16px;
         }
-        .service-detail .gif img {
+        .blog-container table th {
+            background: var(--primary);
+            color: #fff;
+            padding: 12px 15px;
+            text-align: right;
+        }
+        .blog-container table td {
+            border: 1px solid #ddd;
+            padding: 10px 15px;
+            background: #fafafa;
+        }
+        .blog-container table tr:nth-child(even) td {
+            background: #f5f8fc;
+        }
+        .blog-image {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .blog-image img {
             width: 100%;
-            max-height: 400px;
-            object-fit: contain;
+            max-width: 700px;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,.15);
         }
-        .back-link {
+        .blog-image .caption {
+            font-size: 14px;
+            color: #888;
+            margin-top: 10px;
+        }
+        .blog-image .caption strong {
+            color: var(--primary);
+        }
+
+        .blog-container .back-links {
+            margin: 40px 0 20px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .blog-container .back-links a {
             display: inline-block;
-            margin-top: 30px;
-            background: var(--secondary);
-            color: #fff;
             padding: 12px 28px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
             transition: .3s;
         }
-        .back-link:hover {
-            background: var(--primary);
-        }
-        .contact-float {
-            margin-top: 20px;
-        }
-        .contact-float a {
-            display: inline-block;
+        .blog-container .back-links .btn-blog-home {
             background: var(--primary);
             color: #fff;
-            padding: 12px 28px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            margin-left: 10px;
-            transition: .3s;
         }
-        .contact-float a:hover {
+        .blog-container .back-links .btn-blog-home:hover {
             background: var(--secondary);
         }
+        .blog-container .back-links .btn-blog-services {
+            background: var(--secondary);
+            color: #fff;
+        }
+        .blog-container .back-links .btn-blog-services:hover {
+            background: var(--primary);
+        }
+        .blog-container .back-links .btn-blog-contact {
+            background: var(--dark);
+            color: #fff;
+        }
+        .blog-container .back-links .btn-blog-contact:hover {
+            background: var(--primary);
+        }
+
+        .callout-box {
+            background: var(--light);
+            border-right: 5px solid var(--primary);
+            padding: 20px 25px;
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+        .callout-box strong {
+            color: var(--primary);
+        }
+
+        .danger-box {
+            background: #fff3cd;
+            border-right: 5px solid #ffc107;
+            padding: 20px 25px;
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+        .danger-box strong {
+            color: #d63031;
+        }
+
+        details {
+            background: #f8fbfd;
+            padding: 15px 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #e9ecef;
+        }
+        details summary {
+            font-weight: 700;
+            color: var(--primary);
+            cursor: pointer;
+            font-size: 17px;
+        }
+        details p {
+            margin-top: 12px;
+            padding-right: 10px;
+        }
+
+        /* =============== فوتر =============== */
+        .site-footer {
+            background: var(--dark);
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .site-footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer-grid {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .footer-box h3 {
+            color: var(--secondary);
+            margin-bottom: 10px;
+        }
+        .footer-box p {
+            color: #ccc;
+            font-size: 15px;
+        }
+        .site-footer hr {
+            border: none;
+            border-top: 1px solid #444;
+            margin: 20px 0;
+        }
+        .site-footer .copyright {
+            color: #888;
+            font-size: 14px;
+        }
+
+        /* =============== منوی شناور =============== */
+        .floating-container {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .floating-main-btn {
+            background: var(--green);
+            color: #fff;
+            border: none;
+            padding: 14px 24px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 700;
+            font-family: inherit;
+            cursor: pointer;
+            box-shadow: 0 6px 25px rgba(37, 163, 68, 0.4);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: .3s;
+        }
+        .floating-main-btn:hover {
+            background: #1e8c3a;
+            transform: scale(1.03);
+        }
+        .floating-menu {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,.15);
+            padding: 12px;
+            margin-bottom: 12px;
+            display: none;
+            flex-direction: column;
+            min-width: 200px;
+        }
+        .floating-menu.active {
+            display: flex;
+        }
+        .floating-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 18px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 15px;
+            transition: .3s;
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-family: inherit;
+            width: 100%;
+            text-align: right;
+        }
+        .floating-item:hover {
+            background: var(--light);
+        }
+        .floating-item .item-icon {
+            font-size: 20px;
+        }
+        .call-wrapper {
+            position: relative;
+        }
+        .call-submenu {
+            display: none;
+            padding-right: 20px;
+            margin-top: 5px;
+        }
+        .call-submenu.active {
+            display: block;
+        }
+        .call-sub-item {
+            padding: 10px 18px;
+            font-size: 14px;
+        }
+        .whatsapp-item {
+            color: #25D366;
+        }
+        .eitaa-item {
+            color: var(--orange);
+        }
+        .btn-arrow {
+            transition: .3s;
+        }
+        .btn-arrow.open {
+            transform: rotate(90deg);
+        }
+
+        /* =============== دکمه اسکرول به بالا =============== */
+        #backToTop {
+            position: fixed;
+            bottom: 110px;
+            right: 30px;
+            z-index: 998;
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            font-size: 28px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 6px 25px rgba(0,0,0,.2);
+            transition: .3s;
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        #backToTop:hover {
+            background: var(--secondary);
+            transform: translateY(-4px);
+        }
+        #backToTop.show {
+            display: flex;
+        }
+
+        /* =============== ریسپانسیو =============== */
         @media (max-width: 768px) {
-            .service-detail {
-                grid-template-columns: 1fr;
-                text-align: center;
-                margin-top: 80px;
+            .blog-container {
+                padding: 20px 15px;
+                margin: 100px auto 40px;
             }
-            .service-detail .text h1 {
+            .blog-container h1 {
                 font-size: 26px;
             }
-            .service-detail .gif img {
-                max-height: 250px;
+            .blog-container h2 {
+                font-size: 22px;
+            }
+            .blog-container h3 {
+                font-size: 19px;
+            }
+            .blog-container h4 {
+                font-size: 17px;
+            }
+            .blog-container p,
+            .blog-container ul,
+            .blog-container ol {
+                font-size: 15px;
+            }
+            .blog-container table {
+                font-size: 14px;
+            }
+            .blog-container .back-links a {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+            .navbar ul {
+                display: none;
+            }
+            .mobile-menu {
+                display: block;
+            }
+            .floating-container {
+                left: 15px;
+                bottom: 20px;
+            }
+            .floating-main-btn {
+                padding: 12px 18px;
+                font-size: 14px;
+            }
+            #backToTop {
+                width: 48px;
+                height: 48px;
+                font-size: 24px;
+                bottom: 100px;
+                right: 15px;
             }
         }
     </style>
 </head>
 <body>
 
+<!-- =============== هدر =============== -->
 <header>
     <div class="container">
-        <a href="../index.html" class="logo"><img src="../images/logo.png" alt="لوگو"></a>
+        <a href="../index.html" class="logo"><img src="../images/logo.png" alt="لوگو شرکت سمپاشی نانوفناوران"></a>
         <nav class="navbar">
             <ul>
                 <li><a href="../index.html">صفحه اصلی</a></li>
-                <li><a href="../services.html" class="active">خدمات</a></li>
+                <li><a href="../services.html">خدمات مسکونی</a></li>
+                <li><a href="../commercial-services.html">خدمات تجاری</a></li>
                 <li><a href="../about.html">درباره ما</a></li>
                 <li><a href="../contact.html">تماس</a></li>
             </ul>
         </nav>
         <div class="header-buttons">
-            <a href="tel:09120705746" class="call-btn">📞 09120705746</a>
             <div class="mobile-menu">☰</div>
+        </div>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="جستجو...">
+            <button onclick="alert('قابلیت جستجو در حال توسعه است')">🔍</button>
         </div>
     </div>
 </header>
 
-<div class="service-detail">
-    <div class="text">
-        <h1>🏠 سمپاشی منازل</h1>
-        <p>کنترل کامل آفات در منازل مسکونی با روش‌های ایمن و ماندگار.</p>
-        <p><strong>روش کنترل:</strong> استفاده از سموم استاندارد و روش‌های نوین با تضمین کیفیت و ماندگاری بالا.</p>
-        <p><strong>مدت زمان اثرگذاری:</strong> نتایج سریع و ماندگار تا ۶ ماه.</p>
-        <a href="../services.html" class="back-link">🔙 بازگشت به لیست خدمات</a>
-        <div class="contact-float">
-            <a href="tel:09120705746">📞 تماس فوری</a>
-            <a href="https://wa.me/989120705746" target="_blank">💬 واتساپ</a>
-        </div>
+<!-- =============== مقاله =============== -->
+<div class="blog-container">
+
+    <h1>راهنمای جامع و تخصصی سمپاشی منازل | از نوساز تا اسباب‌کشی</h1>
+    <div class="meta">
+        <span>📅 آخرین به‌روزرسانی: ۶ شهریور ۱۴۰۴</span> &nbsp;|&nbsp; <span>⏱ زمان مطالعه: ۱۵ دقیقه</span>
     </div>
-    <div class="gif">
-        <img src="../images/services/residential.jpg" alt="سمپاشی منازل">
+
+    <!-- ===== تصویر اصلی (sahel.jpg) ===== -->
+    <div class="blog-image">
+        <img src="../images/services/sahel.jpg" alt="سمپاشی منازل - کنترل تخصصی نانوفناوران">
+        <div class="caption"><strong>سمپاشی تخصصی منازل</strong> - تضمین سلامت و آرامش خانواده شما</div>
     </div>
+
+    <h2>مقدمه: خانه امن، آرامش پایدار</h2>
+    <p>خانه، امن‌ترین پناهگاه هر انسانی است؛ جایی که پس از یک روز پرتنش، به آن پناه می‌بریم تا آرامش را تجربه کنیم. اما تصور کنید همین خانه، به دلایل مختلف، میزبان موجودات ناخواسته‌ای شود که نه‌تنها آرامش را از شما می‌گیرند، بلکه سلامت خانواده شما را نیز به خطر می‌اندازند. <strong>سمپاشی منازل</strong>، نه یک انتخاب لوکس، بلکه یک ضرورت برای حفظ سلامت و آرامش ساکنان است.</p>
+
+    <p>بسیاری از افراد تصور می‌کنند که سمپاشی تنها زمانی ضروری است که آفتی را در خانه مشاهده کنند. اما واقعیت این است که <strong>پیشگیری همواره بهتر از درمان است</strong>. بسیاری از آفات در مراحل اولیه قابل مشاهده نیستند و تا زمانی که جمعیت آنها به حد انفجار برسد، اثری از خود نشان نمی‌دهند. در این مقاله جامع از <strong>شرکت سمپاشی نانوفناوران بهداشت تهران</strong>، به تمام سوالات شما درباره سمپاشی منازل پاسخ خواهیم داد؛ از دلایل ضرورت سمپاشی خانه نوساز گرفته تا اهمیت آن قبل از اسباب‌کشی و جابجایی.</p>
+
+    <h2>بخش اول: سمپاشی منازل چیست و چرا ضروری است؟</h2>
+
+    <h3>تعریف سمپاشی منازل</h3>
+    <p>سمپاشی منازل مجموعه‌ای از عملیات تخصصی شامل بازرسی، شناسایی، کنترل و ریشه‌کنی آفات در محیط‌های مسکونی است که با استفاده از روش‌های علمی، سموم استاندارد و تجهیزات پیشرفته انجام می‌شود. این فرآیند شامل موارد زیر است:</p>
+    <ul>
+        <li><strong>بازرسی دقیق:</strong> شناسایی نقاط ورود، پناهگاه‌ها و منابع غذایی آفات</li>
+        <li><strong>شناسایی گونه:</strong> تشخیص نوع آفت برای انتخاب بهترین روش کنترل</li>
+        <li><strong>انتخاب روش مناسب:</strong> سمپاشی، طعمه‌گذاری، تزریق یا روش‌های فیزیکی</li>
+        <li><strong>پیشگیری:</strong> آموزش نکات نگهداری برای جلوگیری از بازگشت آفات</li>
+    </ul>
+
+    <h3>چرا سمپاشی منازل ضروری است؟</h3>
+    <p>آفات خانگی نه‌تنها ظاهر ناخوشایندی دارند، بلکه تهدیدی جدی برای سلامت و اموال شما محسوب می‌شوند:</p>
+
+    <table>
+        <thead>
+            <tr><th>نوع تهدید</th><th>توضیح</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>بیماری‌ها</strong></td><td>سوسک‌ها ناقل سالمونلا، ای‌کولی و تب حصبه؛ موش‌ها ناقل بیماری‌های خطرناک؛ پشه‌ها عامل تب دنگی و مالاریا</td></tr>
+            <tr><td><strong>آلرژی و آسم</strong></td><td>فضولات سوسک‌ها و مایت‌های گرد و غبار از عوامل اصلی آلرژی تنفسی در کودکان</td></tr>
+            <tr><td><strong>خسارت به اموال</strong></td><td>سوسک چوب‌خوار تخریب‌کننده سازه، بید فرش نابودکننده فرش و مبلمان</td></tr>
+            <tr><td><strong>آلودگی مواد غذایی</strong></td><td>آفات انباری مانند شپشک برنج و بید حبوبات، مواد غذایی را غیرقابل مصرف می‌کنند</td></tr>
+            <tr><td><strong>آسیب به سیم‌کشی</strong></td><td>موش‌ها و جوندگان با جویدن سیم‌ها، خطر آتش‌سوزی ایجاد می‌کنند</td></tr>
+        </tbody>
+    </table>
+
+    <h2>بخش دوم: چرا قبل از اسباب‌کشی و جابجایی باید منزل را سمپاشی کرد؟</h2>
+    <p>یکی از مهم‌ترین سوالاتی که بسیاری از افراد هنگام نقل مکان از خود می‌پرسند این است که <strong>آیا قبل از اسباب‌کشی باید منزل جدید را سمپاشی کنیم؟</strong> پاسخ قاطعانه <strong>بله</strong> است. در ادامه به دلایل این ضرورت می‌پردازیم:</p>
+
+    <h3>۱. انتقال آفات به همراه اثاثیه</h3>
+    <p>بسیاری از آفات مانند سوسک آلمانی (سوسک ریز کابینتی)، بید فرش، سوسک چوب‌خوار و حتی ساس، به راحتی درون وسایل چوبی، مبلمان، فرش‌ها و جعبه‌های کارتن پنهان می‌شوند و بدون آنکه متوجه شوید، با شما به خانه جدید نقل مکان می‌کنند. تخم‌های این آفات نیز می‌توانند در چین‌های لباس‌ها، کتاب‌ها و وسایل کوچک باقی بمانند و پس از مدتی، یک آلودگی جدید در خانه جدید شما ایجاد کنند.</p>
+
+    <h3>۲. نبود سابقه سمپاشی در خانه جدید</h3>
+    <p>شما هرگز نمی‌دانید ساکنان قبلی چه کسانی بوده‌اند و آیا خانه شما قبلاً به آفات آلوده بوده یا خیر. بسیاری از آفات می‌توانند ماه‌ها بدون غذا زنده بمانند و در پناهگاه‌های خود مخفی شوند. سوسک فاضلاب (آمریکایی) تا یک ماه بدون غذا و موش‌ها تا چند روز بدون آب می‌توانند زنده بمانند. حتی اگر خانه شما کاملاً تمیز به نظر برسد، ممکن است تخم‌ها یا پوره‌های آفات در شکاف‌های دیوار، پشت کابینت‌ها یا درون مجاری فاضلاب پنهان شده باشند.</p>
+
+    <h3>۳. جلوگیری از هزینه‌های اضافی</h3>
+    <p>تصور کنید پس از چند ماه زندگی در خانه جدید، ناگهان با هجوم سوسک‌ها یا ساس‌ها مواجه شوید. در این شرایط، علاوه بر هزینه سمپاشی اضطراری که معمولاً گران‌تر است، باید هزینه‌های جانبی مانند تعویض مبلمان آسیب‌دیده، ترمیم فرش‌های بیدزده یا حتی تعویض بخش‌هایی از چوب‌های ساختمان را نیز پرداخت کنید. سمپاشی پیشگیرانه قبل از اسباب‌کشی، سرمایه‌گذاری هوشمندانه‌ای است که از هزاران هزینه اضافی جلوگیری می‌کند.</p>
+
+    <h3>۴. آرامش خاطر</h3>
+    <p>یکی از مهم‌ترین دلایل سمپاشی پیش از اسباب‌کشی، <strong>آرامش خاطر</strong> شما و خانواده‌تان است. ورود به یک خانه جدید با اطمینان از سلامت و امنیت آن، تجربه لذت‌بخش‌تری خواهد بود. هیچ‌کس دوست ندارد در هفته‌های اول زندگی در خانه جدید، با دیدن یک سوسک یا موش، خاطره خوش نقل مکان را خراب کند.</p>
+
+    <h3>۵. پوشش کامل نقاط صعب‌الوصول</h3>
+    <p>قبل از جابجایی و ورود اثاثیه، دسترسی به تمام نقاط خانه از جمله پشت کابینت‌ها، زیر شیروانی‌ها، درون مجاری فاضلاب و شکاف‌های دیوار به راحتی امکان‌پذیر است. پس از چیدمان اثاثیه، بسیاری از این نقاط غیرقابل دسترس می‌شوند و سمپاشی بعدی با مشکل مواجه خواهد شد.</p>
+
+    <h2>بخش سوم: آیا خانه نوساز به سمپاشی نیاز دارد؟</h2>
+    <p>این یکی از رایج‌ترین سوالاتی است که از کارشناسان ما پرسیده می‌شود. بسیاری از افراد تصور می‌کنند خانه‌های نوساز، به دلیل جدید بودن مصالح و نبود سابقه سکونت، عاری از هرگونه آفت هستند. اما واقعیت چیز دیگری است:</p>
+
+    <h3>چرا خانه نوساز به سمپاشی نیاز دارد؟</h3>
+
+    <h4>۱. ورود آفات در حین ساخت</h4>
+    <p>در طول فرآیند ساخت و ساز، مصالح ساختمانی مانند چوب، آجر، سیمان و گچ در محیط‌های باز نگهداری می‌شوند و ممکن است آلوده به تخم‌ها یا پوره‌های آفات باشند. سوسک چوب‌خوار، موریانه و حتی سوسک‌ها، به راحتی می‌توانند با مصالح ساختمانی وارد خانه نوساز شوند.</p>
+
+    <h4>۲. ورود از طریق مجاری فاضلاب</h4>
+    <p>سوسک فاضلاب (سوسک آمریکایی) از طریق لوله‌های فاضلاب و سیفون‌ها به ساختمان‌های جدید نفوذ می‌کند. حتی اگر خانه نوساز باشد، اتصال آن به شبکه فاضلاب شهری، راهی برای ورود این آفات مقاوم ایجاد می‌کند.</p>
+
+    <h4>۳. جستجوی پناهگاه</h4>
+    <p>ساختمان‌های جدید که مدتی خالی می‌مانند، بهترین پناهگاه برای آفات محسوب می‌شوند. سوسک‌ها، عنکبوت‌ها و هزارپاها به دنبال محیط‌های تاریک، مرطوب و خالی از ساکن هستند تا در آنجا مستقر شوند.</p>
+
+    <h4>۴. ورود با وسایل کارگران و تجهیزات</h4>
+    <p>کارگران ساختمانی، تجهیزات و ماشین‌آلات آنها ممکن است از کارگاه‌ها و محیط‌های آلوده دیگر به خانه نوساز منتقل شوند و باعث ورود تخم‌ها و پوره‌های آفات شوند.</p>
+
+    <h4>۵. عدم وجود سابقه سمپاشی</h4>
+    <p>خانه نوساز هرگز سمپاشی نشده است و هیچ سد شیمیایی برای جلوگیری از ورود آفات وجود ندارد. در خانه‌های قدیمی، سمپاشی‌های متوالی باعث ایجاد یک لایه محافظتی می‌شود که تا حدی از نفوذ آفات جلوگیری می‌کند.</p>
+
+    <h4>۶. موریانه‌ها و سوسک چوب‌خوار</h4>
+    <p>خطرناک‌ترین آفاتی که می‌توانند خانه نوساز را تهدید کنند، <strong>موریانه</strong> و <strong>سوسک چوب‌خوار</strong> هستند. این آفات با تغذیه از چوب‌های ساختمان، می‌توانند استحکام سازه را به مرور زمان تخریب کنند و خسارت‌های جبران‌ناپذیری وارد آورند. بهترین زمان برای تشخیص و پیشگیری از این آفات، پیش از اتمام ساخت و ساز و قبل از نصب کابینت‌ها و کفپوش‌هاست.</p>
+
+    <h3>آیا سمپاشی خانه نوساز با خانه قدیمی متفاوت است؟</h3>
+    <p>بله، تفاوت‌های مهمی وجود دارد:</p>
+
+    <table>
+        <thead>
+            <tr><th>خانه نوساز</th><th>خانه قدیمی</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>تمرکز بر <strong>پیشگیری</strong> از ورود آفات</td><td>تمرکز بر <strong>ریشه‌کنی</strong> آفات موجود</td></tr>
+            <tr><td>استفاده از سموم <strong>باقی‌مانده</strong> و <strong>سد شیمیایی</strong></td><td>استفاده از روش‌های <strong>آمپاژ</strong> و <strong>مه‌پاشی</strong></td></tr>
+            <tr><td>نیاز به سمپاشی در <strong>مراحل انتهایی ساخت</strong> قبل از ورود اثاثیه</td><td>نیاز به سمپاشی در هر زمان و با رعایت نکات ایمنی</td></tr>
+            <tr><td>دسترسی آسان به <strong>تمام نقاط</strong> ساختمان</td><td>دسترسی محدود به نقاط پشت کابینت‌ها و اثاثیه</td></tr>
+            <tr><td>امکان <strong>تزریق</strong> به چوب‌ها قبل از نصب</td><td>نیاز به تخریب یا سوراخکاری برای تزریق</td></tr>
+        </tbody>
+    </table>
+
+    <!-- ===== تصویر دوم (sorayer.jpg) قبل از بخش چهارم ===== -->
+    <div class="blog-image">
+        <img src="../images/services/sorayer.jpg" alt="بهترین زمان سمپاشی منازل - نانوفناوران">
+        <div class="caption"><strong>زمان‌بندی اصولی سمپاشی</strong> - کلید موفقیت در کنترل آفات</div>
+    </div>
+
+    <h2>بخش چهارم: بهترین زمان برای سمپاشی منازل</h2>
+    <p>انتخاب زمان مناسب برای سمپاشی، تأثیر مستقیمی بر موفقیت آن دارد:</p>
+
+    <h3>بهترین زمان در سال</h3>
+    <p>اواخر بهار تا اوایل پاییز (اردیبهشت تا مهر) بهترین زمان برای سمپاشی منازل است. در این بازه زمانی، فعالیت و تولیدمثل بسیاری از آفات در اوج خود قرار دارد و سمپاشی می‌تواند بیشترین تأثیر را داشته باشد.</p>
+
+    <h3>بهترین زمان قبل از اسباب‌کشی</h3>
+    <p><strong>۱ تا ۳ روز قبل از اسباب‌کشی</strong> بهترین زمان برای سمپاشی منزل جدید است. در این بازه، سموم فرصت کافی برای اثرگذاری دارند و پس از تهویه کامل، منزل برای ورود شما ایمن خواهد بود.</p>
+
+    <h3>سمپاشی خانه نوساز</h3>
+    <p>بهترین زمان برای سمپاشی خانه نوساز، <strong>پس از پایان تمام کارهای ساختمانی و قبل از نصب کابینت‌ها و کفپوش‌ها</strong> است. در این مرحله، تمام چوب‌ها، دیوارها و مجاری فاضلاب در دسترس هستند و می‌توان بهترین پوشش سموم را اعمال کرد.</p>
+
+    <h3>چه زمانی نباید سمپاشی کرد؟</h3>
+    <ul>
+        <li>هنگام بارندگی شدید (در سمپاشی فضای باز)</li>
+        <li>در روزهای بسیار گرم و خشک (کاهش اثرگذاری سموم)</li>
+        <li>در زمان حضور افراد و حیوانات خانگی</li>
+        <li>در صورت ابتلای افراد خانواده به بیماری‌های تنفسی حاد</li>
+    </ul>
+
+    <h2>بخش پنجم: روش‌های تخصصی سمپاشی منازل</h2>
+    <p>شرکت سمپاشی نانوفناوران با بهره‌گیری از دانش فنی روز، از ترکیبی از روش‌ها برای کنترل و ریشه‌کنی آفات منازل استفاده می‌کند:</p>
+
+    <h3>۱. سمپاشی باقی‌مانده (Residual Spraying)</h3>
+    <p>در این روش، سموم حشره‌کش روی دیوارها، کف، پشت کابینت‌ها و نقاط مستعد پاشش می‌شوند و یک لایه شیمیایی ایجاد می‌کنند که تا هفته‌ها و ماه‌ها فعال باقی می‌ماند. این روش برای پیشگیری از ورود مجدد آفات بسیار مؤثر است.</p>
+
+    <h3>۲. مه‌پاشی سرد (ULV - Ultra Low Volume)</h3>
+    <p>این روش با تولید ذرات بسیار ریز سم، تمام فضاهای بسته و صعب‌الوصول را پوشش می‌دهد و برای از بین بردن پشه‌ها، مگس‌ها و سایر حشرات پرنده بسیار مؤثر است.</p>
+
+    <h3>۳. طعمه‌گذاری (Gel Baiting)</h3>
+    <p>طعمه‌های ژل‌حاوی سم در مسیرهای تردد آفات قرار داده می‌شوند. سوسک‌ها این طعمه را به لانه برده و باعث آلوده شدن و نابودی کل کلونی می‌شوند.</p>
+
+    <h3>۴. تزریق به چوب (Injection)</h3>
+    <p>برای کنترل سوسک چوب‌خوار و موریانه، سم به‌طور مستقیم به داخل دالان‌های چوب تزریق می‌شود و لاروهای عمقی را از بین می‌برد.</p>
+
+    <h3>۵. گازدهی (Fumigation)</h3>
+    <p>برای فضاهای بسیار آلوده و آفات مقاومی مانند ساس، روش گازدهی (که در شرایط خاص و با رعایت کامل ایمنی انجام می‌شود) می‌تواند بهترین گزینه باشد.</p>
+
+    <h2>بخش ششم: هزینه سمپاشی منازل</h2>
+    <p>هزینه سمپاشی منازل به عوامل زیر بستگی دارد. برای دریافت <strong>مشاوره رایگان</strong> و <strong>استعلام دقیق هزینه</strong>، با کارشناسان ما تماس بگیرید:</p>
+
+    <table>
+        <thead>
+            <tr><th>عامل</th><th>تأثیر بر هزینه</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>مساحت منزل</strong></td><td>هرچه متراژ بیشتر باشد، هزینه بیشتر است</td></tr>
+            <tr><td><strong>شدت آلودگی</strong></td><td>آلودگی شدید نیاز به عملیات گسترده‌تری دارد</td></tr>
+            <tr><td><strong>نوع آفت</strong></td><td>ساس و موریانه نیاز به روش‌های خاص و گران‌تر دارند</td></tr>
+            <tr><td><strong>نوع روش کنترل</strong></td><td>سمپاشی باقی‌مانده، مه‌پاشی، طعمه‌گذاری یا ترکیبی</td></tr>
+            <tr><td><strong>دسترسی به نقاط آلوده</strong></td><td>سمپاشی نقاط صعب‌الوصول هزینه را افزایش می‌دهد</td></tr>
+            <tr><td><strong>تعداد جلسات</strong></td><td>برخی آفات نیاز به چند نوبت سمپاشی دارند</td></tr>
+        </tbody>
+    </table>
+
+    <h2>بخش هفتم: نکات طلایی قبل و بعد از سمپاشی منازل</h2>
+
+    <h3>قبل از سمپاشی</h3>
+    <ul>
+        <li>تمام مواد غذایی را در ظروف درب‌دار قرار دهید یا از محیط خارج کنید</li>
+        <li>ظروف و وسایل آشپزخانه را بپوشانید یا خارج کنید</li>
+        <li>افراد و حیوانات خانگی را از محیط خارج کنید</li>
+        <li>کابینت‌ها و کمدها را خالی کنید تا دسترسی به پشت آنها امکان‌پذیر شود</li>
+        <li>مبلمان را از دیوار فاصله دهید (برای سمپاشی پشت آن‌ها)</li>
+        <li>از کارشناس در مورد زمان بازگشت ایمن سوال کنید</li>
+    </ul>
+
+    <h3>بعد از سمپاشی</h3>
+    <ul>
+        <li>پس از مدت زمان اعلام‌شده، درها و پنجره‌ها را باز کنید تا محیط تهویه شود</li>
+        <li>سطوحی که با مواد غذایی تماس دارند (میز، سینک) را با آب و صابون بشویید</li>
+        <li>از تماس مستقیم کودکان و حیوانات خانگی با سطوح سمپاشی‌شده تا ۲۴ ساعت جلوگیری کنید</li>
+        <li>اگر برای چند روز پس از سمپاشی، حشرات بیشتری مشاهده کردید، نگران نباشید؛ این پدیده به دلیل خروج آفات از لانه‌هاست و نشانه موفقیت سمپاشی است</li>
+        <li>اگر پس از ۲ هفته همچنان آفات مشاهده کردید، با کارشناسان ما تماس بگیرید</li>
+    </ul>
+
+    <h2>بخش هشتم: سوالات متداول درباره سمپاشی منازل</h2>
+
+    <details>
+        <summary><strong>آیا سمپاشی منازل برای کودکان و زنان باردار خطرناک است؟</strong></summary>
+        <p>خیر، سموم استفاده‌شده توسط شرکت نانوفناوران با رعایت کامل استانداردهای بهداشتی انتخاب می‌شوند و برای انسان و حیوانات خانگی در صورت رعایت نکات ایمنی، بی‌خطر هستند. با این حال، افراد باردار و کودکان بهتر است در زمان سمپاشی و تا چند ساعت پس از آن در محیط حضور نداشته باشند.</p>
+    </details>
+
+    <details>
+        <summary><strong>چند بار در سال باید منزل را سمپاشی کرد؟</strong></summary>
+        <p>بر اساس استانداردهای جهانی کنترل آفات، توصیه می‌شود منازل حداقل سالی یک بار (ترجیحاً در اوایل بهار) سمپاشی شوند. در صورت مشاهده آفات، بلافاصله باید اقدام شود. خانه‌های واقع در مناطق گرمسیر یا دارای رطوبت بالا ممکن است نیاز به سمپاشی ۶ ماهه داشته باشند.</p>
+    </details>
+
+    <details>
+        <summary><strong>آیا خودمان هم می‌توانیم منزل را سمپاشی کنیم؟</strong></summary>
+        <p>استفاده از اسپری‌های خانگی و سموم موجود در بازار معمولاً مؤثر نیست و فقط آفات سطحی را از بین می‌برد. همچنین استفاده نادرست از سموم می‌تواند برای سلامتی خطرناک باشد. روش‌های تخصصی مانند تزریق، مه‌پاشی و طعمه‌گذاری نیاز به تجهیزات و دانش تخصصی دارد و باید توسط کارشناسان مجرب انجام شود.</p>
+    </details>
+
+    <details>
+        <summary><strong>آیا بعد از سمپاشی نیاز به خالی کردن منزل است؟</strong></summary>
+        <p>بله، معمولاً ۴ تا ۶ ساعت باید منزل را ترک کنید تا سموم تهویه شوند. برای برخی روش‌ها مانند گازدهی، این زمان طولانی‌تر خواهد بود. کارشناسان ما زمان دقیق را به شما اعلام می‌کنند.</p>
+    </details>
+
+    <details>
+        <summary><strong>آیا سمپاشی منزل ارزش مالی دارد؟</strong></summary>
+        <p>قطعاً بله. هزینه سمپاشی در مقایسه با خسارت‌های ناشی از آفات بسیار ناچیز است. سوسک چوب‌خوار می‌تواند سازه منزل را تخریب کند، ساس می‌تواند مبلمان شما را غیرقابل استفاده کند و بید فرش می‌تواند فرش‌های ارزشمند را نابود سازد. سمپاشی پیشگیرانه، یک سرمایه‌گذاری هوشمندانه برای حفظ دارایی‌های شماست.</p>
+    </details>
+
+    <details>
+        <summary><strong>آیا سمپاشی خانه نوساز ضروری است؟</strong></summary>
+        <p>بله، به دلایل ذکر شده در بخش سوم این مقاله، خانه نوساز نیز به سمپاشی تخصصی نیاز دارد. پیشگیری به موقع از ورود آفات به خانه نوساز، از هزینه‌های سنگین در آینده جلوگیری می‌کند.</p>
+    </details>
+
+    <details>
+        <summary><strong>قبل از اسباب‌کشی چه نکاتی را رعایت کنیم؟</strong></summary>
+        <p>قبل از اسباب‌کشی، حتماً منزل جدید را توسط کارشناسان مجرب بازرسی کنید و در صورت نیاز سمپاشی کنید. همچنین اثاثیه خود را قبل از حمل به خانه جدید، بررسی کنید تا آفات را با خود منتقل نکنید.</p>
+    </details>
+
+    <h2>نتیجه‌گیری</h2>
+    <p>سمپاشی منازل، چه خانه نوساز باشد و چه قدیمی، چه قبل از اسباب‌کشی و چه در حین زندگی، یک ضرورت انکارناپذیر برای حفظ سلامت و آرامش خانواده است. پیشگیری به موقع از ورود آفات، نه‌تنها از هزینه‌های سنگین آینده جلوگیری می‌کند، بلکه محیطی امن و سالم برای رشد و زندگی شما و عزیزانتان فراهم می‌آورد.</p>
+
+    <p><strong>شرکت سمپاشی نانوفناوران بهداشت تهران</strong> با بیش از یک دهه تجربه، مجوز رسمی از وزارت بهداشت و بهره‌گیری از پیشرفته‌ترین روش‌های روز دنیا، آماده ارائه خدمات تخصصی سمپاشی منازل به شماست. تیم کارشناسان ما با شناسایی دقیق نوع آفت و انتخاب بهترین روش کنترل، محیطی امن و آرام را برای شما به ارمغان می‌آورند.</p>
+
+    <p style="font-size:20px; font-weight:700; text-align:center; color:var(--primary);">🚀 همین حالا اقدام کنید:</p>
+    <div style="text-align:center; margin:20px 0;">
+        <p>📞 <strong>تماس فوری:</strong> <a href="tel:09120705746" style="font-size:20px; color:var(--secondary);">۰۹۱۲۰۷۰۵۷۴۶</a></p>
+        <p>💬 <strong>درخواست مشاوره رایگان:</strong> از طریق <a href="https://wa.me/989120705746" target="_blank">واتساپ</a> یا <a href="https://eitaa.com/nanofannavaran_ir" target="_blank">ایتا</a></p>
+        <p>🔗 <strong>مشاهده سایر خدمات:</strong> <a href="../services.html">کنترل آفات مسکونی</a></p>
+    </div>
+
+    <div class="back-links">
+        <a href="../index.html" class="btn-blog-home">🏠 بازگشت به صفحه اصلی</a>
+        <a href="../services.html" class="btn-blog-services">🔙 بازگشت به لیست خدمات مسکونی</a>
+        <a href="../contact.html" class="btn-blog-contact">📞 تماس با ما</a>
+    </div>
+
 </div>
 
+<!-- =============== فوتر =============== -->
 <footer class="site-footer">
     <div class="container">
         <div class="footer-grid">
@@ -125,6 +770,116 @@
     </div>
 </footer>
 
-<script src="../script.js"></script>
+<!-- =============== منوی شناور =============== -->
+<div class="floating-container">
+    <button class="floating-main-btn" id="floatingToggle">
+        <span class="btn-arrow">▶</span>
+        <span class="btn-text">📞 مشاوره رایگان</span>
+    </button>
+    <div class="floating-menu" id="floatingMenu">
+        <div class="call-wrapper">
+            <div class="floating-item call-item" id="callToggle">
+                <span class="item-icon">📞</span>
+                <span class="item-text">تماس سریع</span>
+                <span class="arrow">▲</span>
+            </div>
+            <div class="call-submenu" id="callSubmenu">
+                <a href="tel:09120705746" class="floating-item call-sub-item"><span class="item-icon">📞</span><span class="item-text">شماره ۱</span></a>
+                <a href="tel:09197173454" class="floating-item call-sub-item"><span class="item-icon">📞</span><span class="item-text">شماره ۲</span></a>
+            </div>
+        </div>
+        <a href="https://wa.me/989120705746?text=%D8%A8%D9%87%20%D8%B3%D8%A7%DB%8C%D8%AA%20%D8%B4%D8%B1%DA%A9%D8%AA%20%D8%B3%D9%85%D9%BE%D8%A7%D8%B4%DB%8C%20%D9%86%D8%A7%D9%86%D9%88%D9%81%D9%86%D8%A7%D9%88%D8%B1%D8%A7%D9%86%20%D8%AE%D9%88%D8%B4%20%D8%A2%D9%85%D8%AF%DB%8C%D8%AF" target="_blank" class="floating-item whatsapp-item"><span class="item-icon">💬</span><span class="item-text">واتساپ</span></a>
+        <a href="https://eitaa.com/nanofannavaran_ir" target="_blank" class="floating-item eitaa-item"><span class="item-icon">✈️</span><span class="item-text">ایتا</span></a>
+    </div>
+</div>
+
+<!-- =============== دکمه اسکرول به بالا =============== -->
+<button id="backToTop" title="برو به بالا">↑</button>
+
+<!-- =============== جاوااسکریپت کامل =============== -->
+<script>
+    // ===== دکمه اسکرول به بالا =====
+    var backToTopBtn = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
+    });
+
+    backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // ===== منوی شناور =====
+    var toggleBtn = document.getElementById('floatingToggle');
+    var menu = document.getElementById('floatingMenu');
+    var arrow = toggleBtn.querySelector('.btn-arrow');
+
+    toggleBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        menu.classList.toggle('active');
+        arrow.classList.toggle('open');
+    });
+
+    // ===== زیرمنوی تماس =====
+    var callToggle = document.getElementById('callToggle');
+    var callSubmenu = document.getElementById('callSubmenu');
+
+    callToggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        callSubmenu.classList.toggle('active');
+        var arrowIcon = this.querySelector('.arrow');
+        if (arrowIcon) {
+            arrowIcon.textContent = callSubmenu.classList.contains('active') ? '▼' : '▲';
+        }
+    });
+
+    // ===== بستن منو با کلیک بیرون =====
+    document.addEventListener('click', function() {
+        menu.classList.remove('active');
+        arrow.classList.remove('open');
+        callSubmenu.classList.remove('active');
+        var arrowIcon = callToggle.querySelector('.arrow');
+        if (arrowIcon) {
+            arrowIcon.textContent = '▲';
+        }
+    });
+
+    menu.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+
+    // ===== منوی موبایل =====
+    var mobileMenuBtn = document.querySelector('.mobile-menu');
+    var navbar = document.querySelector('.navbar ul');
+
+    mobileMenuBtn.addEventListener('click', function() {
+        if (navbar.style.display === 'flex') {
+            navbar.style.display = 'none';
+        } else {
+            navbar.style.display = 'flex';
+            navbar.style.flexDirection = 'column';
+            navbar.style.position = 'absolute';
+            navbar.style.top = '70px';
+            navbar.style.right = '20px';
+            navbar.style.background = '#fff';
+            navbar.style.padding = '20px';
+            navbar.style.borderRadius = '12px';
+            navbar.style.boxShadow = '0 10px 30px rgba(0,0,0,.15)';
+            navbar.style.gap = '10px';
+            navbar.style.width = '200px';
+            navbar.style.zIndex = '999';
+        }
+    });
+
+    console.log('✅ دکمه اسکرول و منوی شناور فعال شدند!');
+</script>
+
 </body>
 </html>
