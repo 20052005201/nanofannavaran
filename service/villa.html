@@ -3,128 +3,793 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سمپاشی ویلا | نانوفناوران</title>
-    <link rel="stylesheet" href="../style.css">
+    <title>سمپاشی ویلا | راهنمای جامع کنترل آفات در ویلاها و باغ‌ها | نانوفناوران</title>
+    <meta name="description" content="مقاله جامع سمپاشی ویلا: چالش‌های کنترل آفات در ویلاهای فصلی، روش‌های تخصصی سمپاشی فضای باز و باغ، پیشگیری از ورود آفات پس از مدتی خالی بودن.">
+    <meta name="keywords" content="سمپاشی ویلا, کنترل آفات باغ, سمپاشی باغ, دفع حشرات ویلا, سمپاشی فضای باز, نانوفناوران">
+    <link rel="canonical" href="https://nanofannavaran.ir/service/villa.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
-        .service-detail {
+        /* ===== استایل‌های اختصاصی مقاله ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Vazirmatn', 'IRANSans', 'Tahoma', sans-serif;
+            background: #f8fbfd;
+            color: #222;
+            line-height: 1.9;
+            direction: rtl;
+            padding: 20px 15px;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .blog-article-container {
             max-width: 1100px;
-            margin: 100px auto 50px;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
-        }
-        .service-detail .text h1 {
-            font-size: 32px;
-            color: var(--primary);
-            margin-bottom: 20px;
-        }
-        .service-detail .text p {
-            line-height: 2.2;
-            color: #555;
-            font-size: 16px;
-        }
-        .service-detail .gif img {
+            margin: 20px auto 60px;
+            background: #fff;
+            border-radius: 24px;
+            box-shadow: 0 10px 40px rgba(0,0,0,.08);
+            padding: 30px 25px 50px;
+            font-family: 'Vazirmatn', 'IRANSans', 'Tahoma', sans-serif;
+            line-height: 1.8;
+            color: #2c3e50;
+            direction: rtl;
             width: 100%;
-            max-height: 400px;
-            object-fit: contain;
+        }
+        .blog-article-container h1 {
+            font-size: 32px;
+            color: #0B6FB8;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        .blog-article-container .blog-meta {
+            color: #888;
+            font-size: 14px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 18px;
+            margin-bottom: 25px;
+        }
+        .blog-article-container h2 {
+            font-size: 26px;
+            color: #1F2937;
+            margin: 35px 0 12px;
+            border-right: 5px solid #0B6FB8;
+            padding-right: 15px;
+        }
+        .blog-article-container h3 {
+            font-size: 21px;
+            color: #0B6FB8;
+            margin: 25px 0 10px;
+        }
+        .blog-article-container h4 {
+            font-size: 18px;
+            color: #1F2937;
+            margin: 20px 0 8px;
+        }
+        .blog-article-container p {
+            line-height: 2.2;
+            color: #444;
+            font-size: 16px;
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+        .blog-article-container ul, .blog-article-container ol {
+            line-height: 2.2;
+            color: #444;
+            font-size: 16px;
+            padding-right: 25px;
+            margin-bottom: 18px;
+        }
+        .blog-article-container ul li, .blog-article-container ol li {
+            margin-bottom: 6px;
+        }
+        .blog-article-container table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 18px 0 25px;
+            font-size: 15px;
+            overflow-x: auto;
+            display: block;
+        }
+        .blog-article-container table th {
+            background: #0B6FB8;
+            color: #fff;
+            padding: 10px 12px;
+            text-align: right;
+        }
+        .blog-article-container table td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            background: #fafafa;
+        }
+        .blog-article-container table tr:nth-child(even) td {
+            background: #f5f8fc;
+        }
+        .blog-article-image {
+            margin: 25px 0;
+            text-align: center;
+        }
+        .blog-article-image img {
+            width: 100%;
+            max-width: 700px;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,.15);
+            height: auto;
         }
-        .back-link {
+        .blog-article-image .caption {
+            font-size: 14px;
+            color: #888;
+            margin-top: 10px;
+        }
+        .blog-article-image .caption strong {
+            color: #0B6FB8;
+        }
+        .blog-article-container .blog-back-links {
+            margin: 35px 0 15px;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .blog-article-container .blog-back-links a {
             display: inline-block;
-            margin-top: 30px;
-            background: var(--secondary);
-            color: #fff;
-            padding: 12px 28px;
+            padding: 10px 22px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
             transition: .3s;
+            font-size: 15px;
+            text-align: center;
+            flex: 1 1 auto;
+            min-width: 140px;
         }
-        .back-link:hover {
-            background: var(--primary);
-        }
-        .contact-float {
-            margin-top: 20px;
-        }
-        .contact-float a {
-            display: inline-block;
-            background: var(--primary);
+        .blog-article-container .blog-back-links .btn-home {
+            background: #0B6FB8;
             color: #fff;
-            padding: 12px 28px;
-            border-radius: 50px;
-            text-decoration: none;
+        }
+        .blog-article-container .blog-back-links .btn-home:hover {
+            background: #11A64A;
+        }
+        .blog-article-container .blog-back-links .btn-services {
+            background: #11A64A;
+            color: #fff;
+        }
+        .blog-article-container .blog-back-links .btn-services:hover {
+            background: #0B6FB8;
+        }
+        .blog-article-container .blog-back-links .btn-contact {
+            background: #1F2937;
+            color: #fff;
+        }
+        .blog-article-container .blog-back-links .btn-contact:hover {
+            background: #0B6FB8;
+        }
+        .blog-callout {
+            background: #f0f7ff;
+            border-right: 5px solid #0B6FB8;
+            padding: 18px 22px;
+            border-radius: 12px;
+            margin: 22px 0;
+        }
+        .blog-callout strong {
+            color: #0B6FB8;
+        }
+        .blog-callout-yellow {
+            background: #fff8e1;
+            border-right: 5px solid #ffc107;
+            padding: 18px 22px;
+            border-radius: 12px;
+            margin: 22px 0;
+        }
+        .blog-callout-yellow strong {
+            color: #e67e22;
+        }
+        .blog-article-container details {
+            background: #f8fbfd;
+            padding: 14px 18px;
+            border-radius: 12px;
+            margin-bottom: 14px;
+            border: 1px solid #e9ecef;
+        }
+        .blog-article-container details summary {
             font-weight: 700;
-            margin-left: 10px;
-            transition: .3s;
+            color: #0B6FB8;
+            cursor: pointer;
+            font-size: 16px;
         }
-        .contact-float a:hover {
-            background: var(--secondary);
+        .blog-article-container details p {
+            margin-top: 10px;
+            padding-right: 8px;
+            font-size: 15px;
         }
+
+        /* ===== دکمه اسکرول به بالا ===== */
+        #blogBackToTop {
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background: #0B6FB8;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            font-size: 26px;
+            font-weight: 700;
+            cursor: pointer;
+            display: none;
+            z-index: 9999;
+            box-shadow: 0 6px 25px rgba(11, 111, 184, 0.4);
+            transition: all 0.3s ease;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Vazirmatn', sans-serif;
+            line-height: 1;
+        }
+        #blogBackToTop:hover {
+            background: #11A64A;
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 10px 35px rgba(11, 111, 184, 0.5);
+        }
+        #blogBackToTop.show {
+            display: flex;
+        }
+
+        /* ===== منوی شناور ===== */
+        .blog-floating-container {
+            position: fixed;
+            bottom: 25px;
+            left: 15px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-family: 'Vazirmatn', sans-serif;
+            direction: ltr;
+            gap: 6px;
+        }
+        .blog-floating-btn {
+            background: linear-gradient(135deg, #25D366 0%, #1da851 100%);
+            color: #fff;
+            border: none;
+            border-radius: 30px 0 0 30px;
+            padding: 12px 18px 12px 22px;
+            font-size: 14px;
+            font-weight: 800;
+            cursor: pointer;
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.5);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+            font-family: 'Vazirmatn', sans-serif;
+        }
+        .blog-floating-btn:hover {
+            transform: scale(1.04);
+            box-shadow: 0 8px 35px rgba(37, 211, 102, 0.7);
+        }
+        .blog-floating-btn .btn-arrow {
+            font-size: 12px;
+            transition: transform 0.4s ease;
+        }
+        .blog-floating-btn.active .btn-arrow {
+            transform: rotate(90deg);
+        }
+        .blog-floating-menu {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 6px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(-15px) scale(0.95);
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        .blog-floating-menu.open {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0) scale(1);
+        }
+        .blog-floating-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 14px;
+            border-radius: 50px;
+            color: #fff;
+            font-weight: 700;
+            font-size: 13px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            white-space: nowrap;
+            border: 2px solid rgba(255, 255, 255, 0.15);
+            text-decoration: none;
+            font-family: 'Vazirmatn', sans-serif;
+        }
+        .blog-floating-item:hover {
+            transform: scale(1.06);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+        .blog-floating-item .item-icon { font-size: 16px; }
+        .blog-floating-item .item-text { font-size: 13px; }
+
+        .blog-call-item {
+            background: linear-gradient(135deg, #25D366, #1da851);
+            border-radius: 30px 0 0 30px;
+            cursor: pointer;
+            position: relative;
+        }
+        .blog-call-item .arrow {
+            font-size: 11px;
+            margin-right: 4px;
+            transition: transform 0.3s ease;
+        }
+        .blog-call-item.open .arrow {
+            transform: rotate(180deg);
+        }
+        .blog-call-submenu {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            opacity: 0;
+            visibility: hidden;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            margin-right: 4px;
+        }
+        .blog-call-submenu.open {
+            opacity: 1;
+            visibility: visible;
+            max-height: 150px;
+        }
+        .blog-call-sub-item {
+            background: linear-gradient(135deg, #25D366, #1da851);
+            border-radius: 50px;
+            padding: 6px 12px;
+            font-size: 12px;
+            gap: 4px;
+        }
+        .blog-call-sub-item:hover {
+            transform: scale(1.05);
+        }
+        .blog-whatsapp-item {
+            background: linear-gradient(135deg, #25D366, #1da851);
+            border-radius: 50px;
+        }
+        .blog-eitaa-item {
+            background: linear-gradient(135deg, #f97316, #ea580c);
+            border-radius: 0 50px 50px 0;
+        }
+
+        /* ===== ریسپانسیو ===== */
         @media (max-width: 768px) {
-            .service-detail {
-                grid-template-columns: 1fr;
-                text-align: center;
-                margin-top: 80px;
+            body {
+                padding: 10px 10px;
             }
-            .service-detail .text h1 {
-                font-size: 26px;
+            .blog-article-container {
+                padding: 20px 16px 35px;
+                margin: 10px auto 40px;
+                border-radius: 16px;
             }
-            .service-detail .gif img {
-                max-height: 250px;
+            .blog-article-container h1 {
+                font-size: 24px;
             }
+            .blog-article-container h2 {
+                font-size: 20px;
+                margin: 28px 0 10px;
+            }
+            .blog-article-container h3 {
+                font-size: 18px;
+                margin: 20px 0 8px;
+            }
+            .blog-article-container h4 {
+                font-size: 16px;
+            }
+            .blog-article-container p {
+                font-size: 15px;
+                line-height: 2;
+            }
+            .blog-article-container ul, .blog-article-container ol {
+                font-size: 15px;
+                padding-right: 20px;
+            }
+            .blog-article-container table {
+                font-size: 13px;
+                display: block;
+                overflow-x: auto;
+            }
+            .blog-article-container table th,
+            .blog-article-container table td {
+                padding: 6px 10px;
+            }
+            .blog-article-image img {
+                max-width: 100%;
+                border-radius: 14px;
+            }
+            .blog-article-container .blog-back-links {
+                gap: 10px;
+            }
+            .blog-article-container .blog-back-links a {
+                padding: 8px 16px;
+                font-size: 13px;
+                min-width: 100px;
+                flex: 1 0 auto;
+            }
+            .blog-callout, .blog-callout-yellow {
+                padding: 14px 16px;
+                margin: 18px 0;
+            }
+            .blog-article-container details {
+                padding: 12px 14px;
+            }
+            .blog-article-container details summary {
+                font-size: 15px;
+            }
+            .blog-article-container details p {
+                font-size: 14px;
+            }
+
+            #blogBackToTop {
+                width: 44px;
+                height: 44px;
+                font-size: 22px;
+                bottom: 75px;
+                right: 12px;
+            }
+
+            .blog-floating-container {
+                bottom: 15px;
+                left: 8px;
+                gap: 4px;
+            }
+            .blog-floating-btn {
+                padding: 10px 14px 10px 18px;
+                font-size: 12px;
+                border-radius: 25px 0 0 25px;
+            }
+            .blog-floating-btn .btn-arrow { font-size: 10px; }
+            .blog-floating-item {
+                padding: 8px 10px;
+                font-size: 11px;
+                gap: 4px;
+                border-radius: 25px;
+            }
+            .blog-floating-item .item-icon { font-size: 14px; }
+            .blog-floating-item .item-text { font-size: 11px; }
+            .blog-call-item { border-radius: 25px 0 0 25px; }
+            .blog-call-sub-item {
+                padding: 5px 10px;
+                font-size: 10px;
+            }
+            .blog-eitaa-item { border-radius: 0 25px 25px 0; }
+        }
+
+        @media (max-width: 480px) {
+            .blog-article-container {
+                padding: 16px 12px 28px;
+                margin: 8px auto 30px;
+                border-radius: 12px;
+            }
+            .blog-article-container h1 {
+                font-size: 20px;
+            }
+            .blog-article-container h2 {
+                font-size: 18px;
+            }
+            .blog-article-container h3 {
+                font-size: 16px;
+            }
+            .blog-article-container p {
+                font-size: 14px;
+                line-height: 1.9;
+            }
+            .blog-article-container ul, .blog-article-container ol {
+                font-size: 14px;
+                padding-right: 16px;
+            }
+            .blog-article-container .blog-back-links a {
+                padding: 6px 12px;
+                font-size: 12px;
+                min-width: 80px;
+            }
+
+            #blogBackToTop {
+                width: 38px;
+                height: 38px;
+                font-size: 18px;
+                bottom: 65px;
+                right: 8px;
+            }
+
+            .blog-floating-container {
+                bottom: 10px;
+                left: 5px;
+                gap: 3px;
+            }
+            .blog-floating-btn {
+                padding: 8px 10px 8px 14px;
+                font-size: 10px;
+                border-radius: 20px 0 0 20px;
+            }
+            .blog-floating-btn .btn-arrow { font-size: 8px; }
+            .blog-floating-item {
+                padding: 6px 8px;
+                font-size: 10px;
+                gap: 3px;
+                border-radius: 20px;
+            }
+            .blog-floating-item .item-icon { font-size: 12px; }
+            .blog-floating-item .item-text { font-size: 10px; }
+            .blog-call-item { border-radius: 20px 0 0 20px; }
+            .blog-call-sub-item {
+                padding: 4px 8px;
+                font-size: 9px;
+            }
+            .blog-eitaa-item { border-radius: 0 20px 20px 0; }
         }
     </style>
 </head>
 <body>
 
-<header>
-    <div class="container">
-        <a href="../index.html" class="logo"><img src="../images/logo.png" alt="لوگو"></a>
-        <nav class="navbar">
-            <ul>
-                <li><a href="../index.html">صفحه اصلی</a></li>
-                <li><a href="../services.html" class="active">خدمات</a></li>
-                <li><a href="../about.html">درباره ما</a></li>
-                <li><a href="../contact.html">تماس</a></li>
-            </ul>
-        </nav>
-        <div class="header-buttons">
-            <a href="tel:09120705746" class="call-btn">📞 09120705746</a>
-            <div class="mobile-menu">☰</div>
-        </div>
-    </div>
-</header>
+<!-- ===== محتوای مقاله ===== -->
+<div class="blog-article-container">
 
-<div class="service-detail">
-    <div class="text">
-        <h1>🏡 سمپاشی ویلا</h1>
-        <p>کنترل آفات در ویلاها و محیط‌های تفریحی با روش‌های تخصصی.</p>
-        <p><strong>روش کنترل:</strong> استفاده از سموم استاندارد و روش‌های نوین با تضمین کیفیت و ماندگاری بالا.</p>
-        <p><strong>مدت زمان اثرگذاری:</strong> نتایج سریع و ماندگار تا ۶ ماه.</p>
-        <a href="../services.html" class="back-link">🔙 بازگشت به لیست خدمات</a>
-        <div class="contact-float">
-            <a href="tel:09120705746">📞 تماس فوری</a>
-            <a href="https://wa.me/989120705746" target="_blank">💬 واتساپ</a>
-        </div>
+    <h1>راهنمای جامع و تخصصی سمپاشی ویلا | کنترل آفات در باغ‌ها و اقامتگاه‌های فصلی</h1>
+    <div class="blog-meta">
+        <span>📅 آخرین به‌روزرسانی: ۱۰ شهریور ۱۴۰۴</span> &nbsp;|&nbsp; <span>⏱ زمان مطالعه: ۱۲ دقیقه</span>
     </div>
-    <div class="gif">
-        <img src="../images/services/villa.jpg" alt="سمپاشی ویلا">
+
+    <!-- ===== تصویر اصلی ===== -->
+    <div class="blog-article-image">
+        <img src="../images/services/villa.jpg" alt="سمپاشی ویلا - کنترل تخصصی آفات در باغ‌ها و اقامتگاه‌های فصلی">
+        <div class="caption"><strong>سمپاشی تخصصی ویلا</strong> - تضمین آرامش و بهداشت در اقامتگاه‌های فصلی</div>
     </div>
+
+    <h2>مقدمه: چالش‌های منحصر‌به‌فرد کنترل آفات در ویلاها</h2>
+    <p>ویلاها به عنوان پناهگاهی برای فرار از شلوغی شهر، یکی از ارزش‌مندترین دارایی‌های هر خانواده هستند. اما همین مکان‌های آرامش‌بخش، به دلیل ویژگی‌های خاص خود، با چالش‌های منحصر‌به‌فردی در زمینه کنترل آفات روبرو هستند. برخلاف آپارتمان‌های شهری که تراکم جمعیت بالا و فضاهای مشترک دارند، ویلاها با فضاهای باز، باغ‌ها، استخرها و محیط‌های مرطوب، شرایط ایده‌آلی را برای زندگی و تکثیر انواع آفات فراهم می‌کنند.</p>
+
+    <p>یکی از مهم‌ترین چالش‌های ویلاها، <strong>استفاده فصلی</strong> از آنهاست. بسیاری از ویلاها تنها در تعطیلات و فصول خاصی از سال مورد استفاده قرار می‌گیرند و در سایر ایام سال، خالی و بدون ساکن می‌مانند. این خالی بودن طولانی‌مدت، بهترین فرصت برای آفات است تا بدون هیچ مزاحمتی، در فضاهای داخلی و خارجی ویلا مستقر شوند و تکثیر یابند. در این مقاله جامع از <strong>شرکت سمپاشی نانوفناوران بهداشت تهران</strong>، به بررسی کامل چالش‌های کنترل آفات در ویلاها و روش‌های تخصصی سمپاشی آنها می‌پردازیم.</p>
+
+    <h2>چرا سمپاشی ویلا با سایر ساختمان‌ها متفاوت است؟</h2>
+    <p>ویلاها به دلیل ویژگی‌های منحصر‌به‌فرد خود، نیازمند رویکردی تخصصی در کنترل آفات هستند. این تفاوت‌ها عبارتند از:</p>
+
+    <table>
+        <thead>
+            <tr><th>ویژگی</th><th>ویلا</th><th>آپارتمان یا خانه شهری</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>فضای باز</strong></td><td>وجود باغ، حیاط، استخر و فضای سبز گسترده</td><td>معمولاً فضای باز محدود</td></tr>
+            <tr><td><strong>استفاده فصلی</strong></td><td>معمولاً در تعطیلات و فصول خاص استفاده می‌شود</td><td>استفاده دائمی و تمام سال</td></tr>
+            <tr><td><strong>رطوبت</strong></td><td>رطوبت بالا به دلیل فضای سبز، استخر و آبیاری</td><td>رطوبت کنترل‌شده</td></tr>
+            <tr><td><strong>دسترسی آفات</strong></td><td>ورود آفات از فضای باز به راحتی امکان‌پذیر است</td><td>دسترسی آفات محدودتر است</td></tr>
+            <tr><td><strong>تنوع آفات</strong></td><td>آفات فضای باز و باغ (پشه، زنبور، مار، عقرب) + آفات خانگی</td><td>معمولاً فقط آفات خانگی</td></tr>
+        </tbody>
+    </table>
+
+    <div class="blog-callout">
+        <p><strong>نکته مهم:</strong> در ویلاها، <strong>کنترل آفات به دو بخش داخلی و خارجی</strong> تقسیم می‌شود. سمپاشی فقط فضای داخلی بدون کنترل فضای باز، نتیجه مطلوبی نخواهد داشت، زیرا آفات از باغ و حیاط به داخل نفوذ می‌کنند.</p>
+    </div>
+
+    <h2>مهم‌ترین آفات در ویلاها و باغ‌ها</h2>
+    <p>بر اساس تجربه سال‌ها خدمات تخصصی در ویلاهای شمال، کرج، لواسان و سایر مناطق ییلاقی، مهم‌ترین آفات در ویلاها عبارتند از:</p>
+
+    <h3>۱. پشه‌ها</h3>
+    <p>ویلاها به دلیل وجود فضای سبز، استخر، حوض و آبیاری منظم، محیطی ایده‌آل برای تکثیر پشه‌ها هستند. آب‌های راکد در گلدان‌ها، استخرهای پرنشده، ناودان‌ها و حتی زیرگلدانی‌ها، محل مناسبی برای تخم‌گذاری پشه‌هاست.</p>
+
+    <h3>۲. زنبورها و هورنت‌ها</h3>
+    <p>زنبورها و هورنت‌ها معمولاً در درختان، سقف‌های چوبی، انبارها و حتی داخل دیوارهای ویلا لانه‌سازی می‌کنند. نیش آنها می‌تواند برای افراد حساس بسیار خطرناک باشد.</p>
+
+    <h3>۳. موش‌ها و جوندگان</h3>
+    <p>ویلاها به دلیل نزدیکی به محیط‌های باز و طبیعی، بیشتر در معرض هجوم موش‌ها و جوندگان هستند. این جوندگان نه تنها به ساختمان آسیب می‌رسانند، بلکه ناقل بیماری‌های مختلفی نیز هستند.</p>
+
+    <h3>۴. سوسک‌های چوب‌خوار</h3>
+    <p>ویلاهای چوبی یا ویلاهایی که دارای سقف‌های چوبی، تیرهای چوبی و مبلمان چوبی هستند، به شدت در معرض خطر سوسک چوب‌خوار قرار دارند. این آفت با تغذیه از چوب، استحکام سازه را تخریب می‌کند.</p>
+
+    <h3>۵. مارها و عقرب‌ها</h3>
+    <p>در مناطق ییلاقی و کوهپایه‌ای، ورود مارها و عقرب‌ها به داخل ویلا یکی از نگرانی‌های اصلی ساکنان است. این موجودات معمولاً به دنبال پناهگاه یا شکار وارد ساختمان می‌شوند.</p>
+
+    <h3>۶. عنکبوت‌ها و هزارپاها</h3>
+    <p>ویلاهای خالی برای مدت طولانی، پناهگاه امنی برای عنکبوت‌ها و هزارپاها هستند. این موجودات معمولاً در زیرزمین‌ها، انبارها و گوشه‌های تاریک زندگی می‌کنند.</p>
+
+    <h2>چالش‌های خاص سمپاشی ویلا</h2>
+
+    <h3>۱. خالی بودن طولانی‌مدت</h3>
+    <p>یکی از بزرگ‌ترین چالش‌های ویلاها، خالی بودن آنها برای چندین ماه در سال است. در این مدت، آفات به راحتی در فضاهای داخلی و خارجی مستقر می‌شوند و تکثیر می‌یابند. در زمان ورود به ویلا، ممکن است با یک آلودگی گسترده مواجه شوید که کنترل آن زمان‌بر و هزینه‌بر است.</p>
+
+    <h3>۲. ورود مجدد آفات از فضای باز</h3>
+    <p>حتی اگر ویلا را به طور کامل سمپاشی کنید، آفات از باغ، حیاط و فضای باز دوباره وارد می‌شوند. به همین دلیل، کنترل فضای باز نیز به اندازه فضای داخلی اهمیت دارد.</p>
+
+    <h3>۳. دسترسی به نقاط صعب‌الوصول</h3>
+    <p>ویلاهای بزرگ معمولاً دارای فضاهای صعب‌الوصول مانند زیرشیروانی، زیرزمین، سقف‌های بلند و انبارهای بزرگ هستند که دسترسی به آنها برای سمپاشی دشوار است.</p>
+
+    <h3>۴. تنوع بالای آفات</h3>
+    <p>در ویلاها، با طیف گسترده‌ای از آفات روبرو هستیم که هر کدام نیاز به روش‌های کنترل خاص خود دارند. از پشه‌ها و زنبورهای فضای باز گرفته تا سوسک‌های چوب‌خوار و جوندگان، همه نیازمند رویکردی جامع و تخصصی هستند.</p>
+
+    <h2>روش‌های تخصصی سمپاشی ویلا توسط نانوفناوران</h2>
+
+    <h3>مرحله ۱: بازرسی جامع</h3>
+    <p>کارشناسان ما با بررسی کامل ویلا، باغ، حیاط، استخر، انبار، زیرزمین و سایر فضاها، نوع آفات، میزان آلودگی و نقاط ورود را شناسایی می‌کنند.</p>
+
+    <h3>مرحله ۲: سمپاشی فضای خارجی (باغ و حیاط)</h3>
+    <p>ابتدا فضای باز سمپاشی می‌شود تا جمعیت آفات در محیط بیرون کاهش یابد. این مرحله شامل سمپاشی درختان، بوته‌ها، چمن‌ها، اطراف استخر و نقاط مرطوب است.</p>
+
+    <h3>مرحله ۳: سمپاشی فضای داخلی</h3>
+    <p>پس از کنترل فضای باز، نوبت به سمپاشی فضای داخلی می‌رسد. تمام اتاق‌ها، آشپزخانه، سرویس‌های بهداشتی، زیرزمین، انبار و سایر فضاها به طور کامل سمپاشی می‌شوند.</p>
+
+    <h3>مرحله ۴: تزریق به چوب‌ها</h3>
+    <p>برای ویلاهای چوبی یا دارای سازه‌های چوبی، سم به عمق چوب تزریق می‌شود تا سوسک چوب‌خوار و موریانه‌ها از بین بروند.</p>
+
+    <h3>مرحله ۵: طعمه‌گذاری</h3>
+    <p>برای کنترل جوندگان و سوسک‌ها، طعمه‌های مخصوص در نقاط استراتژیک قرار داده می‌شوند.</p>
+
+    <h3>مرحله ۶: نصب تله‌ها و موانع فیزیکی</h3>
+    <p>در صورت نیاز، تله‌های مخصوص برای کنترل جوندگان و توری‌های ضد حشرات برای جلوگیری از ورود مجدد آفات نصب می‌شوند.</p>
+
+    <h3>مرحله ۷: مشاوره و پیشگیری</h3>
+    <p>پس از اتمام عملیات، کارشناسان ما نکات لازم برای جلوگیری از بازگشت مجدد آفات را به شما آموزش می‌دهند. این آموزش‌ها شامل نحوه نگهداری صحیح ویلا در زمان خالی بودن، مدیریت فضای سبز و جلوگیری از ورود آفات است.</p>
+
+    <h2>نکات طلایی برای نگهداری ویلا و پیشگیری از آفات</h2>
+
+    <ul>
+        <li><strong>بازدید دوره‌ای:</strong> حتی در فصولی که از ویلا استفاده نمی‌کنید، هر چند وقت یکبار به ویلا سر بزنید و وضعیت آن را بررسی کنید.</li>
+        <li><strong>مدیریت فضای سبز:</strong> چمن‌ها و بوته‌ها را مرتباً کوتاه کنید و برگ‌های ریخته شده را جمع‌آوری کنید تا پناهگاه آفات از بین برود.</li>
+        <li><strong>کنترل رطوبت:</strong> از جمع شدن آب در زیرگلدانی‌ها، ناودان‌ها و اطراف استخر جلوگیری کنید.</li>
+        <li><strong>بستن درزها و شکاف‌ها:</strong> تمام شکاف‌های دیوار، اطراف درب‌ها و پنجره‌ها را ببندید تا از ورود آفات جلوگیری شود.</li>
+        <li><strong>استفاده از توری:</strong> روی پنجره‌ها و دریچه‌های تهویه توری نصب کنید.</li>
+        <li><strong>نگهداری مواد غذایی:</strong> در زمان خالی بودن ویلا، تمام مواد غذایی را خارج کنید یا در ظروف درب‌دار نگهداری کنید.</li>
+    </ul>
+
+    <h2>پاسخ به سوالات متداول درباره سمپاشی ویلا</h2>
+
+    <details>
+        <summary><strong>چه زمانی باید ویلا را سمپاشی کنیم؟</strong></summary>
+        <p>بهترین زمان برای سمپاشی ویلا، اوایل بهار (قبل از شروع فصل گرما) و اوایل پاییز (پس از پایان فصل گرما) است. همچنین، قبل از هر بار اقامت طولانی‌مدت، سمپاشی ویلا توصیه می‌شود.</p>
+    </details>
+
+    <details>
+        <summary><strong>ویلای خالی برای چند ماه، چه آفاتی را جذب می‌کند؟</strong></summary>
+        <p>ویلاهای خالی برای مدت طولانی، معمولاً به پناهگاه امنی برای سوسک‌ها، عنکبوت‌ها، هزارپاها، موش‌ها و سوسک‌های چوب‌خوار تبدیل می‌شوند. همچنین، پشه‌ها و زنبورها در فضای باز تکثیر می‌یابند.</p>
+    </details>
+
+    <details>
+        <summary><strong>آیا سمپاشی ویلا برای کودکان و حیوانات خانگی خطرناک است؟</strong></summary>
+        <p>خیر، سموم استفاده‌شده توسط شرکت نانوفناوران با رعایت کامل استانداردهای بهداشتی انتخاب می‌شوند. در هنگام سمپاشی، افراد و حیوانات از محیط خارج می‌شوند و پس از تهویه کامل، محیط کاملاً ایمن است.</p>
+    </details>
+
+    <details>
+        <summary><strong>چگونه از ورود مجدد آفات به ویلا جلوگیری کنیم؟</strong></summary>
+        <p>با رعایت نکات پیشگیرانه مانند بستن درزها، نصب توری، کنترل رطوبت و مدیریت فضای سبز، می‌توانید از ورود مجدد آفات جلوگیری کنید. همچنین توصیه می‌شود سمپاشی ویلا به صورت دوره‌ای (حداقل سالی یک بار) انجام شود.</p>
+    </details>
+
+    <details>
+        <summary><strong>هزینه سمپاشی ویلا چقدر است؟</strong></summary>
+        <p>هزینه سمپاشی ویلا به عواملی مانند مساحت ساختمان، مساحت باغ و فضای سبز، شدت آلودگی، نوع آفات و روش‌های مورد استفاده بستگی دارد. برای دریافت مشاوره رایگان و استعلام دقیق هزینه، با کارشناسان ما تماس بگیرید.</p>
+    </details>
+
+    <h2>نتیجه‌گیری</h2>
+    <p>ویلاها به دلیل ویژگی‌های منحصر‌به‌فرد خود، نیازمند رویکردی تخصصی و جامع در زمینه کنترل آفات هستند. سمپاشی ویلا باید هم فضای داخلی و هم فضای خارجی را پوشش دهد و با توجه به استفاده فصلی، برنامه‌های پیشگیرانه منظمی برای آن تدوین شود.</p>
+
+    <p><strong>شرکت سمپاشی نانوفناوران بهداشت تهران</strong> با بیش از یک دهه تجربه در زمینه سمپاشی ویلاها و باغ‌های مناطق مختلف، آماده ارائه خدمات تخصصی و تضمینی به شماست. تیم کارشناسان ما با شناسایی دقیق نوع آفات و استفاده از روش‌های مناسب (سمپاشی داخلی، خارجی، تزریق چوب، طعمه‌گذاری)، محیطی امن، بهداشتی و عاری از آفات را برای شما به ارمغان می‌آورند.</p>
+
+    <p style="font-size:20px; font-weight:700; text-align:center; color:#0B6FB8;">🚀 همین حالا اقدام کنید:</p>
+    <div style="text-align:center; margin:20px 0;">
+        <p>📞 <strong>تماس فوری:</strong> <a href="tel:09120705746" style="font-size:20px; color:#11A64A; text-decoration:none;">۰۹۱۲۰۷۰۵۷۴۶</a></p>
+        <p>💬 <strong>درخواست مشاوره رایگان:</strong> از طریق <a href="https://wa.me/989120705746" target="_blank" style="color:#25D366; text-decoration:none;">واتساپ</a> یا <a href="https://eitaa.com/nanofannavaran_ir" target="_blank" style="color:#e67e22; text-decoration:none;">ایتا</a></p>
+        <p>🔗 <strong>مشاهده سایر خدمات:</strong> <a href="../services.html" style="color:#0B6FB8; text-decoration:none;">کنترل آفات مسکونی</a></p>
+    </div>
+
+    <div class="blog-back-links">
+        <a href="../index.html" class="btn-home">🏠 بازگشت به صفحه اصلی</a>
+        <a href="../services.html" class="btn-services">🔙 بازگشت به لیست خدمات مسکونی</a>
+        <a href="../contact.html" class="btn-contact">📞 تماس با ما</a>
+    </div>
+
 </div>
 
-<footer class="site-footer">
-    <div class="container">
-        <div class="footer-grid">
-            <div class="footer-box"><h3>نانوفناوران</h3><p>ارائه‌دهنده خدمات تخصصی کنترل آفات در تهران</p></div>
-            <div class="footer-box"><h3>اطلاعات تماس</h3><p>📱 09120705746</p><p>☎️ 22048278</p></div>
-        </div>
-        <hr><p class="copyright">© تمامی حقوق محفوظ است</p>
-    </div>
-</footer>
+<!-- ===== دکمه اسکرول به بالا ===== -->
+<button id="blogBackToTop" title="برو به بالا">↑</button>
 
-<script src="../script.js"></script>
+<!-- ===== منوی شناور ===== -->
+<div class="blog-floating-container">
+    <div class="blog-floating-menu" id="blogFloatingMenu">
+        <div class="blog-call-wrapper" style="display:flex; align-items:center; gap:4px;">
+            <div class="blog-floating-item blog-call-item" id="blogCallToggle">
+                <span class="item-icon">📞</span>
+                <span class="item-text">تماس سریع</span>
+                <span class="arrow">▲</span>
+            </div>
+            <div class="blog-call-submenu" id="blogCallSubmenu">
+                <a href="tel:09120705746" class="blog-floating-item blog-call-sub-item"><span class="item-icon">📞</span><span class="item-text">شماره ۱</span></a>
+                <a href="tel:09197173454" class="blog-floating-item blog-call-sub-item"><span class="item-icon">📞</span><span class="item-text">شماره ۲</span></a>
+            </div>
+        </div>
+        <a href="https://wa.me/989120705746?text=%D8%A8%D9%87%20%D8%B3%D8%A7%DB%8C%D8%AA%20%D8%B4%D8%B1%DA%A9%D8%AA%20%D8%B3%D9%85%D9%BE%D8%A7%D8%B4%DB%8C%20%D9%86%D8%A7%D9%86%D9%88%D9%81%D9%86%D8%A7%D9%88%D8%B1%D8%A7%D9%86%20%D8%AE%D9%88%D8%B4%20%D8%A2%D9%85%D8%AF%DB%8C%D8%AF" target="_blank" class="blog-floating-item blog-whatsapp-item"><span class="item-icon">💬</span><span class="item-text">واتساپ</span></a>
+        <a href="https://eitaa.com/nanofannavaran_ir" target="_blank" class="blog-floating-item blog-eitaa-item"><span class="item-icon">✈️</span><span class="item-text">ایتا</span></a>
+    </div>
+    <button class="blog-floating-btn" id="blogFloatingToggle">
+        <span class="btn-arrow">▶</span>
+        <span class="btn-text">📞 مشاوره رایگان</span>
+    </button>
+</div>
+
+<!-- ===== جاوااسکریپت ===== -->
+<script>
+    // ===== دکمه اسکرول به بالا =====
+    var blogBackBtn = document.getElementById('blogBackToTop');
+
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+            blogBackBtn.classList.add('show');
+        } else {
+            blogBackBtn.classList.remove('show');
+        }
+    });
+
+    if (blogBackBtn) {
+        blogBackBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
+    // ===== منوی شناور =====
+    var blogToggleBtn = document.getElementById('blogFloatingToggle');
+    var blogMenu = document.getElementById('blogFloatingMenu');
+    var blogArrow = blogToggleBtn ? blogToggleBtn.querySelector('.btn-arrow') : null;
+
+    if (blogToggleBtn && blogMenu) {
+        blogToggleBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            this.classList.toggle('active');
+            blogMenu.classList.toggle('open');
+            if (blogArrow) blogArrow.classList.toggle('open');
+        });
+    }
+
+    // ===== زیرمنوی تماس =====
+    var blogCallToggle = document.getElementById('blogCallToggle');
+    var blogCallSubmenu = document.getElementById('blogCallSubmenu');
+
+    if (blogCallToggle && blogCallSubmenu) {
+        blogCallToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            this.classList.toggle('open');
+            blogCallSubmenu.classList.toggle('open');
+            var arrowIcon = this.querySelector('.arrow');
+            if (arrowIcon) {
+                arrowIcon.textContent = blogCallSubmenu.classList.contains('open') ? '▼' : '▲';
+            }
+        });
+    }
+
+    // ===== بستن منو با کلیک بیرون =====
+    document.addEventListener('click', function(e) {
+        if (blogToggleBtn) blogToggleBtn.classList.remove('active');
+        if (blogMenu) blogMenu.classList.remove('open');
+        if (blogArrow) blogArrow.classList.remove('open');
+        if (blogCallToggle) blogCallToggle.classList.remove('open');
+        if (blogCallSubmenu) blogCallSubmenu.classList.remove('open');
+        var arrowIcon = blogCallToggle ? blogCallToggle.querySelector('.arrow') : null;
+        if (arrowIcon) arrowIcon.textContent = '▲';
+    });
+
+    if (blogMenu) {
+        blogMenu.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    }
+
+    console.log('✅ مقاله سمپاشی ویلا بارگذاری شد!');
+</script>
+
 </body>
 </html>
