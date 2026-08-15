@@ -12,530 +12,275 @@
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
         /* ===== استایل‌های اختصاصی مقاله ===== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        html {
-            scroll-behavior: smooth;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
             font-family: 'Vazirmatn', 'IRANSans', 'Tahoma', sans-serif;
-            background: #f8fbfd;
-            color: #222;
-            line-height: 1.9;
-            direction: rtl;
-            padding: 20px 15px;
-            min-height: 100vh;
-            position: relative;
+            background: #f8fbfd; color: #222; line-height: 1.9;
+            direction: rtl; padding: 20px 15px; min-height: 100vh;
         }
 
         .blog-article-container {
-            max-width: 1100px;
-            margin: 20px auto 60px;
-            background: #fff;
-            border-radius: 24px;
-            box-shadow: 0 10px 40px rgba(0,0,0,.08);
-            padding: 30px 25px 50px;
-            font-family: 'Vazirmatn', 'IRANSans', 'Tahoma', sans-serif;
-            line-height: 1.8;
-            color: #2c3e50;
-            direction: rtl;
-            width: 100%;
+            max-width: 1100px; margin: 20px auto 60px; background: #fff;
+            border-radius: 24px; box-shadow: 0 10px 40px rgba(0,0,0,.08);
+            padding: 30px 25px 50px; line-height: 1.8; color: #2c3e50;
+            direction: rtl; width: 100%;
         }
-        .blog-article-container h1 {
-            font-size: 32px;
-            color: #0B6FB8;
-            margin-bottom: 20px;
-            line-height: 1.5;
-        }
-        .blog-article-container .blog-meta {
-            color: #888;
-            font-size: 14px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 18px;
-            margin-bottom: 25px;
-        }
-        .blog-article-container h2 {
-            font-size: 26px;
-            color: #1F2937;
-            margin: 35px 0 12px;
-            border-right: 5px solid #0B6FB8;
-            padding-right: 15px;
-        }
-        .blog-article-container h3 {
-            font-size: 21px;
-            color: #0B6FB8;
-            margin: 25px 0 10px;
-        }
-        .blog-article-container h4 {
-            font-size: 18px;
-            color: #1F2937;
-            margin: 20px 0 8px;
-        }
-        .blog-article-container p {
-            line-height: 2.2;
-            color: #444;
-            font-size: 16px;
-            margin-bottom: 16px;
-            text-align: justify;
-        }
-        .blog-article-container ul, .blog-article-container ol {
-            line-height: 2.2;
-            color: #444;
-            font-size: 16px;
-            padding-right: 25px;
-            margin-bottom: 18px;
-        }
-        .blog-article-container ul li, .blog-article-container ol li {
-            margin-bottom: 6px;
-        }
-        .blog-article-container table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 18px 0 25px;
-            font-size: 15px;
-            overflow-x: auto;
-            display: block;
-        }
-        .blog-article-container table th {
-            background: #0B6FB8;
-            color: #fff;
-            padding: 10px 12px;
-            text-align: right;
-        }
-        .blog-article-container table td {
-            border: 1px solid #ddd;
-            padding: 8px 12px;
-            background: #fafafa;
-        }
-        .blog-article-container table tr:nth-child(even) td {
-            background: #f5f8fc;
-        }
-        .blog-article-image {
-            margin: 25px 0;
-            text-align: center;
-        }
-        .blog-article-image img {
-            width: 100%;
-            max-width: 700px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,.15);
-            height: auto;
-        }
-        .blog-article-image .caption {
-            font-size: 14px;
-            color: #888;
-            margin-top: 10px;
-        }
-        .blog-article-image .caption strong {
-            color: #0B6FB8;
-        }
-        .blog-article-container .blog-back-links {
-            margin: 35px 0 15px;
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .blog-article-container .blog-back-links a {
-            display: inline-block;
-            padding: 10px 22px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            transition: .3s;
-            font-size: 15px;
-            text-align: center;
-            flex: 1 1 auto;
-            min-width: 140px;
-        }
-        .blog-article-container .blog-back-links .btn-home {
-            background: #0B6FB8;
-            color: #fff;
-        }
-        .blog-article-container .blog-back-links .btn-home:hover {
-            background: #11A64A;
-        }
-        .blog-article-container .blog-back-links .btn-services {
-            background: #11A64A;
-            color: #fff;
-        }
-        .blog-article-container .blog-back-links .btn-services:hover {
-            background: #0B6FB8;
-        }
-        .blog-article-container .blog-back-links .btn-contact {
-            background: #1F2937;
-            color: #fff;
-        }
-        .blog-article-container .blog-back-links .btn-contact:hover {
-            background: #0B6FB8;
-        }
-        .blog-callout {
-            background: #f0f7ff;
-            border-right: 5px solid #0B6FB8;
-            padding: 18px 22px;
-            border-radius: 12px;
-            margin: 22px 0;
-        }
-        .blog-callout strong {
-            color: #0B6FB8;
-        }
-        .blog-callout-yellow {
-            background: #fff8e1;
-            border-right: 5px solid #ffc107;
-            padding: 18px 22px;
-            border-radius: 12px;
-            margin: 22px 0;
-        }
-        .blog-callout-yellow strong {
-            color: #e67e22;
-        }
-        .blog-article-container details {
-            background: #f8fbfd;
-            padding: 14px 18px;
-            border-radius: 12px;
-            margin-bottom: 14px;
-            border: 1px solid #e9ecef;
-        }
-        .blog-article-container details summary {
-            font-weight: 700;
-            color: #0B6FB8;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        .blog-article-container details p {
-            margin-top: 10px;
-            padding-right: 8px;
-            font-size: 15px;
-        }
+        .blog-article-container h1 { font-size: 32px; color: #0B6FB8; margin-bottom: 20px; line-height: 1.5; }
+        .blog-article-container .blog-meta { color: #888; font-size: 14px; border-bottom: 1px solid #eee; padding-bottom: 18px; margin-bottom: 25px; }
+        .blog-article-container h2 { font-size: 26px; color: #1F2937; margin: 35px 0 12px; border-right: 5px solid #0B6FB8; padding-right: 15px; }
+        .blog-article-container h3 { font-size: 21px; color: #0B6FB8; margin: 25px 0 10px; }
+        .blog-article-container h4 { font-size: 18px; color: #1F2937; margin: 20px 0 8px; }
+        .blog-article-container p { line-height: 2.2; color: #444; font-size: 16px; margin-bottom: 16px; text-align: justify; }
+        .blog-article-container ul, .blog-article-container ol { line-height: 2.2; color: #444; font-size: 16px; padding-right: 25px; margin-bottom: 18px; }
+        .blog-article-container ul li, .blog-article-container ol li { margin-bottom: 6px; }
+        .blog-article-container table { width: 100%; border-collapse: collapse; margin: 18px 0 25px; font-size: 15px; overflow-x: auto; display: block; }
+        .blog-article-container table th { background: #0B6FB8; color: #fff; padding: 10px 12px; text-align: right; }
+        .blog-article-container table td { border: 1px solid #ddd; padding: 8px 12px; background: #fafafa; }
+        .blog-article-container table tr:nth-child(even) td { background: #f5f8fc; }
+        .blog-article-image { margin: 25px 0; text-align: center; }
+        .blog-article-image img { width: 100%; max-width: 700px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,.15); height: auto; }
+        .blog-article-image .caption { font-size: 14px; color: #888; margin-top: 10px; }
+        .blog-article-image .caption strong { color: #0B6FB8; }
+        .blog-article-container .blog-back-links { margin: 35px 0 15px; display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+        .blog-article-container .blog-back-links a { display: inline-block; padding: 10px 22px; border-radius: 50px; text-decoration: none; font-weight: 700; transition: .3s; font-size: 15px; text-align: center; flex: 1 1 auto; min-width: 140px; }
+        .blog-article-container .blog-back-links .btn-home { background: #0B6FB8; color: #fff; }
+        .blog-article-container .blog-back-links .btn-home:hover { background: #11A64A; }
+        .blog-article-container .blog-back-links .btn-services { background: #11A64A; color: #fff; }
+        .blog-article-container .blog-back-links .btn-services:hover { background: #0B6FB8; }
+        .blog-article-container .blog-back-links .btn-contact { background: #1F2937; color: #fff; }
+        .blog-article-container .blog-back-links .btn-contact:hover { background: #0B6FB8; }
+        .blog-callout { background: #f0f7ff; border-right: 5px solid #0B6FB8; padding: 18px 22px; border-radius: 12px; margin: 22px 0; }
+        .blog-callout strong { color: #0B6FB8; }
+        .blog-callout-yellow { background: #fff8e1; border-right: 5px solid #ffc107; padding: 18px 22px; border-radius: 12px; margin: 22px 0; }
+        .blog-article-container details { background: #f8fbfd; padding: 14px 18px; border-radius: 12px; margin-bottom: 14px; border: 1px solid #e9ecef; }
+        .blog-article-container details summary { font-weight: 700; color: #0B6FB8; cursor: pointer; font-size: 16px; }
+        .blog-article-container details p { margin-top: 10px; padding-right: 8px; font-size: 15px; }
 
-        /* ===== دکمه اسکرول به بالا ===== */
-        #blogBackToTop {
+        /* ===== دکمه اسکرول به بالا (مطابق با سمپاشی منازل) ===== */
+        #backToTop {
             position: fixed;
-            bottom: 90px;
             right: 20px;
-            width: 50px;
-            height: 50px;
-            background: #0B6FB8;
-            color: #fff;
+            bottom: 80px;
+            width: 55px;
+            height: 55px;
             border: none;
             border-radius: 50%;
-            font-size: 26px;
+            background: #0B6FB8;
+            color: #fff;
+            font-size: 28px;
             font-weight: 700;
             cursor: pointer;
             display: none;
-            z-index: 9999;
-            box-shadow: 0 6px 25px rgba(11, 111, 184, 0.4);
+            z-index: 9998;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
             transition: all 0.3s ease;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Vazirmatn', sans-serif;
             line-height: 1;
+            text-align: center;
+            padding: 0;
+            font-family: 'Vazirmatn', sans-serif;
         }
-        #blogBackToTop:hover {
+        #backToTop:hover {
             background: #11A64A;
-            transform: translateY(-4px) scale(1.05);
-            box-shadow: 0 10px 35px rgba(11, 111, 184, 0.5);
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
         }
-        #blogBackToTop.show {
-            display: flex;
+        #backToTop::before {
+            content: "↑";
+            display: block;
+            font-size: 30px;
+            font-weight: 900;
+            line-height: 55px;
+        }
+        #backToTop.show {
+            display: block !important;
         }
 
-        /* ===== منوی شناور ===== */
-        .blog-floating-container {
+        /* ===== منوی شناور (مطابق با سمپاشی منازل) ===== */
+        .floating-container {
             position: fixed;
-            bottom: 25px;
-            left: 15px;
+            bottom: 30px;
+            left: 20px;
             z-index: 9999;
             display: flex;
             flex-direction: row;
             align-items: center;
             font-family: 'Vazirmatn', sans-serif;
             direction: ltr;
-            gap: 6px;
         }
-        .blog-floating-btn {
+        .floating-main-btn {
             background: linear-gradient(135deg, #25D366 0%, #1da851 100%);
             color: #fff;
             border: none;
-            border-radius: 30px 0 0 30px;
-            padding: 12px 18px 12px 22px;
-            font-size: 14px;
+            border-radius: 50px 0 0 50px;
+            padding: 16px 24px 16px 28px;
+            font-size: 16px;
             font-weight: 800;
             cursor: pointer;
-            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.5);
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
             white-space: nowrap;
+            animation: pulse 2.5s infinite;
             transition: all 0.3s ease;
-            font-family: 'Vazirmatn', sans-serif;
         }
-        .blog-floating-btn:hover {
-            transform: scale(1.04);
-            box-shadow: 0 8px 35px rgba(37, 211, 102, 0.7);
+        .floating-main-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(37, 211, 102, 0.8);
         }
-        .blog-floating-btn .btn-arrow {
-            font-size: 12px;
+        .floating-main-btn .btn-arrow {
+            font-size: 14px;
             transition: transform 0.4s ease;
         }
-        .blog-floating-btn.active .btn-arrow {
+        .floating-main-btn.active .btn-arrow {
             transform: rotate(90deg);
         }
-        .blog-floating-menu {
+
+        @keyframes pulse {
+            0% { box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6); }
+            50% { box-shadow: 0 8px 50px rgba(37, 211, 102, 0.9), 0 0 80px rgba(37, 211, 102, 0.2); }
+            100% { box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6); }
+        }
+
+        .floating-menu {
             display: flex;
             flex-direction: row;
             align-items: center;
-            gap: 6px;
+            gap: 10px;
             opacity: 0;
             visibility: hidden;
-            transform: translateX(-15px) scale(0.95);
+            transform: translateX(-20px) scale(0.95);
             transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         }
-        .blog-floating-menu.open {
+        .floating-menu.open {
             opacity: 1;
             visibility: visible;
             transform: translateX(0) scale(1);
         }
-        .blog-floating-item {
+
+        .floating-item {
             display: flex;
             align-items: center;
-            gap: 6px;
-            padding: 10px 14px;
+            gap: 8px;
+            padding: 12px 18px;
             border-radius: 50px;
             color: #fff;
             font-weight: 700;
-            font-size: 13px;
+            font-size: 14px;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
             white-space: nowrap;
             border: 2px solid rgba(255, 255, 255, 0.15);
             text-decoration: none;
-            font-family: 'Vazirmatn', sans-serif;
         }
-        .blog-floating-item:hover {
-            transform: scale(1.06);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        .floating-item:hover {
+            transform: scale(1.08);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
         }
-        .blog-floating-item .item-icon { font-size: 16px; }
-        .blog-floating-item .item-text { font-size: 13px; }
+        .floating-item .item-icon { font-size: 18px; }
+        .floating-item .item-text { font-size: 14px; }
 
-        .blog-call-item {
+        .call-item {
             background: linear-gradient(135deg, #25D366, #1da851);
-            border-radius: 30px 0 0 30px;
+            border-radius: 50px 0 0 50px;
             cursor: pointer;
             position: relative;
         }
-        .blog-call-item .arrow {
-            font-size: 11px;
-            margin-right: 4px;
+        .call-item .arrow {
+            font-size: 12px;
+            margin-right: 5px;
             transition: transform 0.3s ease;
         }
-        .blog-call-item.open .arrow {
+        .call-item.open .arrow {
             transform: rotate(180deg);
         }
-        .blog-call-submenu {
+
+        .call-submenu {
             display: flex;
             flex-direction: column;
-            gap: 4px;
+            gap: 5px;
             opacity: 0;
             visibility: hidden;
             max-height: 0;
             overflow: hidden;
             transition: all 0.3s ease;
-            margin-right: 4px;
+            margin-right: 5px;
         }
-        .blog-call-submenu.open {
+        .call-submenu.open {
             opacity: 1;
             visibility: visible;
-            max-height: 150px;
+            max-height: 200px;
         }
-        .blog-call-sub-item {
+
+        .call-sub-item {
             background: linear-gradient(135deg, #25D366, #1da851);
             border-radius: 50px;
-            padding: 6px 12px;
-            font-size: 12px;
-            gap: 4px;
+            padding: 8px 16px;
+            font-size: 13px;
+            gap: 6px;
         }
-        .blog-call-sub-item:hover {
-            transform: scale(1.05);
-        }
-        .blog-whatsapp-item {
+        .call-sub-item:hover { transform: scale(1.05); }
+
+        .whatsapp-item {
             background: linear-gradient(135deg, #25D366, #1da851);
             border-radius: 50px;
         }
-        .blog-eitaa-item {
+        .eitaa-item {
             background: linear-gradient(135deg, #f97316, #ea580c);
             border-radius: 0 50px 50px 0;
         }
 
         /* ===== ریسپانسیو ===== */
         @media (max-width: 768px) {
-            body {
-                padding: 10px 10px;
-            }
-            .blog-article-container {
-                padding: 20px 16px 35px;
-                margin: 10px auto 40px;
-                border-radius: 16px;
-            }
-            .blog-article-container h1 {
-                font-size: 24px;
-            }
-            .blog-article-container h2 {
-                font-size: 20px;
-                margin: 28px 0 10px;
-            }
-            .blog-article-container h3 {
-                font-size: 18px;
-                margin: 20px 0 8px;
-            }
-            .blog-article-container h4 {
-                font-size: 16px;
-            }
-            .blog-article-container p {
-                font-size: 15px;
-                line-height: 2;
-            }
-            .blog-article-container ul, .blog-article-container ol {
-                font-size: 15px;
-                padding-right: 20px;
-            }
-            .blog-article-container table {
-                font-size: 13px;
-                display: block;
-                overflow-x: auto;
-            }
-            .blog-article-container table th,
-            .blog-article-container table td {
-                padding: 6px 10px;
-            }
-            .blog-article-image img {
-                max-width: 100%;
-                border-radius: 14px;
-            }
-            .blog-article-container .blog-back-links {
-                gap: 10px;
-            }
-            .blog-article-container .blog-back-links a {
-                padding: 8px 16px;
-                font-size: 13px;
-                min-width: 100px;
-                flex: 1 0 auto;
-            }
-            .blog-callout, .blog-callout-yellow {
-                padding: 14px 16px;
-                margin: 18px 0;
-            }
-            .blog-article-container details {
-                padding: 12px 14px;
-            }
-            .blog-article-container details summary {
-                font-size: 15px;
-            }
-            .blog-article-container details p {
-                font-size: 14px;
-            }
+            .blog-article-container { padding: 20px 16px 35px; margin: 10px auto 40px; border-radius: 16px; }
+            .blog-article-container h1 { font-size: 24px; }
+            .blog-article-container h2 { font-size: 20px; }
+            .blog-article-container h3 { font-size: 18px; }
+            .blog-article-container p { font-size: 15px; }
+            .blog-article-container ul, .blog-article-container ol { font-size: 15px; padding-right: 20px; }
+            .blog-article-container table { font-size: 13px; }
+            .blog-article-container table th, .blog-article-container table td { padding: 6px 10px; }
+            .blog-article-image img { max-width: 100%; border-radius: 14px; }
+            .blog-article-container .blog-back-links a { padding: 8px 16px; font-size: 13px; min-width: 100px; }
+            .blog-callout, .blog-callout-yellow { padding: 14px 16px; margin: 18px 0; }
+            .blog-article-container details { padding: 12px 14px; }
+            .blog-article-container details summary { font-size: 15px; }
+            .blog-article-container details p { font-size: 14px; }
 
-            #blogBackToTop {
-                width: 44px;
-                height: 44px;
-                font-size: 22px;
-                bottom: 75px;
-                right: 12px;
-            }
+            #backToTop { width: 48px; height: 48px; font-size: 24px; bottom: 100px; right: 15px; }
 
-            .blog-floating-container {
-                bottom: 15px;
-                left: 8px;
-                gap: 4px;
-            }
-            .blog-floating-btn {
-                padding: 10px 14px 10px 18px;
-                font-size: 12px;
-                border-radius: 25px 0 0 25px;
-            }
-            .blog-floating-btn .btn-arrow { font-size: 10px; }
-            .blog-floating-item {
-                padding: 8px 10px;
-                font-size: 11px;
-                gap: 4px;
-                border-radius: 25px;
-            }
-            .blog-floating-item .item-icon { font-size: 14px; }
-            .blog-floating-item .item-text { font-size: 11px; }
-            .blog-call-item { border-radius: 25px 0 0 25px; }
-            .blog-call-sub-item {
-                padding: 5px 10px;
-                font-size: 10px;
-            }
-            .blog-eitaa-item { border-radius: 0 25px 25px 0; }
+            .floating-container { bottom: 15px; left: 10px; gap: 5px; }
+            .floating-main-btn { padding: 10px 16px 10px 20px; font-size: 13px; border-radius: 30px 0 0 30px; }
+            .floating-main-btn .btn-arrow { font-size: 11px; }
+            .floating-item { padding: 8px 12px; font-size: 12px; gap: 5px; border-radius: 30px; }
+            .floating-item .item-icon { font-size: 15px; }
+            .floating-item .item-text { font-size: 12px; }
+            .call-item { border-radius: 30px 0 0 30px; }
+            .call-sub-item { padding: 6px 12px; font-size: 11px; }
+            .eitaa-item { border-radius: 0 30px 30px 0; }
         }
 
         @media (max-width: 480px) {
-            .blog-article-container {
-                padding: 16px 12px 28px;
-                margin: 8px auto 30px;
-                border-radius: 12px;
-            }
-            .blog-article-container h1 {
-                font-size: 20px;
-            }
-            .blog-article-container h2 {
-                font-size: 18px;
-            }
-            .blog-article-container h3 {
-                font-size: 16px;
-            }
-            .blog-article-container p {
-                font-size: 14px;
-                line-height: 1.9;
-            }
-            .blog-article-container ul, .blog-article-container ol {
-                font-size: 14px;
-                padding-right: 16px;
-            }
-            .blog-article-container .blog-back-links a {
-                padding: 6px 12px;
-                font-size: 12px;
-                min-width: 80px;
-            }
+            .blog-article-container { padding: 16px 12px 28px; margin: 8px auto 30px; border-radius: 12px; }
+            .blog-article-container h1 { font-size: 20px; }
+            .blog-article-container h2 { font-size: 18px; }
+            .blog-article-container h3 { font-size: 16px; }
+            .blog-article-container p { font-size: 14px; }
+            .blog-article-container ul, .blog-article-container ol { font-size: 14px; padding-right: 16px; }
+            .blog-article-container .blog-back-links a { padding: 6px 12px; font-size: 12px; min-width: 80px; }
 
-            #blogBackToTop {
-                width: 38px;
-                height: 38px;
-                font-size: 18px;
-                bottom: 65px;
-                right: 8px;
-            }
+            #backToTop { width: 42px; height: 42px; font-size: 20px; bottom: 90px; right: 10px; }
 
-            .blog-floating-container {
-                bottom: 10px;
-                left: 5px;
-                gap: 3px;
-            }
-            .blog-floating-btn {
-                padding: 8px 10px 8px 14px;
-                font-size: 10px;
-                border-radius: 20px 0 0 20px;
-            }
-            .blog-floating-btn .btn-arrow { font-size: 8px; }
-            .blog-floating-item {
-                padding: 6px 8px;
-                font-size: 10px;
-                gap: 3px;
-                border-radius: 20px;
-            }
-            .blog-floating-item .item-icon { font-size: 12px; }
-            .blog-floating-item .item-text { font-size: 10px; }
-            .blog-call-item { border-radius: 20px 0 0 20px; }
-            .blog-call-sub-item {
-                padding: 4px 8px;
-                font-size: 9px;
-            }
-            .blog-eitaa-item { border-radius: 0 20px 20px 0; }
+            .floating-container { bottom: 10px; left: 6px; gap: 4px; }
+            .floating-main-btn { padding: 8px 12px 8px 16px; font-size: 11px; border-radius: 25px 0 0 25px; }
+            .floating-main-btn .btn-arrow { font-size: 9px; }
+            .floating-item { padding: 6px 10px; font-size: 10px; gap: 4px; border-radius: 25px; }
+            .floating-item .item-icon { font-size: 13px; }
+            .floating-item .item-text { font-size: 10px; }
+            .call-item { border-radius: 25px 0 0 25px; }
+            .call-sub-item { padding: 4px 10px; font-size: 10px; }
+            .eitaa-item { border-radius: 0 25px 25px 0; }
         }
     </style>
 </head>
@@ -549,9 +294,8 @@
         <span>📅 آخرین به‌روزرسانی: ۱۲ شهریور ۱۴۰۴</span> &nbsp;|&nbsp; <span>⏱ زمان مطالعه: ۱۴ دقیقه</span>
     </div>
 
-    <!-- ===== تصویر اصلی (factory12.jpg) ===== -->
     <div class="blog-article-image">
-        <img src="../images/services/factory12.jpg" alt="سمپاشی کارخانجات - کنترل تخصصی آفات صنعتی">
+        <img src="../images/services/factory.jpg" alt="سمپاشی کارخانجات - کنترل تخصصی آفات صنعتی">
         <div class="caption"><strong>سمپاشی تخصصی کارخانجات</strong> - تضمین بهداشت و ایمنی در محیط‌های صنعتی</div>
     </div>
 
@@ -584,39 +328,14 @@
     <h3>۱. جوندگان (موش‌ها)</h3>
     <p>موش‌ها یکی از مخرب‌ترین آفات در محیط‌های صنعتی هستند. آنها با جویدن بسته‌بندی‌ها، سیم‌های برق، عایق‌ها و ماشین‌آلات صنعتی، خسارت‌های مالی سنگینی ایجاد می‌کنند. همچنین موش‌ها ناقل بیماری‌هایی مانند سالمونلا و تب موشی هستند و با آلوده کردن مواد غذایی، خطرات جدی بهداشتی ایجاد می‌کنند.</p>
 
-    <p>مهم‌ترین گونه‌های جوندگان در کارخانجات عبارتند از:</p>
-    <ul>
-        <li><strong>موش درشت (نوروژی):</strong> معمولاً در طبقات هم‌کف و زیرزمین‌ها زندگی می‌کند</li>
-        <li><strong>موش سقف:</strong> در طبقات بالا، سقف‌ها و فضاهای مرتفع فعالیت دارد</li>
-        <li><strong>موش خانگی:</strong> در تمام فضاها دیده می‌شود</li>
-    </ul>
-
-    <!-- ===== تصویر دوم (factory11.jpg) بعد از آفات انباری ===== -->
-    <div class="blog-article-image">
-        <img src="../images/services/factory11.jpg" alt="آفات انباری در کارخانجات - کنترل تخصصی">
-        <div class="caption"><strong>آفات انباری</strong> - یکی از مهم‌ترین تهدیدات در کارخانه‌های مواد غذایی</div>
-    </div>
-
     <h3>۲. سوسک‌ها</h3>
     <p>سوسک‌ها یکی از رایج‌ترین آفات در کارخانه‌های تولید مواد غذایی، دارویی و صنعتی هستند. آنها می‌توانند باکتری‌های بیماری‌زا را به محیط کار منتقل کرده و باعث آلودگی محصولات و کاهش استانداردهای بهداشتی شوند. سوسک‌ها در انتقال بیماری‌هایی مانند اسهال خونی نقش دارند.</p>
-
-    <!-- ===== تصویر سوم (factory13.jpg) بعد از سوسک‌ها ===== -->
-    <div class="blog-article-image">
-        <img src="../images/services/factory13.jpg" alt="سوسک‌ها در کارخانجات - کنترل تخصصی">
-        <div class="caption"><strong>کنترل سوسک‌ها در کارخانه</strong> - یکی از مهم‌ترین اقدامات بهداشتی در محیط‌های صنعتی</div>
-    </div>
 
     <h3>۳. حشرات پروازی (مگس‌ها)</h3>
     <p>مگس‌ها و سایر حشرات پروازی در محیط‌های تولید مواد غذایی و بسته‌بندی مشکلات جدی ایجاد می‌کنند. آنها علاوه بر انتقال بیماری‌ها، می‌توانند باعث رد شدن محصولات از بازرسی‌های بهداشتی شوند. مگس‌ها باکتری‌های مختلفی را منتقل می‌کنند و می‌توانند محصولات غذایی را آلوده سازند.</p>
 
     <h3>۴. آفات انباری</h3>
     <p>در کارخانه‌هایی که با مواد غذایی، غلات، آرد و دانه‌ها سروکار دارند، آفات انباری مانند شپشک‌ها، کنه‌ها و شب‌پره‌های انباری می‌توانند باعث آلوده شدن محصولات و خسارات سنگین به ذخایر مواد اولیه شوند.</p>
-
-    <h3>۵. موریانه‌ها</h3>
-    <p>در کارخانه‌هایی که ساختارهای چوبی، پالت‌های چوبی یا کاغذ و مقوا در آنها استفاده می‌شود، موریانه‌ها می‌توانند باعث آسیب جدی به سازه‌ها و بسته‌بندی‌ها شوند.</p>
-
-    <h3>۶. ساس‌ها و کنه‌ها</h3>
-    <p>در فضاهای کارگری و استراحتگاه‌های کارکنان، ساس‌ها و کنه‌ها می‌توانند مشکلات بهداشتی ایجاد کنند و باعث کاهش بهره‌وری نیروی کار شوند.</p>
 
     <h2>چالش‌های خاص سمپاشی کارخانه</h2>
 
@@ -626,138 +345,18 @@
     <h3>۲. دسترسی به نقاط صعب‌الوصول</h3>
     <p>کارخانه‌ها دارای فضاهای بزرگ، سقف‌های بلند، کانال‌های متعدد، انبارهای وسیع و تجهیزات حساس هستند که دسترسی به تمام نقاط برای سمپاشی دشوار است.</p>
 
-    <h3>۳. هماهنگی با خط تولید</h3>
-    <p>سمپاشی در کارخانه‌ها باید در زمان‌هایی انجام شود که کمترین اختلال در خط تولید ایجاد شود. معمولاً سمپاشی پس از ساعات اداری یا در تعطیلات انجام می‌شود.</p>
-
-    <h3>۴. تنوع بالای آفات</h3>
-    <p>در کارخانه‌ها، با طیف گسترده‌ای از آفات روبرو هستیم که هر کدام نیاز به روش‌های کنترل خاص خود دارند. از جوندگان و سوسک‌ها گرفته تا حشرات پروازی و آفات انباری، همه نیازمند رویکردی جامع و تخصصی هستند.</p>
-
     <h2>روش‌های تخصصی سمپاشی کارخانه</h2>
 
     <h3>مرحله ۱: بهسازی و آماده‌سازی محیط</h3>
-    <p>قبل از هر گونه سمپاشی، باید اقدامات بهسازی انجام شود:</p>
-    <ul>
-        <li>بستن تمام منافذ، درزها و شکاف‌های ساختمان</li>
-        <li>ترمیم خوردگی‌های چوب و دیوارها</li>
-        <li>بهبود شرایط ساختمانی برای جلوگیری از ورود آفات</li>
-        <li>پاک‌سازی محیط و حذف منابع غذایی آفات</li>
-    </ul>
+    <p>قبل از هر گونه سمپاشی، باید اقدامات بهسازی انجام شود: بستن تمام منافذ، درزها و شکاف‌های ساختمان، ترمیم خوردگی‌های چوب و دیوارها، بهبود شرایط ساختمانی برای جلوگیری از ورود آفات و پاک‌سازی محیط و حذف منابع غذایی آفات.</p>
 
     <h3>مرحله ۲: بازرسی دقیق و شناسایی</h3>
     <p>کارشناسان ما با بررسی کامل کارخانه، نقاط حساس، نوع آفات، میزان آلودگی و مسیرهای ورود را شناسایی می‌کنند. این بازرسی شامل انبارها، خطوط تولید، فضاهای کارگری، موتورخانه و انبارهای مواد اولیه می‌شود.</p>
 
-    <h3>مرحله ۳: انتخاب سموم تخصصی و مجاز</h3>
-    <p>در کارخانه‌ها، به‌ویژه در صنایع غذایی و دارویی، فقط از سموم تأییدشده و ایمن استفاده می‌شود. برخی از سموم مجاز عبارتند از:</p>
-    <ul>
-        <li><strong>سموم ابقایی:</strong> برای پوشش دیوارها، شکاف‌ها و درزها (مانند ترکیب آورکیل و سیترول فورت)</li>
-        <li><strong>سموم ULV (حجم فوق‌العاده کم):</strong> برای مه‌پاشی فضاهای بزرگ و کنترل حشرات پروازی (مانند کودوس و سولفاک سوپر)</li>
-        <li><strong>طعمه‌های مسموم:</strong> برای کنترل جوندگان با سموم آنتی‌کوآگولانت (مانند استورم، مورین، رادیلون و کلرت)</li>
-    </ul>
-
-    <h3>مرحله ۴: روش‌های سمپاشی</h3>
-
-    <p><strong>الف) سمپاشی ابقایی (Residual Spraying)</strong></p>
-    <p>دیوارها، شکاف‌ها و درزها با سموم بلندمدت پوشش داده می‌شوند تا از نفوذ و تکثیر آفات جلوگیری شود.</p>
-
-    <p><strong>ب) طعمه‌گذاری تخصصی</strong></p>
-    <p>طعمه‌های مسموم در ایستگاه‌های قفل‌دار و نقاط استراتژیک قرار داده می‌شوند. برای جلوگیری از عادت جوندگان به سموم، باید در دوره‌های مختلف از طعمه‌های متفاوت استفاده شود.</p>
-
-    <p><strong>ج) گازدهی (در موارد خاص)</strong></p>
-    <p>برای فضاهای بسیار آلوده و آفات مقاوم، روش گازدهی (Fumigation) با رعایت کامل نکات ایمنی انجام می‌شود.</p>
-
-    <h3>مرحله ۵: حفاظت از مواد غذایی و تجهیزات</h3>
-    <p>قبل از سمپاشی، تمام مواد غذایی، مواد اولیه و تجهیزات حساس باید به‌صورت کامل پوشانده شوند یا از محیط خارج گردند.</p>
-
-    <h3>مرحله ۶: تهویه و ایمن‌سازی</h3>
-    <p>پس از سمپاشی، محیط به مدت مناسب تهویه می‌شود و کارشناسان زمان بازگشت ایمن کارکنان را اعلام می‌کنند.</p>
-
-    <h3>مرحله ۷: مستندسازی و گزارش‌دهی</h3>
-    <p>تمام مراحل سمپاشی، از جمله نوع سم، میزان مصرف، زمان و محل انجام، مستندسازی می‌شود تا فرآیند قابل پیگیری و تطابق با استانداردها باشد.</p>
-
-    <h2>سمپاشی در صنعت داروسازی</h2>
-    <p>سمپاشی در شرکت‌های داروسازی بسیار متفاوت‌تر از سمپاشی سایر محیط‌های صنعتی است. علت این تفاوت، ماهیت حساس تولیدات دارویی و الزامات بهداشتی بسیار سختگیرانه است که این محیط‌ها را از سایر فضاهای صنعتی متمایز می‌کند.</p>
-
-    <h3>نکات ویژه سمپاشی دارویی</h3>
-    <ul>
-        <li><strong>استفاده از سموم کاملاً تخصصی و فاقد مواد مضر شیمیایی:</strong> در کارخانه‌های داروسازی، هیچ ماده باقی‌مانده‌ای از سموم نباید بر روی سطوح یا محیط تولید باقی بماند، زیرا حتی مقدار بسیار کمی از مواد شیمیایی می‌تواند منجر به آلودگی محصول نهایی شود.</li>
-        <li><strong>رعایت استانداردهای GMP:</strong> رعایت استانداردهای بین‌المللی مانند GMP و دستورالعمل‌های سازمان بهداشت جهانی برای کنترل موثر و ایمن آفات در داروسازی الزامی است.</li>
-        <li><strong>استفاده از سموم بیولوژیک و گیاهی:</strong> این سموم به دلیل طبیعی بودن، هیچ گونه اثرات جانبی مضر برای محصولات دارویی ندارند و به عنوان بهترین گزینه در صنایع حساس دارویی شناخته می‌شوند.</li>
-    </ul>
-
-    <h2>اقدامات پیشگیرانه در کارخانه‌ها</h2>
-    <p>پس از سمپاشی، رعایت نکات پیشگیرانه برای جلوگیری از بازگشت آفات ضروری است:</p>
-
-    <h3>۱. پایش و بازرسی منظم</h3>
-    <ul>
-        <li>استفاده از تله‌های چسبنده و پایش مستمر برای شناسایی زودهنگام آفات</li>
-        <li>استفاده از پودرهای ردگیری موش برای شناسایی نقاط پرتردد</li>
-        <li>ردیابی با نور UV برای مشاهده ادرار و مسیرهای عبوری موش‌ها</li>
-    </ul>
-
-    <h3>۲. رعایت بهداشت محیط</h3>
-    <ul>
-        <li>تمیز نگهداشتن انبارها و جلوگیری از تجمع زباله</li>
-        <li>حذف منابع غذایی آفات</li>
-        <li>دفع صحیح زباله‌ها با استفاده از سطل‌های درب‌دار</li>
-    </ul>
-
-    <h3>۳. نگهداری سازه</h3>
-    <ul>
-        <li>بستن شکاف‌ها و درزها برای جلوگیری از ورود آفات</li>
-        <li>تعمیر درب‌ها و پنجره‌ها</li>
-        <li>نصب توری فلزی روی دریچه‌ها و لوله‌های فاضلاب</li>
-    </ul>
-
-    <h3>۴. آموزش کارکنان</h3>
-    <p>آموزش کارکنان برای شناسایی علائم حضور آفات، رعایت نکات بهداشتی و گزارش سریع هرگونه آلودگی.</p>
-
-    <h2>هزینه سمپاشی کارخانه</h2>
-    <p>هزینه سمپاشی کارخانه به عوامل زیر بستگی دارد. برای دریافت <strong>مشاوره رایگان</strong> و <strong>استعلام دقیق هزینه</strong>، با کارشناسان ما تماس بگیرید:</p>
-
-    <table>
-        <thead>
-            <tr><th>عامل</th><th>تأثیر بر هزینه</th></tr>
-        </thead>
-        <tbody>
-            <tr><td><strong>مساحت محیط</strong></td><td>هرچه متراژ بیشتر باشد، هزینه بیشتر است</td></tr>
-            <tr><td><strong>نوع صنعت</strong></td><td>صنایع غذایی و دارویی نیاز به سموم تخصصی‌تر دارند</td></tr>
-            <tr><td><strong>شدت آلودگی</strong></td><td>آلودگی شدید نیاز به عملیات گسترده‌تری دارد</td></tr>
-            <tr><td><strong>نوع آفات</strong></td><td>هر آفت نیاز به روش کنترل خاص خود دارد</td></tr>
-            <tr><td><strong>دسترسی به نقاط</strong></td><td>سمپاشی فضاهای صعب‌الوصول هزینه را افزایش می‌دهد</td></tr>
-        </tbody>
-    </table>
-
-    <h2>سوالات متداول درباره سمپاشی کارخانه</h2>
-
-    <details>
-        <summary><strong>چند بار در سال باید کارخانه سمپاشی شود؟</strong></summary>
-        <p>توصیه می‌شود کارخانه‌ها حداقل سالی دو بار (ترجیحاً در فصل بهار و پاییز) سمپاشی شوند. در صورت مشاهده آفات، بلافاصله باید اقدام شود. صنایع غذایی و دارویی ممکن است نیاز به سمپاشی ماهانه یا فصلی داشته باشند.</p>
-    </details>
-
-    <details>
-        <summary><strong>آیا سمپاشی کارخانه برای محصولات خطرناک است؟</strong></summary>
-        <p>خیر، سموم استفاده‌شده توسط شرکت نانوفناوران با رعایت کامل استانداردهای بهداشتی انتخاب می‌شوند. قبل از سمپاشی، تمام مواد غذایی، مواد اولیه و محصولات پوشانده یا از محیط خارج می‌شوند تا هیچگونه تماسی با سموم نداشته باشند.</p>
-    </details>
-
-    <details>
-        <summary><strong>چه مدت بعد از سمپاشی کارخانه برای حضور کارکنان ایمن است؟</strong></summary>
-        <p>بسته به نوع سموم استفاده‌شده، معمولاً ۴ تا ۶ ساعت پس از سمپاشی، محیط برای حضور کارکنان ایمن است. در روش گازدهی، زمان بیشتری نیاز است. کارشناسان زمان دقیق را به شما اعلام می‌کنند.</p>
-    </details>
-
-    <details>
-        <summary><strong>آیا خودمان هم می‌توانیم کارخانه را سمپاشی کنیم؟</strong></summary>
-        <p>سمپاشی کارخانه به دلیل پیچیدگی‌های خاص، نیاز به تجهیزات پیشرفته، دانش تخصصی و سموم مجاز دارد. استفاده نادرست از سموم می‌تواند برای سلامتی کارکنان و کیفیت محصولات خطرناک باشد. انجام سمپاشی توسط کارشناسان مجرب توصیه می‌شود.</p>
-    </details>
-
-    <details>
-        <summary><strong>آیا سمپاشی کارخانه در زمان فعالیت خط تولید امکان‌پذیر است؟</strong></summary>
-        <p>معمولاً سمپاشی در زمان‌هایی انجام می‌شود که خط تولید فعالیت ندارد (پس از ساعات اداری، در تعطیلات یا شیفت‌های خالی). در صورت نیاز به سمپاشی فوری، با هماهنگی کامل و رعایت نکات ایمنی امکان‌پذیر است.</p>
-    </details>
-
     <h2>نتیجه‌گیری</h2>
     <p>سمپاشی کارخانه یک فرآیند تخصصی، حساس و حیاتی برای حفظ بهداشت، ایمنی و بهره‌وری در محیط‌های صنعتی است. وجود آفات در کارخانه‌ها می‌تواند خسارت‌های جبران‌ناپذیری به مواد اولیه، محصولات، تجهیزات و اعتبار برند وارد کند. انتخاب یک شرکت تخصصی با تجربه در زمینه سمپاشی صنعتی، تضمین‌کننده موفقیت عملیات و آرامش خاطر شماست.</p>
 
-    <p><strong>شرکت سمپاشی نانوفناوران بهداشت تهران</strong> با بیش از یک دهه تجربه در زمینه سمپاشی کارخانجات و واحدهای صنعتی، آماده ارائه خدمات تخصصی و تضمینی به شماست. تیم کارشناسان ما با شناسایی دقیق نوع آفات، استفاده از سموم استاندارد و مجاز، و رعایت کامل نکات ایمنی، محیطی امن، بهداشتی و عاری از آفات را برای کارخانه شما به ارمغان می‌آورند.</p>
+    <p><strong>شرکت سمپاشی نانوفناوران بهداشت تهران</strong> با بیش از یک دهه تجربه در زمینه سمپاشی کارخانجات و واحدهای صنعتی، آماده ارائه خدمات تخصصی و تضمینی به شماست.</p>
 
     <p style="font-size:20px; font-weight:700; text-align:center; color:#0B6FB8;">🚀 همین حالا اقدام کنید:</p>
     <div style="text-align:center; margin:20px 0;">
@@ -775,93 +374,90 @@
 </div>
 
 <!-- ===== دکمه اسکرول به بالا ===== -->
-<button id="blogBackToTop" title="برو به بالا">↑</button>
+<button id="backToTop" title="برو به بالا">↑</button>
 
 <!-- ===== منوی شناور ===== -->
-<div class="blog-floating-container">
-    <div class="blog-floating-menu" id="blogFloatingMenu">
-        <div class="blog-call-wrapper" style="display:flex; align-items:center; gap:4px;">
-            <div class="blog-floating-item blog-call-item" id="blogCallToggle">
+<div class="floating-container">
+    <button class="floating-main-btn" id="floatingToggle">
+        <span class="btn-arrow">▶</span>
+        <span class="btn-text">📞 مشاوره رایگان</span>
+    </button>
+    <div class="floating-menu" id="floatingMenu">
+        <div class="call-wrapper">
+            <div class="floating-item call-item" id="callToggle">
                 <span class="item-icon">📞</span>
                 <span class="item-text">تماس سریع</span>
                 <span class="arrow">▲</span>
             </div>
-            <div class="blog-call-submenu" id="blogCallSubmenu">
-                <a href="tel:09120705746" class="blog-floating-item blog-call-sub-item"><span class="item-icon">📞</span><span class="item-text">شماره ۱</span></a>
-                <a href="tel:09197173454" class="blog-floating-item blog-call-sub-item"><span class="item-icon">📞</span><span class="item-text">شماره ۲</span></a>
+            <div class="call-submenu" id="callSubmenu">
+                <a href="tel:09120705746" class="floating-item call-sub-item"><span class="item-icon">📞</span><span class="item-text">شماره ۱</span></a>
+                <a href="tel:09197173454" class="floating-item call-sub-item"><span class="item-icon">📞</span><span class="item-text">شماره ۲</span></a>
             </div>
         </div>
-        <a href="https://wa.me/989120705746?text=%D8%A8%D9%87%20%D8%B3%D8%A7%DB%8C%D8%AA%20%D8%B4%D8%B1%DA%A9%D8%AA%20%D8%B3%D9%85%D9%BE%D8%A7%D8%B4%DB%8C%20%D9%86%D8%A7%D9%86%D9%88%D9%81%D9%86%D8%A7%D9%88%D8%B1%D8%A7%D9%86%20%D8%AE%D9%88%D8%B4%20%D8%A2%D9%85%D8%AF%DB%8C%D8%AF" target="_blank" class="blog-floating-item blog-whatsapp-item"><span class="item-icon">💬</span><span class="item-text">واتساپ</span></a>
-        <a href="https://eitaa.com/nanofannavaran_ir" target="_blank" class="blog-floating-item blog-eitaa-item"><span class="item-icon">✈️</span><span class="item-text">ایتا</span></a>
+        <a href="https://wa.me/989120705746?text=%D8%A8%D9%87%20%D8%B3%D8%A7%DB%8C%D8%AA%20%D8%B4%D8%B1%DA%A9%D8%AA%20%D8%B3%D9%85%D9%BE%D8%A7%D8%B4%DB%8C%20%D9%86%D8%A7%D9%86%D9%88%D9%81%D9%86%D8%A7%D9%88%D8%B1%D8%A7%D9%86%20%D8%AE%D9%88%D8%B4%20%D8%A2%D9%85%D8%AF%DB%8C%D8%AF" target="_blank" class="floating-item whatsapp-item"><span class="item-icon">💬</span><span class="item-text">واتساپ</span></a>
+        <a href="https://eitaa.com/nanofannavaran_ir" target="_blank" class="floating-item eitaa-item"><span class="item-icon">✈️</span><span class="item-text">ایتا</span></a>
     </div>
-    <button class="blog-floating-btn" id="blogFloatingToggle">
-        <span class="btn-arrow">▶</span>
-        <span class="btn-text">📞 مشاوره رایگان</span>
-    </button>
 </div>
 
 <!-- ===== جاوااسکریپت ===== -->
 <script>
     // ===== دکمه اسکرول به بالا =====
-    var blogBackBtn = document.getElementById('blogBackToTop');
+    var backToTopBtn = document.getElementById('backToTop');
 
     window.addEventListener('scroll', function() {
         if (window.scrollY > 300) {
-            blogBackBtn.classList.add('show');
+            backToTopBtn.classList.add('show');
         } else {
-            blogBackBtn.classList.remove('show');
+            backToTopBtn.classList.remove('show');
         }
     });
 
-    if (blogBackBtn) {
-        blogBackBtn.addEventListener('click', function() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+    backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
         });
-    }
+    });
 
     // ===== منوی شناور =====
-    var blogToggleBtn = document.getElementById('blogFloatingToggle');
-    var blogMenu = document.getElementById('blogFloatingMenu');
-    var blogArrow = blogToggleBtn ? blogToggleBtn.querySelector('.btn-arrow') : null;
+    var toggleBtn = document.getElementById('floatingToggle');
+    var menu = document.getElementById('floatingMenu');
+    var arrow = toggleBtn.querySelector('.btn-arrow');
 
-    if (blogToggleBtn && blogMenu) {
-        blogToggleBtn.addEventListener('click', function(e) {
-            e.stopPropagation();
-            this.classList.toggle('active');
-            blogMenu.classList.toggle('open');
-            if (blogArrow) blogArrow.classList.toggle('open');
-        });
-    }
+    toggleBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        this.classList.toggle('active');
+        menu.classList.toggle('open');
+        if (arrow) arrow.classList.toggle('open');
+    });
 
     // ===== زیرمنوی تماس =====
-    var blogCallToggle = document.getElementById('blogCallToggle');
-    var blogCallSubmenu = document.getElementById('blogCallSubmenu');
+    var callToggle = document.getElementById('callToggle');
+    var callSubmenu = document.getElementById('callSubmenu');
 
-    if (blogCallToggle && blogCallSubmenu) {
-        blogCallToggle.addEventListener('click', function(e) {
-            e.stopPropagation();
-            this.classList.toggle('open');
-            blogCallSubmenu.classList.toggle('open');
-            var arrowIcon = this.querySelector('.arrow');
-            if (arrowIcon) {
-                arrowIcon.textContent = blogCallSubmenu.classList.contains('open') ? '▼' : '▲';
-            }
-        });
-    }
+    callToggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        this.classList.toggle('open');
+        callSubmenu.classList.toggle('open');
+        var arrowIcon = this.querySelector('.arrow');
+        if (arrowIcon) {
+            arrowIcon.textContent = callSubmenu.classList.contains('open') ? '▼' : '▲';
+        }
+    });
 
     // ===== بستن منو با کلیک بیرون =====
-    document.addEventListener('click', function(e) {
-        if (blogToggleBtn) blogToggleBtn.classList.remove('active');
-        if (blogMenu) blogMenu.classList.remove('open');
-        if (blogArrow) blogArrow.classList.remove('open');
-        if (blogCallToggle) blogCallToggle.classList.remove('open');
-        if (blogCallSubmenu) blogCallSubmenu.classList.remove('open');
-        var arrowIcon = blogCallToggle ? blogCallToggle.querySelector('.arrow') : null;
+    document.addEventListener('click', function() {
+        if (toggleBtn) toggleBtn.classList.remove('active');
+        if (menu) menu.classList.remove('open');
+        if (arrow) arrow.classList.remove('open');
+        if (callToggle) callToggle.classList.remove('open');
+        if (callSubmenu) callSubmenu.classList.remove('open');
+        var arrowIcon = callToggle ? callToggle.querySelector('.arrow') : null;
         if (arrowIcon) arrowIcon.textContent = '▲';
     });
 
-    if (blogMenu) {
-        blogMenu.addEventListener('click', function(e) {
+    if (menu) {
+        menu.addEventListener('click', function(e) {
             e.stopPropagation();
         });
     }
