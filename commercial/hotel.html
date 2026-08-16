@@ -3,153 +3,631 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سمپاشی هتل‌ها | نانوفناوران</title>
-    <link rel="stylesheet" href="../style.css">
+    <title>سمپاشی هتل‌ها | راهنمای جامع کنترل آفات در صنعت مهمان‌نوازی | نانوفناوران</title>
+    <meta name="description" content="مقاله جامع سمپاشی هتل‌ها: چالش‌های کنترل آفات در صنعت هتلداری، روش‌های تخصصی سمپاشی هتل، آفات رایج و نکات ایمنی.">
+    <meta name="keywords" content="سمپاشی هتل, کنترل آفات هتل, سمپاشی هتل‌ها, دفع ساس هتل, سمپاشی هتلداری, نانوفناوران">
+    <link rel="canonical" href="https://nanofannavaran.ir/commercial/hotel.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
-        .service-detail {
-            max-width: 1100px;
-            margin: 100px auto 50px;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
+        /* ===== استایل‌های اختصاصی مقاله ===== */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Vazirmatn', 'IRANSans', 'Tahoma', sans-serif;
+            background: #f8fbfd; color: #222; line-height: 1.9;
+            direction: rtl; padding: 20px 15px; min-height: 100vh;
         }
-        .service-detail .text h1 {
-            font-size: 32px;
-            color: var(--primary);
-            margin-bottom: 20px;
+
+        .blog-article-container {
+            max-width: 1100px; margin: 20px auto 60px; background: #fff;
+            border-radius: 24px; box-shadow: 0 10px 40px rgba(0,0,0,.08);
+            padding: 30px 25px 50px; line-height: 1.8; color: #2c3e50;
+            direction: rtl; width: 100%;
         }
-        .service-detail .text p {
-            line-height: 2.2;
-            color: #555;
-            font-size: 16px;
+        .blog-article-container h1 { font-size: 32px; color: #0B6FB8; margin-bottom: 20px; line-height: 1.5; }
+        .blog-article-container .blog-meta { color: #888; font-size: 14px; border-bottom: 1px solid #eee; padding-bottom: 18px; margin-bottom: 25px; }
+        .blog-article-container h2 { font-size: 26px; color: #1F2937; margin: 35px 0 12px; border-right: 5px solid #0B6FB8; padding-right: 15px; }
+        .blog-article-container h3 { font-size: 21px; color: #0B6FB8; margin: 25px 0 10px; }
+        .blog-article-container h4 { font-size: 18px; color: #1F2937; margin: 20px 0 8px; }
+        .blog-article-container p { line-height: 2.2; color: #444; font-size: 16px; margin-bottom: 16px; text-align: justify; }
+        .blog-article-container ul, .blog-article-container ol { line-height: 2.2; color: #444; font-size: 16px; padding-right: 25px; margin-bottom: 18px; }
+        .blog-article-container ul li, .blog-article-container ol li { margin-bottom: 6px; }
+        .blog-article-container table { width: 100%; border-collapse: collapse; margin: 18px 0 25px; font-size: 15px; overflow-x: auto; display: block; }
+        .blog-article-container table th { background: #0B6FB8; color: #fff; padding: 10px 12px; text-align: right; }
+        .blog-article-container table td { border: 1px solid #ddd; padding: 8px 12px; background: #fafafa; }
+        .blog-article-container table tr:nth-child(even) td { background: #f5f8fc; }
+        .blog-article-image { margin: 25px 0; text-align: center; }
+        .blog-article-image img { width: 100%; max-width: 700px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,.15); height: auto; }
+        .blog-article-image .caption { font-size: 14px; color: #888; margin-top: 10px; }
+        .blog-article-image .caption strong { color: #0B6FB8; }
+        .blog-article-container .blog-back-links { margin: 35px 0 15px; display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+        .blog-article-container .blog-back-links a { display: inline-block; padding: 10px 22px; border-radius: 50px; text-decoration: none; font-weight: 700; transition: .3s; font-size: 15px; text-align: center; flex: 1 1 auto; min-width: 140px; }
+        .blog-article-container .blog-back-links .btn-home { background: #0B6FB8; color: #fff; }
+        .blog-article-container .blog-back-links .btn-home:hover { background: #11A64A; }
+        .blog-article-container .blog-back-links .btn-services { background: #11A64A; color: #fff; }
+        .blog-article-container .blog-back-links .btn-services:hover { background: #0B6FB8; }
+        .blog-article-container .blog-back-links .btn-contact { background: #1F2937; color: #fff; }
+        .blog-article-container .blog-back-links .btn-contact:hover { background: #0B6FB8; }
+        .blog-callout { background: #f0f7ff; border-right: 5px solid #0B6FB8; padding: 18px 22px; border-radius: 12px; margin: 22px 0; }
+        .blog-callout strong { color: #0B6FB8; }
+        .blog-callout-yellow { background: #fff8e1; border-right: 5px solid #ffc107; padding: 18px 22px; border-radius: 12px; margin: 22px 0; }
+        .blog-article-container details { background: #f8fbfd; padding: 14px 18px; border-radius: 12px; margin-bottom: 14px; border: 1px solid #e9ecef; }
+        .blog-article-container details summary { font-weight: 700; color: #0B6FB8; cursor: pointer; font-size: 16px; }
+        .blog-article-container details p { margin-top: 10px; padding-right: 8px; font-size: 15px; }
+
+        /* ===== دکمه اسکرول به بالا ===== */
+        #backToTop {
+            position: fixed;
+            right: 20px;
+            bottom: 80px;
+            width: 55px;
+            height: 55px;
+            border: none;
+            border-radius: 50%;
+            background: #0B6FB8;
+            color: #fff;
+            font-size: 28px;
+            font-weight: 700;
+            cursor: pointer;
+            display: none;
+            z-index: 9998;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            line-height: 1;
+            text-align: center;
+            padding: 0;
+            font-family: 'Vazirmatn', sans-serif;
         }
-        .service-detail .gif img {
-            width: 100%;
-            max-height: 400px;
-            object-fit: contain;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,.15);
+        #backToTop:hover {
+            background: #11A64A;
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
         }
-        .back-links {
-            margin-top: 30px;
+        #backToTop::before {
+            content: "↑";
+            display: block;
+            font-size: 30px;
+            font-weight: 900;
+            line-height: 55px;
+        }
+        #backToTop.show {
+            display: block !important;
+        }
+
+        /* ===== منوی شناور ===== */
+        .floating-container {
+            position: fixed;
+            bottom: 30px;
+            left: 20px;
+            z-index: 9999;
             display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
+            flex-direction: row;
+            align-items: center;
+            font-family: 'Vazirmatn', sans-serif;
+            direction: ltr;
         }
-        .back-links a {
-            display: inline-block;
-            padding: 12px 28px;
+        .floating-main-btn {
+            background: linear-gradient(135deg, #25D366 0%, #1da851 100%);
+            color: #fff;
+            border: none;
+            border-radius: 50px 0 0 50px;
+            padding: 16px 24px 16px 28px;
+            font-size: 16px;
+            font-weight: 800;
+            cursor: pointer;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            white-space: nowrap;
+            animation: pulse 2.5s infinite;
+            transition: all 0.3s ease;
+        }
+        .floating-main-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(37, 211, 102, 0.8);
+        }
+        .floating-main-btn .btn-arrow {
+            font-size: 14px;
+            transition: transform 0.4s ease;
+        }
+        .floating-main-btn.active .btn-arrow {
+            transform: rotate(90deg);
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6); }
+            50% { box-shadow: 0 8px 50px rgba(37, 211, 102, 0.9), 0 0 80px rgba(37, 211, 102, 0.2); }
+            100% { box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6); }
+        }
+
+        .floating-menu {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(-20px) scale(0.95);
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        .floating-menu.open {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0) scale(1);
+        }
+
+        .floating-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 18px;
             border-radius: 50px;
-            text-decoration: none;
+            color: #fff;
             font-weight: 700;
-            transition: .3s;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+            white-space: nowrap;
+            border: 2px solid rgba(255, 255, 255, 0.15);
+            text-decoration: none;
         }
-        .back-to-list {
-            background: var(--secondary);
-            color: #fff;
+        .floating-item:hover {
+            transform: scale(1.08);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
         }
-        .back-to-list:hover {
-            background: var(--primary);
+        .floating-item .item-icon { font-size: 18px; }
+        .floating-item .item-text { font-size: 14px; }
+
+        .call-item {
+            background: linear-gradient(135deg, #25D366, #1da851);
+            border-radius: 50px 0 0 50px;
+            cursor: pointer;
+            position: relative;
         }
-        .back-to-home {
-            background: var(--primary);
-            color: #fff;
+        .call-item .arrow {
+            font-size: 12px;
+            margin-right: 5px;
+            transition: transform 0.3s ease;
         }
-        .back-to-home:hover {
-            background: var(--secondary);
+        .call-item.open .arrow {
+            transform: rotate(180deg);
         }
-        .contact-float {
-            margin-top: 20px;
+
+        .call-submenu {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            opacity: 0;
+            visibility: hidden;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            margin-right: 5px;
         }
-        .contact-float a {
-            display: inline-block;
-            background: var(--primary);
-            color: #fff;
-            padding: 12px 28px;
+        .call-submenu.open {
+            opacity: 1;
+            visibility: visible;
+            max-height: 200px;
+        }
+
+        .call-sub-item {
+            background: linear-gradient(135deg, #25D366, #1da851);
             border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            margin-left: 10px;
-            transition: .3s;
+            padding: 8px 16px;
+            font-size: 13px;
+            gap: 6px;
         }
-        .contact-float a:hover {
-            background: var(--secondary);
+        .call-sub-item:hover { transform: scale(1.05); }
+
+        .whatsapp-item {
+            background: linear-gradient(135deg, #25D366, #1da851);
+            border-radius: 50px;
         }
+        .eitaa-item {
+            background: linear-gradient(135deg, #f97316, #ea580c);
+            border-radius: 0 50px 50px 0;
+        }
+
         @media (max-width: 768px) {
-            .service-detail {
-                grid-template-columns: 1fr;
-                text-align: center;
-                margin-top: 80px;
-            }
-            .service-detail .text h1 {
-                font-size: 26px;
-            }
-            .service-detail .gif img {
-                max-height: 250px;
-            }
-            .back-links {
-                justify-content: center;
-            }
-            .back-links a {
-                padding: 10px 20px;
-                font-size: 14px;
-            }
+            .blog-article-container { padding: 20px 16px 35px; margin: 10px auto 40px; border-radius: 16px; }
+            .blog-article-container h1 { font-size: 24px; }
+            .blog-article-container h2 { font-size: 20px; }
+            .blog-article-container h3 { font-size: 18px; }
+            .blog-article-container p { font-size: 15px; }
+            .blog-article-container ul, .blog-article-container ol { font-size: 15px; padding-right: 20px; }
+            .blog-article-container table { font-size: 13px; }
+            .blog-article-container table th, .blog-article-container table td { padding: 6px 10px; }
+            .blog-article-image img { max-width: 100%; border-radius: 14px; }
+            .blog-article-container .blog-back-links a { padding: 8px 16px; font-size: 13px; min-width: 100px; }
+            .blog-callout, .blog-callout-yellow { padding: 14px 16px; margin: 18px 0; }
+            .blog-article-container details { padding: 12px 14px; }
+            .blog-article-container details summary { font-size: 15px; }
+            .blog-article-container details p { font-size: 14px; }
+
+            #backToTop { width: 48px; height: 48px; font-size: 24px; bottom: 100px; right: 15px; }
+
+            .floating-container { bottom: 15px; left: 10px; gap: 5px; }
+            .floating-main-btn { padding: 10px 16px 10px 20px; font-size: 13px; border-radius: 30px 0 0 30px; }
+            .floating-main-btn .btn-arrow { font-size: 11px; }
+            .floating-item { padding: 8px 12px; font-size: 12px; gap: 5px; border-radius: 30px; }
+            .floating-item .item-icon { font-size: 15px; }
+            .floating-item .item-text { font-size: 12px; }
+            .call-item { border-radius: 30px 0 0 30px; }
+            .call-sub-item { padding: 6px 12px; font-size: 11px; }
+            .eitaa-item { border-radius: 0 30px 30px 0; }
+        }
+
+        @media (max-width: 480px) {
+            .blog-article-container { padding: 16px 12px 28px; margin: 8px auto 30px; border-radius: 12px; }
+            .blog-article-container h1 { font-size: 20px; }
+            .blog-article-container h2 { font-size: 18px; }
+            .blog-article-container h3 { font-size: 16px; }
+            .blog-article-container p { font-size: 14px; }
+            .blog-article-container ul, .blog-article-container ol { font-size: 14px; padding-right: 16px; }
+            .blog-article-container .blog-back-links a { padding: 6px 12px; font-size: 12px; min-width: 80px; }
+
+            #backToTop { width: 42px; height: 42px; font-size: 20px; bottom: 90px; right: 10px; }
+
+            .floating-container { bottom: 10px; left: 6px; gap: 4px; }
+            .floating-main-btn { padding: 8px 12px 8px 16px; font-size: 11px; border-radius: 25px 0 0 25px; }
+            .floating-main-btn .btn-arrow { font-size: 9px; }
+            .floating-item { padding: 6px 10px; font-size: 10px; gap: 4px; border-radius: 25px; }
+            .floating-item .item-icon { font-size: 13px; }
+            .floating-item .item-text { font-size: 10px; }
+            .call-item { border-radius: 25px 0 0 25px; }
+            .call-sub-item { padding: 4px 10px; font-size: 10px; }
+            .eitaa-item { border-radius: 0 25px 25px 0; }
         }
     </style>
 </head>
 <body>
 
-<header>
-    <div class="container">
-        <a href="../index.html" class="logo"><img src="../images/logo.png" alt="لوگو"></a>
-        <nav class="navbar">
-            <ul>
-                <li><a href="../index.html">صفحه اصلی</a></li>
-                <li><a href="../services.html">خدمات مسکونی</a></li>
-                <li><a href="../commercial-services.html" class="active">خدمات تجاری</a></li>
-                <li><a href="../about.html">درباره ما</a></li>
-                <li><a href="../contact.html">تماس</a></li>
-            </ul>
-        </nav>
-        <div class="header-buttons">
-            <a href="tel:09120705746" class="call-btn">📞 09120705746</a>
-            <div class="mobile-menu">☰</div>
-        </div>
-    </div>
-</header>
+<!-- ===== محتوای مقاله ===== -->
+<div class="blog-article-container">
 
-<div class="service-detail">
-    <div class="text">
-        <h1>🏨 سمپاشی هتل‌ها</h1>
-        <p>کنترل تخصصی آفات در هتل‌ها و مراکز اقامتی با رعایت کامل استانداردهای بهداشتی و حفظ آرامش مهمانان.</p>
-        <p><strong>روش کنترل:</strong> استفاده از سموم استاندارد و روش‌های نوین با تضمین کیفیت و ماندگاری بالا.</p>
-        <p><strong>مدت زمان اثرگذاری:</strong> نتایج سریع و ماندگار تا ۶ ماه.</p>
-        <div class="back-links">
-            <a href="../commercial-services.html" class="back-to-list">🔙 بازگشت به لیست تجاری</a>
-            <a href="../index.html" class="back-to-home">🏠 بازگشت به صفحه اصلی</a>
-        </div>
-        <div class="contact-float">
-            <a href="tel:09120705746">📞 تماس فوری</a>
-            <a href="https://wa.me/989120705746" target="_blank">💬 واتساپ</a>
-        </div>
+    <h1>راهنمای جامع و تخصصی سمپاشی هتل‌ها | کنترل آفات در صنعت مهمان‌نوازی</h1>
+    <div class="blog-meta">
+        <span>📅 آخرین به‌روزرسانی: ۱۵ شهریور ۱۴۰۴</span> &nbsp;|&nbsp; <span>⏱ زمان مطالعه: ۱۵ دقیقه</span>
     </div>
-    <div class="gif">
-        <img src="../images/commercial/hotel.jpg" alt="سمپاشی هتل‌ها">
+
+    <!-- ===== تصویر اصلی (hotel1.jpg) قبل از مقدمه ===== -->
+    <div class="blog-article-image">
+        <img src="../images/commercial/hotel1.jpg" alt="سمپاشی هتل‌ها - کنترل تخصصی آفات در صنعت مهمان‌نوازی">
+        <div class="caption"><strong>سمپاشی تخصصی هتل‌ها</strong> - تضمین بهداشت و آرامش مهمانان</div>
+    </div>
+
+    <h2>مقدمه: صنعت هتلداری و چالش آفات</h2>
+    <p>صنعت هتلداری یکی از حساسترین و رقابتی‌ترین صنایع در جهان است که در آن کیفیت خدمات، بهداشت و رضایت مهمان، نقش کلیدی در موفقیت یا شکست یک مجموعه ایفا می‌کند. در این میان، <strong>کنترل آفات</strong> به عنوان یکی از مهم‌ترین مؤلفه‌های بهداشتی، نه‌تنها بر سلامت مهمانان تأثیر می‌گذارد، بلکه به طور مستقیم بر اعتبار برند، رتبه‌بندی هتل در پلتفرم‌های رزرواسیون و در نهایت، سودآوری مجموعه تأثیر دارد.</p>
+
+    <p>تصور کنید یک مهمان پس از یک سفر طولانی، وارد اتاق هتل می‌شود و با دیدن یک سوسک یا ساس در اتاق، نه‌تنها تجربه‌ای تلخ را رقم می‌زند، بلکه آن را در شبکه‌های اجتماعی و سایت‌های نقد و بررسی منتشر می‌کند. این اتفاق می‌تواند ضربه‌ای جبران‌ناپذیر به اعتبار هتل وارد کند و سال‌ها تلاش برای ایجاد برند مثبت را نابود سازد.</p>
+
+    <p>در این مقاله جامع از <strong>شرکت سمپاشی نانوفناوران بهداشت تهران</strong>، به بررسی کامل چالش‌های کنترل آفات در هتل‌ها، مهم‌ترین آفات در صنعت مهمان‌نوازی، روش‌های تخصصی سمپاشی هتل و نکات کلیدی برای حفظ استانداردهای بهداشتی می‌پردازیم.</p>
+
+    <h2>بخش اول: چرا کنترل آفات در هتل‌ها حیاتی است؟</h2>
+
+    <h3>۱. تأثیر بر تجربه مهمان</h3>
+    <p>تجربه مهمان، مهم‌ترین عامل در موفقیت یک هتل محسوب می‌شود. هرگونه مشاهده آفات در اتاق‌ها، رستوران‌ها یا فضاهای عمومی، می‌تواند تجربه مهمان را به شدت تحت تأثیر قرار دهد و باعث دریافت امتیازات منفی در سایت‌های رزرواسیون شود. یک مهمان ناراضی، حداقل ۱۰ نفر دیگر را از انتخاب هتل شما منصرف خواهد کرد.</p>
+
+    <!-- ===== تصویر دوم (hotel2.jpg) بعد از تأثیر بر تجربه مهمان ===== -->
+    <div class="blog-article-image">
+        <img src="../images/commercial/hotel2.jpg" alt="تأثیر آفات بر تجربه مهمان در هتل">
+        <div class="caption"><strong>تأثیر آفات بر تجربه مهمان</strong> - حفظ رضایت مهمان، کلید موفقیت هتل‌ها</div>
+    </div>
+
+    <h3>۲. تأثیر بر اعتبار برند</h3>
+    <p>در عصر شبکه‌های اجتماعی، یک ویدیو یا عکس از یک حشره در هتل، می‌تواند در کمتر از چند ساعت به یک بحران رسانه‌ای تبدیل شود. اعتبار برند که سال‌ها زمان و هزینه برای ساخت آن صرف شده است، می‌تواند در یک لحظه از بین برود.</p>
+
+    <h3>۳. الزامات قانونی و استانداردهای بهداشتی</h3>
+    <p>هتل‌ها موظف به رعایت استانداردهای سختگیرانه بهداشتی هستند. مراکز بهداشت و سازمان‌های نظارتی به طور دوره‌ای از هتل‌ها بازدید می‌کنند و در صورت مشاهده هرگونه آلودگی، ممکن است هتل را جریمه یا حتی تعطیل کنند.</p>
+
+    <h3>۴. جلوگیری از خسارت‌های مالی</h3>
+    <p>آفات می‌توانند خسارت‌های مالی سنگینی به هتل‌ها وارد کنند. از هزینه‌های جبران خسارت به مهمانان و لغو رزروها گرفته تا هزینه‌های تعمیر و ترمیم تجهیزات و اثاثیه آسیب‌دیده.</p>
+
+    <h2>بخش دوم: مهم‌ترین آفات در هتل‌ها</h2>
+
+    <h3>۱. ساس تختخواب (Bed Bug)</h3>
+    <p><strong>ساس تختخواب</strong> یکی از بدترین کابوس‌های صنعت هتلداری است. این حشره کوچک و مقاوم، به راحتی از طریق چمدان‌ها، لباس‌ها و وسایل مسافران وارد هتل می‌شود و با تکثیر سریع، می‌تواند کل هتل را آلوده کند. گزش ساس باعث خارش شدید، قرمزی و واکنش‌های آلرژیک می‌شود و برای بسیاری از افراد بسیار آزاردهنده است.</p>
+
+    <!-- ===== تصویر سوم (hotel5.jpg) بعد از ساس تختخواب ===== -->
+    <div class="blog-article-image">
+        <img src="../images/commercial/hotel5.jpg" alt="ساس تختخواب - یکی از مهم‌ترین تهدیدات در هتل‌ها">
+        <div class="caption"><strong>ساس تختخواب</strong> - یکی از جدی‌ترین چالش‌های صنعت هتلداری</div>
+    </div>
+
+    <div class="blog-callout">
+        <p><strong>نکته مهم:</strong> بر اساس تحقیقات، بروز یک مورد ساس در یک هتل، می‌تواند منجر به کاهش ۲۰ تا ۳۰ درصدی رزروها شود.</p>
+    </div>
+
+    <h3>۲. سوسک‌ها (سوسک آلمانی و سوسک فاضلاب)</h3>
+    <p>سوسک‌ها یکی از رایج‌ترین آفات در هتل‌ها هستند. سوسک آلمانی (سوسک ریز کابینتی) معمولاً در آشپزخانه‌ها، رستوران‌ها و کابینت‌ها زندگی می‌کند و سوسک فاضلاب (آمریکایی) از طریق لوله‌های فاضلاب وارد هتل می‌شود. وجود سوسک در هتل، نشانه عدم رعایت بهداشت است و می‌تواند باعث انتشار باکتری‌های بیماری‌زا مانند سالمونلا و ای‌کولی شود.</p>
+
+    <h3>۳. موش‌ها و جوندگان</h3>
+    <p>حضور موش در هتل، یکی از بدترین سناریوهای ممکن است. موش‌ها نه‌تنها ناقل بیماری‌های خطرناک هستند، بلکه با جویدن سیم‌های برق، خطر آتش‌سوزی را افزایش می‌دهند و به بسته‌بندی‌ها و مواد غذایی آسیب می‌رسانند.</p>
+
+    <h3>۴. مگس‌ها و حشرات پروازی</h3>
+    <p>در رستوران‌ها، استخرها و فضاهای باز هتل، مگس‌ها و سایر حشرات پروازی می‌توانند مشکل‌ساز شوند. آنها علاوه بر انتقال بیماری‌ها، ظاهر ناخوشایندی ایجاد می‌کنند و می‌توانند باعث رد شدن هتل از بازرسی‌های بهداشتی شوند.</p>
+
+    <h3>۵. مورچه‌ها</h3>
+    <p>مورچه‌ها به دلیل جستجوی غذا، به راحتی وارد اتاق‌ها، آشپزخانه و انبارهای مواد غذایی می‌شوند. وجود مورچه در هتل، هرچند کمتر از سایر آفات خطرناک است، اما همچنان برای مهمانان ناخوشایند است.</p>
+
+    <h3>۶. سوسک چوب‌خوار و موریانه</h3>
+    <p>در هتل‌هایی که دارای سازه‌های چوبی، مبلمان چوبی یا سقف‌های چوبی هستند، سوسک چوب‌خوار و موریانه می‌توانند خسارت‌های جبران‌ناپذیری به ساختار ساختمان وارد کنند.</p>
+
+    <!-- ===== تصویر چهارم (hotel4.jpg) بعد از سوسک چوب‌خوار و موریانه ===== -->
+    <div class="blog-article-image">
+        <img src="../images/commercial/hotel4.jpg" alt="سوسک چوب‌خوار و موریانه در هتل‌ها">
+        <div class="caption"><strong>سوسک چوب‌خوار و موریانه</strong> - تهدیدی برای سازه‌های چوبی هتل</div>
+    </div>
+
+    <h2>بخش سوم: چالش‌های خاص سمپاشی هتل</h2>
+
+    <h3>۱. حفظ حریم خصوصی مهمانان</h3>
+    <p>سمپاشی هتل باید به گونه‌ای انجام شود که کمترین مزاحمت را برای مهمانان ایجاد کند. این به معنای برنامه‌ریزی دقیق و اطلاع‌رسانی به موقع به مهمانان است.</p>
+
+    <h3>۲. عدم تعطیلی کامل هتل</h3>
+    <p>برخلاف برخی محیط‌ها، هتل‌ها معمولاً نمی‌توانند برای سمپاشی کامل تعطیل شوند. بنابراین، سمپاشی باید به صورت مرحله‌ای و در زمان‌های کم‌ترافیک انجام شود.</p>
+
+    <h3>۳. تنوع بالای فضاها</h3>
+    <p>هتل‌ها دارای فضاهای متنوعی مانند اتاق‌ها، رستوران‌ها، آشپزخانه‌ها، استخر، سالن‌های همایش، انبارها و فضاهای باز هستند که هر کدام نیاز به روش‌های کنترل خاص خود دارند.</p>
+
+    <h3>۴. استفاده از سموم ایمن</h3>
+    <p>در هتل‌ها، به دلیل حضور دائمی مهمانان، استفاده از سموم باید با نهایت دقت و با رعایت استانداردهای بهداشتی انجام شود. سموم باید برای انسان و حیوانات خانگی بی‌خطر باشند.</p>
+
+    <h2>بخش چهارم: روش‌های تخصصی سمپاشی هتل</h2>
+
+    <!-- ===== تصویر پنجم (hotel3.jpg) بعد از بخش چهارم ===== -->
+    <div class="blog-article-image">
+        <img src="../images/commercial/hotel3.jpg" alt="روش‌های تخصصی سمپاشی هتل">
+        <div class="caption"><strong>روش‌های تخصصی سمپاشی هتل</strong> - برنامه‌ریزی دقیق برای کنترل آفات</div>
+    </div>
+
+    <h3>مرحله ۱: بازرسی جامع و شناسایی</h3>
+    <p>کارشناسان ما با بررسی کامل هتل، نقاط حساس، نوع آفات، میزان آلودگی و مسیرهای ورود را شناسایی می‌کنند. این بازرسی شامل موارد زیر است:</p>
+    <ul>
+        <li><strong>اتاق‌های مهمان:</strong> بررسی تشک‌ها، ملحفه‌ها، پشت کابینت‌ها، پشت تخت‌ها و نقاط تاریک</li>
+        <li><strong>رستوران و آشپزخانه:</strong> بررسی انبارها، تجهیزات پخت و پز، کابینت‌ها و نقاط مرطوب</li>
+        <li><strong>فضاهای عمومی:</strong> لابی، سالن‌های همایش، استخر، سالن‌های ورزشی</li>
+        <li><strong>فضاهای پشتی:</strong> انبارها، موتورخانه، زیرزمین، اتاق‌های کارکنان</li>
+    </ul>
+
+    <h3>مرحله ۲: برنامه‌ریزی و هماهنگی</h3>
+    <p>بر اساس نتایج بازرسی، یک برنامه جامع برای سمپاشی هتل تدوین می‌شود که شامل:</p>
+    <ul>
+        <li><strong>زمان‌بندی دقیق:</strong> سمپاشی در زمان‌های کم‌ترافیک (معمولاً بین ۱۰ صبح تا ۴ عصر که اکثر مهمانان خارج از هتل هستند)</li>
+        <li><strong>اطلاع‌رسانی به مهمانان:</strong> اطلاع‌رسانی شفاف و به موقع در مورد عملیات سمپاشی</li>
+        <li><strong>هماهنگی با بخش‌های مختلف:</strong> هماهنگی با بخش پذیرش، خدمات اتاق‌ها، رستوران و سایر بخش‌ها</li>
+    </ul>
+
+    <h3>مرحله ۳: سمپاشی اتاق‌ها</h3>
+    <p>اتاق‌های هتل به صورت مرحله‌ای و با دقت بالا سمپاشی می‌شوند:</p>
+    <ul>
+        <li><strong>تزریق سم به شکاف‌ها و درزها:</strong> برای از بین بردن ساس‌ها و سوسک‌های پنهان</li>
+        <li><strong>سمپاشی تشک‌ها و مبلمان:</strong> با سموم مخصوص و ایمن</li>
+        <li><strong>طعمه‌گذاری:</strong> در نقاط استراتژیک برای کنترل سوسک‌ها</li>
+    </ul>
+
+    <!-- ===== تصویر ششم (hotel6.jpg) بعد از مرحله ۳ سمپاشی اتاق‌ها ===== -->
+    <div class="blog-article-image">
+        <img src="../images/commercial/hotel6.jpg" alt="سمپاشی اتاق‌های هتل - کنترل تخصصی آفات">
+        <div class="caption"><strong>سمپاشی اتاق‌های هتل</strong> - تضمین آرامش و بهداشت مهمانان</div>
+    </div>
+
+    <h3>مرحله ۴: سمپاشی فضاهای عمومی و پشتی</h3>
+    <ul>
+        <li><strong>رستوران و آشپزخانه:</strong> با رعایت کامل نکات ایمنی و استفاده از سموم مجاز در محیط‌های غذایی</li>
+        <li><strong>انبارها و موتورخانه:</strong> سمپاشی کامل برای کنترل موش‌ها و سوسک‌ها</li>
+        <li><strong>فضاهای باز:</strong> کنترل پشه‌ها و مگس‌ها با روش‌های مناسب</li>
+    </ul>
+
+    <h3>مرحله ۵: بازدید مجدد و پایش</h3>
+    <p>پس از اتمام عملیات، کارشناسان ما بازدید مجدد انجام می‌دهند تا از موفقیت سمپاشی اطمینان حاصل کنند و در صورت نیاز، اقدامات تکمیلی انجام دهند.</p>
+
+    <h2>بخش پنجم: استانداردهای جهانی کنترل آفات در هتل‌ها</h2>
+
+    <h3>استانداردهای بین‌المللی</h3>
+    <p>هتل‌های معتبر در سراسر جهان، برنامه‌های کنترل آفات خود را بر اساس استانداردهای زیر تدوین می‌کنند:</p>
+    <ul>
+        <li><strong>استانداردهای WHO:</strong> سازمان بهداشت جهانی، دستورالعمل‌های مشخصی برای کنترل آفات در هتل‌ها ارائه داده است</li>
+        <li><strong>استانداردهای HACCP:</strong> سیستم تحلیل خطر و نقاط کنترل بحرانی، برای هتل‌هایی که خدمات غذایی ارائه می‌دهند</li>
+        <li><strong>استانداردهای بازرسی بهداشتی:</strong> سازمان‌های نظارتی محلی، استانداردهای خاصی برای بهداشت هتل‌ها دارند</li>
+    </ul>
+
+    <h3>بهترین روش‌های مدیریت آفات در هتل</h3>
+    <ol>
+        <li><strong>مدیریت یکپارچه آفات (IPM):</strong> ترکیبی از روش‌های پیشگیرانه، فیزیکی، بیولوژیکی و شیمیایی</li>
+        <li><strong>بازرسی‌های منظم:</strong> حداقل ماهانه توسط کارشناسان مجرب</li>
+        <li><strong>آموزش کارکنان:</strong> کارکنان هتل باید علائم حضور آفات را بشناسند و آنها را گزارش دهند</li>
+        <li><strong>مستندسازی:</strong> ثبت تمام عملیات سمپاشی و بازرسی‌ها</li>
+    </ol>
+
+    <h2>بخش ششم: اقدامات پیشگیرانه در هتل‌ها</h2>
+
+    <h3>۱. کنترل نقاط ورود</h3>
+    <ul>
+        <li>بستن تمام شکاف‌ها و درزهای دیوارها</li>
+        <li>نصب توری روی پنجره‌ها و دریچه‌های تهویه</li>
+        <li>نصب درپوش‌های زیر درب‌ها</li>
+    </ul>
+
+    <h3>۲. مدیریت بهداشت</h3>
+    <ul>
+        <li>تمیز نگهداشتن تمام فضاها</li>
+        <li>دفع اصولی زباله‌ها</li>
+        <li>نگهداری مواد غذایی در ظروف درب‌دار</li>
+        <li>جلوگیری از تجمع آب‌های راکد</li>
+    </ul>
+
+    <h3>۳. آموزش کارکنان</h3>
+    <ul>
+        <li>آشنایی با علائم حضور آفات</li>
+        <li>روش‌های گزارش‌دهی سریع</li>
+        <li>رعایت نکات بهداشتی</li>
+    </ul>
+
+    <h3>۴. پایش مستمر</h3>
+    <ul>
+        <li>استفاده از تله‌های چسبنده</li>
+        <li>بازرسی دوره‌ای توسط کارشناسان</li>
+        <li>بررسی نظرات مهمانان</li>
+    </ul>
+
+    <h2>بخش هفتم: هزینه سمپاشی هتل</h2>
+    <p>هزینه سمپاشی هتل به عوامل زیر بستگی دارد. برای دریافت <strong>مشاوره رایگان</strong> و <strong>استعلام دقیق هزینه</strong>، با کارشناسان ما تماس بگیرید:</p>
+
+    <table>
+        <thead>
+            <tr><th>عامل</th><th>تأثیر بر هزینه</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>تعداد اتاق‌ها</strong></td><td>هرچه اتاق‌ها بیشتر باشد، هزینه بیشتر است</td></tr>
+            <tr><td><strong>مساحت فضاهای عمومی</strong></td><td>فضاهای بزرگتر نیاز به عملیات گسترده‌تر دارند</td></tr>
+            <tr><td><strong>شدت آلودگی</strong></td><td>آلودگی شدید نیاز به عملیات بیشتر و زمان‌برتری دارد</td></tr>
+            <tr><td><strong>نوع آفات</strong></td><td>ساس و موریانه نیاز به روش‌های خاص و گران‌تر دارند</td></tr>
+            <tr><td><strong>نوع روش کنترل</strong></td><td>سمپاشی، گازدهی، تزریق یا ترکیبی</td></tr>
+        </tbody>
+    </table>
+
+    <h2>بخش هشتم: سوالات متداول درباره سمپاشی هتل</h2>
+
+    <details>
+        <summary><strong>چند بار در سال باید هتل سمپاشی شود؟</strong></summary>
+        <p>توصیه می‌شود هتل‌ها حداقل سالی چهار بار (هر فصل یک بار) سمپاشی شوند. در صورت مشاهده آفات، بلافاصله باید اقدام شود. هتل‌های واقع در مناطق گرمسیر ممکن است نیاز به سمپاشی ماهانه داشته باشند.</p>
+    </details>
+
+    <details>
+        <summary><strong>آیا سمپاشی هتل برای مهمانان خطرناک است؟</strong></summary>
+        <p>خیر، سموم استفاده‌شده توسط شرکت نانوفناوران با رعایت کامل استانداردهای بهداشتی انتخاب می‌شوند و برای انسان بی‌خطر هستند. در هنگام سمپاشی، اتاق‌ها از دسترس خارج می‌شوند و پس از تهویه کامل، برای حضور مهمانان ایمن می‌گردند.</p>
+    </details>
+
+    <details>
+        <summary><strong>چه مدت بعد از سمپاشی اتاق‌ها برای حضور مهمانان ایمن است؟</strong></summary>
+        <p>معمولاً ۴ تا ۶ ساعت پس از سمپاشی، اتاق‌ها برای حضور مهمانان ایمن هستند. کارشناسان ما زمان دقیق را به شما اعلام می‌کنند.</p>
+    </details>
+
+    <details>
+        <summary><strong>آیا می‌توانیم در زمان سمپاشی هتل باز باشد؟</strong></summary>
+        <p>بله، سمپاشی هتل به صورت مرحله‌ای و با برنامه‌ریزی دقیق انجام می‌شود تا کمترین مزاحمت برای مهمانان ایجاد شود. سمپاشی معمولاً در ساعات کم‌ترافیک انجام می‌شود.</p>
+    </details>
+
+    <details>
+        <summary><strong>بهترین زمان برای سمپاشی هتل چه زمانی است؟</strong></summary>
+        <p>بهترین زمان برای سمپاشی هتل، اوایل بهار و اوایل پاییز است. همچنین قبل از شروع فصل پرتردد (تعطیلات و مسافرت‌های نوروزی) توصیه می‌شود.</p>
+    </details>
+
+    <h2>نتیجه‌گیری</h2>
+    <p>کنترل آفات در هتل‌ها نه‌تنها یک الزام بهداشتی، بلکه یک الزام اقتصادی و اعتباری است. هتل‌ها با سرمایه‌گذاری در برنامه‌های پیشگیرانه و انتخاب یک شرکت تخصصی و معتبر، می‌توانند از هزینه‌های سنگین ناشی از آلودگی جلوگیری کنند و تجربه‌ای امن و خوشایند را برای مهمانان خود رقم بزنند.</p>
+
+    <p><strong>شرکت سمپاشی نانوفناوران بهداشت تهران</strong> با بیش از یک دهه تجربه در زمینه سمپاشی هتل‌ها و مجتمع‌های گردشگری، آماده ارائه خدمات تخصصی و تضمینی به شماست. تیم کارشناسان ما با شناسایی دقیق نوع آفات، استفاده از سموم استاندارد و ایمن، و رعایت کامل نکات ایمنی، محیطی امن، بهداشتی و عاری از آفات را برای هتل شما به ارمغان می‌آورند.</p>
+
+    <p style="font-size:20px; font-weight:700; text-align:center; color:#0B6FB8;">🚀 همین حالا اقدام کنید:</p>
+    <div style="text-align:center; margin:20px 0;">
+        <p>📞 <strong>تماس فوری:</strong> <a href="tel:09120705746" style="font-size:20px; color:#11A64A; text-decoration:none;">۰۹۱۲۰۷۰۵۷۴۶</a></p>
+        <p>💬 <strong>درخواست مشاوره رایگان:</strong> از طریق <a href="https://wa.me/989120705746" target="_blank" style="color:#25D366; text-decoration:none;">واتساپ</a> یا <a href="https://eitaa.com/nanofannavaran_ir" target="_blank" style="color:#e67e22; text-decoration:none;">ایتا</a></p>
+        <p>🔗 <strong>مشاهده سایر خدمات:</strong> <a href="../services.html" style="color:#0B6FB8; text-decoration:none;">کنترل آفات مسکونی</a></p>
+    </div>
+
+    <div class="blog-back-links">
+        <a href="../index.html" class="btn-home">🏠 بازگشت به صفحه اصلی</a>
+        <a href="../services.html" class="btn-services">🔙 بازگشت به لیست خدمات مسکونی</a>
+        <a href="../contact.html" class="btn-contact">📞 تماس با ما</a>
+    </div>
+
+</div>
+
+<!-- ===== دکمه اسکرول به بالا ===== -->
+<button id="backToTop" title="برو به بالا">↑</button>
+
+<!-- ===== منوی شناور ===== -->
+<div class="floating-container">
+    <button class="floating-main-btn" id="floatingToggle">
+        <span class="btn-arrow">▶</span>
+        <span class="btn-text">📞 مشاوره رایگان</span>
+    </button>
+    <div class="floating-menu" id="floatingMenu">
+        <div class="call-wrapper">
+            <div class="floating-item call-item" id="callToggle">
+                <span class="item-icon">📞</span>
+                <span class="item-text">تماس سریع</span>
+                <span class="arrow">▲</span>
+            </div>
+            <div class="call-submenu" id="callSubmenu">
+                <a href="tel:09120705746" class="floating-item call-sub-item"><span class="item-icon">📞</span><span class="item-text">شماره ۱</span></a>
+                <a href="tel:09197173454" class="floating-item call-sub-item"><span class="item-icon">📞</span><span class="item-text">شماره ۲</span></a>
+            </div>
+        </div>
+        <a href="https://wa.me/989120705746?text=%D8%A8%D9%87%20%D8%B3%D8%A7%DB%8C%D8%AA%20%D8%B4%D8%B1%DA%A9%D8%AA%20%D8%B3%D9%85%D9%BE%D8%A7%D8%B4%DB%8C%20%D9%86%D8%A7%D9%86%D9%88%D9%81%D9%86%D8%A7%D9%88%D8%B1%D8%A7%D9%86%20%D8%AE%D9%88%D8%B4%20%D8%A2%D9%85%D8%AF%DB%8C%D8%AF" target="_blank" class="floating-item whatsapp-item"><span class="item-icon">💬</span><span class="item-text">واتساپ</span></a>
+        <a href="https://eitaa.com/nanofannavaran_ir" target="_blank" class="floating-item eitaa-item"><span class="item-icon">✈️</span><span class="item-text">ایتا</span></a>
     </div>
 </div>
 
-<footer class="site-footer">
-    <div class="container">
-        <div class="footer-grid">
-            <div class="footer-box"><h3>نانوفناوران</h3><p>ارائه‌دهنده خدمات تخصصی کنترل آفات در تهران</p></div>
-            <div class="footer-box"><h3>اطلاعات تماس</h3><p>📱 09120705746</p><p>☎️ 22048278</p></div>
-        </div>
-        <hr><p class="copyright">© تمامی حقوق محفوظ است</p>
-    </div>
-</footer>
+<!-- ===== جاوااسکریپت ===== -->
+<script>
+    // ===== دکمه اسکرول به بالا =====
+    var backToTopBtn = document.getElementById('backToTop');
 
-<script src="../script.js"></script>
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
+    });
+
+    backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // ===== منوی شناور =====
+    var toggleBtn = document.getElementById('floatingToggle');
+    var menu = document.getElementById('floatingMenu');
+    var arrow = toggleBtn.querySelector('.btn-arrow');
+
+    toggleBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        this.classList.toggle('active');
+        menu.classList.toggle('open');
+        if (arrow) arrow.classList.toggle('open');
+    });
+
+    // ===== زیرمنوی تماس =====
+    var callToggle = document.getElementById('callToggle');
+    var callSubmenu = document.getElementById('callSubmenu');
+
+    callToggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        this.classList.toggle('open');
+        callSubmenu.classList.toggle('open');
+        var arrowIcon = this.querySelector('.arrow');
+        if (arrowIcon) {
+            arrowIcon.textContent = callSubmenu.classList.contains('open') ? '▼' : '▲';
+        }
+    });
+
+    // ===== بستن منو با کلیک بیرون =====
+    document.addEventListener('click', function() {
+        if (toggleBtn) toggleBtn.classList.remove('active');
+        if (menu) menu.classList.remove('open');
+        if (arrow) arrow.classList.remove('open');
+        if (callToggle) callToggle.classList.remove('open');
+        if (callSubmenu) callSubmenu.classList.remove('open');
+        var arrowIcon = callToggle ? callToggle.querySelector('.arrow') : null;
+        if (arrowIcon) arrowIcon.textContent = '▲';
+    });
+
+    if (menu) {
+        menu.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    }
+
+    console.log('✅ مقاله سمپاشی هتل‌ها بارگذاری شد!');
+</script>
+
 </body>
 </html>
