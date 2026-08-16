@@ -3,153 +3,652 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سمپاشی مدارس | نانوفناوران</title>
-    <link rel="stylesheet" href="../style.css">
+    <title>سمپاشی مهدکودک و مدارس | راهنمای جامع کنترل آفات در مراکز آموزشی | نانوفناوران</title>
+    <meta name="description" content="مقاله جامع سمپاشی مهدکودک، پیش‌دبستانی، مدرسه و مراکز آموزشی: چالش‌های کنترل آفات، روش‌های تخصصی و ایمن برای کودکان، نکات پیشگیرانه.">
+    <meta name="keywords" content="سمپاشی مهدکودک, سمپاشی مدرسه, کنترل آفات کودکان, سمپاشی پیش دبستانی, بهداشت مدارس, نانوفناوران">
+    <link rel="canonical" href="https://nanofannavaran.ir/commercial/school.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
-        .service-detail {
-            max-width: 1100px;
-            margin: 100px auto 50px;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
+        /* ===== استایل‌های اختصاصی مقاله ===== */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Vazirmatn', 'IRANSans', 'Tahoma', sans-serif;
+            background: #f8fbfd; color: #222; line-height: 1.9;
+            direction: rtl; padding: 20px 15px; min-height: 100vh;
         }
-        .service-detail .text h1 {
-            font-size: 32px;
-            color: var(--primary);
-            margin-bottom: 20px;
+
+        .blog-article-container {
+            max-width: 1100px; margin: 20px auto 60px; background: #fff;
+            border-radius: 24px; box-shadow: 0 10px 40px rgba(0,0,0,.08);
+            padding: 30px 25px 50px; line-height: 1.8; color: #2c3e50;
+            direction: rtl; width: 100%;
         }
-        .service-detail .text p {
-            line-height: 2.2;
-            color: #555;
-            font-size: 16px;
+        .blog-article-container h1 { font-size: 32px; color: #0B6FB8; margin-bottom: 20px; line-height: 1.5; }
+        .blog-article-container .blog-meta { color: #888; font-size: 14px; border-bottom: 1px solid #eee; padding-bottom: 18px; margin-bottom: 25px; }
+        .blog-article-container h2 { font-size: 26px; color: #1F2937; margin: 35px 0 12px; border-right: 5px solid #0B6FB8; padding-right: 15px; }
+        .blog-article-container h3 { font-size: 21px; color: #0B6FB8; margin: 25px 0 10px; }
+        .blog-article-container h4 { font-size: 18px; color: #1F2937; margin: 20px 0 8px; }
+        .blog-article-container p { line-height: 2.2; color: #444; font-size: 16px; margin-bottom: 16px; text-align: justify; }
+        .blog-article-container ul, .blog-article-container ol { line-height: 2.2; color: #444; font-size: 16px; padding-right: 25px; margin-bottom: 18px; }
+        .blog-article-container ul li, .blog-article-container ol li { margin-bottom: 6px; }
+        .blog-article-container table { width: 100%; border-collapse: collapse; margin: 18px 0 25px; font-size: 15px; overflow-x: auto; display: block; }
+        .blog-article-container table th { background: #0B6FB8; color: #fff; padding: 10px 12px; text-align: right; }
+        .blog-article-container table td { border: 1px solid #ddd; padding: 8px 12px; background: #fafafa; }
+        .blog-article-container table tr:nth-child(even) td { background: #f5f8fc; }
+        .blog-article-image { margin: 25px 0; text-align: center; }
+        .blog-article-image img { width: 100%; max-width: 700px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,.15); height: auto; }
+        .blog-article-image .caption { font-size: 14px; color: #888; margin-top: 10px; }
+        .blog-article-image .caption strong { color: #0B6FB8; }
+        .blog-article-container .blog-back-links { margin: 35px 0 15px; display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+        .blog-article-container .blog-back-links a { display: inline-block; padding: 10px 22px; border-radius: 50px; text-decoration: none; font-weight: 700; transition: .3s; font-size: 15px; text-align: center; flex: 1 1 auto; min-width: 140px; }
+        .blog-article-container .blog-back-links .btn-home { background: #0B6FB8; color: #fff; }
+        .blog-article-container .blog-back-links .btn-home:hover { background: #11A64A; }
+        .blog-article-container .blog-back-links .btn-services { background: #11A64A; color: #fff; }
+        .blog-article-container .blog-back-links .btn-services:hover { background: #0B6FB8; }
+        .blog-article-container .blog-back-links .btn-contact { background: #1F2937; color: #fff; }
+        .blog-article-container .blog-back-links .btn-contact:hover { background: #0B6FB8; }
+        .blog-callout { background: #f0f7ff; border-right: 5px solid #0B6FB8; padding: 18px 22px; border-radius: 12px; margin: 22px 0; }
+        .blog-callout strong { color: #0B6FB8; }
+        .blog-callout-yellow { background: #fff8e1; border-right: 5px solid #ffc107; padding: 18px 22px; border-radius: 12px; margin: 22px 0; }
+        .blog-article-container details { background: #f8fbfd; padding: 14px 18px; border-radius: 12px; margin-bottom: 14px; border: 1px solid #e9ecef; }
+        .blog-article-container details summary { font-weight: 700; color: #0B6FB8; cursor: pointer; font-size: 16px; }
+        .blog-article-container details p { margin-top: 10px; padding-right: 8px; font-size: 15px; }
+
+        /* ===== دکمه اسکرول به بالا ===== */
+        #backToTop {
+            position: fixed;
+            right: 20px;
+            bottom: 80px;
+            width: 55px;
+            height: 55px;
+            border: none;
+            border-radius: 50%;
+            background: #0B6FB8;
+            color: #fff;
+            font-size: 28px;
+            font-weight: 700;
+            cursor: pointer;
+            display: none;
+            z-index: 9998;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            line-height: 1;
+            text-align: center;
+            padding: 0;
+            font-family: 'Vazirmatn', sans-serif;
         }
-        .service-detail .gif img {
-            width: 100%;
-            max-height: 400px;
-            object-fit: contain;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,.15);
+        #backToTop:hover {
+            background: #11A64A;
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
         }
-        .back-links {
-            margin-top: 30px;
+        #backToTop::before {
+            content: "↑";
+            display: block;
+            font-size: 30px;
+            font-weight: 900;
+            line-height: 55px;
+        }
+        #backToTop.show {
+            display: block !important;
+        }
+
+        /* ===== منوی شناور ===== */
+        .floating-container {
+            position: fixed;
+            bottom: 30px;
+            left: 20px;
+            z-index: 9999;
             display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
+            flex-direction: row;
+            align-items: center;
+            font-family: 'Vazirmatn', sans-serif;
+            direction: ltr;
         }
-        .back-links a {
-            display: inline-block;
-            padding: 12px 28px;
+        .floating-main-btn {
+            background: linear-gradient(135deg, #25D366 0%, #1da851 100%);
+            color: #fff;
+            border: none;
+            border-radius: 50px 0 0 50px;
+            padding: 16px 24px 16px 28px;
+            font-size: 16px;
+            font-weight: 800;
+            cursor: pointer;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            white-space: nowrap;
+            animation: pulse 2.5s infinite;
+            transition: all 0.3s ease;
+        }
+        .floating-main-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(37, 211, 102, 0.8);
+        }
+        .floating-main-btn .btn-arrow {
+            font-size: 14px;
+            transition: transform 0.4s ease;
+        }
+        .floating-main-btn.active .btn-arrow {
+            transform: rotate(90deg);
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6); }
+            50% { box-shadow: 0 8px 50px rgba(37, 211, 102, 0.9), 0 0 80px rgba(37, 211, 102, 0.2); }
+            100% { box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6); }
+        }
+
+        .floating-menu {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(-20px) scale(0.95);
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        .floating-menu.open {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0) scale(1);
+        }
+
+        .floating-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 18px;
             border-radius: 50px;
-            text-decoration: none;
+            color: #fff;
             font-weight: 700;
-            transition: .3s;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+            white-space: nowrap;
+            border: 2px solid rgba(255, 255, 255, 0.15);
+            text-decoration: none;
         }
-        .back-to-list {
-            background: var(--secondary);
-            color: #fff;
+        .floating-item:hover {
+            transform: scale(1.08);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
         }
-        .back-to-list:hover {
-            background: var(--primary);
+        .floating-item .item-icon { font-size: 18px; }
+        .floating-item .item-text { font-size: 14px; }
+
+        .call-item {
+            background: linear-gradient(135deg, #25D366, #1da851);
+            border-radius: 50px 0 0 50px;
+            cursor: pointer;
+            position: relative;
         }
-        .back-to-home {
-            background: var(--primary);
-            color: #fff;
+        .call-item .arrow {
+            font-size: 12px;
+            margin-right: 5px;
+            transition: transform 0.3s ease;
         }
-        .back-to-home:hover {
-            background: var(--secondary);
+        .call-item.open .arrow {
+            transform: rotate(180deg);
         }
-        .contact-float {
-            margin-top: 20px;
+
+        .call-submenu {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            opacity: 0;
+            visibility: hidden;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            margin-right: 5px;
         }
-        .contact-float a {
-            display: inline-block;
-            background: var(--primary);
-            color: #fff;
-            padding: 12px 28px;
+        .call-submenu.open {
+            opacity: 1;
+            visibility: visible;
+            max-height: 200px;
+        }
+
+        .call-sub-item {
+            background: linear-gradient(135deg, #25D366, #1da851);
             border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            margin-left: 10px;
-            transition: .3s;
+            padding: 8px 16px;
+            font-size: 13px;
+            gap: 6px;
         }
-        .contact-float a:hover {
-            background: var(--secondary);
+        .call-sub-item:hover { transform: scale(1.05); }
+
+        .whatsapp-item {
+            background: linear-gradient(135deg, #25D366, #1da851);
+            border-radius: 50px;
         }
+        .eitaa-item {
+            background: linear-gradient(135deg, #f97316, #ea580c);
+            border-radius: 0 50px 50px 0;
+        }
+
         @media (max-width: 768px) {
-            .service-detail {
-                grid-template-columns: 1fr;
-                text-align: center;
-                margin-top: 80px;
-            }
-            .service-detail .text h1 {
-                font-size: 26px;
-            }
-            .service-detail .gif img {
-                max-height: 250px;
-            }
-            .back-links {
-                justify-content: center;
-            }
-            .back-links a {
-                padding: 10px 20px;
-                font-size: 14px;
-            }
+            .blog-article-container { padding: 20px 16px 35px; margin: 10px auto 40px; border-radius: 16px; }
+            .blog-article-container h1 { font-size: 24px; }
+            .blog-article-container h2 { font-size: 20px; }
+            .blog-article-container h3 { font-size: 18px; }
+            .blog-article-container p { font-size: 15px; }
+            .blog-article-container ul, .blog-article-container ol { font-size: 15px; padding-right: 20px; }
+            .blog-article-container table { font-size: 13px; }
+            .blog-article-container table th, .blog-article-container table td { padding: 6px 10px; }
+            .blog-article-image img { max-width: 100%; border-radius: 14px; }
+            .blog-article-container .blog-back-links a { padding: 8px 16px; font-size: 13px; min-width: 100px; }
+            .blog-callout, .blog-callout-yellow { padding: 14px 16px; margin: 18px 0; }
+            .blog-article-container details { padding: 12px 14px; }
+            .blog-article-container details summary { font-size: 15px; }
+            .blog-article-container details p { font-size: 14px; }
+
+            #backToTop { width: 48px; height: 48px; font-size: 24px; bottom: 100px; right: 15px; }
+
+            .floating-container { bottom: 15px; left: 10px; gap: 5px; }
+            .floating-main-btn { padding: 10px 16px 10px 20px; font-size: 13px; border-radius: 30px 0 0 30px; }
+            .floating-main-btn .btn-arrow { font-size: 11px; }
+            .floating-item { padding: 8px 12px; font-size: 12px; gap: 5px; border-radius: 30px; }
+            .floating-item .item-icon { font-size: 15px; }
+            .floating-item .item-text { font-size: 12px; }
+            .call-item { border-radius: 30px 0 0 30px; }
+            .call-sub-item { padding: 6px 12px; font-size: 11px; }
+            .eitaa-item { border-radius: 0 30px 30px 0; }
+        }
+
+        @media (max-width: 480px) {
+            .blog-article-container { padding: 16px 12px 28px; margin: 8px auto 30px; border-radius: 12px; }
+            .blog-article-container h1 { font-size: 20px; }
+            .blog-article-container h2 { font-size: 18px; }
+            .blog-article-container h3 { font-size: 16px; }
+            .blog-article-container p { font-size: 14px; }
+            .blog-article-container ul, .blog-article-container ol { font-size: 14px; padding-right: 16px; }
+            .blog-article-container .blog-back-links a { padding: 6px 12px; font-size: 12px; min-width: 80px; }
+
+            #backToTop { width: 42px; height: 42px; font-size: 20px; bottom: 90px; right: 10px; }
+
+            .floating-container { bottom: 10px; left: 6px; gap: 4px; }
+            .floating-main-btn { padding: 8px 12px 8px 16px; font-size: 11px; border-radius: 25px 0 0 25px; }
+            .floating-main-btn .btn-arrow { font-size: 9px; }
+            .floating-item { padding: 6px 10px; font-size: 10px; gap: 4px; border-radius: 25px; }
+            .floating-item .item-icon { font-size: 13px; }
+            .floating-item .item-text { font-size: 10px; }
+            .call-item { border-radius: 25px 0 0 25px; }
+            .call-sub-item { padding: 4px 10px; font-size: 10px; }
+            .eitaa-item { border-radius: 0 25px 25px 0; }
         }
     </style>
 </head>
 <body>
 
-<header>
-    <div class="container">
-        <a href="../index.html" class="logo"><img src="../images/logo.png" alt="لوگو"></a>
-        <nav class="navbar">
-            <ul>
-                <li><a href="../index.html">صفحه اصلی</a></li>
-                <li><a href="../services.html">خدمات مسکونی</a></li>
-                <li><a href="../commercial-services.html" class="active">خدمات تجاری</a></li>
-                <li><a href="../about.html">درباره ما</a></li>
-                <li><a href="../contact.html">تماس</a></li>
-            </ul>
-        </nav>
-        <div class="header-buttons">
-            <a href="tel:09120705746" class="call-btn">📞 09120705746</a>
-            <div class="mobile-menu">☰</div>
-        </div>
-    </div>
-</header>
+<!-- ===== محتوای مقاله ===== -->
+<div class="blog-article-container">
 
-<div class="service-detail">
-    <div class="text">
-        <h1>🏫 سمپاشی مدارس</h1>
-        <p>کنترل تخصصی آفات در مدارس و مراکز آموزشی با رعایت ایمنی دانش‌آموزان و استفاده از سموم کم‌خطر.</p>
-        <p><strong>روش کنترل:</strong> استفاده از سموم استاندارد و روش‌های نوین با تضمین کیفیت و ماندگاری بالا.</p>
-        <p><strong>مدت زمان اثرگذاری:</strong> نتایج سریع و ماندگار تا ۶ ماه.</p>
-        <div class="back-links">
-            <a href="../commercial-services.html" class="back-to-list">🔙 بازگشت به لیست تجاری</a>
-            <a href="../index.html" class="back-to-home">🏠 بازگشت به صفحه اصلی</a>
-        </div>
-        <div class="contact-float">
-            <a href="tel:09120705746">📞 تماس فوری</a>
-            <a href="https://wa.me/989120705746" target="_blank">💬 واتساپ</a>
-        </div>
+    <h1>راهنمای جامع و تخصصی سمپاشی مهدکودک، مدارس و مراکز آموزشی | تضمین بهداشت و ایمنی در محیط‌های یادگیری</h1>
+    <div class="blog-meta">
+        <span>📅 آخرین به‌روزرسانی: ۲۵ شهریور ۱۴۰۴</span> &nbsp;|&nbsp; <span>⏱ زمان مطالعه: ۲۰ دقیقه</span>
     </div>
-    <div class="gif">
-        <img src="../images/commercial/school.jpg" alt="سمپاشی مدارس">
+
+    <!-- ===== تصویر اصلی (school.jpg) قبل از مقدمه ===== -->
+    <div class="blog-article-image">
+        <img src="../images/commercial/school.jpg" alt="سمپاشی مهدکودک و مدارس - کنترل تخصصی آفات در مراکز آموزشی">
+        <div class="caption"><strong>سمپاشی تخصصی مهدکودک و مدارس</strong> - تضمین بهداشت و ایمنی کودکان و دانش‌آموزان</div>
+    </div>
+
+    <h2>مقدمه: مهدکودک‌ها، مدارس و مراکز آموزشی؛ قلب تپنده سلامت نسل آینده</h2>
+    <p>مدارس، مهدکودک‌ها، پیش‌دبستانی‌ها و مراکز آموزش عالی، قلب تپنده نظام آموزشی هر جامعه‌ای هستند. این مکان‌ها روزانه پذیرای هزاران دانش‌آموز، کودک، دانشجو، معلم و کادر آموزشی هستند که آینده کشور را می‌سازند. با توجه به اینکه دانش‌آموزان و به‌ویژه کودکان مهدکودک و پیش‌دبستانی ساعت‌های طولانی از روز را در این فضاها سپری می‌کنند، حفظ بهداشت و ایمنی محیط‌های آموزشی از اهمیت ویژه‌ای برخوردار است.</p>
+
+    <p><strong>مهدکودک‌ها و پیش‌دبستانی‌ها</strong> به دلیل حضور کودکان با سیستم ایمنی ضعیف‌تر، تماس نزدیک با یکدیگر و قرار گرفتن در معرض مواد غذایی و بازی‌های گروهی، یکی از حساسترین محیط‌های آموزشی محسوب می‌شوند. به همین دلیل، کنترل آفات در مهدکودک‌ها باید با حساسیت بسیار بالاتری نسبت به سایر محیط‌ها انجام شود و استفاده از سموم بی‌خطر و روش‌های غیرشیمیایی در اولویت قرار گیرد.</p>
+
+    <p>متأسفانه، مدارس و مهدکودک‌ها به دلیل وجود مقدار زیادی غذا، آب و رفت‌وآمد بالای افراد، یکی از مستعدترین مکان‌ها برای رشد و تکثیر انواع آفات و حشرات موذی هستند. وجود آفات در محیط‌های آموزشی، نه‌تنها تهدیدی جدی برای سلامت کودکان و دانش‌آموزان است، بلکه می‌تواند باعث اختلال در تمرین، ایجاد اضطراب و کاهش کیفیت یادگیری شود. در این میان، وجود حشراتی مانند شپش که هر ساله تعداد زیادی از دانش‌آموزان به ویژه دختران را درگیر می‌کند، نشان‌دهنده لزوم توجه بیشتر به بهداشت مدارس و مهدکودک‌ها است.</p>
+
+    <p>در این مقاله جامع از <strong>شرکت سمپاشی نانوفناوران بهداشت تهران</strong>، به بررسی کامل چالش‌های کنترل آفات در محیط‌های آموزشی با تأکید ویژه بر مهدکودک‌ها و پیش‌دبستانی‌ها، مهم‌ترین آفات، استانداردهای بهداشتی و روش‌های تخصصی سمپاشی مراکز آموزشی می‌پردازیم.</p>
+
+    <h2>بخش اول: چرا سمپاشی مدارس، مهدکودک‌ها و مراکز آموزشی حیاتی است؟</h2>
+
+    <h3>۱. پیشگیری از بیماری‌ها در میان کودکان و دانش‌آموزان</h3>
+    <p>آفات مانند سوسک، موش، مورچه و کنه‌ها می‌توانند ناقل بیماری‌های خطرناکی مانند سالمونلا، سالک، تب مالت، آلرژی و حتی مشکلات ریوی باشند. مدارس و مهدکودک‌ها با تجمع بالای کودکان و دانش‌آموزان، به سرعت می‌توانند به کانون انتشار بیماری‌ها تبدیل شوند. سمپاشی منظم این مراکز مانع از شیوع این بیماری‌ها خواهد شد. برای مثال، شپش‌ها می‌توانند بیماری‌هایی مانند تب تیفوسی و تب خندق را منتقل کنند و در مهدکودک‌ها به سرعت بین کودکان پخش می‌شوند.</p>
+
+    <h3>۲. افزایش بهداشت و تمرکز کودکان و دانش‌آموزان</h3>
+    <p>وجود حشرات و جوندگان در محیط مهدکودک یا مدرسه می‌تواند موجب اضطراب، ترس و عدم تمرکز کودکان و دانش‌آموزان شود. دیدن یک سوسک یا موش در کلاس درس یا فضای بازی، نه‌تنها آرامش کودکان را برهم می‌زند، بلکه می‌تواند خاطرات ناخوشایندی را برای آنها رقم بزند. رعایت اصول بهداشتی و اجرای سمپاشی دوره‌ای، محیطی امن‌تر و آرام‌تر برای یادگیری و بازی کودکان فراهم می‌کند.</p>
+
+    <h3>۳. جلوگیری از تخریب تجهیزات و امکانات مراکز آموزشی</h3>
+    <p>حشراتی مانند موریانه‌ها و موش‌ها می‌توانند به تجهیزات چوبی، کابل‌های برق، لوازم تحریر، کتاب‌ها و اسباب‌بازی‌های کودکان آسیب برسانند. موش‌ها با جویدن سیم‌های برق، خطر آتش‌سوزی را افزایش می‌دهند. موریانه‌ها نیز با تخریب سازه‌های چوبی، می‌توانند خسارت‌های سنگینی به ساختمان‌های آموزشی وارد کنند.</p>
+
+    <h3>۴. رعایت استانداردهای بهداشتی و جلب اعتماد والدین</h3>
+    <p>مهدکودک‌ها و مدارس برای جلب اعتماد والدین و کسب مجوزهای لازم، موظف به رعایت استانداردهای سختگیرانه بهداشتی هستند. بازرسان بهداشت محیط به طور دوره‌ای از این مراکز بازدید می‌کنند و در صورت مشاهده هرگونه آلودگی، ممکن است مرکز آموزشی را جریمه یا حتی تعطیل کنند. داشتن محیطی عاری از آفات، یکی از مهم‌ترین عوامل در انتخاب مهدکودک توسط والدین است.</p>
+
+    <h2>بخش دوم: مهم‌ترین آفات در مدارس، مهدکودک‌ها و مراکز آموزشی</h2>
+
+    <h3>۱. شپش (پدیکلوز) – تهدید ویژه مهدکودک‌ها و مدارس ابتدایی</h3>
+    <p>شپش یکی از رایج‌ترین و همه‌گیرترین حشرات در مدارس و مهدکودک‌ها، به ویژه در میان کودکان و دختران است. این حشرات کوچک خونخوار روی پوست و مو زندگی می‌کنند و از علائم وجود آنها، سوزش و خارش شدید پوست است. شپش‌ها انواع مختلفی دارند از جمله شپش سر (رایج‌ترین در مهدکودک‌ها)، شپش بدن (که در لباس‌ها زندگی می‌کنند) و شپش پرندگان. وزارت بهداشت هر ساله برنامه‌های شناسایی و کنترل پدیکلوز را در مدارس و مهدکودک‌ها اجرا می‌کند و این موضوع یکی از اولویت‌های بهداشت مدارس محسوب می‌شود.</p>
+
+    <div class="blog-callout-yellow">
+        <p><strong>⚠️ هشدار ویژه مهدکودک‌ها:</strong> شپش‌ها در مهدکودک‌ها به سرعت از طریق تماس مستقیم، استفاده مشترک از شانه، کلاه و وسایل شخصی بین کودکان منتقل می‌شوند. تشخیص و درمان به‌موقع، کلید جلوگیری از همه‌گیری در مرکز است.</p>
+    </div>
+
+    <h3>۲. سوسک‌ها (آلمانی و آمریکایی) – تهدید بوفه‌ها و آشپزخانه‌ها</h3>
+    <p>سوسک‌ها یکی از رایج‌ترین و خطرناک‌ترین آفات در محیط‌های آموزشی هستند. آنها ناقل باکتری‌های بیماری‌زا مانند سالمونلا و ای‌کولی هستند و می‌توانند مواد غذایی و سطوح را آلوده کنند.</p>
+
+    <p><strong>سوسک آلمانی (سوسک ریز کابینتی):</strong> کوچک‌ترین و مقاوم‌ترین سوسک که در محیط‌های گرم و مرطوب مانند آشپزخانه‌ها، آبدارخانه‌ها و بوفه‌ها زندگی می‌کند.</p>
+
+    <p><strong>سوسک آمریکایی (سوسک فاضلاب):</strong> بزرگ‌ترین سوسک که از طریق لوله‌های فاضلاب وارد ساختمان می‌شود و معمولاً در زیرزمین‌ها و تاسیسات یافت می‌شود.</p>
+
+    <h3>۳. موش‌ها و جوندگان – تهدید انبارها و فضاهای پشتی</h3>
+    <p>موش‌ها در مدارس و مراکز آموزشی، علاوه بر انتشار بیماری‌هایی مانند هانتاویروس و سالمونلا، می‌توانند تجهیزات الکترونیکی و کابل‌های برق را تخریب کنند. جوندگان در زیرزمین‌ها، انبارها، آشپزخانه‌ها و فضاهای پشتی مدارس لانه‌سازی می‌کنند.</p>
+
+    <h3>۴. کنه‌ها – خطرناک‌ترین تهدید برای کودکان</h3>
+    <p>کنه‌ها یکی از خطرناک‌ترین حشرات برای کودکان و دانش‌آموزان هستند. این موجودات می‌توانند با گزیدن فرد، بیماری‌های مختلفی مانند تب کریمه کنگو را که در سریع‌ترین زمان باعث مرگ می‌شود، منتقل کنند. گزش کنه ممکن است بدون درد باشد اما واکنش‌های آلرژیک و بیماری‌های تب‌دار را به دنبال داشته باشد. در مهدکودک‌هایی که فضای سبز و حیاط دارند، کنه‌ها تهدیدی جدی محسوب می‌شوند.</p>
+
+    <h3>۵. مگس‌ها – تهدید بوفه‌ها و سالن‌های غذاخوری</h3>
+    <p>مگس‌ها توانایی این را دارند که صدها هزار میکروارگانیسم را با خود حمل کنند و خطر انتقال بیماری بین کودکان و دانش‌آموزان را به میزان قابل توجهی افزایش می‌دهند. مگس‌ها در بوفه‌ها، سالن‌های غذاخوری و نزدیکی سطل‌های زباله تجمع می‌کنند.</p>
+
+    <h3>۶. مورچه‌ها – تهدید مواد غذایی کودکان</h3>
+    <p>مورچه‌ها به دلیل جستجوی غذا و رطوبت، به راحتی وارد کلاس‌ها، بوفه‌ها و انبارهای مواد غذایی می‌شوند و می‌توانند مواد غذایی کودکان را آلوده کنند. در مهدکودک‌ها، مورچه‌ها به سرعت به سمت مواد غذایی و میوه‌های باقی‌مانده جذب می‌شوند.</p>
+
+    <h3>۷. موریانه‌ها – تهدید سازه‌های چوبی</h3>
+    <p>در مدارس و مهدکودک‌های دارای سازه‌های چوبی، مبلمان چوبی یا کاغذ و کتاب‌های زیاد، موریانه‌ها می‌توانند خسارت‌های جبران‌ناپذیری به ساختمان و تجهیزات وارد کنند.</p>
+
+    <h3>۸. ساس تختخواب – تهدید ویژه مهدکودک‌ها و خوابگاه‌ها</h3>
+    <p>ساس‌ها در مهدکودک‌ها، به‌ویژه در فضاهای استراحت کودکان، می‌توانند به سرعت گسترش یابند و باعث خارش شدید، واکنش‌های آلرژیک و بی‌خوابی در کودکان شوند. این حشرات به راحتی از طریق لباس‌ها، کیف‌ها و وسایل شخصی وارد مراکز آموزشی می‌شوند.</p>
+
+    <h2>بخش سوم: چالش‌های خاص سمپاشی مهدکودک‌ها و مدارس</h2>
+
+    <h3>۱. حساسیت بالای کودکان – اولویت اصلی در مهدکودک‌ها</h3>
+    <p>کودکان مهدکودک و پیش‌دبستانی به دلیل سیستم ایمنی ضعیف‌تر، تماس نزدیک با سطوح و قرار گرفتن مکرر در معرض مواد شیمیایی، بسیار آسیب‌پذیر هستند. استفاده از سموم در این محیط‌ها باید با نهایت دقت و با رعایت استانداردهای سختگیرانه انجام شود. سموم باید کاملاً تأییدشده، بدون بو و فاقد هرگونه خطر برای کودکان و پرسنل باشند. استفاده از سموم غیراستاندارد در مهدکودک‌ها می‌تواند خطراتی نظیر سقط جنین در مربیان باردار، مشکلات پوستی، عصبی و تنفسی را به همراه داشته باشد.</p>
+
+    <div class="blog-callout">
+        <p><strong>نکته مهم:</strong> در مهدکودک‌ها و پیش‌دبستانی‌ها، استفاده از سموم باید به حداقل ممکن کاهش یابد و اولویت با روش‌های فیزیکی (تله‌ها، درزگیری)، بیولوژیک و طعمه‌گذاری هدفمند باشد.</p>
+    </div>
+
+    <h3>۲. عدم تعطیلی طولانی‌مدت مراکز آموزشی</h3>
+    <p>برخلاف بسیاری از محیط‌ها، مهدکودک‌ها و مدارس نمی‌توانند برای مدت طولانی تعطیل شوند. بنابراین، سمپاشی باید به صورت مرحله‌ای و در زمان‌های کم‌ترافیک (آخر هفته‌ها، تعطیلات رسمی یا تعطیلات تابستانی) انجام شود.</p>
+
+    <h3>۳. تنوع بالای فضاها در مراکز آموزشی</h3>
+    <p>مهدکودک‌ها و مدارس دارای فضاهای متنوعی مانند کلاس‌ها، کتابخانه، آزمایشگاه‌ها، بوفه، سالن‌های ورزشی، حیاط، سرویس‌های بهداشتی، اتاق‌های استراحت کودکان و فضاهای پشتی هستند که هر کدام نیاز به روش‌های کنترل خاص خود دارند.</p>
+
+    <h3>۴. اطلاع‌رسانی به والدین و کارکنان – ضرورت در مهدکودک‌ها</h3>
+    <p>قبل از سمپاشی مهدکودک، والدین، مربیان و کارکنان باید مطلع شوند تا اقدامات لازم را انجام دهند و در روزهای سمپاشی کودکان را به مرکز نیاورند. این اطلاع‌رسانی باید با دقت و شفافیت کامل انجام شود تا اعتماد والدین جلب گردد.</p>
+
+    <h2>بخش چهارم: روش‌های تخصصی سمپاشی مهدکودک‌ها و مدارس</h2>
+
+    <h3>مرحله ۱: بازدید و ارزیابی اولیه</h3>
+    <p>کارشناسان ما با بررسی کامل مهدکودک یا مدرسه، نقاط حساس، نوع آفات، میزان آلودگی و مسیرهای ورود را شناسایی می‌کنند. این بازرسی شامل موارد زیر است:</p>
+    <ul>
+        <li><strong>کلاس‌های درس و اتاق‌های بازی:</strong> بررسی میزها، صندلی‌ها، کابینت‌ها، اسباب‌بازی‌ها و نقاط تاریک</li>
+        <li><strong>فضاهای استراحت کودکان:</strong> بررسی تشک‌ها، ملحفه‌ها، کمدها و نقاط مرطوب</li>
+        <li><strong>کتابخانه و آزمایشگاه‌ها:</strong> بررسی قفسه‌ها، تجهیزات و نقاط مرطوب</li>
+        <li><strong>آشپزخانه، بوفه و سالن غذاخوری:</strong> بررسی انبارها، کابینت‌ها، یخچال‌ها و نقاط مرطوب</li>
+        <li><strong>سرویس‌های بهداشتی:</strong> بررسی نقاط مرطوب و مجاری فاضلاب</li>
+        <li><strong>فضاهای باز:</strong> بررسی حیاط، باغچه‌ها، زمین بازی و نقاط تجمع آب</li>
+        <li><strong>فضاهای پشتی:</strong> زیرزمین، انبارها، موتورخانه</li>
+    </ul>
+
+    <h3>مرحله ۲: برنامه‌ریزی و هماهنگی با مدیریت مرکز</h3>
+    <p>بر اساس نتایج بازرسی، یک برنامه جامع برای سمپاشی تدوین می‌شود که شامل:</p>
+    <ul>
+        <li><strong>زمان‌بندی دقیق:</strong> سمپاشی در زمان‌های کم‌ترافیک (آخر هفته‌ها، تعطیلات رسمی یا تعطیلات تابستانی)</li>
+        <li><strong>اطلاع‌رسانی به والدین و کارکنان:</strong> اطلاع‌رسانی شفاف در مورد عملیات سمپاشی (حداقل یک هفته قبل از سمپاشی)</li>
+        <li><strong>هماهنگی با مدیریت مرکز:</strong> هماهنگی کامل با مدیر مهدکودک یا مدرسه برای اجرای بی‌نقص عملیات</li>
+        <li><strong>تخلیه کلاس‌ها، اسباب‌بازی‌ها و مواد غذایی:</strong> تمام کلاس‌ها، بوفه و مکان‌هایی که مواد غذایی نگهداری می‌شود، باید از وسایل حساس تخلیه شوند</li>
+    </ul>
+
+    <h3>مرحله ۳: انتخاب روش و سموم مناسب برای مهدکودک‌ها</h3>
+    <p>در مهدکودک‌ها و مدارس، انتخاب سموم و روش‌های سمپاشی با نهایت دقت انجام می‌شود:</p>
+    <ul>
+        <li><strong>در کلاس‌ها و فضاهای آموزشی:</strong> استفاده از سموم پیرتروئیدی با سمیت بسیار پایین برای انسان و بوی کم (سایپرمترین، آلفاسایپرمترین، پرمترین) با کمترین دوز ممکن</li>
+        <li><strong>در آشپزخانه، بوفه و سالن غذاخوری:</strong> استفاده از طعمه‌های ژلی و غیرفرّار در نقاط دور از دسترس کودکان</li>
+        <li><strong>برای شپش در مهدکودک‌ها:</strong> استفاده از شوینده‌های مخصوص و ضدعفونی منظم محیط به همراه آموزش به مربیان</li>
+        <li><strong>برای جوندگان:</strong> استفاده از سموم تاخیری و طعمه‌گذاری در باکس‌های قفل‌دار کاملاً دور از دسترس کودکان</li>
+        <li><strong>برای سوسک‌ها:</strong> استفاده از سموم ترکیبی تخصصی که باعث مقاومت سوسک‌ها نشوند و در نقاط صعب‌الوصول قرار گیرند</li>
+    </ul>
+
+    <h3>مرحله ۴: اجرای سمپاشی در مهدکودک و مدرسه</h3>
+    <p>عملیات سمپاشی با استفاده از تجهیزات پیشرفته و سموم استاندارد انجام می‌شود:</p>
+    <ul>
+        <li><strong>تزریق به شکاف‌ها و درزها:</strong> برای از بین بردن آفات پنهان بدون ایجاد آلودگی در فضای باز</li>
+        <li><strong>طعمه‌گذاری:</strong> در نقاط استراتژیک با باکس‌های قفل‌دار برای کنترل سوسک‌ها و مورچه‌ها</li>
+        <li><strong>استفاده از تله‌های چسبنده:</strong> برای پایش و کاهش جمعیت حشرات بدون استفاده از سموم شیمیایی</li>
+    </ul>
+
+    <h3>مرحله ۵: تهویه و ایمن‌سازی</h3>
+    <p>پس از سمپاشی، محیط به مدت مناسب (حداقل ۴ تا ۶ ساعت) تهویه می‌شود. تمام درها و پنجره‌ها باز می‌شوند تا هرگونه بوی سموم و بخارات باقیمانده از بین برود. کارشناسان زمان بازگشت ایمن کودکان و پرسنل را اعلام می‌کنند.</p>
+
+    <h3>مرحله ۶: نظافت کامل پس از سمپاشی</h3>
+    <p>پس از سمپاشی، تمام میزها، نیمکتها، تخته‌سفید، صندلی‌ها، اسباب‌بازی‌ها و کف کلاس‌ها باید با مواد شوینده و دستمال مرطوب تمیز شوند تا هرگونه باقیمانده سموم حذف شود. این مرحله در مهدکودک‌ها از اهمیت ویژه‌ای برخوردار است.</p>
+
+    <h3>مرحله ۷: بازدید مجدد و پایش مستمر</h3>
+    <p>پس از اتمام عملیات، کارشناسان ما بازدید مجدد انجام می‌دهند تا از موفقیت سمپاشی اطمینان حاصل کنند و در صورت نیاز، اقدامات تکمیلی انجام دهند.</p>
+
+    <h2>بخش پنجم: اقدامات پیشگیرانه در مهدکودک‌ها و مدارس</h2>
+
+    <h3>۱. کنترل نقاط ورود</h3>
+    <ul>
+        <li>بستن تمام شکاف‌ها و درزهای دیوارها، کف و سقف</li>
+        <li>نصب توری روی پنجره‌ها و دریچه‌های تهویه</li>
+        <li>نصب درپوش‌های مناسب روی درب‌ها</li>
+        <li>تعمیر فوری شیشه‌های شکسته و درب‌های خراب</li>
+    </ul>
+
+    <h3>۲. مدیریت بهداشت محیط در مهدکودک‌ها</h3>
+    <ul>
+        <li>رنگ‌آمیزی تمام دیوارها و میزها به رنگ روشن برای تشخیص سریع آلودگی</li>
+        <li>استفاده از سطل‌های زباله درب‌دار و تخلیه روزانه آنها</li>
+        <li>شستشوی مرتب ملحفه‌ها، تشک‌ها و اسباب‌بازی‌های پارچه‌ای</li>
+        <li>ضدعفونی منظم اسباب‌بازی‌ها و وسایل مشترک</li>
+        <li>حفظ بهداشت سرویس‌های بهداشتی و ضدعفونی مکرر آنها</li>
+        <li>خودداری از قرار دادن گلدان‌های دارای خاک تازه در محوطه مهدکودک</li>
+    </ul>
+
+    <h3>۳. مدیریت مواد غذایی در مهدکودک‌ها</h3>
+    <ul>
+        <li>عدم رها کردن هرگونه مواد غذایی در محوطه مهدکودک</li>
+        <li>نگهداری مواد غذایی در ظروف درب‌دار و مقاوم</li>
+        <li>دفع صحیح زباله‌ها</li>
+        <li>نظارت بر وعده‌های غذایی کودکان و جمع‌آوری سریع باقیمانده غذا</li>
+    </ul>
+
+    <h3>۴. آموزش مربیان، کودکان و والدین</h3>
+    <p>مربیان، کودکان و والدین باید علائم حضور آفات را بشناسند، روش‌های گزارش‌دهی سریع را بدانند و نکات بهداشتی را رعایت کنند. برنامه‌های آموزشی با محوریت شیوه زندگی سالم و خودمراقبتی در مهدکودک‌ها اجرا می‌شود.</p>
+
+    <h3>۵. پایش مستمر در مهدکودک‌ها</h3>
+    <ul>
+        <li>استقرار نظام گزارش‌دهی مناسب از مربیان و کارکنان</li>
+        <li>استفاده از تله‌های چسبنده در نقاط استراتژیک</li>
+        <li>بازرسی دوره‌ای توسط کارشناسان</li>
+        <li>تهویه مناسب هوا در تمام نقاط مهدکودک</li>
+    </ul>
+
+    <h2>بخش ششم: نکات طلایی قبل و بعد از سمپاشی مهدکودک</h2>
+
+    <h3>اقدامات قبل از سمپاشی</h3>
+    <ul>
+        <li><strong>انتخاب شرکت معتبر:</strong> از شرکت‌های مجاز و دارای مجوز از سازمان‌های بهداشتی برای سمپاشی استفاده کنید</li>
+        <li><strong>بررسی نوع آفات:</strong> قبل از سمپاشی، نوع آفات موجود را شناسایی کنید تا از سم مناسب استفاده شود</li>
+        <li><strong>استفاده از سموم کم‌خطر:</strong> حشره‌کش‌های دارای تأییدیه بهداشتی و کم‌خطر را انتخاب کنید</li>
+        <li><strong>اطلاع‌رسانی به والدین و کارکنان:</strong> حداقل یک هفته قبل از سمپاشی، والدین، مربیان و کارکنان را مطلع کنید</li>
+        <li><strong>تخلیه کلاس‌ها، اسباب‌بازی‌ها و مواد غذایی:</strong> همه کلاس‌ها، اسباب‌بازی‌ها، بوفه و مواد غذایی باید از وسایل حساس تخلیه شوند</li>
+        <li><strong>برنامه‌ریزی برای تعطیلی مرکز:</strong> سمپاشی باید در زمانی انجام شود که مرکز تعطیل باشد (پایان هفته یا تعطیلات)</li>
+    </ul>
+
+    <h3>اقدامات بعد از سمپاشی</h3>
+    <ul>
+        <li><strong>تهویه مناسب کلاس‌ها:</strong> تمام کلاس‌ها، سالن‌ها، کتابخانه و سایر بخش‌ها باید چندین ساعت تهویه شوند</li>
+        <li><strong>نظافت کامل سطوح و وسایل:</strong> تمام میزها، نیمکتها، تخته‌سفید، صندلی‌ها، اسباب‌بازی‌ها و کف کلاس‌ها باید با مواد شوینده تمیز شوند</li>
+        <li><strong>کنترل ایمنی محیط:</strong> قبل از بازگشایی، مسئولان باید محیط را بررسی کنند تا از نبود بقایای سموم اطمینان حاصل شود</li>
+        <li><strong>دور نگه داشتن کودکان از مناطق سمپاشی‌شده:</strong> اگر سمپاشی در برخی مناطق مانند انبارها یا سرویس‌های بهداشتی انجام شده است، باید از دسترسی کودکان به این بخش‌ها برای مدت زمان توصیه‌شده جلوگیری شود</li>
+        <li><strong>ارزیابی تأثیر سمپاشی:</strong> مدیران مرکز باید با کمک شرکت سمپاشی بررسی کنند که آیا آفات به‌طور کامل از بین رفته‌اند یا نیاز به اقدامات مکمل وجود دارد</li>
+    </ul>
+
+    <h2>بخش هفتم: هزینه سمپاشی مهدکودک و مدرسه</h2>
+    <p>هزینه سمپاشی به عوامل زیر بستگی دارد. برای دریافت <strong>مشاوره رایگان</strong> و <strong>استعلام دقیق هزینه</strong>، با کارشناسان ما تماس بگیرید:</p>
+
+    <table>
+        <thead>
+            <tr><th>عامل</th><th>تأثیر بر هزینه</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>مساحت مرکز</strong></td><td>هرچه متراژ بزرگ‌تر باشد، هزینه بیشتر است</td></tr>
+            <tr><td><strong>تعداد کلاس‌ها و بخش‌ها</strong></td><td>بخش‌های بیشتر نیاز به عملیات گسترده‌تری دارند</td></tr>
+            <tr><td><strong>شدت آلودگی</strong></td><td>آلودگی شدید نیاز به عملیات بیشتر و زمان‌برتری دارد</td></tr>
+            <tr><td><strong>نوع آفات</strong></td><td>شپش و ساس نیاز به روش‌های خاص و هزینه بیشتری دارند</td></tr>
+            <tr><td><strong>نوع روش سمپاشی</strong></td><td>طعمه‌گذاری، مه‌پاشی یا ترکیبی</td></tr>
+            <tr><td><strong>نوع سموم</strong></td><td>سموم تخصصی و بی‌خطر برای کودکان هزینه بیشتری دارند</td></tr>
+        </tbody>
+    </table>
+
+    <h2>بخش هشتم: سوالات متداول درباره سمپاشی مهدکودک‌ها و مدارس</h2>
+
+    <details>
+        <summary><strong>چند بار در سال باید مهدکودک یا مدرسه سمپاشی شود؟</strong></summary>
+        <p>توصیه می‌شود مهدکودک‌ها و مدارس حداقل سالی دو بار (ترجیحاً در تعطیلات تابستانی و نوروز) سمپاشی شوند. در صورت مشاهده آفات، بلافاصله باید اقدام شود. مهدکودک‌ها به دلیل حساسیت بالاتر ممکن است نیاز به سمپاشی فصلی داشته باشند.</p>
+    </details>
+
+    <details>
+        <summary><strong>آیا سمپاشی مهدکودک برای کودکان خطرناک است؟</strong></summary>
+        <p>خیر، سموم استفاده‌شده توسط شرکت نانوفناوران با رعایت کامل استانداردهای بهداشتی انتخاب می‌شوند و برای کودکان بی‌خطر هستند. در هنگام سمپاشی، محیط کاملاً خالی می‌شود و پس از تهویه کامل، برای حضور کودکان ایمن می‌گردد.</p>
+    </details>
+
+    <details>
+        <summary><strong>چه مدت بعد از سمپاشی مهدکودک برای حضور کودکان ایمن است؟</strong></summary>
+        <p>بسته به نوع سموم استفاده‌شده، معمولاً ۴ تا ۶ ساعت پس از سمپاشی، محیط برای حضور کودکان ایمن است. در روش‌های مدرن بدون بو، این زمان به کمتر از ۳ ساعت کاهش یافته است. کارشناسان ما زمان دقیق را به شما اعلام می‌کنند.</p>
+    </details>
+
+    <details>
+        <summary><strong>آیا سمپاشی مهدکودک در زمان حضور کودکان امکان‌پذیر است؟</strong></summary>
+        <p>خیر، سمپاشی مهدکودک باید در زمان‌هایی انجام شود که مرکز تعطیل باشد (آخر هفته‌ها، تعطیلات رسمی یا تعطیلات تابستانی) تا از تماس مستقیم کودکان با مواد شیمیایی جلوگیری شود.</p>
+    </details>
+
+    <details>
+        <summary><strong>بهترین روش کنترل شپش در مهدکودک‌ها چیست؟</strong></summary>
+        <p>بهترین روش، ترکیبی از شناسایی به‌موقع، ضدعفونی منظم محیط، بررسی بهداشت شخصی کودکان و آموزش به مربیان و والدین است. در صورت مشاهده شپش در یک کودک، باید تمام کودکان و محیط بررسی شوند و اقدامات لازم انجام گیرد.</p>
+    </details>
+
+    <details>
+        <summary><strong>آیا سمپاشی مهدکودک بر کیفیت یادگیری کودکان تأثیر دارد؟</strong></summary>
+        <p>بله، وجود حشرات و جوندگان در محیط مهدکودک می‌تواند موجب اضطراب، ترس و عدم تمرکز کودکان شود. سمپاشی منظم با ایجاد محیطی امن و آرام، به بهبود کیفیت یادگیری و بازی کودکان کمک می‌کند.</p>
+    </details>
+
+    <details>
+        <summary><strong>مهدکودک‌ها چه آفات خاصی دارند که مدارس ندارند؟</strong></summary>
+        <p>مهدکودک‌ها به دلیل تماس نزدیک کودکان، استفاده از اسباب‌بازی‌های مشترک، استراحت در تشک‌ها و مصرف مواد غذایی، بیشتر در معرض آفاتی مانند شپش، ساس و مورچه‌ها هستند. همچنین کنه‌ها در حیاط و فضای سبز مهدکودک‌ها تهدید جدی‌تری محسوب می‌شوند.</p>
+    </details>
+
+    <h2>نتیجه‌گیری</h2>
+    <p>مهدکودک‌ها، مدارس و مراکز آموزشی، نقش حیاتی در شکل‌گیری آینده هر جامعه‌ای دارند. حفظ بهداشت و ایمنی در این محیط‌ها، نه‌تنها یک الزام قانونی، بلکه یک مسئولیت اجتماعی و اخلاقی است. کنترل آفات در محیط‌های آموزشی، با پیشگیری از بیماری‌ها، افزایش تمرکز کودکان و دانش‌آموزان و حفظ سرمایه‌های ملی، به بهبود کیفیت آموزش و پرورش کمک می‌کند. مهدکودک‌ها به دلیل حضور کودکان با سیستم ایمنی ضعیف‌تر، نیازمند حساسیت و دقت بسیار بالاتری در کنترل آفات هستند.</p>
+
+    <p><strong>شرکت سمپاشی نانوفناوران بهداشت تهران</strong> با بیش از یک دهه تجربه در زمینه سمپاشی مهدکودک‌ها، مدارس، دانشگاه‌ها و مراکز آموزشی، آماده ارائه خدمات تخصصی و تضمینی به شماست. تیم کارشناسان ما با شناسایی دقیق نوع آفات، استفاده از سموم استاندارد و ایمن، و رعایت کامل نکات ایمنی، محیطی امن، بهداشتی و عاری از آفات را برای مرکز آموزشی شما به ارمغان می‌آورند.</p>
+
+    <p style="font-size:20px; font-weight:700; text-align:center; color:#0B6FB8;">🚀 همین حالا اقدام کنید:</p>
+    <div style="text-align:center; margin:20px 0;">
+        <p>📞 <strong>تماس فوری:</strong> <a href="tel:09120705746" style="font-size:20px; color:#11A64A; text-decoration:none;">۰۹۱۲۰۷۰۵۷۴۶</a></p>
+        <p>💬 <strong>درخواست مشاوره رایگان:</strong> از طریق <a href="https://wa.me/989120705746" target="_blank" style="color:#25D366; text-decoration:none;">واتساپ</a> یا <a href="https://eitaa.com/nanofannavaran_ir" target="_blank" style="color:#e67e22; text-decoration:none;">ایتا</a></p>
+        <p>🔗 <strong>مشاهده سایر خدمات:</strong> <a href="../services.html" style="color:#0B6FB8; text-decoration:none;">کنترل آفات مسکونی</a></p>
+    </div>
+
+    <div class="blog-back-links">
+        <a href="../index.html" class="btn-home">🏠 بازگشت به صفحه اصلی</a>
+        <a href="../services.html" class="btn-services">🔙 بازگشت به لیست خدمات مسکونی</a>
+        <a href="../contact.html" class="btn-contact">📞 تماس با ما</a>
+    </div>
+
+</div>
+
+<!-- ===== دکمه اسکرول به بالا ===== -->
+<button id="backToTop" title="برو به بالا">↑</button>
+
+<!-- ===== منوی شناور ===== -->
+<div class="floating-container">
+    <button class="floating-main-btn" id="floatingToggle">
+        <span class="btn-arrow">▶</span>
+        <span class="btn-text">📞 مشاوره رایگان</span>
+    </button>
+    <div class="floating-menu" id="floatingMenu">
+        <div class="call-wrapper">
+            <div class="floating-item call-item" id="callToggle">
+                <span class="item-icon">📞</span>
+                <span class="item-text">تماس سریع</span>
+                <span class="arrow">▲</span>
+            </div>
+            <div class="call-submenu" id="callSubmenu">
+                <a href="tel:09120705746" class="floating-item call-sub-item"><span class="item-icon">📞</span><span class="item-text">شماره ۱</span></a>
+                <a href="tel:09197173454" class="floating-item call-sub-item"><span class="item-icon">📞</span><span class="item-text">شماره ۲</span></a>
+            </div>
+        </div>
+        <a href="https://wa.me/989120705746?text=%D8%A8%D9%87%20%D8%B3%D8%A7%DB%8C%D8%AA%20%D8%B4%D8%B1%DA%A9%D8%AA%20%D8%B3%D9%85%D9%BE%D8%A7%D8%B4%DB%8C%20%D9%86%D8%A7%D9%86%D9%88%D9%81%D9%86%D8%A7%D9%88%D8%B1%D8%A7%D9%86%20%D8%AE%D9%88%D8%B4%20%D8%A2%D9%85%D8%AF%DB%8C%D8%AF" target="_blank" class="floating-item whatsapp-item"><span class="item-icon">💬</span><span class="item-text">واتساپ</span></a>
+        <a href="https://eitaa.com/nanofannavaran_ir" target="_blank" class="floating-item eitaa-item"><span class="item-icon">✈️</span><span class="item-text">ایتا</span></a>
     </div>
 </div>
 
-<footer class="site-footer">
-    <div class="container">
-        <div class="footer-grid">
-            <div class="footer-box"><h3>نانوفناوران</h3><p>ارائه‌دهنده خدمات تخصصی کنترل آفات در تهران</p></div>
-            <div class="footer-box"><h3>اطلاعات تماس</h3><p>📱 09120705746</p><p>☎️ 22048278</p></div>
-        </div>
-        <hr><p class="copyright">© تمامی حقوق محفوظ است</p>
-    </div>
-</footer>
+<!-- ===== جاوااسکریپت ===== -->
+<script>
+    // ===== دکمه اسکرول به بالا =====
+    var backToTopBtn = document.getElementById('backToTop');
 
-<script src="../script.js"></script>
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
+    });
+
+    backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // ===== منوی شناور =====
+    var toggleBtn = document.getElementById('floatingToggle');
+    var menu = document.getElementById('floatingMenu');
+    var arrow = toggleBtn.querySelector('.btn-arrow');
+
+    toggleBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        this.classList.toggle('active');
+        menu.classList.toggle('open');
+        if (arrow) arrow.classList.toggle('open');
+    });
+
+    // ===== زیرمنوی تماس =====
+    var callToggle = document.getElementById('callToggle');
+    var callSubmenu = document.getElementById('callSubmenu');
+
+    callToggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        this.classList.toggle('open');
+        callSubmenu.classList.toggle('open');
+        var arrowIcon = this.querySelector('.arrow');
+        if (arrowIcon) {
+            arrowIcon.textContent = callSubmenu.classList.contains('open') ? '▼' : '▲';
+        }
+    });
+
+    // ===== بستن منو با کلیک بیرون =====
+    document.addEventListener('click', function() {
+        if (toggleBtn) toggleBtn.classList.remove('active');
+        if (menu) menu.classList.remove('open');
+        if (arrow) arrow.classList.remove('open');
+        if (callToggle) callToggle.classList.remove('open');
+        if (callSubmenu) callSubmenu.classList.remove('open');
+        var arrowIcon = callToggle ? callToggle.querySelector('.arrow') : null;
+        if (arrowIcon) arrowIcon.textContent = '▲';
+    });
+
+    if (menu) {
+        menu.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    }
+
+    console.log('✅ مقاله سمپاشی مهدکودک و مدارس بارگذاری شد!');
+</script>
+
 </body>
 </html>
