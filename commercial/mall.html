@@ -3,153 +3,613 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سمپاشی مراکز خرید | نانوفناوران</title>
-    <link rel="stylesheet" href="../style.css">
+    <title>سمپاشی مراکز خرید، مجتمع‌های تجاری و پاساژها | راهنمای جامع کنترل آفات | نانوفناوران</title>
+    <meta name="description" content="مقاله جامع سمپاشی مراکز خرید، مجتمع‌های تجاری و پاساژها: چالش‌های کنترل آفات، روش‌های تخصصی، نکات بهداشتی و پیشگیری.">
+    <meta name="keywords" content="سمپاشی مراکز خرید, سمپاشی مجتمع تجاری, کنترل آفات پاساژ, سمپاشی فودکورت, بهداشت مراکز خرید, نانوفناوران">
+    <link rel="canonical" href="https://nanofannavaran.ir/commercial/mall.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
-        .service-detail {
-            max-width: 1100px;
-            margin: 100px auto 50px;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
+        /* ===== استایل‌های اختصاصی مقاله ===== */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Vazirmatn', 'IRANSans', 'Tahoma', sans-serif;
+            background: #f8fbfd; color: #222; line-height: 1.9;
+            direction: rtl; padding: 20px 15px; min-height: 100vh;
         }
-        .service-detail .text h1 {
-            font-size: 32px;
-            color: var(--primary);
-            margin-bottom: 20px;
+
+        .blog-article-container {
+            max-width: 1100px; margin: 20px auto 60px; background: #fff;
+            border-radius: 24px; box-shadow: 0 10px 40px rgba(0,0,0,.08);
+            padding: 30px 25px 50px; line-height: 1.8; color: #2c3e50;
+            direction: rtl; width: 100%;
         }
-        .service-detail .text p {
-            line-height: 2.2;
-            color: #555;
-            font-size: 16px;
+        .blog-article-container h1 { font-size: 32px; color: #0B6FB8; margin-bottom: 20px; line-height: 1.5; }
+        .blog-article-container .blog-meta { color: #888; font-size: 14px; border-bottom: 1px solid #eee; padding-bottom: 18px; margin-bottom: 25px; }
+        .blog-article-container h2 { font-size: 26px; color: #1F2937; margin: 35px 0 12px; border-right: 5px solid #0B6FB8; padding-right: 15px; }
+        .blog-article-container h3 { font-size: 21px; color: #0B6FB8; margin: 25px 0 10px; }
+        .blog-article-container h4 { font-size: 18px; color: #1F2937; margin: 20px 0 8px; }
+        .blog-article-container p { line-height: 2.2; color: #444; font-size: 16px; margin-bottom: 16px; text-align: justify; }
+        .blog-article-container ul, .blog-article-container ol { line-height: 2.2; color: #444; font-size: 16px; padding-right: 25px; margin-bottom: 18px; }
+        .blog-article-container ul li, .blog-article-container ol li { margin-bottom: 6px; }
+        .blog-article-container table { width: 100%; border-collapse: collapse; margin: 18px 0 25px; font-size: 15px; overflow-x: auto; display: block; }
+        .blog-article-container table th { background: #0B6FB8; color: #fff; padding: 10px 12px; text-align: right; }
+        .blog-article-container table td { border: 1px solid #ddd; padding: 8px 12px; background: #fafafa; }
+        .blog-article-container table tr:nth-child(even) td { background: #f5f8fc; }
+        .blog-article-image { margin: 25px 0; text-align: center; }
+        .blog-article-image img { width: 100%; max-width: 700px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,.15); height: auto; }
+        .blog-article-image .caption { font-size: 14px; color: #888; margin-top: 10px; }
+        .blog-article-image .caption strong { color: #0B6FB8; }
+        .blog-article-container .blog-back-links { margin: 35px 0 15px; display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+        .blog-article-container .blog-back-links a { display: inline-block; padding: 10px 22px; border-radius: 50px; text-decoration: none; font-weight: 700; transition: .3s; font-size: 15px; text-align: center; flex: 1 1 auto; min-width: 140px; }
+        .blog-article-container .blog-back-links .btn-home { background: #0B6FB8; color: #fff; }
+        .blog-article-container .blog-back-links .btn-home:hover { background: #11A64A; }
+        .blog-article-container .blog-back-links .btn-services { background: #11A64A; color: #fff; }
+        .blog-article-container .blog-back-links .btn-services:hover { background: #0B6FB8; }
+        .blog-article-container .blog-back-links .btn-contact { background: #1F2937; color: #fff; }
+        .blog-article-container .blog-back-links .btn-contact:hover { background: #0B6FB8; }
+        .blog-callout { background: #f0f7ff; border-right: 5px solid #0B6FB8; padding: 18px 22px; border-radius: 12px; margin: 22px 0; }
+        .blog-callout strong { color: #0B6FB8; }
+        .blog-callout-yellow { background: #fff8e1; border-right: 5px solid #ffc107; padding: 18px 22px; border-radius: 12px; margin: 22px 0; }
+        .blog-article-container details { background: #f8fbfd; padding: 14px 18px; border-radius: 12px; margin-bottom: 14px; border: 1px solid #e9ecef; }
+        .blog-article-container details summary { font-weight: 700; color: #0B6FB8; cursor: pointer; font-size: 16px; }
+        .blog-article-container details p { margin-top: 10px; padding-right: 8px; font-size: 15px; }
+
+        /* ===== دکمه اسکرول به بالا ===== */
+        #backToTop {
+            position: fixed;
+            right: 20px;
+            bottom: 80px;
+            width: 55px;
+            height: 55px;
+            border: none;
+            border-radius: 50%;
+            background: #0B6FB8;
+            color: #fff;
+            font-size: 28px;
+            font-weight: 700;
+            cursor: pointer;
+            display: none;
+            z-index: 9998;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            line-height: 1;
+            text-align: center;
+            padding: 0;
+            font-family: 'Vazirmatn', sans-serif;
         }
-        .service-detail .gif img {
-            width: 100%;
-            max-height: 400px;
-            object-fit: contain;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,.15);
+        #backToTop:hover {
+            background: #11A64A;
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
         }
-        .back-links {
-            margin-top: 30px;
+        #backToTop::before {
+            content: "↑";
+            display: block;
+            font-size: 30px;
+            font-weight: 900;
+            line-height: 55px;
+        }
+        #backToTop.show {
+            display: block !important;
+        }
+
+        /* ===== منوی شناور ===== */
+        .floating-container {
+            position: fixed;
+            bottom: 30px;
+            left: 20px;
+            z-index: 9999;
             display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
+            flex-direction: row;
+            align-items: center;
+            font-family: 'Vazirmatn', sans-serif;
+            direction: ltr;
         }
-        .back-links a {
-            display: inline-block;
-            padding: 12px 28px;
+        .floating-main-btn {
+            background: linear-gradient(135deg, #25D366 0%, #1da851 100%);
+            color: #fff;
+            border: none;
+            border-radius: 50px 0 0 50px;
+            padding: 16px 24px 16px 28px;
+            font-size: 16px;
+            font-weight: 800;
+            cursor: pointer;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            white-space: nowrap;
+            animation: pulse 2.5s infinite;
+            transition: all 0.3s ease;
+        }
+        .floating-main-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(37, 211, 102, 0.8);
+        }
+        .floating-main-btn .btn-arrow {
+            font-size: 14px;
+            transition: transform 0.4s ease;
+        }
+        .floating-main-btn.active .btn-arrow {
+            transform: rotate(90deg);
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6); }
+            50% { box-shadow: 0 8px 50px rgba(37, 211, 102, 0.9), 0 0 80px rgba(37, 211, 102, 0.2); }
+            100% { box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6); }
+        }
+
+        .floating-menu {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(-20px) scale(0.95);
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        .floating-menu.open {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0) scale(1);
+        }
+
+        .floating-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 18px;
             border-radius: 50px;
-            text-decoration: none;
+            color: #fff;
             font-weight: 700;
-            transition: .3s;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+            white-space: nowrap;
+            border: 2px solid rgba(255, 255, 255, 0.15);
+            text-decoration: none;
         }
-        .back-to-list {
-            background: var(--secondary);
-            color: #fff;
+        .floating-item:hover {
+            transform: scale(1.08);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
         }
-        .back-to-list:hover {
-            background: var(--primary);
+        .floating-item .item-icon { font-size: 18px; }
+        .floating-item .item-text { font-size: 14px; }
+
+        .call-item {
+            background: linear-gradient(135deg, #25D366, #1da851);
+            border-radius: 50px 0 0 50px;
+            cursor: pointer;
+            position: relative;
         }
-        .back-to-home {
-            background: var(--primary);
-            color: #fff;
+        .call-item .arrow {
+            font-size: 12px;
+            margin-right: 5px;
+            transition: transform 0.3s ease;
         }
-        .back-to-home:hover {
-            background: var(--secondary);
+        .call-item.open .arrow {
+            transform: rotate(180deg);
         }
-        .contact-float {
-            margin-top: 20px;
+
+        .call-submenu {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            opacity: 0;
+            visibility: hidden;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            margin-right: 5px;
         }
-        .contact-float a {
-            display: inline-block;
-            background: var(--primary);
-            color: #fff;
-            padding: 12px 28px;
+        .call-submenu.open {
+            opacity: 1;
+            visibility: visible;
+            max-height: 200px;
+        }
+
+        .call-sub-item {
+            background: linear-gradient(135deg, #25D366, #1da851);
             border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            margin-left: 10px;
-            transition: .3s;
+            padding: 8px 16px;
+            font-size: 13px;
+            gap: 6px;
         }
-        .contact-float a:hover {
-            background: var(--secondary);
+        .call-sub-item:hover { transform: scale(1.05); }
+
+        .whatsapp-item {
+            background: linear-gradient(135deg, #25D366, #1da851);
+            border-radius: 50px;
         }
+        .eitaa-item {
+            background: linear-gradient(135deg, #f97316, #ea580c);
+            border-radius: 0 50px 50px 0;
+        }
+
         @media (max-width: 768px) {
-            .service-detail {
-                grid-template-columns: 1fr;
-                text-align: center;
-                margin-top: 80px;
-            }
-            .service-detail .text h1 {
-                font-size: 26px;
-            }
-            .service-detail .gif img {
-                max-height: 250px;
-            }
-            .back-links {
-                justify-content: center;
-            }
-            .back-links a {
-                padding: 10px 20px;
-                font-size: 14px;
-            }
+            .blog-article-container { padding: 20px 16px 35px; margin: 10px auto 40px; border-radius: 16px; }
+            .blog-article-container h1 { font-size: 24px; }
+            .blog-article-container h2 { font-size: 20px; }
+            .blog-article-container h3 { font-size: 18px; }
+            .blog-article-container p { font-size: 15px; }
+            .blog-article-container ul, .blog-article-container ol { font-size: 15px; padding-right: 20px; }
+            .blog-article-container table { font-size: 13px; }
+            .blog-article-container table th, .blog-article-container table td { padding: 6px 10px; }
+            .blog-article-image img { max-width: 100%; border-radius: 14px; }
+            .blog-article-container .blog-back-links a { padding: 8px 16px; font-size: 13px; min-width: 100px; }
+            .blog-callout, .blog-callout-yellow { padding: 14px 16px; margin: 18px 0; }
+            .blog-article-container details { padding: 12px 14px; }
+            .blog-article-container details summary { font-size: 15px; }
+            .blog-article-container details p { font-size: 14px; }
+
+            #backToTop { width: 48px; height: 48px; font-size: 24px; bottom: 100px; right: 15px; }
+
+            .floating-container { bottom: 15px; left: 10px; gap: 5px; }
+            .floating-main-btn { padding: 10px 16px 10px 20px; font-size: 13px; border-radius: 30px 0 0 30px; }
+            .floating-main-btn .btn-arrow { font-size: 11px; }
+            .floating-item { padding: 8px 12px; font-size: 12px; gap: 5px; border-radius: 30px; }
+            .floating-item .item-icon { font-size: 15px; }
+            .floating-item .item-text { font-size: 12px; }
+            .call-item { border-radius: 30px 0 0 30px; }
+            .call-sub-item { padding: 6px 12px; font-size: 11px; }
+            .eitaa-item { border-radius: 0 30px 30px 0; }
+        }
+
+        @media (max-width: 480px) {
+            .blog-article-container { padding: 16px 12px 28px; margin: 8px auto 30px; border-radius: 12px; }
+            .blog-article-container h1 { font-size: 20px; }
+            .blog-article-container h2 { font-size: 18px; }
+            .blog-article-container h3 { font-size: 16px; }
+            .blog-article-container p { font-size: 14px; }
+            .blog-article-container ul, .blog-article-container ol { font-size: 14px; padding-right: 16px; }
+            .blog-article-container .blog-back-links a { padding: 6px 12px; font-size: 12px; min-width: 80px; }
+
+            #backToTop { width: 42px; height: 42px; font-size: 20px; bottom: 90px; right: 10px; }
+
+            .floating-container { bottom: 10px; left: 6px; gap: 4px; }
+            .floating-main-btn { padding: 8px 12px 8px 16px; font-size: 11px; border-radius: 25px 0 0 25px; }
+            .floating-main-btn .btn-arrow { font-size: 9px; }
+            .floating-item { padding: 6px 10px; font-size: 10px; gap: 4px; border-radius: 25px; }
+            .floating-item .item-icon { font-size: 13px; }
+            .floating-item .item-text { font-size: 10px; }
+            .call-item { border-radius: 25px 0 0 25px; }
+            .call-sub-item { padding: 4px 10px; font-size: 10px; }
+            .eitaa-item { border-radius: 0 25px 25px 0; }
         }
     </style>
 </head>
 <body>
 
-<header>
-    <div class="container">
-        <a href="../index.html" class="logo"><img src="../images/logo.png" alt="لوگو"></a>
-        <nav class="navbar">
-            <ul>
-                <li><a href="../index.html">صفحه اصلی</a></li>
-                <li><a href="../services.html">خدمات مسکونی</a></li>
-                <li><a href="../commercial-services.html" class="active">خدمات تجاری</a></li>
-                <li><a href="../about.html">درباره ما</a></li>
-                <li><a href="../contact.html">تماس</a></li>
-            </ul>
-        </nav>
-        <div class="header-buttons">
-            <a href="tel:09120705746" class="call-btn">📞 09120705746</a>
-            <div class="mobile-menu">☰</div>
-        </div>
-    </div>
-</header>
+<!-- ===== محتوای مقاله ===== -->
+<div class="blog-article-container">
 
-<div class="service-detail">
-    <div class="text">
-        <h1>🛍️ سمپاشی مراکز خرید</h1>
-        <p>کنترل تخصصی آفات در مراکز خرید، پاساژها و فروشگاه‌های بزرگ با رعایت کامل استانداردهای بهداشتی.</p>
-        <p><strong>روش کنترل:</strong> استفاده از سموم استاندارد و روش‌های نوین با تضمین کیفیت و ماندگاری بالا.</p>
-        <p><strong>مدت زمان اثرگذاری:</strong> نتایج سریع و ماندگار تا ۶ ماه.</p>
-        <div class="back-links">
-            <a href="../commercial-services.html" class="back-to-list">🔙 بازگشت به لیست تجاری</a>
-            <a href="../index.html" class="back-to-home">🏠 بازگشت به صفحه اصلی</a>
-        </div>
-        <div class="contact-float">
-            <a href="tel:09120705746">📞 تماس فوری</a>
-            <a href="https://wa.me/989120705746" target="_blank">💬 واتساپ</a>
-        </div>
+    <h1>راهنمای جامع و تخصصی سمپاشی مراکز خرید، مجتمع‌های تجاری و پاساژها | تضمین بهداشت و اعتبار در محیط‌های تجاری</h1>
+    <div class="blog-meta">
+        <span>📅 آخرین به‌روزرسانی: ۲۷ شهریور ۱۴۰۴</span> &nbsp;|&nbsp; <span>⏱ زمان مطالعه: ۱۸ دقیقه</span>
     </div>
-    <div class="gif">
-        <img src="../images/commercial/mall.jpg" alt="سمپاشی مراکز خرید">
+
+    <!-- ===== تصویر اصلی (mall.jpg) قبل از مقدمه ===== -->
+    <div class="blog-article-image">
+        <img src="../images/commercial/mall.jpg" alt="سمپاشی مراکز خرید، مجتمع‌های تجاری و پاساژها - کنترل تخصصی آفات">
+        <div class="caption"><strong>سمپاشی تخصصی مراکز خرید</strong> - تضمین بهداشت و اعتبار در محیط‌های تجاری</div>
+    </div>
+
+    <h2>مقدمه: مراکز خرید؛ قلب تپنده اقتصاد شهری و چالش آفات</h2>
+    <p>مراکز خرید، مجتمع‌های تجاری و پاساژها به عنوان یکی از پررفت‌وآمدترین اماکن عمومی، همواره در معرض چالش‌های متعددی قرار دارند که یکی از مهم‌ترین آنها، <strong>کنترل آفات</strong> است. این محیط‌های گسترده با صدها واحد تجاری، رستوران‌ها، کافی‌شاپ‌ها، انبارها، پارکینگ‌ها و فضاهای عمومی، شرایط ایده‌آلی را برای زندگی و تکثیر انواع آفات فراهم می‌کنند.</p>
+
+    <p>مراکز خرید به دلیل ویژگی‌های منحصر‌به‌فرد خود مانند <strong>فضای وسیع، تنوع کاربری، تردد بالای افراد و کالاها و وجود مواد غذایی</strong>، یکی از مستعدترین مکان‌ها برای رشد و تکثیر حشرات موذی و جوندگان هستند. یک مرکز خرید بزرگ با ده‌ها ورودی و خروجی، سیستم‌های تهویه گسترده، کانال‌های تأسیساتی و انبارهای متعدد، عملاً یک شهر کوچک است که آفات به راحتی در آن جابجا می‌شوند و پنهان می‌گردند.</p>
+
+    <p>وجود آفات در مراکز خرید نه‌تنها تهدیدی جدی برای سلامت مراجعه‌کنندگان و کارکنان است، بلکه می‌تواند به <strong>اعتبار و برند مجموعه</strong> لطمه‌های جبران‌ناپذیری وارد کند. یک ویدیو یا عکس از یک سوسک یا موش در یک مرکز خرید معروف، می‌تواند در کمتر از چند ساعت در شبکه‌های اجتماعی منتشر شود و اعتبار سال‌ها تلاش را نابود سازد. در این مقاله جامع از <strong>شرکت سمپاشی نانوفناوران بهداشت تهران</strong>، به بررسی کامل چالش‌های کنترل آفات در مراکز خرید، مهم‌ترین آفات، روش‌های تخصصی سمپاشی و نکات کلیدی برای حفظ بهداشت این اماکن می‌پردازیم.</p>
+
+    <h2>بخش اول: چرا سمپاشی مراکز خرید و مجتمع‌های تجاری حیاتی است؟</h2>
+
+    <h3>۱. حفظ سلامت مراجعه‌کنندگان و کارکنان</h3>
+    <p>مراکز خرید به دلیل تراکم بالای جمعیت و حضور افراد با گروه‌های سنی مختلف، به ویژه کودکان و سالمندان، یکی از حساسترین اماکن عمومی محسوب می‌شوند. آفات مانند سوسک‌ها، موش‌ها و مگس‌ها ناقل باکتری‌ها و ویروس‌های خطرناکی مانند سالمونلا، ای‌کولی و هپاتیت هستند که از طریق تماس مستقیم یا آلودگی سطوح و مواد غذایی قابل انتقال می‌باشند.</p>
+
+    <h3>۲. تأثیر بر اعتبار و برند مجموعه</h3>
+    <p>حضور آفات در یک مرکز خرید، به‌سرعت در میان مراجعه‌کنندگان و فروشندگان پخش می‌شود و اعتبار مجموعه را تحت تأثیر قرار می‌دهد. یک مرکز خرید آلوده، به عنوان محلی با استانداردهای پایین شناخته می‌شود و ممکن است مشتریان خود را از دست بدهد. جلب اعتماد مشتریان در فضای رقابتی امروز، نیازمند بالاترین سطح بهداشت و ایمنی است.</p>
+
+    <h3>۳. جلوگیری از خسارت‌های مالی سنگین</h3>
+    <p>آفات می‌توانند خسارت‌های مالی سنگینی به مراکز خرید وارد کنند. موش‌ها با جویدن سیم‌های برق و کابل‌ها، خطر آتش‌سوزی و اختلال در سیستم‌های الکترونیکی را افزایش می‌دهند. همچنین جوندگان با تخریب کالاها و بسته‌بندی‌ها در انبارها، خسارت‌های مستقیمی به فروشندگان وارد می‌کنند.</p>
+
+    <h3>۴. رعایت استانداردهای بهداشتی و جلوگیری از جریمه</h3>
+    <p>مراکز خرید موظف به رعایت استانداردهای سختگیرانه بهداشتی هستند. سازمان‌های نظارتی مانند وزارت بهداشت و شهرداری به طور دوره‌ای از این اماکن بازدید می‌کنند و در صورت مشاهده هرگونه آلودگی، ممکن است مجموعه را جریمه کرده و در موارد شدید، بخش‌هایی از آن را تعطیل کنند.</p>
+
+    <h2>بخش دوم: مهم‌ترین آفات در مراکز خرید و مجتمع‌های تجاری</h2>
+
+    <h3>۱. سوسک‌ها (آلمانی و آمریکایی)</h3>
+    <p>سوسک‌ها یکی از رایج‌ترین و خطرناک‌ترین آفات در مراکز خرید هستند. آنها ناقل باکتری‌های بیماری‌زا هستند و می‌توانند مواد غذایی و سطوح را آلوده کنند. <strong>سوسک آلمانی</strong> در محیط‌های گرم و مرطوب مانند آشپزخانه‌ها، رستوران‌ها و کافی‌شاپ‌ها زندگی می‌کند و <strong>سوسک آمریکایی</strong> از طریق لوله‌های فاضلاب وارد ساختمان می‌شود و معمولاً در زیرزمین‌ها و تاسیسات یافت می‌شود.</p>
+
+    <h3>۲. موش‌ها و جوندگان</h3>
+    <p>موش‌ها در مراکز خرید، علاوه بر انتشار بیماری‌ها، تجهیزات الکترونیکی، کابل‌های برق و بسته‌بندی‌های کالاها را تخریب می‌کنند. آنها در انبارها، پارکینگ‌ها، موتورخانه‌ها و فضاهای پشتی لانه‌سازی می‌کنند. جوندگان می‌توانند از طریق درب‌های بارگیری، شکاف‌های دیوار و کانال‌های تأسیساتی وارد مجموعه شوند.</p>
+
+    <h3>۳. مگس‌ها</h3>
+    <p>مگس‌ها به ویژه در رستوران‌ها، فودکورت‌ها و نزدیکی سطل‌های زباله تجمع می‌کنند و ناقل بسیاری از بیماری‌های گوارشی هستند. فودکورت‌ها با تجمع مواد غذایی و تردد بالا، یکی از نقاط حساس در مراکز خرید محسوب می‌شوند.</p>
+
+    <h3>۴. کبوترها و پرندگان</h3>
+    <p>کبوترها یکی از معضلات جدی در نمای خارجی، بالکن‌ها و سقف‌های مراکز خرید هستند. فضولات آنها علاوه بر ظاهر ناخوشایند، اسیدی است و به سازه‌ها آسیب می‌رساند و همچنین ناقل بیماری‌های تنفسی است.</p>
+
+    <h3>۵. مورچه‌ها</h3>
+    <p>مورچه‌ها به دلیل جستجوی غذا، به راحتی وارد فودکورت‌ها، کافی‌شاپ‌ها و انبارهای مواد غذایی می‌شوند و می‌توانند مواد غذایی را آلوده کنند.</p>
+
+    <h3>۶. آفات انباری</h3>
+    <p>در انبارهای مراکز خرید، آفات انباری مانند شپشک‌ها، کنه‌ها و شب‌پره‌های انباری می‌توانند به کالاها و بسته‌بندی‌ها خسارت وارد کنند.</p>
+
+    <h2>بخش سوم: چالش‌های خاص سمپاشی مراکز خرید</h2>
+
+    <h3>۱. تنوع بالای فضاها و کاربری‌ها</h3>
+    <p>مراکز خرید دارای فضاهای متنوعی مانند واحدهای تجاری، رستوران‌ها و کافی‌شاپ‌ها، فودکورت، انبارها، پارکینگ، فضاهای اداری، سرویس‌های بهداشتی و تاسیسات هستند که هر کدام نیاز به روش‌های کنترل خاص خود دارند.</p>
+
+    <h3>۲. تعدد مالکان و فروشندگان</h3>
+    <p>یکی از بزرگ‌ترین چالش‌های مراکز خرید، هماهنگی بین مدیریت مجموعه و صدها واحد تجاری است. یک واحد آلوده می‌تواند به‌سرعت آفات را به کل مجموعه منتقل کند. بنابراین، <strong>کنترل آفات باید به صورت یکپارچه و با هماهنگی کامل مدیریت مرکز و تمام فروشندگان انجام شود</strong>.</p>
+
+    <h3>۳. عدم تعطیلی کامل مجموعه</h3>
+    <p>مراکز خرید معمولاً در تمام روزهای سال فعال هستند و نمی‌توانند برای سمپاشی تعطیل شوند. بنابراین سمپاشی باید در ساعات کم‌ترافیک (معمولاً پس از ساعات کاری یا در روزهای تعطیل) و با کمترین مزاحمت برای کسب‌وکارها انجام شود.</p>
+
+    <h3>۴. دسترسی به نقاط صعب‌الوصول</h3>
+    <p>در مراکز خرید، کانال‌های تأسیساتی، سقف‌های کاذب، پشت تابلوهای تبلیغاتی و انبارهای بزرگ، نقاطی هستند که معمولاً به سختی قابل دسترس هستند و می‌توانند محل مناسبی برای زندگی و تکثیر آفات باشند.</p>
+
+    <h3>۵. رعایت حریم خصوصی و حفظ وجهه مجموعه</h3>
+    <p>سمپاشی در مراکز خرید باید با نهایت دقت و رعایت کامل نکات ایمنی انجام شود تا هیچگونه تأثیر منفی بر تجربه مشتریان نداشته باشد و اعتبار مجموعه حفظ شود.</p>
+
+    <h2>بخش چهارم: روش‌های تخصصی سمپاشی مراکز خرید</h2>
+
+    <h3>مرحله ۱: بازدید و ارزیابی اولیه</h3>
+    <p>کارشناسان ما با بررسی کامل مرکز خرید، نقاط حساس، نوع آفات، میزان آلودگی و مسیرهای ورود را شناسایی می‌کنند. این بازرسی شامل موارد زیر است:</p>
+    <ul>
+        <li><strong>واحدهای تجاری:</strong> بررسی کمدها، انبارها و نقاط تاریک</li>
+        <li><strong>فودکورت و رستوران‌ها:</strong> بررسی آشپزخانه‌ها، انبارها، کابینت‌ها و نقاط مرطوب</li>
+        <li><strong>انبارها و پارکینگ:</strong> بررسی نقاط ورود، کف، دیوارها و گوشه‌ها</li>
+        <li><strong>تاسیسات و موتورخانه:</strong> بررسی مجاری فاضلاب، کانال‌های تأسیساتی و نقاط مرطوب</li>
+        <li><strong>فضاهای عمومی و سرویس‌های بهداشتی:</strong> بررسی نقاط مرطوب و مجاری فاضلاب</li>
+        <li><strong>فضاهای باز و نمای خارجی:</strong> بررسی نقاط تجمع پرندگان و ورود آفات</li>
+    </ul>
+
+    <h3>مرحله ۲: برنامه‌ریزی و هماهنگی</h3>
+    <p>بر اساس نتایج بازرسی، یک برنامه جامع برای سمپاشی مرکز خرید تدوین می‌شود که شامل:</p>
+    <ul>
+        <li><strong>زمان‌بندی دقیق:</strong> سمپاشی در ساعات کم‌ترافیک (معمولاً پس از ساعات کاری یا در روزهای تعطیل)</li>
+        <li><strong>اطلاع‌رسانی به فروشندگان و کارکنان:</strong> اطلاع‌رسانی شفاف در مورد عملیات سمپاشی</li>
+        <li><strong>هماهنگی با مدیریت مجموعه:</strong> هماهنگی کامل با مدیر مرکز خرید برای اجرای بی‌نقص عملیات</li>
+        <li><strong>ایزوله‌سازی بخش‌های هدف:</strong> بخش‌های سمپاشی‌شده باید کاملاً از دسترس خارج شوند</li>
+    </ul>
+
+    <h3>مرحله ۳: انتخاب روش و سموم مناسب</h3>
+    <p>در مراکز خرید، انتخاب سموم و روش‌های سمپاشی با نهایت دقت انجام می‌شود:</p>
+    <ul>
+        <li><strong>در فضاهای عمومی و واحدهای تجاری:</strong> استفاده از سموم پیرتروئیدی با سمیت بسیار پایین برای انسان و بوی کم</li>
+        <li><strong>در فودکورت و رستوران‌ها:</strong> استفاده از طعمه‌های ژلی و غیرفرّار در نقاط دور از دسترس</li>
+        <li><strong>برای جوندگان:</strong> استفاده از سموم تاخیری و طعمه‌گذاری در باکس‌های قفل‌دار</li>
+        <li><strong>برای پرندگان:</strong> استفاده از روش‌های بازدارنده مانند توری‌های مخصوص، میخ‌های ضد کبوتر و ژل‌های دافع</li>
+    </ul>
+
+    <h3>مرحله ۴: اجرای سمپاشی</h3>
+    <p>عملیات سمپاشی با استفاده از تجهیزات پیشرفته و سموم استاندارد انجام می‌شود:</p>
+    <ul>
+        <li><strong>تزریق به شکاف‌ها و درزها:</strong> برای از بین بردن آفات پنهان</li>
+        <li><strong>طعمه‌گذاری:</strong> در نقاط استراتژیک برای کنترل سوسک‌ها و مورچه‌ها</li>
+        <li><strong>مه‌پاشی هدفمند:</strong> برای فضاهای بزرگ و انبارها</li>
+        <li><strong>نصب تله‌ها و موانع فیزیکی:</strong> برای جلوگیری از ورود مجدد آفات</li>
+    </ul>
+
+    <h3>مرحله ۵: تهویه و ایمن‌سازی</h3>
+    <p>پس از سمپاشی، محیط به مدت مناسب (حداقل ۴ تا ۶ ساعت) تهویه می‌شود و کارشناسان زمان بازگشت ایمن فروشندگان و کارکنان را اعلام می‌کنند.</p>
+
+    <h3>مرحله ۶: بازدید مجدد و پایش مستمر</h3>
+    <p>پس از اتمام عملیات، کارشناسان ما بازدید مجدد انجام می‌دهند تا از موفقیت سمپاشی اطمینان حاصل کنند و در صورت نیاز، اقدامات تکمیلی انجام دهند.</p>
+
+    <h2>بخش پنجم: اقدامات پیشگیرانه در مراکز خرید</h2>
+
+    <h3>۱. کنترل نقاط ورود</h3>
+    <ul>
+        <li>بستن تمام شکاف‌ها و درزهای دیوارها، کف و سقف</li>
+        <li>نصب توری روی پنجره‌ها و دریچه‌های تهویه</li>
+        <li>نصب درپوش‌های مناسب روی درب‌ها</li>
+        <li>نصب پرده‌های هوایی برای جلوگیری از ورود حشرات پروازی</li>
+        <li>کنترل ورود کالاها و بازرسی دقیق بارهای دریافتی</li>
+    </ul>
+
+    <h3>۲. مدیریت بهداشت محیط</h3>
+    <ul>
+        <li>نظافت روزانه فودکورت، رستوران‌ها و کافی‌شاپ‌ها</li>
+        <li>دفع اصولی زباله‌ها و تخلیه روزانه سطل‌ها</li>
+        <li>نظارت بر رعایت بهداشت توسط تمام واحدهای تجاری</li>
+        <li>جلوگیری از تجمع آب و رطوبت در فضاهای عمومی و تاسیسات</li>
+        <li>شستشوی منظم سرویس‌های بهداشتی</li>
+    </ul>
+
+    <h3>۳. مدیریت مواد غذایی و فودکورت</h3>
+    <ul>
+        <li>نگهداری مواد غذایی در ظروف درب‌دار و مقاوم</li>
+        <li>رعایت اصول بهداشتی در نگهداری و عرضه مواد غذایی</li>
+        <li>جمع‌آوری سریع باقیمانده غذاها</li>
+    </ul>
+
+    <h3>۴. آموزش فروشندگان و کارکنان</h3>
+    <p>فروشندگان و کارکنان مراکز خرید باید علائم حضور آفات را بشناسند، روش‌های گزارش‌دهی سریع را بدانند و نکات بهداشتی را رعایت کنند.</p>
+
+    <h3>۵. پایش مستمر</h3>
+    <ul>
+        <li>استقرار نظام گزارش‌دهی مناسب از فروشندگان و کارکنان</li>
+        <li>استفاده از تله‌های چسبنده و پایشگرها در نقاط استراتژیک</li>
+        <li>بازرسی دوره‌ای توسط کارشناسان</li>
+        <li>تهویه مناسب هوا در تمام نقاط مرکز خرید</li>
+    </ul>
+
+    <h2>بخش ششم: نقش فروشندگان و واحدهای تجاری در کنترل آفات</h2>
+
+    <h3>مسئولیت‌های فروشندگان</h3>
+    <p>هر واحد تجاری در یک مرکز خرید، مسئولیت حفظ بهداشت و پیشگیری از ورود آفات را بر عهده دارد. فروشندگان باید:</p>
+    <ul>
+        <li>انبارها و فضای پشتی واحد خود را تمیز نگه دارند</li>
+        <li>مواد غذایی و کالاهای حساس را در ظروف درب‌دار نگهداری کنند</li>
+        <li>زباله‌ها را به‌موقع و به‌صورت اصولی دفع کنند</li>
+        <li>هرگونه مشاهده آفات را بلافاصله به مدیریت مرکز گزارش دهند</li>
+        <li>در برنامه‌های سمپاشی هماهنگ با مدیریت مرکز همکاری کنند</li>
+    </ul>
+
+    <h3>هماهنگی بین‌واحدی</h3>
+    <p>مدیریت مرکز خرید باید با ایجاد یک سیستم هماهنگ، تمام واحدهای تجاری را در برنامه کنترل آفات مشارکت دهد. این هماهنگی شامل اطلاع‌رسانی به‌موقع، آموزش فروشندگان و نظارت بر رعایت اصول بهداشتی است.</p>
+
+    <h2>بخش هفتم: هزینه سمپاشی مراکز خرید</h2>
+    <p>هزینه سمپاشی مرکز خرید به عوامل زیر بستگی دارد. برای دریافت <strong>مشاوره رایگان</strong> و <strong>استعلام دقیق هزینه</strong>، با کارشناسان ما تماس بگیرید:</p>
+
+    <table>
+        <thead>
+            <tr><th>عامل</th><th>تأثیر بر هزینه</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>مساحت مجموعه</strong></td><td>هرچه متراژ بزرگ‌تر باشد، هزینه بیشتر است</td></tr>
+            <tr><td><strong>تعداد واحدهای تجاری</strong></td><td>واحدهای بیشتر نیاز به عملیات گسترده‌تری دارند</td></tr>
+            <tr><td><strong>شدت آلودگی</strong></td><td>آلودگی شدید نیاز به عملیات بیشتر و زمان‌برتری دارد</td></tr>
+            <tr><td><strong>نوع آفات</strong></td><td>برخی آفات نیاز به روش‌های خاص و هزینه بیشتری دارند</td></tr>
+            <tr><td><strong>نوع روش سمپاشی</strong></td><td>طعمه‌گذاری، مه‌پاشی یا ترکیبی</td></tr>
+        </tbody>
+    </table>
+
+    <h2>بخش هشتم: سوالات متداول درباره سمپاشی مراکز خرید</h2>
+
+    <details>
+        <summary><strong>چند بار در سال باید مرکز خرید سمپاشی شود؟</strong></summary>
+        <p>توصیه می‌شود مراکز خرید حداقل سالی چهار بار (هر فصل یک بار) سمپاشی شوند. مجموعه‌های دارای فودکورت و رستوران‌های متعدد ممکن است نیاز به سمپاشی ماهانه داشته باشند.</p>
+    </details>
+
+    <details>
+        <summary><strong>آیا سمپاشی مرکز خرید برای مراجعه‌کنندگان و فروشندگان خطرناک است؟</strong></summary>
+        <p>خیر، سموم استفاده‌شده توسط شرکت نانوفناوران با رعایت کامل استانداردهای بهداشتی انتخاب می‌شوند و برای انسان بی‌خطر هستند. در هنگام سمپاشی، بخش‌های هدف ایزوله می‌شوند و پس از تهویه کامل، محیط برای حضور افراد ایمن می‌گردد.</p>
+    </details>
+
+    <details>
+        <summary><strong>چه مدت بعد از سمپاشی مرکز خرید برای حضور افراد ایمن است؟</strong></summary>
+        <p>بسته به نوع سموم استفاده‌شده، معمولاً ۴ تا ۶ ساعت پس از سمپاشی، محیط برای حضور افراد ایمن است. کارشناسان ما زمان دقیق را به شما اعلام می‌کنند.</p>
+    </details>
+
+    <details>
+        <summary><strong>آیا سمپاشی مرکز خرید در زمان فعالیت فروشگاه‌ها امکان‌پذیر است؟</strong></summary>
+        <p>سمپاشی مرکز خرید معمولاً در زمان‌های کم‌ترافیک (پس از ساعات کاری یا در روزهای تعطیل) انجام می‌شود تا کمترین مزاحمت برای کسب‌وکارها ایجاد شود.</p>
+    </details>
+
+    <details>
+        <summary><strong>چه کسی مسئول کنترل آفات در مرکز خرید است؟</strong></summary>
+        <p>مدیریت مرکز خرید مسئولیت کلی کنترل آفات را بر عهده دارد، اما هر واحد تجاری نیز مسئول حفظ بهداشت و پیشگیری از ورود آفات در فضای خود است.</p>
+    </details>
+
+    <h2>نتیجه‌گیری</h2>
+    <p>مراکز خرید، مجتمع‌های تجاری و پاساژها به عنوان قلب تپنده اقتصاد شهری، نیازمند بالاترین سطح بهداشت و ایمنی هستند. کنترل آفات در این محیط‌ها، با پیشگیری از بیماری‌ها، افزایش رضایت مراجعه‌کنندگان و حفظ اعتبار مجموعه، به بهبود کیفیت خدمات تجاری کمک می‌کند.</p>
+
+    <p><strong>شرکت سمپاشی نانوفناوران بهداشت تهران</strong> با بیش از یک دهه تجربه در زمینه سمپاشی مراکز خرید، مجتمع‌های تجاری و پاساژها، آماده ارائه خدمات تخصصی و تضمینی به شماست. تیم کارشناسان ما با شناسایی دقیق نوع آفات، استفاده از سموم استاندارد و ایمن، و رعایت کامل نکات ایمنی، محیطی امن، بهداشتی و عاری از آفات را برای مجموعه تجاری شما به ارمغان می‌آورند.</p>
+
+    <p style="font-size:20px; font-weight:700; text-align:center; color:#0B6FB8;">🚀 همین حالا اقدام کنید:</p>
+    <div style="text-align:center; margin:20px 0;">
+        <p>📞 <strong>تماس فوری:</strong> <a href="tel:09120705746" style="font-size:20px; color:#11A64A; text-decoration:none;">۰۹۱۲۰۷۰۵۷۴۶</a></p>
+        <p>💬 <strong>درخواست مشاوره رایگان:</strong> از طریق <a href="https://wa.me/989120705746" target="_blank" style="color:#25D366; text-decoration:none;">واتساپ</a> یا <a href="https://eitaa.com/nanofannavaran_ir" target="_blank" style="color:#e67e22; text-decoration:none;">ایتا</a></p>
+        <p>🔗 <strong>مشاهده سایر خدمات:</strong> <a href="../services.html" style="color:#0B6FB8; text-decoration:none;">کنترل آفات مسکونی</a></p>
+    </div>
+
+    <div class="blog-back-links">
+        <a href="../index.html" class="btn-home">🏠 بازگشت به صفحه اصلی</a>
+        <a href="../services.html" class="btn-services">🔙 بازگشت به لیست خدمات مسکونی</a>
+        <a href="../contact.html" class="btn-contact">📞 تماس با ما</a>
+    </div>
+
+</div>
+
+<!-- ===== دکمه اسکرول به بالا ===== -->
+<button id="backToTop" title="برو به بالا">↑</button>
+
+<!-- ===== منوی شناور ===== -->
+<div class="floating-container">
+    <button class="floating-main-btn" id="floatingToggle">
+        <span class="btn-arrow">▶</span>
+        <span class="btn-text">📞 مشاوره رایگان</span>
+    </button>
+    <div class="floating-menu" id="floatingMenu">
+        <div class="call-wrapper">
+            <div class="floating-item call-item" id="callToggle">
+                <span class="item-icon">📞</span>
+                <span class="item-text">تماس سریع</span>
+                <span class="arrow">▲</span>
+            </div>
+            <div class="call-submenu" id="callSubmenu">
+                <a href="tel:09120705746" class="floating-item call-sub-item"><span class="item-icon">📞</span><span class="item-text">شماره ۱</span></a>
+                <a href="tel:09197173454" class="floating-item call-sub-item"><span class="item-icon">📞</span><span class="item-text">شماره ۲</span></a>
+            </div>
+        </div>
+        <a href="https://wa.me/989120705746?text=%D8%A8%D9%87%20%D8%B3%D8%A7%DB%8C%D8%AA%20%D8%B4%D8%B1%DA%A9%D8%AA%20%D8%B3%D9%85%D9%BE%D8%A7%D8%B4%DB%8C%20%D9%86%D8%A7%D9%86%D9%88%D9%81%D9%86%D8%A7%D9%88%D8%B1%D8%A7%D9%86%20%D8%AE%D9%88%D8%B4%20%D8%A2%D9%85%D8%AF%DB%8C%D8%AF" target="_blank" class="floating-item whatsapp-item"><span class="item-icon">💬</span><span class="item-text">واتساپ</span></a>
+        <a href="https://eitaa.com/nanofannavaran_ir" target="_blank" class="floating-item eitaa-item"><span class="item-icon">✈️</span><span class="item-text">ایتا</span></a>
     </div>
 </div>
 
-<footer class="site-footer">
-    <div class="container">
-        <div class="footer-grid">
-            <div class="footer-box"><h3>نانوفناوران</h3><p>ارائه‌دهنده خدمات تخصصی کنترل آفات در تهران</p></div>
-            <div class="footer-box"><h3>اطلاعات تماس</h3><p>📱 09120705746</p><p>☎️ 22048278</p></div>
-        </div>
-        <hr><p class="copyright">© تمامی حقوق محفوظ است</p>
-    </div>
-</footer>
+<!-- ===== جاوااسکریپت ===== -->
+<script>
+    // ===== دکمه اسکرول به بالا =====
+    var backToTopBtn = document.getElementById('backToTop');
 
-<script src="../script.js"></script>
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
+    });
+
+    backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // ===== منوی شناور =====
+    var toggleBtn = document.getElementById('floatingToggle');
+    var menu = document.getElementById('floatingMenu');
+    var arrow = toggleBtn.querySelector('.btn-arrow');
+
+    toggleBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        this.classList.toggle('active');
+        menu.classList.toggle('open');
+        if (arrow) arrow.classList.toggle('open');
+    });
+
+    // ===== زیرمنوی تماس =====
+    var callToggle = document.getElementById('callToggle');
+    var callSubmenu = document.getElementById('callSubmenu');
+
+    callToggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        this.classList.toggle('open');
+        callSubmenu.classList.toggle('open');
+        var arrowIcon = this.querySelector('.arrow');
+        if (arrowIcon) {
+            arrowIcon.textContent = callSubmenu.classList.contains('open') ? '▼' : '▲';
+        }
+    });
+
+    // ===== بستن منو با کلیک بیرون =====
+    document.addEventListener('click', function() {
+        if (toggleBtn) toggleBtn.classList.remove('active');
+        if (menu) menu.classList.remove('open');
+        if (arrow) arrow.classList.remove('open');
+        if (callToggle) callToggle.classList.remove('open');
+        if (callSubmenu) callSubmenu.classList.remove('open');
+        var arrowIcon = callToggle ? callToggle.querySelector('.arrow') : null;
+        if (arrowIcon) arrowIcon.textContent = '▲';
+    });
+
+    if (menu) {
+        menu.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    }
+
+    console.log('✅ مقاله سمپاشی مراکز خرید بارگذاری شد!');
+</script>
+
 </body>
 </html>
