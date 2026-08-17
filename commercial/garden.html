@@ -3,129 +3,639 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سمپاشی باغچه | نانوفناوران</title>
-    <link rel="stylesheet" href="../style.css">
+    <title>راهنمای جامع و تخصصی سمپاشی باغچه و فضای سبز | از تشخیص آفات تا ریشه‌کنی اصولی</title>
+    <meta name="description" content="مقاله جامع سمپاشی باغچه و فضای سبز: شناسایی آفات، زمان‌بندی سمپاشی، روش‌های تخصصی و طبیعی، نکات ایمنی و هزینه‌ها">
+    <meta name="keywords" content="سمپاشی باغچه, کنترل آفات فضای سبز, سمپاشی درختان میوه, شته, کنه, قارچ, نانوفناوران">
+    <link rel="canonical" href="https://nanofannavaran.ir/garden.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
-        .service-detail {
-            max-width: 1100px;
-            margin: 100px auto 50px;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
+        /* ===== استایل‌های اختصاصی مقاله ===== */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Vazirmatn', 'IRANSans', 'Tahoma', sans-serif;
+            background: #f8fbfd; color: #222; line-height: 1.9;
+            direction: rtl; padding: 20px 15px; min-height: 100vh;
+        }
+
+        .blog-article-container {
+            max-width: 1100px; margin: 20px auto 60px; background: #fff;
+            border-radius: 24px; box-shadow: 0 10px 40px rgba(0,0,0,.08);
+            padding: 30px 25px 50px; line-height: 1.8; color: #2c3e50;
+            direction: rtl; width: 100%;
+        }
+        .blog-article-container h1 { font-size: 32px; color: #0B6FB8; margin-bottom: 20px; line-height: 1.5; }
+        .blog-article-container .blog-meta { color: #888; font-size: 14px; border-bottom: 1px solid #eee; padding-bottom: 18px; margin-bottom: 25px; }
+        .blog-article-container h2 { font-size: 26px; color: #1F2937; margin: 35px 0 12px; border-right: 5px solid #0B6FB8; padding-right: 15px; }
+        .blog-article-container h3 { font-size: 21px; color: #0B6FB8; margin: 25px 0 10px; }
+        .blog-article-container h4 { font-size: 18px; color: #1F2937; margin: 20px 0 8px; }
+        .blog-article-container p { line-height: 2.2; color: #444; font-size: 16px; margin-bottom: 16px; text-align: justify; }
+        .blog-article-container ul, .blog-article-container ol { line-height: 2.2; color: #444; font-size: 16px; padding-right: 25px; margin-bottom: 18px; }
+        .blog-article-container ul li, .blog-article-container ol li { margin-bottom: 6px; }
+        .blog-article-container table { width: 100%; border-collapse: collapse; margin: 18px 0 25px; font-size: 15px; overflow-x: auto; display: block; }
+        .blog-article-container table th { background: #0B6FB8; color: #fff; padding: 10px 12px; text-align: right; }
+        .blog-article-container table td { border: 1px solid #ddd; padding: 8px 12px; background: #fafafa; }
+        .blog-article-container table tr:nth-child(even) td { background: #f5f8fc; }
+        .blog-article-image { margin: 25px 0; text-align: center; }
+        .blog-article-image img { width: 100%; max-width: 700px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,.15); height: auto; }
+        .blog-article-image .caption { font-size: 14px; color: #888; margin-top: 10px; }
+        .blog-article-image .caption strong { color: #0B6FB8; }
+        .blog-article-container .blog-back-links { margin: 35px 0 15px; display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+        .blog-article-container .blog-back-links a { display: inline-block; padding: 10px 22px; border-radius: 50px; text-decoration: none; font-weight: 700; transition: .3s; font-size: 15px; text-align: center; flex: 1 1 auto; min-width: 140px; }
+        .blog-article-container .blog-back-links .btn-home { background: #0B6FB8; color: #fff; }
+        .blog-article-container .blog-back-links .btn-home:hover { background: #11A64A; }
+        .blog-article-container .blog-back-links .btn-services { background: #11A64A; color: #fff; }
+        .blog-article-container .blog-back-links .btn-services:hover { background: #0B6FB8; }
+        .blog-article-container .blog-back-links .btn-contact { background: #1F2937; color: #fff; }
+        .blog-article-container .blog-back-links .btn-contact:hover { background: #0B6FB8; }
+        .blog-callout { background: #f0f7ff; border-right: 5px solid #0B6FB8; padding: 18px 22px; border-radius: 12px; margin: 22px 0; }
+        .blog-callout strong { color: #0B6FB8; }
+        .blog-callout-yellow { background: #fff8e1; border-right: 5px solid #ffc107; padding: 18px 22px; border-radius: 12px; margin: 22px 0; }
+        .blog-article-container details { background: #f8fbfd; padding: 14px 18px; border-radius: 12px; margin-bottom: 14px; border: 1px solid #e9ecef; }
+        .blog-article-container details summary { font-weight: 700; color: #0B6FB8; cursor: pointer; font-size: 16px; }
+        .blog-article-container details p { margin-top: 10px; padding-right: 8px; font-size: 15px; }
+
+        /* ===== دکمه اسکرول به بالا ===== */
+        #backToTop {
+            position: fixed;
+            right: 20px;
+            bottom: 80px;
+            width: 55px;
+            height: 55px;
+            border: none;
+            border-radius: 50%;
+            background: #0B6FB8;
+            color: #fff;
+            font-size: 28px;
+            font-weight: 700;
+            cursor: pointer;
+            display: none;
+            z-index: 9998;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            line-height: 1;
+            text-align: center;
+            padding: 0;
+            font-family: 'Vazirmatn', sans-serif;
+        }
+        #backToTop:hover {
+            background: #11A64A;
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+        }
+        #backToTop::before {
+            content: "↑";
+            display: block;
+            font-size: 30px;
+            font-weight: 900;
+            line-height: 55px;
+        }
+        #backToTop.show {
+            display: block !important;
+        }
+
+        /* ===== منوی شناور ===== */
+        .floating-container {
+            position: fixed;
+            bottom: 30px;
+            left: 20px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: row;
             align-items: center;
+            font-family: 'Vazirmatn', sans-serif;
+            direction: ltr;
         }
-        .service-detail .text h1 {
-            font-size: 32px;
-            color: var(--primary);
-            margin-bottom: 20px;
-        }
-        .service-detail .text p {
-            line-height: 2.2;
-            color: #555;
+        .floating-main-btn {
+            background: linear-gradient(135deg, #25D366 0%, #1da851 100%);
+            color: #fff;
+            border: none;
+            border-radius: 50px 0 0 50px;
+            padding: 16px 24px 16px 28px;
             font-size: 16px;
+            font-weight: 800;
+            cursor: pointer;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            white-space: nowrap;
+            animation: pulse 2.5s infinite;
+            transition: all 0.3s ease;
         }
-        .service-detail .gif img {
-            width: 100%;
-            max-height: 400px;
-            object-fit: contain;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,.15);
+        .floating-main-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(37, 211, 102, 0.8);
         }
-        .back-link {
-            display: inline-block;
-            margin-top: 30px;
-            background: var(--secondary);
-            color: #fff;
-            padding: 12px 28px;
+        .floating-main-btn .btn-arrow {
+            font-size: 14px;
+            transition: transform 0.4s ease;
+        }
+        .floating-main-btn.active .btn-arrow {
+            transform: rotate(90deg);
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6); }
+            50% { box-shadow: 0 8px 50px rgba(37, 211, 102, 0.9), 0 0 80px rgba(37, 211, 102, 0.2); }
+            100% { box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6); }
+        }
+
+        .floating-menu {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(-20px) scale(0.95);
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        .floating-menu.open {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0) scale(1);
+        }
+
+        .floating-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 18px;
             border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            transition: .3s;
-        }
-        .back-link:hover {
-            background: var(--primary);
-        }
-        .contact-float {
-            margin-top: 20px;
-        }
-        .contact-float a {
-            display: inline-block;
-            background: var(--primary);
             color: #fff;
-            padding: 12px 28px;
-            border-radius: 50px;
-            text-decoration: none;
             font-weight: 700;
-            margin-left: 10px;
-            transition: .3s;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+            white-space: nowrap;
+            border: 2px solid rgba(255, 255, 255, 0.15);
+            text-decoration: none;
         }
-        .contact-float a:hover {
-            background: var(--secondary);
+        .floating-item:hover {
+            transform: scale(1.08);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
         }
+        .floating-item .item-icon { font-size: 18px; }
+        .floating-item .item-text { font-size: 14px; }
+
+        .call-item {
+            background: linear-gradient(135deg, #25D366, #1da851);
+            border-radius: 50px 0 0 50px;
+            cursor: pointer;
+            position: relative;
+        }
+        .call-item .arrow {
+            font-size: 12px;
+            margin-right: 5px;
+            transition: transform 0.3s ease;
+        }
+        .call-item.open .arrow {
+            transform: rotate(180deg);
+        }
+
+        .call-submenu {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            opacity: 0;
+            visibility: hidden;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            margin-right: 5px;
+        }
+        .call-submenu.open {
+            opacity: 1;
+            visibility: visible;
+            max-height: 200px;
+        }
+
+        .call-sub-item {
+            background: linear-gradient(135deg, #25D366, #1da851);
+            border-radius: 50px;
+            padding: 8px 16px;
+            font-size: 13px;
+            gap: 6px;
+        }
+        .call-sub-item:hover { transform: scale(1.05); }
+
+        .whatsapp-item {
+            background: linear-gradient(135deg, #25D366, #1da851);
+            border-radius: 50px;
+        }
+        .eitaa-item {
+            background: linear-gradient(135deg, #f97316, #ea580c);
+            border-radius: 0 50px 50px 0;
+        }
+
         @media (max-width: 768px) {
-            .service-detail {
-                grid-template-columns: 1fr;
-                text-align: center;
-                margin-top: 80px;
-            }
-            .service-detail .text h1 {
-                font-size: 26px;
-            }
-            .service-detail .gif img {
-                max-height: 250px;
-            }
+            .blog-article-container { padding: 20px 16px 35px; margin: 10px auto 40px; border-radius: 16px; }
+            .blog-article-container h1 { font-size: 24px; }
+            .blog-article-container h2 { font-size: 20px; }
+            .blog-article-container h3 { font-size: 18px; }
+            .blog-article-container p { font-size: 15px; }
+            .blog-article-container ul, .blog-article-container ol { font-size: 15px; padding-right: 20px; }
+            .blog-article-container table { font-size: 13px; }
+            .blog-article-container table th, .blog-article-container table td { padding: 6px 10px; }
+            .blog-article-image img { max-width: 100%; border-radius: 14px; }
+            .blog-article-container .blog-back-links a { padding: 8px 16px; font-size: 13px; min-width: 100px; }
+            .blog-callout, .blog-callout-yellow { padding: 14px 16px; margin: 18px 0; }
+            .blog-article-container details { padding: 12px 14px; }
+            .blog-article-container details summary { font-size: 15px; }
+            .blog-article-container details p { font-size: 14px; }
+
+            #backToTop { width: 48px; height: 48px; font-size: 24px; bottom: 100px; right: 15px; }
+
+            .floating-container { bottom: 15px; left: 10px; gap: 5px; }
+            .floating-main-btn { padding: 10px 16px 10px 20px; font-size: 13px; border-radius: 30px 0 0 30px; }
+            .floating-main-btn .btn-arrow { font-size: 11px; }
+            .floating-item { padding: 8px 12px; font-size: 12px; gap: 5px; border-radius: 30px; }
+            .floating-item .item-icon { font-size: 15px; }
+            .floating-item .item-text { font-size: 12px; }
+            .call-item { border-radius: 30px 0 0 30px; }
+            .call-sub-item { padding: 6px 12px; font-size: 11px; }
+            .eitaa-item { border-radius: 0 30px 30px 0; }
+        }
+
+        @media (max-width: 480px) {
+            .blog-article-container { padding: 16px 12px 28px; margin: 8px auto 30px; border-radius: 12px; }
+            .blog-article-container h1 { font-size: 20px; }
+            .blog-article-container h2 { font-size: 18px; }
+            .blog-article-container h3 { font-size: 16px; }
+            .blog-article-container p { font-size: 14px; }
+            .blog-article-container ul, .blog-article-container ol { font-size: 14px; padding-right: 16px; }
+            .blog-article-container .blog-back-links a { padding: 6px 12px; font-size: 12px; min-width: 80px; }
+
+            #backToTop { width: 42px; height: 42px; font-size: 20px; bottom: 90px; right: 10px; }
+
+            .floating-container { bottom: 10px; left: 6px; gap: 4px; }
+            .floating-main-btn { padding: 8px 12px 8px 16px; font-size: 11px; border-radius: 25px 0 0 25px; }
+            .floating-main-btn .btn-arrow { font-size: 9px; }
+            .floating-item { padding: 6px 10px; font-size: 10px; gap: 4px; border-radius: 25px; }
+            .floating-item .item-icon { font-size: 13px; }
+            .floating-item .item-text { font-size: 10px; }
+            .call-item { border-radius: 25px 0 0 25px; }
+            .call-sub-item { padding: 4px 10px; font-size: 10px; }
+            .eitaa-item { border-radius: 0 25px 25px 0; }
         }
     </style>
 </head>
 <body>
 
-<header>
-    <div class="container">
-        <a href="../index.html" class="logo"><img src="../images/logo.png" alt="لوگو"></a>
-        <nav class="navbar">
-            <ul>
-                <li><a href="../index.html">صفحه اصلی</a></li>
-                <li><a href="../services.html">خدمات مسکونی</a></li>
-                <li><a href="../commercial-services.html" class="active">خدمات تجاری</a></li>
-                <li><a href="../about.html">درباره ما</a></li>
-                <li><a href="../contact.html">تماس</a></li>
-            </ul>
-        </nav>
-        <div class="header-buttons">
-            <a href="tel:09120705746" class="call-btn">📞 09120705746</a>
-            <div class="mobile-menu">☰</div>
-        </div>
-    </div>
-</header>
+<!-- ===== محتوای مقاله ===== -->
+<div class="blog-article-container">
 
-<div class="service-detail">
-    <div class="text">
-        <h1>🌿 سمپاشی باغچه</h1>
-        <p>کنترل تخصصی آفات باغچه‌ها، فضای سبز و محیط‌های باز با استفاده از سموم مجاز و روش‌های ایمن.</p>
-        <p><strong>روش کنترل:</strong> استفاده از سموم استاندارد و روش‌های نوین با تضمین کیفیت و ماندگاری بالا.</p>
-        <p><strong>مدت زمان اثرگذاری:</strong> نتایج سریع و ماندگار تا ۶ ماه.</p>
-        <a href="../commercial-services.html" class="back-link">🔙 بازگشت به لیست خدمات تجاری</a>
-        <div class="contact-float">
-            <a href="tel:09120705746">📞 تماس فوری</a>
-            <a href="https://wa.me/989120705746" target="_blank">💬 واتساپ</a>
-        </div>
+    <h1>راهنمای جامع و تخصصی سمپاشی باغچه و فضای سبز | از تشخیص آفات تا ریشه‌کنی اصولی</h1>
+    <div class="blog-meta">
+        <span>📅 آخرین به‌روزرسانی: ۲۵ شهریور ۱۴۰۴</span> &nbsp;|&nbsp; <span>⏱ زمان مطالعه: ۱۸ دقیقه</span>
     </div>
-    <div class="gif">
-        <img src="../images/commercial/garden.jpg" alt="سمپاشی باغچه">
+
+    <!-- ===== bg1: قبل از مقدمه ===== -->
+    <div class="blog-article-image">
+        <img src="../images/garden/bg1.jpg" alt="سمپاشی باغچه و فضای سبز - نمای کلی باغچه سرسبز">
+        <div class="caption"><strong>سمپاشی تخصصی باغچه و فضای سبز</strong> - حفظ سلامت و زیبایی گیاهان</div>
+    </div>
+
+    <h2>🌱 مقدمه: باغچه؛ بهشت سبز در معرض تهدید</h2>
+    <p>باغچه‌ها و فضاهای سبز، قلب تپنده هر خانه و محیط زندگی هستند. این فضاهای دل‌انگیز با گل‌های رنگارنگ، درختان میوه و چمن‌های سرسبز، نه‌تنها زیبایی محیط را دوچندان می‌کنند، بلکه آرامش و طراوت را به زندگی روزمره ما هدیه می‌دهند. اما این بهشت کوچک همواره در معرض تهدید جدی‌ای به نام <strong>آفات</strong> قرار دارد. حشرات موذی، قارچ‌ها، باکتری‌ها و علف‌های هرز می‌توانند در مدت کوتاهی، زحمت ماه‌ها باغبانی را به نابودی بکشند.</p>
+
+    <p>وجود آفات در باغچه نه‌تنها به گیاهان آسیب می‌رساند، بلکه می‌تواند سلامتی ساکنان را نیز به خطر بیندازد. سوسک‌ها، پشه‌ها و سایر حشرات ناقل بیماری‌های مختلفی هستند که باید آنها را از محیط زندگی دور نگه داشت. <strong>سمپاشی باغچه و فضای سبز یک کار تخصصی است</strong> که باید به کارشناسان این حوزه سپرده شود.</p>
+
+    <p>در این مقاله جامع از <strong>شرکت سمپاشی نانوفناوران بهداشت تهران</strong>، به بررسی کامل روش‌های تخصصی سمپاشی باغچه، شناسایی آفات رایج، زمان‌بندی مناسب سمپاشی و نکات کلیدی برای حفظ سلامت فضای سبز می‌پردازیم.</p>
+
+    <!-- ===== bg2: قبل از حفظ سلامت گیاهان ===== -->
+    <div class="blog-article-image">
+        <img src="../images/garden/bg2.jpg" alt="اهمیت سمپاشی باغچه - گیاهان سالم و شاداب">
+        <div class="caption"><strong>حفظ سلامت گیاهان</strong> - سمپاشی اصولی کلید شادابی باغچه</div>
+    </div>
+
+    <h2>📌 بخش اول: چرا سمپاشی باغچه و فضای سبز ضروری است؟</h2>
+
+    <h3>۱. حفظ سلامت گیاهان</h3>
+    <p>آفات با تغذیه از برگ‌ها، ساقه‌ها، ریشه‌ها و میوه‌های گیاهان، رشد و توسعه آنها را مختل می‌کنند. شته‌ها با مکیدن شیره گیاهی، باعث ضعف و پژمردگی می‌شوند و کرم‌های ریشه‌خوار با حمله به ریشه‌ها، مانع جذب آب و مواد مغذی می‌گردند. قارچ‌ها و باکتری‌ها نیز با ایجاد لکه‌های برگی، پوسیدگی و بیماری‌های مختلف، سلامت گیاهان را به خطر می‌اندازند.</p>
+
+    <h3>۲. افزایش کیفیت محصول</h3>
+    <p>در باغچه‌های میوه، سمپاشی اصولی به افزایش کیفیت و بازارپسندی محصولات کمک می‌کند. میوه‌های سالم و بدون لک، حاصل مراقبت به موقع و استفاده از سموم مناسب است. سمپاشی به موقع میوه‌ها را از گزند آفات و بیماری‌ها حفظ می‌کند.</p>
+
+    <h3>۳. پیشگیری از گسترش آفات</h3>
+    <p>آفات به راحتی می‌توانند از یک گیاه به گیاه دیگر منتقل شوند و در صورت عدم کنترل به موقع، ممکن است به از بین رفتن کامل باغچه منجر شوند. سمپاشی دوره‌ای، از گسترش آلودگی و شیوع بیماری‌ها در کل فضای سبز جلوگیری می‌کند.</p>
+
+    <h3>۴. حفظ زیبایی ظاهری</h3>
+    <p>یک باغچه آلوده به آفات، ظاهری ناخوشایند دارد. برگ‌های خورده شده، لکه‌های قارچی و حضور حشرات موذی، زیبایی فضای سبز را از بین می‌برند. سمپاشی منظم به حفظ شادابی و طراوت گیاهان کمک می‌کند.</p>
+
+    <h2>🐛 بخش دوم: مهم‌ترین آفات در باغچه و فضای سبز</h2>
+
+    <h3>۱. شته‌ها</h3>
+    <p>شته‌ها از رایج‌ترین و مخرب‌ترین آفات باغچه‌ها هستند. این حشرات ریز با مکیدن شیره گیاهی، باعث ضعف، زردی و پیچیدگی برگ‌ها می‌شوند. شته‌ها همچنین با ترشح مواد چسبنده، محیط را برای رشد قارچ‌ها فراهم می‌کنند.</p>
+
+    <!-- ===== bg3: بعد از شته‌ها ===== -->
+    <div class="blog-article-image">
+        <img src="../images/garden/bg3.jpg" alt="شته‌ها - آفات رایج باغچه">
+        <div class="caption"><strong>شته‌ها</strong> - یکی از مخرب‌ترین آفات باغچه‌ها</div>
+    </div>
+
+    <h3>۲. کنه‌های گیاهی</h3>
+    <p>کنه‌ها با تغذیه از شیره برگ‌ها، باعث ایجاد لکه‌های ریز زرد یا سفید روی سطح برگ می‌شوند. در صورت آلودگی شدید، برگ‌ها خشک شده و می‌ریزند. کنه‌ها معمولاً در هوای گرم و خشک فعالیت بیشتری دارند.</p>
+
+    <!-- ===== bg4: بعد از کنه‌های گیاهی ===== -->
+    <div class="blog-article-image">
+        <img src="../images/garden/bg4.jpg" alt="کنه‌های گیاهی - تهدید پنهان باغچه">
+        <div class="caption"><strong>کنه‌های گیاهی</strong> - تهدید پنهان در هوای گرم و خشک</div>
+    </div>
+
+    <h3>۳. کرم‌ها و لاروها</h3>
+    <p>کرم‌ها و لاروهای پروانه‌ها و شب‌پره‌ها، از برگ‌ها و میوه‌ها تغذیه می‌کنند و خسارت‌های زیادی به درختان میوه و گیاهان زینتی وارد می‌آورند. کرم خراط از جمله آفات چوب‌خوار است که با نفوذ به تنه درختان، آنها را از داخل تخریب می‌کند.</p>
+
+    <h3>۴. حلزون‌ها و لیسه‌ها</h3>
+    <p>حلزون‌ها و لیسه‌ها با تغذیه از برگ‌ها، ساقه‌ها و میوه‌های نرم، به ویژه در فصل بهار، خسارت‌های زیادی به باغچه‌ها وارد می‌کنند. آنها معمولاً شب‌ها فعال هستند و در روز در نقاط مرطوب پنهان می‌شوند.</p>
+
+    <h3>۵. قارچ‌ها و بیماری‌های قارچی</h3>
+    <p>بیماری‌های قارچی مانند لکه سیاه، سفیدک پودری، زنگ و پوسیدگی ریشه از شایع‌ترین مشکلات باغچه‌ها هستند. این بیماری‌ها با ایجاد لکه‌های روی برگ‌ها، ساقه‌ها و میوه‌ها، سلامت گیاهان را به خطر می‌اندازند و در صورت عدم کنترل، می‌توانند کل باغچه را نابود کنند.</p>
+
+    <!-- ===== bg5: بعد از قارچ‌ها و بیماری‌های قارچی ===== -->
+    <div class="blog-article-image">
+        <img src="../images/garden/bg5.jpg" alt="بیماری‌های قارچی باغچه">
+        <div class="caption"><strong>بیماری‌های قارچی</strong> - تهدید جدی برای سلامت گیاهان</div>
+    </div>
+
+    <h2>📅 بخش سوم: زمان‌بندی مناسب سمپاشی باغچه</h2>
+    <p>انتخاب زمان مناسب برای سمپاشی، تأثیر مستقیمی بر موفقیت آن دارد. برنامه سمپاشی باید بر اساس نوع گیاهان، آفات هدف و شرایط آب و هوایی تنظیم شود.</p>
+
+    <h3>🍂 ۱. سمپاشی زمستانه (اواخر زمستان)</h3>
+    <p><strong>مهم‌ترین سمپاشی در طول سال</strong>، سمپاشی زمستانه است. این سمپاشی با هدف کاهش حملات حشرات بعد از خواب زمستانه انجام می‌شود. بهترین زمان برای سمپاشی زمستانه، زمانی است که برجستگی‌های شکوفه روی شاخه‌ها تشکیل شده، اما هنوز نترکیده‌اند.</p>
+    <div class="blog-callout">
+        <p><strong>توصیه تخصصی:</strong> در این مرحله، از <strong>روغن ولک (روغن امولوسیون‌شونده)</strong> همراه با سموم حشره‌کش استفاده می‌شود. روغن ولک با ایجاد چسبندگی، از شسته شدن سموم در روزهای بارانی جلوگیری می‌کند. همچنین استفاده از سموم قارچ‌کش مانند <strong>بردوفیکس</strong> یک هفته قبل از سمپاشی زمستانه برای جلوگیری از بیماری‌های قارچی توصیه می‌شود.</p>
+    </div>
+
+    <h3>🌸 ۲. سمپاشی بهاره (بعد از ریزش شکوفه‌ها)</h3>
+    <p>زمانی که شکوفه‌ها گرده‌افشانی کرده و گلبرگ‌ها شروع به ریزش می‌کنند (حدود ۸۰ درصد ریزش)، زمان سمپاشی بهاره فرا می‌رسد. در این فصل، کرم‌های برگ‌خوار و شته‌ها مهم‌ترین آفات هستند.</p>
+    <div class="blog-callout">
+        <p><strong>توصیه تخصصی:</strong> برای این سمپاشی از حشره‌کش‌های کرم‌کش و شته‌کش مانند <strong>ایمیداکلوپراید (کنفیدور)</strong> به همراه دیازینون، دروسبان یا سایپرمترین استفاده می‌شود.</p>
+    </div>
+
+    <h3>☀️ ۳. سمپاشی تابستانه (زمان رشد میوه)</h3>
+    <p>در این دوره، آفات شته به اوج خود می‌رسند، کرم‌ها به میوه‌ها حمله می‌کنند و کنه‌ها نیز فعال می‌شوند. سمپاشی تابستانه زمانی انجام می‌شود که میوه‌ها در حال درشت شدن هستند (به اندازه نخود).</p>
+    <div class="blog-callout-yellow">
+        <p><strong>نکته ویژه:</strong> برای درختان میوه‌ای مانند <strong>گیلاس و آلبالو</strong> که به مگس مدیترانه‌ای حساس هستند، سمپاشی چهارم در زمان رنگ‌اندازی میوه توصیه می‌شود.</p>
+    </div>
+
+    <h3>⚠️ زمان‌های غیرمجاز برای سمپاشی</h3>
+    <ul>
+        <li>❌ در زمان گلدهی درختان (برای جلوگیری از آسیب به زنبورهای گرده‌افشان)</li>
+        <li>❌ در روزهای بسیار گرم (دمای بالای ۳۲ درجه)</li>
+        <li>❌ در دمای پایین (کمتر از ۴ درجه)</li>
+        <li>❌ در زمان بارندگی یا باد شدید</li>
+    </ul>
+
+    <h2>🧪 بخش چهارم: روش‌های تخصصی سمپاشی باغچه</h2>
+
+    <h3>۱. سموم تماسی</h3>
+    <p>سموم تماسی از طریق پوست وارد بدن آفات شده و آنها را از بین می‌برند. این سموم برای کنترل آفاتی مانند کنه، شپش و سوسک‌ها مؤثر هستند.</p>
+
+    <h3>۲. سموم سیستمیک (گوارشی)</h3>
+    <p>سموم سیستمیک وارد شیره گیاه شده و در کل گیاه حرکت می‌کنند. با این روش، اگر سم به قسمتی از گیاه وارد شود، در سایر بخش‌ها نیز آفات از بین می‌روند. این سموم برای کنترل آفات مکنده مانند شته‌ها و کنه‌ها بسیار مؤثر هستند.</p>
+
+    <h3>۳. سموم تنفسی (گازی)</h3>
+    <p>سموم تنفسی به صورت گاز درآمده و از طریق سیستم تنفسی آفات را از بین می‌برند. این روش برای فضاهای بسته و محیط‌های گلخانه‌ای مناسب است.</p>
+
+    <h3>۴. سموم قارچ‌کش</h3>
+    <p>این سموم برای کنترل بیماری‌های قارچی مانند لکه سیاه، سفیدک پودری و زنگ استفاده می‌شوند. سموم قارچ‌کش معمولاً در فصل بهار و قبل از میوه‌دهی درختان استفاده می‌شوند.</p>
+
+    <h3>۵. سموم خاموش</h3>
+    <p>سموم خاموش مانند نفت بی‌خطر، برای از بین بردن باکتری‌ها و قارچ‌ها استفاده می‌شوند. این سموم باید در دمای مناسب (بالای ۴ درجه) استفاده شوند تا به گیاهان آسیب نرسانند.</p>
+
+    <h3>۶. سموم همه‌کاره</h3>
+    <p>سموم همه‌کاره ترکیبی از چندین سم هستند و برای از بین بردن اکثر آفات و حشرات استفاده می‌شوند. با استفاده از این سموم، نیازی به شناسایی دقیق نوع آفت نیست و می‌توان طیف وسیعی از آفات را کنترل کرد.</p>
+
+    <h2>🌿 بخش پنجم: روش‌های طبیعی و ارگانیک کنترل آفات</h2>
+    <p>استفاده از روش‌های طبیعی برای کنترل آفات، نه‌تنها به حفظ محیط زیست کمک می‌کند، بلکه سلامت گیاهان و محصولات را نیز تضمین می‌نماید.</p>
+
+    <!-- ===== bg6: بعد از پایان پاراگراف اول بخش پنجم ===== -->
+    <div class="blog-article-image">
+        <img src="../images/garden/bg6.jpg" alt="روش‌های طبیعی کنترل آفات - کاشت گیاهان دافع آفات">
+        <div class="caption"><strong>روش‌های طبیعی و ارگانیک</strong> - راهکاری ایمن برای حفظ باغچه</div>
+    </div>
+
+    <h3>🌻 ۱. کاشت گیاهان دافع آفات</h3>
+    <p>برخی گیاهان با بوی تند خود، آفات را دور می‌کنند:</p>
+    <table>
+        <thead>
+            <tr><th>گیاه</th><th>آفات دفع‌شده</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>ریحان</strong></td><td>مگس سفید، پشه، مگس سرکه، شته‌ها</td></tr>
+            <tr><td><strong>نعناع</strong></td><td>مورچه‌ها، موش‌ها، کنه‌ها، سوسک‌ها</td></tr>
+            <tr><td><strong>گل همیشه‌بهار</strong></td><td>نماتودها، جذب شکارچیان طبیعی مانند کفشدوزک‌ها</td></tr>
+            <tr><td><strong>سیر و پیاز</strong></td><td>شته‌ها و سایر آفات (به دلیل ترکیبات گوگردی)</td></tr>
+            <tr><td><strong>رزماری و آویشن</strong></td><td>پروانه‌ها و شب‌پره‌ها</td></tr>
+        </tbody>
+    </table>
+
+    <h3>🐞 ۲. استفاده از دشمنان طبیعی</h3>
+    <p>کفشدوزک‌ها، زنبورهای شکارچی و عنکبوت‌ها از دشمنان طبیعی آفات هستند و می‌توانند به کنترل جمعیت آنها کمک کنند. جذب این حشرات مفید به باغچه، با کاشت گل‌هایی مانند اسطوخودوس و گل همیشه‌بهار امکان‌پذیر است.</p>
+
+    <h3>🧪 ۳. تهیه محلول‌های طبیعی ضدآفت</h3>
+    <p><strong>الف) محلول صابون و آب:</strong> یک قاشق غذاخوری صابون طبیعی را در یک لیتر آب حل کرده و روی گیاهان اسپری کنید. این محلول برای کنترل شته‌ها، سفیدبالک‌ها و کنه‌ها بسیار مؤثر است.</p>
+    <p><strong>ب) محلول سیر و فلفل تند:</strong> پنج حبه سیر و دو عدد فلفل تند را پوره کرده، صاف کنید و با یک لیتر آب مخلوط کنید. این محلول خاصیت دفع‌کنندگی قوی برای بسیاری از آفات دارد.</p>
+    <p><strong>ج) خاک دیاتومه:</strong> این ماده طبیعی با ایجاد بریدگی در پوشش حشرات، آنها را کم‌آب کرده و از بین می‌برد. خاک دیاتومه یک راه‌حل غیرسمی برای مدیریت آفات خاک است.</p>
+
+    <h3>🔧 ۴. کنترل فیزیکی</h3>
+    <ul>
+        <li>حذف دستی آفات: جمع‌آوری دستی کرم‌ها، حلزون‌ها و لاروها از روی گیاهان</li>
+        <li>استفاده از تله‌های نوری و چسبنده: برای جذب و به دام انداختن حشرات پرنده</li>
+        <li>نصب تورهای محافظ: برای جلوگیری از ورود پرندگان و حشرات بزرگ به باغچه</li>
+    </ul>
+
+    <h2>⚠️ بخش ششم: نکات کلیدی قبل و بعد از سمپاشی</h2>
+
+    <h3>✅ اقدامات قبل از سمپاشی</h3>
+    <ul>
+        <li>شناسایی دقیق نوع آفت و انتخاب سم مناسب</li>
+        <li>انتخاب زمان مناسب (صبح زود یا عصرگاه) با دمای بین ۱۰ تا ۲۵ درجه</li>
+        <li>بررسی شرایط آب و هوایی (بدون بارندگی و باد شدید)</li>
+        <li>آماده‌سازی تجهیزات سمپاشی و مواد محافظ</li>
+        <li>تخلیه محیط از افراد، کودکان و حیوانات خانگی</li>
+    </ul>
+
+    <h3>✅ اقدامات بعد از سمپاشی</h3>
+    <ul>
+        <li>رعایت <strong>دوره کارنس</strong> (زمان ماندگاری سموم) قبل از برداشت محصول</li>
+        <li>تهویه مناسب محیط</li>
+        <li>شستشوی دست‌ها و صورت بعد از سمپاشی</li>
+        <li>نگهداری صحیح از سموم در محل امن</li>
+        <li>در صورت مشاهده مجدد آفات، با کارشناسان مشورت کنید</li>
+    </ul>
+
+    <h3>🛡️ نکات ایمنی مهم</h3>
+    <ul>
+        <li>استفاده از <strong>دستکش، عینک و ماسک</strong> هنگام سمپاشی</li>
+        <li>عدم سمپاشی در روزهای گرم و خشک (تبخیر سریع سم و کاهش اثرگذاری)</li>
+        <li>عدم سمپاشی در دمای کمتر از ۴ درجه (کاهش اثر سموم)</li>
+        <li>دوری از سمپاشی بیهوده (همه حشرات مضر نیستند و برخی مفیدند)</li>
+        <li>انجام سمپاشی توسط <strong>کارشناسان مجرب</strong> برای اطمینان از ایمنی و کارایی</li>
+    </ul>
+
+    <h2>💰 بخش هفتم: هزینه سمپاشی باغچه</h2>
+    <p>هزینه سمپاشی باغچه به عوامل مختلفی بستگی دارد. برای دریافت مشاوره رایگان و استعلام دقیق هزینه، با کارشناسان ما تماس بگیرید:</p>
+
+    <table>
+        <thead>
+            <tr><th>نوع خدمت</th><th>محدوده قیمت (هر متر مربع)</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>سمپاشی باغچه</strong></td><td>۶۰,۰۰۰ تا ۹۰,۰۰۰ تومان</td></tr>
+            <tr><td><strong>سمپاشی باغ</strong></td><td>۵۵,۰۰۰ تا ۱۰۰,۰۰۰ تومان</td></tr>
+            <tr><td><strong>سمپاشی درخت</strong></td><td>۷۰,۰۰۰ تا ۱۱۰,۰۰۰ تومان (هر اصله)</td></tr>
+            <tr><td><strong>سمپاشی شته</strong></td><td>۵۵,۰۰۰ تا ۱۰۰,۰۰۰ تومان</td></tr>
+            <tr><td><strong>سمپاشی قارچ</strong></td><td>۴۰,۰۰۰ تا ۸۰,۰۰۰ تومان</td></tr>
+        </tbody>
+    </table>
+
+    <h2>❓ بخش هشتم: سوالات متداول درباره سمپاشی باغچه</h2>
+
+    <details>
+        <summary><strong>چه زمانی برای سمپاشی باغچه مناسب است؟</strong></summary>
+        <p>بهترین زمان برای سمپاشی باغچه، صبح زود یا عصرگاه است که دما بین ۱۰ تا ۲۵ درجه سانتی‌گراد باشد. همچنین اواخر زمستان (برای سمپاشی زمستانه)، اوایل بهار (بعد از ریزش شکوفه‌ها) و تابستان (زمان رشد میوه) از زمان‌های کلیدی برای سمپاشی هستند.</p>
+    </details>
+
+    <details>
+        <summary><strong>آیا سمپاشی باغچه برای کودکان و حیوانات خطرناک است؟</strong></summary>
+        <p>سموم استفاده‌شده توسط شرکت نانوفناوران با رعایت کامل استانداردهای بهداشتی انتخاب می‌شوند. با این حال، توصیه می‌شود در زمان سمپاشی، کودکان و حیوانات از محیط خارج شوند و پس از تهویه کامل، ورود آنها مجاز باشد.</p>
+    </details>
+
+    <details>
+        <summary><strong>چه مدت بعد از سمپاشی می‌توانیم میوه‌ها را برداشت کنیم؟</strong></summary>
+        <p>دوره کارنس (زمان ماندگاری سموم) بسته به نوع سم متفاوت است. برای برخی سموم مانند ایمیداکلوپراید، این دوره تا ۲۷ روز است. حتماً دستورالعمل مصرف سموم را مطالعه کرده و با کارشناسان مشورت کنید.</p>
+    </details>
+
+    <details>
+        <summary><strong>آیا خودمان می‌توانیم باغچه را سمپاشی کنیم؟</strong></summary>
+        <p>استفاده از اسپری‌های خانگی معمولاً تأثیر موقت دارد و فقط آفات سطحی را از بین می‌برد. سمپاشی اصولی نیاز به شناسایی دقیق آفات، انتخاب سم مناسب و رعایت نکات ایمنی دارد که بهتر است توسط کارشناسان مجرب انجام شود.</p>
+    </details>
+
+    <details>
+        <summary><strong>بهترین سم برای باغچه چیست؟</strong></summary>
+        <p>انتخاب سم مناسب بستگی به نوع آفت دارد. برای شته‌ها از سموم سیستمیک مانند ایمیداکلوپراید، برای قارچ‌ها از سموم قارچ‌کش مانند بردوفیکس و برای آفات عمومی از سموم همه‌کاره استفاده می‌شود. مشاوره با کارشناسان گیاه‌پزشکی توصیه می‌شود.</p>
+    </details>
+
+    <h2>🏁 نتیجه‌گیری</h2>
+    <p>باغچه و فضای سبز، سرمایه‌ای ارزشمند است که نیاز به مراقبت و نگهداری اصولی دارد. سمپاشی تخصصی با شناسایی دقیق آفات، انتخاب زمان مناسب و استفاده از سموم استاندارد، کلید حفظ سلامت و زیبایی گیاهان است. در کنار روش‌های شیمیایی، استفاده از روش‌های طبیعی و ارگانیک مانند کاشت گیاهان دافع آفات و استفاده از دشمنان طبیعی، به ایجاد تعادل اکولوژیک در باغچه کمک می‌کند.</p>
+
+    <p><strong>شرکت سمپاشی نانوفناوران بهداشت تهران</strong> با بیش از یک دهه تجربه در زمینه سمپاشی باغچه‌ها، فضای سبز و درختان میوه، آماده ارائه خدمات تخصصی و تضمینی به شماست. تیم کارشناسان ما با شناسایی دقیق نوع آفات، استفاده از سموم استاندارد و ایمن، و رعایت کامل نکات ایمنی، محیطی امن، سالم و سرسبز را برای شما به ارمغان می‌آورند.</p>
+
+    <p style="font-size:20px; font-weight:700; text-align:center; color:#0B6FB8;">🚀 همین حالا اقدام کنید:</p>
+    <div style="text-align:center; margin:20px 0;">
+        <p>📞 <strong>تماس فوری:</strong> <a href="tel:09120705746" style="font-size:20px; color:#11A64A; text-decoration:none;">۰۹۱۲۰۷۰۵۷۴۶</a></p>
+        <p>💬 <strong>درخواست مشاوره رایگان:</strong> از طریق <a href="https://wa.me/989120705746" target="_blank" style="color:#25D366; text-decoration:none;">واتساپ</a> یا <a href="https://eitaa.com/nanofannavaran_ir" target="_blank" style="color:#e67e22; text-decoration:none;">ایتا</a></p>
+        <p>🔗 <strong>مشاهده سایر خدمات:</strong> <a href="../services.html" style="color:#0B6FB8; text-decoration:none;">کنترل آفات مسکونی</a></p>
+    </div>
+
+    <div class="blog-back-links">
+        <a href="../index.html" class="btn-home">🏠 بازگشت به صفحه اصلی</a>
+        <a href="../services.html" class="btn-services">🔙 بازگشت به لیست خدمات مسکونی</a>
+        <a href="../contact.html" class="btn-contact">📞 تماس با ما</a>
+    </div>
+
+    <div style="margin-top:30px; padding-top:20px; border-top:1px solid #eee; text-align:center; font-size:14px; color:#888;">
+        <p>این محتوا توسط تیم تولید محتوای شرکت سمپاشی نانوفناوران بهداشت تهران، بر اساس جدیدترین یافته‌های علمی و استانداردهای جهانی کنترل آفات، تولید و منتشر شده است.</p>
+    </div>
+
+</div>
+
+<!-- ===== دکمه اسکرول به بالا ===== -->
+<button id="backToTop" title="برو به بالا">↑</button>
+
+<!-- ===== منوی شناور ===== -->
+<div class="floating-container">
+    <button class="floating-main-btn" id="floatingToggle">
+        <span class="btn-arrow">▶</span>
+        <span class="btn-text">📞 مشاوره رایگان</span>
+    </button>
+    <div class="floating-menu" id="floatingMenu">
+        <div class="call-wrapper">
+            <div class="floating-item call-item" id="callToggle">
+                <span class="item-icon">📞</span>
+                <span class="item-text">تماس سریع</span>
+                <span class="arrow">▲</span>
+            </div>
+            <div class="call-submenu" id="callSubmenu">
+                <a href="tel:09120705746" class="floating-item call-sub-item"><span class="item-icon">📞</span><span class="item-text">شماره ۱</span></a>
+                <a href="tel:09197173454" class="floating-item call-sub-item"><span class="item-icon">📞</span><span class="item-text">شماره ۲</span></a>
+            </div>
+        </div>
+        <a href="https://wa.me/989120705746?text=%D8%A8%D9%87%20%D8%B3%D8%A7%DB%8C%D8%AA%20%D8%B4%D8%B1%DA%A9%D8%AA%20%D8%B3%D9%85%D9%BE%D8%A7%D8%B4%DB%8C%20%D9%86%D8%A7%D9%86%D9%88%D9%81%D9%86%D8%A7%D9%88%D8%B1%D8%A7%D9%86%20%D8%AE%D9%88%D8%B4%20%D8%A2%D9%85%D8%AF%DB%8C%D8%AF" target="_blank" class="floating-item whatsapp-item"><span class="item-icon">💬</span><span class="item-text">واتساپ</span></a>
+        <a href="https://eitaa.com/nanofannavaran_ir" target="_blank" class="floating-item eitaa-item"><span class="item-icon">✈️</span><span class="item-text">ایتا</span></a>
     </div>
 </div>
 
-<footer class="site-footer">
-    <div class="container">
-        <div class="footer-grid">
-            <div class="footer-box"><h3>نانوفناوران</h3><p>ارائه‌دهنده خدمات تخصصی کنترل آفات در تهران</p></div>
-            <div class="footer-box"><h3>اطلاعات تماس</h3><p>📱 09120705746</p><p>☎️ 22048278</p></div>
-        </div>
-        <hr><p class="copyright">© تمامی حقوق محفوظ است</p>
-    </div>
-</footer>
+<!-- ===== جاوااسکریپت ===== -->
+<script>
+    // ===== دکمه اسکرول به بالا =====
+    var backToTopBtn = document.getElementById('backToTop');
 
-<script src="../script.js"></script>
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
+    });
+
+    backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // ===== منوی شناور =====
+    var toggleBtn = document.getElementById('floatingToggle');
+    var menu = document.getElementById('floatingMenu');
+    var arrow = toggleBtn.querySelector('.btn-arrow');
+
+    toggleBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        this.classList.toggle('active');
+        menu.classList.toggle('open');
+        if (arrow) arrow.classList.toggle('open');
+    });
+
+    // ===== زیرمنوی تماس =====
+    var callToggle = document.getElementById('callToggle');
+    var callSubmenu = document.getElementById('callSubmenu');
+
+    callToggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        this.classList.toggle('open');
+        callSubmenu.classList.toggle('open');
+        var arrowIcon = this.querySelector('.arrow');
+        if (arrowIcon) {
+            arrowIcon.textContent = callSubmenu.classList.contains('open') ? '▼' : '▲';
+        }
+    });
+
+    // ===== بستن منو با کلیک بیرون =====
+    document.addEventListener('click', function() {
+        if (toggleBtn) toggleBtn.classList.remove('active');
+        if (menu) menu.classList.remove('open');
+        if (arrow) arrow.classList.remove('open');
+        if (callToggle) callToggle.classList.remove('open');
+        if (callSubmenu) callSubmenu.classList.remove('open');
+        var arrowIcon = callToggle ? callToggle.querySelector('.arrow') : null;
+        if (arrowIcon) arrowIcon.textContent = '▲';
+    });
+
+    if (menu) {
+        menu.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    }
+
+    console.log('✅ مقاله سمپاشی باغچه و فضای سبز بارگذاری شد!');
+</script>
+
 </body>
 </html>
