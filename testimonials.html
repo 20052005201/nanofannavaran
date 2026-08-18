@@ -1,1 +1,313 @@
-z
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظرات مشتریان - شرکت سمپاشی نانوفناوران</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; }
+        .testimonials-page { padding: 80px 0; background: #f8fbfd; min-height: 60vh; }
+        .testimonials-page .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .testimonials-page h1 { text-align: center; color: #0B6FB8; font-size: 36px; margin-bottom: 10px; }
+        .testimonials-page .sub-title { text-align: center; color: #666; font-size: 1.1rem; margin-bottom: 50px; }
+        
+        .testimonial-item {
+            background: #fff;
+            padding: 30px 35px;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0,0,0,.08);
+            margin-bottom: 25px;
+            border-right: 5px solid #11A64A;
+            transition: 0.3s;
+        }
+        .testimonial-item:hover { transform: translateY(-5px); box-shadow: 0 12px 40px rgba(0,0,0,.12); }
+        .testimonial-item p { font-size: 1.05rem; line-height: 2; color: #333; margin: 0 0 15px 0; }
+        .testimonial-item .author { font-size: 0.95rem; font-weight: 700; color: #1a7a3a; border-top: 2px dashed #e8f5e9; padding-top: 15px; margin: 0; }
+        .testimonial-item .quote-icon { font-size: 28px; color: #0B6FB8; opacity: 0.3; margin-bottom: 10px; display: block; }
+        
+        .back-home { display: inline-block; background: #0B6FB8; color: #fff; padding: 12px 30px; border-radius: 12px; text-decoration: none; font-weight: 700; transition: 0.3s; margin-top: 20px; }
+        .back-home:hover { background: #0a5a94; transform: translateY(-2px); }
+        .page-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; margin-bottom: 30px; }
+        
+        /* فرم ارسال نظر */
+        .submit-review {
+            background: #fff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0,0,0,.08);
+            margin-top: 50px;
+            border-top: 5px solid #11A64A;
+        }
+        .submit-review h3 { color: #0B6FB8; font-size: 24px; margin-bottom: 10px; }
+        .submit-review .form-desc { color: #666; margin-bottom: 25px; }
+        .submit-review input, .submit-review textarea, .submit-review select {
+            width: 100%;
+            padding: 14px 18px;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-family: inherit;
+            margin-bottom: 15px;
+            transition: 0.3s;
+            background: #fafafa;
+            box-sizing: border-box;
+        }
+        .submit-review input:focus, .submit-review textarea:focus, .submit-review select:focus {
+            border-color: #11A64A;
+            outline: none;
+            background: #fff;
+            box-shadow: 0 0 0 4px rgba(17, 166, 74, 0.1);
+        }
+        .submit-review textarea { min-height: 120px; resize: vertical; }
+        .submit-review button {
+            width: 100%;
+            padding: 16px;
+            background: #11A64A;
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .submit-review button:hover { background: #0d8a3a; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(17, 166, 74, 0.3); }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        #reviewSuccess { display: none; margin-top: 15px; padding: 15px; background: #e8f5e9; border-radius: 12px; color: #1a7a3a; font-weight: 700; text-align: center; }
+        
+        @media (max-width: 768px) {
+            .testimonials-page { padding: 50px 0; }
+            .testimonials-page h1 { font-size: 28px; }
+            .testimonial-item { padding: 20px; }
+            .testimonial-item p { font-size: 0.95rem; }
+            .testimonial-item .author { font-size: 0.85rem; }
+            .page-header { flex-direction: column; align-items: center; }
+            .submit-review { padding: 25px; }
+            .form-row { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 480px) {
+            .testimonials-page { padding: 30px 0; }
+            .testimonials-page h1 { font-size: 22px; }
+            .testimonial-item { padding: 15px; border-radius: 14px; }
+            .testimonial-item p { font-size: 0.9rem; }
+            .submit-review { padding: 18px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <a href="index.html" class="logo"><img src="images/logo.png" alt="لوگو"></a>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">صفحه اصلی</a></li>
+                <li><a href="services.html">خدمات مسکونی</a></li>
+                <li><a href="commercial-services.html">خدمات تجاری</a></li>
+                <li><a href="about.html">درباره ما</a></li>
+                <li><a href="contact.html">تماس</a></li>
+            </ul>
+        </nav>
+        <div class="header-buttons">
+            <a href="tel:09120705746" class="call-btn">📞 09120705746</a>
+            <div class="mobile-menu">☰</div>
+        </div>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="جستجو...">
+            <button onclick="searchSite()">🔍</button>
+        </div>
+    </div>
+</header>
+
+<!-- ===== صفحه نظرات ===== -->
+<section class="testimonials-page">
+    <div class="container">
+        <div class="page-header">
+            <div>
+                <h1>📝 نظرات و تقدیرنامه‌های مشتریان</h1>
+                <p class="sub-title">آنچه مشتریان ما درباره خدمات شرکت سمپاشی نانوفناوران گفته‌اند</p>
+            </div>
+            <a href="index.html" class="back-home">🏠 بازگشت به صفحه اصلی</a>
+        </div>
+
+        <!-- نظر ۱ -->
+        <div class="testimonial-item">
+            <span class="quote-icon">"</span>
+            <p>همکاری با شرکت سمپاشی نانوفناوران یکی از بهترین تصمیم‌های مدیریتی ما بود. تیم حرفه‌ای و متخصص آنها با دقت و ظرافت کامل، عملیات سمپاشی و کنترل آفات را در مجموعه تجاری ما انجام دادند. بدون هیچ گونه مزاحمتی برای کسب‌وکار واحدهای تجاری، محیطی بهداشتی و عاری از آفات برای مشتریان و پرسنل فراهم کردند. واقعاً از تخصص و تعهدشان سپاسگزاریم.</p>
+            <div class="author">امیر حسین کریمی - مدیر مرکز خرید بوتیک مال ملل</div>
+        </div>
+
+        <!-- نظر ۲ -->
+        <div class="testimonial-item">
+            <span class="quote-icon">"</span>
+            <p>در محیط حساس بیمارستانی، رعایت استانداردهای بهداشتی و استفاده از سموم مجاز و بی‌خطر از اولویت‌های اصلی ماست. شرکت نانوفناوران با دانش فنی بالا و استفاده از پیشرفته‌ترین روش‌های روز دنیا، عملیات کنترل آفات را با بالاترین کیفیت انجام دادند. گزارش‌های دقیق و مستندسازی کامل کار، نشان از حرفه‌ای‌گری این مجموعه دارد. به تمام مراکز درمانی و بیمارستان‌ها، همکاری با این شرکت را توصیه می‌کنم.</p>
+            <div class="author">مهندس سعید مرادی - مسئول HSE بیمارستان مادران</div>
+        </div>
+
+        <!-- نظر ۳ -->
+        <div class="testimonial-item">
+            <span class="quote-icon">"</span>
+            <p>صنعت آرد و غله به دلیل ماهیت مواد اولیه، همواره در معرض خطر هجوم آفات مختلف است. شرکت سمپاشی نانوفناوران با شناخت کامل از چالش‌های این صنعت، برنامه‌ای جامع و اصولی برای کنترل آفات انبارها و خطوط تولید ما تدوین کرد. سموم مورد استفاده استاندارد و تأییدیه‌های لازم را داشتند و کارکنان ما نیز آموزش‌های لازم را دریافت کردند. از همکاری ارزشمندشان بسیار راضی هستیم.</p>
+            <div class="author">مهندس رضا محمدی - مسئول HSE شرکت آرد و غله استان تهران</div>
+        </div>
+
+        <!-- نظر ۴ -->
+        <div class="testimonial-item">
+            <span class="quote-icon">"</span>
+            <p>با توجه به حساسیت بالای مجموعه‌های نظامی و رعایت امنیت غذایی در رستوران‌های تحت پوشش، انتخاب پیمانکار کنترل آفات بسیار اهمیت دارد. تیم نانوفناوران با حفظ کامل محرمانگی و رعایت دقیق پروتکل‌های امنیتی، عملیات سمپاشی را با بهترین کیفیت و کمترین زمان انجام دادند. پرسنل مجرب و متعهد آنها، کاری بی‌نقص ارائه کردند. امیدواریم همکاری ادامه‌دار باشد.</p>
+            <div class="author">سرهنگ علی اکبری - مدیر رستوران مرکز نظامی</div>
+        </div>
+
+        <!-- نظر ۵ -->
+        <div class="testimonial-item">
+            <span class="quote-icon">"</span>
+            <p>مدت‌ها بود که کبوترها و کنه‌های ناشی از آنها، آرامش را از ما گرفته بودند. بالکن و حیاط خانه‌مان کاملاً آلوده شده بود و بچه‌ها دیگر نمی‌توانستند در حیاط بازی کنند. با تماس با شرکت نانوفناوران، متخصصانشان سریعاً آمدند و مشکل را بررسی کردند. هم سمپاشی کنه و مایت کبوتر را انجام دادند و هم راهکارهای جلوگیری از بازگشت کبوترها را به ما آموزش دادند. واقعاً نفس‌مان راحت شد. خدا را شکر که با این شرکت آشنا شدیم. از ته دل تشکر می‌کنم.</p>
+            <div class="author">مهراد یوسفیان</div>
+        </div>
+
+        <!-- نظر ۶ -->
+        <div class="testimonial-item">
+            <span class="quote-icon">"</span>
+            <p>خیلی خجالت‌آور بود، اما می‌خواهم تجربه‌ام را به اشتراک بگذارم تا دیگران هم از این مشکل خلاص شوند. چند ماهی بود که با ساس‌های تختخوابی دست و پنجه نرم می‌کردیم. هر کاری کردیم، هیچ نتیجه‌ای نگرفتیم. تا اینکه یکی از آشناها شرکت نانوفناوران را معرفی کرد. کارشناسانشان با دقت کامل، تمام نقاط خانه را بررسی کردند و سمپاشی تخصصی ساس را انجام دادند. حتی راهنمایی کردند که چه اقداماتی انجام دهیم تا دوباره برنگردند. دیگر هیچ خبری از ساس نیست و آرامش به خانه‌مان برگشت. خدا را شکر و به همه کسانی که این مشکل را دارند، توصیه می‌کنم حتماً با این شرکت تماس بگیرند.</p>
+            <div class="author">خانم رستگاری</div>
+        </div>
+
+        <!-- نظر ۷ -->
+        <div class="testimonial-item">
+            <span class="quote-icon">"</span>
+            <p>چند وقتی بود که سوسک‌های ریز آلمانی مهمان ناخوانده‌ی کابینت آشپزخانه‌مان شده بودند. هر روز صبح که چشم باز می‌کردیم، چندتایی از آنها را می‌دیدیم که فرار می‌کردند. واقعاً اعصابمان خرد شده بود. با شرکت نانوفناوران تماس گرفتم و همان روز کارشناسانشان آمدند و بررسی کامل انجام دادند. سمپاشی تخصصی سوسک کابینتی را با دقت بالا انجام دادند و حتی به ما گفتند که مواد غذایی را چگونه نگهداری کنیم تا دوباره برنگردند. الان چند ماهی می‌گذرد و خبری از سوسک نیست. تشکر ویژه از تیم حرفه‌ای نانوفناوران.</p>
+            <div class="author">غفاری - قیطریه</div>
+        </div>
+
+        <!-- نظر ۸ -->
+        <div class="testimonial-item">
+            <span class="quote-icon">"</span>
+            <p>خانه‌مان در سعادت‌آباد، حیاط کوچکی دارد که همیشه با مشکل مورچه دست و پنجه نرم می‌کردیم. مورچه‌ها از هر دری وارد می‌شدند و دیوانه‌مان کرده بودند. هر روش خانگی را امتحان کردیم، اما هیچکدام جواب نداد. تا اینکه یکی از همسایه‌ها شرکت نانوفناوران را معرفی کرد. تیمشان با سمپاشی اصولی و طعمه‌گذاری حرفه‌ای، مشکل مورچه را برای همیشه حل کردند. حالا با خیال راحت می‌توانیم در حیاط بنشینیم و از هوای خوب لذت ببریم. از صمیم قلب سپاسگزارم.</p>
+            <div class="author">ندا یاراحمدی - سعادت‌آباد</div>
+        </div>
+
+        <!-- نظر ۹ -->
+        <div class="testimonial-item">
+            <span class="quote-icon">"</span>
+            <p>یک سال پیش که فرش دستبافت گران‌قیمت مادربزرگم را برای نظافت به قالیشویی دادم، بعد از برگشت متوجه شدم که بید فرش به آن آسیب زده است. واقعاً ناراحت شده بودم. با شرکت نانوفناوران تماس گرفتم و کارشناسانشان با دقت کامل، فرش و محیط خانه را بررسی کردند. سمپاشی تخصصی بید فرش را انجام دادند و همچنین نکات مهم برای جلوگیری از بازگشت بیدها را به من آموزش دادند. حالا هر سال قبل از فصل گرما، از خدمات آنها استفاده می‌کنم تا دیگر خطری فرش‌های عزیزم را تهدید نکند. ممنون از تیم حرفه‌ای نانوفناوران.</p>
+            <div class="author">رکسانا جلایی‌پور - نیاوران</div>
+        </div>
+
+        <!-- نظر ۱۰ -->
+        <div class="testimonial-item">
+            <span class="quote-icon">"</span>
+            <p>به عنوان یک پزشک، به بهداشت و سلامت محیط اهمیت ویژه‌ای می‌دهم. باغچه‌ی منزل ما در شهرک غرب، جایگاه استراحت و آرامش خانواده است، اما وجود آفات مختلف همیشه مزاحم بود. شرکت نانوفناوران با استفاده از سموم مجاز و بی‌خطر برای سلامت انسان و محیط زیست، سمپاشی باغچه‌ی ما را با بهترین کیفیت انجام دادند. تیم حرفه‌ای و متعهد آنها، کاری بی‌نقص ارائه کردند. به همه همسایه‌ها و دوستان این شرکت را معرفی کرده‌ام. واقعاً قابل اعتماد و حرفه‌ای هستند.</p>
+            <div class="author">دکتر کنعانی - شهرک غرب</div>
+        </div>
+
+        <!-- نظر ۱۱ -->
+        <div class="testimonial-item">
+            <span class="quote-icon">"</span>
+            <p>وقتی ساختمان قدیمی‌مان را بازسازی کردیم، متوجه شدیم که شکاف‌ها و درزهای مختلف، محل عبور موش‌ها و آفات شده است. یکی از دوستان شرکت نانوفناوران را به ما معرفی کرد. تیم حرفه‌ای آنها با دقت و ظرافت کامل، تمام درزها و شکاف‌های ساختمان را بررسی کردند و با استفاده از مصالح مرغوب و اصولی، عملیات بستن در انقطاع را انجام دادند. همچنین طعمه‌گذاری موش‌ها را هم انجام دادند تا هیچ خطری ساختمان را تهدید نکند. حالا با خیال راحت می‌توانیم در ساختمان زندگی کنیم. از دقت و حرفه‌ای‌گری آنها سپاسگزارم.</p>
+            <div class="author">محمد امین پناهی - تهرانپارس</div>
+        </div>
+
+        <!-- ===== فرم ارسال نظر ===== -->
+        <div class="submit-review">
+            <h3>✍️ ارسال نظر شما</h3>
+            <p class="form-desc">اگر شما نیز از خدمات ما استفاده کرده‌اید، لطفاً نظر خود را با ما به اشتراک بگذارید.</p>
+            
+            <form id="reviewForm" onsubmit="sendReview(event)">
+                <div class="form-row">
+                    <input type="text" id="reviewName" placeholder="نام و نام خانوادگی" required>
+                    <input type="tel" id="reviewPhone" placeholder="شماره تماس (اختیاری)">
+                </div>
+                <div class="form-row">
+                    <input type="text" id="reviewLocation" placeholder="منطقه/محله (مثلاً قیطریه)">
+                    <input type="text" id="reviewService" placeholder="نوع خدمات (مثلاً سمپاشی سوسک)">
+                </div>
+                <textarea id="reviewMessage" rows="5" placeholder="نظر شما درباره خدمات ما..." required></textarea>
+                <button type="submit">📧 ارسال نظر به ایمیل</button>
+            </form>
+            <div id="reviewSuccess">✅ نظر شما با موفقیت ارسال شد. از شما سپاسگزاریم!</div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ===== فوتر ===== -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-box"><h3>نانوفناوران</h3><p>ارائه‌دهنده خدمات تخصصی کنترل آفات در تهران</p></div>
+            <div class="footer-box"><h3>اطلاعات تماس</h3><p>📱 09120705746</p><p>☎️ 02122048278</p></div>
+        </div>
+        <hr><p class="copyright">© تمامی حقوق محفوظ است</p>
+    </div>
+</footer>
+
+<!-- ===== دکمه شناور ===== -->
+<div class="floating-container">
+    <button class="floating-main-btn" id="floatingToggle">
+        <span class="btn-arrow">▶</span>
+        <span class="btn-text">📞 مشاوره رایگان</span>
+    </button>
+    <div class="floating-menu" id="floatingMenu">
+        <div class="call-wrapper">
+            <div class="floating-item call-item" id="callToggle">
+                <span class="item-icon">📞</span>
+                <span class="item-text">تماس سریع</span>
+                <span class="arrow">▲</span>
+            </div>
+            <div class="call-submenu" id="callSubmenu">
+                <a href="tel:09120705746" class="floating-item call-sub-item"><span class="item-icon">📞</span><span class="item-text">شماره ۱</span></a>
+                <a href="tel:09197173454" class="floating-item call-sub-item"><span class="item-icon">📞</span><span class="item-text">شماره ۲</span></a>
+            </div>
+        </div>
+        <a href="https://wa.me/989120705746" target="_blank" class="floating-item whatsapp-item"><span class="item-icon">💬</span><span class="item-text">واتساپ</span></a>
+        <a href="https://eitaa.com/nanofannavaran_ir" target="_blank" class="floating-item eitaa-item"><span class="item-icon">✈️</span><span class="item-text">ایتا</span></a>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+<!-- ===== اسکریپت ارسال نظر ===== -->
+<script>
+    function sendReview(event) {
+        event.preventDefault();
+        
+        var name = document.getElementById('reviewName').value.trim();
+        var phone = document.getElementById('reviewPhone').value.trim();
+        var location = document.getElementById('reviewLocation').value.trim();
+        var service = document.getElementById('reviewService').value.trim();
+        var message = document.getElementById('reviewMessage').value.trim();
+        
+        if (!name || !message) {
+            alert('لطفاً نام و نظر خود را وارد کنید.');
+            return;
+        }
+        
+        var subject = encodeURIComponent('نظر جدید از سایت - ' + name);
+        var body = encodeURIComponent(
+            '👤 نام: ' + name + '\n' +
+            '📱 شماره تماس: ' + (phone || 'وارد نشده') + '\n' +
+            '📍 منطقه/محله: ' + (location || 'وارد نشده') + '\n' +
+            '📌 نوع خدمات: ' + (service || 'وارد نشده') + '\n\n' +
+            '📝 نظر:\n' + message
+        );
+        
+        var email = 'nanofannavaran.ae2005@gmail.com';
+        var url = 'mailto:' + email + '?subject=' + subject + '&body=' + body;
+        
+        window.location.href = url;
+        
+        document.getElementById('reviewSuccess').style.display = 'block';
+        document.getElementById('reviewForm').reset();
+        
+        setTimeout(function() {
+            document.getElementById('reviewSuccess').style.display = 'none';
+        }, 5000);
+    }
+</script>
+
+</body>
+</html>
