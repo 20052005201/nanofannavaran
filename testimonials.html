@@ -3,309 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>شرکت سمپاشی نانوفناوران بهداشت تهران</title>
-    
-    <!-- ===== Google Analytics (فقط مدیر قابل مشاهده است) ===== -->
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX');
-    </script>
-    <!-- ===== پایان گوگل آنالیتیکس ===== -->
-    
+    <title>نظرات مشتریان - شرکت سمپاشی نانوفناوران</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
-        .services-list {
-            padding: 60px 0;
-            background: #ffffff;
-        }
-        .services-list h2 {
-            text-align: center;
-            color: var(--primary);
-            font-size: 36px;
-            margin-bottom: 15px;
-        }
-        .services-list .section-description {
-            text-align: center;
-            color: #666;
-            max-width: 800px;
-            margin: 0 auto 50px;
-            line-height: 1.8;
-        }
-        .services-grid-all {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-            gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        .service-item {
-            background: #fff;
-            border-radius: 20px;
-            padding: 20px 15px;
-            text-align: center;
-            box-shadow: 0 8px 20px rgba(0,0,0,.08);
-            transition: all 0.4s ease;
-            border: 2px solid transparent;
-            text-decoration: none;
-            color: inherit;
-            display: block;
-        }
-        .service-item:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 16px 40px rgba(0,0,0,.15);
-            border-color: var(--secondary);
-        }
-        .service-item img {
-            width: 70px;
-            height: 70px;
-            object-fit: contain;
-            margin: 0 auto 12px;
-            display: block;
-            border-radius: 12px;
-        }
-        .service-item span {
-            font-size: 1rem;
-            line-height: 2;
-            color: #0B6FB8;
-            font-weight: 700;
-            display: block;
-        }
-        @media (max-width: 600px) {
-            .services-grid-all {
-                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-                gap: 12px;
-                padding: 0 12px;
-            }
-            .service-item img {
-                width: 50px;
-                height: 50px;
-            }
-            .service-item span {
-                font-size: 0.9rem;
-                line-height: 1.8;
-            }
-            .services-list h2 {
-                font-size: 26px;
-            }
-        }
-
-        /* =============== دکمه اسکرول به بالا =============== */
-        #backToTop {
-            position: fixed;
-            bottom: 110px;
-            right: 30px;
-            z-index: 998;
-            background: #1a7a3a;
-            color: #fff;
-            border: none;
-            width: 55px;
-            height: 55px;
-            border-radius: 50%;
-            font-size: 28px;
-            font-weight: 700;
-            cursor: pointer;
-            box-shadow: 0 6px 25px rgba(0,0,0,.2);
-            transition: .3s;
-            display: none;
-            align-items: center;
-            justify-content: center;
-        }
-        #backToTop:hover {
-            background: #27ae60;
-            transform: translateY(-4px);
-        }
-        #backToTop.show {
-            display: flex;
-        }
-
-        @media (max-width: 768px) {
-            #backToTop {
-                width: 48px;
-                height: 48px;
-                font-size: 24px;
-                bottom: 100px;
-                right: 15px;
-            }
-        }
-
-        /* ===== باکس جمله رضایت ===== */
-        .satisfaction-box {
-            max-width: 900px;
-            margin: 40px auto 0;
-            padding: 25px 35px;
-            background: linear-gradient(135deg, #f0faf4, #e8f5e9);
-            border-radius: 20px;
-            border-right: 8px solid #1a7a3a;
-            box-shadow: 0 8px 25px rgba(26, 122, 58, 0.12);
-            text-align: center;
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: #1a5a2a;
-            line-height: 1.9;
-            transition: 0.3s;
-        }
-        .satisfaction-box:hover {
-            transform: scale(1.01);
-            box-shadow: 0 12px 35px rgba(26, 122, 58, 0.2);
-        }
-        .satisfaction-box .heart {
-            display: inline-block;
-            color: #e74c3c;
-            font-size: 1.6rem;
-            margin-left: 10px;
-            animation: pulse 1.5s infinite;
-        }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.2); }
-            100% { transform: scale(1); }
-        }
-        @media (max-width: 600px) {
-            .satisfaction-box {
-                font-size: 1rem;
-                padding: 20px;
-                margin: 30px 10px 0;
-            }
-            .satisfaction-box .heart {
-                font-size: 1.3rem;
-            }
-        }
-
-        /* ===== باکس کانال حشره‌شناسی ===== */
-        .insect-channel-box {
-            max-width: 900px;
-            margin: 30px auto 0;
-            padding: 30px 35px;
-            background: linear-gradient(135deg, #f8f9fa, #e8f0fe);
-            border-radius: 20px;
-            border: 2px solid #0B6FB8;
-            box-shadow: 0 8px 25px rgba(11, 111, 184, 0.12);
-            text-align: center;
-            transition: 0.3s;
-        }
-        .insect-channel-box:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 35px rgba(11, 111, 184, 0.2);
-        }
-        .insect-channel-box .channel-icon {
-            font-size: 48px;
-            display: block;
-            margin-bottom: 10px;
-        }
-        .insect-channel-box h3 {
-            color: #0B6FB8;
-            font-size: 1.5rem;
-            font-weight: 900;
-            margin: 0 0 10px 0;
-        }
-        .insect-channel-box p {
-            color: #555;
-            font-size: 1.05rem;
-            line-height: 1.9;
-            max-width: 700px;
-            margin: 0 auto 20px;
-        }
-        .insect-channel-box .channel-btn {
-            display: inline-block;
-            background: #0B6FB8;
-            color: #fff;
-            padding: 14px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.1rem;
-            transition: 0.3s;
-        }
-        .insect-channel-box .channel-btn:hover {
-            background: #0a5a94;
-            transform: scale(1.05);
-            box-shadow: 0 8px 25px rgba(11, 111, 184, 0.3);
-        }
-        .insect-channel-box .channel-btn span {
-            margin-left: 8px;
-        }
-        @media (max-width: 600px) {
-            .insect-channel-box {
-                padding: 20px;
-                margin: 20px 10px 0;
-            }
-            .insect-channel-box h3 {
-                font-size: 1.2rem;
-            }
-            .insect-channel-box p {
-                font-size: 0.95rem;
-            }
-            .insect-channel-box .channel-btn {
-                padding: 12px 25px;
-                font-size: 0.95rem;
-            }
-        }
-
-        /* ===== استایل اسلایدر نظرات ===== */
-        .testimonial-slider {
-            position: relative;
-            max-width: 900px;
-            margin: 0 auto;
-            min-height: 220px;
-        }
-        .testimonial-slider .testimonial-card {
-            display: none;
+        * { box-sizing: border-box; }
+        .testimonials-page { padding: 80px 0; background: #f8fbfd; min-height: 60vh; }
+        .testimonials-page .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .testimonials-page h1 { text-align: center; color: #0B6FB8; font-size: 36px; margin-bottom: 10px; }
+        .testimonials-page .sub-title { text-align: center; color: #666; font-size: 1.1rem; margin-bottom: 50px; }
+        
+        .testimonial-item {
             background: #fff;
             padding: 30px 35px;
             border-radius: 20px;
             box-shadow: 0 8px 30px rgba(0,0,0,.08);
+            margin-bottom: 25px;
             border-right: 5px solid #11A64A;
-            animation: fadeIn 0.6s ease;
+            transition: 0.3s;
         }
-        .testimonial-slider .testimonial-card.active {
-            display: block;
+        .testimonial-item:hover { transform: translateY(-5px); box-shadow: 0 12px 40px rgba(0,0,0,.12); }
+        .testimonial-item p { font-size: 1.05rem; line-height: 2; color: #333; margin: 0 0 15px 0; }
+        .testimonial-item .author { font-size: 0.95rem; font-weight: 700; color: #1a7a3a; border-top: 2px dashed #e8f5e9; padding-top: 15px; margin: 0; }
+        .testimonial-item .quote-icon { font-size: 28px; color: #0B6FB8; opacity: 0.3; margin-bottom: 10px; display: block; }
+        
+        .back-home { display: inline-block; background: #0B6FB8; color: #fff; padding: 12px 30px; border-radius: 12px; text-decoration: none; font-weight: 700; transition: 0.3s; margin-top: 20px; }
+        .back-home:hover { background: #0a5a94; transform: translateY(-2px); }
+        .page-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; margin-bottom: 30px; }
+        
+        .submit-review {
+            background: #fff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0,0,0,.08);
+            margin-top: 50px;
+            border-top: 5px solid #11A64A;
         }
-        .testimonial-slider .testimonial-card p {
-            font-size: 1.05rem;
-            line-height: 2;
-            color: #333;
-            margin: 0 0 15px 0;
+        .submit-review h3 { color: #0B6FB8; font-size: 24px; margin-bottom: 10px; }
+        .submit-review .form-desc { color: #666; margin-bottom: 25px; }
+        .submit-review input, .submit-review textarea, .submit-review select {
+            width: 100%;
+            padding: 14px 18px;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-family: inherit;
+            margin-bottom: 15px;
+            transition: 0.3s;
+            background: #fafafa;
+            box-sizing: border-box;
         }
-        .testimonial-slider .testimonial-card h4 {
-            font-size: 0.95rem;
+        .submit-review input:focus, .submit-review textarea:focus, .submit-review select:focus {
+            border-color: #11A64A;
+            outline: none;
+            background: #fff;
+            box-shadow: 0 0 0 4px rgba(17, 166, 74, 0.1);
+        }
+        .submit-review textarea { min-height: 120px; resize: vertical; }
+        .submit-review button {
+            width: 100%;
+            padding: 16px;
+            background: #11A64A;
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
             font-weight: 700;
-            color: #1a7a3a;
-            border-top: 2px dashed #e8f5e9;
-            padding-top: 15px;
-            margin: 0;
+            cursor: pointer;
+            transition: 0.3s;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+        .submit-review button:hover { background: #0d8a3a; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(17, 166, 74, 0.3); }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        #reviewSuccess { display: none; margin-top: 15px; padding: 15px; background: #e8f5e9; border-radius: 12px; color: #1a7a3a; font-weight: 700; text-align: center; }
+        
         @media (max-width: 768px) {
-            .testimonial-slider .testimonial-card {
-                padding: 20px;
-            }
-            .testimonial-slider .testimonial-card p {
-                font-size: 0.95rem;
-            }
-            .testimonial-slider .testimonial-card h4 {
-                font-size: 0.85rem;
-            }
+            .testimonials-page { padding: 50px 0; }
+            .testimonials-page h1 { font-size: 28px; }
+            .testimonial-item { padding: 20px; }
+            .testimonial-item p { font-size: 0.95rem; }
+            .testimonial-item .author { font-size: 0.85rem; }
+            .page-header { flex-direction: column; align-items: center; }
+            .submit-review { padding: 25px; }
+            .form-row { grid-template-columns: 1fr; }
         }
         @media (max-width: 480px) {
-            .testimonial-slider .testimonial-card {
-                padding: 15px;
-                border-radius: 14px;
-            }
-            .testimonial-slider .testimonial-card p {
-                font-size: 0.9rem;
-                line-height: 1.9;
-            }
+            .testimonials-page { padding: 30px 0; }
+            .testimonials-page h1 { font-size: 22px; }
+            .testimonial-item { padding: 15px; border-radius: 14px; }
+            .testimonial-item p { font-size: 0.9rem; }
+            .submit-review { padding: 18px; }
         }
     </style>
 </head>
@@ -316,7 +104,7 @@
         <a href="index.html" class="logo"><img src="images/logo.png" alt="لوگو"></a>
         <nav class="navbar">
             <ul>
-                <li><a href="index.html" class="active">صفحه اصلی</a></li>
+                <li><a href="index.html">صفحه اصلی</a></li>
                 <li><a href="services.html">خدمات مسکونی</a></li>
                 <li><a href="commercial-services.html">خدمات تجاری</a></li>
                 <li><a href="about.html">درباره ما</a></li>
@@ -334,353 +122,116 @@
     </div>
 </header>
 
-<!-- ===== اسلایدر ===== -->
-<section class="hero-slider">
-    <div class="slider-container">
-        <div class="slide active"><img src="images/slider/slide1.jpg?v=1" alt="اسلاید ۱"></div>
-        <div class="slide"><img src="images/slider/slide2.jpg?v=1" alt="اسلاید ۲"></div>
-        <div class="slide"><img src="images/slider/slide3.jpg?v=1" alt="اسلاید ۳"></div>
-        <div class="slide"><img src="images/slider/slide4.jpg?v=1" alt="اسلاید ۴"></div>
-        <div class="slide"><img src="images/slider/slide5.jpg?v=1" alt="اسلاید ۵"></div>
-        <button class="slider-btn prev" id="prevSlide">❮</button>
-        <button class="slider-btn next" id="nextSlide">❯</button>
-    </div>
-    <div class="slider-dots">
-        <span class="dot active" data-index="0"></span>
-        <span class="dot" data-index="1"></span>
-        <span class="dot" data-index="2"></span>
-        <span class="dot" data-index="3"></span>
-        <span class="dot" data-index="4"></span>
-    </div>
-</section>
-
-<!-- ===== بخش خدمات مسکونی ===== -->
-<section id="services" class="services">
+<section class="testimonials-page">
     <div class="container">
-        <h2>خدمات تخصصی شرکت سمپاشی نانوفناوران</h2>
-        <p class="section-description" style="font-size: 1.3rem;">
-            <a href="services.html" style="color: var(--secondary); font-weight: 900; text-decoration: none; transition: 0.3s; display: inline-block; padding: 10px 20px; border-radius: 12px; background: rgba(17, 166, 74, 0.08);">
-                کنترل آفات مسکونی (سوسک ریز آلمانی، ساس، پشه،...)
-            </a>
-        </p>
-    </div>
-</section>
-
-<!-- ===== لیست کامل خدمات مسکونی (با ترتیب جدید) ===== -->
-<section class="services-list">
-    <div class="container">
-        <h2>همه خدمات کنترل آفات مسکونی</h2>
-        <p class="section-description">برای مشاهده جزئیات هر خدمت، روی آن کلیک کنید</p>
-        <div class="services-grid-all">
-            <a href="service/german-cockroach.html" class="service-item">
-                <img src="images/services/german-cockroach.jpg?v=1" alt="سوسک ریز آلمانی">
-                <span>سمپاشی سوسک ریز آلمانی</span>
-            </a>
-            <a href="service/cockroach-sewer.html" class="service-item">
-                <img src="images/services/cockroach-sewer.jpg?v=1" alt="سوسک فاضلابی">
-                <span>سمپاشی سوسک فاضلابی</span>
-            </a>
-            <a href="service/bedbug.html" class="service-item">
-                <img src="images/services/bedbug.jpg?v=1" alt="ساس">
-                <span>سمپاشی ساس</span>
-            </a>
-            <a href="service/ant.html" class="service-item">
-                <img src="images/services/ant.jpg?v=1" alt="مورچه">
-                <span>سمپاشی مورچه</span>
-            </a>
-            <a href="service/rat-control.html" class="service-item">
-                <img src="images/services/rat-control.jpg?v=1" alt="موش">
-                <span>طعمه‌گذاری و کنترل موش</span>
-            </a>
-            <a href="service/mosquito.html" class="service-item">
-                <img src="images/services/mosquito.jpg?v=1" alt="پشه">
-                <span>سمپاشی پشه</span>
-            </a>
-            <a href="service/fly.html" class="service-item">
-                <img src="images/services/fly.jpg?v=1" alt="مگس">
-                <span>سمپاشی مگس</span>
-            </a>
-            <a href="service/pigeon-repellent.html" class="service-item">
-                <img src="images/services/pigeon-repellent.jpg?v=1" alt="کبوتر">
-                <span>دور کردن کبوتر</span>
-            </a>
-            <a href="service/tick.html" class="service-item">
-                <img src="images/services/tick.jpg?v=1" alt="کنه کبوتر">
-                <span>سمپاشی کنه کبوتر</span>
-            </a>
-            <a href="service/flea.html" class="service-item">
-                <img src="images/services/flea.jpg?v=1" alt="کک">
-                <span>سمپاشی کک</span>
-            </a>
-            <a href="service/louse.html" class="service-item">
-                <img src="images/services/louse.jpg?v=1" alt="شپش">
-                <span>سمپاشی شپش</span>
-            </a>
-            <a href="service/mite.html" class="service-item">
-                <img src="images/services/mite.jpg?v=1" alt="مایت">
-                <span>سمپاشی مایت</span>
-            </a>
-            <a href="service/spider.html" class="service-item">
-                <img src="images/services/spider.jpg?v=1" alt="عنکبوت">
-                <span>سمپاشی عنکبوت</span>
-            </a>
-            <a href="service/scorpion.html" class="service-item">
-                <img src="images/services/scorpion.jpg?v=1" alt="عقرب">
-                <span>سمپاشی عقرب</span>
-            </a>
-            <a href="service/snake.html" class="service-item">
-                <img src="images/services/snake.jpg?v=1" alt="مار">
-                <span>سمپاشی مار</span>
-            </a>
-            <a href="service/wood-borer.html" class="service-item">
-                <img src="images/services/wood-borer.jpg?v=1" alt="سوسک چوب‌خوار">
-                <span>سمپاشی سوسک چوب‌خوار</span>
-            </a>
-            <a href="service/carpet-moth.html" class="service-item">
-                <img src="images/services/carpet-moth.jpg?v=1" alt="بید فرش">
-                <span>سمپاشی بید فرش</span>
-            </a>
-            <a href="service/millipede.html" class="service-item">
-                <img src="images/services/millipede.jpg?v=1" alt="هزارپا">
-                <span>سمپاشی هزارپا</span>
-            </a>
-            <a href="service/silverfish.html" class="service-item">
-                <img src="images/services/silverfish.jpg?v=1" alt="سیلور فیش">
-                <span>سمپاشی سیلور فیش</span>
-            </a>
-            <a href="service/earwig.html" class="service-item">
-                <img src="images/services/earwig.jpg?v=1" alt="گوش خیزک">
-                <span>سمپاشی گوش خیزک</span>
-            </a>
-            <a href="service/bean-moth.html" class="service-item">
-                <img src="images/services/bean-moth.jpg?v=1" alt="بید حبوبات">
-                <span>سمپاشی بید حبوبات</span>
-            </a>
-            <a href="service/rice-weevil.html" class="service-item">
-                <img src="images/services/rice-weevil.jpg?v=1" alt="شپشک برنج">
-                <span>سمپاشی شپشک برنج</span>
-            </a>
-            <a href="service/disinfection.html" class="service-item">
-                <img src="images/services/disinfection.jpg?v=1" alt="ضدعفونی">
-                <span>ضدعفونی محیط</span>
-            </a>
-            <a href="service/sanitization.html" class="service-item">
-                <img src="images/services/sanitization.jpg?v=1" alt="گندزدایی">
-                <span>گندزدایی محیط</span>
-            </a>
-            <a href="service/residential.html" class="service-item">
-                <img src="images/services/residential.jpg?v=1" alt="منازل">
-                <span>سمپاشی منازل</span>
-            </a>
-            <a href="service/apartment.html" class="service-item">
-                <img src="images/services/apartment.jpg?v=1" alt="آپارتمان">
-                <span>سمپاشی آپارتمان‌ها</span>
-            </a>
-            <a href="service/villa.html" class="service-item">
-                <img src="images/services/villa.jpg?v=1" alt="ویلا">
-                <span>سمپاشی ویلا</span>
-            </a>
-        </div>
-    </div>
-</section>
-
-<!-- ===== بخش کنترل آفات تجاری ===== -->
-<section class="services-list" style="background: #f8fbfd;">
-    <div class="container">
-        <h2>🏢 کنترل آفات تجاری</h2>
-        <p class="section-description">
-            <a href="commercial-services.html" style="color: var(--secondary); font-weight: 900; text-decoration: none; transition: 0.3s; display: inline-block; padding: 10px 20px; border-radius: 12px; background: rgba(17, 166, 74, 0.08);">
-                مشاهده همه خدمات کنترل آفات تجاری (هتل، رستوران، کارخانه، ...)
-            </a>
-        </p>
-    </div>
-</section>
-
-<!-- ===== لیست کامل خدمات تجاری ===== -->
-<section class="services-list">
-    <div class="container">
-        <h2>همه خدمات کنترل آفات تجاری</h2>
-        <p class="section-description">برای مشاهده جزئیات هر خدمت، روی آن کلیک کنید</p>
-        <div class="services-grid-all">
-            <a href="commercial/hotel.html" class="service-item">
-                <img src="images/commercial/hotel.jpg?v=1" alt="هتل">
-                <span>سمپاشی هتل‌ها</span>
-            </a>
-            <a href="commercial/restaurant.html" class="service-item">
-                <img src="images/commercial/restaurant.jpg?v=1" alt="رستوران">
-                <span>سمپاشی رستوران‌ها</span>
-            </a>
-            <a href="commercial/factory.html" class="service-item">
-                <img src="images/commercial/factory.jpg?v=1" alt="کارخانه">
-                <span>سمپاشی کارخانجات</span>
-            </a>
-            <a href="commercial/warehouse.html" class="service-item">
-                <img src="images/commercial/warehouse.jpg?v=1" alt="انبار">
-                <span>سمپاشی انبارها و سیلوها</span>
-            </a>
-            <a href="commercial/mall.html" class="service-item">
-                <img src="images/commercial/mall.jpg?v=1" alt="مرکز خرید">
-                <span>سمپاشی مراکز خرید</span>
-            </a>
-            <a href="commercial/hospital.html" class="service-item">
-                <img src="images/commercial/hospital.jpg?v=1" alt="بیمارستان">
-                <span>سمپاشی بیمارستان‌ها</span>
-            </a>
-            <a href="commercial/school.html" class="service-item">
-                <img src="images/commercial/school.jpg?v=1" alt="مدرسه">
-                <span>سمپاشی مدارس</span>
-            </a>
-            <a href="commercial/office.html" class="service-item">
-                <img src="images/commercial/office.jpg?v=1" alt="اداره">
-                <span>سمپاشی ادارات</span>
-            </a>
-            <a href="commercial/gym.html" class="service-item">
-                <img src="images/commercial/gym.jpg?v=1" alt="باشگاه ورزشی">
-                <span>سمپاشی باشگاه‌های ورزشی</span>
-            </a>
-            <a href="commercial/garden.html" class="service-item">
-                <img src="images/commercial/garden.jpg?v=1" alt="باغچه">
-                <span>سمپاشی باغچه</span>
-            </a>
-        </div>
-
-        <!-- ===== باکس جمله رضایت ===== -->
-        <div class="satisfaction-box">
-            <span class="heart">❤️</span>
-            تازمانی که رضایت شما حاصل نشود، ما از کار خود راضی نخواهیم بود.
-            <span class="heart">❤️</span>
-        </div>
-
-        <!-- ===== باکس کانال حشره‌شناسی ===== -->
-        <div class="insect-channel-box">
-            <span class="channel-icon">🐜</span>
-            <h3>کانال حشره‌شناسی نانوفناوران</h3>
-            <p>با ما همراه شوید و از جدیدترین مطالب تخصصی در زمینه کنترل آفات، حشره‌شناسی و روش‌های نوین سمپاشی مطلع شوید.</p>
-            <a href="https://ble.ir/nanofannavaran" target="_blank" class="channel-btn">
-                <span>📱</span> عضویت در کانال بله
-            </a>
-        </div>
-    </div>
-</section>
-
-<!-- ===== درباره شرکت ===== -->
-<section class="about-company">
-    <div class="container">
-        <div class="about-image">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="auto" style="border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,.15); background: linear-gradient(135deg, #0B6FB8, #11A64A);">
-                <text x="50%" y="45%" font-family="Vazirmatn, sans-serif" font-size="28" fill="white" text-anchor="middle" dominant-baseline="middle">نانوفناوران</text>
-                <text x="50%" y="60%" font-family="Vazirmatn, sans-serif" font-size="16" fill="rgba(255,255,255,0.8)" text-anchor="middle" dominant-baseline="middle">کنترل آفات تخصصی</text>
-                <circle cx="200" cy="150" r="60" fill="rgba(255,255,255,0.1)"/>
-                <path d="M170 180 L200 130 L230 180 Z" fill="white" opacity="0.6"/>
-                <rect x="160" y="190" width="80" height="10" rx="5" fill="white" opacity="0.3"/>
-                <rect x="180" y="210" width="40" height="10" rx="5" fill="white" opacity="0.2"/>
-            </svg>
-        </div>
-        <div class="about-content">
-            <span class="section-subtitle">درباره نانوفناوران</span>
-            <h2>شرکت سمپاشی نانوفناوران بهداشت تهران</h2>
-            <p>با بیش از دو دهه تجربه، یکی از مجموعه‌های تخصصی و خوش‌نام در زمینه کنترل آفات شهری، خانگی و صنعتی است.</p>
-            <div class="about-features">
-                <div class="feature-item">✔ بیش از ۲۰ سال تجربه</div>
-                <div class="feature-item">✔ سموم استاندارد</div>
-                <div class="feature-item">✔ کارشناسان مجرب</div>
-                <div class="feature-item">✔ ضمانت خدمات</div>
+        <div class="page-header">
+            <div>
+                <h1>📝 نظرات و تقدیرنامه‌های مشتریان</h1>
+                <p class="sub-title">آنچه مشتریان ما درباره خدمات شرکت سمپاشی نانوفناوران گفته‌اند</p>
             </div>
-            <a href="about.html" class="btn">بیشتر بدانید</a>
+            <a href="index.html" class="back-home">🏠 بازگشت به صفحه اصلی</a>
         </div>
-    </div>
-</section>
 
-<!-- ===== آمار ===== -->
-<section class="stats">
-    <div class="container">
-        <h2>افتخارات ما</h2>
-        <div class="stats-grid">
-            <div class="stat-card"><div class="stat-number">15+</div><h3>سال تجربه</h3></div>
-            <div class="stat-card"><div class="stat-number">5000+</div><h3>پروژه موفق</h3></div>
-            <div class="stat-card"><div class="stat-number">100%</div><h3>رضایت مشتریان</h3></div>
-            <div class="stat-card"><div class="stat-number">22</div><h3>منطقه تحت پوشش</h3></div>
+        <!-- ۱۱ نظر کامل -->
+        <div class="testimonial-item">
+            <span class="quote-icon">"</span>
+            <p>همکاری با شرکت سمپاشی نانوفناوران یکی از بهترین تصمیم‌های مدیریتی ما بود. تیم حرفه‌ای و متخصص آنها با دقت و ظرافت کامل، عملیات سمپاشی و کنترل آفات را در مجموعه تجاری ما انجام دادند. بدون هیچ گونه مزاحمتی برای کسب‌وکار واحدهای تجاری، محیطی بهداشتی و عاری از آفات برای مشتریان و پرسنل فراهم کردند. واقعاً از تخصص و تعهدشان سپاسگزاریم.</p>
+            <div class="author">امیر حسین کریمی - مدیر مرکز خرید بوتیک مال ملل</div>
         </div>
-    </div>
-</section>
 
-<!-- ===== نظرات مشتریان (اسلایدر) ===== -->
-<section class="testimonials">
-    <div class="container">
-        <h2>نظرات مشتریان</h2>
-        <p style="text-align:center;color:#666;margin-bottom:30px;">آنچه مشتریان ما درباره خدمات ما گفته‌اند</p>
-        
-        <div class="testimonial-slider" id="mainTestimonialSlider">
-            <!-- نظر ۱ -->
-            <div class="testimonial-card active">
-                <p>"همکاری با شرکت سمپاشی نانوفناوران یکی از بهترین تصمیم‌های مدیریتی ما بود. تیم حرفه‌ای و متخصص آنها با دقت و ظرافت کامل، عملیات سمپاشی و کنترل آفات را در مجموعه تجاری ما انجام دادند. بدون هیچ گونه مزاحمتی برای کسب‌وکار واحدهای تجاری، محیطی بهداشتی و عاری از آفات برای مشتریان و پرسنل فراهم کردند. واقعاً از تخصص و تعهدشان سپاسگزاریم."</p>
-                <h4>امیر حسین کریمی - مدیر مرکز خرید بوتیک مال ملل</h4>
-            </div>
+        <div class="testimonial-item">
+            <span class="quote-icon">"</span>
+            <p>در محیط حساس بیمارستانی، رعایت استانداردهای بهداشتی و استفاده از سموم مجاز و بی‌خطر از اولویت‌های اصلی ماست. شرکت نانوفناوران با دانش فنی بالا و استفاده از پیشرفته‌ترین روش‌های روز دنیا، عملیات کنترل آفات را با بالاترین کیفیت انجام دادند. گزارش‌های دقیق و مستندسازی کامل کار، نشان از حرفه‌ای‌گری این مجموعه دارد. به تمام مراکز درمانی و بیمارستان‌ها، همکاری با این شرکت را توصیه می‌کنم.</p>
+            <div class="author">مهندس سعید مرادی - مسئول HSE بیمارستان مادران</div>
+        </div>
+
+        <div class="testimonial-item">
+            <span class="quote-icon">"</span>
+            <p>صنعت آرد و غله به دلیل ماهیت مواد اولیه، همواره در معرض خطر هجوم آفات مختلف است. شرکت سمپاشی نانوفناوران با شناخت کامل از چالش‌های این صنعت، برنامه‌ای جامع و اصولی برای کنترل آفات انبارها و خطوط تولید ما تدوین کرد. سموم مورد استفاده استاندارد و تأییدیه‌های لازم را داشتند و کارکنان ما نیز آموزش‌های لازم را دریافت کردند. از همکاری ارزشمندشان بسیار راضی هستیم.</p>
+            <div class="author">مهندس رضا محمدی - مسئول HSE شرکت آرد و غله استان تهران</div>
+        </div>
+
+        <div class="testimonial-item">
+            <span class="quote-icon">"</span>
+            <p>با توجه به حساسیت بالای مجموعه‌های نظامی و رعایت امنیت غذایی در رستوران‌های تحت پوشش، انتخاب پیمانکار کنترل آفات بسیار اهمیت دارد. تیم نانوفناوران با حفظ کامل محرمانگی و رعایت دقیق پروتکل‌های امنیتی، عملیات سمپاشی را با بهترین کیفیت و کمترین زمان انجام دادند. پرسنل مجرب و متعهد آنها، کاری بی‌نقص ارائه کردند. امیدواریم همکاری ادامه‌دار باشد.</p>
+            <div class="author">سرهنگ علی اکبری - مدیر رستوران مرکز نظامی</div>
+        </div>
+
+        <div class="testimonial-item">
+            <span class="quote-icon">"</span>
+            <p>مدت‌ها بود که کبوترها و کنه‌های ناشی از آنها، آرامش را از ما گرفته بودند. بالکن و حیاط خانه‌مان کاملاً آلوده شده بود و بچه‌ها دیگر نمی‌توانستند در حیاط بازی کنند. با تماس با شرکت نانوفناوران، متخصصانشان سریعاً آمدند و مشکل را بررسی کردند. هم سمپاشی کنه و مایت کبوتر را انجام دادند و هم راهکارهای جلوگیری از بازگشت کبوترها را به ما آموزش دادند. واقعاً نفس‌مان راحت شد. خدا را شکر که با این شرکت آشنا شدیم. از ته دل تشکر می‌کنم.</p>
+            <div class="author">مهراد یوسفیان</div>
+        </div>
+
+        <div class="testimonial-item">
+            <span class="quote-icon">"</span>
+            <p>خیلی خجالت‌آور بود، اما می‌خواهم تجربه‌ام را به اشتراک بگذارم تا دیگران هم از این مشکل خلاص شوند. چند ماهی بود که با ساس‌های تختخوابی دست و پنجه نرم می‌کردیم. هر کاری کردیم، هیچ نتیجه‌ای نگرفتیم. تا اینکه یکی از آشناها شرکت نانوفناوران را معرفی کرد. کارشناسانشان با دقت کامل، تمام نقاط خانه را بررسی کردند و سمپاشی تخصصی ساس را انجام دادند. حتی راهنمایی کردند که چه اقداماتی انجام دهیم تا دوباره برنگردند. دیگر هیچ خبری از ساس نیست و آرامش به خانه‌مان برگشت. خدا را شکر و به همه کسانی که این مشکل را دارند، توصیه می‌کنم حتماً با این شرکت تماس بگیرند.</p>
+            <div class="author">خانم رستگاری</div>
+        </div>
+
+        <div class="testimonial-item">
+            <span class="quote-icon">"</span>
+            <p>چند وقتی بود که سوسک‌های ریز آلمانی مهمان ناخوانده‌ی کابینت آشپزخانه‌مان شده بودند. هر روز صبح که چشم باز می‌کردیم، چندتایی از آنها را می‌دیدیم که فرار می‌کردند. واقعاً اعصابمان خرد شده بود. با شرکت نانوفناوران تماس گرفتم و همان روز کارشناسانشان آمدند و بررسی کامل انجام دادند. سمپاشی تخصصی سوسک کابینتی را با دقت بالا انجام دادند و حتی به ما گفتند که مواد غذایی را چگونه نگهداری کنیم تا دوباره برنگردند. الان چند ماهی می‌گذرد و خبری از سوسک نیست. تشکر ویژه از تیم حرفه‌ای نانوفناوران.</p>
+            <div class="author">غفاری - قیطریه</div>
+        </div>
+
+        <div class="testimonial-item">
+            <span class="quote-icon">"</span>
+            <p>خانه‌مان در سعادت‌آباد، حیاط کوچکی دارد که همیشه با مشکل مورچه دست و پنجه نرم می‌کردیم. مورچه‌ها از هر دری وارد می‌شدند و دیوانه‌مان کرده بودند. هر روش خانگی را امتحان کردیم، اما هیچکدام جواب نداد. تا اینکه یکی از همسایه‌ها شرکت نانوفناوران را معرفی کرد. تیمشان با سمپاشی اصولی و طعمه‌گذاری حرفه‌ای، مشکل مورچه را برای همیشه حل کردند. حالا با خیال راحت می‌توانیم در حیاط بنشینیم و از هوای خوب لذت ببریم. از صمیم قلب سپاسگزارم.</p>
+            <div class="author">ندا یاراحمدی - سعادت‌آباد</div>
+        </div>
+
+        <div class="testimonial-item">
+            <span class="quote-icon">"</span>
+            <p>یک سال پیش که فرش دستبافت گران‌قیمت مادربزرگم را برای نظافت به قالیشویی دادم، بعد از برگشت متوجه شدم که بید فرش به آن آسیب زده است. واقعاً ناراحت شده بودم. با شرکت نانوفناوران تماس گرفتم و کارشناسانشان با دقت کامل، فرش و محیط خانه را بررسی کردند. سمپاشی تخصصی بید فرش را انجام دادند و همچنین نکات مهم برای جلوگیری از بازگشت بیدها را به من آموزش دادند. حالا هر سال قبل از فصل گرما، از خدمات آنها استفاده می‌کنم تا دیگر خطری فرش‌های عزیزم را تهدید نکند. ممنون از تیم حرفه‌ای نانوفناوران.</p>
+            <div class="author">رکسانا جلایی‌پور - نیاوران</div>
+        </div>
+
+        <div class="testimonial-item">
+            <span class="quote-icon">"</span>
+            <p>به عنوان یک پزشک، به بهداشت و سلامت محیط اهمیت ویژه‌ای می‌دهم. باغچه‌ی منزل ما در شهرک غرب، جایگاه استراحت و آرامش خانواده است، اما وجود آفات مختلف همیشه مزاحم بود. شرکت نانوفناوران با استفاده از سموم مجاز و بی‌خطر برای سلامت انسان و محیط زیست، سمپاشی باغچه‌ی ما را با بهترین کیفیت انجام دادند. تیم حرفه‌ای و متعهد آنها، کاری بی‌نقص ارائه کردند. به همه همسایه‌ها و دوستان این شرکت را معرفی کرده‌ام. واقعاً قابل اعتماد و حرفه‌ای هستند.</p>
+            <div class="author">دکتر کنعانی - شهرک غرب</div>
+        </div>
+
+        <div class="testimonial-item">
+            <span class="quote-icon">"</span>
+            <p>وقتی ساختمان قدیمی‌مان را بازسازی کردیم، متوجه شدیم که شکاف‌ها و درزهای مختلف، محل عبور موش‌ها و آفات شده است. یکی از دوستان شرکت نانوفناوران را به ما معرفی کرد. تیم حرفه‌ای آنها با دقت و ظرافت کامل، تمام درزها و شکاف‌های ساختمان را بررسی کردند و با استفاده از مصالح مرغوب و اصولی، عملیات بستن در انقطاع را انجام دادند. همچنین طعمه‌گذاری موش‌ها را هم انجام دادند تا هیچ خطری ساختمان را تهدید نکند. حالا با خیال راحت می‌توانیم در ساختمان زندگی کنیم. از دقت و حرفه‌ای‌گری آنها سپاسگزارم.</p>
+            <div class="author">محمد امین پناهی - تهرانپارس</div>
+        </div>
+
+        <!-- فرم ارسال نظر -->
+        <div class="submit-review">
+            <h3>✍️ ارسال نظر شما</h3>
+            <p class="form-desc">اگر شما نیز از خدمات ما استفاده کرده‌اید، لطفاً نظر خود را با ما به اشتراک بگذارید.</p>
             
-            <!-- نظر ۲ -->
-            <div class="testimonial-card">
-                <p>"در محیط حساس بیمارستانی، رعایت استانداردهای بهداشتی و استفاده از سموم مجاز و بی‌خطر از اولویت‌های اصلی ماست. شرکت نانوفناوران با دانش فنی بالا و استفاده از پیشرفته‌ترین روش‌های روز دنیا، عملیات کنترل آفات را با بالاترین کیفیت انجام دادند. گزارش‌های دقیق و مستندسازی کامل کار، نشان از حرفه‌ای‌گری این مجموعه دارد. به تمام مراکز درمانی و بیمارستان‌ها، همکاری با این شرکت را توصیه می‌کنم."</p>
-                <h4>مهندس سعید مرادی - مسئول HSE بیمارستان مادران</h4>
-            </div>
-            
-            <!-- نظر ۳ -->
-            <div class="testimonial-card">
-                <p>"مدت‌ها بود که کبوترها و کنه‌های ناشی از آنها، آرامش را از ما گرفته بودند. بالکن و حیاط خانه‌مان کاملاً آلوده شده بود و بچه‌ها دیگر نمی‌توانستند در حیاط بازی کنند. با تماس با شرکت نانوفناوران، متخصصانشان سریعاً آمدند و مشکل را بررسی کردند. هم سمپاشی کنه و مایت کبوتر را انجام دادند و هم راهکارهای جلوگیری از بازگشت کبوترها را به ما آموزش دادند. واقعاً نفس‌مان راحت شد. خدا را شکر که با این شرکت آشنا شدیم. از ته دل تشکر می‌کنم."</p>
-                <h4>مهراد یوسفیان</h4>
-            </div>
+            <form id="reviewForm" onsubmit="sendReview(event)">
+                <div class="form-row">
+                    <input type="text" id="reviewName" placeholder="نام و نام خانوادگی" required>
+                    <input type="tel" id="reviewPhone" placeholder="شماره تماس (اختیاری)">
+                </div>
+                <div class="form-row">
+                    <input type="text" id="reviewLocation" placeholder="منطقه/محله (مثلاً قیطریه)">
+                    <input type="text" id="reviewService" placeholder="نوع خدمات (مثلاً سمپاشی سوسک)">
+                </div>
+                <textarea id="reviewMessage" rows="5" placeholder="نظر شما درباره خدمات ما..." required></textarea>
+                <button type="submit">📧 ارسال نظر به ایمیل</button>
+            </form>
+            <div id="reviewSuccess">✅ نظر شما با موفقیت ارسال شد. از شما سپاسگزاریم!</div>
         </div>
-        
-        <!-- دکمه‌های اسلایدر -->
-        <div style="text-align:center;margin-top:20px;">
-            <button onclick="prevTestimonial()" style="background:#0B6FB8;color:#fff;border:none;padding:10px 20px;border-radius:8px;cursor:pointer;margin:0 5px;font-size:1.2rem;">❮</button>
-            <button onclick="nextTestimonial()" style="background:#0B6FB8;color:#fff;border:none;padding:10px 20px;border-radius:8px;cursor:pointer;margin:0 5px;font-size:1.2rem;">❯</button>
-        </div>
-        
-        <!-- دکمه مشاهده همه نظرات -->
-        <div style="text-align:center;margin-top:30px;">
-            <a href="testimonials.html" style="display:inline-block;background:#11A64A;color:#fff;padding:14px 40px;border-radius:12px;text-decoration:none;font-weight:700;font-size:1.1rem;transition:0.3s;">📝 مشاهده همه نظرات و تقدیرنامه‌ها</a>
-        </div>
+
     </div>
 </section>
 
-<!-- ===== فرم تماس (متصل به واتساپ) ===== -->
-<section class="contact">
-    <div class="container">
-        <h2>ثبت درخواست سمپاشی</h2>
-        <p style="text-align:center;color:#666;margin-bottom:20px;">با تکمیل این فرم، درخواست شما مستقیماً به واتساپ شرکت ارسال می‌شود</p>
-        <form class="contact-form" id="requestForm" onsubmit="sendToWhatsApp(event)">
-            <input type="text" id="reqName" placeholder="نام و نام خانوادگی" required>
-            <input type="tel" id="reqPhone" placeholder="شماره تماس" required>
-            <select id="reqService" required>
-                <option value="">نوع خدمات</option>
-                <option>سمپاشی منازل</option>
-                <option>سمپاشی تجاری</option>
-                <option>سمپاشی سوسک</option>
-                <option>سمپاشی ساس</option>
-                <option>طعمه‌گذاری موش</option>
-                <option>ضدعفونی و گندزدایی</option>
-            </select>
-            <textarea id="reqMessage" rows="4" placeholder="توضیحات (مثلاً آدرس، زمان مناسب و...)" required></textarea>
-            <button type="submit">💬 ارسال درخواست از طریق واتساپ</button>
-        </form>
-        <div id="requestSuccess" style="display:none;margin-top:15px;padding:15px;background:#e8f5e9;border-radius:12px;color:#1a7a3a;font-weight:700;text-align:center;">
-            ✅ درخواست شما با موفقیت ارسال شد. به زودی با شما تماس خواهیم گرفت.
-        </div>
-    </div>
-</section>
-
-<!-- ===== فوتر ===== -->
 <footer class="site-footer">
     <div class="container">
         <div class="footer-grid">
             <div class="footer-box"><h3>نانوفناوران</h3><p>ارائه‌دهنده خدمات تخصصی کنترل آفات در تهران</p></div>
-            <div class="footer-box"><h3>اطلاعات تماس</h3><p>📱 09120705746</p><p>☎️ 22048278</p></div>
+            <div class="footer-box"><h3>اطلاعات تماس</h3><p>📱 09120705746</p><p>☎️ 02122048278</p></div>
         </div>
         <hr><p class="copyright">© تمامی حقوق محفوظ است</p>
     </div>
 </footer>
 
-<!-- ===== دکمه شناور ===== -->
 <div class="floating-container">
     <button class="floating-main-btn" id="floatingToggle">
         <span class="btn-arrow">▶</span>
@@ -694,118 +245,51 @@
                 <span class="arrow">▲</span>
             </div>
             <div class="call-submenu" id="callSubmenu">
-                <a href="tel:09120705746" class="floating-item call-sub-item">
-                    <span class="item-icon">📞</span>
-                    <span class="item-text">شماره ۱</span>
-                </a>
-                <a href="tel:09197173454" class="floating-item call-sub-item">
-                    <span class="item-icon">📞</span>
-                    <span class="item-text">شماره ۲</span>
-                </a>
+                <a href="tel:09120705746" class="floating-item call-sub-item"><span class="item-icon">📞</span><span class="item-text">شماره ۱</span></a>
+                <a href="tel:09197173454" class="floating-item call-sub-item"><span class="item-icon">📞</span><span class="item-text">شماره ۲</span></a>
             </div>
         </div>
-        <a href="https://wa.me/989120705746?text=%D8%A8%D9%87%20%D8%B3%D8%A7%DB%8C%D8%AA%20%D8%B4%D8%B1%DA%A9%D8%AA%20%D8%B3%D9%85%D9%BE%D8%A7%D8%B4%DB%8C%20%D9%86%D8%A7%D9%86%D9%88%D9%81%D9%86%D8%A7%D9%88%D8%B1%D8%A7%D9%86%20%D8%AE%D9%88%D8%B4%20%D8%A2%D9%85%D8%AF%DB%8C%D8%AF.%20%DA%86%DA%AF%D9%88%D9%86%D9%87%20%D9%85%DB%8C%E2%80%8C%D8%AA%D9%88%D8%A7%D9%86%D9%85%20%DA%A9%D9%85%DA%A9%20%D8%AA%D8%A7%D9%86%20%DA%A9%D9%86%D9%85%D8%9F" target="_blank" class="floating-item whatsapp-item">
-            <span class="item-icon">💬</span>
-            <span class="item-text">واتساپ</span>
-        </a>
-        <a href="https://eitaa.com/nanofannavaran_ir" target="_blank" class="floating-item eitaa-item">
-            <span class="item-icon">✈️</span>
-            <span class="item-text">ایتا</span>
-        </a>
+        <a href="https://wa.me/989120705746" target="_blank" class="floating-item whatsapp-item"><span class="item-icon">💬</span><span class="item-text">واتساپ</span></a>
+        <a href="https://eitaa.com/nanofannavaran_ir" target="_blank" class="floating-item eitaa-item"><span class="item-icon">✈️</span><span class="item-text">ایتا</span></a>
     </div>
 </div>
 
-<!-- ===== دکمه اسکرول به بالا ===== -->
-<button id="backToTop" title="برو به بالا">↑</button>
-
 <script src="script.js"></script>
 
-<!-- ===== اسکریپت دکمه اسکرول ===== -->
 <script>
-    (function() {
-        var backToTopBtn = document.getElementById('backToTop');
-        if (backToTopBtn) {
-            window.addEventListener('scroll', function() {
-                if (window.scrollY > 300) {
-                    backToTopBtn.classList.add('show');
-                } else {
-                    backToTopBtn.classList.remove('show');
-                }
-            });
-            backToTopBtn.addEventListener('click', function() {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-        }
-    })();
-</script>
-
-<!-- ===== اسکریپت اسلایدر نظرات ===== -->
-<script>
-    let currentTestimonial = 0;
-    const testimonialCards = document.querySelectorAll('#mainTestimonialSlider .testimonial-card');
-    
-    function showTestimonial(index) {
-        testimonialCards.forEach((card, i) => {
-            card.classList.toggle('active', i === index);
-        });
-    }
-    
-    function nextTestimonial() {
-        if (testimonialCards.length === 0) return;
-        currentTestimonial = (currentTestimonial + 1) % testimonialCards.length;
-        showTestimonial(currentTestimonial);
-    }
-    
-    function prevTestimonial() {
-        if (testimonialCards.length === 0) return;
-        currentTestimonial = (currentTestimonial - 1 + testimonialCards.length) % testimonialCards.length;
-        showTestimonial(currentTestimonial);
-    }
-    
-    let autoSlide = setInterval(nextTestimonial, 5000);
-    
-    const sliderContainer = document.getElementById('mainTestimonialSlider');
-    if (sliderContainer) {
-        sliderContainer.addEventListener('mouseenter', function() {
-            clearInterval(autoSlide);
-        });
-        sliderContainer.addEventListener('mouseleave', function() {
-            autoSlide = setInterval(nextTestimonial, 5000);
-        });
-    }
-</script>
-
-<!-- ===== اسکریپت ارسال به واتساپ ===== -->
-<script>
-    function sendToWhatsApp(event) {
+    function sendReview(event) {
         event.preventDefault();
         
-        var name = document.getElementById('reqName').value.trim();
-        var phone = document.getElementById('reqPhone').value.trim();
-        var service = document.getElementById('reqService').value;
-        var message = document.getElementById('reqMessage').value.trim();
+        var name = document.getElementById('reviewName').value.trim();
+        var phone = document.getElementById('reviewPhone').value.trim();
+        var location = document.getElementById('reviewLocation').value.trim();
+        var service = document.getElementById('reviewService').value.trim();
+        var message = document.getElementById('reviewMessage').value.trim();
         
-        if (!name || !phone || !service || !message) {
-            alert('لطفاً تمام فیلدها را پر کنید.');
+        if (!name || !message) {
+            alert('لطفاً نام و نظر خود را وارد کنید.');
             return;
         }
         
-        var text = '📋 درخواست سمپاشی جدید از سایت:\n\n';
-        text += '👤 نام: ' + name + '\n';
-        text += '📱 شماره تماس: ' + phone + '\n';
-        text += '📌 نوع خدمات: ' + service + '\n';
-        text += '📝 توضیحات: ' + message;
+        var subject = encodeURIComponent('نظر جدید از سایت - ' + name);
+        var body = encodeURIComponent(
+            '👤 نام: ' + name + '\n' +
+            '📱 شماره تماس: ' + (phone || 'وارد نشده') + '\n' +
+            '📍 منطقه/محله: ' + (location || 'وارد نشده') + '\n' +
+            '📌 نوع خدمات: ' + (service || 'وارد نشده') + '\n\n' +
+            '📝 نظر:\n' + message
+        );
         
-        var encoded = encodeURIComponent(text);
-        var url = 'https://wa.me/989120705746?text=' + encoded;
+        var email = 'nanofannavaran.ae2005@gmail.com';
+        var url = 'mailto:' + email + '?subject=' + subject + '&body=' + body;
         
-        window.open(url, '_blank');
+        window.location.href = url;
         
-        document.getElementById('requestSuccess').style.display = 'block';
-        document.getElementById('requestForm').reset();
+        document.getElementById('reviewSuccess').style.display = 'block';
+        document.getElementById('reviewForm').reset();
         
         setTimeout(function() {
-            document.getElementById('requestSuccess').style.display = 'none';
+            document.getElementById('reviewSuccess').style.display = 'none';
         }, 5000);
     }
 </script>
