@@ -164,7 +164,6 @@
             border: none;
         }
 
-        /* ===== حالت موبایل ===== */
         @media (max-width: 768px) {
             .contact-page {
                 padding: 40px 0;
@@ -313,7 +312,7 @@
                     <div class="icon">📞</div>
                     <div>
                         <div class="label">تلفن ثابت</div>
-                        <a href="tel:22048278" class="value">22048278</a>
+                        <a href="tel:02122048278" class="value">02122048278</a>
                     </div>
                 </div>
                 
@@ -321,7 +320,7 @@
                     <div class="icon">📞</div>
                     <div>
                         <div class="label">تلفن ثابت</div>
-                        <a href="tel:86013062" class="value">86013062</a>
+                        <a href="tel:02186013062" class="value">02186013062</a>
                     </div>
                 </div>
                 
@@ -329,7 +328,7 @@
                     <div class="icon">📞</div>
                     <div>
                         <div class="label">تلفن ثابت</div>
-                        <a href="tel:66959729" class="value">66959729</a>
+                        <a href="tel:02166959729" class="value">02166959729</a>
                     </div>
                 </div>
                 
@@ -396,7 +395,7 @@
             <div class="footer-box">
                 <h3>اطلاعات تماس</h3>
                 <p>📱 09120705746</p>
-                <p>☎️ 22048278</p>
+                <p>☎️ 02122048278</p>
             </div>
         </div>
         <hr>
@@ -457,7 +456,6 @@
             return;
         }
         
-        // ساخت متن پیامک
         var text = 'درخواست جدید از سایت:\n';
         text += 'نام: ' + name + '\n';
         text += 'شماره: ' + phone + '\n';
@@ -465,11 +463,9 @@
         text += 'خدمات: ' + service + '\n';
         text += 'توضیحات: ' + message;
         
-        // ارسال پیامک به شماره 09197173454
         var encoded = encodeURIComponent(text);
         var url = 'sms:09197173454?body=' + encoded;
         
-        // باز کردن اپلیکیشن پیامک
         window.location.href = url;
     }
 </script>
