@@ -166,6 +166,65 @@
                 font-size: 1.3rem;
             }
         }
+
+        /* ===== استایل اسلایدر نظرات ===== */
+        .testimonial-slider {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            min-height: 220px;
+        }
+        .testimonial-slider .testimonial-card {
+            display: none;
+            background: #fff;
+            padding: 30px 35px;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0,0,0,.08);
+            border-right: 5px solid #11A64A;
+            animation: fadeIn 0.6s ease;
+        }
+        .testimonial-slider .testimonial-card.active {
+            display: block;
+        }
+        .testimonial-slider .testimonial-card p {
+            font-size: 1.05rem;
+            line-height: 2;
+            color: #333;
+            margin: 0 0 15px 0;
+        }
+        .testimonial-slider .testimonial-card h4 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #1a7a3a;
+            border-top: 2px dashed #e8f5e9;
+            padding-top: 15px;
+            margin: 0;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @media (max-width: 768px) {
+            .testimonial-slider .testimonial-card {
+                padding: 20px;
+            }
+            .testimonial-slider .testimonial-card p {
+                font-size: 0.95rem;
+            }
+            .testimonial-slider .testimonial-card h4 {
+                font-size: 0.85rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .testimonial-slider .testimonial-card {
+                padding: 15px;
+                border-radius: 14px;
+            }
+            .testimonial-slider .testimonial-card p {
+                font-size: 0.9rem;
+                line-height: 1.9;
+            }
+        }
     </style>
 </head>
 <body>
@@ -454,14 +513,41 @@
     </div>
 </section>
 
-<!-- ===== نظرات مشتریان ===== -->
+<!-- ===== نظرات مشتریان (اسلایدر جدید) ===== -->
 <section class="testimonials">
     <div class="container">
-        <h2>نظر مشتریان</h2>
-        <div class="testimonial-slider">
-            <div class="testimonial-card"><p>"کیفیت خدمات عالی بود، مشکل سوسک به طور کامل برطرف شد."</p><h4>- مشتری تهران</h4></div>
-            <div class="testimonial-card"><p>"سمپاشی مرکز تجاری بدون ایجاد مزاحمت انجام شد."</p><h4>- مدیر مجتمع تجاری</h4></div>
-            <div class="testimonial-card"><p>"بسیار حرفه‌ای و دقیق، استانداردهای بهداشتی رعایت شد."</p><h4>- مدیر مرکز درمانی</h4></div>
+        <h2>نظرات مشتریان</h2>
+        <p style="text-align:center;color:#666;margin-bottom:30px;">آنچه مشتریان ما درباره خدمات ما گفته‌اند</p>
+        
+        <div class="testimonial-slider" id="mainTestimonialSlider">
+            <!-- نظر ۱ -->
+            <div class="testimonial-card active">
+                <p>"همکاری با شرکت سمپاشی نانوفناوران یکی از بهترین تصمیم‌های مدیریتی ما بود. تیم حرفه‌ای و متخصص آنها با دقت و ظرافت کامل، عملیات سمپاشی و کنترل آفات را در مجموعه تجاری ما انجام دادند. بدون هیچ گونه مزاحمتی برای کسب‌وکار واحدهای تجاری، محیطی بهداشتی و عاری از آفات برای مشتریان و پرسنل فراهم کردند. واقعاً از تخصص و تعهدشان سپاسگزاریم."</p>
+                <h4>امیر حسین کریمی - مدیر مرکز خرید بوتیک مال ملل</h4>
+            </div>
+            
+            <!-- نظر ۲ -->
+            <div class="testimonial-card">
+                <p>"در محیط حساس بیمارستانی، رعایت استانداردهای بهداشتی و استفاده از سموم مجاز و بی‌خطر از اولویت‌های اصلی ماست. شرکت نانوفناوران با دانش فنی بالا و استفاده از پیشرفته‌ترین روش‌های روز دنیا، عملیات کنترل آفات را با بالاترین کیفیت انجام دادند. گزارش‌های دقیق و مستندسازی کامل کار، نشان از حرفه‌ای‌گری این مجموعه دارد. به تمام مراکز درمانی و بیمارستان‌ها، همکاری با این شرکت را توصیه می‌کنم."</p>
+                <h4>مهندس سعید مرادی - مسئول HSE بیمارستان مادران</h4>
+            </div>
+            
+            <!-- نظر ۳ -->
+            <div class="testimonial-card">
+                <p>"مدت‌ها بود که کبوترها و کنه‌های ناشی از آنها، آرامش را از ما گرفته بودند. بالکن و حیاط خانه‌مان کاملاً آلوده شده بود و بچه‌ها دیگر نمی‌توانستند در حیاط بازی کنند. با تماس با شرکت نانوفناوران، متخصصانشان سریعاً آمدند و مشکل را بررسی کردند. هم سمپاشی کنه و مایت کبوتر را انجام دادند و هم راهکارهای جلوگیری از بازگشت کبوترها را به ما آموزش دادند. واقعاً نفس‌مان راحت شد. خدا را شکر که با این شرکت آشنا شدیم. از ته دل تشکر می‌کنم."</p>
+                <h4>مهراد یوسفیان</h4>
+            </div>
+        </div>
+        
+        <!-- دکمه‌های اسلایدر -->
+        <div style="text-align:center;margin-top:20px;">
+            <button onclick="prevTestimonial()" style="background:#0B6FB8;color:#fff;border:none;padding:10px 20px;border-radius:8px;cursor:pointer;margin:0 5px;font-size:1.2rem;">❮</button>
+            <button onclick="nextTestimonial()" style="background:#0B6FB8;color:#fff;border:none;padding:10px 20px;border-radius:8px;cursor:pointer;margin:0 5px;font-size:1.2rem;">❯</button>
+        </div>
+        
+        <!-- دکمه مشاهده همه نظرات -->
+        <div style="text-align:center;margin-top:30px;">
+            <a href="testimonials.html" style="display:inline-block;background:#11A64A;color:#fff;padding:14px 40px;border-radius:12px;text-decoration:none;font-weight:700;font-size:1.1rem;transition:0.3s;">📝 مشاهده همه نظرات و تقدیرنامه‌ها</a>
         </div>
     </div>
 </section>
@@ -548,6 +634,45 @@
             });
         }
     })();
+</script>
+
+<!-- ===== اسکریپت اسلایدر نظرات ===== -->
+<script>
+    // اسلایدر نظرات صفحه اصلی
+    let currentTestimonial = 0;
+    const testimonialCards = document.querySelectorAll('#mainTestimonialSlider .testimonial-card');
+    
+    function showTestimonial(index) {
+        testimonialCards.forEach((card, i) => {
+            card.classList.toggle('active', i === index);
+        });
+    }
+    
+    function nextTestimonial() {
+        if (testimonialCards.length === 0) return;
+        currentTestimonial = (currentTestimonial + 1) % testimonialCards.length;
+        showTestimonial(currentTestimonial);
+    }
+    
+    function prevTestimonial() {
+        if (testimonialCards.length === 0) return;
+        currentTestimonial = (currentTestimonial - 1 + testimonialCards.length) % testimonialCards.length;
+        showTestimonial(currentTestimonial);
+    }
+    
+    // اسلایدر خودکار هر ۵ ثانیه
+    let autoSlide = setInterval(nextTestimonial, 5000);
+    
+    // توقف اسلایدر خودکار با هاور
+    const sliderContainer = document.getElementById('mainTestimonialSlider');
+    if (sliderContainer) {
+        sliderContainer.addEventListener('mouseenter', function() {
+            clearInterval(autoSlide);
+        });
+        sliderContainer.addEventListener('mouseleave', function() {
+            autoSlide = setInterval(nextTestimonial, 5000);
+        });
+    }
 </script>
 
 </body>
