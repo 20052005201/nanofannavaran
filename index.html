@@ -167,6 +167,76 @@
             }
         }
 
+        /* ===== باکس کانال حشره‌شناسی ===== */
+        .insect-channel-box {
+            max-width: 900px;
+            margin: 30px auto 0;
+            padding: 30px 35px;
+            background: linear-gradient(135deg, #f8f9fa, #e8f0fe);
+            border-radius: 20px;
+            border: 2px solid #0B6FB8;
+            box-shadow: 0 8px 25px rgba(11, 111, 184, 0.12);
+            text-align: center;
+            transition: 0.3s;
+        }
+        .insect-channel-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(11, 111, 184, 0.2);
+        }
+        .insect-channel-box .channel-icon {
+            font-size: 48px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .insect-channel-box h3 {
+            color: #0B6FB8;
+            font-size: 1.5rem;
+            font-weight: 900;
+            margin: 0 0 10px 0;
+        }
+        .insect-channel-box p {
+            color: #555;
+            font-size: 1.05rem;
+            line-height: 1.9;
+            max-width: 700px;
+            margin: 0 auto 20px;
+        }
+        .insect-channel-box .channel-btn {
+            display: inline-block;
+            background: #0B6FB8;
+            color: #fff;
+            padding: 14px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: 0.3s;
+        }
+        .insect-channel-box .channel-btn:hover {
+            background: #0a5a94;
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(11, 111, 184, 0.3);
+        }
+        .insect-channel-box .channel-btn span {
+            margin-left: 8px;
+        }
+        @media (max-width: 600px) {
+            .insect-channel-box {
+                padding: 20px;
+                margin: 20px 10px 0;
+            }
+            .insect-channel-box h3 {
+                font-size: 1.2rem;
+            }
+            .insect-channel-box p {
+                font-size: 0.95rem;
+            }
+            .insect-channel-box .channel-btn {
+                padding: 12px 25px;
+                font-size: 0.95rem;
+            }
+        }
+
         /* ===== استایل اسلایدر نظرات ===== */
         .testimonial-slider {
             position: relative;
@@ -284,7 +354,7 @@
     </div>
 </section>
 
-<!-- ===== لیست کامل خدمات مسکونی (با ترتیب جدید) ===== -->
+<!-- ===== لیست کامل خدمات مسکونی ===== -->
 <section class="services-list">
     <div class="container">
         <h2>همه خدمات کنترل آفات مسکونی</h2>
@@ -462,11 +532,21 @@
             </a>
         </div>
 
-        <!-- باکس جمله رضایت -->
+        <!-- ===== باکس جمله رضایت ===== -->
         <div class="satisfaction-box">
             <span class="heart">❤️</span>
             تازمانی که رضایت شما حاصل نشود، ما از کار خود راضی نخواهیم بود.
             <span class="heart">❤️</span>
+        </div>
+
+        <!-- ===== باکس کانال حشره‌شناسی ===== -->
+        <div class="insect-channel-box">
+            <span class="channel-icon">🐜</span>
+            <h3>کانال حشره‌شناسی نانوفناوران</h3>
+            <p>با ما همراه شوید و از جدیدترین مطالب تخصصی در زمینه کنترل آفات، حشره‌شناسی و روش‌های نوین سمپاشی مطلع شوید.</p>
+            <a href="https://ble.ir/nanofannavaran" target="_blank" class="channel-btn">
+                <span>📱</span> عضویت در کانال بله
+            </a>
         </div>
     </div>
 </section>
@@ -512,46 +592,39 @@
     </div>
 </section>
 
-<!-- ===== نظرات مشتریان (اسلایدر) ===== -->
+<!-- ===== نظرات مشتریان ===== -->
 <section class="testimonials">
     <div class="container">
         <h2>نظرات مشتریان</h2>
         <p style="text-align:center;color:#666;margin-bottom:30px;">آنچه مشتریان ما درباره خدمات ما گفته‌اند</p>
         
         <div class="testimonial-slider" id="mainTestimonialSlider">
-            <!-- نظر ۱ -->
             <div class="testimonial-card active">
                 <p>"همکاری با شرکت سمپاشی نانوفناوران یکی از بهترین تصمیم‌های مدیریتی ما بود. تیم حرفه‌ای و متخصص آنها با دقت و ظرافت کامل، عملیات سمپاشی و کنترل آفات را در مجموعه تجاری ما انجام دادند. بدون هیچ گونه مزاحمتی برای کسب‌وکار واحدهای تجاری، محیطی بهداشتی و عاری از آفات برای مشتریان و پرسنل فراهم کردند. واقعاً از تخصص و تعهدشان سپاسگزاریم."</p>
                 <h4>امیر حسین کریمی - مدیر مرکز خرید بوتیک مال ملل</h4>
             </div>
-            
-            <!-- نظر ۲ -->
             <div class="testimonial-card">
                 <p>"در محیط حساس بیمارستانی، رعایت استانداردهای بهداشتی و استفاده از سموم مجاز و بی‌خطر از اولویت‌های اصلی ماست. شرکت نانوفناوران با دانش فنی بالا و استفاده از پیشرفته‌ترین روش‌های روز دنیا، عملیات کنترل آفات را با بالاترین کیفیت انجام دادند. گزارش‌های دقیق و مستندسازی کامل کار، نشان از حرفه‌ای‌گری این مجموعه دارد. به تمام مراکز درمانی و بیمارستان‌ها، همکاری با این شرکت را توصیه می‌کنم."</p>
                 <h4>مهندس سعید مرادی - مسئول HSE بیمارستان مادران</h4>
             </div>
-            
-            <!-- نظر ۳ -->
             <div class="testimonial-card">
                 <p>"مدت‌ها بود که کبوترها و کنه‌های ناشی از آنها، آرامش را از ما گرفته بودند. بالکن و حیاط خانه‌مان کاملاً آلوده شده بود و بچه‌ها دیگر نمی‌توانستند در حیاط بازی کنند. با تماس با شرکت نانوفناوران، متخصصانشان سریعاً آمدند و مشکل را بررسی کردند. هم سمپاشی کنه و مایت کبوتر را انجام دادند و هم راهکارهای جلوگیری از بازگشت کبوترها را به ما آموزش دادند. واقعاً نفس‌مان راحت شد. خدا را شکر که با این شرکت آشنا شدیم. از ته دل تشکر می‌کنم."</p>
                 <h4>مهراد یوسفیان</h4>
             </div>
         </div>
         
-        <!-- دکمه‌های اسلایدر -->
         <div style="text-align:center;margin-top:20px;">
             <button onclick="prevTestimonial()" style="background:#0B6FB8;color:#fff;border:none;padding:10px 20px;border-radius:8px;cursor:pointer;margin:0 5px;font-size:1.2rem;">❮</button>
             <button onclick="nextTestimonial()" style="background:#0B6FB8;color:#fff;border:none;padding:10px 20px;border-radius:8px;cursor:pointer;margin:0 5px;font-size:1.2rem;">❯</button>
         </div>
         
-        <!-- دکمه مشاهده همه نظرات -->
         <div style="text-align:center;margin-top:30px;">
             <a href="testimonials.html" style="display:inline-block;background:#11A64A;color:#fff;padding:14px 40px;border-radius:12px;text-decoration:none;font-weight:700;font-size:1.1rem;transition:0.3s;">📝 مشاهده همه نظرات و تقدیرنامه‌ها</a>
         </div>
     </div>
 </section>
 
-<!-- ===== فرم تماس (متصل به واتساپ) ===== -->
+<!-- ===== فرم تماس ===== -->
 <section class="contact">
     <div class="container">
         <h2>ثبت درخواست سمپاشی</h2>
@@ -623,7 +696,7 @@
     </div>
 </div>
 
-<!-- ===== دکمه اسکرول به بالا ===== -->
+<!-- ===== دکمه اسکرول ===== -->
 <button id="backToTop" title="برو به بالا">↑</button>
 
 <script src="script.js"></script>
