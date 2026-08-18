@@ -9,111 +9,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
-        /* ===== استایل‌های اختصاصی برای منوی موبایل ===== */
-        .mobile-menu-btn {
-            display: none;
-            font-size: 28px;
-            cursor: pointer;
-            background: none;
-            border: none;
-            color: #0B6FB8;
-            padding: 5px 10px;
-        }
-        .mobile-nav-overlay {
-            position: fixed;
-            top: 0;
-            right: -100%;
-            width: 80%;
-            max-width: 350px;
-            height: 100vh;
-            background: #ffffff;
-            box-shadow: -4px 0 30px rgba(0,0,0,0.2);
-            transition: 0.4s ease;
-            z-index: 9999;
-            padding: 30px 25px;
-            overflow-y: auto;
-            display: flex;
-            flex-direction: column;
-        }
-        .mobile-nav-overlay.open {
-            right: 0;
-        }
-        .mobile-nav-overlay .close-menu {
-            font-size: 32px;
-            background: none;
-            border: none;
-            color: #333;
-            align-self: flex-start;
-            cursor: pointer;
-            margin-bottom: 30px;
-        }
-        .mobile-nav-overlay ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-        .mobile-nav-overlay ul li a {
-            display: block;
-            padding: 14px 18px;
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: #0B6FB8;
-            text-decoration: none;
-            border-radius: 12px;
-            transition: 0.3s;
-            border-bottom: 1px solid #f0f0f0;
-        }
-        .mobile-nav-overlay ul li a:hover,
-        .mobile-nav-overlay ul li a.active {
-            background: #e8f5e9;
-            color: #1a7a3a;
-        }
-        .mobile-nav-overlay .call-now {
-            margin-top: 30px;
-            background: #11A64A;
-            color: #fff;
-            text-align: center;
-            padding: 16px;
-            border-radius: 16px;
-            font-size: 1.2rem;
-            font-weight: 700;
-            text-decoration: none;
-            display: block;
-        }
-        .mobile-nav-overlay .call-now:hover {
-            background: #0d8a3a;
-        }
-        .overlay-backdrop {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.4);
-            z-index: 9998;
-            display: none;
-        }
-        .overlay-backdrop.show {
-            display: block;
-        }
-
-        @media (max-width: 992px) {
-            .navbar {
-                display: none;
-            }
-            .mobile-menu-btn {
-                display: block;
-            }
-            .header-buttons .call-btn {
-                font-size: 14px;
-                padding: 6px 12px;
-            }
-        }
-
-        /* ===== استایل‌های اصلی سایت ===== */
         .services-list {
             padding: 60px 0;
             background: #ffffff;
@@ -190,7 +85,6 @@
             }
         }
 
-        /* =============== دکمه اسکرول به بالا =============== */
         #backToTop {
             position: fixed;
             bottom: 110px;
@@ -228,7 +122,6 @@
             }
         }
 
-        /* ===== باکس جمله رضایت ===== */
         .satisfaction-box {
             max-width: 900px;
             margin: 40px auto 0;
@@ -271,7 +164,6 @@
             }
         }
 
-        /* ===== باکس کانال حشره‌شناسی با حشرات رنگارنگ ===== */
         .insect-channel-box {
             max-width: 900px;
             margin: 30px auto 0;
@@ -364,7 +256,6 @@
             }
         }
 
-        /* ===== استایل اسلایدر نظرات ===== */
         .testimonial-slider {
             position: relative;
             max-width: 900px;
@@ -440,7 +331,7 @@
         </nav>
         <div class="header-buttons">
             <a href="tel:09120705746" class="call-btn">📞 09120705746</a>
-            <button class="mobile-menu-btn" id="mobileMenuToggle">☰</button>
+            <div class="mobile-menu">☰</div>
         </div>
         <div class="search-box">
             <input type="text" id="searchInput" placeholder="جستجو...">
@@ -449,21 +340,6 @@
     </div>
 </header>
 
-<!-- ===== منوی موبایل (اورلی) ===== -->
-<div class="overlay-backdrop" id="mobileBackdrop"></div>
-<div class="mobile-nav-overlay" id="mobileNavOverlay">
-    <button class="close-menu" id="closeMobileMenu">✕</button>
-    <ul>
-        <li><a href="index.html" class="active">صفحه اصلی</a></li>
-        <li><a href="services.html">خدمات مسکونی</a></li>
-        <li><a href="commercial-services.html">خدمات تجاری</a></li>
-        <li><a href="about.html">درباره ما</a></li>
-        <li><a href="contact.html">تماس با ما</a></li>
-    </ul>
-    <a href="tel:09120705746" class="call-now">📞 تماس فوری: 09120705746</a>
-</div>
-
-<!-- ===== اسلایدر ===== -->
 <section class="hero-slider">
     <div class="slider-container">
         <div class="slide active"><img src="images/slider/slide1.jpg?v=1" alt="اسلاید ۱"></div>
@@ -483,7 +359,6 @@
     </div>
 </section>
 
-<!-- ===== بخش خدمات مسکونی ===== -->
 <section id="services" class="services">
     <div class="container">
         <h2>خدمات تخصصی شرکت سمپاشی نانوفناوران</h2>
@@ -495,7 +370,6 @@
     </div>
 </section>
 
-<!-- ===== لیست کامل خدمات مسکونی ===== -->
 <section class="services-list">
     <div class="container">
         <h2>همه خدمات کنترل آفات مسکونی</h2>
@@ -613,7 +487,6 @@
     </div>
 </section>
 
-<!-- ===== بخش کنترل آفات تجاری ===== -->
 <section class="services-list" style="background: #f8fbfd;">
     <div class="container">
         <h2>🏢 کنترل آفات تجاری</h2>
@@ -625,7 +498,6 @@
     </div>
 </section>
 
-<!-- ===== لیست کامل خدمات تجاری ===== -->
 <section class="services-list">
     <div class="container">
         <h2>همه خدمات کنترل آفات تجاری</h2>
@@ -673,14 +545,12 @@
             </a>
         </div>
 
-        <!-- ===== باکس جمله رضایت ===== -->
         <div class="satisfaction-box">
             <span class="heart">❤️</span>
             تازمانی که رضایت شما حاصل نشود، ما از کار خود راضی نخواهیم بود.
             <span class="heart">❤️</span>
         </div>
 
-        <!-- ===== باکس کانال حشره‌شناسی ===== -->
         <div class="insect-channel-box">
             <div class="channel-icons">
                 <span class="insect-icon" style="color:#e67e22;font-size:42px;animation-delay:0s;">🐜</span>
@@ -695,11 +565,9 @@
                 <span>📱</span> عضویت در کانال بله
             </a>
         </div>
-
     </div>
 </section>
 
-<!-- ===== درباره شرکت ===== -->
 <section class="about-company">
     <div class="container">
         <div class="about-image">
@@ -727,7 +595,6 @@
     </div>
 </section>
 
-<!-- ===== آمار ===== -->
 <section class="stats">
     <div class="container">
         <h2>افتخارات ما</h2>
@@ -740,7 +607,7 @@
     </div>
 </section>
 
-<!-- ===== نظرات مشتریان ===== -->
+<!-- ===== بخش نظرات مشتریان (اصلاح شده) ===== -->
 <section class="testimonials">
     <div class="container">
         <h2>نظرات مشتریان</h2>
@@ -772,7 +639,6 @@
     </div>
 </section>
 
-<!-- ===== فرم تماس ===== -->
 <section class="contact">
     <div class="container">
         <h2>ثبت درخواست سمپاشی</h2>
@@ -798,7 +664,6 @@
     </div>
 </section>
 
-<!-- ===== فوتر ===== -->
 <footer class="site-footer">
     <div class="container">
         <div class="footer-grid">
@@ -809,7 +674,6 @@
     </div>
 </footer>
 
-<!-- ===== دکمه شناور ===== -->
 <div class="floating-container">
     <button class="floating-main-btn" id="floatingToggle">
         <span class="btn-arrow">▶</span>
@@ -844,12 +708,10 @@
     </div>
 </div>
 
-<!-- ===== دکمه اسکرول ===== -->
 <button id="backToTop" title="برو به بالا">↑</button>
 
 <script src="script.js"></script>
 
-<!-- ===== اسکریپت دکمه اسکرول ===== -->
 <script>
     (function() {
         var backToTopBtn = document.getElementById('backToTop');
@@ -868,36 +730,6 @@
     })();
 </script>
 
-<!-- ===== اسکریپت منوی موبایل ===== -->
-<script>
-    (function() {
-        const toggleBtn = document.getElementById('mobileMenuToggle');
-        const overlay = document.getElementById('mobileNavOverlay');
-        const backdrop = document.getElementById('mobileBackdrop');
-        const closeBtn = document.getElementById('closeMobileMenu');
-
-        function openMenu() {
-            overlay.classList.add('open');
-            backdrop.classList.add('show');
-            document.body.style.overflow = 'hidden';
-        }
-        function closeMenu() {
-            overlay.classList.remove('open');
-            backdrop.classList.remove('show');
-            document.body.style.overflow = '';
-        }
-
-        if (toggleBtn) toggleBtn.addEventListener('click', openMenu);
-        if (closeBtn) closeBtn.addEventListener('click', closeMenu);
-        if (backdrop) backdrop.addEventListener('click', closeMenu);
-
-        document.querySelectorAll('.mobile-nav-overlay ul li a').forEach(function(link) {
-            link.addEventListener('click', closeMenu);
-        });
-    })();
-</script>
-
-<!-- ===== اسکریپت اسلایدر نظرات ===== -->
 <script>
     let currentTestimonial = 0;
     const testimonialCards = document.querySelectorAll('#mainTestimonialSlider .testimonial-card');
@@ -933,7 +765,6 @@
     }
 </script>
 
-<!-- ===== اسکریپت ارسال به واتساپ ===== -->
 <script>
     function sendToWhatsApp(event) {
         event.preventDefault();
