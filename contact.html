@@ -8,6 +8,262 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .contact-page {
+            padding: 60px 0;
+            background: #f8fbfd;
+            min-height: 60vh;
+        }
+        .contact-page .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        .contact-page h1 {
+            text-align: center;
+            color: #0B6FB8;
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+        .contact-page .sub-title {
+            text-align: center;
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 35px;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .contact-info-box {
+            background: #fff;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0,0,0,.08);
+        }
+        .contact-info-box h3 {
+            color: #0B6FB8;
+            margin-bottom: 18px;
+            font-size: 20px;
+            border-bottom: 3px solid #11A64A;
+            padding-bottom: 10px;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+        .contact-item .icon {
+            font-size: 20px;
+            width: 42px;
+            height: 42px;
+            background: #e8f5e9;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .contact-item .label {
+            font-size: 0.75rem;
+            color: #888;
+        }
+        .contact-item .value {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #1a7a3a;
+            text-decoration: none;
+            word-break: break-all;
+        }
+        .contact-item .value:hover {
+            color: #0B6FB8;
+        }
+        .contact-form-box {
+            background: #fff;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0,0,0,.08);
+        }
+        .contact-form-box h3 {
+            color: #0B6FB8;
+            margin-bottom: 18px;
+            font-size: 20px;
+            border-bottom: 3px solid #11A64A;
+            padding-bottom: 10px;
+        }
+        .contact-form-box input,
+        .contact-form-box textarea,
+        .contact-form-box select {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            margin-bottom: 12px;
+            transition: 0.3s;
+            background: #fafafa;
+            box-sizing: border-box;
+        }
+        .contact-form-box input:focus,
+        .contact-form-box textarea:focus,
+        .contact-form-box select:focus {
+            border-color: #11A64A;
+            outline: none;
+            background: #fff;
+            box-shadow: 0 0 0 4px rgba(17, 166, 74, 0.1);
+        }
+        .contact-form-box textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        .contact-form-box button {
+            width: 100%;
+            padding: 14px;
+            background: #11A64A;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .contact-form-box button:hover {
+            background: #0d8a3a;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(17, 166, 74, 0.3);
+        }
+        .contact-form-box .sms-note {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #888;
+            margin-top: 10px;
+        }
+        .map-container {
+            max-width: 1000px;
+            margin: 35px auto 0;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,.08);
+        }
+        .map-container iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+        }
+
+        /* ===== حالت موبایل ===== */
+        @media (max-width: 768px) {
+            .contact-page {
+                padding: 40px 0;
+            }
+            .contact-page h1 {
+                font-size: 26px;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .contact-info-box,
+            .contact-form-box {
+                padding: 20px;
+            }
+            .contact-info-box h3,
+            .contact-form-box h3 {
+                font-size: 18px;
+            }
+            .contact-item {
+                padding: 8px 0;
+                gap: 10px;
+            }
+            .contact-item .icon {
+                width: 36px;
+                height: 36px;
+                font-size: 17px;
+            }
+            .contact-item .value {
+                font-size: 0.9rem;
+            }
+            .contact-form-box input,
+            .contact-form-box textarea,
+            .contact-form-box select {
+                padding: 10px 14px;
+                font-size: 0.9rem;
+            }
+            .contact-form-box button {
+                padding: 12px;
+                font-size: 0.95rem;
+            }
+            .map-container iframe {
+                height: 200px;
+            }
+            .map-container {
+                margin-top: 25px;
+            }
+            .contact-item .value {
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact-page {
+                padding: 30px 0;
+            }
+            .contact-page h1 {
+                font-size: 22px;
+            }
+            .contact-info-box,
+            .contact-form-box {
+                padding: 15px;
+                border-radius: 14px;
+            }
+            .contact-item {
+                padding: 6px 0;
+                gap: 8px;
+                flex-wrap: wrap;
+            }
+            .contact-item .icon {
+                width: 32px;
+                height: 32px;
+                font-size: 15px;
+            }
+            .contact-item .value {
+                font-size: 0.8rem;
+            }
+            .contact-item .label {
+                font-size: 0.7rem;
+            }
+            .contact-form-box input,
+            .contact-form-box textarea,
+            .contact-form-box select {
+                padding: 8px 12px;
+                font-size: 0.85rem;
+                margin-bottom: 10px;
+            }
+            .contact-form-box textarea {
+                min-height: 80px;
+            }
+            .contact-form-box button {
+                padding: 10px;
+                font-size: 0.9rem;
+            }
+            .map-container iframe {
+                height: 150px;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -34,64 +290,79 @@
     </div>
 </header>
 
-<section class="contact">
+<!-- ===== صفحه تماس ===== -->
+<section class="contact-page">
     <div class="container">
-        <h2>تماس با ما</h2>
-        <p style="text-align:center;color:#666;font-size:1.1rem;margin-bottom:40px;">برای ثبت درخواست سمپاشی یا مشاوره، با ما تماس بگیرید</p>
-        
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;max-width:1000px;margin:0 auto;">
-            <div style="background:#fff;padding:40px;border-radius:20px;box-shadow:0 8px 30px rgba(0,0,0,.08);">
-                <h3 style="color:#0B6FB8;margin-bottom:20px;">📞 اطلاعات تماس</h3>
-                <div style="display:flex;align-items:center;gap:15px;padding:15px 0;border-bottom:1px solid #f0f0f0;">
-                    <span style="font-size:24px;">📱</span>
+        <h1>📞 تماس با ما</h1>
+        <p class="sub-title">برای ثبت درخواست سمپاشی یا مشاوره، با ما تماس بگیرید</p>
+
+        <div class="contact-grid">
+            <!-- اطلاعات تماس -->
+            <div class="contact-info-box">
+                <h3>اطلاعات تماس</h3>
+                
+                <div class="contact-item">
+                    <div class="icon">📱</div>
                     <div>
-                        <div style="font-size:0.85rem;color:#888;">شماره همراه</div>
-                        <a href="tel:09120705746" style="font-size:1.2rem;font-weight:700;color:#1a7a3a;text-decoration:none;">09120705746</a>
+                        <div class="label">شماره همراه</div>
+                        <a href="tel:09120705746" class="value">09120705746</a>
                     </div>
                 </div>
-                <div style="display:flex;align-items:center;gap:15px;padding:15px 0;border-bottom:1px solid #f0f0f0;">
-                    <span style="font-size:24px;">📞</span>
+                
+                <div class="contact-item">
+                    <div class="icon">📞</div>
                     <div>
-                        <div style="font-size:0.85rem;color:#888;">تلفن ثابت</div>
-                        <a href="tel:22048278" style="font-size:1.2rem;font-weight:700;color:#1a7a3a;text-decoration:none;">22048278</a>
+                        <div class="label">تلفن ثابت</div>
+                        <a href="tel:22048278" class="value">22048278</a>
                     </div>
                 </div>
-                <div style="display:flex;align-items:center;gap:15px;padding:15px 0;border-bottom:1px solid #f0f0f0;">
-                    <span style="font-size:24px;">📞</span>
+                
+                <div class="contact-item">
+                    <div class="icon">📞</div>
                     <div>
-                        <div style="font-size:0.85rem;color:#888;">تلفن ثابت</div>
-                        <a href="tel:86013062" style="font-size:1.2rem;font-weight:700;color:#1a7a3a;text-decoration:none;">86013062</a>
+                        <div class="label">تلفن ثابت</div>
+                        <a href="tel:86013062" class="value">86013062</a>
                     </div>
                 </div>
-                <div style="display:flex;align-items:center;gap:15px;padding:15px 0;border-bottom:1px solid #f0f0f0;">
-                    <span style="font-size:24px;">📞</span>
+                
+                <div class="contact-item">
+                    <div class="icon">📞</div>
                     <div>
-                        <div style="font-size:0.85rem;color:#888;">تلفن ثابت</div>
-                        <a href="tel:66959729" style="font-size:1.2rem;font-weight:700;color:#1a7a3a;text-decoration:none;">66959729</a>
+                        <div class="label">تلفن ثابت</div>
+                        <a href="tel:66959729" class="value">66959729</a>
                     </div>
                 </div>
-                <div style="display:flex;align-items:center;gap:15px;padding:15px 0;border-bottom:1px solid #f0f0f0;">
-                    <span style="font-size:24px;">✉️</span>
+                
+                <div class="contact-item">
+                    <div class="icon">✉️</div>
                     <div>
-                        <div style="font-size:0.85rem;color:#888;">ایمیل</div>
-                        <div style="font-size:1rem;font-weight:700;color:#1a7a3a;">info@nanofannavaran.ir</div>
+                        <div class="label">ایمیل</div>
+                        <div class="value" style="font-size:0.85rem;word-break:break-all;">nanofannavaran.ae2005@gmail.com</div>
                     </div>
                 </div>
-                <div style="display:flex;align-items:center;gap:15px;padding:15px 0;">
-                    <span style="font-size:24px;">📍</span>
+                
+                <div class="contact-item">
+                    <div class="icon">📍</div>
                     <div>
-                        <div style="font-size:0.85rem;color:#888;">آدرس</div>
-                        <div style="font-size:1rem;font-weight:700;color:#1a7a3a;">تهران، خیابان ...</div>
+                        <div class="label">آدرس</div>
+                        <div class="value">تهران، خیابان ...</div>
                     </div>
+                </div>
+
+                <div style="margin-top:15px;padding-top:12px;border-top:2px dashed #e8f5e9;">
+                    <p style="font-weight:700;color:#1a7a3a;margin:0;font-size:0.95rem;">⏰ ساعات پاسخگویی:</p>
+                    <p style="color:#555;margin:5px 0 0;font-size:0.9rem;">شنبه تا پنجشنبه: ۸ صبح تا ۲۰ شب</p>
                 </div>
             </div>
-            
-            <div style="background:#fff;padding:40px;border-radius:20px;box-shadow:0 8px 30px rgba(0,0,0,.08);">
-                <h3 style="color:#0B6FB8;margin-bottom:20px;">✉️ ارسال پیام</h3>
-                <form class="contact-form" style="display:flex;flex-direction:column;gap:15px;">
-                    <input type="text" placeholder="نام و نام خانوادگی" required style="padding:14px 18px;border:2px solid #e0e0e0;border-radius:12px;font-size:1rem;">
-                    <input type="tel" placeholder="شماره تماس" required style="padding:14px 18px;border:2px solid #e0e0e0;border-radius:12px;font-size:1rem;">
-                    <select required style="padding:14px 18px;border:2px solid #e0e0e0;border-radius:12px;font-size:1rem;background:#fff;">
+
+            <!-- فرم تماس (متصل به SMS) -->
+            <div class="contact-form-box">
+                <h3>✉️ ارسال پیام</h3>
+                <form id="smsForm" onsubmit="sendSMS(event)">
+                    <input type="text" id="smsName" placeholder="نام و نام خانوادگی" required>
+                    <input type="tel" id="smsPhone" placeholder="شماره تماس" required>
+                    <input type="email" id="smsEmail" placeholder="ایمیل (اختیاری)">
+                    <select id="smsService" required>
                         <option value="">نوع خدمات</option>
                         <option>سمپاشی منازل</option>
                         <option>سمپاشی تجاری</option>
@@ -100,28 +371,40 @@
                         <option>طعمه‌گذاری موش</option>
                         <option>ضدعفونی و گندزدایی</option>
                     </select>
-                    <textarea rows="4" placeholder="توضیحات درخواست شما..." required style="padding:14px 18px;border:2px solid #e0e0e0;border-radius:12px;font-size:1rem;min-height:120px;"></textarea>
-                    <button type="submit" style="padding:16px;background:#11A64A;color:#fff;border:none;border-radius:12px;font-size:1.1rem;font-weight:700;cursor:pointer;transition:0.3s;">✉️ ارسال پیام</button>
+                    <textarea id="smsMessage" rows="4" placeholder="توضیحات درخواست شما..." required></textarea>
+                    <button type="submit">✉️ ارسال پیامک</button>
                 </form>
+                <div class="sms-note">پیام شما به شماره 09197173454 ارسال می‌شود</div>
             </div>
         </div>
-        
-        <div style="margin-top:50px;border-radius:20px;overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,.08);max-width:1000px;margin-left:auto;margin-right:auto;">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2593.778614302038!2d51.3890!3d35.6892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDQxJzIxLjEiTiA1McKwMjMnMjAuNCJF!5e0!3m2!1sen!2s!4v1700000000000" width="100%" height="350" style="border:none;" allowfullscreen loading="lazy"></iframe>
+
+        <!-- نقشه -->
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2593.778614302038!2d51.3890!3d35.6892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDQxJzIxLjEiTiA1McKwMjMnMjAuNCJF!5e0!3m2!1sen!2s!4v1700000000000" allowfullscreen loading="lazy"></iframe>
         </div>
     </div>
 </section>
 
+<!-- ===== فوتر ===== -->
 <footer class="site-footer">
     <div class="container">
         <div class="footer-grid">
-            <div class="footer-box"><h3>نانوفناوران</h3><p>ارائه‌دهنده خدمات تخصصی کنترل آفات در تهران</p></div>
-            <div class="footer-box"><h3>اطلاعات تماس</h3><p>📱 09120705746</p><p>☎️ 22048278</p></div>
+            <div class="footer-box">
+                <h3>نانوفناوران</h3>
+                <p>ارائه‌دهنده خدمات تخصصی کنترل آفات در تهران</p>
+            </div>
+            <div class="footer-box">
+                <h3>اطلاعات تماس</h3>
+                <p>📱 09120705746</p>
+                <p>☎️ 22048278</p>
+            </div>
         </div>
-        <hr><p class="copyright">© تمامی حقوق محفوظ است</p>
+        <hr>
+        <p class="copyright">© تمامی حقوق محفوظ است</p>
     </div>
 </footer>
 
+<!-- ===== دکمه شناور ===== -->
 <div class="floating-container">
     <button class="floating-main-btn" id="floatingToggle">
         <span class="btn-arrow">▶</span>
@@ -157,6 +440,39 @@
 </div>
 
 <script src="script.js"></script>
+
+<!-- ===== اسکریپت ارسال پیامک ===== -->
+<script>
+    function sendSMS(event) {
+        event.preventDefault();
+        
+        var name = document.getElementById('smsName').value.trim();
+        var phone = document.getElementById('smsPhone').value.trim();
+        var email = document.getElementById('smsEmail').value.trim();
+        var service = document.getElementById('smsService').value;
+        var message = document.getElementById('smsMessage').value.trim();
+        
+        if (!name || !phone || !service || !message) {
+            alert('لطفاً تمام فیلدهای ضروری را پر کنید.');
+            return;
+        }
+        
+        // ساخت متن پیامک
+        var text = 'درخواست جدید از سایت:\n';
+        text += 'نام: ' + name + '\n';
+        text += 'شماره: ' + phone + '\n';
+        if (email) text += 'ایمیل: ' + email + '\n';
+        text += 'خدمات: ' + service + '\n';
+        text += 'توضیحات: ' + message;
+        
+        // ارسال پیامک به شماره 09197173454
+        var encoded = encodeURIComponent(text);
+        var url = 'sms:09197173454?body=' + encoded;
+        
+        // باز کردن اپلیکیشن پیامک
+        window.location.href = url;
+    }
+</script>
 
 </body>
 </html>
