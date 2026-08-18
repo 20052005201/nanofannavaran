@@ -123,6 +123,49 @@
                 right: 15px;
             }
         }
+
+        /* ===== باکس جمله رضایت ===== */
+        .satisfaction-box {
+            max-width: 900px;
+            margin: 40px auto 0;
+            padding: 25px 35px;
+            background: linear-gradient(135deg, #f0faf4, #e8f5e9);
+            border-radius: 20px;
+            border-right: 8px solid #1a7a3a;
+            box-shadow: 0 8px 25px rgba(26, 122, 58, 0.12);
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1a5a2a;
+            line-height: 1.9;
+            transition: 0.3s;
+        }
+        .satisfaction-box:hover {
+            transform: scale(1.01);
+            box-shadow: 0 12px 35px rgba(26, 122, 58, 0.2);
+        }
+        .satisfaction-box .heart {
+            display: inline-block;
+            color: #e74c3c;
+            font-size: 1.6rem;
+            margin-left: 10px;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        @media (max-width: 600px) {
+            .satisfaction-box {
+                font-size: 1rem;
+                padding: 20px;
+                margin: 30px 10px 0;
+            }
+            .satisfaction-box .heart {
+                font-size: 1.3rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -182,7 +225,7 @@
     </div>
 </section>
 
-<!-- ===== لیست کامل خدمات مسکونی (با ترتیب اولویت) ===== -->
+<!-- ===== لیست کامل خدمات مسکونی (با ترتیب جدید) ===== -->
 <section class="services-list">
     <div class="container">
         <h2>همه خدمات کنترل آفات مسکونی</h2>
@@ -191,6 +234,11 @@
             <a href="service/german-cockroach.html" class="service-item">
                 <img src="images/services/german-cockroach.jpg?v=1" alt="سوسک ریز آلمانی">
                 <span>سمپاشی سوسک ریز آلمانی</span>
+            </a>
+            <!-- سوسک فاضلابی بلافاصله بعد از سوسک ریز آلمانی -->
+            <a href="service/cockroach-sewer.html" class="service-item">
+                <img src="images/services/cockroach-sewer.jpg?v=1" alt="سوسک فاضلابی">
+                <span>سمپاشی سوسک فاضلابی</span>
             </a>
             <a href="service/bedbug.html" class="service-item">
                 <img src="images/services/bedbug.jpg?v=1" alt="ساس">
@@ -271,10 +319,6 @@
             <a href="service/rice-weevil.html" class="service-item">
                 <img src="images/services/rice-weevil.jpg?v=1" alt="شپشک برنج">
                 <span>سمپاشی شپشک برنج</span>
-            </a>
-            <a href="service/cockroach-sewer.html" class="service-item">
-                <img src="images/services/cockroach-sewer.jpg?v=1" alt="سوسک فاضلابی">
-                <span>سمپاشی سوسک فاضلابی</span>
             </a>
             <a href="service/disinfection.html" class="service-item">
                 <img src="images/services/disinfection.jpg?v=1" alt="ضدعفونی">
@@ -358,6 +402,13 @@
                 <img src="images/commercial/garden.jpg?v=1" alt="باغچه">
                 <span>سمپاشی باغچه</span>
             </a>
+        </div>
+
+        <!-- ===== باکس جمله رضایت ===== -->
+        <div class="satisfaction-box">
+            <span class="heart">❤️</span>
+            تازمانی که رضایت شما حاصل نشود، ما از کار خود راضی نخواهیم بود.
+            <span class="heart">❤️</span>
         </div>
     </div>
 </section>
@@ -480,9 +531,8 @@
 
 <script src="script.js"></script>
 
-<!-- ===== اضافه کردن کد دکمه اسکرول به صورت جداگانه (بدون تداخل) ===== -->
+<!-- ===== اسکریپت دکمه اسکرول ===== -->
 <script>
-    // دکمه اسکرول به بالا - بدون تداخل با فایل script.js
     (function() {
         var backToTopBtn = document.getElementById('backToTop');
         if (backToTopBtn) {
@@ -493,16 +543,9 @@
                     backToTopBtn.classList.remove('show');
                 }
             });
-
             backToTopBtn.addEventListener('click', function() {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             });
-            console.log('✅ دکمه اسکرول فعال شد!');
-        } else {
-            console.error('دکمه backToTop پیدا نشد!');
         }
     })();
 </script>
