@@ -294,7 +294,6 @@
                 <img src="images/services/german-cockroach.jpg?v=1" alt="سوسک ریز آلمانی">
                 <span>سمپاشی سوسک ریز آلمانی</span>
             </a>
-            <!-- سوسک فاضلابی بلافاصله بعد از سوسک ریز آلمانی -->
             <a href="service/cockroach-sewer.html" class="service-item">
                 <img src="images/services/cockroach-sewer.jpg?v=1" alt="سوسک فاضلابی">
                 <span>سمپاشی سوسک فاضلابی</span>
@@ -403,7 +402,7 @@
     </div>
 </section>
 
-<!-- ===== بخش کنترل آفات تجاری (لینک) ===== -->
+<!-- ===== بخش کنترل آفات تجاری ===== -->
 <section class="services-list" style="background: #f8fbfd;">
     <div class="container">
         <h2>🏢 کنترل آفات تجاری</h2>
@@ -463,7 +462,7 @@
             </a>
         </div>
 
-        <!-- ===== باکس جمله رضایت ===== -->
+        <!-- باکس جمله رضایت -->
         <div class="satisfaction-box">
             <span class="heart">❤️</span>
             تازمانی که رضایت شما حاصل نشود، ما از کار خود راضی نخواهیم بود.
@@ -513,7 +512,7 @@
     </div>
 </section>
 
-<!-- ===== نظرات مشتریان (اسلایدر جدید) ===== -->
+<!-- ===== نظرات مشتریان (اسلایدر) ===== -->
 <section class="testimonials">
     <div class="container">
         <h2>نظرات مشتریان</h2>
@@ -552,17 +551,29 @@
     </div>
 </section>
 
-<!-- ===== فرم تماس ===== -->
+<!-- ===== فرم تماس (متصل به واتساپ) ===== -->
 <section class="contact">
     <div class="container">
         <h2>ثبت درخواست سمپاشی</h2>
-        <form class="contact-form">
-            <input type="text" placeholder="نام و نام خانوادگی" required>
-            <input type="tel" placeholder="شماره تماس" required>
-            <select required><option value="">نوع خدمات</option><option>سمپاشی منازل</option><option>سمپاشی تجاری</option></select>
-            <textarea rows="4" placeholder="توضیحات"></textarea>
-            <button type="submit">ثبت درخواست</button>
+        <p style="text-align:center;color:#666;margin-bottom:20px;">با تکمیل این فرم، درخواست شما مستقیماً به واتساپ شرکت ارسال می‌شود</p>
+        <form class="contact-form" id="requestForm" onsubmit="sendToWhatsApp(event)">
+            <input type="text" id="reqName" placeholder="نام و نام خانوادگی" required>
+            <input type="tel" id="reqPhone" placeholder="شماره تماس" required>
+            <select id="reqService" required>
+                <option value="">نوع خدمات</option>
+                <option>سمپاشی منازل</option>
+                <option>سمپاشی تجاری</option>
+                <option>سمپاشی سوسک</option>
+                <option>سمپاشی ساس</option>
+                <option>طعمه‌گذاری موش</option>
+                <option>ضدعفونی و گندزدایی</option>
+            </select>
+            <textarea id="reqMessage" rows="4" placeholder="توضیحات (مثلاً آدرس، زمان مناسب و...)" required></textarea>
+            <button type="submit">💬 ارسال درخواست از طریق واتساپ</button>
         </form>
+        <div id="requestSuccess" style="display:none;margin-top:15px;padding:15px;background:#e8f5e9;border-radius:12px;color:#1a7a3a;font-weight:700;text-align:center;">
+            ✅ درخواست شما با موفقیت ارسال شد. به زودی با شما تماس خواهیم گرفت.
+        </div>
     </div>
 </section>
 
@@ -638,7 +649,6 @@
 
 <!-- ===== اسکریپت اسلایدر نظرات ===== -->
 <script>
-    // اسلایدر نظرات صفحه اصلی
     let currentTestimonial = 0;
     const testimonialCards = document.querySelectorAll('#mainTestimonialSlider .testimonial-card');
     
@@ -660,10 +670,8 @@
         showTestimonial(currentTestimonial);
     }
     
-    // اسلایدر خودکار هر ۵ ثانیه
     let autoSlide = setInterval(nextTestimonial, 5000);
     
-    // توقف اسلایدر خودکار با هاور
     const sliderContainer = document.getElementById('mainTestimonialSlider');
     if (sliderContainer) {
         sliderContainer.addEventListener('mouseenter', function() {
@@ -672,6 +680,41 @@
         sliderContainer.addEventListener('mouseleave', function() {
             autoSlide = setInterval(nextTestimonial, 5000);
         });
+    }
+</script>
+
+<!-- ===== اسکریپت ارسال به واتساپ ===== -->
+<script>
+    function sendToWhatsApp(event) {
+        event.preventDefault();
+        
+        var name = document.getElementById('reqName').value.trim();
+        var phone = document.getElementById('reqPhone').value.trim();
+        var service = document.getElementById('reqService').value;
+        var message = document.getElementById('reqMessage').value.trim();
+        
+        if (!name || !phone || !service || !message) {
+            alert('لطفاً تمام فیلدها را پر کنید.');
+            return;
+        }
+        
+        var text = '📋 درخواست سمپاشی جدید از سایت:\n\n';
+        text += '👤 نام: ' + name + '\n';
+        text += '📱 شماره تماس: ' + phone + '\n';
+        text += '📌 نوع خدمات: ' + service + '\n';
+        text += '📝 توضیحات: ' + message;
+        
+        var encoded = encodeURIComponent(text);
+        var url = 'https://wa.me/989120705746?text=' + encoded;
+        
+        window.open(url, '_blank');
+        
+        document.getElementById('requestSuccess').style.display = 'block';
+        document.getElementById('requestForm').reset();
+        
+        setTimeout(function() {
+            document.getElementById('requestSuccess').style.display = 'none';
+        }, 5000);
     }
 </script>
 
