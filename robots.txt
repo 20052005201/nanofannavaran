@@ -1,0 +1,8 @@
+# robots.txt برای سایت nanofannavaran.ir
+# تمام صفحات عمومی قابل خزش هستند
+
+User-agent: *
+Allow: /
+
+# مسیر فایل Sitemap
+Sitemap: https://www.nanofannavaran.ir/sitemap.xml
