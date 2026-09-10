@@ -9,6 +9,92 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- ===== Structured Data (Schema.org) ===== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "PestControlService",
+      "name": "شرکت سمپاشی نانوفناوران بهداشت تهران",
+      "alternateName": "نانوفناوران",
+      "description": "شرکت سمپاشی نانوفناوران بهداشت تهران با بیش از ۱۵ سال تجربه، ارائه‌دهنده خدمات تخصصی کنترل آفات مسکونی و تجاری در تهران.",
+      "url": "https://www.nanofannavaran.ir",
+      "logo": "https://www.nanofannavaran.ir/images/logo.png",
+      "image": "https://www.nanofannavaran.ir/images/logo.png",
+      "telephone": "+989120705746",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "تهران",
+        "addressRegion": "تهران",
+        "addressCountry": "IR"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "تهران"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Saturday",
+          "Sunday",
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday"
+        ],
+        "opens": "08:00",
+        "closes": "20:00"
+      },
+      "sameAs": [
+        "https://ble.ir/nanofannavaran",
+        "https://eitaa.com/nanofannavaran_ir",
+        "https://wa.me/989120705746"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "خدمات کنترل آفات",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "سمپاشی سوسک"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "سمپاشی ساس"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "طعمه‌گذاری و کنترل موش"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "سمپاشی منازل"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "ضدعفونی و گندزدایی"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+    
     <style>
         .services-list {
             padding: 60px 0;
@@ -187,20 +273,22 @@
             margin-bottom: 12px;
             flex-wrap: wrap;
         }
+        /* ===== انیمیشن راه رفتن حشرات در مسیر مستقیم ===== */
         .insect-channel-box .insect-icon {
             display: inline-block;
-            animation: insectBounce 2s ease-in-out infinite;
+            animation: insectWalk 3s linear infinite;
             transition: 0.3s;
             cursor: default;
         }
         .insect-channel-box .insect-icon:hover {
-            transform: scale(1.4) rotate(20deg);
+            transform: scale(1.4);
         }
-        @keyframes insectBounce {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            25% { transform: translateY(-12px) rotate(-8deg); }
-            50% { transform: translateY(0) rotate(0deg); }
-            75% { transform: translateY(-8px) rotate(8deg); }
+        @keyframes insectWalk {
+            0% { transform: translateX(0) rotate(0deg); }
+            25% { transform: translateX(-8px) rotate(-5deg); }
+            50% { transform: translateX(0) rotate(0deg); }
+            75% { transform: translateX(8px) rotate(5deg); }
+            100% { transform: translateX(0) rotate(0deg); }
         }
         .insect-channel-box h3 {
             color: #0B6FB8;
