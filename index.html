@@ -9,8 +9,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet">
-    
-    <!-- ===== Structured Data (Schema.org) ===== -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -35,14 +33,7 @@
       },
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Saturday",
-          "Sunday",
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday"
-        ],
+        "dayOfWeek": ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],
         "opens": "08:00",
         "closes": "20:00"
       },
@@ -55,47 +46,15 @@
         "@type": "OfferCatalog",
         "name": "خدمات کنترل آفات",
         "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "سمپاشی سوسک"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "سمپاشی ساس"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "طعمه‌گذاری و کنترل موش"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "سمپاشی منازل"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "ضدعفونی و گندزدایی"
-            }
-          }
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "سمپاشی سوسک"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "سمپاشی ساس"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "طعمه‌گذاری و کنترل موش"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "سمپاشی منازل"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "ضدعفونی و گندزدایی"}}
         ]
       }
     }
     </script>
-    
-    <!-- ===== Open Graph / Facebook / WhatsApp / Telegram ===== -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.nanofannavaran.ir/">
     <meta property="og:title" content="شرکت سمپاشی نانوفناوران بهداشت تهران">
@@ -106,202 +65,45 @@
     <meta property="og:image:alt" content="شرکت سمپاشی نانوفناوران بهداشت تهران">
     <meta property="og:site_name" content="نانوفناوران">
     <meta property="og:locale" content="fa_IR">
-
-    <!-- ===== Twitter Card ===== -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="شرکت سمپاشی نانوفناوران بهداشت تهران">
     <meta name="twitter:description" content="خدمات تخصصی کنترل آفات مسکونی و تجاری در تهران با بیش از ۱۵ سال تجربه.">
     <meta name="twitter:image" content="https://www.nanofannavaran.ir/images/og-image.jpg">
     <meta name="twitter:image:alt" content="شرکت سمپاشی نانوفناوران بهداشت تهران">
-    
     <style>
-        .services-list {
-            padding: 60px 0;
-            background: #ffffff;
-        }
-        .services-list h2 {
-            text-align: center;
-            color: var(--primary);
-            font-size: 36px;
-            margin-bottom: 15px;
-        }
-        .services-list .section-description {
-            text-align: center;
-            color: #666;
-            max-width: 800px;
-            margin: 0 auto 50px;
-            line-height: 1.8;
-        }
-        .services-grid-all {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-            gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        .service-item {
-            background: #fff;
-            border-radius: 20px;
-            padding: 20px 15px;
-            text-align: center;
-            box-shadow: 0 8px 20px rgba(0,0,0,.08);
-            transition: all 0.4s ease;
-            border: 2px solid transparent;
-            text-decoration: none;
-            color: inherit;
-            display: block;
-        }
-        .service-item:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 16px 40px rgba(0,0,0,.15);
-            border-color: var(--secondary);
-        }
-        .service-item img {
-            width: 70px;
-            height: 70px;
-            object-fit: contain;
-            margin: 0 auto 12px;
-            display: block;
-            border-radius: 12px;
-        }
-        .service-item span {
-            font-size: 1rem;
-            line-height: 2;
-            color: #0B6FB8;
-            font-weight: 700;
-            display: block;
-        }
+        .services-list { padding: 60px 0; background: #ffffff; }
+        .services-list h2 { text-align: center; color: var(--primary); font-size: 36px; margin-bottom: 15px; }
+        .services-list .section-description { text-align: center; color: #666; max-width: 800px; margin: 0 auto 50px; line-height: 1.8; }
+        .services-grid-all { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .service-item { background: #fff; border-radius: 20px; padding: 20px 15px; text-align: center; box-shadow: 0 8px 20px rgba(0,0,0,.08); transition: all 0.4s ease; border: 2px solid transparent; text-decoration: none; color: inherit; display: block; }
+        .service-item:hover { transform: translateY(-8px) scale(1.02); box-shadow: 0 16px 40px rgba(0,0,0,.15); border-color: var(--secondary); }
+        .service-item img { width: 70px; height: 70px; object-fit: contain; margin: 0 auto 12px; display: block; border-radius: 12px; }
+        .service-item span { font-size: 1rem; line-height: 2; color: #0B6FB8; font-weight: 700; display: block; }
         @media (max-width: 600px) {
-            .services-grid-all {
-                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-                gap: 12px;
-                padding: 0 12px;
-            }
-            .service-item img {
-                width: 50px;
-                height: 50px;
-            }
-            .service-item span {
-                font-size: 0.9rem;
-                line-height: 1.8;
-            }
-            .services-list h2 {
-                font-size: 26px;
-            }
+            .services-grid-all { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; padding: 0 12px; }
+            .service-item img { width: 50px; height: 50px; }
+            .service-item span { font-size: 0.9rem; line-height: 1.8; }
+            .services-list h2 { font-size: 26px; }
         }
-
-        #backToTop {
-            position: fixed;
-            bottom: 110px;
-            right: 30px;
-            z-index: 998;
-            background: #1a7a3a;
-            color: #fff;
-            border: none;
-            width: 55px;
-            height: 55px;
-            border-radius: 50%;
-            font-size: 28px;
-            font-weight: 700;
-            cursor: pointer;
-            box-shadow: 0 6px 25px rgba(0,0,0,.2);
-            transition: .3s;
-            display: none;
-            align-items: center;
-            justify-content: center;
-        }
-        #backToTop:hover {
-            background: #27ae60;
-            transform: translateY(-4px);
-        }
-        #backToTop.show {
-            display: flex;
-        }
+        #backToTop { position: fixed; bottom: 110px; right: 30px; z-index: 998; background: #1a7a3a; color: #fff; border: none; width: 55px; height: 55px; border-radius: 50%; font-size: 28px; font-weight: 700; cursor: pointer; box-shadow: 0 6px 25px rgba(0,0,0,.2); transition: .3s; display: none; align-items: center; justify-content: center; }
+        #backToTop:hover { background: #27ae60; transform: translateY(-4px); }
+        #backToTop.show { display: flex; }
         @media (max-width: 768px) {
-            #backToTop {
-                width: 48px;
-                height: 48px;
-                font-size: 24px;
-                bottom: 100px;
-                right: 15px;
-            }
+            #backToTop { width: 48px; height: 48px; font-size: 24px; bottom: 100px; right: 15px; }
         }
-
-        .satisfaction-box {
-            max-width: 900px;
-            margin: 40px auto 0;
-            padding: 25px 35px;
-            background: linear-gradient(135deg, #f0faf4, #e8f5e9);
-            border-radius: 20px;
-            border-right: 8px solid #1a7a3a;
-            box-shadow: 0 8px 25px rgba(26, 122, 58, 0.12);
-            text-align: center;
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: #1a5a2a;
-            line-height: 1.9;
-            transition: 0.3s;
-        }
-        .satisfaction-box:hover {
-            transform: scale(1.01);
-            box-shadow: 0 12px 35px rgba(26, 122, 58, 0.2);
-        }
-        .satisfaction-box .heart {
-            display: inline-block;
-            color: #e74c3c;
-            font-size: 1.6rem;
-            margin-left: 10px;
-            animation: pulse 1.5s infinite;
-        }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.2); }
-            100% { transform: scale(1); }
-        }
+        .satisfaction-box { max-width: 900px; margin: 40px auto 0; padding: 25px 35px; background: linear-gradient(135deg, #f0faf4, #e8f5e9); border-radius: 20px; border-right: 8px solid #1a7a3a; box-shadow: 0 8px 25px rgba(26, 122, 58, 0.12); text-align: center; font-size: 1.3rem; font-weight: 700; color: #1a5a2a; line-height: 1.9; transition: 0.3s; }
+        .satisfaction-box:hover { transform: scale(1.01); box-shadow: 0 12px 35px rgba(26, 122, 58, 0.2); }
+        .satisfaction-box .heart { display: inline-block; color: #e74c3c; font-size: 1.6rem; margin-left: 10px; animation: pulse 1.5s infinite; }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.2); } 100% { transform: scale(1); } }
         @media (max-width: 600px) {
-            .satisfaction-box {
-                font-size: 1rem;
-                padding: 20px;
-                margin: 30px 10px 0;
-            }
-            .satisfaction-box .heart {
-                font-size: 1.3rem;
-            }
+            .satisfaction-box { font-size: 1rem; padding: 20px; margin: 30px 10px 0; }
+            .satisfaction-box .heart { font-size: 1.3rem; }
         }
-
-        .insect-channel-box {
-            max-width: 900px;
-            margin: 30px auto 0;
-            padding: 30px 35px;
-            background: linear-gradient(135deg, #f8f9fa, #e8f0fe);
-            border-radius: 20px;
-            border: 2px solid #0B6FB8;
-            box-shadow: 0 8px 25px rgba(11, 111, 184, 0.12);
-            text-align: center;
-            transition: 0.3s;
-        }
-        .insect-channel-box:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 35px rgba(11, 111, 184, 0.2);
-        }
-        .insect-channel-box .channel-icons {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            margin-bottom: 12px;
-            flex-wrap: wrap;
-        }
-        /* ===== انیمیشن راه رفتن حشرات در مسیر مستقیم ===== */
-        .insect-channel-box .insect-icon {
-            display: inline-block;
-            animation: insectWalk 3s linear infinite;
-            transition: 0.3s;
-            cursor: default;
-        }
-        .insect-channel-box .insect-icon:hover {
-            transform: scale(1.4);
-        }
+        .insect-channel-box { max-width: 900px; margin: 30px auto 0; padding: 30px 35px; background: linear-gradient(135deg, #f8f9fa, #e8f0fe); border-radius: 20px; border: 2px solid #0B6FB8; box-shadow: 0 8px 25px rgba(11, 111, 184, 0.12); text-align: center; transition: 0.3s; }
+        .insect-channel-box:hover { transform: translateY(-5px); box-shadow: 0 12px 35px rgba(11, 111, 184, 0.2); }
+        .insect-channel-box .channel-icons { display: flex; justify-content: center; gap: 12px; margin-bottom: 12px; flex-wrap: wrap; }
+        .insect-channel-box .insect-icon { display: inline-block; animation: insectWalk 3s linear infinite; transition: 0.3s; cursor: default; }
+        .insect-channel-box .insect-icon:hover { transform: scale(1.4); }
         @keyframes insectWalk {
             0% { transform: translateX(0) rotate(0deg); }
             25% { transform: translateX(-8px) rotate(-5deg); }
@@ -309,117 +111,33 @@
             75% { transform: translateX(8px) rotate(5deg); }
             100% { transform: translateX(0) rotate(0deg); }
         }
-        .insect-channel-box h3 {
-            color: #0B6FB8;
-            font-size: 1.5rem;
-            font-weight: 900;
-            margin: 0 0 10px 0;
-        }
-        .insect-channel-box p {
-            color: #555;
-            font-size: 1.05rem;
-            line-height: 1.9;
-            max-width: 700px;
-            margin: 0 auto 20px;
-        }
-        .insect-channel-box .channel-btn {
-            display: inline-block;
-            background: #0B6FB8;
-            color: #fff;
-            padding: 14px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.1rem;
-            transition: 0.3s;
-        }
-        .insect-channel-box .channel-btn:hover {
-            background: #0a5a94;
-            transform: scale(1.05);
-            box-shadow: 0 8px 25px rgba(11, 111, 184, 0.3);
-        }
-        .insect-channel-box .channel-btn span {
-            margin-left: 8px;
-        }
+        .insect-channel-box h3 { color: #0B6FB8; font-size: 1.5rem; font-weight: 900; margin: 0 0 10px 0; }
+        .insect-channel-box p { color: #555; font-size: 1.05rem; line-height: 1.9; max-width: 700px; margin: 0 auto 20px; }
+        .insect-channel-box .channel-btn { display: inline-block; background: #0B6FB8; color: #fff; padding: 14px 40px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 1.1rem; transition: 0.3s; }
+        .insect-channel-box .channel-btn:hover { background: #0a5a94; transform: scale(1.05); box-shadow: 0 8px 25px rgba(11, 111, 184, 0.3); }
+        .insect-channel-box .channel-btn span { margin-left: 8px; }
         @media (max-width: 600px) {
-            .insect-channel-box {
-                padding: 20px;
-                margin: 20px 10px 0;
-            }
-            .insect-channel-box h3 {
-                font-size: 1.2rem;
-            }
-            .insect-channel-box p {
-                font-size: 0.95rem;
-            }
-            .insect-channel-box .channel-btn {
-                padding: 12px 25px;
-                font-size: 0.95rem;
-            }
-            .insect-channel-box .insect-icon {
-                font-size: 30px !important;
-            }
-            .insect-channel-box .channel-icons {
-                gap: 8px;
-            }
+            .insect-channel-box { padding: 20px; margin: 20px 10px 0; }
+            .insect-channel-box h3 { font-size: 1.2rem; }
+            .insect-channel-box p { font-size: 0.95rem; }
+            .insect-channel-box .channel-btn { padding: 12px 25px; font-size: 0.95rem; }
+            .insect-channel-box .insect-icon { font-size: 30px !important; }
+            .insect-channel-box .channel-icons { gap: 8px; }
         }
-
-        .testimonial-slider {
-            position: relative;
-            max-width: 900px;
-            margin: 0 auto;
-            min-height: 220px;
-        }
-        .testimonial-slider .testimonial-card {
-            display: none;
-            background: #fff;
-            padding: 30px 35px;
-            border-radius: 20px;
-            box-shadow: 0 8px 30px rgba(0,0,0,.08);
-            border-right: 5px solid #11A64A;
-            animation: fadeIn 0.6s ease;
-        }
-        .testimonial-slider .testimonial-card.active {
-            display: block;
-        }
-        .testimonial-slider .testimonial-card p {
-            font-size: 1.05rem;
-            line-height: 2;
-            color: #333;
-            margin: 0 0 15px 0;
-        }
-        .testimonial-slider .testimonial-card h4 {
-            font-size: 0.95rem;
-            font-weight: 700;
-            color: #1a7a3a;
-            border-top: 2px dashed #e8f5e9;
-            padding-top: 15px;
-            margin: 0;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+        .testimonial-slider { position: relative; max-width: 900px; margin: 0 auto; min-height: 220px; }
+        .testimonial-slider .testimonial-card { display: none; background: #fff; padding: 30px 35px; border-radius: 20px; box-shadow: 0 8px 30px rgba(0,0,0,.08); border-right: 5px solid #11A64A; animation: fadeIn 0.6s ease; }
+        .testimonial-slider .testimonial-card.active { display: block; }
+        .testimonial-slider .testimonial-card p { font-size: 1.05rem; line-height: 2; color: #333; margin: 0 0 15px 0; }
+        .testimonial-slider .testimonial-card h4 { font-size: 0.95rem; font-weight: 700; color: #1a7a3a; border-top: 2px dashed #e8f5e9; padding-top: 15px; margin: 0; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
         @media (max-width: 768px) {
-            .testimonial-slider .testimonial-card {
-                padding: 20px;
-            }
-            .testimonial-slider .testimonial-card p {
-                font-size: 0.95rem;
-            }
-            .testimonial-slider .testimonial-card h4 {
-                font-size: 0.85rem;
-            }
+            .testimonial-slider .testimonial-card { padding: 20px; }
+            .testimonial-slider .testimonial-card p { font-size: 0.95rem; }
+            .testimonial-slider .testimonial-card h4 { font-size: 0.85rem; }
         }
         @media (max-width: 480px) {
-            .testimonial-slider .testimonial-card {
-                padding: 15px;
-                border-radius: 14px;
-            }
-            .testimonial-slider .testimonial-card p {
-                font-size: 0.9rem;
-                line-height: 1.9;
-            }
+            .testimonial-slider .testimonial-card { padding: 15px; border-radius: 14px; }
+            .testimonial-slider .testimonial-card p { font-size: 0.9rem; line-height: 1.9; }
         }
     </style>
 </head>
@@ -715,12 +433,10 @@
     </div>
 </section>
 
-<!-- ===== بخش نظرات مشتریان (اصلاح شده) ===== -->
 <section class="testimonials">
     <div class="container">
         <h2>نظرات مشتریان</h2>
         <p style="text-align:center;color:#666;margin-bottom:30px;">آنچه مشتریان ما درباره خدمات ما گفته‌اند</p>
-        
         <div class="testimonial-slider" id="mainTestimonialSlider">
             <div class="testimonial-card active">
                 <p>"همکاری با شرکت سمپاشی نانوفناوران یکی از بهترین تصمیم‌های مدیریتی ما بود. تیم حرفه‌ای و متخصص آنها با دقت و ظرافت کامل، عملیات سمپاشی و کنترل آفات را در مجموعه تجاری ما انجام دادند. بدون هیچ گونه مزاحمتی برای کسب‌وکار واحدهای تجاری، محیطی بهداشتی و عاری از آفات برای مشتریان و پرسنل فراهم کردند. واقعاً از تخصص و تعهدشان سپاسگزاریم."</p>
@@ -735,12 +451,10 @@
                 <h4>مهراد یوسفیان</h4>
             </div>
         </div>
-        
         <div style="text-align:center;margin-top:20px;">
             <button onclick="prevTestimonial()" style="background:#0B6FB8;color:#fff;border:none;padding:10px 20px;border-radius:8px;cursor:pointer;margin:0 5px;font-size:1.2rem;">❮</button>
             <button onclick="nextTestimonial()" style="background:#0B6FB8;color:#fff;border:none;padding:10px 20px;border-radius:8px;cursor:pointer;margin:0 5px;font-size:1.2rem;">❯</button>
         </div>
-        
         <div style="text-align:center;margin-top:30px;">
             <a href="testimonials.html" style="display:inline-block;background:#11A64A;color:#fff;padding:14px 40px;border-radius:12px;text-decoration:none;font-weight:700;font-size:1.1rem;transition:0.3s;">📝 مشاهده همه نظرات و تقدیرنامه‌ها</a>
         </div>
@@ -841,66 +555,50 @@
 <script>
     let currentTestimonial = 0;
     const testimonialCards = document.querySelectorAll('#mainTestimonialSlider .testimonial-card');
-    
     function showTestimonial(index) {
         testimonialCards.forEach((card, i) => {
             card.classList.toggle('active', i === index);
         });
     }
-    
     function nextTestimonial() {
         if (testimonialCards.length === 0) return;
         currentTestimonial = (currentTestimonial + 1) % testimonialCards.length;
         showTestimonial(currentTestimonial);
     }
-    
     function prevTestimonial() {
         if (testimonialCards.length === 0) return;
         currentTestimonial = (currentTestimonial - 1 + testimonialCards.length) % testimonialCards.length;
         showTestimonial(currentTestimonial);
     }
-    
     let autoSlide = setInterval(nextTestimonial, 5000);
-    
     const sliderContainer = document.getElementById('mainTestimonialSlider');
     if (sliderContainer) {
-        sliderContainer.addEventListener('mouseenter', function() {
-            clearInterval(autoSlide);
-        });
-        sliderContainer.addEventListener('mouseleave', function() {
-            autoSlide = setInterval(nextTestimonial, 5000);
-        });
+        sliderContainer.addEventListener('mouseenter', function() { clearInterval(autoSlide); });
+        sliderContainer.addEventListener('mouseleave', function() { autoSlide = setInterval(nextTestimonial, 5000); });
     }
 </script>
 
 <script>
     function sendToWhatsApp(event) {
         event.preventDefault();
-        
         var name = document.getElementById('reqName').value.trim();
         var phone = document.getElementById('reqPhone').value.trim();
         var service = document.getElementById('reqService').value;
         var message = document.getElementById('reqMessage').value.trim();
-        
         if (!name || !phone || !service || !message) {
             alert('لطفاً تمام فیلدها را پر کنید.');
             return;
         }
-        
         var text = '📋 درخواست سمپاشی جدید از سایت:\n\n';
         text += '👤 نام: ' + name + '\n';
         text += '📱 شماره تماس: ' + phone + '\n';
         text += '📌 نوع خدمات: ' + service + '\n';
         text += '📝 توضیحات: ' + message;
-        
         var encoded = encodeURIComponent(text);
         var url = 'https://wa.me/989120705746?text=' + encoded;
-        
         window.open(url, '_blank');
-        
         document.getElementById('requestSuccess').style.display = 'block';
         document.getElementById('requestForm').reset();
-        
         setTimeout(function() {
             document.getElementById('requestSuccess').style.display = 'none';
         }, 5000);
