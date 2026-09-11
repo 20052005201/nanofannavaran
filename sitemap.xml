@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <!-- صفحات اصلی (ریشه) -->
     <url>
         <loc>https://www.nanofannavaran.ir/</loc>
     </url>
@@ -19,41 +18,115 @@
     <url>
         <loc>https://www.nanofannavaran.ir/testimonials.html</loc>
     </url>
-
-    <!-- صفحات خدمات مسکونی (پوشه service) -->
+    <url>
+        <loc>https://www.nanofannavaran.ir/service/german-cockroach.html</loc>
+    </url>
+    <url>
+        <loc>https://www.nanofannavaran.ir/service/bedbug.html</loc>
+    </url>
+    <url>
+        <loc>https://www.nanofannavaran.ir/service/ant.html</loc>
+    </url>
+    <url>
+        <loc>https://www.nanofannavaran.ir/service/rat-control.html</loc>
+    </url>
+    <url>
+        <loc>https://www.nanofannavaran.ir/service/mosquito.html</loc>
+    </url>
+    <url>
+        <loc>https://www.nanofannavaran.ir/service/fly.html</loc>
+    </url>
+    <url>
+        <loc>https://www.nanofannavaran.ir/service/pigeon-repellent.html</loc>
+    </url>
+    <url>
+        <loc>https://www.nanofannavaran.ir/service/tick.html</loc>
+    </url>
+    <url>
+        <loc>https://www.nanofannavaran.ir/service/flea.html</loc>
+    </url>
+    <url>
+        <loc>https://www.nanofannavaran.ir/service/louse.html</loc>
+    </url>
+    <url>
+        <loc>https://www.nanofannavaran.ir/service/mite.html</loc>
+    </url>
+    <url>
+        <loc>https://www.nanofannavaran.ir/service/spider.html</loc>
+    </url>
+    <url>
+        <loc>https://www.nanofannavaran.ir/service/scorpion.html</loc>
+    </url>
+    <url>
+        <loc>https://www.nanofannavaran.ir/service/snake.html</loc>
+    </url>
+    <url>
+        <loc>https://www.nanofannavaran.ir/service/wood-borer.html</loc>
+    </url>
+    <url>
+        <loc>https://www.nanofannavaran.ir/service/carpet-moth.html</loc>
+    </url>
+    <url>
+        <loc>https://www.nanofannavaran.ir/service/millipede.html</loc>
+    </url>
+    <url>
+        <loc>https://www.nanofannavaran.ir/service/silverfish.html</loc>
+    </url>
+    <url>
+        <loc>https://www.nanofannavaran.ir/service/earwig.html</loc>
+    </url>
+    <url>
+        <loc>https://www.nanofannavaran.ir/service/bean-moth.html</loc>
+    </url>
+    <url>
+        <loc>https://www.nanofannavaran.ir/service/rice-weevil.html</loc>
+    </url>
+    <url>
+        <loc>https://www.nanofannavaran.ir/service/cockroach-sewer.html</loc>
+    </url>
+    <url>
+        <loc>https://www.nanofannavaran.ir/service/disinfection.html</loc>
+    </url>
+    <url>
+        <loc>https://www.nanofannavaran.ir/service/sanitization.html</loc>
+    </url>
+    <url>
+        <loc>https://www.nanofannavaran.ir/service/residential.html</loc>
+    </url>
     <url>
         <loc>https://www.nanofannavaran.ir/service/apartment.html</loc>
-    </url>
-    <url>
-        <loc>https://www.nanofannavaran.ir/service/garden.html</loc>
-    </url>
-    <url>
-        <loc>https://www.nanofannavaran.ir/service/hotel.html</loc>
-    </url>
-    <url>
-        <loc>https://www.nanofannavaran.ir/service/office.html</loc>
-    </url>
-    <url>
-        <loc>https://www.nanofannavaran.ir/service/restaurant.html</loc>
     </url>
     <url>
         <loc>https://www.nanofannavaran.ir/service/villa.html</loc>
     </url>
     <url>
-        <loc>https://www.nanofannavaran.ir/service/warehouse.html</loc>
+        <loc>https://www.nanofannavaran.ir/commercial/hotel.html</loc>
     </url>
-
-    <!-- صفحات خدمات تجاری (پوشه commercial) -->
     <url>
-        <loc>https://www.nanofannavaran.ir/commercial/commercial.html</loc>
+        <loc>https://www.nanofannavaran.ir/commercial/restaurant.html</loc>
     </url>
     <url>
         <loc>https://www.nanofannavaran.ir/commercial/factory.html</loc>
     </url>
     <url>
+        <loc>https://www.nanofannavaran.ir/commercial/warehouse.html</loc>
+    </url>
+    <url>
+        <loc>https://www.nanofannavaran.ir/commercial/mall.html</loc>
+    </url>
+    <url>
         <loc>https://www.nanofannavaran.ir/commercial/hospital.html</loc>
     </url>
     <url>
-        <loc>https://www.nanofannavaran.ir/commercial/shopping-center.html</loc>
+        <loc>https://www.nanofannavaran.ir/commercial/school.html</loc>
+    </url>
+    <url>
+        <loc>https://www.nanofannavaran.ir/commercial/office.html</loc>
+    </url>
+    <url>
+        <loc>https://www.nanofannavaran.ir/commercial/gym.html</loc>
+    </url>
+    <url>
+        <loc>https://www.nanofannavaran.ir/commercial/garden.html</loc>
     </url>
 </urlset>
