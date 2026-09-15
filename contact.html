@@ -3,7 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تماس با ما - شرکت سمپاشی نانوفناوران</title><meta name="description" content="راه‌های ارتباط با شرکت سمپاشی نانوفناوران بهداشت تهران: شماره تماس، فرم درخواست آنلاین، آدرس و مسیرهای ارتباطی برای دریافت مشاوره رایگان.">
+    <title>تماس با ما | شرکت سمپاشی نانوفناوران بهداشت تهران</title>
+    <meta name="description" content="راه‌های ارتباط با شرکت سمپاشی نانوفناوران بهداشت تهران: شماره تماس، فرم درخواست آنلاین و مسیرهای ارتباطی برای دریافت مشاوره رایگان.">
+    <meta name="keywords" content="تماس با نانوفناوران, شرکت سمپاشی تهران, شماره تماس سمپاشی, مشاوره رایگان سمپاشی">
+    <link rel="canonical" href="https://www.nanofannavaran.ir/contact.html">
+
+    <!-- ===== Open Graph ===== -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.nanofannavaran.ir/contact.html">
+    <meta property="og:title" content="تماس با ما | شرکت سمپاشی نانوفناوران بهداشت تهران">
+    <meta property="og:description" content="راه‌های ارتباط با شرکت سمپاشی نانوفناوران بهداشت تهران برای دریافت مشاوره رایگان و ثبت درخواست سمپاشی.">
+    <meta property="og:image" content="https://www.nanofannavaran.ir/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="تماس با شرکت سمپاشی نانوفناوران بهداشت تهران">
+    <meta property="og:site_name" content="نانوفناوران">
+    <meta property="og:locale" content="fa_IR">
+
+    <!-- ===== Twitter Card ===== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="تماس با ما | شرکت سمپاشی نانوفناوران بهداشت تهران">
+    <meta name="twitter:description" content="راه‌های ارتباط با شرکت سمپاشی نانوفناوران بهداشت تهران برای دریافت مشاوره رایگان.">
+    <meta name="twitter:image" content="https://www.nanofannavaran.ir/images/og-image.jpg">
+
+    <!-- ===== Schema (ContactPage) ===== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "تماس با ما - شرکت سمپاشی نانوفناوران بهداشت تهران",
+      "url": "https://www.nanofannavaran.ir/contact.html",
+      "mainEntity": {
+        "@type": "PestControlService",
+        "name": "شرکت سمپاشی نانوفناوران بهداشت تهران",
+        "url": "https://www.nanofannavaran.ir",
+        "telephone": "+989120705746",
+        "email": "nanofannavaran.ae2005@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "تهران",
+          "addressCountry": "IR"
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],
+          "opens": "08:00",
+          "closes": "20:00"
+        }
+      }
+    }
+    </script>
+
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -151,17 +201,26 @@
             color: #888;
             margin-top: 10px;
         }
-        .map-container {
-            max-width: 1000px;
-            margin: 35px auto 0;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 8px 30px rgba(0,0,0,.08);
-        }
-        .map-container iframe {
+        .contact-form-box .whatsapp-cta {
+            display: block;
             width: 100%;
-            height: 300px;
+            padding: 14px;
+            background: #25D366;
+            color: #fff;
             border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+            text-align: center;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+        .contact-form-box .whatsapp-cta:hover {
+            background: #1da851;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
         }
 
         @media (max-width: 768px) {
@@ -204,12 +263,6 @@
             .contact-form-box button {
                 padding: 12px;
                 font-size: 0.95rem;
-            }
-            .map-container iframe {
-                height: 200px;
-            }
-            .map-container {
-                margin-top: 25px;
             }
             .contact-item .value {
                 font-size: 0.85rem;
@@ -258,9 +311,6 @@
                 padding: 10px;
                 font-size: 0.9rem;
             }
-            .map-container iframe {
-                height: 150px;
-            }
         }
     </style>
 </head>
@@ -268,7 +318,7 @@
 
 <header>
     <div class="container">
-        <a href="index.html" class="logo"><img src="images/logo.png" alt="لوگو"></a>
+        <a href="index.html" class="logo"><img src="images/logo.png" alt="لوگو شرکت سمپاشی نانوفناوران"></a>
         <nav class="navbar">
             <ul>
                 <li><a href="index.html">صفحه اصلی</a></li>
@@ -299,7 +349,7 @@
             <!-- اطلاعات تماس -->
             <div class="contact-info-box">
                 <h3>اطلاعات تماس</h3>
-                
+
                 <div class="contact-item">
                     <div class="icon">📱</div>
                     <div>
@@ -307,7 +357,7 @@
                         <a href="tel:09120705746" class="value">09120705746</a>
                     </div>
                 </div>
-                
+
                 <div class="contact-item">
                     <div class="icon">📞</div>
                     <div>
@@ -315,7 +365,7 @@
                         <a href="tel:02122048278" class="value">02122048278</a>
                     </div>
                 </div>
-                
+
                 <div class="contact-item">
                     <div class="icon">📞</div>
                     <div>
@@ -323,7 +373,7 @@
                         <a href="tel:02186013062" class="value">02186013062</a>
                     </div>
                 </div>
-                
+
                 <div class="contact-item">
                     <div class="icon">📞</div>
                     <div>
@@ -331,20 +381,12 @@
                         <a href="tel:02166959729" class="value">02166959729</a>
                     </div>
                 </div>
-                
+
                 <div class="contact-item">
                     <div class="icon">✉️</div>
                     <div>
                         <div class="label">ایمیل</div>
-                        <div class="value" style="font-size:0.85rem;word-break:break-all;">nanofannavaran.ae2005@gmail.com</div>
-                    </div>
-                </div>
-                
-                <div class="contact-item">
-                    <div class="icon">📍</div>
-                    <div>
-                        <div class="label">آدرس</div>
-                        <div class="value">تهران، خیابان ...</div>
+                        <a href="mailto:nanofannavaran.ae2005@gmail.com" class="value" style="font-size:0.85rem;">nanofannavaran.ae2005@gmail.com</a>
                     </div>
                 </div>
 
@@ -372,14 +414,10 @@
                     </select>
                     <textarea id="smsMessage" rows="4" placeholder="توضیحات درخواست شما..." required></textarea>
                     <button type="submit">✉️ ارسال پیامک</button>
+                    <div class="sms-note">پیام شما به شماره 09197173454 ارسال می‌شود</div>
+                    <a href="https://wa.me/989120705746?text=%D8%A8%D9%87%20%D8%B3%D8%A7%DB%8C%D8%AA%20%D8%B4%D8%B1%DA%A9%D8%AA%20%D8%B3%D9%85%D9%BE%D8%A7%D8%B4%DB%8C%20%D9%86%D8%A7%D9%86%D9%88%D9%81%D9%86%D8%A7%D9%88%D8%B1%D8%A7%D9%86%20%D8%AE%D9%88%D8%B4%20%D8%A2%D9%85%D8%AF%DB%8C%D8%AF.%20%DA%86%DA%AF%D9%88%D9%86%D9%87%20%D9%85%DB%8C%E2%80%8C%D8%AA%D9%88%D8%A7%D9%86%D9%85%20%DA%A9%D9%85%DA%A9%20%D8%AA%D8%A7%D9%86%20%DA%A9%D9%86%D9%85%D8%9F" target="_blank" class="whatsapp-cta">💬 ارسال پیام از طریق واتساپ</a>
                 </form>
-                <div class="sms-note">پیام شما به شماره 09197173454 ارسال می‌شود</div>
             </div>
-        </div>
-
-        <!-- نقشه -->
-        <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2593.778614302038!2d51.3890!3d35.6892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDQxJzIxLjEiTiA1McKwMjMnMjAuNCJF!5e0!3m2!1sen!2s!4v1700000000000" allowfullscreen loading="lazy"></iframe>
         </div>
     </div>
 </section>
@@ -444,28 +482,28 @@
 <script>
     function sendSMS(event) {
         event.preventDefault();
-        
+
         var name = document.getElementById('smsName').value.trim();
         var phone = document.getElementById('smsPhone').value.trim();
         var email = document.getElementById('smsEmail').value.trim();
         var service = document.getElementById('smsService').value;
         var message = document.getElementById('smsMessage').value.trim();
-        
+
         if (!name || !phone || !service || !message) {
             alert('لطفاً تمام فیلدهای ضروری را پر کنید.');
             return;
         }
-        
+
         var text = 'درخواست جدید از سایت:\n';
         text += 'نام: ' + name + '\n';
         text += 'شماره: ' + phone + '\n';
         if (email) text += 'ایمیل: ' + email + '\n';
         text += 'خدمات: ' + service + '\n';
         text += 'توضیحات: ' + message;
-        
+
         var encoded = encodeURIComponent(text);
         var url = 'sms:09197173454?body=' + encoded;
-        
+
         window.location.href = url;
     }
 </script>
