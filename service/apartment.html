@@ -3,15 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سمپاشی آپارتمان | راهنمای جامع کنترل آفات در مجتمع‌های مسکونی | نانوفناوران</title>
-    <meta name="description" content="مقاله جامع سمپاشی آپارتمان: چالش‌های کنترل آفات در مجتمع‌های مسکونی، روش‌های تخصصی، هماهنگی با همسایگان و نکات ایمنی.">
-    <meta name="keywords" content="سمپاشی آپارتمان, کنترل آفات مجتمع مسکونی, سمپاشی ساختمان, دفع سوسک آپارتمان, سمپاشی برج, نانوفناوران">
+    <title>سمپاشی آپارتمان در تهران | کنترل آفات تخصصی | نانوفناوران</title>
+    <meta name="description" content="سمپاشی آپارتمان در تهران با روش‌های تخصصی؛ کنترل آفات رایج مجتمع‌های مسکونی، هماهنگی با مدیریت ساختمان و خدمات تخصصی نانوفناوران.">
+    <meta name="keywords" content="سمپاشی آپارتمان, سمپاشی آپارتمان در تهران, کنترل آفات مجتمع مسکونی, سمپاشی ساختمان, دفع سوسک آپارتمان, سمپاشی برج, نانوفناوران">
     <link rel="canonical" href="https://www.nanofannavaran.ir/service/apartment.html">
+
+    <!-- ===== Open Graph ===== -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.nanofannavaran.ir/service/apartment.html">
+    <meta property="og:title" content="سمپاشی آپارتمان در تهران | کنترل آفات تخصصی | نانوفناوران">
+    <meta property="og:description" content="سمپاشی آپارتمان در تهران با روش‌های تخصصی؛ کنترل آفات رایج مجتمع‌های مسکونی و هماهنگی با مدیریت ساختمان.">
+    <meta property="og:image" content="https://www.nanofannavaran.ir/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="سمپاشی تخصصی آپارتمان در تهران">
+    <meta property="og:site_name" content="نانوفناوران">
+    <meta property="og:locale" content="fa_IR">
+
+    <!-- ===== Twitter Card ===== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="سمپاشی آپارتمان در تهران | کنترل آفات تخصصی | نانوفناوران">
+    <meta name="twitter:description" content="سمپاشی آپارتمان در تهران با روش‌های تخصصی و مدرن.">
+    <meta name="twitter:image" content="https://www.nanofannavaran.ir/images/og-image.jpg">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
-        /* ===== استایل‌های اختصاصی مقاله ===== */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
         body {
@@ -56,7 +74,43 @@
         .blog-article-container details summary { font-weight: 700; color: #0B6FB8; cursor: pointer; font-size: 16px; }
         .blog-article-container details p { margin-top: 10px; padding-right: 8px; font-size: 15px; }
 
-        /* ===== دکمه اسکرول به بالا ===== */
+        .services-links {
+            background: #f0f7ff;
+            padding: 20px 25px;
+            border-radius: 12px;
+            margin: 25px 0;
+            border-right: 5px solid #0B6FB8;
+        }
+        .services-links h3 {
+            color: #0B6FB8;
+            margin-bottom: 12px;
+            font-size: 20px;
+        }
+        .services-links ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .services-links ul li { margin: 0; }
+        .services-links ul li a {
+            display: inline-block;
+            background: #fff;
+            color: #0B6FB8;
+            padding: 8px 18px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            transition: .3s;
+            border: 2px solid #0B6FB8;
+        }
+        .services-links ul li a:hover {
+            background: #0B6FB8;
+            color: #fff;
+        }
+
         #backToTop {
             position: fixed;
             right: 20px;
@@ -91,11 +145,8 @@
             font-weight: 900;
             line-height: 55px;
         }
-        #backToTop.show {
-            display: block !important;
-        }
+        #backToTop.show { display: block !important; }
 
-        /* ===== منوی شناور ===== */
         .floating-container {
             position: fixed;
             bottom: 30px;
@@ -132,9 +183,7 @@
             font-size: 14px;
             transition: transform 0.4s ease;
         }
-        .floating-main-btn.active .btn-arrow {
-            transform: rotate(90deg);
-        }
+        .floating-main-btn.active .btn-arrow { transform: rotate(90deg); }
 
         @keyframes pulse {
             0% { box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6); }
@@ -191,9 +240,7 @@
             margin-right: 5px;
             transition: transform 0.3s ease;
         }
-        .call-item.open .arrow {
-            transform: rotate(180deg);
-        }
+        .call-item.open .arrow { transform: rotate(180deg); }
 
         .call-submenu {
             display: flex;
@@ -230,7 +277,6 @@
             border-radius: 0 50px 50px 0;
         }
 
-        /* ===== ریسپانسیو ===== */
         @media (max-width: 768px) {
             .blog-article-container { padding: 20px 16px 35px; margin: 10px auto 40px; border-radius: 16px; }
             .blog-article-container h1 { font-size: 24px; }
@@ -287,23 +333,35 @@
 
 <div class="blog-article-container">
 
-    <h1>راهنمای جامع و تخصصی سمپاشی آپارتمان | کنترل آفات در مجتمع‌های مسکونی</h1>
+    <h1>سمپاشی آپارتمان در تهران</h1>
     <div class="blog-meta">
         <span>📅 آخرین به‌روزرسانی: ۱۰ شهریور ۱۴۰۴</span> &nbsp;|&nbsp; <span>⏱ زمان مطالعه: ۱۲ دقیقه</span>
     </div>
 
     <div class="blog-article-image">
         <img src="../images/services/apartment.jpg" alt="سمپاشی آپارتمان - کنترل تخصصی آفات در مجتمع‌های مسکونی">
-        <div class="caption"><strong>سمپاشی تخصصی آپارتمان</strong> - تضمین بهداشت و آرامش در مجتمع‌های مسکونی</div>
+        <div class="caption"><strong>سمپاشی تخصصی آپارتمان</strong> - بهداشت و آرامش در مجتمع‌های مسکونی</div>
     </div>
 
-    <h2>مقدمه: چالش‌های منحصر‌به‌فرد کنترل آفات در آپارتمان</h2>
+    <h2>مقدمه: چالش‌های منحصربه‌فرد کنترل آفات در آپارتمان</h2>
     <p>زندگی در آپارتمان، با وجود تمام مزایا، چالش‌های خاصی را به همراه دارد که یکی از مهم‌ترین آنها <strong>کنترل آفات</strong> است. برخلاف خانه‌های ویلایی که کنترل محیط تا حد زیادی در دست ساکن است، در مجتمع‌های مسکونی، آفات به راحتی از طریق کانال‌های مشترک مانند لوله‌های فاضلاب، مجاری تهویه، پله‌ها و حتی فضاهای خالی بین دیوارها، از یک واحد به واحد دیگر منتقل می‌شوند.</p>
 
-    <p>آپارتمان‌نشینی، به دلیل تراکم بالای جمعیت و اشتراک تأسیسات، محیطی ایده‌آل برای زندگی و تکثیر بسیاری از آفات فراهم می‌کند. سوسک‌ها، موش‌ها، ساس‌ها و حتی مورچه‌ها، به راحتی می‌توانند در یک ساختمان چند واحدی پخش شوند و کنترل آنها را به یک چالش جدی تبدیل کنند. در این مقاله جامع از <strong>شرکت سمپاشی نانوفناوران بهداشت تهران</strong>، به بررسی کامل چالش‌ها و راه‌کارهای تخصصی سمپاشی آپارتمان‌ها می‌پردازیم.</p>
+    <p>آپارتمان‌نشینی، به دلیل تراکم بالای جمعیت و اشتراک تأسیسات، محیطی ایده‌آل برای زندگی و تکثیر بسیاری از آفات فراهم می‌کند. سوسک‌ها، موش‌ها، ساس‌ها و حتی مورچه‌ها، به راحتی می‌توانند در یک ساختمان چند واحدی پخش شوند و کنترل آنها را به یک چالش جدی تبدیل کنند. در این مقاله جامع از <strong>شرکت سمپاشی نانوفناوران بهداشت تهران</strong>، به بررسی کامل چالش‌ها و راهکارهای تخصصی سمپاشی آپارتمان‌ها می‌پردازیم.</p>
+
+    <div class="services-links">
+        <h3>🔗 خدمات مرتبط با کنترل آفات در آپارتمان:</h3>
+        <ul>
+            <li><a href="bedbug.html">سمپاشی ساس</a></li>
+            <li><a href="german-cockroach.html">سمپاشی سوسک آلمانی</a></li>
+            <li><a href="cockroach-sewer.html">سمپاشی سوسک فاضلاب</a></li>
+            <li><a href="rat-control.html">طعمه‌گذاری و کنترل موش</a></li>
+            <li><a href="ant.html">سمپاشی مورچه</a></li>
+            <li><a href="residential.html">سمپاشی منازل</a></li>
+        </ul>
+    </div>
 
     <h2>چرا سمپاشی آپارتمان با خانه ویلایی متفاوت است؟</h2>
-    <p>سمپاشی آپارتمان نیازمند رویکردی متفاوت و تخصصی‌تر است. این تفاوت‌ها ناشی از ویژگی‌های منحصر‌به‌فرد ساختمان‌های چند واحدی است:</p>
+    <p>سمپاشی آپارتمان نیازمند رویکردی متفاوت و تخصصی‌تر است. این تفاوت‌ها ناشی از ویژگی‌های منحصربه‌فرد ساختمان‌های چند واحدی است:</p>
 
     <table>
         <thead>
@@ -333,6 +391,9 @@
 
     <h3>۳. موش‌ها و جوندگان</h3>
     <p>موش‌ها از طریق پارکینگ‌ها، زیرزمین‌ها، انبارها و کانال‌های فاضلاب وارد ساختمان شده و به راحتی در فضاهای خالی بین دیوارها حرکت می‌کنند. جوندگان نه تنها آلودگی ایجاد می‌کنند، بلکه با جویدن سیم‌های برق، خطر آتش‌سوزی را نیز افزایش می‌دهند.</p>
+
+    <h3>۴. مورچه‌ها</h3>
+    <p>مورچه‌ها از طریق شکاف‌های دیوار، درز کابینت‌ها و لوله‌های ورودی وارد واحدها می‌شوند و معمولاً در آشپزخانه‌ها و انبارهای مواد غذایی دیده می‌شوند.</p>
 
     <h2>چالش‌های سمپاشی آپارتمان</h2>
 
@@ -366,7 +427,7 @@
 
     <details>
         <summary><strong>آیا سمپاشی یک واحد آپارتمان کافی است؟</strong></summary>
-        <p>خیر، سمپاشی یک واحد به تنهایی کافی نیست. آفات به راحتی از طریق کانال‌های مشترک، شکاف‌های دیوار و لوله‌ها بین واحدها حرکت می‌کنند. برای ریشه‌کنی قطعی، سمپاشی باید به صورت ساختمانی و با هماهنگی تمام واحدها انجام شود.</p>
+        <p>خیر، سمپاشی یک واحد به تنهایی کافی نیست. آفات به راحتی از طریق کانال‌های مشترک، شکاف‌های دیوار و لوله‌ها بین واحدها حرکت می‌کنند. برای کنترل مؤثر، سمپاشی باید به صورت ساختمانی و با هماهنگی تمام واحدها انجام شود.</p>
     </details>
 
     <details>
@@ -375,9 +436,9 @@
     </details>
 
     <h2>نتیجه‌گیری</h2>
-    <p>سمپاشی آپارتمان یک عملیات تخصصی و حساس است که نیاز به دانش، تجربه و هماهنگی بالا دارد. برخلاف تصور رایج، سمپاشی واحد به واحد در آپارتمان‌ها مؤثر نیست و برای ریشه‌کنی قطعی آفات، باید کل ساختمان به صورت یکپارچه سمپاشی شود. انتخاب یک شرکت تخصصی با تجربه در زمینه سمپاشی ساختمان‌های مسکونی، تضمین‌کننده موفقیت عملیات و آرامش خاطر شماست.</p>
+    <p>سمپاشی آپارتمان یک عملیات تخصصی و حساس است که نیاز به دانش، تجربه و هماهنگی بالا دارد. برخلاف تصور رایج، سمپاشی واحد به واحد در آپارتمان‌ها مؤثر نیست و برای کنترل مؤثر آفات، باید کل ساختمان به صورت یکپارچه سمپاشی شود. انتخاب یک شرکت تخصصی با تجربه در زمینه سمپاشی ساختمان‌های مسکونی، به موفقیت عملیات و آرامش خاطر شما کمک می‌کند.</p>
 
-    <p><strong>شرکت سمپاشی نانوفناوران بهداشت تهران</strong> با بیش از <strong>۱۵ سال تجربه</strong> در زمینه سمپاشی آپارتمان‌ها و مجتمع‌های مسکونی، آماده ارائه خدمات تخصصی و تضمینی به شماست. تیم کارشناسان ما با هماهنگی کامل با ساکنان و مدیریت ساختمان، محیطی امن، بهداشتی و عاری از آفات را برای شما به ارمغان می‌آورند.</p>
+    <p><strong>شرکت سمپاشی نانوفناوران بهداشت تهران</strong> با بیش از <strong>۱۵ سال تجربه</strong> در زمینه سمپاشی آپارتمان‌ها و مجتمع‌های مسکونی، آماده ارائه خدمات تخصصی به شماست. تیم کارشناسان ما با هماهنگی کامل با ساکنان و مدیریت ساختمان، محیطی امن، بهداشتی و کم‌آفت را برای شما فراهم می‌کنند.</p>
 
     <p style="font-size:20px; font-weight:700; text-align:center; color:#0B6FB8;">🚀 همین حالا اقدام کنید:</p>
     <div style="text-align:center; margin:20px 0;">
@@ -430,10 +491,7 @@
     });
 
     backToTopBtn.addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
     var toggleBtn = document.getElementById('floatingToggle');
